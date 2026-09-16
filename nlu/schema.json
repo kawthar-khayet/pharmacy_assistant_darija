@@ -1,0 +1,90 @@
+{
+  "version": "0.1",
+  "description": "Taxonomie Intent + Entity pour l'assistant pharmacie Arabic/Darija (Challenge #1)",
+
+  "languages": [
+    { "code": "fr", "label": "Francais" },
+    { "code": "ar", "label": "Arabe standard" },
+    { "code": "ary_ar", "label": "Darija (graphie arabe)" },
+    { "code": "ary_lat", "label": "Darija (graphie latine / arabizi)" },
+    { "code": "mixte", "label": "Code-switching (melange de plusieurs langues dans une meme phrase)" }
+  ],
+
+  "intents": [
+    {
+      "id": "disponibilite_medicament",
+      "label_fr": "Disponibilite d'un medicament",
+      "description": "Le patient demande si un medicament est en stock/disponible a la pharmacie.",
+      "entites_attendues": ["MEDICAMENT", "DOSAGE", "FORME", "QUANTITE"]
+    },
+    {
+      "id": "prix_remboursement",
+      "label_fr": "Prix / remboursement",
+      "description": "Le patient demande le prix d'un medicament et/ou s'il est rembourse et a quel taux.",
+      "entites_attendues": ["MEDICAMENT", "DOSAGE"]
+    },
+    {
+      "id": "info_pharmacie",
+      "label_fr": "Information pharmacie",
+      "description": "Le patient demande des informations sur la pharmacie elle-meme : adresse, telephone, horaires, pharmacie de garde.",
+      "entites_attendues": ["PHARMACIE", "LOCALISATION"]
+    },
+    {
+      "id": "posologie_information",
+      "label_fr": "Posologie / usage",
+      "description": "Le patient demande comment / quand prendre un medicament (hors avis medical, information generale uniquement).",
+      "entites_attendues": ["MEDICAMENT", "DOSAGE"]
+    },
+    {
+      "id": "commande_reservation",
+      "label_fr": "Commande / reservation",
+      "description": "Le patient veut reserver ou commander une quantite d'un medicament pour retrait en pharmacie.",
+      "entites_attendues": ["MEDICAMENT", "DOSAGE", "FORME", "QUANTITE"]
+    },
+    {
+      "id": "salutation",
+      "label_fr": "Salutation / small talk",
+      "description": "Bonjour, merci, au revoir, formules de politesse sans demande metier.",
+      "entites_attendues": []
+    },
+    {
+      "id": "autre",
+      "label_fr": "Hors perimetre / fallback",
+      "description": "Requete hors du perimetre pharmacie-medicament (ex: diagnostic medical, symptome) ou non comprise.",
+      "entites_attendues": []
+    }
+  ],
+
+  "entities": [
+    {
+      "id": "MEDICAMENT",
+      "description": "Nom commercial ou DCI d'un medicament, tel qu'exprime par le patient (peut etre mal orthographie).",
+      "note": "Sert de cle d'entree pour l'etape d'Entity Linking contre medicaments_reference.csv (colonnes nom / dci)."
+    },
+    {
+      "id": "DOSAGE",
+      "description": "Le dosage exprime par le patient, ex: '500mg', '1g', '5ml'.",
+      "note": "A rapprocher de la colonne dosage de medicaments_reference.csv apres normalisation."
+    },
+    {
+      "id": "FORME",
+      "description": "Forme galenique ou type de conditionnement, ex: comprime, sirop, gelule, boite, flacon.",
+      "note": "A rapprocher de la colonne forme / presentation."
+    },
+    {
+      "id": "QUANTITE",
+      "description": "Quantite demandee, en chiffres ou en toutes lettres / darija (ex: 'juj' = 2, 'wa7ed' = 1).",
+      "note": "A normaliser vers un entier lors du post-traitement."
+    },
+    {
+      "id": "PHARMACIE",
+      "description": "Nom propre d'une pharmacie citee par le patient.",
+      "note": "Necessite une base pharmacies (non couverte par medicaments_reference.csv) pour l'entity linking."
+    },
+    {
+      "id": "LOCALISATION",
+      "description": "Ville, quartier ou zone geographique mentionnee par le patient.",
+      "note": "Utile pour filtrer/chercher une pharmacie a proximite."
+    }
+  ]
+}
