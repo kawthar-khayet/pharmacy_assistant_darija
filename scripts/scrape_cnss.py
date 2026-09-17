@@ -24,7 +24,7 @@ OUT_FILE = OUT_DIR / "cnss_medicaments.csv"
 PAGE_LIMIT = 500
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) DataCleaningResearch/1.0 (contact: khayetkaouthar@gmail.com)",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) DataCleaningResearch/1.0",
     "Content-Type": "application/json",
 }
 

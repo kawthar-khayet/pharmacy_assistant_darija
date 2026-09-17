@@ -1,0 +1,255 @@
+/* ===========================================================================
+   DwaTalk — coquille : barre laterale, navigation basse, en-tetes de page.
+   =========================================================================== */
+
+.coquille {
+  height: 100%;
+  display: flex;
+  background: var(--ivoire);
+}
+
+.zone {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 40px 40px 72px;
+}
+
+.page-etroite { max-width: 880px; }
+
+/* ------------------------------------------------------------ marque */
+
+.marque {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.marque-signe {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: linear-gradient(145deg, var(--terre) 0%, var(--rose) 130%);
+  color: #fff;
+  box-shadow: 0 2px 8px -2px rgba(192, 94, 69, .5);
+}
+
+.marque-signe svg { width: 19px; height: 19px; }
+
+.marque-mot {
+  font-size: 1.12rem;
+  font-weight: 800;
+  letter-spacing: -.03em;
+}
+
+.marque-mot em {
+  font-style: normal;
+  color: var(--terre);
+}
+
+/* --------------------------------------------------------- barre laterale */
+
+.flanc {
+  flex: none;
+  width: var(--flanc);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 22px 14px 18px;
+  background: var(--ivoire);
+  border-right: 1px solid var(--trait);
+}
+
+.flanc-marque { padding: 0 10px 22px; }
+
+.flanc-groupe {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.flanc-legende {
+  padding: 16px 10px 7px;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--encre-pale);
+}
+
+.lien {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 9px 11px;
+  border-radius: var(--r-sm);
+  color: var(--encre-douce);
+  font-size: .92rem;
+  font-weight: 500;
+  transition: background var(--transition), color var(--transition);
+}
+
+.lien-glyphe {
+  flex: none;
+  width: 19px;
+  display: grid;
+  place-items: center;
+  font-size: 1.02rem;
+  line-height: 1;
+}
+
+.lien:hover { background: var(--sable); color: var(--encre); }
+
+.lien-actif {
+  background: var(--terre-voile);
+  color: var(--terre-vive);
+  font-weight: 650;
+}
+
+/* fine barre verticale a gauche de l'onglet courant : plus discret qu'un
+   fond pleine largeur, et suffisant pour situer l'utilisateur. */
+.lien-actif::before {
+  content: '';
+  position: absolute;
+  left: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 20px;
+  border-radius: 0 3px 3px 0;
+  background: var(--terre);
+}
+
+.flanc-bas {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--trait);
+}
+
+.flanc-note {
+  margin: 12px 11px 0;
+  font-size: .72rem;
+  line-height: 1.5;
+  color: var(--encre-pale);
+}
+
+/* ------------------------------------------------------- navigation basse */
+
+.barre-basse { display: none; }
+
+/* --------------------------------------------------------- en-tete de page */
+
+.entete {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 26px;
+}
+
+.entete h1 {
+  font-size: 1.62rem;
+}
+
+.entete-sous {
+  margin-top: 5px;
+  color: var(--encre-douce);
+  font-size: .94rem;
+}
+
+.pastille-dispo {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 13px 6px 11px;
+  border-radius: 999px;
+  background: var(--carte);
+  border: 1px solid var(--trait);
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--encre-douce);
+  white-space: nowrap;
+}
+
+.pastille-dispo::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--dispo);
+  box-shadow: 0 0 0 3px rgba(62, 143, 111, .16);
+}
+
+/* ------------------------------------------------- transition de page */
+
+/* Un fondu-monte tres court a chaque changement de route : assez pour que la
+   navigation se sente fluide, assez discret pour ne jamais faire attendre. */
+.transition-page {
+  animation: entre-page 220ms cubic-bezier(.2, .8, .3, 1) both;
+}
+
+@keyframes entre-page {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ------------------------------------------------------------- responsive */
+
+@media (max-width: 1024px) {
+  :root { --flanc: 216px; }
+  .page { padding: 32px 28px 72px; }
+}
+
+@media (max-width: 860px) {
+  .flanc { display: none; }
+
+  .zone { padding-bottom: 72px; }
+
+  .page { padding: 24px 18px 40px; }
+
+  .barre-basse {
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: 30;
+    display: flex;
+    justify-content: space-around;
+    gap: 2px;
+    padding: 7px 6px calc(7px + env(safe-area-inset-bottom));
+    background: rgba(253, 251, 248, .94);
+    backdrop-filter: blur(14px);
+    border-top: 1px solid var(--trait);
+  }
+
+  .onglet {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 6px 2px;
+    border: 0;
+    background: none;
+    border-radius: var(--r-xs);
+    color: var(--encre-pale);
+    font-size: .66rem;
+    font-weight: 600;
+    transition: color var(--transition);
+  }
+
+  .onglet-glyphe { font-size: 1.16rem; line-height: 1; }
+  .onglet-actif { color: var(--terre-vive); }
+
+  .entete { flex-direction: column; gap: 12px; }
+  .entete h1 { font-size: 1.4rem; }
+}

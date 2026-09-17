@@ -91,6 +91,18 @@ def transliterate(query: str) -> str:
     return " ".join(mapped)
 
 
+def en_enregistrements(df: pd.DataFrame) -> list[dict]:
+    """Convertit un DataFrame en liste de dicts JSON-serialisables.
+
+    pandas represente une cellule vide par float('nan'), que `json.dumps` ecrit
+    `NaN` -- ce qui n'est pas du JSON valide (RFC 8259) et fait echouer aussi
+    bien un `JSON.parse` navigateur que la serialisation d'une reponse FastAPI
+    sans `response_model`. On remplace donc les valeurs manquantes par None,
+    qui devient un `null` parfaitement legal.
+    """
+    return df.astype(object).where(pd.notna(df), None).to_dict(orient="records")
+
+
 class MedicamentMatcher:
     def __init__(self, reference_path: Path = REFERENCE_PATH):
         self.df = pd.read_csv(reference_path, dtype={"code_cnops": str})
@@ -153,14 +165,15 @@ class MedicamentMatcher:
 
             variants = display_rows[
                 ["nom", "dci", "dosage", "forme", "presentation", "ppv",
-                 "taux_remboursement_cnops", "taux_remboursement_cnss", "source"]
+                 "taux_remboursement_cnops", "taux_remboursement_cnss", "source",
+                 "laboratoire", "classe_therapeutique", "statut_commercialisation"]
             ].drop_duplicates().head(5)
             results.append({
                 "nom_candidat": rows["nom"].iloc[0],
                 "score": round(float(score), 1),
                 "confidence": confidence,
                 "nb_variantes": len(rows),
-                "variantes": variants.to_dict(orient="records"),
+                "variantes": en_enregistrements(variants),
             })
 
             if len(results) >= top_k:

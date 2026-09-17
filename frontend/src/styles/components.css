@@ -1,0 +1,829 @@
+/* ===========================================================================
+   DwaTalk — composants : accueil, recherche, chat, fiches, etats.
+   =========================================================================== */
+
+/* =============================================================== accueil */
+
+.accueil-hero {
+  padding: 46px 0 34px;
+  text-align: center;
+}
+
+.hero-salut {
+  font-size: 2.35rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+
+.hero-question {
+  margin-top: 6px;
+  font-size: 1.62rem;
+  font-weight: 600;
+  color: var(--encre);
+}
+
+.hero-sous {
+  margin: 14px auto 0;
+  max-width: 44ch;
+  color: var(--encre-douce);
+  font-size: 1rem;
+}
+
+/* ------------------------------------------------------- champ principal */
+
+.champ {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 9px 9px 9px 16px;
+  background: var(--carte);
+  border: 1px solid var(--trait-fort);
+  border-radius: var(--r-lg);
+  box-shadow: var(--ombre-2);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.champ:focus-within {
+  border-color: var(--rose);
+  box-shadow: var(--ombre-3), 0 0 0 4px var(--terre-voile);
+}
+
+.champ-loupe {
+  flex: none;
+  margin-bottom: 9px;
+  color: var(--encre-pale);
+}
+
+.champ textarea {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  resize: none;
+  background: transparent;
+  padding: 9px 0;
+  max-height: 168px;
+  line-height: 1.55;
+}
+
+.champ textarea::placeholder { color: var(--encre-pale); }
+
+.champ-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rond {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--trait);
+  border-radius: 50%;
+  background: var(--carte);
+  color: var(--encre-douce);
+  transition: background var(--transition), color var(--transition),
+              border-color var(--transition), transform var(--transition);
+}
+
+.rond:hover:not(:disabled) {
+  background: var(--sable);
+  color: var(--encre);
+  border-color: var(--trait-fort);
+}
+
+.rond-actif {
+  background: var(--terre-voile);
+  border-color: var(--terre-trait);
+  color: var(--terre-vive);
+  animation: souffle 1.5s ease-in-out infinite;
+}
+
+@keyframes souffle {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(192, 94, 69, .28); }
+  50%      { box-shadow: 0 0 0 7px rgba(192, 94, 69, 0); }
+}
+
+.rond-envoi {
+  background: var(--terre);
+  border-color: var(--terre);
+  color: #fff;
+}
+
+.rond-envoi:hover:not(:disabled) {
+  background: var(--terre-vive);
+  border-color: var(--terre-vive);
+  color: #fff;
+  transform: scale(1.06);
+}
+
+.rond-envoi:active:not(:disabled) { transform: scale(.94); }
+
+.rond:disabled {
+  opacity: .4;
+  cursor: default;
+  transform: none;
+}
+
+.champ-aide {
+  margin: 10px 4px 0;
+  font-size: .78rem;
+  color: var(--encre-pale);
+  text-align: center;
+}
+
+/* ------------------------------------------------------------ suggestions */
+
+.puces {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 22px;
+}
+
+.puce {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  background: var(--carte);
+  border: 1px solid var(--trait);
+  border-radius: 999px;
+  font-size: .87rem;
+  color: var(--encre);
+  box-shadow: var(--ombre-1);
+  transition: border-color var(--transition), transform var(--transition),
+              box-shadow var(--transition);
+}
+
+.puce:hover:not(:disabled) {
+  border-color: var(--rose);
+  transform: translateY(-2px);
+  box-shadow: var(--ombre-2);
+}
+
+.puce:disabled { opacity: .5; cursor: default; }
+
+/* ---------------------------------------------------------- cartes action */
+
+.section-titre {
+  margin: 52px 0 18px;
+  font-size: 1.14rem;
+  font-weight: 700;
+}
+
+.grille-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
+  gap: 16px;
+}
+
+.carte-action {
+  display: block;
+  text-align: left;
+  padding: 22px 20px;
+  background: var(--carte);
+  border: 1px solid var(--trait);
+  border-radius: var(--r);
+  box-shadow: var(--ombre-1);
+  transition: transform var(--transition), box-shadow var(--transition),
+              border-color var(--transition);
+}
+
+.carte-action:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--ombre-3);
+  border-color: var(--terre-trait);
+}
+
+.carte-action-icone {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: var(--terre-voile);
+  font-size: 1.22rem;
+  margin-bottom: 14px;
+}
+
+.carte-action h3 { font-size: 1rem; }
+
+.carte-action p {
+  margin-top: 5px;
+  font-size: .87rem;
+  color: var(--encre-douce);
+}
+
+.carte-action-fleche {
+  margin-top: 14px;
+  font-size: .82rem;
+  font-weight: 650;
+  color: var(--terre);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.carte-action:hover .carte-action-fleche span { transform: translateX(3px); }
+.carte-action-fleche span { transition: transform var(--transition); }
+
+/* ================================================================== chat */
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-tete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 32px;
+  border-bottom: 1px solid var(--trait);
+  background: rgba(253, 251, 248, .88);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.chat-identite { display: flex; align-items: center; gap: 11px; }
+
+.chat-identite h2 { font-size: 1rem; }
+
+.chat-identite p {
+  font-size: .8rem;
+  color: var(--encre-douce);
+}
+
+.chat-fil {
+  flex: 1;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.chat-fil-inner {
+  max-width: var(--lecture);
+  margin: 0 auto;
+  padding: 30px 28px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.chat-socle {
+  border-top: 1px solid var(--trait);
+  background: rgba(253, 251, 248, .92);
+  backdrop-filter: blur(12px);
+  padding: 14px 28px 20px;
+}
+
+.chat-socle-inner { max-width: var(--lecture); margin: 0 auto; }
+
+/* ------------------------------------------------------------- messages */
+
+.tour {
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+  animation: apparait .3s cubic-bezier(.2, .8, .3, 1) both;
+}
+
+@keyframes apparait {
+  from { opacity: 0; transform: translateY(9px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.tour-moi { flex-direction: row-reverse; }
+
+.avatar {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  margin-top: 3px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: linear-gradient(145deg, var(--terre) 0%, var(--rose) 130%);
+  color: #fff;
+}
+
+.avatar svg { width: 16px; height: 16px; }
+
+.bulle {
+  max-width: 88%;
+  min-width: 0;
+  padding: 13px 17px;
+  border-radius: var(--r);
+  border-top-left-radius: 6px;
+  background: var(--carte);
+  border: 1px solid var(--trait);
+  box-shadow: var(--ombre-1);
+  /* les reponses gabarit de l'API contiennent des retours a la ligne */
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.tour-moi .bulle {
+  background: var(--terre-voile);
+  border-color: var(--terre-trait);
+  color: var(--encre);
+  border-top-left-radius: var(--r);
+  border-top-right-radius: 6px;
+  box-shadow: none;
+}
+
+.tour-erreur .bulle {
+  background: #fdf2ee;
+  border-color: #f2cfc2;
+  color: #93402a;
+}
+
+.bulle-riche { white-space: normal; padding: 15px 17px; }
+
+.bulle-lead { font-size: .95rem; }
+
+/* -------------------------------------------------------- indicateur frappe */
+
+.frappe { display: flex; gap: 5px; padding: 4px 2px; }
+
+.frappe span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--rose);
+  animation: rebond 1.25s ease-in-out infinite;
+}
+
+.frappe span:nth-child(2) { animation-delay: .16s; }
+.frappe span:nth-child(3) { animation-delay: .32s; }
+
+@keyframes rebond {
+  0%, 100% { opacity: .35; transform: translateY(0); }
+  50%      { opacity: 1;   transform: translateY(-4px); }
+}
+
+/* ---------------------------------------------------------- fiche medicament */
+
+.fiche {
+  display: flex;
+  flex-direction: column;
+  /* en grille, les fiches s'etirent a la meme hauteur : sans ca une fiche sans
+     ligne de remboursement laisse un decrochage disgracieux face a sa voisine */
+  height: 100%;
+  background: var(--carte);
+  border: 1px solid var(--trait);
+  border-radius: var(--r);
+  overflow: hidden;
+  box-shadow: var(--ombre-1);
+  transition: transform var(--transition), box-shadow var(--transition),
+              border-color var(--transition);
+}
+
+.fiche-cliquable:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ombre-3);
+  border-color: var(--terre-trait);
+}
+
+.fiche-tete {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 16px 18px;
+  background: linear-gradient(180deg, var(--terre-voile) 0%, rgba(251, 237, 232, 0) 100%);
+}
+
+.fiche-glyphe {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--carte);
+  border: 1px solid var(--terre-trait);
+  font-size: 1.16rem;
+}
+
+.fiche-etiquette {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--terre);
+}
+
+.fiche-nom {
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+.fiche-dci {
+  margin-top: 2px;
+  font-size: .85rem;
+  color: var(--encre-douce);
+}
+
+.fiche-faits {
+  /* Les traits sont dessines par les interstices de la grille sur fond colore :
+     ainsi les separateurs restent justes quel que soit le nombre de faits et le
+     nombre de lignes, ce qu'une bordure par cellule ne sait pas faire des que
+     ca passe a la ligne. */
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
+  gap: 1px;
+  background: var(--trait);
+  border-top: 1px solid var(--trait);
+}
+
+.fait {
+  padding: 12px 16px;
+  background: var(--carte);
+}
+
+.fait dt {
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--encre-pale);
+}
+
+.fait dd {
+  margin: 3px 0 0;
+  font-size: .93rem;
+  font-weight: 600;
+}
+
+.fait-prix dd { color: var(--terre-vive); }
+
+.marqueur {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--sable);
+  border: 1px solid var(--trait);
+  font-size: .72rem;
+  font-weight: 600;
+  color: var(--encre-douce);
+}
+
+.marqueur-ok { background: rgba(62, 143, 111, .1); border-color: rgba(62, 143, 111, .2); color: #2f6f56; }
+.marqueur-terre { background: var(--terre-voile); border-color: var(--terre-trait); color: var(--terre-vive); }
+
+/* --------------------------------------------------------- detail medicament */
+
+.detail-sections { display: flex; flex-direction: column; gap: 2px; }
+
+.detail-bloc {
+  padding: 16px 18px;
+  border-top: 1px solid var(--trait);
+}
+
+.detail-bloc h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--encre-douce);
+}
+
+.detail-bloc p {
+  margin-top: 8px;
+  font-size: .92rem;
+  color: var(--encre);
+}
+
+.detail-absent {
+  margin-top: 8px;
+  padding: 11px 13px;
+  border: 1px dashed var(--trait-fort);
+  border-radius: var(--r-xs);
+  background: var(--sable);
+  font-size: .86rem;
+  color: var(--encre-douce);
+}
+
+.detail-variantes {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.variante {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 12px;
+  border: 1px solid var(--trait);
+  border-radius: var(--r-xs);
+  background: var(--ivoire);
+  font-size: .86rem;
+}
+
+.variante-prix { font-weight: 700; color: var(--terre-vive); white-space: nowrap; }
+
+/* ------------------------------------------------------------ pharmacie */
+
+.pharma {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 15px 17px;
+  background: var(--carte);
+  border: 1px solid var(--trait);
+  border-radius: var(--r);
+  box-shadow: var(--ombre-1);
+  transition: transform var(--transition), box-shadow var(--transition),
+              border-color var(--transition);
+}
+
+.pharma:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ombre-2);
+  border-color: var(--terre-trait);
+}
+
+.pharma-glyphe {
+  flex: none;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--rose-voile);
+  font-size: 1.06rem;
+}
+
+.pharma-corps { flex: 1; min-width: 0; }
+
+.pharma-nom { font-size: .98rem; font-weight: 700; }
+
+.pharma-adresse {
+  margin-top: 3px;
+  font-size: .85rem;
+  color: var(--encre-douce);
+}
+
+.pharma-meta {
+  margin-top: 9px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-items: center;
+}
+
+.bouton-tel {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  background: var(--terre);
+  color: #fff;
+  border: 1px solid var(--terre);
+  font-size: .8rem;
+  font-weight: 650;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.bouton-tel:hover { background: var(--terre-vive); transform: translateY(-1px); }
+
+/* --------------------------------------------------------------- securite */
+
+.securite {
+  display: flex;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--alerte-voile);
+  border: 1px solid #edd9ac;
+  border-radius: var(--r);
+}
+
+.securite-glyphe { flex: none; font-size: 1.05rem; line-height: 1.4; }
+
+.securite strong {
+  display: block;
+  font-size: .87rem;
+  color: #7d5a16;
+}
+
+.securite p {
+  margin-top: 3px;
+  font-size: .84rem;
+  color: #8a6a2c;
+}
+
+.securite-mince { padding: 11px 14px; }
+.securite-mince strong { font-size: .83rem; }
+.securite-mince p { font-size: .8rem; }
+
+/* ------------------------------------------------------ listes & etats */
+
+.liste { display: flex; flex-direction: column; gap: 12px; }
+
+.grille-fiches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+  gap: 16px;
+}
+
+.vide {
+  padding: 52px 24px;
+  text-align: center;
+  border: 1px dashed var(--trait-fort);
+  border-radius: var(--r-lg);
+  background: var(--carte);
+}
+
+.vide-glyphe { font-size: 1.9rem; }
+
+.vide h3 { margin-top: 12px; font-size: 1.02rem; }
+
+.vide p {
+  margin: 6px auto 0;
+  max-width: 40ch;
+  font-size: .89rem;
+  color: var(--encre-douce);
+}
+
+/* squelettes de chargement : on montre la forme du contenu a venir plutot
+   qu'un spinner, ce qui rend l'attente moins brutale */
+.squelette {
+  border-radius: var(--r);
+  background: linear-gradient(100deg, var(--sable) 30%, var(--sable-fonce) 50%, var(--sable) 70%);
+  background-size: 220% 100%;
+  animation: balaye 1.4s ease-in-out infinite;
+}
+
+@keyframes balaye {
+  from { background-position: 180% 0; }
+  to   { background-position: -40% 0; }
+}
+
+.squelette-fiche { height: 132px; }
+.squelette-ligne { height: 15px; border-radius: 7px; }
+
+/* --------------------------------------------------------- historique */
+
+.histo-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  text-align: left;
+  padding: 15px 17px;
+  background: var(--carte);
+  border: 1px solid var(--trait);
+  border-radius: var(--r);
+  transition: transform var(--transition), box-shadow var(--transition),
+              border-color var(--transition);
+}
+
+.histo-item:hover {
+  transform: translateX(3px);
+  box-shadow: var(--ombre-2);
+  border-color: var(--terre-trait);
+}
+
+.histo-glyphe {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: var(--sable);
+  font-size: .98rem;
+}
+
+.histo-corps { flex: 1; min-width: 0; }
+
+.histo-titre {
+  font-size: .95rem;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.histo-date {
+  margin-top: 2px;
+  font-size: .79rem;
+  color: var(--encre-pale);
+}
+
+.histo-suppr {
+  flex: none;
+  border: 0;
+  background: none;
+  color: var(--encre-pale);
+  font-size: 1.15rem;
+  line-height: 1;
+  padding: 4px 6px;
+  border-radius: var(--r-xs);
+  opacity: 0;
+  transition: opacity var(--transition), color var(--transition),
+              background var(--transition);
+}
+
+.histo-item:hover .histo-suppr { opacity: 1; }
+.histo-suppr:hover { color: var(--terre-vive); background: var(--terre-voile); }
+
+/* ------------------------------------------------------------ pharmacies */
+
+.pharma-plan {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .82fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.carte-plan {
+  position: sticky;
+  top: 24px;
+  border: 1px solid var(--trait);
+  border-radius: var(--r-lg);
+  background: var(--sable);
+  overflow: hidden;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.carte-plan-toile { flex: 1; position: relative; }
+
+.carte-plan-pied {
+  padding: 13px 16px;
+  border-top: 1px solid var(--trait);
+  background: var(--carte);
+  font-size: .81rem;
+  color: var(--encre-douce);
+}
+
+/* ------------------------------------------------------------- reglages */
+
+.reglage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px;
+  background: var(--carte);
+  border: 1px solid var(--trait);
+  border-radius: var(--r);
+}
+
+.reglage h4 { font-size: .95rem; }
+.reglage p { margin-top: 3px; font-size: .84rem; color: var(--encre-douce); }
+
+.bouton-doux {
+  padding: 8px 15px;
+  border-radius: var(--r-xs);
+  border: 1px solid var(--trait-fort);
+  background: var(--ivoire);
+  font-size: .85rem;
+  font-weight: 600;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.bouton-doux:hover { background: var(--sable); border-color: var(--rose); }
+.bouton-danger:hover { background: var(--terre-voile); border-color: var(--terre); color: var(--terre-vive); }
+
+/* ------------------------------------------------------------- responsive */
+
+@media (max-width: 960px) {
+  .pharma-plan { grid-template-columns: 1fr; }
+  .carte-plan { position: static; min-height: 280px; order: -1; }
+}
+
+@media (max-width: 860px) {
+  .accueil-hero { padding: 26px 0 22px; }
+  .hero-salut { font-size: 1.85rem; }
+  .hero-question { font-size: 1.28rem; }
+
+  .chat-tete { padding: 13px 18px; }
+  .chat-fil-inner { padding: 20px 16px 6px; }
+  .chat-socle { padding: 12px 16px 16px; }
+
+  .bulle { max-width: 92%; }
+  .fiche-faits { grid-template-columns: repeat(2, 1fr); }
+  .section-titre { margin: 36px 0 14px; }
+}

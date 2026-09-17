@@ -17,6 +17,7 @@ you have a key configured, since it makes a billed/metered API call per run.
 import json
 import os
 import sys
+import time
 from pathlib import Path
 
 import requests
@@ -136,21 +137,42 @@ Exemples :
 """
 
 
+# Codes que le service renvoie quand il est momentanement sature plutot que
+# quand la requete est fautive : ils meritent une seconde chance, alors qu'une
+# cle invalide (401) ou un modele payant (402) echoueront toujours.
+TRANSIENT_STATUS = {429, 500, 502, 503, 504}
+MAX_TENTATIVES = 3
+
+
 def call_llm(api_key: str, system_prompt: str, text: str) -> dict:
-    response = requests.post(
-        f"{OLLAMA_BASE_URL}/chat/completions",
-        headers={"Authorization": f"Bearer {api_key}"},
-        json={
-            "model": MODEL,
-            "temperature": 0,
-            "messages": [
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": text},
-            ],
-        },
-        timeout=60,
-    )
+    charge = {
+        "model": MODEL,
+        "temperature": 0,
+        "messages": [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": text},
+        ],
+    }
+
+    response = None
+    for tentative in range(MAX_TENTATIVES):
+        response = requests.post(
+            f"{OLLAMA_BASE_URL}/chat/completions",
+            headers={"Authorization": f"Bearer {api_key}"},
+            json=charge,
+            timeout=60,
+        )
+        if response.ok or response.status_code not in TRANSIENT_STATUS:
+            break
+        if tentative < MAX_TENTATIVES - 1:
+            # attente croissante : 1s puis 2s, de quoi laisser passer un pic
+            time.sleep(1.5 * (tentative + 1))
+
     if not response.ok:
+        if response.status_code in TRANSIENT_STATUS:
+            raise SystemExit(
+                "Le modele est momentanement surcharge. Reessaie dans quelques instants."
+            )
         raise SystemExit(f"Ollama API error {response.status_code}: {response.text}")
     raw = response.json()["choices"][0]["message"]["content"].strip()
     if raw.startswith("```"):

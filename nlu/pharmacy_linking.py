@@ -169,8 +169,11 @@ class PharmacyMatcher:
             pool = pool.sort_values("_garde_first", ascending=False)
             return [
                 {
-                    "nom": r["nom"], "telephone": r["telephone"], "adresse": r["adresse"],
-                    "ville": r["ville"], "garde": r["garde"] if pd.notna(r["garde"]) else None,
+                    "nom": r["nom"],
+                    "telephone": r["telephone"] if pd.notna(r["telephone"]) else None,
+                    "adresse": r["adresse"] if pd.notna(r["adresse"]) else None,
+                    "ville": r["ville"] if pd.notna(r["ville"]) else None,
+                    "garde": r["garde"] if pd.notna(r["garde"]) else None,
                     "score": None, "confidence": "liste_localisation",
                 }
                 for r in pool.head(top_k).to_dict(orient="records")
@@ -202,9 +205,11 @@ class PharmacyMatcher:
                 confidence = "non_fiable"
             results.append({
                 "nom": row["nom"],
-                "telephone": row["telephone"],
-                "adresse": row["adresse"],
-                "ville": row["ville"],
+                # meme raison que dans entity_linking : une cellule vide vaut NaN
+                # cote pandas, ce qui produirait un JSON invalide cote API.
+                "telephone": row["telephone"] if pd.notna(row["telephone"]) else None,
+                "adresse": row["adresse"] if pd.notna(row["adresse"]) else None,
+                "ville": row["ville"] if pd.notna(row["ville"]) else None,
                 "garde": row["garde"] if pd.notna(row["garde"]) else None,
                 "score": round(float(score), 1),
                 "confidence": confidence,

@@ -24,6 +24,7 @@ import uuid
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 NLU_DIR = Path(__file__).resolve().parent.parent / "nlu"
@@ -37,6 +38,23 @@ app = FastAPI(
     title="Assistant Pharmacie API",
     description="NLU (intent + entites) + Entity Linking medicaments/pharmacies pour le Challenge #1",
     version="0.2.0",
+)
+
+# The React dev server runs on its own origin, so the browser blocks its calls
+# to this API unless they are explicitly allowed. Listed one by one rather than
+# with "*": the endpoints are unauthenticated, so there is no reason to let any
+# site on the web drive them. Add the deployed front's origin here when there
+# is one.
+FRONTEND_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=FRONTEND_ORIGINS,
+    allow_methods=["GET", "POST"],
+    allow_headers=["Content-Type"],
 )
 
 _schema = load_schema()
@@ -86,6 +104,33 @@ class ChatResponse(BaseModel):
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+
+@app.get("/medicaments")
+def medicaments(q: str, dosage: str | None = None, limit: int = 12):
+    """Recherche de medicaments par nom ou DCI, pour la page dediee du front.
+
+    Reutilise le meme matcher que /chat : le front n'a donc pas de base a lui et
+    les resultats sont exactement ceux que l'assistant utiliserait.
+    """
+    q = q.strip()
+    if not q:
+        return {"query": q, "resultats": []}
+    limit = max(1, min(limit, 30))
+    return {"query": q, "resultats": get_med_matcher().match(q, dosage=dosage, top_k=limit)}
+
+
+@app.get("/pharmacies")
+def pharmacies(q: str | None = None, ville: str | None = None, limit: int = 12):
+    """Recherche de pharmacies par nom et/ou localisation."""
+    nom = (q or "").strip() or None
+    lieu = (ville or "").strip() or None
+    if not nom and not lieu:
+        return {"resultats": [], "note": None}
+    limit = max(1, min(limit, 30))
+    matcher = get_pharma_matcher()
+    resultats = matcher.match(nom=nom, location=lieu, top_k=limit)
+    return {"resultats": resultats, "note": matcher.last_location_note}
 
 
 @app.get("/schema")
@@ -274,13 +319,30 @@ def chat(req: ChatRequest):
             reply = "Precise le nom de la pharmacie ou ta ville/quartier pour que je puisse chercher."
 
     elif intent == "posologie_information":
+        # La base est un registre d'autorisation et de remboursement : elle ne
+        # contient ni posologie ni effets indesirables. On le dit -- mais si le
+        # medicament a ete reconnu, autant donner ce qu'on sait vraiment de lui
+        # plutot que de renvoyer l'utilisateur les mains vides.
         reply = (
-            "Je n'ai pas d'information de posologie fiable dans ma base actuelle -- "
-            "merci de te referer a la notice ou de demander a un pharmacien."
+            "Je n'ai pas d'information de posologie fiable dans ma base -- "
+            "refere-toi a la notice ou demande a un pharmacien."
         )
+        if medicament_matches:
+            reply = f"{describe_medicament(medicament_matches[0])}\n{reply}"
 
     elif intent == "salutation":
         reply = "Bonjour ! Je peux t'aider a trouver un medicament ou une pharmacie, pose ta question."
+
+    elif medicament_matches:
+        # Intent hors perimetre (souvent "autre") mais un medicament a bien ete
+        # extrait et resolu : une question comme "chno kaydir doliprane ?" tombe
+        # ici. Repondre "je n'ai pas compris" en tenant le resultat sous la main
+        # serait absurde -- on presente la fiche et on assume la limite.
+        reply = (
+            f"{describe_medicament(medicament_matches[0])}\n"
+            "Je ne suis pas sur d'avoir bien compris ta question, mais voila ce que "
+            "je sais de ce medicament. Pour son usage precis, demande a ton pharmacien."
+        )
 
     else:
         reply = "Je n'ai pas bien compris ta demande -- peux-tu reformuler ?"
