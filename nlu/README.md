@@ -4,7 +4,7 @@
 - `schema.json` — taxonomie : 7 intents, 6 types d'entites, avec description et langues supportees.
 - `build_seed_dataset.py` — genere `seed_dataset.jsonl` a partir d'exemples bruts (texte + valeurs d'entites) ; les offsets de caracteres sont calcules automatiquement (`str.find`), jamais comptes a la main.
 - `seed_dataset.jsonl` — 99 exemples de bootstrap, repartis sur les 7 intents et 5 variantes linguistiques (fr, ar, darija graphie arabe, darija graphie latine, mixte), avec fautes d'orthographe volontaires sur les noms de medicaments.
-- `llm_prototype.py` — prototype NLU par LLM few-shot via **Ollama Cloud** (endpoint OpenAI-compatible `https://ollama.com/v1`, modele par defaut `gpt-oss:20b-cloud` — accessible en tier gratuit ; `qwen3.5:cloud`, teste en premier pour son meilleur support multilingue, renvoie HTTP 402 "requires a subscription"). Construit le prompt systeme depuis `schema.json` + 8 exemples de `seed_dataset.jsonl`, renvoie un JSON valide `{intent, entities}`. Necessite `OLLAMA_API_KEY` (cle creee sur ollama.com/settings/keys) dans un fichier `.env` a la racine du projet (`OLLAMA_API_KEY=...`) — plus fiable qu'une variable d'environnement shell, chaque appel d'outil tournant dans son propre process. Modele configurable via `OLLAMA_MODEL`.
+- `llm_prototype.py` — prototype NLU par LLM few-shot via **Ollama Cloud** (endpoint OpenAI-compatible `https://ollama.com/v1`, modele par defaut `gpt-oss:20b-cloud` — accessible en tier gratuit ; `qwen3.5:cloud`, teste en premier pour son meilleur support multilingue, renvoie HTTP 402 "requires a subscription"). Construit le prompt systeme depuis `schema.json` + 9 exemples de `seed_dataset.jsonl`, renvoie un JSON valide `{intent, entities}`. Le prompt pose explicitement que `sidalia` / `saydalia` / `صيدلية` / `pharmacie` sont des noms COMMUNS et jamais des entites `PHARMACIE` (seul le nom propre l'est : dans "sidalia Ibn Sina", l'entite est "Ibn Sina") — sans cette regle le modele annotait le mot lui-meme, ce qui causait 5 des 11 ecarts d'entites de l'evaluation. Necessite `OLLAMA_API_KEY` (cle creee sur ollama.com/settings/keys) dans un fichier `.env` a la racine du projet (`OLLAMA_API_KEY=...`) — plus fiable qu'une variable d'environnement shell, chaque appel d'outil tournant dans son propre process. Modele configurable via `OLLAMA_MODEL`.
 - `evaluate.py` — evalue `llm_prototype.py` sur le reste du seed dataset (Intent Accuracy + Entity F1). Meme prerequis. **Resultat obtenu (gpt-oss:20b-cloud, 91 exemples)** : Intent accuracy 94.5%, Entity F1 91.9% — voir section dediee plus bas.
 - `entity_linking.py` — resolution d'un nom de medicament (potentiellement mal orthographie ou en arabe) contre `data/clean/medicaments_reference.csv`, via normalisation + RapidFuzz + une petite table de translitteration arabe→latin. Aucune dependance externe payante, s'utilise directement en CLI : `python nlu/entity_linking.py "dolipran" "1g"`.
 - `evaluate_entity_linking.py` — evaluation locale (sans cout) du matcher sur 22 cas manuels (fautes d'orthographe + arabe) : **100% top-1** actuellement.
@@ -55,9 +55,20 @@ Ajouter des tuples dans `RAW_EXAMPLES` de `build_seed_dataset.py` : `(text, lang
 1. normalisation (accents, casse, ponctuation) ;
 2. translitteration arabe→latin via une petite table seed (`ARABIC_TO_LATIN`, a etendre) ;
 3. fuzzy matching (`rapidfuzz.fuzz.WRatio`) contre les colonnes `nom` ET `dci` de la reference, avec un filtre optionnel par dosage ;
-4. score de confiance par palier : `auto` (>=90), `a_confirmer` (70-89), `non_fiable` (<70).
+   les variantes renvoyees portent les taux des **deux** regimes (`taux_remboursement_cnops` et `taux_remboursement_cnss`), un produit pouvant etre pris en charge par l'un et pas par l'autre ;
+4. score de confiance par palier : `auto` (>=90), `a_confirmer` (70-89), `non_fiable` (<70) ;
+5. garde-fou anti-bruit : `WRatio` (qui sert au classement) integre `partial_ratio`, lequel
+   note tres haut un nom court quasi-inclus dans une requete longue -- "BIDON INEXISTANTE
+   XYZ123" ressortait ainsi sur OXISTAT a 77, donc `a_confirmer`, soit un vrai medicament
+   propose pour une requete qui ne veut rien dire. Un controle mot-a-mot
+   (`best_token_similarity`, seuil `TOKEN_OVERLAP_FLOOR = 75`) rabat ces cas en
+   `non_fiable`. Il est compare a la chaine qui a reellement produit le match : le `nom`
+   pour un match direct, mais la `dci` pour un match indirect, sinon une resolution
+   legitime par DCI (requete "ibuprofene" -> ADFENE) serait rejetee a tort.
 
 Limites connues :
+- Le garde-fou anti-bruit filtre les requetes absurdes, pas les confusions plausibles :
+  deux noms reellement proches restent departages par le seul score lexical.
 - La table de translitteration arabe est un point de depart (7 entrees) — un mot arabe absent de la table ne matchera rien. A etoffer au fur et a mesure des cas reels.
 - Pas de gestion de la darija en graphie arabe non couverte par la table (ex. variantes orthographiques du meme mot).
 - Matching purement lexical : deux medicaments au nom proche mais a l'usage tres different peuvent se confondre (risque a garder en tete pour la validation humaine sur les cas `a_confirmer`).
@@ -67,7 +78,8 @@ Meme logique que l'entity linking medicaments, sur `data/clean/pharmacies_refere
 1. normalisation du nom ET suppression du prefixe "Pharmacie/La Pharmacie/Grande Pharmacie" (quasi tous les noms commencent par ce mot, il faut l'ignorer pour bien discriminer) ;
 2. si une localisation est fournie : filtre d'abord sur la ville (fuzzy match >=90) puis, a defaut, recherche en sous-chaine dans l'adresse (pour les quartiers, non captures par le champ ville) ;
 3. fuzzy matching du nom dans le pool filtre ; sans nom, retourne la liste du lieu (pharmacies de garde en tete) ;
-4. memes paliers de confiance que pour les medicaments.
+4. memes paliers de confiance que pour les medicaments, garde-fou anti-bruit compris
+   (sans lui, "Bidon Inexistante Xyz123" ressortait sur "Pharmacie Abid" en `a_confirmer`).
 
 Limites connues :
 - Plusieurs pharmacies peuvent porter le meme nom dans des villes differentes (ex. "Pharmacie Ibn Sina", tres frequent) — une recherche par nom seul, sans localisation, est ambigue par construction. Toujours privilegier nom+localisation quand les deux sont disponibles dans l'entity linking amont.

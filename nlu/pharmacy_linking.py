@@ -27,12 +27,36 @@ REFERENCE_PATH = ROOT / "data" / "clean" / "pharmacies_reference.csv"
 
 CONFIDENCE_THRESHOLDS = {"auto": 90, "a_confirmer": 70}
 
+# WRatio (used for ranking) takes the max over several scorers, one of which is
+# partial_ratio -- so a short reference name that happens to be a near-substring
+# of a long query scores very high on pure noise ("ABID" vs "BIDON INEXISTANTE
+# XYZ123" -> 77, enough to pass as `a_confirmer` and look like a real hit).
+# A word-level check has no such blind spot (67 on that same pair) yet still
+# tolerates typos and extra/missing words -- it stays >=85 on every genuine case
+# of the eval set, including "Grenada"->GRANADA and "Ibn Sina Maarif"->IBN SINA.
+# So it is applied as a floor: under it, nothing is trusted whatever WRatio says.
+TOKEN_OVERLAP_FLOOR = 75
+
 # Common leading words that don't help discriminate between pharmacy names
 # (almost all entries start with one of these) -- stripped before matching.
 NAME_PREFIXES = re.compile(
     r"^(LA |GRANDE |NOUVELLE )*PHARMACIE\s+(DE\s+|DU\s+|DES\s+|D')?",
     re.IGNORECASE,
 )
+
+
+def best_token_similarity(query_norm: str, candidate_norm: str) -> float:
+    """Best similarity between any single word of the query and any single word
+    of the candidate. Used only as a garbage filter (see TOKEN_OVERLAP_FLOOR),
+    never for ranking.
+
+    Compared to token_set_ratio it judges each word pair on its own merits, so a
+    one-word query still scores full marks against a multi-word reference entry
+    ("HIKMA" vs "AL HIKMA" -> 100, where token_set_ratio is dragged down by the
+    extra words) while noise stays low ("BIDON INEXISTANTE XYZ123" vs "ABID"
+    -> 67)."""
+    q_tokens, c_tokens = query_norm.split(), candidate_norm.split()
+    return max((fuzz.ratio(a, b) for a in q_tokens for b in c_tokens), default=0.0)
 
 
 def strip_accents(s: str) -> str:
@@ -174,6 +198,8 @@ class PharmacyMatcher:
                 else "a_confirmer" if score >= CONFIDENCE_THRESHOLDS["a_confirmer"]
                 else "non_fiable"
             )
+            if best_token_similarity(query_court, matched_text) < TOKEN_OVERLAP_FLOOR:
+                confidence = "non_fiable"
             results.append({
                 "nom": row["nom"],
                 "telephone": row["telephone"],

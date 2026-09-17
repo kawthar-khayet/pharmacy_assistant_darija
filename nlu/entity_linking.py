@@ -36,6 +36,32 @@ ARABIC_TO_LATIN = {
 
 CONFIDENCE_THRESHOLDS = {"auto": 90, "a_confirmer": 70}
 
+# WRatio (used for ranking) takes the max over several scorers, one of which is
+# partial_ratio -- so a short reference name that happens to be a near-substring
+# of a long query scores high on pure noise ("OXISTAT" vs "BIDON INEXISTANTE
+# XYZ123" -> 77, i.e. `a_confirmer`, which in a health context means proposing a
+# real drug for a query that means nothing). A word-level check has no such
+# blind spot, so it is applied as a floor below which nothing is trusted,
+# whatever WRatio says. It is compared against the string that actually produced
+# the match -- the `nom` for a direct hit, but the `dci` for an indirect one,
+# since a DCI match legitimately yields a very different commercial name
+# (query "ibuprofene" -> ADFENE).
+TOKEN_OVERLAP_FLOOR = 75
+
+
+def best_token_similarity(query_norm: str, candidate_norm: str) -> float:
+    """Best similarity between any single word of the query and any single word
+    of the candidate. Used only as a garbage filter (see TOKEN_OVERLAP_FLOOR),
+    never for ranking.
+
+    Compared to token_set_ratio it judges each word pair on its own merits, so a
+    one-word query still scores full marks against a multi-word reference entry
+    ("DOLIPRAN" vs "DOLIPRANE VITAMINE C" -> 94, where token_set_ratio drops to
+    57 merely because of the two extra words) while noise stays low
+    ("BIDON INEXISTANTE XYZ123" vs "OXISTAT" -> 67)."""
+    q_tokens, c_tokens = query_norm.split(), candidate_norm.split()
+    return max((fuzz.ratio(a, b) for a in q_tokens for b in c_tokens), default=0.0)
+
 
 def strip_accents(s: str) -> str:
     return "".join(c for c in unicodedata.normalize("NFD", s) if unicodedata.category(c) != "Mn")
@@ -83,19 +109,28 @@ class MedicamentMatcher:
         nom_hits = process.extract(query_norm, self.unique_noms, scorer=fuzz.WRatio, limit=top_k * 3)
         dci_hits = process.extract(query_norm, self.unique_dcis, scorer=fuzz.WRatio, limit=top_k * 2)
 
-        candidates = {}  # nom_norm -> best score, and whether matched via dci
+        # nom_norm -> (best score, text that produced it). The matched text is
+        # kept so the confidence floor below can be checked against what was
+        # actually compared, not against a commercial name the query never
+        # resembled in the first place (see TOKEN_OVERLAP_FLOOR).
+        candidates: dict[str, tuple[float, str]] = {}
+
+        def offer(name: str, score: float, matched_text: str) -> None:
+            if score > candidates.get(name, (0.0, ""))[0]:
+                candidates[name] = (score, matched_text)
+
         for name, score, _ in nom_hits:
-            candidates[name] = max(candidates.get(name, 0), score)
+            offer(name, score, name)
         for dci_name, score, _ in dci_hits:
             rows = self.df.loc[self.df["dci_norm"] == dci_name, "nom_norm"].unique()
             for name in rows:
-                candidates[name] = max(candidates.get(name, 0), score * 0.95)  # slight discount: indirect match
+                offer(name, score * 0.95, dci_name)  # slight discount: indirect match
 
-        ranked = sorted(candidates.items(), key=lambda kv: kv[1], reverse=True)[: top_k * 2]
+        ranked = sorted(candidates.items(), key=lambda kv: kv[1][0], reverse=True)[: top_k * 2]
 
         results = []
         seen_noms = set()
-        for name_norm, score in ranked:
+        for name_norm, (score, matched_text) in ranked:
             if name_norm in seen_noms:
                 continue
             seen_noms.add(name_norm)
@@ -113,9 +148,12 @@ class MedicamentMatcher:
                 else "a_confirmer" if score >= CONFIDENCE_THRESHOLDS["a_confirmer"]
                 else "non_fiable"
             )
+            if best_token_similarity(query_norm, matched_text) < TOKEN_OVERLAP_FLOOR:
+                confidence = "non_fiable"
 
             variants = display_rows[
-                ["nom", "dci", "dosage", "forme", "presentation", "ppv", "taux_remboursement_cnops", "source"]
+                ["nom", "dci", "dosage", "forme", "presentation", "ppv",
+                 "taux_remboursement_cnops", "taux_remboursement_cnss", "source"]
             ].drop_duplicates().head(5)
             results.append({
                 "nom_candidat": rows["nom"].iloc[0],

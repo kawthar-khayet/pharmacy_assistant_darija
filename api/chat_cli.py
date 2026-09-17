@@ -13,14 +13,14 @@ is replaced by a dedicated "Ville/quartier >" prompt, and nothing is
 printed until that sub-exchange is resolved -- so the flow reads as one
 continuous question/answer instead of two separate bot replies.
 
-Requires the API server to be running (uvicorn api.main:app --port 8001).
+Requires the API server to be running (uvicorn api.main:app --port 8000).
 """
 import sys
 import uuid
 
 import requests
 
-API_URL = "http://127.0.0.1:8001/chat"
+API_URL = "http://127.0.0.1:8000/chat"
 
 
 def send(text: str, session_id: str) -> dict:
@@ -51,7 +51,7 @@ def main():
             data = send(text, session_id)
         except requests.ConnectionError:
             print("Erreur : impossible de joindre l'API. Le serveur tourne-t-il ? "
-                  "(uvicorn api.main:app --port 8001)")
+                  "(uvicorn api.main:app --port 8000)")
             continue
         except requests.HTTPError as e:
             print(f"Erreur API : {e}")

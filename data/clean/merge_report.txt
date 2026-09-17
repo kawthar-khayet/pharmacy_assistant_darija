@@ -1,9 +1,18 @@
-=== Rapport de fusion CNOPS + AMMPS ===
+=== Rapport de fusion CNOPS + AMMPS + CNSS ===
 AMMPS (source) lignes nettoyees : 9903
 CNOPS (source) lignes nettoyees : 5917
+CNSS  (source) lignes nettoyees : 8978
+
+-- Fusion AMMPS <-> CNOPS (merge outer sur nom+dosage+forme) --
 Correspondances exactes (nom+dosage+forme) : 2424
 AMMPS uniquement (pas de correspondance CNOPS) : 8562
 CNOPS uniquement (pas de correspondance AMMPS) : 4455
-Total table de reference : 15441
-
 Taux de correspondance CNOPS->AMMPS : 41.0%
+
+-- Apport CNSS (rattachement par cle, puis ajout des produits inedits) --
+Cles produit distinctes cote CNSS : 6591
+  dont deja presentes (remboursement CNSS ajoute a la ligne existante) : 3376
+  dont inedites (lignes ajoutees a la reference) : 4533
+Taux de correspondance CNSS->AMMPS/CNOPS : 51.2%
+
+Total table de reference : 19974

@@ -40,7 +40,7 @@ Pose une question (darija/arabe/francais), ex. `wach kayn doliprane 1g?`. Si le 
 
 ```
 data/                    donnees de reference (medicaments + pharmacies), nettoyees et brutes
-  README.md              details des sources et du pipeline de nettoyage
+  README.md              details des sources (AMMPS, CNOPS, CNSS, Saydalia) et du pipeline de nettoyage
 nlu/                      NLU (intents/entites) + Entity Linking
   README.md               taxonomie, format du dataset, resultats d'evaluation
   schema.json              7 intents, 6 types d'entites
@@ -57,7 +57,7 @@ scripts/                  scraping/nettoyage des donnees sources (deja executes,
 
 ## Etat d'avancement
 
-- [x] Donnees de reference medicaments (CNOPS + AMMPS, 15 441 entrees)
+- [x] Donnees de reference medicaments (CNOPS + AMMPS + CNSS, 19 974 entrees, dont 12 075 avec taux de remboursement)
 - [x] Donnees de reference pharmacies (Saydalia, 2652 entrees)
 - [x] NLU few-shot (Ollama Cloud) : 94.5% intent accuracy / 91.9% entity F1 sur le seed dataset
 - [x] Entity Linking medicaments et pharmacies (RapidFuzz), avec gestion des lieux ambigus

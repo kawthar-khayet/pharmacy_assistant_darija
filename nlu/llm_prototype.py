@@ -51,12 +51,17 @@ load_dotenv(ENV_PATH)
 MODEL = os.environ.get("OLLAMA_MODEL", "gpt-oss:20b-cloud")
 
 # One representative few-shot example per intent, hand-picked for diversity
-# of language (fr / darija latine / darija arabe / arabe / mixte).
+# of language (fr / darija latine / darija arabe / arabe / mixte), plus one
+# extra info_pharmacie shot (seed_0026) that demonstrates the common-noun rule
+# above in Latin script: the model used to tag the whole "sidalia <nom>" span
+# (or a bare "sidalia") as a PHARMACIE entity -- seed_0020 alone did not fix it
+# because it is written in Arabic script.
 FEW_SHOT_IDS = [
     "seed_0001",  # disponibilite_medicament, ary_lat
     "seed_0007",  # disponibilite_medicament, mixte, multi-entity
     "seed_0013",  # prix_remboursement, ary_lat
-    "seed_0020",  # info_pharmacie, ar
+    "seed_0020",  # info_pharmacie, ar, "sidalia" seul -> aucune entite
+    "seed_0026",  # info_pharmacie, ary_lat, "sidalia Ibn Sina" -> PHARMACIE="Ibn Sina"
     "seed_0027",  # posologie_information, ary_lat
     "seed_0032",  # commande_reservation, ary_lat
     "seed_0038",  # salutation, ar
@@ -120,6 +125,11 @@ Regles :
 - N'invente pas d'entite qui n'est pas explicitement dans le message.
 - Si aucune entite n'est presente, renvoie "entities": [].
 - Si le message ne correspond a aucun intent metier, utilise "autre".
+- "sidalia", "saydalia", "صيدلية", "pharmacie" sont des noms COMMUNS qui designent
+  la pharmacie en general : ce ne sont jamais des entites PHARMACIE. N'extrais une
+  entite PHARMACIE que pour le nom propre lui-meme, sans ce mot (dans "sidalia Ibn
+  Sina", l'entite est "Ibn Sina", pas "sidalia Ibn Sina"). Si le message dit
+  seulement "sidalia" sans nom propre, il n'y a pas d'entite PHARMACIE du tout.
 
 Exemples :
 {shots_block}

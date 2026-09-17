@@ -101,6 +101,38 @@ def has_value(x) -> bool:
     return x is not None and not (isinstance(x, float) and x != x)
 
 
+# CNOPS and CNSS are two different insurers publishing their own rates, so a
+# product can be covered by one and not the other -- the regime has to be named.
+REMBOURSEMENT_REGIMES = (
+    ("taux_remboursement_cnops", "CNOPS"),
+    ("taux_remboursement_cnss", "CNSS"),
+)
+
+
+def remboursement_phrase(priced_variant: dict, variant: dict) -> str | None:
+    """Wording for the reimbursement part of a reply, or None if no rate is
+    known for either insurer.
+
+    A rate of 0 means "on the list but not reimbursed": phrasing that as
+    "rembourse a 0%" would read as a wrong answer, so it is stated plainly.
+    """
+    rates: dict[str, float] = {}
+    for col, label in REMBOURSEMENT_REGIMES:
+        taux = priced_variant.get(col)
+        if not has_value(taux):
+            taux = variant.get(col)
+        if has_value(taux):
+            rates[label] = float(taux)
+
+    if not rates:
+        return None
+    if len(set(rates.values())) == 1:
+        taux = next(iter(rates.values()))
+        who = " et ".join(rates)
+        return f"non rembourse ({who})" if taux == 0 else f"rembourse a {taux:.0f}% ({who})"
+    return "remboursement : " + ", ".join(f"{label} {v:.0f}%" for label, v in rates.items())
+
+
 def describe_medicament(match: dict) -> str:
     variants = match["variantes"]
     variant = variants[0] if variants else {}
@@ -116,11 +148,9 @@ def describe_medicament(match: dict) -> str:
     price_bits = []
     if has_value(priced_variant.get("ppv")):
         price_bits.append(f"{priced_variant['ppv']} DH")
-    taux = priced_variant.get("taux_remboursement_cnops")
-    if not has_value(taux):
-        taux = variant.get("taux_remboursement_cnops")
-    if has_value(taux):
-        price_bits.append(f"rembourse a {taux:.0f}%")
+    remboursement = remboursement_phrase(priced_variant, variant)
+    if remboursement:
+        price_bits.append(remboursement)
     if price_bits:
         desc += " -- " + ", ".join(price_bits)
     return desc

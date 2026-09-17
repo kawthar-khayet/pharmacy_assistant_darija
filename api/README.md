@@ -48,6 +48,7 @@ Reponse :
 }
 ```
 - `medicament_matches` n'est rempli que si une entite `MEDICAMENT` a ete extraite (utilise aussi `DOSAGE` si present pour affiner).
+- Le `reply` nomme le regime de remboursement, CNOPS et CNSS publiant chacun son taux : `rembourse a 70% (CNOPS et CNSS)`, `rembourse a 70% (CNSS)`, ou `remboursement : CNOPS 70%, CNSS 0%` quand ils divergent. Un taux de 0 signifie « inscrit sur la liste mais non rembourse » et s'affiche `non rembourse (...)`, pas `rembourse a 0%`.
 - `pharmacie_matches` n'est rempli que si une entite `PHARMACIE` et/ou `LOCALISATION` a ete extraite.
 - `400` si `text` est vide ; `500` si `OLLAMA_API_KEY` n'est pas configuree.
 
