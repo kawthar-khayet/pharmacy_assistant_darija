@@ -1,0 +1,147 @@
+/* ===========================================================================
+   DwaTalk — socle : jetons de design, remise a zero, typographie.
+   Palette ivoire / terre cuite douce / rose poudre, texte brun charbon.
+   Le terre cuite est un accent, jamais une surface plein ecran.
+   =========================================================================== */
+
+:root {
+  /* --- surfaces --- */
+  --ivoire:      #fdfbf8;
+  --sable:       #f6f0e8;
+  --sable-fonce: #efe7db;
+  --carte:       #ffffff;
+
+  /* --- marque --- */
+  --terre:       #c05e45;
+  --terre-vive:  #a94c34;
+  --terre-voile: #fbede8;
+  --terre-trait: #f0d8d0;
+
+  /* --- accent rose poudre --- */
+  --rose:        #c98d80;
+  --rose-voile:  #f9efec;
+
+  /* --- texte --- */
+  --encre:       #2a2420;
+  --encre-douce: #6e635b;
+  --encre-pale:  #9c9189;
+
+  /* --- utilitaires --- */
+  --trait:       #ece3d9;
+  --trait-fort:  #e0d4c6;
+  --dispo:       #3e8f6f;
+  --alerte:      #b5822a;
+  --alerte-voile:#fbf3e3;
+
+  /* --- rayons --- */
+  --r-xs: 8px;
+  --r-sm: 12px;
+  --r:    16px;
+  --r-lg: 22px;
+  --r-xl: 30px;
+
+  /* --- elevations : douces, jamais dures --- */
+  --ombre-1: 0 1px 2px rgba(42, 36, 32, .04);
+  --ombre-2: 0 1px 3px rgba(42, 36, 32, .05), 0 6px 16px -6px rgba(42, 36, 32, .08);
+  --ombre-3: 0 2px 6px rgba(42, 36, 32, .06), 0 18px 40px -18px rgba(42, 36, 32, .16);
+
+  /* --- rythme --- */
+  --flanc: 248px;
+  --lecture: 760px;
+
+  --transition: 180ms cubic-bezier(.4, 0, .2, 1);
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--ivoire);
+  color: var(--encre);
+  /* Plus Jakarta Sans porte le latin ; le navigateur bascule glyphe par glyphe
+     sur IBM Plex Sans Arabic des qu'il rencontre de l'arabe, ce qui evite de
+     melanger deux dessins sur une meme ligne de darija en graphie latine. */
+  font-family: 'Plus Jakarta Sans', 'IBM Plex Sans Arabic', system-ui, -apple-system, sans-serif;
+  font-size: 15.5px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -.018em;
+  line-height: 1.25;
+}
+
+p { margin: 0; }
+
+button, input, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+
+a { color: inherit; text-decoration: none; }
+
+:focus-visible {
+  outline: 2px solid var(--terre);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* L'arabe a des jambages plus hauts : un interlignage un peu plus genereux
+   evite que les diacritiques ne touchent la ligne du dessus. */
+:lang(ar), [dir='rtl'] {
+  line-height: 1.85;
+}
+
+.ar {
+  font-family: 'IBM Plex Sans Arabic', 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.85;
+}
+
+.invisible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Motif zellige : un khatim minuscule, repete en texture derriere certaines
+   sections. Volontairement minuscule et a peine teinte -- a taille reelle on
+   doit le sentir comme un grain de papier, jamais le lire comme un decor.
+   Une version plus grande avait ete essayee : elle attirait l'oeil et faisait
+   basculer la page du cote folklorique qu'on veut eviter. */
+.filigrane {
+  position: relative;
+  isolation: isolate;
+}
+
+.filigrane::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: .055;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46' viewBox='0 0 72 72'%3E%3Cpath d='M36 8 L43 21 L57 16 L52 30 L65 36 L52 42 L57 56 L43 51 L36 64 L29 51 L15 56 L20 42 L7 36 L20 30 L15 16 L29 21 Z' fill='none' stroke='%23c05e45' stroke-width='1.6'/%3E%3C/svg%3E");
+  background-size: 46px 46px;
+  /* s'efface vers le bas pour ne pas concurrencer le contenu principal */
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 82%);
+  mask-image: linear-gradient(180deg, #000 0%, transparent 82%);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
