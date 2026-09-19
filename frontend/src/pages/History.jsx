@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import Header from '../components/Header'
 import { dateLisible } from '../lib/conversations'
-import { useConversations } from '../lib/ConversationsContext'
+import { useConversations } from '../lib/conversationsContexte'
 
 export default function History() {
   const { triees, choisir, supprimer, demarrer } = useConversations()

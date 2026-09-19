@@ -55,3 +55,14 @@ export function chercherPharmacies({ q, ville, limit = 12, signal } = {}) {
   if (ville) params.set('ville', ville)
   return appeler(`/pharmacies?${params}`, { signal })
 }
+
+/** Envoie un enregistrement a Whisper (cote API) et renvoie le texte entendu.
+ *  Pas d'en-tete Content-Type : le navigateur doit le poser lui-meme pour y
+ *  inclure la frontiere du multipart. */
+export function transcrire(audio, { langue } = {}) {
+  const corps = new FormData()
+  const extension = audio.type.includes('mp4') ? 'mp4' : audio.type.includes('ogg') ? 'ogg' : 'webm'
+  corps.append('fichier', audio, `question.${extension}`)
+  if (langue) corps.append('langue', langue)
+  return appeler('/transcription', { method: 'POST', body: corps })
+}

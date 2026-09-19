@@ -1,7 +1,6 @@
-import { createContext, useContext, useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { ecrireToutes, lireToutes, nouvelleConversation } from './conversations'
-
-const Contexte = createContext(null)
+import { Contexte } from './conversationsContexte'
 
 export function ConversationsProvider({ children }) {
   // On lit le stockage une seule fois, a l'initialisation : le relire a chaque
@@ -70,10 +69,4 @@ export function ConversationsProvider({ children }) {
   }, [conversations, couranteId])
 
   return <Contexte.Provider value={valeur}>{children}</Contexte.Provider>
-}
-
-export function useConversations() {
-  const valeur = useContext(Contexte)
-  if (!valeur) throw new Error('useConversations doit etre utilise dans ConversationsProvider')
-  return valeur
 }

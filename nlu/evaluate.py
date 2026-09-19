@@ -32,6 +32,22 @@ def score_entities(gold: list[dict], pred: list[dict]) -> tuple[int, int, int]:
     return tp, fp, fn
 
 
+def _resultat(ex: dict, out: dict) -> dict:
+    pred = out["output"]
+    pred_intent = pred.get("intent")
+    return {
+        "id": ex["id"],
+        "text": ex["text"],
+        "lang": ex.get("lang"),
+        "gold_intent": ex["intent"],
+        "pred_intent": pred_intent,
+        "intent_correct": pred_intent == ex["intent"],
+        "gold_entities": ex["entities"],
+        "pred_entities": pred.get("entities", []),
+        "validation_errors": out["validation_errors"],
+    }
+
+
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
     examples = load_seed_examples()
@@ -41,39 +57,42 @@ def main():
     total_tp = total_fp = total_fn = 0
     results = []
 
-    for i, ex in enumerate(eval_set, start=1):
-        try:
-            out = run(ex["text"])
-        except Exception as e:
-            print(f"[{i}/{len(eval_set)}] ERREUR sur {ex['id']!r}: {e}")
-            continue
+    # Premier passage, puis un second pour les exemples qui ont echoue : sur le
+    # palier gratuit d'Ollama Cloud les surcharges passageres (503) sont
+    # frequentes, et un exemple manquant fausserait la comparaison avec la
+    # baseline, qui elle est evaluee sur la totalite du jeu.
+    a_traiter = list(eval_set)
+    for passage in (1, 2):
+        echecs = []
+        for i, ex in enumerate(a_traiter, start=1):
+            try:
+                out = run(ex["text"])
+            # SystemExit n'herite pas d'Exception : c'est pourtant ce que leve
+            # le client LLM sur une surcharge, et sans ce cas explicite une seule
+            # surcharge interromprait toute l'evaluation en perdant les resultats.
+            except (Exception, SystemExit) as e:
+                print(f"[{i}/{len(a_traiter)}] ERREUR sur {ex['id']!r}: {e}")
+                echecs.append(ex)
+                continue
+            results.append(_resultat(ex, out))
+            r = results[-1]
+            intent_correct += int(r["intent_correct"])
+            tp, fp, fn = score_entities(ex["entities"], r["pred_entities"])
+            total_tp += tp
+            total_fp += fp
+            total_fn += fn
+            status = "OK" if r["intent_correct"] else "FAIL"
+            print(f"[{i}/{len(a_traiter)}] {status} intent={r['pred_intent']!r} "
+                  f"(gold={ex['intent']!r}) — {ex['text'][:50]}")
+            time.sleep(0.2)
 
-        pred = out["output"]
-        pred_intent = pred.get("intent")
-        pred_entities = pred.get("entities", [])
+        if not echecs or passage == 2:
+            break
+        print(f"\n{len(echecs)} exemple(s) en echec, nouvel essai dans 20 s...\n")
+        time.sleep(20)
+        a_traiter = echecs
 
-        is_correct = pred_intent == ex["intent"]
-        intent_correct += int(is_correct)
-
-        tp, fp, fn = score_entities(ex["entities"], pred_entities)
-        total_tp += tp
-        total_fp += fp
-        total_fn += fn
-
-        results.append({
-            "id": ex["id"],
-            "text": ex["text"],
-            "gold_intent": ex["intent"],
-            "pred_intent": pred_intent,
-            "intent_correct": is_correct,
-            "gold_entities": ex["entities"],
-            "pred_entities": pred_entities,
-            "validation_errors": out["validation_errors"],
-        })
-
-        status = "OK" if is_correct else "FAIL"
-        print(f"[{i}/{len(eval_set)}] {status} intent={pred_intent!r} (gold={ex['intent']!r}) — {ex['text'][:50]}")
-        time.sleep(0.2)
+    manquants = [ex["id"] for ex in eval_set if ex["id"] not in {r["id"] for r in results}]
 
     with open(RESULTS_PATH, "w", encoding="utf-8") as f:
         for r in results:
@@ -90,6 +109,8 @@ def main():
     print(f"Entity precision       : {precision:.1%}")
     print(f"Entity recall          : {recall:.1%}")
     print(f"Entity F1              : {f1:.1%}")
+    if manquants:
+        print(f"ATTENTION : {len(manquants)} exemple(s) non evalue(s) apres deux passages : {manquants}")
     print(f"\nDetail sauvegarde dans : {RESULTS_PATH}")
 
 

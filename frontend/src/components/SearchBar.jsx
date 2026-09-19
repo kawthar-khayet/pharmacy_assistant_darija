@@ -57,9 +57,14 @@ export default function SearchBar({
 }) {
   const champRef = useRef(null)
 
-  const { ecoute, erreur, basculer, disponible } = useDictee({
-    onTexte: (texte) => onChange(valeur ? `${valeur} ${texte}` : texte),
+  const { etat, erreur, basculer, disponible } = useDictee({
+    onTexte: (texte) => {
+      onChange(valeur ? `${valeur} ${texte}` : texte)
+      champRef.current?.focus()
+    },
   })
+  const ecoute = etat === 'ecoute'
+  const transcription = etat === 'transcription'
 
   useEffect(() => {
     const champ = champRef.current
@@ -102,13 +107,26 @@ export default function SearchBar({
           {avecVoix && disponible && (
             <button
               type="button"
-              className={`rond ${ecoute ? 'rond-actif' : ''}`}
+              className={`rond ${ecoute ? 'rond-actif' : ''} ${transcription ? 'rond-attente' : ''}`}
               onClick={basculer}
+              disabled={transcription}
               aria-pressed={ecoute}
-              aria-label={ecoute ? 'Arreter la dictee' : 'Dicter ta question'}
-              title={ecoute ? 'Arreter la dictee' : 'Dicter ta question'}
+              aria-label={
+                transcription
+                  ? 'Transcription en cours'
+                  : ecoute
+                    ? "Arreter l'enregistrement"
+                    : 'Poser ta question a voix haute'
+              }
+              title={
+                transcription
+                  ? 'Transcription en cours…'
+                  : ecoute
+                    ? "Arreter l'enregistrement"
+                    : 'Poser ta question a voix haute'
+              }
             >
-              <Micro />
+              {transcription ? <span className="mini-roue" aria-hidden="true" /> : <Micro />}
             </button>
           )}
           <button
@@ -123,9 +141,14 @@ export default function SearchBar({
         </div>
       </div>
 
-      {(erreur || aide) && (
-        <p className="champ-aide" role={erreur ? 'alert' : undefined}>
-          {erreur || aide}
+      {(erreur || aide || ecoute || transcription) && (
+        <p className="champ-aide" role={erreur ? 'alert' : 'status'}>
+          {erreur ||
+            (ecoute
+              ? "J'ecoute… appuie a nouveau sur le micro quand tu as fini."
+              : transcription
+                ? 'Transcription en cours…'
+                : aide)}
         </p>
       )}
     </div>

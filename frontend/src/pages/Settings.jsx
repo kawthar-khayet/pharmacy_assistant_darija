@@ -1,8 +1,8 @@
 import Header from '../components/Header'
 import SafetyNotice from '../components/SafetyNotice'
 import { API_BASE } from '../lib/api'
-import { dicteeDisponible } from '../lib/voix'
-import { useConversations } from '../lib/ConversationsContext'
+import { voixDisponible } from '../lib/voix'
+import { useConversations } from '../lib/conversationsContexte'
 
 export default function Settings() {
   const { conversations, supprimer } = useConversations()
@@ -19,15 +19,15 @@ export default function Settings() {
       <div className="liste">
         <div className="reglage">
           <div>
-            <h4>Dictee vocale</h4>
+            <h4>Question a voix haute</h4>
             <p>
-              {dicteeDisponible
-                ? 'Disponible dans ce navigateur. Le micro reconnait l arabe marocain.'
-                : "Indisponible dans ce navigateur. Essaie Chrome, Edge ou Safari."}
+              {voixDisponible
+                ? "Ta voix est transcrite par Whisper sur le serveur DwaTalk, pas chez un tiers. Tu relis le texte avant de l'envoyer."
+                : "L'enregistrement audio n'est pas disponible dans ce navigateur."}
             </p>
           </div>
-          <span className={`marqueur ${dicteeDisponible ? 'marqueur-ok' : ''}`}>
-            {dicteeDisponible ? 'Active' : 'Non supporte'}
+          <span className={`marqueur ${voixDisponible ? 'marqueur-ok' : ''}`}>
+            {voixDisponible ? 'Active' : 'Non supporte'}
           </span>
         </div>
 

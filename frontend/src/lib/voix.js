@@ -1,85 +1,117 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { ApiError, transcrire } from './api'
 
-// Dictee vocale via l'API Web Speech du navigateur.
+// Saisie vocale : le navigateur enregistre, l'API DwaTalk transcrit (Whisper,
+// en local cote serveur -- voir api/parole.py).
 //
-// Elle est native a Chrome/Edge/Safari et reconnait l'arabe marocain, donc elle
-// donne une vraie saisie vocale sans rien ajouter cote serveur. Elle est en
-// revanche absente de Firefox : le bouton se masque alors de lui-meme plutot
-// que d'afficher une commande qui ne repondrait pas.
+// On enregistre plutot que d'utiliser la dictee integree du navigateur : celle-ci
+// n'existe pas sous Firefox, envoie la voix aux serveurs de l'editeur du
+// navigateur, et ne laisse aucun composant vocal dans le projet lui-meme.
 //
-// La transcription Whisper cote API reste la voie a suivre pour ne plus dependre
-// du navigateur et traiter la darija avec un modele choisi ; celle-ci sert en
-// attendant, et l'interface n'aura pas a changer le jour ou on bascule.
+// Le texte transcrit est rendu au champ de saisie sans etre envoye : Whisper
+// ne connait la darija qu'approximativement, l'utilisateur doit pouvoir relire
+// et corriger avant de poser sa question.
 
-const Reconnaissance =
+// Garde-fou : un enregistrement oublie ne doit pas tourner indefiniment.
+// Aligne sur la limite de l'API (60 s), avec de la marge.
+const DUREE_MAX_MS = 45_000
+
+export const voixDisponible =
   typeof window !== 'undefined' &&
-  (window.SpeechRecognition || window.webkitSpeechRecognition)
+  Boolean(navigator.mediaDevices?.getUserMedia) &&
+  typeof window.MediaRecorder !== 'undefined'
 
-export const dicteeDisponible = Boolean(Reconnaissance)
-
-export function useDictee({ langue = 'ar-MA', onTexte } = {}) {
-  const [ecoute, setEcoute] = useState(false)
+/** etat : 'repos' | 'ecoute' | 'transcription' */
+export function useDictee({ onTexte } = {}) {
+  const [etat, setEtat] = useState('repos')
   const [erreur, setErreur] = useState(null)
-  const moteurRef = useRef(null)
-  // garde la derniere callback sans relancer l'effet a chaque rendu
+
+  const enregistreurRef = useRef(null)
+  const fluxRef = useRef(null)
+  const morceauxRef = useRef([])
+  const minuterieRef = useRef(null)
+  // garde la derniere callback sans relancer d'effet a chaque rendu ; mise a
+  // jour dans un effet et non pendant le rendu, que React peut rejouer
   const onTexteRef = useRef(onTexte)
-  onTexteRef.current = onTexte
-
   useEffect(() => {
-    if (!Reconnaissance) return undefined
+    onTexteRef.current = onTexte
+  })
 
-    const moteur = new Reconnaissance()
-    moteur.lang = langue
-    moteur.interimResults = false
-    moteur.maxAlternatives = 1
+  const libererMicro = useCallback(() => {
+    clearTimeout(minuterieRef.current)
+    // couper les pistes eteint le voyant "micro actif" du navigateur : sans ca
+    // il resterait allume apres l'enregistrement, ce qui inquiete a juste titre
+    fluxRef.current?.getTracks().forEach((piste) => piste.stop())
+    fluxRef.current = null
+  }, [])
 
-    moteur.onresult = (e) => {
-      const texte = Array.from(e.results)
-        .map((r) => r[0].transcript)
-        .join(' ')
-        .trim()
-      if (texte) onTexteRef.current?.(texte)
-    }
-    moteur.onerror = (e) => {
-      setEcoute(false)
-      setErreur(
-        e.error === 'not-allowed'
-          ? "Acces au micro refuse. Autorise-le dans les reglages du navigateur."
-          : "La dictee n'a pas abouti. Reessaie ou ecris ta question.",
-      )
-    }
-    moteur.onend = () => setEcoute(false)
+  // a la fermeture de la page ou au changement d'ecran
+  useEffect(
+    () => () => {
+      if (enregistreurRef.current?.state === 'recording') enregistreurRef.current.stop()
+      libererMicro()
+    },
+    [libererMicro],
+  )
 
-    moteurRef.current = moteur
-    return () => {
-      moteur.onresult = null
-      moteur.onerror = null
-      moteur.onend = null
-      try {
-        moteur.abort()
-      } catch {
-        // deja arrete : rien a faire
-      }
-    }
-  }, [langue])
-
-  const basculer = useCallback(() => {
-    const moteur = moteurRef.current
-    if (!moteur) return
+  const demarrer = useCallback(async () => {
     setErreur(null)
-    if (ecoute) {
-      moteur.stop()
-      setEcoute(false)
+    let flux
+    try {
+      flux = await navigator.mediaDevices.getUserMedia({ audio: true })
+    } catch (e) {
+      setErreur(
+        e?.name === 'NotAllowedError'
+          ? "Acces au micro refuse. Autorise-le dans les reglages du navigateur."
+          : "Aucun micro utilisable n'a ete trouve.",
+      )
       return
     }
-    try {
-      moteur.start()
-      setEcoute(true)
-    } catch {
-      // start() leve si une session tourne deja : on se resynchronise
-      setEcoute(false)
-    }
-  }, [ecoute])
 
-  return { ecoute, erreur, basculer, disponible: dicteeDisponible }
+    fluxRef.current = flux
+    morceauxRef.current = []
+    const enregistreur = new MediaRecorder(flux)
+    enregistreurRef.current = enregistreur
+
+    enregistreur.ondataavailable = (e) => {
+      if (e.data.size > 0) morceauxRef.current.push(e.data)
+    }
+
+    enregistreur.onstop = async () => {
+      libererMicro()
+      const audio = new Blob(morceauxRef.current, { type: enregistreur.mimeType || 'audio/webm' })
+      morceauxRef.current = []
+      if (audio.size === 0) {
+        setEtat('repos')
+        return
+      }
+
+      setEtat('transcription')
+      try {
+        const { texte } = await transcrire(audio)
+        onTexteRef.current?.(texte)
+      } catch (err) {
+        setErreur(err instanceof ApiError ? err.message : "La transcription n'a pas abouti.")
+      } finally {
+        setEtat('repos')
+      }
+    }
+
+    enregistreur.start()
+    setEtat('ecoute')
+    minuterieRef.current = setTimeout(() => {
+      if (enregistreur.state === 'recording') enregistreur.stop()
+    }, DUREE_MAX_MS)
+  }, [libererMicro])
+
+  const basculer = useCallback(() => {
+    if (etat === 'transcription') return
+    if (etat === 'ecoute') {
+      enregistreurRef.current?.stop()
+      return
+    }
+    demarrer()
+  }, [etat, demarrer])
+
+  return { etat, erreur, basculer, disponible: voixDisponible }
 }

@@ -14,6 +14,13 @@ from pathlib import Path
 OUT_PATH = Path(__file__).resolve().parent / "seed_dataset.jsonl"
 
 # (text, lang, intent, [(entity_type, value), ...])
+# Regle de frontiere disponibilite_medicament / commande_reservation :
+# "commande" exige un verbe explicite de reservation ou d'achat (n7goz / 7goz,
+# reserver, commander, nchri / acheter). "bghit" seul, meme suivi d'une
+# quantite ("bghit juj boites", "il me faut 2 boites"), reste une demande de
+# disponibilite. Sans regle ecrite, des phrases de meme structure portaient
+# des labels opposes, et l'exemple few-shot de commande enseignait au modele
+# exactement la confusion qu'on lui reprochait ensuite.
 RAW_EXAMPLES = [
     # --- disponibilite_medicament ---
     ("wach kayn doliprane?", "ary_lat", "disponibilite_medicament",
@@ -82,13 +89,13 @@ RAW_EXAMPLES = [
      [("MEDICAMENT", "efferalgan")]),
 
     # --- commande_reservation ---
-    ("bghit njib juj boites dyal doliprane 1g", "ary_lat", "commande_reservation",
+    ("bghit njib juj boites dyal doliprane 1g", "ary_lat", "disponibilite_medicament",
      [("QUANTITE", "juj"), ("FORME", "boites"), ("MEDICAMENT", "doliprane"), ("DOSAGE", "1g")]),
     ("je veux reserver trois boites de paracetamol", "fr", "commande_reservation",
      [("QUANTITE", "trois"), ("FORME", "boites"), ("MEDICAMENT", "paracetamol")]),
     ("bghit n7goz doliprane", "ary_lat", "commande_reservation",
      [("MEDICAMENT", "doliprane")]),
-    ("il me faut 2 boites de doliprane 1g", "fr", "commande_reservation",
+    ("il me faut 2 boites de doliprane 1g", "fr", "disponibilite_medicament",
      [("QUANTITE", "2"), ("FORME", "boites"), ("MEDICAMENT", "doliprane"), ("DOSAGE", "1g")]),
     ("bghit nchri wa7ed 3elba dyal efferalgan", "ary_lat", "commande_reservation",
      [("QUANTITE", "wa7ed"), ("FORME", "3elba"), ("MEDICAMENT", "efferalgan")]),
@@ -139,7 +146,7 @@ RAW_EXAMPLES = [
      [("MEDICAMENT", "فلاجيل")]),
     ("hal yatawafar dawa flagyl 500?", "ary_lat", "disponibilite_medicament",
      [("MEDICAMENT", "flagyl"), ("DOSAGE", "500")]),
-    ("bghit nchri comprime dyal doliprane", "ary_lat", "disponibilite_medicament",
+    ("bghit nchri comprime dyal doliprane", "ary_lat", "commande_reservation",
      [("FORME", "comprime"), ("MEDICAMENT", "doliprane")]),
     ("est-ce que vous avez des gelules d'amoxicilline?", "fr", "disponibilite_medicament",
      [("FORME", "gelules"), ("MEDICAMENT", "amoxicilline")]),
@@ -189,11 +196,11 @@ RAW_EXAMPLES = [
      [("MEDICAMENT", "doliprane")]),
 
     # --- commande_reservation : quantites en toutes lettres darija ---
-    ("bghit tlata 3olab dyal spasfon", "ary_lat", "commande_reservation",
+    ("bghit tlata 3olab dyal spasfon", "ary_lat", "disponibilite_medicament",
      [("QUANTITE", "tlata"), ("FORME", "3olab"), ("MEDICAMENT", "spasfon")]),
     ("je voudrais commander cinq boites d'amoxicilline 500mg", "fr", "commande_reservation",
      [("QUANTITE", "cinq"), ("FORME", "boites"), ("MEDICAMENT", "amoxicilline"), ("DOSAGE", "500mg")]),
-    ("bghit rb3a 3elab dyal doliprane 500mg", "ary_lat", "commande_reservation",
+    ("bghit rb3a 3elab dyal doliprane 500mg", "ary_lat", "disponibilite_medicament",
      [("QUANTITE", "rb3a"), ("FORME", "3elab"), ("MEDICAMENT", "doliprane"), ("DOSAGE", "500mg")]),
     ("reserve li khamsa boites dyal efferalgan", "ary_lat", "commande_reservation",
      [("QUANTITE", "khamsa"), ("FORME", "boites"), ("MEDICAMENT", "efferalgan")]),

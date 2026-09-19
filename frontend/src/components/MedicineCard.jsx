@@ -27,7 +27,14 @@ export default function MedicineCard({ resultat, onOuvrir }) {
       <div className="fiche-tete">
         <span className="fiche-glyphe" aria-hidden="true">💊</span>
         <div style={{ minWidth: 0 }}>
-          <div className="fiche-etiquette">Medicament</div>
+          <div className="fiche-etiquette">
+            Medicament
+            {m.confiance === 'a_confirmer' && (
+              <span className="marqueur marqueur-verifier" style={{ marginLeft: 8 }}>
+                Nom approchant, a verifier
+              </span>
+            )}
+          </div>
           <div className="fiche-nom">{m.nom}</div>
           {m.dci && <div className="fiche-dci">{m.dci}</div>}
         </div>

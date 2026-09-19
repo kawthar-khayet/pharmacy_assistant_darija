@@ -1,38 +1,46 @@
-# API — Assistant Pharmacie (Challenge #1)
+# API — DwaTalk (Challenge #1)
 
-Connecte les briques deja construites en un seul service :
+Relie les briques du projet en un seul service :
+
 ```
-texte patient → NLU (intent + entites, LLM few-shot Ollama Cloud)
-              → Entity Linking medicaments (si entite MEDICAMENT)
-              → Entity Linking pharmacies (si entite PHARMACIE/LOCALISATION)
-              → reponse JSON structuree
+audio ─► Whisper (parole.py) ─┐
+                              ├─► NLU (LLM few-shot) ─► entity linking ─► reponse JSON + texte
+texte ────────────────────────┘                          medicaments / pharmacies
 ```
 
-## Lancer le serveur
-```
-uvicorn api.main:app --reload --port 8000
-```
-Necessite un fichier `.env` a la racine du projet avec `OLLAMA_API_KEY=...` (voir `nlu/README.md`) : chaque appel `/chat` fait un appel LLM metre sur Ollama Cloud.
+## Lancer
 
-Documentation interactive (Swagger) : http://localhost:8000/docs
+```
+py -m uvicorn api.main:app --reload --port 8000
+```
+
+Necessite un `.env` a la racine avec `OLLAMA_API_KEY=...` : chaque `/chat` fait un appel LLM. Documentation interactive : http://localhost:8000/docs
 
 ## Endpoints
 
-### `GET /health`
-Verification basique que le service tourne. Reponse : `{"status": "ok"}`.
-
-### `GET /schema`
-Retourne la taxonomie intents/entites (`nlu/schema.json`) — utile pour un client qui veut connaitre les valeurs possibles.
+| Methode | Chemin | Role |
+|---|---|---|
+| GET | `/health` | Le service repond |
+| GET | `/schema` | Taxonomie intents / entites (`nlu/schema.json`) |
+| POST | `/chat` | Question texte → interpretation structuree + reponse |
+| POST | `/transcription` | Audio → texte (Whisper, local) |
+| POST | `/chat/audio` | Audio → transcription → meme traitement que `/chat` |
+| GET | `/medicaments?q=` | Recherche de medicaments (nom ou molecule, fautes tolerees) |
+| GET | `/pharmacies?ville=&q=` | Recherche de pharmacies par lieu et/ou nom |
 
 ### `POST /chat`
-Requete :
+
 ```json
-{"text": "wach kayn doliprane 1g? bghit juj boites"}
+{"text": "wach kayn doliprane 1g? bghit juj boites", "session_id": null}
 ```
+
 Reponse :
+
 ```json
 {
+  "session_id": "3f0c…",
   "input": "wach kayn doliprane 1g? bghit juj boites",
+  "reply": "DOLIPRANE (1 G, comprime effervescent) -- 13.7 DH, rembourse a 70% (CNOPS et CNSS)\nDans quelle ville ou quel quartier es-tu … ?",
   "intent": "disponibilite_medicament",
   "entities": [
     {"type": "MEDICAMENT", "value": "doliprane"},
@@ -40,20 +48,36 @@ Reponse :
     {"type": "QUANTITE", "value": "juj"},
     {"type": "FORME", "value": "boites"}
   ],
-  "medicament_matches": [
-    {"nom_candidat": "DOLIPRANE", "score": 100.0, "confidence": "auto", "nb_variantes": 22, "variantes": [...]}
-  ],
+  "medicament_matches": [{"nom_candidat": "DOLIPRANE", "score": 100.0, "confidence": "auto", "variantes": ["…"]}],
   "pharmacie_matches": [],
-  "validation_errors": []
+  "validation_errors": [],
+  "awaiting_localisation": true
 }
 ```
-- `medicament_matches` n'est rempli que si une entite `MEDICAMENT` a ete extraite (utilise aussi `DOSAGE` si present pour affiner).
-- Le `reply` nomme le regime de remboursement, CNOPS et CNSS publiant chacun son taux : `rembourse a 70% (CNOPS et CNSS)`, `rembourse a 70% (CNSS)`, ou `remboursement : CNOPS 70%, CNSS 0%` quand ils divergent. Un taux de 0 signifie « inscrit sur la liste mais non rembourse » et s'affiche `non rembourse (...)`, pas `rembourse a 0%`.
-- `pharmacie_matches` n'est rempli que si une entite `PHARMACIE` et/ou `LOCALISATION` a ete extraite.
-- `400` si `text` est vide ; `500` si `OLLAMA_API_KEY` n'est pas configuree.
 
-## Limites actuelles (a lever pour un vrai MVP)
-- Une seule entite `MEDICAMENT`/`PHARMACIE` par message est liee (la premiere trouvee) — un message qui parle de deux medicaments ne lierait que le premier.
-- Pas de reponse en langage naturel : la sortie est un JSON technique, pas encore une phrase du type "Oui, le Doliprane 1g est disponible a 60.70 DH". A ajouter si le chatbot doit repondre directement au patient plutot que d'alimenter un systeme aval.
-- Pas d'entree vocale (Whisper) branchee sur cette API pour l'instant.
-- Pas d'authentification/rate limiting (hors scope pour un prototype de challenge).
+- **Multi-tours** : quand la demande porte sur un medicament sans lieu, `awaiting_localisation` vaut `true`. Le message suivant, envoye avec le meme `session_id`, est lu comme la ville ou le quartier.
+- **Paliers de confiance appliques** : un candidat `non_fiable` n'est jamais utilise. Si rien de fiable ne correspond, la reponse dit « Je ne trouve pas … » au lieu de proposer un medicament au hasard. Un candidat `a_confirmer` est presente comme une hypothese (« Tu parles peut-etre de … »).
+- **Remboursement** : CNOPS et CNSS publient chacun son taux, et le regime est toujours nomme. Un taux de 0 s'affiche « non rembourse ».
+- **Hors perimetre** : si l'intent est `autre` mais qu'un medicament a ete reconnu (« chno kaydir doliprane ? »), la fiche est donnee avec une reserve plutot qu'un « je n'ai pas compris ».
+- `400` si le texte est vide ; `500` si le LLM est indisponible, avec un message explicite (les surcharges passageres d'Ollama sont retentees 3 fois).
+
+### `POST /transcription` et `POST /chat/audio`
+
+Formulaire `multipart/form-data` :
+
+| Champ | Obligatoire | Description |
+|---|---|---|
+| `fichier` | oui | Enregistrement (webm/opus, ogg, mp4, wav…), 60 s et 10 Mo maximum |
+| `langue` | non | `ar` ou `fr` pour forcer la langue ; detection automatique sinon |
+| `session_id` | non (`/chat/audio`) | Pour continuer une conversation |
+
+`/transcription` renvoie `{"texte", "langue", "confiance_langue", "duree_audio"}`. `/chat/audio` renvoie la reponse de `/chat` augmentee d'un champ `transcription`. Un audio vide, illisible ou trop long donne une `422` avec la raison.
+
+Le front utilise `/transcription` et non `/chat/audio` : l'utilisateur relit ce que Whisper a entendu avant d'envoyer, ce qui compte en darija.
+
+## Limites
+
+- Une seule entite `MEDICAMENT` et une seule `PHARMACIE` sont liees par message (les premieres trouvees).
+- Etat de conversation en memoire : il disparait au redemarrage et ne se partage pas entre plusieurs processus. Un vrai deploiement le mettrait dans Redis ou une base.
+- Pas d'authentification ni de limitation de debit (hors perimetre du prototype). Les origines autorisees sont listees explicitement (`FRONTEND_ORIGINS`).
+- Whisper tourne sur CPU : ~3 s par question, et le premier appel charge le modele.

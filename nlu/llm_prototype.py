@@ -64,7 +64,7 @@ FEW_SHOT_IDS = [
     "seed_0020",  # info_pharmacie, ar, "sidalia" seul -> aucune entite
     "seed_0026",  # info_pharmacie, ary_lat, "sidalia Ibn Sina" -> PHARMACIE="Ibn Sina"
     "seed_0027",  # posologie_information, ary_lat
-    "seed_0032",  # commande_reservation, ary_lat
+    "seed_0034",  # commande_reservation, ary_lat, "bghit n7goz" : bghit + verbe = commande
     "seed_0038",  # salutation, ar
     "seed_0043",  # autre, fr
 ]

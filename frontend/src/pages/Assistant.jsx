@@ -8,7 +8,7 @@ import { Khatim } from '../components/Logo'
 import { Disponible } from '../components/Header'
 import { ApiError, envoyerMessage } from '../lib/api'
 import { titrer } from '../lib/conversations'
-import { useConversations } from '../lib/ConversationsContext'
+import { useConversations } from '../lib/conversationsContexte'
 
 const PISTES = [
   { glyphe: '💊', texte: 'Wach kayn doliprane 1g?' },

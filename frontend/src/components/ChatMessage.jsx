@@ -17,6 +17,11 @@ function amorce(meta) {
   // Les reserves que l'API exprime dans son texte doivent survivre au passage
   // en fiches : remplacer le paragraphe sans les reprendre ferait passer une
   // reponse prudente pour une reponse affirmative.
+  // Nom seulement approchant : c'est une hypothese, la fiche ne doit pas
+  // passer pour une reponse ferme.
+  if (aMed && meta.medicament_matches[0].confidence === 'a_confirmer') {
+    return 'Tu parles peut-etre de ce medicament ? Verifie que le nom correspond bien :'
+  }
   if (aMed && meta.intent === 'autre') {
     return "Je ne suis pas sur d'avoir bien compris ta question, mais voici ce que je sais de ce medicament :"
   }

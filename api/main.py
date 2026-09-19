@@ -23,9 +23,10 @@ import sys
 import uuid
 from pathlib import Path
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from starlette.concurrency import run_in_threadpool
 
 NLU_DIR = Path(__file__).resolve().parent.parent / "nlu"
 sys.path.insert(0, str(NLU_DIR))
@@ -33,6 +34,8 @@ sys.path.insert(0, str(NLU_DIR))
 from llm_prototype import run as run_nlu, load_schema  # noqa: E402
 from entity_linking import MedicamentMatcher  # noqa: E402
 from pharmacy_linking import PharmacyMatcher  # noqa: E402
+
+from api.parole import ErreurAudio, transcrire  # noqa: E402
 
 app = FastAPI(
     title="Assistant Pharmacie API",
@@ -89,6 +92,13 @@ class ChatRequest(BaseModel):
     session_id: str | None = None
 
 
+class TranscriptionResponse(BaseModel):
+    texte: str
+    langue: str
+    confiance_langue: float
+    duree_audio: float
+
+
 class ChatResponse(BaseModel):
     session_id: str
     input: str
@@ -101,9 +111,58 @@ class ChatResponse(BaseModel):
     awaiting_localisation: bool = False
 
 
+class ChatAudioResponse(ChatResponse):
+    # ce que Whisper a entendu, pour que l'interface puisse l'afficher et que
+    # l'utilisateur comprenne une reponse a cote de la plaque
+    transcription: TranscriptionResponse
+
+
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+
+async def _transcrire_upload(fichier: UploadFile, langue: str | None) -> TranscriptionResponse:
+    contenu = await fichier.read()
+    try:
+        # Whisper occupe le CPU plusieurs secondes : appele tel quel dans une
+        # route async, il bloquerait la boucle d'evenements et gelerait toute
+        # l'API -- /health compris -- le temps de la transcription.
+        t = await run_in_threadpool(transcrire, contenu, langue or None)
+    except ErreurAudio as e:
+        raise HTTPException(status_code=422, detail=str(e))
+    return TranscriptionResponse(**t.__dict__)
+
+
+@app.post("/transcription", response_model=TranscriptionResponse)
+async def transcription(
+    fichier: UploadFile = File(..., description="Enregistrement audio (webm, ogg, mp4, wav...)"),
+    langue: str | None = Form(None, description="Force la langue : 'ar' ou 'fr'. Detection automatique sinon."),
+):
+    """Transcrit un enregistrement vocal (Whisper, en local).
+
+    Utilise par l'interface pour remplir le champ de saisie : l'utilisateur voit
+    ce qui a ete compris et peut le corriger avant d'envoyer, ce qui compte pour
+    la darija, que Whisper ne connait qu'approximativement.
+    """
+    return await _transcrire_upload(fichier, langue)
+
+
+@app.post("/chat/audio", response_model=ChatAudioResponse)
+async def chat_audio(
+    fichier: UploadFile = File(...),
+    session_id: str | None = Form(None),
+    langue: str | None = Form(None),
+):
+    """Pipeline vocal complet : audio -> transcription -> NLU -> entity linking -> reponse.
+
+    Meme traitement que /chat une fois le texte obtenu, conversation multi-tours
+    comprise (meme session_id).
+    """
+    t = await _transcrire_upload(fichier, langue)
+    # chat() est synchrone et attend le LLM : meme raison, hors de la boucle
+    reponse = await run_in_threadpool(chat, ChatRequest(text=t.texte, session_id=session_id))
+    return ChatAudioResponse(**reponse.model_dump(), transcription=t)
 
 
 @app.get("/medicaments")
@@ -198,6 +257,10 @@ def describe_medicament(match: dict) -> str:
         price_bits.append(remboursement)
     if price_bits:
         desc += " -- " + ", ".join(price_bits)
+    if match.get("confidence") == "a_confirmer":
+        # nom seulement approchant : on le presente comme une hypothese a
+        # verifier, pas comme la reponse
+        desc = f"Tu parles peut-etre de {desc}. Verifie que c'est bien ce medicament."
     return desc
 
 
@@ -274,6 +337,13 @@ def chat(req: ChatRequest):
         medicament_matches = get_med_matcher().match(
             med_entity["value"], dosage=dosage_entity["value"] if dosage_entity else None, top_k=3,
         )
+        # Le matcher renvoie toujours ses meilleurs candidats, meme quand aucun
+        # ne ressemble a la requete : c'est a nous d'appliquer ses paliers de
+        # confiance. Sans ce filtre, "qwerty" obtenait une reponse chiffree sur
+        # un vrai medicament (ERY, 37,4 DH) -- inacceptable dans un contexte de
+        # sante. Un candidat "non_fiable" n'est donc jamais montre.
+        medicament_matches = [m for m in medicament_matches if m["confidence"] != "non_fiable"]
+    medicament_inconnu = med_entity is not None and not medicament_matches
 
     pharm_entity = next((e for e in entities if e["type"] == "PHARMACIE"), None)
     loc_entity = next((e for e in entities if e["type"] == "LOCALISATION"), None)
@@ -286,10 +356,20 @@ def chat(req: ChatRequest):
             top_k=3,
         )
         location_note = pharma_matcher.last_location_note
+        # meme regle pour un nom de pharmacie ; les listes par lieu ("liste_
+        # localisation") n'ont pas de score et restent affichees
+        pharmacie_matches = [p for p in pharmacie_matches if p["confidence"] != "non_fiable"]
 
     awaiting_localisation = False
 
-    if intent in STOCK_RELATED_INTENTS and medicament_matches:
+    if medicament_inconnu and intent not in {"info_pharmacie", "salutation"}:
+        reply = (
+            f"Je ne trouve pas « {med_entity['value']} » parmi les medicaments autorises "
+            "au Maroc. Verifie l'orthographe, ou essaie le nom de la molecule "
+            "(par exemple « paracetamol »)."
+        )
+
+    elif intent in STOCK_RELATED_INTENTS and medicament_matches:
         med_desc = describe_medicament(medicament_matches[0])
         if loc_entity:
             if pharmacie_matches:

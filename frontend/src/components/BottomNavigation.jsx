@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { NAVIGATION } from './Sidebar'
+import { NAVIGATION } from '../lib/navigation'
 
 /** Sur telephone, la barre laterale laisse place a une navigation basse : les
  *  cibles restent dans le pouce et l'ecran garde toute sa largeur pour lire. */

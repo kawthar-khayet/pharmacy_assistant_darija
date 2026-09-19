@@ -14,7 +14,7 @@
     {
       "id": "disponibilite_medicament",
       "label_fr": "Disponibilite d'un medicament",
-      "description": "Le patient demande si un medicament est en stock/disponible a la pharmacie.",
+      "description": "Le patient demande si un medicament est en stock/disponible a la pharmacie, y compris sous la forme \"bghit <medicament>\" ou \"il me faut <quantite>\" sans verbe de reservation ou d'achat.",
       "entites_attendues": ["MEDICAMENT", "DOSAGE", "FORME", "QUANTITE"]
     },
     {
@@ -38,7 +38,7 @@
     {
       "id": "commande_reservation",
       "label_fr": "Commande / reservation",
-      "description": "Le patient veut reserver ou commander une quantite d'un medicament pour retrait en pharmacie.",
+      "description": "Le patient veut reserver, commander ou acheter un medicament, avec un verbe explicite de reservation ou d'achat (n7goz, 7goz, reserver, commander, nchri, acheter). Sans ce verbe, \"bghit <medicament>\" est une demande de disponibilite, meme avec une quantite.",
       "entites_attendues": ["MEDICAMENT", "DOSAGE", "FORME", "QUANTITE"]
     },
     {

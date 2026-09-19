@@ -364,7 +364,8 @@ def main():
         "-- Apport CNSS (rattachement par cle, puis ajout des produits inedits) --",
         f"Cles produit distinctes cote CNSS : {stats['cnss_keys']}",
         f"  dont deja presentes (remboursement CNSS ajoute a la ligne existante) : {stats['cnss_keys_matched']}",
-        f"  dont inedites (lignes ajoutees a la reference) : {stats['cnss_rows_appended']}",
+        f"  dont inedites : {stats['cnss_keys'] - stats['cnss_keys_matched']}"
+        f" (soit {stats['cnss_rows_appended']} lignes ajoutees, une par conditionnement)",
         f"Taux de correspondance CNSS->AMMPS/CNOPS : {stats['cnss_keys_matched'] / stats['cnss_keys']:.1%}",
         "",
         f"Total table de reference : {stats['reference_rows']}",

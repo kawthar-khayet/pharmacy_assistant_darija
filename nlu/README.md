@@ -5,7 +5,9 @@
 - `build_seed_dataset.py` — genere `seed_dataset.jsonl` a partir d'exemples bruts (texte + valeurs d'entites) ; les offsets de caracteres sont calcules automatiquement (`str.find`), jamais comptes a la main.
 - `seed_dataset.jsonl` — 99 exemples de bootstrap, repartis sur les 7 intents et 5 variantes linguistiques (fr, ar, darija graphie arabe, darija graphie latine, mixte), avec fautes d'orthographe volontaires sur les noms de medicaments.
 - `llm_prototype.py` — prototype NLU par LLM few-shot via **Ollama Cloud** (endpoint OpenAI-compatible `https://ollama.com/v1`, modele par defaut `gpt-oss:20b-cloud` — accessible en tier gratuit ; `qwen3.5:cloud`, teste en premier pour son meilleur support multilingue, renvoie HTTP 402 "requires a subscription"). Construit le prompt systeme depuis `schema.json` + 9 exemples de `seed_dataset.jsonl`, renvoie un JSON valide `{intent, entities}`. Le prompt pose explicitement que `sidalia` / `saydalia` / `صيدلية` / `pharmacie` sont des noms COMMUNS et jamais des entites `PHARMACIE` (seul le nom propre l'est : dans "sidalia Ibn Sina", l'entite est "Ibn Sina") — sans cette regle le modele annotait le mot lui-meme, ce qui causait 5 des 11 ecarts d'entites de l'evaluation. Necessite `OLLAMA_API_KEY` (cle creee sur ollama.com/settings/keys) dans un fichier `.env` a la racine du projet (`OLLAMA_API_KEY=...`) — plus fiable qu'une variable d'environnement shell, chaque appel d'outil tournant dans son propre process. Modele configurable via `OLLAMA_MODEL`.
-- `evaluate.py` — evalue `llm_prototype.py` sur le reste du seed dataset (Intent Accuracy + Entity F1). Meme prerequis. **Resultat obtenu (gpt-oss:20b-cloud, 91 exemples)** : Intent accuracy 94.5%, Entity F1 91.9% — voir section dediee plus bas.
+- `evaluate.py` — evalue `llm_prototype.py` sur les 90 exemples qui ne servent pas de few-shot (Intent Accuracy + Entity F1). Meme prerequis ; un second passage reprend les exemples en echec (surcharges passageres d'Ollama). **Resultat (gpt-oss:20b-cloud, 90 exemples)** : intent 97,8 %, entites F1 98,6 % — voir « Resultats » plus bas.
+- `baseline.py` — NLU classique pour comparaison : TF-IDF sur n-grammes de caracteres + regression logistique pour l'intent, regles et lexiques pour les entites. Lexiques ecrits a partir de connaissances generales, jamais a partir des annotations de test.
+- `compare_baseline.py` — compare le LLM et la baseline sur exactement les memes 90 phrases (validation croisee a 5 plis pour la baseline, few-shot ajoutes a chaque entrainement). Sans appel payant ; ecrit `comparison_results.json`.
 - `entity_linking.py` — resolution d'un nom de medicament (potentiellement mal orthographie ou en arabe) contre `data/clean/medicaments_reference.csv`, via normalisation + RapidFuzz + une petite table de translitteration arabe→latin. Aucune dependance externe payante, s'utilise directement en CLI : `python nlu/entity_linking.py "dolipran" "1g"`.
 - `evaluate_entity_linking.py` — evaluation locale (sans cout) du matcher sur 22 cas manuels (fautes d'orthographe + arabe) : **100% top-1** actuellement.
 - `pharmacy_linking.py` — meme approche (normalisation + RapidFuzz) pour resoudre les entites `PHARMACIE`/`LOCALISATION` contre `data/clean/pharmacies_reference.csv` (2652 pharmacies scrapees depuis saydalia.ma). Recherche par nom, par localisation (ville, avec repli sur recherche en sous-chaine dans l'adresse pour les quartiers), ou les deux combines (la localisation filtre d'abord le pool, ce qui evite les confusions entre plusieurs pharmacies homonymes dans des villes differentes). CLI : `python nlu/pharmacy_linking.py "Ibn Sina" "Casablanca"` (ou `""` pour le nom si recherche par lieu seul).
@@ -41,6 +43,30 @@
 }
 ```
 Offsets = index caractere Python (`text[start:end] == value`). Un exemple sans entite a `"entities": []` (cas `salutation`, `autre`, ou intent info_pharmacie sans mention explicite de lieu/nom).
+
+## Frontiere disponibilite / commande (regle « bghit »)
+`commande_reservation` exige un **verbe explicite de reservation ou d'achat** : n7goz / 7goz, reserver, commander, nchri, acheter. « bghit doliprane », meme avec une quantite (« bghit juj boites », « il me faut 2 boites »), reste une `disponibilite_medicament`.
+
+Sans regle ecrite, des phrases de meme structure portaient des labels opposes, et l'exemple few-shot de commande (`seed_0032`, « bghit njib juj boites ») enseignait au modele la confusion qu'on lui reprochait ensuite. Appliquer la regle a corrige 5 labels (`seed_0032`, `0035`, `0060`, `0082`, `0084`) et remplace ce few-shot par `seed_0034` (« bghit n7goz doliprane »). La regle est ecrite dans `schema.json`, donc injectee dans le prompt, et verifiee par `tests/test_nlu.py`.
+
+## Resultats
+Sur les 90 phrases de test (hors few-shot) :
+
+| | LLM few-shot | Baseline |
+|---|---|---|
+| Intent — exactitude | **97,8 %** | 67,8 % |
+| Intent — F1 macro | **97,3 %** | 61,5 % |
+| Entites — precision | 99,1 % | 98,1 % |
+| Entites — rappel | 98,2 % | 92,8 % |
+| Entites — F1 | **98,6 %** | 95,4 % |
+
+- **L'intent, c'est le point fort du LLM.** Avec 81 phrases d'entrainement par pli (72 du jeu de test + les 9 few-shot) pour 7 intents et 5 variantes de langue, un classifieur statistique manque d'exemples.
+- **Les entites, c'est presque egalite.** Les regles battent meme le LLM sur la forme galenique (96,8 % contre 93,3 %), pour 0,5 ms par phrase, hors ligne et sans cout. Un systeme hybride est donc defendable : le LLM pour l'intent, les regles pour les entites ou en secours quand le LLM est indisponible.
+- Les deux erreurs d'intent restantes du LLM : « bghit njib juj boites » (cas limite de la regle bghit, predit commande) et « hal amoxicilline mashmoula bi at-ta'min? » (arabe standard translittere, predit hors perimetre).
+
+**Comparaison avec la premiere mesure (94,5 % / 91,9 % sur 91 exemples)** : entre les deux, trois choses ont change a la fois — la regle « sidalia » dans le prompt, la correction des labels « bghit », et un few-shot remplace (le jeu de test differe donc d'une phrase). C'est un progres reel, mais ce n'est pas une mesure fine : sur 90 phrases, chaque exemple pese 1,1 point.
+
+**Limites du protocole** : 99 phrases ecrites par l'equipe, pas des messages reels de patients. Certains sous-groupes sont minuscules (4 phrases en arabe standard). Le modele est appele a temperature 0, sans garantie de determinisme cote service.
 
 ## Comment etendre le dataset
 Ajouter des tuples dans `RAW_EXAMPLES` de `build_seed_dataset.py` : `(text, lang, intent, [(ENTITY_TYPE, "valeur exacte presente dans text"), ...])`, puis relancer le script. Il valide automatiquement que chaque valeur d'entite existe bien dans le texte (leve une erreur sinon) — impossible d'introduire un offset faux.
@@ -86,7 +112,8 @@ Limites connues :
 - Couverture geographique dependante de la base saydalia elle-meme (voir `data/README.md`) : pas de garantie d'exhaustivite par ville/quartier.
 - Pas de coordonnees GPS fiables (la source ne les fournit pas correctement) : uniquement adresse texte.
 
-## Prochaine etape
-- **NLU** : `evaluate.py` a ete lance (gpt-oss:20b-cloud) : 94.5% intent accuracy / 91.9% entity F1 sur 91 exemples. A ameliorer : corriger 3 labels ambigus du seed dataset (chevauchement `disponibilite_medicament`/`commande_reservation` sur les tournures "bghit..."), puis lancer la comparaison LLM few-shot vs fine-tune.
-- **Entity Linking** : etoffer la table de translitteration arabe et le jeu de test au fil des cas reels rencontres.
-- **Bout en bout** : brancher NLU → Entity Linking (medicaments + pharmacies) → reponse structuree, puis exposer via FastAPI.
+## Pistes
+- **Donnees reelles** : remplacer ou completer les 99 phrases de l'equipe par des messages anonymises de vrais patients. C'est la limite principale de l'evaluation.
+- **Hybride** : utiliser les regles de `baseline.py` pour les entites quand le LLM est indisponible, et les confronter a sa sortie pour detecter ses omissions.
+- **Fine-tuning** (DarijaBERT / AraBERT) : a envisager a partir de quelques centaines de phrases annotees. Avec 99 phrases, le modele serait trop instable pour etre compare honnetement.
+- **Translitteration arabe → latin** : la table `ARABIC_TO_LATIN` compte 8 entrees, a etoffer au fil des cas reels.

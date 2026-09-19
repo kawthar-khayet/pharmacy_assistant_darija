@@ -106,6 +106,19 @@
   50%      { box-shadow: 0 0 0 7px rgba(192, 94, 69, 0); }
 }
 
+.rond-attente { opacity: 1 !important; cursor: progress; }
+
+.mini-roue {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--terre-trait);
+  border-top-color: var(--terre);
+  animation: tourne .8s linear infinite;
+}
+
+@keyframes tourne { to { transform: rotate(360deg); } }
+
 .rond-envoi {
   background: var(--terre);
   border-color: var(--terre);
@@ -481,6 +494,14 @@
 }
 
 .marqueur-ok { background: rgba(62, 143, 111, .1); border-color: rgba(62, 143, 111, .2); color: #2f6f56; }
+.marqueur-verifier {
+  background: var(--alerte-voile);
+  border-color: #edd9ac;
+  color: #7d5a16;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
 .marqueur-terre { background: var(--terre-voile); border-color: var(--terre-trait); color: var(--terre-vive); }
 
 /* --------------------------------------------------------- detail medicament */
