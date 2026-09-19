@@ -19,11 +19,11 @@ def test_health(client):
     assert client.get("/health").json() == {"status": "ok"}
 
 
-def test_schema_expose_les_7_intents(client):
+def test_schema_expose_les_8_intents(client):
     ids = {i["id"] for i in client.get("/schema").json()["intents"]}
     assert ids == {
-        "disponibilite_medicament", "prix_remboursement", "info_pharmacie",
-        "posologie_information", "commande_reservation", "salutation", "autre",
+        "disponibilite_medicament", "prix_remboursement", "alternative_moins_chere",
+        "info_pharmacie", "posologie_information", "conseil_medical", "salutation", "hors_sujet",
     }
 
 
@@ -50,7 +50,7 @@ def test_disponibilite_sans_lieu_demande_la_ville_puis_propose_des_pharmacies(cl
     assert tour1["awaiting_localisation"] is True
     assert "ville" in tour1["reply"].lower()
 
-    nlu("autre", LOCALISATION="Maarif")
+    nlu("hors_sujet", LOCALISATION="Maarif")
     tour2 = json_strict(client.post(
         "/chat", json={"text": "Maarif", "session_id": tour1["session_id"]}
     ))
@@ -67,9 +67,9 @@ def test_disponibilite_avec_lieu_repond_en_un_seul_tour(client, nlu):
 
 
 def test_question_hors_perimetre_avec_medicament_reconnu_montre_la_fiche(client, nlu):
-    """'chno kaydir doliprane' est classe 'autre' par le modele : le medicament
-    reconnu ne doit pas etre jete au profit d'un 'je n'ai pas compris'."""
-    nlu("autre", MEDICAMENT="Doliprane")
+    """'chno kaydir doliprane' peut etre classe hors sujet par le modele : le
+    medicament reconnu ne doit pas etre jete au profit d'un refus."""
+    nlu("hors_sujet", MEDICAMENT="Doliprane")
     d = json_strict(client.post("/chat", json={"text": "chno kaydir doliprane?"}))
     assert d["medicament_matches"]
     assert "DOLIPRANE" in d["reply"]
@@ -99,10 +99,75 @@ def test_posologie_ne_donne_jamais_de_dose(client, nlu):
     assert "pharmacien" in d["reply"].lower()
 
 
-def test_hors_perimetre_sans_medicament(client, nlu):
-    nlu("autre")
+def test_hors_sujet_presente_ce_que_dwatalk_sait_faire(client, nlu):
+    """Hors sujet ne veut pas dire incompris : on dit ce qu'on sait faire."""
+    nlu("hors_sujet")
     d = client.post("/chat", json={"text": "chno akhbar lyoum"}).json()
-    assert "pas bien compris" in d["reply"]
+    assert "assistant pharmacie" in d["reply"]
+    assert "pas bien compris" not in d["reply"]
+
+
+# ------------------------------------------------------- taxonomie v2
+
+def test_conseil_medical_oriente_vers_un_professionnel(client, nlu):
+    nlu("conseil_medical")
+    d = json_strict(client.post("/chat", json={"text": "3andi sda3, ach ndir?"}))
+    assert "pharmacien" in d["reply"] and "medecin" in d["reply"]
+    # numeros verifies (ambassade de France au Maroc)
+    assert "SAMU 141" in d["reply"] and "Protection civile 15" in d["reply"]
+    assert "0801 000 180" in d["reply"]
+
+
+def test_conseil_medical_ne_montre_jamais_de_fiche(client, nlu):
+    """Meme si un medicament est cite, afficher sa fiche en reponse a un
+    symptome passerait pour une recommandation."""
+    nlu("conseil_medical", MEDICAMENT="doliprane")
+    d = json_strict(client.post("/chat", json={"text": "3andi sda3, doliprane mzyan?"}))
+    assert d["medicament_matches"] == []
+    assert "DH" not in d["reply"]
+
+
+def test_equivalents_moins_chers(client, nlu):
+    nlu("alternative_moins_chere", MEDICAMENT="doliprane", DOSAGE="500mg")
+    d = json_strict(client.post("/chat", json={"text": "kayn chi haja bhal doliprane 500mg rkhis?"}))
+    alt = d["alternatives"]
+    assert alt["reference"]["nom"] == "DOLIPRANE"
+    prix = [e["ppv"] for e in alt["equivalents"]]
+    assert prix and prix == sorted(prix)
+    assert all(e["nom"] != "DOLIPRANE" for e in alt["equivalents"])
+    assert "pharmacien" in d["reply"]
+
+
+def test_equivalent_sans_medicament_demande_lequel(client, nlu):
+    nlu("alternative_moins_chere")
+    d = client.post("/chat", json={"text": "kayn chi dwa rkhis?"}).json()
+    assert d["alternatives"] is None
+    assert "quel medicament" in d["reply"].lower()
+
+
+def test_equivalent_introuvable_le_dit(client, nlu):
+    nlu("alternative_moins_chere", MEDICAMENT="smecta")
+    d = client.post("/chat", json={"text": "badil l smecta?"}).json()
+    assert d["alternatives"]["equivalents"] == []
+    assert "pas trouve d'autre medicament" in d["reply"]
+
+
+@pytest.mark.parametrize("ancienne, nouvelle", [
+    ("autre", "hors_sujet"),
+    ("commande_reservation", "disponibilite_medicament"),
+    ("diagnostic", "hors_sujet"),   # intention inventee par le modele
+])
+def test_intention_inconnue_ou_ancienne_rabattue(client, nlu, ancienne, nouvelle):
+    nlu(ancienne)
+    assert client.post("/chat", json={"text": "?"}).json()["intent"] == nouvelle
+
+
+def test_avertissement_sur_les_gardes(client, nlu):
+    """L'annuaire est un instantane : toute reponse sur une garde doit inviter
+    a confirmer par telephone."""
+    nlu("info_pharmacie", LOCALISATION="Maarif")
+    d = client.post("/chat", json={"text": "pharmacie de garde a Maarif"}).json()
+    assert "garde changent chaque jour" in d["reply"]
 
 
 def test_salutation(client, nlu):

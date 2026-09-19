@@ -32,7 +32,7 @@ NLU_DIR = Path(__file__).resolve().parent.parent / "nlu"
 sys.path.insert(0, str(NLU_DIR))
 
 from llm_prototype import run as run_nlu, load_schema  # noqa: E402
-from entity_linking import MedicamentMatcher  # noqa: E402
+from entity_linking import MedicamentMatcher, equivalents  # noqa: E402
 from pharmacy_linking import PharmacyMatcher  # noqa: E402
 
 from api.parole import ErreurAudio, transcrire  # noqa: E402
@@ -70,7 +70,33 @@ _pharma_matcher: PharmacyMatcher | None = None
 # across workers.
 SESSIONS: dict[str, dict] = {}
 
-STOCK_RELATED_INTENTS = {"disponibilite_medicament", "commande_reservation"}
+INTENTS_CONNUS = {i["id"] for i in load_schema()["intents"]}
+
+# Anciennes intentions (taxonomie v1) qu'un modele pourrait encore produire par
+# habitude : on les rabat sur leur equivalent v2 plutot que de les ignorer.
+INTENTS_V1 = {"autre": "hors_sujet", "commande_reservation": "disponibilite_medicament"}
+
+# Numeros verifies sur la page d'urgence de l'ambassade de France au Maroc
+# (ma.diplomatie.gouv.fr/fr/urgence) : SAMU 141, Protection civile 15, Centre
+# antipoison et de pharmacovigilance 0801 000 180.
+MESSAGE_CONSEIL_MEDICAL = (
+    "Je ne peux pas donner d'avis medical ni conseiller un traitement a partir de "
+    "symptomes. Parle a un pharmacien ou a un medecin : eux pourront t'examiner et "
+    "te conseiller.\n\n"
+    "En cas d'urgence : SAMU 141 - Protection civile 15.\n"
+    "Intoxication ou surdosage de medicament : Centre antipoison 0801 000 180."
+)
+
+MESSAGE_HORS_SUJET = (
+    "Je suis un assistant pharmacie : je peux t'aider pour les medicaments (prix, "
+    "remboursement, equivalents moins chers) et pour trouver une pharmacie. Pour le "
+    "reste, je ne suis pas la bonne adresse."
+)
+
+NOTE_GARDE = (
+    "Les pharmacies de garde changent chaque jour et notre annuaire n'est pas mis a "
+    "jour en direct : appelle avant de te deplacer pour confirmer."
+)
 
 
 def get_med_matcher() -> MedicamentMatcher:
@@ -109,6 +135,9 @@ class ChatResponse(BaseModel):
     pharmacie_matches: list[dict] = []
     validation_errors: list[str] = []
     awaiting_localisation: bool = False
+    # equivalents moins chers (intention alternative_moins_chere) :
+    # {"reference": {...}, "equivalents": [...]} ou None
+    alternatives: dict | None = None
 
 
 class ChatAudioResponse(ChatResponse):
@@ -264,6 +293,45 @@ def describe_medicament(match: dict) -> str:
     return desc
 
 
+def describe_alternatives(nom: str, resultat: dict | None) -> str:
+    if resultat is None:
+        return (
+            f"Je n'ai pas la composition complete de {nom} dans ma base : je ne peux "
+            "pas te proposer d'equivalent fiable. Ton pharmacien pourra te renseigner."
+        )
+    ref = resultat["reference"]
+    desc_ref = f"{ref['nom']} {ref['dosage']}"
+    if not resultat["equivalents"]:
+        return (
+            f"Je n'ai pas trouve d'autre medicament commercialise avec la meme "
+            f"composition, le meme dosage et la meme voie d'administration que "
+            f"{desc_ref}. Ton pharmacien pourra verifier s'il existe une alternative."
+        )
+    prix_ref = f", {ref['ppv']} DH" if ref["ppv"] is not None else ""
+    lignes = [
+        f"Equivalents de {desc_ref} ({ref['dci']}, {str(ref['forme'] or '').lower()}{prix_ref}), "
+        "du moins cher au plus cher :"
+    ]
+    for e in resultat["equivalents"]:
+        ecart = ""
+        if ref["ppv"] is not None and e["ppv"] < ref["ppv"]:
+            ecart = f" ({ref['ppv'] - e['ppv']:.1f} DH de moins)"
+        lignes.append(f"  - {e['nom']}, {str(e['forme'] or '').lower()} -- {e['ppv']} DH{ecart}")
+    lignes.append(
+        "Meme molecule et meme dosage, mais le changement se fait sur avis de ton "
+        "pharmacien : la forme exacte et les excipients peuvent differer."
+    )
+    return "\n".join(lignes)
+
+
+def note_garde(texte: str, pharmacies: list[dict]) -> str | None:
+    """Avertissement ajoute des qu'il est question de garde : l'annuaire est un
+    instantane, alors que les gardes tournent chaque jour."""
+    if "garde" in texte.lower() or any(p.get("garde") for p in pharmacies):
+        return NOTE_GARDE
+    return None
+
+
 def describe_pharmacies(pharmacies: list[dict]) -> str:
     lines = []
     for p in pharmacies:
@@ -325,7 +393,10 @@ def chat(req: ChatRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
     output = nlu_result["output"]
-    intent = output.get("intent", "autre")
+    intent = output.get("intent") or "hors_sujet"
+    intent = INTENTS_V1.get(intent, intent)
+    if intent not in INTENTS_CONNUS:
+        intent = "hors_sujet"
     entities = output.get("entities", [])
 
     medicament_matches: list[dict] = []
@@ -361,15 +432,23 @@ def chat(req: ChatRequest):
         pharmacie_matches = [p for p in pharmacie_matches if p["confidence"] != "non_fiable"]
 
     awaiting_localisation = False
+    alternatives = None
 
-    if medicament_inconnu and intent not in {"info_pharmacie", "salutation"}:
+    if intent == "conseil_medical":
+        # Traite en premier : un patient qui decrit un symptome doit toujours
+        # etre oriente vers un professionnel, meme s'il cite un medicament. On
+        # n'affiche alors aucune fiche, qui passerait pour une recommandation.
+        reply = MESSAGE_CONSEIL_MEDICAL
+        medicament_matches = []
+
+    elif medicament_inconnu and intent not in {"info_pharmacie", "salutation", "hors_sujet"}:
         reply = (
             f"Je ne trouve pas « {med_entity['value']} » parmi les medicaments autorises "
             "au Maroc. Verifie l'orthographe, ou essaie le nom de la molecule "
             "(par exemple « paracetamol »)."
         )
 
-    elif intent in STOCK_RELATED_INTENTS and medicament_matches:
+    elif intent == "disponibilite_medicament" and medicament_matches:
         med_desc = describe_medicament(medicament_matches[0])
         if loc_entity:
             if pharmacie_matches:
@@ -390,11 +469,27 @@ def chat(req: ChatRequest):
     elif intent == "prix_remboursement" and medicament_matches:
         reply = describe_medicament(medicament_matches[0])
 
+    elif intent == "alternative_moins_chere":
+        if medicament_matches:
+            nom = medicament_matches[0]["nom_candidat"]
+            alternatives = equivalents(
+                get_med_matcher(), nom, dosage=dosage_entity["value"] if dosage_entity else None,
+            )
+            reply = describe_alternatives(nom, alternatives)
+        else:
+            reply = (
+                "De quel medicament veux-tu un equivalent moins cher ? Donne-moi son nom, "
+                "et son dosage si tu le connais."
+            )
+
     elif intent == "info_pharmacie":
         if pharmacie_matches:
             reply = "Voici ce que j'ai trouve :\n" + describe_pharmacies(pharmacie_matches)
             if location_note:
                 reply += f"\n\n({location_note})"
+            garde = note_garde(text, pharmacie_matches)
+            if garde:
+                reply += f"\n\n{garde}"
         else:
             reply = "Precise le nom de la pharmacie ou ta ville/quartier pour que je puisse chercher."
 
@@ -414,7 +509,7 @@ def chat(req: ChatRequest):
         reply = "Bonjour ! Je peux t'aider a trouver un medicament ou une pharmacie, pose ta question."
 
     elif medicament_matches:
-        # Intent hors perimetre (souvent "autre") mais un medicament a bien ete
+        # Intention hors perimetre (hors_sujet) mais un medicament a bien ete
         # extrait et resolu : une question comme "chno kaydir doliprane ?" tombe
         # ici. Repondre "je n'ai pas compris" en tenant le resultat sous la main
         # serait absurde -- on presente la fiche et on assume la limite.
@@ -423,6 +518,9 @@ def chat(req: ChatRequest):
             "Je ne suis pas sur d'avoir bien compris ta question, mais voila ce que "
             "je sais de ce medicament. Pour son usage precis, demande a ton pharmacien."
         )
+
+    elif intent == "hors_sujet":
+        reply = MESSAGE_HORS_SUJET
 
     else:
         reply = "Je n'ai pas bien compris ta demande -- peux-tu reformuler ?"
@@ -437,4 +535,5 @@ def chat(req: ChatRequest):
         pharmacie_matches=pharmacie_matches,
         validation_errors=nlu_result["validation_errors"],
         awaiting_localisation=awaiting_localisation,
+        alternatives=alternatives,
     )

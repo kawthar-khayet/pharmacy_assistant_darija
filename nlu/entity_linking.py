@@ -109,6 +109,10 @@ class MedicamentMatcher:
         self.df["nom_norm"] = self.df["nom"].apply(normalize)
         self.df["dci_norm"] = self.df["dci"].fillna("").apply(normalize)
 
+        # cle de dosage sans espaces : "500 MG" et "500MG" designent la meme chose
+        self.df["dosage_cle"] = self.df["dosage"].fillna("").apply(normalize).str.replace(" ", "", regex=False)
+        self.df["famille_forme"] = self.df["forme"].apply(famille_forme)
+
         self.unique_noms = sorted(self.df["nom_norm"].dropna().unique())
         self.unique_dcis = sorted(d for d in self.df["dci_norm"].dropna().unique() if d)
 
@@ -180,6 +184,126 @@ class MedicamentMatcher:
                 break
 
         return results
+
+
+# Familles de formes galeniques, par voie d'administration. Deux produits de
+# meme molecule et meme dosage ne sont proposes comme equivalents que s'ils sont
+# de la meme famille : un suppositoire ou une injection ne remplace pas un
+# comprime. L'ordre compte ("POUDRE POUR SOLUTION INJECTABLE" est injectable,
+# pas une poudre orale).
+FAMILLES_FORME = [
+    ("injectable", r"INJECT|PERFUSION"),
+    ("rectale", r"SUPPOSITOIRE|RECTAL|LAVEMENT"),
+    ("vaginale", r"OVULE|VAGINAL"),
+    ("ophtalmique", r"COLLYRE|OPHTALM"),
+    ("auriculaire", r"AURICUL"),
+    ("nasale", r"NASAL"),
+    ("inhalee", r"INHAL|AEROSOL"),
+    ("cutanee", r"CREME|POMMADE|\bGEL\b|LOTION|CUTANE|TRANSDERM|DERMIQUE"),
+    ("orale_liquide", r"BUVABLE|SIROP"),
+    ("orale_poudre", r"SACHET|GRANULE|POUDRE"),
+    ("orale_solide", r"COMPRIME|GELULE|CAPSULE|DRAGEE|LYOPHILISAT|PASTILLE"),
+]
+
+
+PREFERENCE_FAMILLE = {"orale_solide": 0, "orale_poudre": 1, "orale_liquide": 2}
+
+
+def famille_forme(forme) -> str:
+    if forme is None or (isinstance(forme, float) and forme != forme):
+        return ""
+    cle = normalize(forme)
+    for famille, motif in FAMILLES_FORME:
+        if re.search(motif, cle):
+            return famille
+    # forme inconnue : on n'accepte que la meme forme exacte
+    return "autre:" + cle
+
+
+# Seuls ces produits peuvent etre proposes comme equivalents : un produit
+# "Non Commercialise", "Retire" ou "Suspendu" du marche, vendu a l'export ou
+# seulement sur appel d'offres hospitalier enverrait le patient chercher en
+# officine un medicament introuvable. Une ligne sans statut vient de la liste
+# CNSS actuelle des medicaments remboursables : elle est consideree disponible.
+STATUTS_EN_OFFICINE = {"Commercialisé"}
+
+
+def equivalents(matcher: "MedicamentMatcher", nom_candidat: str, dosage: str | None = None,
+                limite: int = 6) -> dict | None:
+    """Produits de meme composition (DCI identique) et de meme dosage que
+    `nom_candidat`, disponibles en officine, du moins cher au plus cher.
+
+    Renvoie None si le produit de reference n'a pas de DCI ou de dosage connus :
+    sans eux, on ne peut pas affirmer qu'un autre produit est equivalent.
+    """
+    df = matcher.df
+    lignes = df[df["nom_norm"] == normalize(nom_candidat)]
+    if dosage:
+        cle = normalize(dosage).replace(" ", "")
+        filtrees = lignes[lignes["dosage_cle"].str.contains(re.escape(cle), na=False)]
+        if len(filtrees):
+            lignes = filtrees
+    # Composition fiable uniquement : l'AMMPS ("//") et la CNOPS ("/") donnent
+    # la composition complete, alors que la liste CNSS decoupe une association
+    # en une ligne par molecule (l'Augmentin y apparait comme "amoxicilline"
+    # seule). Comparer sur ces lignes proposerait un produit a une seule
+    # molecule a la place d'une association.
+    composition_fiable = df["source"].str.contains("ammps|cnops", na=False)
+    lignes = lignes[
+        (lignes["dci_norm"] != "")
+        & (lignes["dosage_cle"] != "")
+        & lignes["source"].str.contains("ammps|cnops", na=False)
+    ]
+    if lignes.empty:
+        return None
+
+    # Presentation de reference : d'abord une presentation dont le prix est
+    # connu (sans prix, rien a comparer), puis, a prix connu egalement, les
+    # formes orales -- sans precision du patient, "Spasfon" designe presque
+    # toujours le comprime, pas le suppositoire.
+    rang = lignes["famille_forme"].map(PREFERENCE_FAMILLE).fillna(len(PREFERENCE_FAMILLE))
+    ref = (
+        lignes.assign(_rang=rang, _sans_prix=lignes["ppv"].isna())
+        .sort_values(["_sans_prix", "_rang"], kind="stable")
+        .iloc[0]
+    )
+
+    en_officine = df["statut_commercialisation"].isna() | df["statut_commercialisation"].isin(STATUTS_EN_OFFICINE)
+    candidats = df[
+        (df["dci_norm"] == ref["dci_norm"])
+        & (df["dosage_cle"] == ref["dosage_cle"])
+        & (df["nom_norm"] != ref["nom_norm"])
+        & (df["famille_forme"] == ref["famille_forme"])
+        & df["ppv"].notna()
+        & en_officine
+        & composition_fiable
+    ]
+    # un produit peut exister en plusieurs conditionnements : on garde le moins cher
+    candidats = candidats.sort_values("ppv").drop_duplicates("nom_norm").head(limite)
+
+    forme_ref = normalize(ref["forme"]) if pd.notna(ref["forme"]) else ""
+    return {
+        "reference": {
+            "nom": ref["nom"],
+            "dci": ref["dci"],
+            "dosage": ref["dosage"],
+            "forme": ref["forme"] if pd.notna(ref["forme"]) else None,
+            "ppv": float(ref["ppv"]) if pd.notna(ref["ppv"]) else None,
+        },
+        "equivalents": [
+            {
+                "nom": r["nom"],
+                "dosage": r["dosage"],
+                "forme": r["forme"] if pd.notna(r["forme"]) else None,
+                "presentation": r["presentation"] if pd.notna(r["presentation"]) else None,
+                "ppv": float(r["ppv"]),
+                # meme molecule et meme dosage, mais la forme peut differer
+                # (comprime / effervescent...) : on le signale plutot que de la cacher
+                "meme_forme": pd.notna(r["forme"]) and normalize(r["forme"]) == forme_ref,
+            }
+            for r in candidats.to_dict(orient="records")
+        ],
+    }
 
 
 def main():

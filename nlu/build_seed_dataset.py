@@ -14,13 +14,16 @@ from pathlib import Path
 OUT_PATH = Path(__file__).resolve().parent / "seed_dataset.jsonl"
 
 # (text, lang, intent, [(entity_type, value), ...])
-# Regle de frontiere disponibilite_medicament / commande_reservation :
-# "commande" exige un verbe explicite de reservation ou d'achat (n7goz / 7goz,
-# reserver, commander, nchri / acheter). "bghit" seul, meme suivi d'une
-# quantite ("bghit juj boites", "il me faut 2 boites"), reste une demande de
-# disponibilite. Sans regle ecrite, des phrases de meme structure portaient
-# des labels opposes, et l'exemple few-shot de commande enseignait au modele
-# exactement la confusion qu'on lui reprochait ensuite.
+# Taxonomie v2 (voir docs/changements_intentions.md) :
+#  - commande_reservation a ete fusionnee dans disponibilite_medicament : l'API
+#    les traitait de facon identique, et leur frontiere ("bghit" + quantite ou
+#    verbe de reservation ?) etait la premiere source d'erreurs d'annotation et
+#    de prediction, sans aucun benefice pour la reponse ;
+#  - autre a ete scinde en conseil_medical (le patient parle de sa sante : il
+#    faut le rediriger, pas repondre "je n'ai pas compris") et hors_sujet ;
+#  - alternative_moins_chere est nouvelle (equivalents meme molecule / dosage).
+# Les nouvelles phrases sont ajoutees en fin de liste pour que les identifiants
+# existants (utilises comme few-shot) ne changent pas.
 RAW_EXAMPLES = [
     # --- disponibilite_medicament ---
     ("wach kayn doliprane?", "ary_lat", "disponibilite_medicament",
@@ -91,13 +94,13 @@ RAW_EXAMPLES = [
     # --- commande_reservation ---
     ("bghit njib juj boites dyal doliprane 1g", "ary_lat", "disponibilite_medicament",
      [("QUANTITE", "juj"), ("FORME", "boites"), ("MEDICAMENT", "doliprane"), ("DOSAGE", "1g")]),
-    ("je veux reserver trois boites de paracetamol", "fr", "commande_reservation",
+    ("je veux reserver trois boites de paracetamol", "fr", "disponibilite_medicament",
      [("QUANTITE", "trois"), ("FORME", "boites"), ("MEDICAMENT", "paracetamol")]),
-    ("bghit n7goz doliprane", "ary_lat", "commande_reservation",
+    ("bghit n7goz doliprane", "ary_lat", "disponibilite_medicament",
      [("MEDICAMENT", "doliprane")]),
     ("il me faut 2 boites de doliprane 1g", "fr", "disponibilite_medicament",
      [("QUANTITE", "2"), ("FORME", "boites"), ("MEDICAMENT", "doliprane"), ("DOSAGE", "1g")]),
-    ("bghit nchri wa7ed 3elba dyal efferalgan", "ary_lat", "commande_reservation",
+    ("bghit nchri wa7ed 3elba dyal efferalgan", "ary_lat", "disponibilite_medicament",
      [("QUANTITE", "wa7ed"), ("FORME", "3elba"), ("MEDICAMENT", "efferalgan")]),
 
     # --- salutation ---
@@ -109,14 +112,14 @@ RAW_EXAMPLES = [
     ("bslama", "ary_lat", "salutation", []),
 
     # --- autre (hors perimetre / fallback) ---
-    ("j'ai mal a la tete, quel medicament je peux prendre ?", "fr", "autre", []),
-    ("3andi sda3, ach ndir?", "ary_lat", "autre", []),
-    ("quelle heure est-il ?", "fr", "autre", []),
-    ("راني مريض بزاف", "ary_ar", "autre", []),
+    ("j'ai mal a la tete, quel medicament je peux prendre ?", "fr", "conseil_medical", []),
+    ("3andi sda3, ach ndir?", "ary_lat", "conseil_medical", []),
+    ("quelle heure est-il ?", "fr", "hors_sujet", []),
+    ("راني مريض بزاف", "ary_ar", "conseil_medical", []),
 
     # ============================================================
     # Extension : fautes d'orthographe, davantage de variantes darija,
-    # quantites en toutes lettres, entites combinees, cas "autre".
+    # quantites en toutes lettres, entites combinees, cas "hors_sujet".
     # ============================================================
 
     # --- disponibilite_medicament : fautes d'orthographe medicament ---
@@ -146,7 +149,7 @@ RAW_EXAMPLES = [
      [("MEDICAMENT", "فلاجيل")]),
     ("hal yatawafar dawa flagyl 500?", "ary_lat", "disponibilite_medicament",
      [("MEDICAMENT", "flagyl"), ("DOSAGE", "500")]),
-    ("bghit nchri comprime dyal doliprane", "ary_lat", "commande_reservation",
+    ("bghit nchri comprime dyal doliprane", "ary_lat", "disponibilite_medicament",
      [("FORME", "comprime"), ("MEDICAMENT", "doliprane")]),
     ("est-ce que vous avez des gelules d'amoxicilline?", "fr", "disponibilite_medicament",
      [("FORME", "gelules"), ("MEDICAMENT", "amoxicilline")]),
@@ -198,15 +201,15 @@ RAW_EXAMPLES = [
     # --- commande_reservation : quantites en toutes lettres darija ---
     ("bghit tlata 3olab dyal spasfon", "ary_lat", "disponibilite_medicament",
      [("QUANTITE", "tlata"), ("FORME", "3olab"), ("MEDICAMENT", "spasfon")]),
-    ("je voudrais commander cinq boites d'amoxicilline 500mg", "fr", "commande_reservation",
+    ("je voudrais commander cinq boites d'amoxicilline 500mg", "fr", "disponibilite_medicament",
      [("QUANTITE", "cinq"), ("FORME", "boites"), ("MEDICAMENT", "amoxicilline"), ("DOSAGE", "500mg")]),
     ("bghit rb3a 3elab dyal doliprane 500mg", "ary_lat", "disponibilite_medicament",
      [("QUANTITE", "rb3a"), ("FORME", "3elab"), ("MEDICAMENT", "doliprane"), ("DOSAGE", "500mg")]),
-    ("reserve li khamsa boites dyal efferalgan", "ary_lat", "commande_reservation",
+    ("reserve li khamsa boites dyal efferalgan", "ary_lat", "disponibilite_medicament",
      [("QUANTITE", "khamsa"), ("FORME", "boites"), ("MEDICAMENT", "efferalgan")]),
-    ("je passe commande pour une boite de voltarene", "fr", "commande_reservation",
+    ("je passe commande pour une boite de voltarene", "fr", "disponibilite_medicament",
      [("QUANTITE", "une"), ("FORME", "boite"), ("MEDICAMENT", "voltarene")]),
-    ("7goz liya doliprane, ghadi njiha ghdda", "ary_lat", "commande_reservation",
+    ("7goz liya doliprane, ghadi njiha ghdda", "ary_lat", "disponibilite_medicament",
      [("MEDICAMENT", "doliprane")]),
 
     # --- salutation : plus de variantes ---
@@ -219,11 +222,47 @@ RAW_EXAMPLES = [
     ("labas 3lik", "ary_lat", "salutation", []),
 
     # --- autre : hors perimetre ---
-    ("quel temps fait-il aujourd'hui ?", "fr", "autre", []),
-    ("bghit na3ref ach kayn f akhbar", "ary_lat", "autre", []),
-    ("est-ce que le coronavirus est dangereux ?", "fr", "autre", []),
-    ("3tini chi wa9t bach nji l tabib", "ary_lat", "autre", []),
-    ("ما هو أفضل مطعم قريب مني؟", "ar", "autre", []),
+    ("quel temps fait-il aujourd'hui ?", "fr", "hors_sujet", []),
+    ("bghit na3ref ach kayn f akhbar", "ary_lat", "hors_sujet", []),
+    ("est-ce que le coronavirus est dangereux ?", "fr", "conseil_medical", []),
+    ("3tini chi wa9t bach nji l tabib", "ary_lat", "conseil_medical", []),
+    ("ما هو أفضل مطعم قريب مني؟", "ar", "hors_sujet", []),
+    # --- v2 : equivalents moins chers ---
+    ("kayn chi dwa bhal doliprane b taman rkhis?", "ary_lat", "alternative_moins_chere",
+     [("MEDICAMENT", "doliprane")]),
+    ("wach kayn generique dyal augmentin?", "ary_lat", "alternative_moins_chere",
+     [("MEDICAMENT", "augmentin")]),
+    ("est-ce qu'il existe un generique moins cher que le Doliprane 1g ?", "fr", "alternative_moins_chere",
+     [("MEDICAMENT", "Doliprane"), ("DOSAGE", "1g")]),
+    ("bghit chi haja kif spasfon walakin rkhisa", "ary_lat", "alternative_moins_chere",
+     [("MEDICAMENT", "spasfon")]),
+    ("واش كاين دوا بحال دوليبران رخيص؟", "ary_ar", "alternative_moins_chere",
+     [("MEDICAMENT", "دوليبران")]),
+    ("quel est l'equivalent le moins cher de l'efferalgan ?", "fr", "alternative_moins_chere",
+     [("MEDICAMENT", "efferalgan")]),
+    ("kayn chi generique l amoxicilline 500mg?", "mixte", "alternative_moins_chere",
+     [("MEDICAMENT", "amoxicilline"), ("DOSAGE", "500mg")]),
+    ("voltarene ghali 3liya, kayn chi badil?", "ary_lat", "alternative_moins_chere",
+     [("MEDICAMENT", "voltarene")]),
+    ("بغيت بديل رخيص ديال سبازفون", "ary_ar", "alternative_moins_chere",
+     [("MEDICAMENT", "سبازفون")]),
+    ("y a-t-il un medicament equivalent au clamoxyl mais moins cher ?", "fr", "alternative_moins_chere",
+     [("MEDICAMENT", "clamoxyl")]),
+    ("chno howa l generique dyal smecta?", "ary_lat", "alternative_moins_chere",
+     [("MEDICAMENT", "smecta")]),
+    # --- v2 : le patient parle de sa sante ---
+    ("3andi skhana w kan7ess b l3ya, ach nakhod?", "ary_lat", "conseil_medical", []),
+    ("mon enfant a de la fievre depuis deux jours, que faire ?", "fr", "conseil_medical", []),
+    ("كنحس بوجع فكرشي، شنو ندير؟", "ary_ar", "conseil_medical", []),
+    ("j'ai une douleur dans la poitrine depuis ce matin", "fr", "conseil_medical", []),
+    ("3ndi 7sasiya f jeldi, chno mzyan liha?", "ary_lat", "conseil_medical", []),
+    # --- v2 : hors sujet, dont des pieges qui ressemblent a des questions de pharmacie ---
+    ("chkoun rbe7 f match lbare7?", "ary_lat", "hors_sujet", []),
+    ("raconte-moi une blague", "fr", "hors_sujet", []),
+    ("شنو هي عاصمة اليابان؟", "ary_ar", "hors_sujet", []),
+    ("fin kayn chi cafe mzyan qrib?", "ary_lat", "hors_sujet", []),
+    ("combien coute un billet de train pour aller a la plage ?", "fr", "hors_sujet", []),
+    ("wach kayn match lyoum?", "ary_lat", "hors_sujet", []),
 ]
 
 
