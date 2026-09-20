@@ -12,8 +12,11 @@ HERE = Path(__file__).resolve().parent
 # (query_nom, query_location, expected_nom, expected_ville, mode)
 # mode "exact": top-1 nom must equal expected_nom.
 # mode "any": expected_nom must appear somewhere in the returned candidates.
+# mode "ambigu": plusieurs officines portent ce nom dans des villes
+#   differentes. Reussir, ce n'est pas deviner la bonne -- c'est demander la
+#   ville au lieu de trancher en silence.
 TEST_CASES = [
-    ("Pharmacie Granada", None, "Pharmacie Granada", "Nador", "exact"),
+    ("Pharmacie Granada", None, None, None, "ambigu"),
     ("Granada", "Nador", "Pharmacie Granada", "Nador", "exact"),
     ("Grenada", "Nador", "Pharmacie Granada", "Nador", "exact"),  # typo
     ("Al Hikma", "Rabat", "Pharmacie Al Hikma", "Rabat", "exact"),
@@ -24,6 +27,14 @@ TEST_CASES = [
     ("Populaire", "Ksar El Kebir", "Pharmacie Populaire", "Ksar El Kebir", "exact"),
     ("Branes", "Tanger", "Pharmacie Branes", "Tanger", "exact"),
     ("Bidon Inexistante Xyz123", None, None, None, "no_confident_match"),
+    # Graphie arabe : ce que donne une demande dictee a la voix, Whisper
+    # n'ayant pas de modele de darija. Le nom passe par la translitteration
+    # et la cle sonore, la ville par la table d'alias (un toponyme se
+    # traduit, il ne se translittere pas).
+    ("صيدلية ابن سينا", "الرباط", "Pharmacie Ibn Sina", "Rabat", "exact"),
+    ("ابن سينا", "Rabat", "Pharmacie Ibn Sina", "Rabat", "exact"),
+    ("الحكمة", "Rabat", "Pharmacie Al Hikma", "Rabat", "exact"),
+    ("صيدلية بيدون إينكسيستانت", None, None, None, "no_confident_match"),
 ]
 
 # (location query, expected city or None if district-level substring match)
@@ -31,6 +42,9 @@ LOCATION_ONLY_CASES = [
     "Maarif",
     "Casablanca",
     "Agadir",
+    "الدار البيضاء",   # Casablanca, dicte en arabe
+    "كازا",            # diminutif courant
+    "مراكش",           # Marrakech
 ]
 
 
@@ -44,6 +58,12 @@ def main():
     for nom, loc, expected_nom, expected_ville, mode in TEST_CASES:
         results = matcher.match(nom=nom, location=loc, top_k=3)
         candidates = [(r["nom"], r["ville"]) for r in results]
+
+        if mode == "ambigu":
+            note = matcher.last_name_note
+            status = "OK " if note else "FAIL"
+            print(f"[{status}] {nom!r:30s} loc={loc!r:12s} -> attendu: demander la ville, obtenu={note!r}")
+            continue
 
         if mode == "no_confident_match":
             top_conf = results[0]["confidence"] if results else "aucun"

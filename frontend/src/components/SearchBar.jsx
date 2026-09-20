@@ -57,7 +57,7 @@ export default function SearchBar({
 }) {
   const champRef = useRef(null)
 
-  const { etat, erreur, basculer, disponible } = useDictee({
+  const { etat, erreur, avertissement, basculer, disponible } = useDictee({
     onTexte: (texte) => {
       onChange(valeur ? `${valeur} ${texte}` : texte)
       champRef.current?.focus()
@@ -141,14 +141,16 @@ export default function SearchBar({
         </div>
       </div>
 
-      {(erreur || aide || ecoute || transcription) && (
-        <p className="champ-aide" role={erreur ? 'alert' : 'status'}>
+      {(erreur || avertissement || aide || ecoute || transcription) && (
+        <p className="champ-aide" role={erreur || avertissement ? 'alert' : 'status'}>
           {erreur ||
             (ecoute
               ? "J'ecoute… appuie a nouveau sur le micro quand tu as fini."
               : transcription
                 ? 'Transcription en cours…'
-                : aide)}
+                : // l'avertissement prime sur l'aide : il porte sur le texte
+                  // qui vient d'etre insere dans le champ
+                  avertissement || aide)}
         </p>
       )}
     </div>

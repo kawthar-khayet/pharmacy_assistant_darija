@@ -170,6 +170,23 @@ def test_avertissement_sur_les_gardes(client, nlu):
     assert "garde changent chaque jour" in d["reply"]
 
 
+def test_pharmacie_homonyme_demande_la_ville(client, nlu):
+    """Un nom porte par plusieurs officines dans des villes differentes : la
+    reponse doit demander la ville, pas presenter la premiere trouvee comme
+    etant la bonne."""
+    nlu("info_pharmacie", PHARMACIE="Pharmacie Granada")
+    d = client.post("/chat", json={"text": "numero de la pharmacie Granada"}).json()
+    assert "existe dans plusieurs villes" in d["reply"]
+    assert "Precise laquelle" in d["reply"]
+
+
+def test_pharmacie_avec_ville_repond_directement(client, nlu):
+    nlu("info_pharmacie", PHARMACIE="Granada", LOCALISATION="Nador")
+    d = client.post("/chat", json={"text": "numero de la pharmacie Granada a Nador"}).json()
+    assert "existe dans plusieurs villes" not in d["reply"]
+    assert d["pharmacie_matches"][0]["ville"] == "Nador"
+
+
 def test_salutation(client, nlu):
     nlu("salutation")
     assert "Bonjour" in client.post("/chat", json={"text": "salam"}).json()["reply"]
@@ -224,6 +241,33 @@ def test_transcription_renvoie_le_texte(client, api, monkeypatch, audio_fr):
     r = client.post("/transcription", files={"fichier": ("q.wav", audio_fr, "audio/wav")})
     assert r.status_code == 200
     assert r.json()["texte"] == "wach kayn doliprane"
+
+
+def test_transcription_remonte_l_avertissement(client, api, monkeypatch, audio_fr):
+    """Une transcription douteuse reste rendue, mais l'interface doit pouvoir
+    inviter a la relire : c'est le cas courant en darija, que Whisper ne
+    reconnait qu'approximativement."""
+    from api.parole import Transcription
+
+    monkeypatch.setattr(
+        api, "transcrire",
+        lambda contenu, langue=None: Transcription(
+            "wach kayn doliprane", "ar", 0.3, 2.1, avertissement="Transcription incertaine : relis le texte.",
+        ),
+    )
+    d = client.post("/transcription", files={"fichier": ("q.wav", audio_fr, "audio/wav")}).json()
+    assert "relis" in d["avertissement"].lower()
+
+
+def test_transcription_sure_sans_avertissement(client, api, monkeypatch, audio_fr):
+    from api.parole import Transcription
+
+    monkeypatch.setattr(
+        api, "transcrire",
+        lambda contenu, langue=None: Transcription("wach kayn doliprane", "ar", 0.97, 2.1),
+    )
+    d = client.post("/transcription", files={"fichier": ("q.wav", audio_fr, "audio/wav")}).json()
+    assert d["avertissement"] is None
 
 
 def test_audio_inexploitable_renvoie_422(client, api, monkeypatch):

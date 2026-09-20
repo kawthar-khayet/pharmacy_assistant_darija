@@ -25,6 +25,10 @@ export const voixDisponible =
 export function useDictee({ onTexte } = {}) {
   const [etat, setEtat] = useState('repos')
   const [erreur, setErreur] = useState(null)
+  // message de l'API quand la transcription est incertaine (langue mal
+  // reconnue, confiance basse) : le texte est quand meme rendu, mais il faut
+  // le relire. C'est le cas ordinaire en darija.
+  const [avertissement, setAvertissement] = useState(null)
 
   const enregistreurRef = useRef(null)
   const fluxRef = useRef(null)
@@ -56,6 +60,7 @@ export function useDictee({ onTexte } = {}) {
 
   const demarrer = useCallback(async () => {
     setErreur(null)
+    setAvertissement(null)
     let flux
     try {
       flux = await navigator.mediaDevices.getUserMedia({ audio: true })
@@ -88,7 +93,8 @@ export function useDictee({ onTexte } = {}) {
 
       setEtat('transcription')
       try {
-        const { texte } = await transcrire(audio)
+        const { texte, avertissement: alerte } = await transcrire(audio)
+        setAvertissement(alerte ?? null)
         onTexteRef.current?.(texte)
       } catch (err) {
         setErreur(err instanceof ApiError ? err.message : "La transcription n'a pas abouti.")
@@ -113,5 +119,5 @@ export function useDictee({ onTexte } = {}) {
     demarrer()
   }, [etat, demarrer])
 
-  return { etat, erreur, basculer, disponible: voixDisponible }
+  return { etat, erreur, avertissement, basculer, disponible: voixDisponible }
 }

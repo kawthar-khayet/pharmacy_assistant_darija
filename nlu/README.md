@@ -87,7 +87,7 @@ Ajouter des tuples dans `RAW_EXAMPLES` de `build_seed_dataset.py` : `(text, lang
 ## Entity Linking — resultats et limites
 `entity_linking.py` implemente l'etape recommandee "normalisation + RapidFuzz" (avant d'envisager des embeddings si besoin) :
 1. normalisation (accents, casse, ponctuation) ;
-2. translitteration arabe→latin via une petite table seed (`ARABIC_TO_LATIN`, a etendre) ;
+2. translitteration arabe→latin (`translitteration.py`) : table de correspondances pour les cas connus, puis transcription lettre a lettre pour tout le reste ;
 3. fuzzy matching (`rapidfuzz.fuzz.WRatio`) contre les colonnes `nom` ET `dci` de la reference, avec un filtre optionnel par dosage ;
    les variantes renvoyees portent les taux des **deux** regimes (`taux_remboursement_cnops` et `taux_remboursement_cnss`), un produit pouvant etre pris en charge par l'un et pas par l'autre ;
 4. score de confiance par palier : `auto` (>=90), `a_confirmer` (70-89), `non_fiable` (<70) ;
@@ -98,25 +98,63 @@ Ajouter des tuples dans `RAW_EXAMPLES` de `build_seed_dataset.py` : `(text, lang
    (`best_token_similarity`, seuil `TOKEN_OVERLAP_FLOOR = 75`) rabat ces cas en
    `non_fiable`. Il est compare a la chaine qui a reellement produit le match : le `nom`
    pour un match direct, mais la `dci` pour un match indirect, sinon une resolution
-   legitime par DCI (requete "ibuprofene" -> ADFENE) serait rejetee a tort.
+   legitime par DCI (requete "ibuprofene" -> ADFENE) serait rejetee a tort ;
+6. **passe phonetique** : une troisieme comparaison, sur la cle sonore (`cle_phonetique`)
+   de la requete et des noms de la base. Elle rattrape ce que la comparaison lettre a
+   lettre ne rapproche pas -- typiquement un nom dicte en arabe, ou l'arabe n'a ni p ni v
+   et ne note pas les voyelles breves : "دوليبران" se translittere "doulibran", a 66 de
+   DOLIPRANE en toutes lettres, mais les deux se reduisent a la meme cle `dolibran`.
+   Un candidat trouve par cette passe est decote de 5 %, son garde-fou anti-bruit est
+   releve (`TOKEN_OVERLAP_FLOOR_PHON = 85`, la cle rapprochant plus facilement deux mots
+   sans rapport), et il est rabattu en `a_confirmer` si plusieurs produits de la base
+   partagent la meme cle : le matcher ne peut pas savoir lequel a ete prononce.
+
+### Resultats (`py nlu/evaluate_entity_linking.py`, 37 cas, hors ligne)
+
+| Graphie | Top-1 | Top-3 |
+|---|---|---|
+| latine (fautes de frappe, noms partiels, bruit) | 18/18 = 100 % | 18/18 = 100 % |
+| arabe (dont 14 hors table de correspondances) | 18/19 = 94,7 % | 19/19 = 100 % |
+
+Avant la translitteration lettre a lettre, les 14 cas arabes hors table ne renvoyaient
+**aucun** candidat. Le seul cas non resolu en top-1 est un homophone (باراسيتامول sort
+PARACETAL avant PARACETAMOL B.BRAUN) : il est justement rendu en `a_confirmer`, et le
+bon produit reste dans les trois premiers.
 
 Limites connues :
 - Le garde-fou anti-bruit filtre les requetes absurdes, pas les confusions plausibles :
   deux noms reellement proches restent departages par le seul score lexical.
-- La table de translitteration arabe est un point de depart (7 entrees) — un mot arabe absent de la table ne matchera rien. A etoffer au fur et a mesure des cas reels.
-- Pas de gestion de la darija en graphie arabe non couverte par la table (ex. variantes orthographiques du meme mot).
+- La cle phonetique ecrase des distinctions reelles (p/b, s/z, i/e) : elle augmente le
+  rappel sur l'arabe au prix d'homophones a departager, d'ou le rabattement systematique
+  en `a_confirmer` quand la cle est partagee.
+- Une lettre arabe hors table est ignoree plutot qu'inventee : un mot ecrit dans une
+  graphie tres eloignee peut encore passer a cote.
 - Matching purement lexical : deux medicaments au nom proche mais a l'usage tres different peuvent se confondre (risque a garder en tete pour la validation humaine sur les cas `a_confirmer`).
 
 ## Pharmacy Linking — resultats et limites
 Meme logique que l'entity linking medicaments, sur `data/clean/pharmacies_reference.csv` :
-1. normalisation du nom ET suppression du prefixe "Pharmacie/La Pharmacie/Grande Pharmacie" (quasi tous les noms commencent par ce mot, il faut l'ignorer pour bien discriminer) ;
+1. normalisation du nom ET suppression du prefixe "Pharmacie/La Pharmacie/Grande Pharmacie" — ainsi que "صيدلية", qui ouvre presque toute demande dictee en arabe (quasi tous les noms commencent par ce mot, il faut l'ignorer pour bien discriminer) ;
 2. si une localisation est fournie : filtre d'abord sur la ville (fuzzy match >=90) puis, a defaut, recherche en sous-chaine dans l'adresse (pour les quartiers, non captures par le champ ville) ;
 3. fuzzy matching du nom dans le pool filtre ; sans nom, retourne la liste du lieu (pharmacies de garde en tete) ;
 4. memes paliers de confiance que pour les medicaments, garde-fou anti-bruit compris
-   (sans lui, "Bidon Inexistante Xyz123" ressortait sur "Pharmacie Abid" en `a_confirmer`).
+   (sans lui, "Bidon Inexistante Xyz123" ressortait sur "Pharmacie Abid" en `a_confirmer`) ;
+5. meme passe phonetique que pour les medicaments, pour les noms dictes en arabe ;
+6. **alias de villes** (`ALIAS_VILLES`) : un toponyme ne se translittere pas, il se
+   traduit -- "الدار البيضاء" et "Casablanca" n'ont aucune lettre en commun. La table
+   couvre les villes les mieux representees dans l'annuaire, plus les diminutifs d'usage
+   ("kaza", "casa").
+
+7. **alerte homonymes** : quand un nom demande sans ville est porte par plusieurs
+   officines dans des villes differentes, `last_name_note` le signale. Renvoyer la
+   premiere de la liste reviendrait a choisir une ville au hasard pour l'utilisateur
+   sans le lui dire ; l'assistant demande donc laquelle.
+
+Resultats (`py nlu/evaluate_pharmacy_linking.py`) : 12/12 en top-1, dont les 3 cas dictes
+en arabe, plus le cas ambigu par construction ("Pharmacie Granada" sans ville, presente
+dans trois villes) ou la reussite consiste a demander la ville.
 
 Limites connues :
-- Plusieurs pharmacies peuvent porter le meme nom dans des villes differentes (ex. "Pharmacie Ibn Sina", tres frequent) — une recherche par nom seul, sans localisation, est ambigue par construction. Toujours privilegier nom+localisation quand les deux sont disponibles dans l'entity linking amont.
+- Plusieurs pharmacies peuvent porter le meme nom dans des villes differentes (ex. "Pharmacie Ibn Sina", present dans 18 villes) — une recherche par nom seul, sans localisation, est ambigue par construction. C'est maintenant signale (point 7) plutot que tranche en silence, mais la levee de l'ambiguite demande un tour de dialogue de plus. Toujours privilegier nom+localisation quand les deux sont disponibles dans l'entity linking amont.
 - Couverture geographique dependante de la base saydalia elle-meme (voir `data/README.md`) : pas de garantie d'exhaustivite par ville/quartier.
 - Pas de coordonnees GPS fiables (la source ne les fournit pas correctement) : uniquement adresse texte.
 
@@ -124,4 +162,4 @@ Limites connues :
 - **Donnees reelles** : remplacer ou completer les 99 phrases de l'equipe par des messages anonymises de vrais patients. C'est la limite principale de l'evaluation.
 - **Hybride** : utiliser les regles de `baseline.py` pour les entites quand le LLM est indisponible, et les confronter a sa sortie pour detecter ses omissions.
 - **Fine-tuning** (DarijaBERT / AraBERT) : a envisager a partir de quelques centaines de phrases annotees. Avec 99 phrases, le modele serait trop instable pour etre compare honnetement.
-- **Translitteration arabe → latin** : la table `ARABIC_TO_LATIN` compte 8 entrees, a etoffer au fil des cas reels.
+- **Translitteration arabe → latin** : la transcription lettre a lettre couvre desormais tout mot arabe ; restent a etoffer au fil des cas reels la table de correspondances (`ARABIC_TO_LATIN`, pour les noms trop eloignes de leur graphie latine) et la table d'alias de villes (`ALIAS_VILLES`, 40 entrees).

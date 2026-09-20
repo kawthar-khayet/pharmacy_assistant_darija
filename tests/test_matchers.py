@@ -31,6 +31,38 @@ def test_medicament_resolu(meds, requete, attendu):
     assert premier["confidence"] == "auto"
 
 
+@pytest.mark.parametrize("requete, attendu", [
+    ("فولتارين", "VOLTARENE"),
+    ("بانادول", "PANADOL"),
+    ("كلاموكسيل", "CLAMOXYL"),
+    ("إيموديوم", "IMODIUM"),
+    ("أسبيجيك", "ASPEGIC"),
+    ("الدوليبران", "DOLIPRANE"),      # avec l'article defini
+    ("بغيت دوليبران", "DOLIPRANE"),    # nom noye dans une phrase dictee
+])
+def test_medicament_dicte_en_arabe_hors_table(meds, requete, attendu):
+    """Graphies arabes absentes de la table de correspondances ecrite a la
+    main : elles ne sont retrouvees que par la translitteration lettre a
+    lettre et la cle phonetique. C'est le cas de figure d'une question posee
+    a la voix, que Whisper transcrit en arabe faute de modele de darija."""
+    premier = meds.match(requete, top_k=1)[0]
+    assert premier["nom_candidat"] == attendu
+
+
+def test_bruit_dicte_en_arabe_jamais_auto(meds):
+    """La cle phonetique ecrase des distinctions : elle ne doit pas pour
+    autant faire passer du charabia pour un medicament identifie."""
+    assert all(r["confidence"] != "auto" for r in meds.match("بيدون إينكسيستانت", top_k=3))
+
+
+def test_homophones_signales_comme_a_confirmer(meds):
+    """Plusieurs produits peuvent sonner pareil une fois la cle calculee. Le
+    matcher n'a alors aucun moyen de savoir lequel a ete dicte : il propose,
+    il n'affirme pas."""
+    resultats = meds.match("باراسيتامول", top_k=3)
+    assert resultats and resultats[0]["confidence"] != "auto"
+
+
 def test_recherche_par_molecule(meds):
     """Une requete par DCI remonte des noms commerciaux sans ressemblance
     lexicale avec elle : le garde-fou anti-bruit ne doit pas les rejeter."""
@@ -94,6 +126,62 @@ def test_quartier_ambigu_signale(pharmas):
 
 def test_lieu_inconnu_ne_renvoie_rien(pharmas):
     assert pharmas.match(location="Zzzqqqville", top_k=3) == []
+
+
+@pytest.mark.parametrize("ville_dite, attendue", [
+    ("الدار البيضاء", "Casablanca"),
+    ("كازا", "Casablanca"),
+    ("casa", "Casablanca"),          # diminutif d'usage, a l'ecrit comme a l'oral
+    ("الرباط", "Rabat"),
+    ("مراكش", "Marrakech"),
+    ("طنجة", "Tanger"),
+])
+def test_ville_dite_en_arabe_ou_en_diminutif(pharmas, ville_dite, attendue):
+    """Un toponyme n'est pas la transcription sonore de l'autre : « الدار
+    البيضاء » et « Casablanca » n'ont aucune lettre commune. Ces cas passent
+    par la table d'alias, pas par la translitteration."""
+    resultats = pharmas.match(location=ville_dite, top_k=3)
+    assert resultats and {r["ville"] for r in resultats} == {attendue}
+
+
+def test_nom_porte_par_plusieurs_villes_signale(pharmas):
+    """Les noms d'officine sont tres repetitifs au Maroc. Sans ville, le
+    matcher ne peut pas trancher : il doit le dire plutot que de renvoyer la
+    premiere de la liste comme si c'etait la bonne."""
+    pharmas.match(nom="Pharmacie Granada", top_k=3)
+    note = pharmas.last_name_note
+    assert note and "Nador" in note and "Al Hoceima" in note
+
+
+def test_nom_avec_ville_ne_declenche_pas_l_alerte(pharmas):
+    """Une fois la ville donnee, il n'y a plus d'ambiguite a signaler."""
+    pharmas.match(nom="Granada", location="Nador", top_k=3)
+    assert pharmas.last_name_note is None
+
+
+def test_nom_unique_ne_declenche_pas_l_alerte(pharmas):
+    pharmas.match(nom="Branes", top_k=3)
+    assert pharmas.last_name_note is None
+
+
+def test_nom_absurde_ne_declenche_pas_l_alerte(pharmas):
+    pharmas.match(nom="Bidon Inexistante Xyz123", top_k=3)
+    assert pharmas.last_name_note is None
+
+
+def test_pharmacie_dictee_en_arabe(pharmas):
+    """« صيدلية » (pharmacie) ouvre presque toutes les demandes dictees en
+    arabe : comme « Pharmacie », il ne discrimine rien et doit etre ignore."""
+    resultats = pharmas.match(nom="صيدلية ابن سينا", location="الرباط", top_k=3)
+    assert resultats[0]["nom"] == "Pharmacie Ibn Sina"
+    assert resultats[0]["ville"] == "Rabat"
+
+
+def test_nom_absurde_dicte_en_arabe_jamais_fiable(pharmas):
+    assert all(
+        r["confidence"] == "non_fiable"
+        for r in pharmas.match(nom="صيدلية بيدون إينكسيستانت", top_k=3)
+    )
 
 
 def test_nom_absurde_jamais_fiable(pharmas):

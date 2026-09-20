@@ -22,6 +22,8 @@ from pathlib import Path
 import pandas as pd
 from rapidfuzz import fuzz, process
 
+from translitteration import cle_phonetique, contient_arabe, translitterer
+
 ROOT = Path(__file__).resolve().parent.parent
 REFERENCE_PATH = ROOT / "data" / "clean" / "pharmacies_reference.csv"
 
@@ -37,12 +39,56 @@ CONFIDENCE_THRESHOLDS = {"auto": 90, "a_confirmer": 70}
 # So it is applied as a floor: under it, nothing is trusted whatever WRatio says.
 TOKEN_OVERLAP_FLOOR = 75
 
+# La cle phonetique ecrase des distinctions (p/b, s/z, i/e) : deux noms sans
+# rapport s'y ressemblent plus facilement qu'en toutes lettres, d'ou un
+# garde-fou plus exigeant sur cette passe (meme raison que dans
+# entity_linking.py).
+TOKEN_OVERLAP_FLOOR_PHON = 85
+
 # Common leading words that don't help discriminate between pharmacy names
 # (almost all entries start with one of these) -- stripped before matching.
+# SIDLIA est ce que donne « صيدلية » (pharmacie) une fois translitere : une
+# question dictee en arabe commence presque toujours par ce mot.
 NAME_PREFIXES = re.compile(
-    r"^(LA |GRANDE |NOUVELLE )*PHARMACIE\s+(DE\s+|DU\s+|DES\s+|D')?",
+    r"^(LA |GRANDE |NOUVELLE )*(PHARMACIE|SIDLIA|SAIDALIA)\s+(DE\s+|DU\s+|DES\s+|D')?",
     re.IGNORECASE,
 )
+
+# Noms de villes tels qu'un patient les dit ou les ecrit, vers la graphie de la
+# base. La translitteration ne suffit pas ici : un toponyme n'est pas la
+# transcription sonore de l'autre ("الدار البيضاء" et "Casablanca" n'ont
+# aucune lettre en commun), c'est une traduction. La table couvre les villes
+# les mieux representees dans l'annuaire, plus les diminutifs d'usage.
+ALIAS_VILLES = {
+    "الدار البيضاء": "Casablanca", "دار البيضاء": "Casablanca", "كازا": "Casablanca",
+    "كازابلانكا": "Casablanca", "casa": "Casablanca", "dar el beida": "Casablanca",
+    "الرباط": "Rabat", "سلا": "Salé", "تمارة": "Témara",
+    "مراكش": "Marrakech", "فاس": "Fès", "مكناس": "Meknès",
+    "طنجة": "Tanger", "تطوان": "Tétouan", "أكادير": "Agadir", "اكادير": "Agadir",
+    "وجدة": "Oujda", "القنيطرة": "Kénitra", "الجديدة": "El Jadida",
+    "آسفي": "Safi", "اسفي": "Safi", "الصويرة": "Essaouira",
+    "بني ملال": "Beni Mellal", "خريبكة": "Khouribga", "برشيد": "Berrechid",
+    "سطات": "Settat", "الناظور": "Nador", "الحسيمة": "Al Hoceima",
+    "ورزازات": "Ouarzazate", "العيون": "Laâyoune", "الداخلة": "Dakhla",
+    "تازة": "Taza", "المحمدية": "Mohammedia", "الرشيدية": "Errachidia",
+    "كلميم": "Guelmim", "تارودانت": "Taroudant", "انزكان": "Inezgane",
+    "العرائش": "Larache", "خنيفرة": "Khénifra", "بركان": "Berkane",
+    "صفرو": "Séfrou", "القصر الكبير": "Ksar El Kebir",
+}
+
+_DIACRITIQUES_AR = re.compile(r"[ً-ْٰـ]")
+
+
+def latiniser(texte: str) -> str:
+    """Ramene une saisie en graphie arabe vers le latin de la base.
+
+    L'alias de ville prime (c'est une traduction, pas une transcription) ;
+    a defaut, le texte est translitere lettre a lettre."""
+    brut = _DIACRITIQUES_AR.sub("", str(texte)).strip()
+    alias = ALIAS_VILLES.get(brut) or ALIAS_VILLES.get(brut.lower())
+    if alias:
+        return alias
+    return translitterer(brut) if contient_arabe(brut) else brut
 
 
 def best_token_similarity(query_norm: str, candidate_norm: str) -> float:
@@ -66,7 +112,7 @@ def strip_accents(s: str) -> str:
 def normalize(s) -> str:
     if pd.isna(s):
         return ""
-    s = str(s).strip().upper()
+    s = latiniser(s).strip().upper()
     s = strip_accents(s)
     s = re.sub(r"[^A-Z0-9 ]", " ", s)
     s = re.sub(r"\s+", " ", s).strip()
@@ -82,11 +128,15 @@ class PharmacyMatcher:
         self.df = pd.read_csv(reference_path, dtype={"id": str, "telephone": str})
         self.df["nom_norm"] = self.df["nom"].apply(normalize)
         self.df["nom_court"] = self.df["nom_norm"].apply(strip_pharmacie_prefix)
+        # Cle sonore du nom : rattrape les graphies qu'une comparaison lettre a
+        # lettre ne rapproche pas, en particulier un nom dicte en arabe.
+        self.df["nom_court_phon"] = self.df["nom_court"].apply(cle_phonetique)
         self.df["ville_norm"] = self.df["ville"].apply(normalize)
         self.df["adresse_norm"] = self.df["adresse"].apply(normalize)
 
         self.unique_villes = sorted(v for v in self.df["ville_norm"].dropna().unique() if v)
         self.last_location_note: str | None = None
+        self.last_name_note: str | None = None
 
     def _filter_by_location(self, location: str) -> tuple[pd.DataFrame | None, str | None]:
         """Returns (matching rows or None, ambiguity_note or None).
@@ -148,8 +198,38 @@ class PharmacyMatcher:
 
         return None, None
 
+    def _note_homonymes(self, nom_demande: str, results: list[dict]) -> str | None:
+        """Avertissement quand plusieurs pharmacies du meme nom, dans des villes
+        differentes, sont retenues.
+
+        Les noms d'officine sont tres repetitifs au Maroc ("Ibn Sina", "Al
+        Amal", "Granada") : une recherche par nom seul est ambigue par
+        construction. Renvoyer la premiere de la liste reviendrait a choisir
+        une ville au hasard pour l'utilisateur sans le lui dire."""
+        fiables = [r for r in results if r["confidence"] in ("auto", "a_confirmer")]
+        if not fiables:
+            return None
+        nom_retenu = normalize(fiables[0]["nom"])
+        if sum(normalize(r["nom"]) == nom_retenu for r in fiables) < 2:
+            return None
+
+        # Villes comptees sur l'annuaire entier, pas sur les seuls resultats
+        # affiches : ceux-ci sont tronques a top_k et donneraient une liste
+        # incomplete presentee comme exhaustive.
+        villes = sorted({
+            v for v in self.df.loc[self.df["nom_norm"] == nom_retenu, "ville"].dropna().unique()
+        })
+        if len(villes) < 2:
+            return None
+        apercu = ", ".join(villes[:6]) + (f" et {len(villes) - 6} autres" if len(villes) > 6 else "")
+        return (
+            f"« {fiables[0]['nom']} » existe dans plusieurs villes : {apercu}. "
+            f"Precise laquelle pour que je te donne la bonne adresse."
+        )
+
     def match(self, nom: str | None = None, location: str | None = None, top_k: int = 5) -> list[dict]:
         self.last_location_note = None
+        self.last_name_note = None
         if location:
             pool, note = self._filter_by_location(location)
             self.last_location_note = note
@@ -187,9 +267,32 @@ class PharmacyMatcher:
             return []
         hits = process.extract(query_court, choices, scorer=fuzz.WRatio, limit=top_k)
 
+        # Passe phonetique, meme role que dans entity_linking.py : une
+        # pharmacie dictee en arabe ("صيدلية النخيل") n'a pas la meme
+        # orthographe que dans l'annuaire, mais la meme sonorite.
+        query_phon = cle_phonetique(query_court)
+        phon_hits = (
+            process.extract(query_phon, pool["nom_court_phon"].tolist(), scorer=fuzz.WRatio, limit=top_k)
+            if query_phon else []
+        )
+
+        # idx dans le pool -> (score, texte compare cote requete, cote base, passe)
+        meilleurs: dict[int, tuple[float, str, str, str]] = {}
+
+        def offer(idx: int, score: float, cote_requete: str, cote_base: str, passe: str) -> None:
+            if score > meilleurs.get(idx, (0.0,))[0]:
+                meilleurs[idx] = (score, cote_requete, cote_base, passe)
+
+        for matched_text, score, idx in hits:
+            offer(idx, score, query_court, matched_text, "nom")
+        for matched_text, score, idx in phon_hits:
+            offer(idx, score * 0.95, query_phon, matched_text, "phon")
+
+        classes = sorted(meilleurs.items(), key=lambda kv: kv[1][0], reverse=True)[:top_k]
+
         results = []
         seen = set()
-        for matched_text, score, idx in hits:
+        for idx, (score, cote_requete, cote_base, passe) in classes:
             row = pool.iloc[idx]
             key = (row["nom"], row["adresse"])
             if key in seen:
@@ -201,7 +304,8 @@ class PharmacyMatcher:
                 else "a_confirmer" if score >= CONFIDENCE_THRESHOLDS["a_confirmer"]
                 else "non_fiable"
             )
-            if best_token_similarity(query_court, matched_text) < TOKEN_OVERLAP_FLOOR:
+            plancher = TOKEN_OVERLAP_FLOOR_PHON if passe == "phon" else TOKEN_OVERLAP_FLOOR
+            if best_token_similarity(cote_requete, cote_base) < plancher:
                 confidence = "non_fiable"
             results.append({
                 "nom": row["nom"],
@@ -214,6 +318,11 @@ class PharmacyMatcher:
                 "score": round(float(score), 1),
                 "confidence": confidence,
             })
+
+        # Uniquement quand aucune localisation n'a ete donnee : si elle l'a ete,
+        # le pool est deja restreint a une ville et il n'y a pas d'ambiguite.
+        if not location:
+            self.last_name_note = self._note_homonymes(nom, results)
         return results
 
 

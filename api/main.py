@@ -123,6 +123,9 @@ class TranscriptionResponse(BaseModel):
     langue: str
     confiance_langue: float
     duree_audio: float
+    # renseigne quand la transcription est incertaine, pour que l'interface
+    # invite a relire plutot que de laisser croire a une comprehension sure
+    avertissement: str | None = None
 
 
 class ChatResponse(BaseModel):
@@ -419,6 +422,7 @@ def chat(req: ChatRequest):
     pharm_entity = next((e for e in entities if e["type"] == "PHARMACIE"), None)
     loc_entity = next((e for e in entities if e["type"] == "LOCALISATION"), None)
     location_note = None
+    homonymes_note = None
     if pharm_entity or loc_entity:
         pharma_matcher = get_pharma_matcher()
         pharmacie_matches = pharma_matcher.match(
@@ -427,6 +431,9 @@ def chat(req: ChatRequest):
             top_k=3,
         )
         location_note = pharma_matcher.last_location_note
+        # nom demande sans ville, porte par plusieurs officines : le dire
+        # plutot que de trancher en silence (cf. _note_homonymes)
+        homonymes_note = pharma_matcher.last_name_note
         # meme regle pour un nom de pharmacie ; les listes par lieu ("liste_
         # localisation") n'ont pas de score et restent affichees
         pharmacie_matches = [p for p in pharmacie_matches if p["confidence"] != "non_fiable"]
@@ -487,6 +494,8 @@ def chat(req: ChatRequest):
             reply = "Voici ce que j'ai trouve :\n" + describe_pharmacies(pharmacie_matches)
             if location_note:
                 reply += f"\n\n({location_note})"
+            if homonymes_note:
+                reply += f"\n\n({homonymes_note})"
             garde = note_garde(text, pharmacie_matches)
             if garde:
                 reply += f"\n\n{garde}"
