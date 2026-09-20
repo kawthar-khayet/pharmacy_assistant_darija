@@ -1,6 +1,7 @@
 """Coherence du jeu de donnees, du schema et du client LLM (sans appel reel)."""
 import json
 import re
+from collections import Counter
 
 import pytest
 
@@ -11,11 +12,13 @@ EXEMPLES = lp.load_seed_examples()
 INTENTS = {i["id"] for i in SCHEMA["intents"]}
 TYPES = {e["id"] for e in SCHEMA["entities"]}
 
-# Regle de frontiere disponibilite / commande (voir build_seed_dataset.py) :
-# une commande exige un verbe explicite de reservation ou d'achat.
-VERBES_COMMANDE = re.compile(
-    r"n?7goz|reserv|command|nchri|achet", re.IGNORECASE
-)
+TAXONOMIE_V2 = {
+    "disponibilite_medicament", "prix_remboursement", "alternative_moins_chere",
+    "info_pharmacie", "posologie_information", "conseil_medical", "salutation", "hors_sujet",
+}
+
+# verbes qui definissaient l'ancienne intention commande_reservation
+VERBES_COMMANDE = re.compile(r"n?7goz|reserv|command|nchri|achet", re.IGNORECASE)
 
 
 # ------------------------------------------------------------- dataset
@@ -29,20 +32,42 @@ def test_exemple_coherent_avec_le_schema(ex):
         assert ex["text"][e["start"]:e["end"]] == e["value"]
 
 
-def test_regle_bghit_commande_exige_un_verbe():
-    fautifs = [
-        ex["id"] for ex in EXEMPLES.values()
-        if ex["intent"] == "commande_reservation" and not VERBES_COMMANDE.search(ex["text"])
-    ]
-    assert not fautifs, f"commandes sans verbe de reservation/achat : {fautifs}"
+def test_taxonomie_v2():
+    assert INTENTS == TAXONOMIE_V2
 
 
-def test_regle_bghit_disponibilite_sans_verbe_de_commande():
+def test_plus_aucune_ancienne_intention_dans_le_jeu():
+    anciennes = {"autre", "commande_reservation"}
+    assert not [ex["id"] for ex in EXEMPLES.values() if ex["intent"] in anciennes]
+
+
+def test_ex_commandes_sont_des_demandes_de_medicament():
+    """Depuis la fusion, une phrase avec un verbe de reservation ou d'achat est
+    une demande de medicament comme les autres."""
     fautifs = [
         ex["id"] for ex in EXEMPLES.values()
-        if ex["intent"] == "disponibilite_medicament" and VERBES_COMMANDE.search(ex["text"])
+        if VERBES_COMMANDE.search(ex["text"]) and ex["intent"] != "disponibilite_medicament"
     ]
-    assert not fautifs, f"disponibilites contenant un verbe de commande : {fautifs}"
+    assert not fautifs, fautifs
+
+
+def test_chaque_intention_a_assez_d_exemples():
+    """En dessous de ~8 exemples, une intention est trop fragile pour etre
+    apprise ou evaluee : c'etait le cas de commande_reservation."""
+    compte = Counter(ex["intent"] for ex in EXEMPLES.values())
+    assert min(compte[i] for i in INTENTS) >= 8, compte
+
+
+def test_questions_de_sante_et_hors_sujet_sans_entite():
+    for ex in EXEMPLES.values():
+        if ex["intent"] in {"conseil_medical", "hors_sujet"}:
+            assert ex["entities"] == [], ex["id"]
+
+
+def test_demandes_d_equivalent_citent_un_medicament():
+    for ex in EXEMPLES.values():
+        if ex["intent"] == "alternative_moins_chere":
+            assert any(e["type"] == "MEDICAMENT" for e in ex["entities"]), ex["id"]
 
 
 def test_few_shot_existent_et_couvrent_tous_les_intents():
@@ -52,15 +77,23 @@ def test_few_shot_existent_et_couvrent_tous_les_intents():
 
 # -------------------------------------------------------------- prompt
 
+def _prompt():
+    return lp.build_system_prompt(SCHEMA, [EXEMPLES[i] for i in lp.FEW_SHOT_IDS])
+
+
 def test_prompt_contient_la_regle_sidalia():
-    few = [EXEMPLES[i] for i in lp.FEW_SHOT_IDS]
-    prompt = lp.build_system_prompt(SCHEMA, few)
+    prompt = _prompt()
     assert "sidalia" in prompt and "noms COMMUNS" in prompt
 
 
-def test_prompt_expose_la_regle_bghit_via_le_schema():
-    few = [EXEMPLES[i] for i in lp.FEW_SHOT_IDS]
-    assert "n7goz" in lp.build_system_prompt(SCHEMA, few)
+def test_prompt_explique_la_fusion_de_la_commande():
+    assert "n7goz" in _prompt()
+
+
+def test_prompt_distingue_sante_et_hors_sujet():
+    prompt = _prompt()
+    assert "conseil_medical" in prompt and "hors_sujet" in prompt
+    assert '"autre"' not in prompt
 
 
 # ---------------------------------------------------------- validation
@@ -120,6 +153,6 @@ def test_ne_reessaie_pas_une_erreur_definitive(monkeypatch):
 
 
 def test_extrait_le_json_meme_entoure_de_texte(monkeypatch):
-    bavard = 'Voici la reponse : {"intent": "autre", "entities": []} Bonne journee !'
+    bavard = 'Voici la reponse : {"intent": "hors_sujet", "entities": []} Bonne journee !'
     monkeypatch.setattr(lp.requests, "post", lambda *a, **k: FausseReponse(200, bavard))
-    assert lp.call_llm("cle", "prompt", "?")["intent"] == "autre"
+    assert lp.call_llm("cle", "prompt", "?")["intent"] == "hors_sujet"

@@ -1,7 +1,7 @@
 """Entity linking : resolution des noms de medicaments et de pharmacies."""
 import pytest
 
-from entity_linking import MedicamentMatcher
+from entity_linking import MedicamentMatcher, equivalents, famille_forme, normalize
 from pharmacy_linking import PharmacyMatcher
 
 
@@ -98,3 +98,70 @@ def test_lieu_inconnu_ne_renvoie_rien(pharmas):
 
 def test_nom_absurde_jamais_fiable(pharmas):
     assert all(r["confidence"] == "non_fiable" for r in pharmas.match(nom="Bidon Inexistante Xyz123", top_k=3))
+
+
+# ------------------------------------------------------------ equivalents
+
+def _lignes(meds, nom):
+    return meds.df[meds.df["nom_norm"] == normalize(nom)]
+
+
+def test_equivalents_du_moins_cher_au_plus_cher(meds):
+    r = equivalents(meds, "DOLIPRANE", "500mg")
+    prix = [e["ppv"] for e in r["equivalents"]]
+    assert prix and prix == sorted(prix)
+    assert all(e["nom"] != "DOLIPRANE" for e in r["equivalents"])
+
+
+def test_equivalents_meme_molecule_et_meme_dosage(meds):
+    r = equivalents(meds, "DOLIPRANE", "500mg")
+    for e in r["equivalents"]:
+        lignes = _lignes(meds, e["nom"])
+        assert (lignes["dci_norm"] == "PARACETAMOL").any(), e["nom"]
+        assert normalize(e["dosage"]).replace(" ", "") == "500MG", e
+
+
+def test_association_jamais_remplacee_par_une_seule_molecule(meds):
+    """Regression : la liste CNSS decoupe l'Augmentin (amoxicilline + acide
+    clavulanique) en une ligne par molecule, et le premier prototype proposait
+    NEOMOX -- de l'amoxicilline seule, injectable."""
+    r = equivalents(meds, "AUGMENTIN")
+    assert "CLAVULANIQUE" in normalize(r["reference"]["dci"])
+    assert r["equivalents"]
+    for e in r["equivalents"]:
+        assert "NEOMOX" not in e["nom"]
+        assert _lignes(meds, e["nom"])["dci_norm"].str.contains("CLAVULANIQUE").any(), e["nom"]
+
+
+def test_meme_voie_d_administration(meds):
+    """Regression : un suppositoire etait propose a la place d'un comprime."""
+    for nom in ["DOLIPRANE", "AUGMENTIN", "VOLTARENE"]:
+        r = equivalents(meds, nom)
+        famille = famille_forme(r["reference"]["forme"])
+        for e in r["equivalents"]:
+            assert famille_forme(e["forme"]) == famille, (nom, e)
+
+
+def test_jamais_de_produit_retire_ou_non_commercialise(meds):
+    for nom in ["DOLIPRANE", "AUGMENTIN", "VOLTARENE", "CLAMOXYL"]:
+        for e in equivalents(meds, nom)["equivalents"]:
+            statuts = set(_lignes(meds, e["nom"])["statut_commercialisation"].dropna())
+            assert not statuts or "Commercialisé" in statuts, (e["nom"], statuts)
+
+
+def test_forme_orale_preferee_sans_precision(meds):
+    """Sans precision, "Spasfon" designe le comprime, pas le suppositoire."""
+    assert famille_forme(equivalents(meds, "SPASFON")["reference"]["forme"]) == "orale_solide"
+
+
+@pytest.mark.parametrize("forme, famille", [
+    ("COMPRIME EFFERVESCENT", "orale_solide"),
+    ("GELULE", "orale_solide"),
+    ("SACHET", "orale_poudre"),
+    ("POUDRE POUR SUSPENSION BUVABLE", "orale_liquide"),
+    ("POUDRE POUR SOLUTION INJECTABLE", "injectable"),
+    ("SUPPOSITOIRE", "rectale"),
+    ("GEL", "cutanee"),
+])
+def test_familles_de_formes(forme, famille):
+    assert famille_forme(forme) == famille

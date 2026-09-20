@@ -58,7 +58,11 @@ Reponse :
 - **Multi-tours** : quand la demande porte sur un medicament sans lieu, `awaiting_localisation` vaut `true`. Le message suivant, envoye avec le meme `session_id`, est lu comme la ville ou le quartier.
 - **Paliers de confiance appliques** : un candidat `non_fiable` n'est jamais utilise. Si rien de fiable ne correspond, la reponse dit « Je ne trouve pas … » au lieu de proposer un medicament au hasard. Un candidat `a_confirmer` est presente comme une hypothese (« Tu parles peut-etre de … »).
 - **Remboursement** : CNOPS et CNSS publient chacun son taux, et le regime est toujours nomme. Un taux de 0 s'affiche « non rembourse ».
-- **Hors perimetre** : si l'intent est `autre` mais qu'un medicament a ete reconnu (« chno kaydir doliprane ? »), la fiche est donnee avec une reserve plutot qu'un « je n'ai pas compris ».
+- **Question de sante** (`conseil_medical`) : orientation vers un pharmacien ou un medecin, avec les numeros d'urgence (SAMU 141, Protection civile 15, Centre antipoison 0801 000 180). Aucune fiche de medicament n'est affichee, meme si un medicament est cite : elle passerait pour une recommandation.
+- **Equivalents moins chers** (`alternative_moins_chere`) : champ `alternatives` = `{"reference": {...}, "equivalents": [...]}`, meme composition / dosage / voie d'administration, du moins cher au plus cher. `null` si le medicament n'a pas de composition fiable dans la base.
+- **Hors sujet** (`hors_sujet`) : la reponse presente ce que DwaTalk sait faire. Si un medicament a quand meme ete reconnu (« chno kaydir doliprane ? »), sa fiche est donnee avec une reserve.
+- **Pharmacie de garde** : toute reponse qui en parle rappelle que les gardes changent chaque jour et qu'il faut appeler pour confirmer (l'annuaire est un instantane).
+- **Intention inconnue** renvoyee par le modele (ou ancienne : `autre`, `commande_reservation`) : rabattue sur son equivalent v2, ou sur `hors_sujet`.
 - `400` si le texte est vide ; `500` si le LLM est indisponible, avec un message explicite (les surcharges passageres d'Ollama sont retentees 3 fois).
 
 ### `POST /transcription` et `POST /chat/audio`

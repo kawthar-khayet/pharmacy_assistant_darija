@@ -51,22 +51,24 @@ load_dotenv(ENV_PATH)
 # support, tried first) returned HTTP 402 -- requires a subscription/credits.
 MODEL = os.environ.get("OLLAMA_MODEL", "gpt-oss:20b-cloud")
 
-# One representative few-shot example per intent, hand-picked for diversity
-# of language (fr / darija latine / darija arabe / arabe / mixte), plus one
-# extra info_pharmacie shot (seed_0026) that demonstrates the common-noun rule
-# above in Latin script: the model used to tag the whole "sidalia <nom>" span
-# (or a bare "sidalia") as a PHARMACIE entity -- seed_0020 alone did not fix it
-# because it is written in Arabic script.
+# Au moins un exemple par intention, dans des graphies variees (fr / darija
+# latine / darija arabe / arabe / mixte). Deux exemples info_pharmacie montrent
+# la regle "sidalia" (seed_0020 en arabe, seed_0026 en graphie latine), et
+# seed_0034 rappelle qu'un verbe de reservation reste une demande de medicament
+# depuis la fusion avec l'ancienne intention commande_reservation. seed_0121 est
+# un piege hors sujet ("wach kayn match") qui ressemble a une question de stock.
 FEW_SHOT_IDS = [
     "seed_0001",  # disponibilite_medicament, ary_lat
     "seed_0007",  # disponibilite_medicament, mixte, multi-entity
+    "seed_0034",  # disponibilite_medicament, ary_lat, "bghit n7goz" (ex-commande)
     "seed_0013",  # prix_remboursement, ary_lat
+    "seed_0100",  # alternative_moins_chere, ary_lat
     "seed_0020",  # info_pharmacie, ar, "sidalia" seul -> aucune entite
     "seed_0026",  # info_pharmacie, ary_lat, "sidalia Ibn Sina" -> PHARMACIE="Ibn Sina"
     "seed_0027",  # posologie_information, ary_lat
-    "seed_0034",  # commande_reservation, ary_lat, "bghit n7goz" : bghit + verbe = commande
+    "seed_0043",  # conseil_medical, fr
     "seed_0038",  # salutation, ar
-    "seed_0043",  # autre, fr
+    "seed_0121",  # hors_sujet, ary_lat, piege "wach kayn match"
 ]
 
 
@@ -125,7 +127,7 @@ Regles :
 - "value" doit etre une sous-chaine copiee telle quelle depuis le message (ne pas corriger l'orthographe, ne pas traduire).
 - N'invente pas d'entite qui n'est pas explicitement dans le message.
 - Si aucune entite n'est presente, renvoie "entities": [].
-- Si le message ne correspond a aucun intent metier, utilise "autre".
+- Si le message parle de sante sans demande sur un medicament precis, utilise "conseil_medical" ; s'il ne concerne ni les medicaments, ni les pharmacies, ni la sante, utilise "hors_sujet".
 - "sidalia", "saydalia", "صيدلية", "pharmacie" sont des noms COMMUNS qui designent
   la pharmacie en general : ce ne sont jamais des entites PHARMACIE. N'extrais une
   entite PHARMACIE que pour le nom propre lui-meme, sans ce mot (dans "sidalia Ibn

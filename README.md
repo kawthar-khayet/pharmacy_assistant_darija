@@ -51,7 +51,7 @@ Puis ouvre http://localhost:5173. Le front appelle l'API sur le port 8000 (confi
 
 ```
 py -m pip install -r requirements-dev.txt
-py -m pytest -m "not lent"     # 170 tests, ~3 s, sans reseau ni appel LLM
+py -m pytest -m "not lent"     # 219 tests, quelques secondes, sans reseau ni appel LLM
 py -m pytest                   # + 2 tests Whisper reels (charge le modele)
 ```
 
@@ -59,8 +59,8 @@ Les tests simulent le NLU : ils vérifient notre code (routage des intents, enti
 
 | Script | Mesure | Coût |
 |---|---|---|
-| `py nlu/evaluate.py` | NLU LLM sur 90 phrases | 90 appels Ollama |
-| `py nlu/compare_baseline.py` | LLM vs baseline classique, mêmes 90 phrases | aucun |
+| `py nlu/evaluate.py` | NLU LLM sur 110 phrases | 110 appels Ollama |
+| `py nlu/compare_baseline.py` | LLM vs baseline classique, mêmes 110 phrases | aucun |
 | `py nlu/evaluate_entity_linking.py` | résolution des médicaments | aucun |
 | `py nlu/evaluate_pharmacy_linking.py` | résolution des pharmacies | aucun |
 
@@ -68,8 +68,8 @@ Les tests simulent le NLU : ils vérifient notre code (routage des intents, enti
 
 | | LLM few-shot | Baseline classique |
 |---|---|---|
-| Intent — exactitude | **97,8 %** | 67,8 % |
-| Entités — F1 | **98,6 %** | 95,4 % |
+| Intent — exactitude | **98,2 %** | 62,7 % |
+| Entités — F1 | **97,6 %** | 95,4 % |
 | Coût par phrase | 1 appel réseau, plusieurs secondes | 0,5 ms, hors ligne |
 
 Entity linking : 22/22 médicaments (fautes de frappe et graphie arabe comprises), 9/10 pharmacies. Détail et limites dans [nlu/README.md](nlu/README.md).
@@ -82,8 +82,8 @@ api/                    service FastAPI
   parole.py              reconnaissance vocale (faster-whisper, local)
   chat_cli.py            client terminal
 nlu/                    comprehension du langage
-  schema.json            7 intents, 6 types d'entites
-  seed_dataset.jsonl     99 phrases annotees (genere par build_seed_dataset.py)
+  schema.json            8 intents (taxonomie v2), 6 types d'entites
+  seed_dataset.jsonl     121 phrases annotees (genere par build_seed_dataset.py)
   llm_prototype.py       NLU par LLM few-shot (Ollama Cloud)
   baseline.py            NLU classique (TF-IDF + regles), pour comparaison
   entity_linking.py      resolution des medicaments (RapidFuzz)

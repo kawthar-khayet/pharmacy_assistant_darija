@@ -13,6 +13,7 @@ import { useConversations } from '../lib/conversationsContexte'
 const PISTES = [
   { glyphe: '💊', texte: 'Wach kayn doliprane 1g?' },
   { glyphe: '💰', texte: 'Chhal taman panadol?' },
+  { glyphe: '🔁', texte: 'Kayn chi dwa bhal doliprane rkhis?' },
   { glyphe: '📍', texte: 'Fin kayna sidalia f Maarif?' },
   { glyphe: '🕐', texte: 'شحال تمن دوليبران؟' },
 ]
