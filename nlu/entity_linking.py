@@ -2,9 +2,12 @@
 (often misspelled, incomplete, or in Arabic script) against the
 official reference table (data/clean/medicaments_reference.csv).
 
-Pipeline: normalisation -> (transliteration darija/arabe -> latin, via
-a small seed lookup table) -> fuzzy matching (RapidFuzz) on `nom` and
-`dci` -> ranked candidates with a confidence tier.
+Pipeline: normalisation -> transliteration darija/arabe -> latin (table
+de correspondances pour les cas connus, puis translitteration lettre a
+lettre pour le reste) -> fuzzy matching (RapidFuzz) on `nom` and `dci`,
+double d'une passe sur la **cle phonetique** pour les graphies que la
+comparaison lettre a lettre ne rapproche pas -> ranked candidates with a
+confidence tier.
 
 This is intentionally the "simple first" approach recommended before
 trying embeddings/semantic search: normalisation + RapidFuzz.
@@ -18,11 +21,15 @@ from pathlib import Path
 import pandas as pd
 from rapidfuzz import fuzz, process
 
+from translitteration import cle_phonetique, translitterer
+
 ROOT = Path(__file__).resolve().parent.parent
 REFERENCE_PATH = ROOT / "data" / "clean" / "medicaments_reference.csv"
 
-# Seed lookup for common medicaments written in Arabic script by patients.
-# Extend this table as new cases are observed in real usage/logs.
+# Correspondances exactes pour les medicaments dont la graphie arabe courante
+# s'ecarte trop de leur nom latin pour que la translitteration lettre a lettre
+# les rapproche. Elles priment sur la translitteration automatique, qui prend
+# le relais pour tout le reste.
 ARABIC_TO_LATIN = {
     "دوليبران": "DOLIPRANE",
     "فلاجيل": "FLAGYL",
@@ -47,6 +54,12 @@ CONFIDENCE_THRESHOLDS = {"auto": 90, "a_confirmer": 70}
 # since a DCI match legitimately yields a very different commercial name
 # (query "ibuprofene" -> ADFENE).
 TOKEN_OVERLAP_FLOOR = 75
+
+# La cle phonetique ecrase des distinctions (p/b, s/z, i/e, voyelles longues) :
+# deux mots sans rapport s'y ressemblent plus facilement qu'en toutes lettres
+# ("BIDON INEXISTANTE" dicte en arabe donne `bidon`, a 80 de `ibido`, la cle
+# d'EPIDUO). Le meme garde-fou est donc exige plus haut sur cette passe.
+TOKEN_OVERLAP_FLOOR_PHON = 85
 
 
 def best_token_similarity(query_norm: str, candidate_norm: str) -> float:
@@ -80,15 +93,23 @@ def normalize(s: str) -> str:
 
 
 def transliterate(query: str) -> str:
-    """If the query is (partly) in Arabic script, map known words to their
-    Latin canonical form via the seed lookup table; unknown Arabic tokens
-    are left as-is (they simply won't fuzzy-match anything, which is a
-    known limitation -- see nlu/README.md)."""
+    """Ramene en latin la part de graphie arabe d'une requete.
+
+    Chaque mot arabe passe d'abord par la table de correspondances ; sinon il
+    est translittere lettre a lettre (voir translitteration.py). Les mots deja
+    en latin sont laisses intacts : les patients melangent les deux graphies
+    dans une meme phrase."""
     if not has_arabic(query):
         return query
-    tokens = query.split()
-    mapped = [ARABIC_TO_LATIN.get(tok, tok) for tok in tokens]
-    return " ".join(mapped)
+    mots = []
+    for tok in query.split():
+        if tok in ARABIC_TO_LATIN:
+            mots.append(ARABIC_TO_LATIN[tok])
+        elif has_arabic(tok):
+            mots.append(translitterer(tok))
+        else:
+            mots.append(tok)
+    return " ".join(mots)
 
 
 def en_enregistrements(df: pd.DataFrame) -> list[dict]:
@@ -116,37 +137,63 @@ class MedicamentMatcher:
         self.unique_noms = sorted(self.df["nom_norm"].dropna().unique())
         self.unique_dcis = sorted(d for d in self.df["dci_norm"].dropna().unique() if d)
 
+        # Index phonetique : cle sonore -> noms de la base qui la portent.
+        # Plusieurs noms peuvent partager une cle (les distinctions p/b, s/z,
+        # i/e n'y survivent pas) ; c'est justement ce qui permet de retrouver
+        # un nom dicte en arabe, et ce qui impose de ne pas trancher seul
+        # quand la cle est ambigue (voir match()).
+        self.df["nom_phon"] = self.df["nom_norm"].apply(cle_phonetique)
+        self.phon_vers_noms: dict[str, list[str]] = {}
+        for phon, nom in zip(self.df["nom_phon"], self.df["nom_norm"]):
+            if phon:
+                noms = self.phon_vers_noms.setdefault(phon, [])
+                if nom not in noms:
+                    noms.append(nom)
+        self.unique_phons = sorted(self.phon_vers_noms)
+
     def match(self, query: str, dosage: str | None = None, top_k: int = 5) -> list[dict]:
         query_translit = transliterate(query)
         query_norm = normalize(query_translit)
         if not query_norm:
             return []
 
+        query_phon = cle_phonetique(query_translit)
+
         nom_hits = process.extract(query_norm, self.unique_noms, scorer=fuzz.WRatio, limit=top_k * 3)
         dci_hits = process.extract(query_norm, self.unique_dcis, scorer=fuzz.WRatio, limit=top_k * 2)
+        phon_hits = (
+            process.extract(query_phon, self.unique_phons, scorer=fuzz.WRatio, limit=top_k * 2)
+            if query_phon else []
+        )
 
-        # nom_norm -> (best score, text that produced it). The matched text is
-        # kept so the confidence floor below can be checked against what was
-        # actually compared, not against a commercial name the query never
-        # resembled in the first place (see TOKEN_OVERLAP_FLOOR).
-        candidates: dict[str, tuple[float, str]] = {}
+        # nom_norm -> (best score, texte compare cote requete, texte compare
+        # cote base, passe qui l'a propose). Les deux textes compares sont
+        # gardes pour que le garde-fou anti-bruit (TOKEN_OVERLAP_FLOOR) juge la
+        # paire qui a reellement produit le score, et non un nom commercial
+        # auquel la requete n'a jamais ressemble.
+        candidates: dict[str, tuple[float, str, str, str]] = {}
 
-        def offer(name: str, score: float, matched_text: str) -> None:
-            if score > candidates.get(name, (0.0, ""))[0]:
-                candidates[name] = (score, matched_text)
+        def offer(name: str, score: float, cote_requete: str, cote_base: str, passe: str) -> None:
+            if score > candidates.get(name, (0.0,))[0]:
+                candidates[name] = (score, cote_requete, cote_base, passe)
 
         for name, score, _ in nom_hits:
-            offer(name, score, name)
+            offer(name, score, query_norm, name, "nom")
         for dci_name, score, _ in dci_hits:
             rows = self.df.loc[self.df["dci_norm"] == dci_name, "nom_norm"].unique()
             for name in rows:
-                offer(name, score * 0.95, dci_name)  # slight discount: indirect match
+                offer(name, score * 0.95, query_norm, dci_name, "dci")  # slight discount: indirect match
+        for phon, score, _ in phon_hits:
+            for name in self.phon_vers_noms[phon]:
+                # meme decote qu'un match indirect : passer par la cle sonore
+                # fait perdre les distinctions p/b, s/z, i/e
+                offer(name, score * 0.95, query_phon, phon, "phon")
 
         ranked = sorted(candidates.items(), key=lambda kv: kv[1][0], reverse=True)[: top_k * 2]
 
         results = []
         seen_noms = set()
-        for name_norm, (score, matched_text) in ranked:
+        for name_norm, (score, cote_requete, cote_base, passe) in ranked:
             if name_norm in seen_noms:
                 continue
             seen_noms.add(name_norm)
@@ -164,8 +211,14 @@ class MedicamentMatcher:
                 else "a_confirmer" if score >= CONFIDENCE_THRESHOLDS["a_confirmer"]
                 else "non_fiable"
             )
-            if best_token_similarity(query_norm, matched_text) < TOKEN_OVERLAP_FLOOR:
+            plancher = TOKEN_OVERLAP_FLOOR_PHON if passe == "phon" else TOKEN_OVERLAP_FLOOR
+            if best_token_similarity(cote_requete, cote_base) < plancher:
                 confidence = "non_fiable"
+            # Un nom retrouve uniquement par sa sonorite, alors que d'autres
+            # produits sonnent pareil, ne peut pas etre donne pour acquis : la
+            # cle ne sait pas lequel des homophones le patient a dicte.
+            if confidence == "auto" and passe == "phon" and len(self.phon_vers_noms.get(cote_base, [])) > 1:
+                confidence = "a_confirmer"
 
             variants = display_rows[
                 ["nom", "dci", "dosage", "forme", "presentation", "ppv",

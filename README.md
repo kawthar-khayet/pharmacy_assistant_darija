@@ -51,7 +51,7 @@ Puis ouvre http://localhost:5173. Le front appelle l'API sur le port 8000 (confi
 
 ```
 py -m pip install -r requirements-dev.txt
-py -m pytest -m "not lent"     # 219 tests, quelques secondes, sans reseau ni appel LLM
+py -m pytest -m "not lent"     # 264 tests, quelques secondes, sans reseau ni appel LLM
 py -m pytest                   # + 2 tests Whisper reels (charge le modele)
 ```
 
@@ -72,7 +72,7 @@ Les tests simulent le NLU : ils vérifient notre code (routage des intents, enti
 | Entités — F1 | **97,6 %** | 95,4 % |
 | Coût par phrase | 1 appel réseau, plusieurs secondes | 0,5 ms, hors ligne |
 
-Entity linking : 22/22 médicaments (fautes de frappe et graphie arabe comprises), 9/10 pharmacies. Détail et limites dans [nlu/README.md](nlu/README.md).
+Entity linking : 36/37 médicaments en top-1, 37/37 en top-3 — dont 19 cas en graphie arabe, la forme que prend une question posée à la voix. 12/12 pharmacies — un nom porté par plusieurs villes donne lieu à une demande de précision, pas à un choix silencieux. Détail et limites dans [nlu/README.md](nlu/README.md).
 
 ## Structure
 
@@ -88,6 +88,7 @@ nlu/                    comprehension du langage
   baseline.py            NLU classique (TF-IDF + regles), pour comparaison
   entity_linking.py      resolution des medicaments (RapidFuzz)
   pharmacy_linking.py    resolution des pharmacies
+  translitteration.py    pont arabe <-> latin (translitteration + cle phonetique)
 data/                   references : 19 974 medicaments (AMMPS, CNOPS, CNSS), 2 652 pharmacies
 scripts/                scraping et nettoyage des sources (deja executes)
 frontend/               interface React (Vite)
@@ -99,7 +100,7 @@ tests/                  tests automatises (pytest)
 
 ## Limites connues
 
-- **Darija à la voix** : Whisper n'a pas de modèle de darija. Il la transcrit en arabe ou en français approchant. Le texte est donc rendu au champ de saisie pour être relu avant envoi.
+- **Darija à la voix** : Whisper n'a pas de modèle de darija. Il la transcrit en arabe ou en français approchant. Le texte est donc rendu au champ de saisie pour être relu avant envoi, et l'interface signale explicitement les transcriptions douteuses (langue mal reconnue, confiance basse). En aval, la graphie arabe qui en résulte est traitée : translittération lettre à lettre et comparaison phonétique contre les bases, y compris pour les villes.
 - **Pas de stock en temps réel** : DwaTalk indique prix, forme et remboursement, puis oriente vers des pharmacies à appeler. Il ne sait pas ce qui est en rayon.
 - **Pas d'information clinique** : les bases sont des registres d'autorisation et de remboursement, sans posologie ni effets indésirables. DwaTalk le dit plutôt que de l'inventer.
 - **Pharmacies** : la source (saydalia.ma) ne donne ni coordonnées GPS fiables ni horaires complets. Le plan situe la ville, pas l'officine.

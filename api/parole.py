@@ -38,14 +38,28 @@ TAILLE_MAX_OCTETS = 10 * 1024 * 1024
 
 LANGUES_ACCEPTEES = {"ar", "fr"}
 
-# Amorce donnee au decodeur (initial_prompt) : quelques noms de medicaments
-# courants au Maroc et le vocabulaire du domaine. Whisper conditionne sa
-# transcription sur ce texte, ce qui l'aide a orthographier des noms propres
-# qu'il n'aurait sinon aucune raison de privilegier.
+# Amorce donnee au decodeur (initial_prompt) : les noms de medicaments les plus
+# demandes en officine au Maroc et le vocabulaire du domaine, dans les deux
+# graphies. Whisper conditionne sa transcription sur ce texte, ce qui l'aide a
+# orthographier des noms propres qu'il n'aurait sinon aucune raison de
+# privilegier -- sans amorce, "Spasfon" ressort volontiers en "space fond".
+# L'amorce reste courte a dessein : au-dela de quelques dizaines de mots, elle
+# se met a contaminer la transcription (le modele place les mots de l'amorce
+# meme quand ils n'ont pas ete prononces).
 AMORCE = (
     "Doliprane, Panadol, Efferalgan, Spasfon, Smecta, Amoxicilline, Augmentin, "
-    "Voltarene, pharmacie, صيدلية, دوا."
+    "Voltarene, Ventoline, Clamoxyl, Aspegic, Imodium, Maalox, Flagyl, "
+    "paracetamol, ibuprofene, sirop, comprime, ordonnance, generique, "
+    "pharmacie de garde, remboursement, صيدلية, دوا, وصفة طبية, شربة, حبوب."
 )
+
+# En dessous de ce niveau, la langue detectee par Whisper est un pari. C'est le
+# cas ordinaire en darija : le modele n'en a pas, il la rapproche tantot de
+# l'arabe, tantot du francais, parfois d'une langue sans aucun rapport. La
+# transcription reste utilisable -- le NLU accepte les deux graphies -- mais
+# elle merite d'etre relue avant envoi, d'ou l'avertissement remonte a
+# l'interface plutot qu'une erreur.
+SEUIL_CONFIANCE_LANGUE = 0.6
 
 _modele = None
 _verrou = threading.Lock()
@@ -61,6 +75,31 @@ class Transcription:
     langue: str
     confiance_langue: float
     duree_audio: float
+    # message a afficher quand la transcription est incertaine (None sinon)
+    avertissement: str | None = None
+
+
+def avertissement_langue(langue: str, confiance: float) -> str | None:
+    """Message d'alerte quand la transcription est a prendre avec des pincettes.
+
+    Deux cas, tous deux frequents en darija : le modele hesite (confiance
+    basse), ou il tranche pour une langue que l'assistant ne traite pas -- une
+    phrase en darija se fait regulierement etiqueter persan ou ourdou, dont
+    Whisper rapproche certains sons. Dans les deux cas le texte est rendu quand
+    meme : c'est a l'utilisateur de juger, pas a nous de jeter son
+    enregistrement."""
+    if langue not in LANGUES_ACCEPTEES:
+        return (
+            "La langue n'a pas ete reconnue comme de l'arabe ou du francais "
+            f"(detectee : {langue}). Relis le texte et corrige-le au besoin "
+            "avant de l'envoyer."
+        )
+    if confiance < SEUIL_CONFIANCE_LANGUE:
+        return (
+            "Transcription incertaine : relis le texte avant de l'envoyer. "
+            "La darija est souvent rendue en arabe ou en francais approchant."
+        )
+    return None
 
 
 def _charger():
@@ -120,11 +159,13 @@ def transcrire(contenu: bytes, langue: str | None = None) -> Transcription:
     if not texte:
         raise ErreurAudio("Je n'ai rien entendu. Rapproche-toi du micro et reessaie.")
 
+    confiance = round(float(info.language_probability), 3)
     return Transcription(
         texte=texte,
         langue=info.language,
-        confiance_langue=round(float(info.language_probability), 3),
+        confiance_langue=confiance,
         duree_audio=round(float(info.duration), 2),
+        avertissement=avertissement_langue(info.language, confiance),
     )
 
 
@@ -132,4 +173,7 @@ def modele_charge() -> bool:
     return _modele is not None
 
 
-__all__ = ["ErreurAudio", "Transcription", "transcrire", "modele_charge", "MODELE"]
+__all__ = [
+    "ErreurAudio", "Transcription", "transcrire", "modele_charge", "MODELE",
+    "avertissement_langue", "SEUIL_CONFIANCE_LANGUE",
+]
