@@ -1,26 +1,28 @@
 {
   "protocole": {
-    "jeu_test": 90,
+    "jeu_test": 110,
     "few_shot_exclus": [
       "seed_0001",
       "seed_0007",
+      "seed_0034",
       "seed_0013",
+      "seed_0100",
       "seed_0020",
       "seed_0026",
       "seed_0027",
-      "seed_0034",
+      "seed_0043",
       "seed_0038",
-      "seed_0043"
+      "seed_0121"
     ],
     "validation_croisee": "StratifiedKFold(5), few-shot ajoutes a chaque entrainement",
     "graine": 42
   },
   "llm_few_shot": {
-    "intent_accuracy": 0.9777777777777777,
-    "intent_macro_f1": 0.9734403415013757,
-    "entity_precision": 0.990909090909091,
-    "entity_recall": 0.9819819819819819,
-    "entity_f1": 0.9864253393665158,
+    "intent_accuracy": 0.9818181818181818,
+    "intent_macro_f1": 0.978966662179746,
+    "entity_precision": 0.975609756097561,
+    "entity_recall": 0.975609756097561,
+    "entity_f1": 0.975609756097561,
     "entity_par_type": {
       "DOSAGE": {
         "p": 1.0,
@@ -29,8 +31,8 @@
       },
       "FORME": {
         "p": 1.0,
-        "r": 0.875,
-        "f1": 0.9333333333333333
+        "r": 0.9375,
+        "f1": 0.967741935483871
       },
       "LOCALISATION": {
         "p": 1.0,
@@ -38,9 +40,9 @@
         "f1": 1.0
       },
       "MEDICAMENT": {
-        "p": 0.9824561403508771,
-        "r": 1.0,
-        "f1": 0.9911504424778761
+        "p": 0.9552238805970149,
+        "r": 0.9696969696969697,
+        "f1": 0.9624060150375939
       },
       "PHARMACIE": {
         "p": 1.0,
@@ -60,43 +62,43 @@
         "accuracy": 1.0
       },
       "ary_ar": {
-        "exactes": 8,
-        "total": 8,
-        "accuracy": 1.0
+        "exactes": 11,
+        "total": 12,
+        "accuracy": 0.9166666666666666
       },
       "ary_lat": {
-        "exactes": 42,
-        "total": 44,
-        "accuracy": 0.9545454545454546
+        "exactes": 51,
+        "total": 52,
+        "accuracy": 0.9807692307692307
       },
       "fr": {
-        "exactes": 28,
-        "total": 28,
+        "exactes": 35,
+        "total": 35,
         "accuracy": 1.0
       },
       "mixte": {
-        "exactes": 6,
-        "total": 6,
+        "exactes": 7,
+        "total": 7,
         "accuracy": 1.0
       }
     }
   },
   "baseline": {
-    "intent_accuracy": 0.6777777777777778,
-    "intent_macro_f1": 0.6153061224489795,
-    "entity_precision": 0.9809523809523809,
-    "entity_recall": 0.9279279279279279,
-    "entity_f1": 0.9537037037037037,
+    "intent_accuracy": 0.6272727272727273,
+    "intent_macro_f1": 0.5377576880483856,
+    "entity_precision": 0.9745762711864406,
+    "entity_recall": 0.9349593495934959,
+    "entity_f1": 0.954356846473029,
     "entity_par_type": {
       "DOSAGE": {
         "p": 1.0,
-        "r": 0.8571428571428571,
-        "f1": 0.923076923076923
+        "r": 0.8695652173913043,
+        "f1": 0.9302325581395349
       },
       "FORME": {
-        "p": 1.0,
+        "p": 0.9375,
         "r": 0.9375,
-        "f1": 0.967741935483871
+        "f1": 0.9375
       },
       "LOCALISATION": {
         "p": 1.0,
@@ -104,9 +106,9 @@
         "f1": 0.888888888888889
       },
       "MEDICAMENT": {
-        "p": 0.9642857142857143,
-        "r": 0.9642857142857143,
-        "f1": 0.9642857142857143
+        "p": 0.9696969696969697,
+        "r": 0.9696969696969697,
+        "f1": 0.9696969696969697
       },
       "PHARMACIE": {
         "p": 1.0,
@@ -126,28 +128,40 @@
         "accuracy": 0.5
       },
       "ary_ar": {
-        "exactes": 5,
-        "total": 8,
-        "accuracy": 0.625
+        "exactes": 4,
+        "total": 12,
+        "accuracy": 0.3333333333333333
       },
       "ary_lat": {
-        "exactes": 33,
-        "total": 44,
-        "accuracy": 0.75
+        "exactes": 36,
+        "total": 52,
+        "accuracy": 0.6923076923076923
       },
       "fr": {
-        "exactes": 16,
-        "total": 28,
-        "accuracy": 0.5714285714285714
+        "exactes": 22,
+        "total": 35,
+        "accuracy": 0.6285714285714286
       },
       "mixte": {
         "exactes": 5,
-        "total": 6,
-        "accuracy": 0.8333333333333334
+        "total": 7,
+        "accuracy": 0.7142857142857143
       }
     }
   },
   "erreurs_intent_baseline": [
+    {
+      "id": "seed_0006",
+      "text": "هل يتوفر لديكم دوليبران؟",
+      "gold": "disponibilite_medicament",
+      "pred": "alternative_moins_chere"
+    },
+    {
+      "id": "seed_0014",
+      "text": "شحال ثمن doliprane؟",
+      "gold": "prix_remboursement",
+      "pred": "disponibilite_medicament"
+    },
     {
       "id": "seed_0015",
       "text": "quel est le prix du efferalgan 1g ?",
@@ -155,34 +169,28 @@
       "pred": "disponibilite_medicament"
     },
     {
-      "id": "seed_0017",
-      "text": "قداش تمن الأموكسيسيلين؟",
+      "id": "seed_0018",
+      "text": "wach doliprane 1g marboul m3a CNOPS?",
       "gold": "prix_remboursement",
-      "pred": "info_pharmacie"
+      "pred": "disponibilite_medicament"
+    },
+    {
+      "id": "seed_0019",
+      "text": "bghit na3ref chhal ghadi tkhalasni doliprane",
+      "gold": "prix_remboursement",
+      "pred": "disponibilite_medicament"
+    },
+    {
+      "id": "seed_0029",
+      "text": "كيفاش ناخد الدواء؟",
+      "gold": "posologie_information",
+      "pred": "prix_remboursement"
     },
     {
       "id": "seed_0030",
       "text": "est-ce que je peux prendre doliprane 1g a jeun ?",
       "gold": "posologie_information",
-      "pred": "autre"
-    },
-    {
-      "id": "seed_0032",
-      "text": "bghit njib juj boites dyal doliprane 1g",
-      "gold": "disponibilite_medicament",
-      "pred": "commande_reservation"
-    },
-    {
-      "id": "seed_0033",
-      "text": "je veux reserver trois boites de paracetamol",
-      "gold": "commande_reservation",
-      "pred": "disponibilite_medicament"
-    },
-    {
-      "id": "seed_0035",
-      "text": "il me faut 2 boites de doliprane 1g",
-      "gold": "disponibilite_medicament",
-      "pred": "commande_reservation"
+      "pred": "conseil_medical"
     },
     {
       "id": "seed_0040",
@@ -197,21 +205,15 @@
       "pred": "disponibilite_medicament"
     },
     {
-      "id": "seed_0044",
-      "text": "3andi sda3, ach ndir?",
-      "gold": "autre",
-      "pred": "disponibilite_medicament"
-    },
-    {
       "id": "seed_0045",
       "text": "quelle heure est-il ?",
-      "gold": "autre",
+      "gold": "hors_sujet",
       "pred": "info_pharmacie"
     },
     {
       "id": "seed_0046",
       "text": "راني مريض بزاف",
-      "gold": "autre",
+      "gold": "conseil_medical",
       "pred": "salutation"
     },
     {
@@ -224,25 +226,19 @@
       "id": "seed_0054",
       "text": "est ce que aspegik disponible?",
       "gold": "disponibilite_medicament",
-      "pred": "prix_remboursement"
+      "pred": "conseil_medical"
     },
     {
-      "id": "seed_0057",
-      "text": "wach spasfon lyoc mawjoud?",
+      "id": "seed_0056",
+      "text": "kayn clamoxyl 500 mg ola la?",
       "gold": "disponibilite_medicament",
-      "pred": "prix_remboursement"
+      "pred": "alternative_moins_chere"
     },
     {
       "id": "seed_0065",
       "text": "combien coute l'augmentine 1g?",
       "gold": "prix_remboursement",
-      "pred": "disponibilite_medicament"
-    },
-    {
-      "id": "seed_0066",
-      "text": "قداش تمن سميكتا؟",
-      "gold": "prix_remboursement",
-      "pred": "disponibilite_medicament"
+      "pred": "hors_sujet"
     },
     {
       "id": "seed_0067",
@@ -257,6 +253,18 @@
       "pred": "disponibilite_medicament"
     },
     {
+      "id": "seed_0078",
+      "text": "dois-je prendre voltarene avant ou apres manger ?",
+      "gold": "posologie_information",
+      "pred": "disponibilite_medicament"
+    },
+    {
+      "id": "seed_0079",
+      "text": "كم مرة ناخد سبازفون في اليوم؟",
+      "gold": "posologie_information",
+      "pred": "alternative_moins_chere"
+    },
+    {
       "id": "seed_0080",
       "text": "wach doliprane 1g khass ykoun m3a makla?",
       "gold": "posologie_information",
@@ -269,22 +277,22 @@
       "pred": "prix_remboursement"
     },
     {
-      "id": "seed_0083",
-      "text": "je voudrais commander cinq boites d'amoxicilline 500mg",
-      "gold": "commande_reservation",
-      "pred": "disponibilite_medicament"
+      "id": "seed_0086",
+      "text": "je passe commande pour une boite de voltarene",
+      "gold": "disponibilite_medicament",
+      "pred": "posologie_information"
     },
     {
       "id": "seed_0092",
       "text": "شكرا بزاف",
       "gold": "salutation",
-      "pred": "autre"
+      "pred": "conseil_medical"
     },
     {
       "id": "seed_0093",
       "text": "au revoir et merci",
       "gold": "salutation",
-      "pred": "autre"
+      "pred": "disponibilite_medicament"
     },
     {
       "id": "seed_0094",
@@ -295,32 +303,98 @@
     {
       "id": "seed_0095",
       "text": "quel temps fait-il aujourd'hui ?",
-      "gold": "autre",
-      "pred": "info_pharmacie"
+      "gold": "hors_sujet",
+      "pred": "conseil_medical"
     },
     {
       "id": "seed_0096",
       "text": "bghit na3ref ach kayn f akhbar",
-      "gold": "autre",
+      "gold": "hors_sujet",
       "pred": "disponibilite_medicament"
     },
     {
       "id": "seed_0097",
       "text": "est-ce que le coronavirus est dangereux ?",
-      "gold": "autre",
-      "pred": "posologie_information"
+      "gold": "conseil_medical",
+      "pred": "prix_remboursement"
     },
     {
       "id": "seed_0098",
       "text": "3tini chi wa9t bach nji l tabib",
-      "gold": "autre",
-      "pred": "disponibilite_medicament"
+      "gold": "conseil_medical",
+      "pred": "alternative_moins_chere"
     },
     {
       "id": "seed_0099",
       "text": "ما هو أفضل مطعم قريب مني؟",
-      "gold": "autre",
+      "gold": "hors_sujet",
+      "pred": "conseil_medical"
+    },
+    {
+      "id": "seed_0103",
+      "text": "bghit chi haja kif spasfon walakin rkhisa",
+      "gold": "alternative_moins_chere",
       "pred": "disponibilite_medicament"
+    },
+    {
+      "id": "seed_0104",
+      "text": "واش كاين دوا بحال دوليبران رخيص؟",
+      "gold": "alternative_moins_chere",
+      "pred": "disponibilite_medicament"
+    },
+    {
+      "id": "seed_0107",
+      "text": "voltarene ghali 3liya, kayn chi badil?",
+      "gold": "alternative_moins_chere",
+      "pred": "disponibilite_medicament"
+    },
+    {
+      "id": "seed_0108",
+      "text": "بغيت بديل رخيص ديال سبازفون",
+      "gold": "alternative_moins_chere",
+      "pred": "posologie_information"
+    },
+    {
+      "id": "seed_0111",
+      "text": "3andi skhana w kan7ess b l3ya, ach nakhod?",
+      "gold": "conseil_medical",
+      "pred": "posologie_information"
+    },
+    {
+      "id": "seed_0113",
+      "text": "كنحس بوجع فكرشي، شنو ندير؟",
+      "gold": "conseil_medical",
+      "pred": "hors_sujet"
+    },
+    {
+      "id": "seed_0115",
+      "text": "3ndi 7sasiya f jeldi, chno mzyan liha?",
+      "gold": "conseil_medical",
+      "pred": "hors_sujet"
+    },
+    {
+      "id": "seed_0117",
+      "text": "raconte-moi une blague",
+      "gold": "hors_sujet",
+      "pred": "disponibilite_medicament"
+    },
+    {
+      "id": "seed_0118",
+      "text": "شنو هي عاصمة اليابان؟",
+      "gold": "hors_sujet",
+      "pred": "conseil_medical"
+    },
+    {
+      "id": "seed_0119",
+      "text": "fin kayn chi cafe mzyan qrib?",
+      "gold": "hors_sujet",
+      "pred": "alternative_moins_chere"
+    },
+    {
+      "id": "seed_0120",
+      "text": "combien coute un billet de train pour aller a la plage ?",
+      "gold": "hors_sujet",
+      "pred": "prix_remboursement"
     }
   ]
 }

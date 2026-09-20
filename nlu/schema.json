@@ -1,45 +1,82 @@
 {
-  "version": "0.1",
+  "version": "0.2",
   "description": "Taxonomie Intent + Entity pour l'assistant pharmacie Arabic/Darija (Challenge #1)",
-
   "languages": [
-    { "code": "fr", "label": "Francais" },
-    { "code": "ar", "label": "Arabe standard" },
-    { "code": "ary_ar", "label": "Darija (graphie arabe)" },
-    { "code": "ary_lat", "label": "Darija (graphie latine / arabizi)" },
-    { "code": "mixte", "label": "Code-switching (melange de plusieurs langues dans une meme phrase)" }
+    {
+      "code": "fr",
+      "label": "Francais"
+    },
+    {
+      "code": "ar",
+      "label": "Arabe standard"
+    },
+    {
+      "code": "ary_ar",
+      "label": "Darija (graphie arabe)"
+    },
+    {
+      "code": "ary_lat",
+      "label": "Darija (graphie latine / arabizi)"
+    },
+    {
+      "code": "mixte",
+      "label": "Code-switching (melange de plusieurs langues dans une meme phrase)"
+    }
   ],
-
   "intents": [
     {
       "id": "disponibilite_medicament",
-      "label_fr": "Disponibilite d'un medicament",
-      "description": "Le patient demande si un medicament est en stock/disponible a la pharmacie, y compris sous la forme \"bghit <medicament>\" ou \"il me faut <quantite>\" sans verbe de reservation ou d'achat.",
-      "entites_attendues": ["MEDICAMENT", "DOSAGE", "FORME", "QUANTITE"]
+      "label_fr": "Demande de medicament",
+      "description": "Le patient cherche un medicament : il demande s'il est disponible, veut l'acheter, le reserver ou en commander une quantite (\"wach kayn\", \"bghit\", \"n7goz\", \"je veux commander\").",
+      "entites_attendues": [
+        "MEDICAMENT",
+        "DOSAGE",
+        "FORME",
+        "QUANTITE",
+        "LOCALISATION"
+      ]
     },
     {
       "id": "prix_remboursement",
       "label_fr": "Prix / remboursement",
       "description": "Le patient demande le prix d'un medicament et/ou s'il est rembourse et a quel taux.",
-      "entites_attendues": ["MEDICAMENT", "DOSAGE"]
+      "entites_attendues": [
+        "MEDICAMENT",
+        "DOSAGE"
+      ]
+    },
+    {
+      "id": "alternative_moins_chere",
+      "label_fr": "Equivalent moins cher",
+      "description": "Le patient cherche un equivalent, un generique ou une alternative moins chere a un medicament (\"bhal\", \"generique\", \"badil\", \"rkhis\", \"moins cher\").",
+      "entites_attendues": [
+        "MEDICAMENT",
+        "DOSAGE"
+      ]
     },
     {
       "id": "info_pharmacie",
       "label_fr": "Information pharmacie",
-      "description": "Le patient demande des informations sur la pharmacie elle-meme : adresse, telephone, horaires, pharmacie de garde.",
-      "entites_attendues": ["PHARMACIE", "LOCALISATION"]
+      "description": "Le patient demande des informations sur une pharmacie : adresse, telephone, horaires, pharmacie de garde.",
+      "entites_attendues": [
+        "PHARMACIE",
+        "LOCALISATION"
+      ]
     },
     {
       "id": "posologie_information",
       "label_fr": "Posologie / usage",
-      "description": "Le patient demande comment / quand prendre un medicament (hors avis medical, information generale uniquement).",
-      "entites_attendues": ["MEDICAMENT", "DOSAGE"]
+      "description": "Le patient demande comment ou quand prendre un medicament qu'il nomme.",
+      "entites_attendues": [
+        "MEDICAMENT",
+        "DOSAGE"
+      ]
     },
     {
-      "id": "commande_reservation",
-      "label_fr": "Commande / reservation",
-      "description": "Le patient veut reserver, commander ou acheter un medicament, avec un verbe explicite de reservation ou d'achat (n7goz, 7goz, reserver, commander, nchri, acheter). Sans ce verbe, \"bghit <medicament>\" est une demande de disponibilite, meme avec une quantite.",
-      "entites_attendues": ["MEDICAMENT", "DOSAGE", "FORME", "QUANTITE"]
+      "id": "conseil_medical",
+      "label_fr": "Question de sante",
+      "description": "Le patient decrit un symptome, dit qu'il est malade, demande quoi prendre pour un mal, ou pose une question medicale : il faut l'orienter vers un professionnel de sante.",
+      "entites_attendues": []
     },
     {
       "id": "salutation",
@@ -48,13 +85,12 @@
       "entites_attendues": []
     },
     {
-      "id": "autre",
-      "label_fr": "Hors perimetre / fallback",
-      "description": "Requete hors du perimetre pharmacie-medicament (ex: diagnostic medical, symptome) ou non comprise.",
+      "id": "hors_sujet",
+      "label_fr": "Hors sujet",
+      "description": "Requete sans rapport avec les medicaments, les pharmacies ou la sante (meteo, sport, actualites, restaurants...), meme si elle ressemble a une question de pharmacie (\"wach kayn match\", \"combien coute un billet\").",
       "entites_attendues": []
     }
   ],
-
   "entities": [
     {
       "id": "MEDICAMENT",
