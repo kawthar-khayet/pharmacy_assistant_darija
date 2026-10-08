@@ -4,18 +4,19 @@ import ChatMessage from '../components/ChatMessage'
 import SearchBar from '../components/SearchBar'
 import SuggestionCard from '../components/SuggestionCard'
 import { IndicateurFrappe } from '../components/LoadingState'
-import { Khatim } from '../components/Logo'
+import { Signe } from '../components/Logo'
 import { Disponible } from '../components/Header'
 import { ApiError, envoyerMessage } from '../lib/api'
 import { titrer } from '../lib/conversations'
+import { LANGUE_PAR_DEFAUT, t } from '../lib/langues'
 import { useConversations } from '../lib/conversationsContexte'
 
 const PISTES = [
-  { glyphe: '💊', texte: 'Wach kayn doliprane 1g?' },
-  { glyphe: '💰', texte: 'Chhal taman panadol?' },
-  { glyphe: '🔁', texte: 'Kayn chi dwa bhal doliprane rkhis?' },
-  { glyphe: '📍', texte: 'Fin kayna sidalia f Maarif?' },
-  { glyphe: '🕐', texte: 'شحال تمن دوليبران؟' },
+  { icone: 'monnaie', texte: 'Chhal taman doliprane 1g?' },
+  { icone: 'pilule', texte: 'Chno kaydir augmentin?' },
+  { icone: 'lieu', texte: 'Fin kayna sidalia f Maarif?' },
+  { icone: 'lune', texte: 'Pharmacie de garde f Casa?' },
+  { icone: 'monnaie', texte: 'شحال تمن دوليبران؟' },
 ]
 
 export default function Assistant() {
@@ -27,6 +28,9 @@ export default function Assistant() {
   const location = useLocation()
   const naviguer = useNavigate()
   const { tours, attendLieu } = courante
+  // langue de la derniere reponse du bot : l'invite "ta ville ?" doit parler
+  // la meme langue que la question qui l'a declenchee
+  const langueQuestion = [...tours].reverse().find((x) => x.meta)?.meta.langue ?? LANGUE_PAR_DEFAUT
 
   // colle le fil en bas a chaque nouveau tour
   useEffect(() => {
@@ -94,7 +98,7 @@ export default function Assistant() {
       <header className="chat-tete">
         <div className="chat-identite">
           <span className="avatar" aria-hidden="true">
-            <Khatim />
+            <Signe />
           </span>
           <div>
             <h2>DwaTalk</h2>
@@ -113,7 +117,7 @@ export default function Assistant() {
           {enCours && (
             <div className="tour">
               <span className="avatar" aria-hidden="true">
-                <Khatim />
+                <Signe />
               </span>
               <div className="bulle">
                 <IndicateurFrappe />
@@ -126,9 +130,9 @@ export default function Assistant() {
               {PISTES.map((p) => (
                 <SuggestionCard
                   key={p.texte}
-                  glyphe={p.glyphe}
+                  icone={p.icone}
                   texte={p.texte}
-                  onClick={(t) => envoyer(t)}
+                  onClick={(texte) => envoyer(texte)}
                   disabled={enCours}
                 />
               ))}
@@ -142,12 +146,12 @@ export default function Assistant() {
           <SearchBar
             valeur={saisie}
             onChange={setSaisie}
-            onValider={(t) => envoyer(t)}
+            onValider={(texte) => envoyer(texte)}
             enCours={enCours}
-            placeholder={attendLieu ? 'Ta ville ou ton quartier…' : 'Ktebli soualek…'}
+            placeholder={attendLieu ? t(langueQuestion, 'saisie_lieu') : 'Ktebli soualek…'}
             aide={
               attendLieu
-                ? 'DwaTalk attend ta ville ou ton quartier pour te proposer des pharmacies.'
+                ? t(langueQuestion, 'aide_lieu')
                 : "DwaTalk peut se tromper. Verifie aupres d'un pharmacien."
             }
           />

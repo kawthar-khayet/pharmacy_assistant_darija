@@ -1,0 +1,1773 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="zVg90A2CQa0fkKej7yrErA==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="zVg90A2CQa0fkKej7yrErA==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 31/08/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant SURGAM 100 mg, comprimé sécable"
+            aria-level="3"
+          >
+            SURGAM 100 mg, comprimé sécable
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament SURGAM 100 mg, comprimé sécable - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-bon-usage" class="fr-tabs__tab  fr-tabs__tab--icon-left" tabindex="-1" role="tab"
+                            aria-selected="false" aria-controls="tabpanel-bon-usage-panel">Bon usage
+                    </button>
+                  </li>
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                          <p id="tag-generique" class="fr-tag" aria-controls="fr-modal-tag-generique" data-fr-opened="false">
+              <span class="fr-icon-capsule-fill">
+              </span>&nbsp;générique
+          </p>
+              </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 21/03/1996
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : SURGAM 100 mg, comprimé sécable - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0434260">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after:avoid'><a name="_Toc142279003">Classe pharmacothérapeutique : ANTI-INFLAMMATOIRE, ANTIRHUMATISMAL, NON STEROIDIEN - Code ATC : M01AE11. </a></p>
+<p class=AmmCorpsTexte>SURGAM contient de l’acide tiaprofénique. </p>
+<p class=AmmCorpsTexte>Ce médicament appartient à une famille appelée les anti-inflammatoires non stéroïdiens. </p>
+<p class=AmmCorpsTexte>Ces médicaments sont utilisés notamment pour diminuer l’inflammation et calmer la douleur.</p>
+<p class=AmmCorpsTexte>SURGAM est destiné à l'adulte et l’enfant à partir de 15 kg (soit environ 4 ans).</p>
+<p class=AmmCorpsTexte>SURGAM est utilisé pour soulager les symptômes :</p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><u>En traitement long :</u></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>dans les rhumatismes inflammatoires chroniques (inflammations des articulations),</p>
+<p class=AmmListePuces2 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>dans certaines arthroses douloureuses et invalidantes (usure du cartilage entraînant des douleurs dans les articulations et gênant les mouvements).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><u>En traitement court dans les crises douloureuses :</u> </p>
+<p class=AmmListePuces2 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>qui touchent les articulations (en cas d’arthroses), le bas du dos (lombalgies), dans certains cas, après un traumatisme (douleurs et gonflements).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Lors de règles douloureuses.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En traitement de certaines douleurs provoquées par des inflammations et localisées au niveau de la gorge, des oreilles, de la bouche et/ou du nez.</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament appartient au(x) groupe(s) générique(s) suivants : <br/><ul role="list"><li role='listitem'><a href='/medicament/affiche/groupe-generique/66577967/227' aria-describedby='tooltip-medicament-generique-0'>ACIDE TIAPROFENIQUE 100 mg - SURGAM 100 mg, comprimé sécable</a><span id='tooltip-medicament-generique-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Ouvrir la page de détail sur ce groupe générique</span></li></ul></p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Comprimé ( Composition pour un comprimé )<ul role="list"><li role="listitem" style="list-style-type: none;"> > acide tiaprofénique<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">100 mg </span></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > plaquette(s) thermoformée(s) PVC PVDC aluminium de 30 comprimé(s)  </p><p>Code CIP : 317 792-8 ou 34009 317 792 8 5<br/>Déclaration de commercialisation : 19/12/1975<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 2,48 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 3,50 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :65%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></div></div>
+                
+                                  <br /><div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-bon-usage-medicament' >Documents de bon usage du médicament <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-document-bon-usage-medicament' href='#top'></a></h5><span id='tooltip-heading-document-bon-usage-medicament' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><ul><li><a class='lien_bon_usage' href='https://www.has-sante.fr/jcms/p_3372966' target='_blank'>Bon usage des inhibiteurs de la pompe à protons (IPP)</a><p>Auteur : Haute autorité de santé<br />Type : Fiche Bon Usage du Médicament<br />Date de mise à jour :Octobre  2022<br /></p></li></ul></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><div class='fr-grid-row'><div class='fr-col'><p>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence. </p></div></div><div class='fr-grid-row'><div class='fr-col'><p>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprès de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-smr-aide-2'>plus d'informations dans l'aide</a>). Les avis et synthèses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-smr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection à la page d'aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'SMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur du SMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2043744'>Avis du 17/06/2015</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 17/06/2015 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Renouvellement d'inscription (CT)</td><td class='text-align-center'>Le service médical rendu par SURGAM reste important dans l’ensemble des indications à l’exception des affections aiguës post-traumatiques bénignes de l’appareil locomoteur et des lombalgies.</td></tr><tr><td>Modéré</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2043744'>Avis du 17/06/2015</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 17/06/2015 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Renouvellement d'inscription (CT)</td><td class='text-align-center'>Le service médical rendu par SURGAM reste modéré dans les affections aiguës post-traumatiques bénignes de l’appareil locomoteur et des lombalgies.</td></tr></tbody></table></div></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div><div class='fr-col'><p>Pas d'ASMR disponible pour ce médicament (<a href='/aide#le-medicament-que-je-recherche-ne-mentionne-pas-de-service-medical-rendu-(SMR)-ni-amelioration-du-service-medical-rendu-(ASMR)' aria-describedby='tooltip-asmr-aide'>plus d'informations dans l\'aide</a>)</p><span id='tooltip-asmr-aide' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers aide</span></div></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : LABORATOIRES FIDIA</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste II</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure nationale</li><li>Code CIS : &nbsp;6 657 796 7</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : SURGAM 100 mg, comprimé sécable - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="SURGAM 100 mg, comprimé sécable, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 26/05/2025</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras>SURGAM 100 mg, comprimé sécable</p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Acide tiaprofénique .............................................................................................................100 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un comprimé sécable</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Comprimé sécable.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">Elles procèdent de l’activité anti-inflammatoire de l’acide tiaprofénique, de l’importance des manifestations d’intolérance auxquelles le médicament donne lieu et de sa place dans l’éventail des produits anti-inflammatoires actuellement disponibles. </a></p>
+<p class=AmmCorpsTexte>Elles sont limitées, chez l’adulte et l’enfant à partir de 15 kg (soit environ à partir de 4 ans), au : </p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><b>traitement symptomatique au long cours : </b></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>des rhumatismes inflammatoires chroniques, notamment polyarthrite rhumatoïde, </p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>de certaines arthroses douloureuses et invalidantes ; </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><b>traitement symptomatique de courte durée : </b></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>des poussées aiguës d’arthrose, de lombalgies, </p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>des affections aiguës post-traumatiques bénignes de l’appareil locomoteur ; </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><b>dysménorrhée après recherche étiologique ; </b></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><b>traitement symptomatique de la douleur au cours des manifestations inflammatoires dans les domaines ORL et stomatologiques.</b> Dans cette indication, les risques encourus, en particulier l’extension d’un processus septique concomitant sont ceux des AINS. Ils doivent être évalués par rapport au bénéfice antalgique attendu.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278918">Posologie</a></p>
+<p class=AmmCorpsTexte>La survenue d’effets indésirables peut être minimisée par l’utilisation de la dose la plus faible possible pendant la durée de traitement la plus courte nécessaire au soulagement des symptômes (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexte><i><u>Adulte</u></i> :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>traitement d’attaque : 2 comprimés à 100 mg, 3 fois par jour, soit 600 mg maximum par jour ; </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>traitement d’entretien : à partir du 4ème jour, il est possible de réduire la posologie à 3 ou 4 comprimés à 100 mg, soit 300 ou 400 mg par jour. </p>
+<p class=AmmAnnexeTitre4 style='margin-top:6.0pt'>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Enfants à partir de 15 kg : la posologie est de 10 mg/kg/jour. </p>
+<p class=AmmCorpsTexte><i>A titre indicatif : </i></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>de 15 à 20 kg</i> (environ 4 à 6 ans) : ½ comprimé à 100 mg 3 fois par jour à 1 comprimé à 100 mg, 2 fois par jour, soit 150 à 200 mg par jour ; </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>de 20 à 30 kg (environ 6 à 10 ans) : 1 comprimé à 100 mg, 2 à 3 fois par jour, soit 200 à 300 mg par jour ; </p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>à partir de 30 kg</i> (environ 10 ans) : 1 comprimé à 100 mg, 3 fois par jour, soit 300 mg par jour. </p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Les âges approximatifs en fonction du poids sont donnés à titre indicatif.</p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte>Voie orale. </p>
+<p class=AmmCorpsTexte>Les comprimés sont à avaler tels quels avec un grand verre d’eau ou dissous dans un grand verre d’eau.</p>
+<p class=AmmCorpsTexteGras><u>Fréquence d’administration : </u></p>
+<p class=AmmCorpsTexte>Les comprimés doivent être pris de préférence au cours des repas. </p>
+<p class=AmmCorpsTexte>La posologie est à répartir en 2 à 3 prises par jour.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278919">Ce médicament est contre indiqué dans les situations suivantes : </a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypersensibilité à la substance active ou à l’un des excipients mentionnés à la rubrique 6.1.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>antécédent d’allergie ou d’asthme déclenchés ou non par la prise d’acide tiaprofénique ou de substances d’activité proche, telles que autres AINS, acide acétylsalicylique,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>antécédents d’hémorragie ou de perforation digestive au cours d’un précédent traitement par AINS,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>hémorragie en cours, ulcère peptique évolutif, antécédents d’ulcère peptique ou d’hémorragie récurrente (2 épisodes distincts, ou plus, d’hémorragie ou d’ulcération objectivés),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>insuffisance hépatocellulaire sévère,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>insuffisance rénale sévère,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Insuffisance cardiaque sévère,</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Enfant de moins de 15 kg, soit environ de moins de 4 ans (en raison du caractère inadapté du dosage unitaire).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Grossesse, à partir du début du 6ème mois (24 semaines d’aménorrhée) (voir rubrique 4.6),</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;border:none; padding:0cm'><b>Risque de mort fœtale</b></p>
+<p class=AmmCorpsTexte align=left style='text-align:left;border:none; padding:0cm'>SURGAM 100 mg, comprimé sécable expose à un risque de mort fœtale même après une seule prise en raison de sa toxicité cardio-pulmonaire (constriction du canal artériel et de la survenue d’un oligoamnios voir rubrique 4.3).</p>
+<p class=AmmCorpsTexte align=left style='text-align:left;border:none; padding:0cm'><b>Effets chez l’enfant à naitre</b></p>
+<p class=AmmCorpsTexte align=left style='text-align:left;border:none; padding:0cm'>SURGAM 100 mg, comprimé sécable expose également le nouveau-né à un risque d’atteinte rénale (insuffisance rénale), de fermeture prématurée du canal artériel et d’hypertension pulmonaire. Voir rubrique 4.6).</p>
+<p class=AmmCorpsTexte align=left style='text-align:left;border:none; padding:0cm'>SURGAM 100 mg, comprimé sécable est contre-indiqué chez la femme enceinte à partir du début du 6ème mois de grossesse (24 semaines d'aménorrhée).</p>
+<p class=AmmCorpsTexte style='border:none;padding:0cm'>En cas de grossesse planifiée ou au cours des 5 premiers mois (avant 24 semaines d'aménorrhée), SURGAM 100 mg, comprimé sécable ne doit être prescrit qu’en cas de nécessité absolue.</p>
+</div>
+<p class=AmmCorpsTexteGras>Mises en garde spéciales</p>
+<p class=AmmCorpsTexte>L’utilisation concomitante de SURGAM 100 mg, comprimé sécable avec d’autres AINS, y compris les inhibiteurs sélectifs de la cyclo-oxygénase 2 (cox-2), doit être évitée.</p>
+<p class=AmmCorpsTexte>La survenue d’effets indésirables peut être minimisée par l’utilisation de la dose la plus faible possible pendant la durée de traitement la plus courte nécessaire au soulagement des symptômes (voir rubrique 4.2 et paragraphes « Effets gastro-intestinaux » et « Effets cardiovasculaires et cérébro-vasculaires » ci-dessous).</p>
+<p class=AmmCorpsTexte><u>Effets allergiques :</u></p>
+<p class=AmmCorpsTexte>Les patients présentant un asthme associé à une rhinite chronique, à une sinusite chronique et/ou à une polypose nasale, ont un risque de manifestation allergique lors de la prise d’acide acétylsalicylique et/ou d’anti-inflammatoires non stéroïdiens plus élevé que le reste de la population. </p>
+<p class=AmmCorpsTexte>L’administration d’acide tiaprofénique peut entraîner une crise d’asthme notamment chez certains sujets allergiques à l’acide acétylsalicylique ou à un AINS (voir rubrique 4.3). </p>
+<p class=AmmCorpsTexte><u>Sujets âgés : </u></p>
+<p class=AmmCorpsTexte>Les sujets âgés présentent un risque accru d’effets indésirables aux AINS, en particulier d’hémorragie gastro-intestinale et de perforations pouvant être fatales (voir rubrique 4.2 et ci-dessous).</p>
+<p class=AmmCorpsTexte><u>Effets gastro-intestinaux :</u></p>
+<p class=AmmCorpsTexte>Des hémorragies, ulcérations ou perforations gastro-intestinales parfois fatales, ont été rapportées avec tous les AINS, à n’importe quel moment du traitement, sans qu’il y ait eu nécessairement de signes d’alerte ou d’antécédents d’effets indésirables gastro-intestinaux graves.</p>
+<p class=AmmCorpsTexte>Le risque d’hémorragie, d’ulcération ou de perforation gastro-intestinale augmente avec la dose utilisée chez les patients présentant des antécédents d’ulcère, en particulier en cas de complication à type d’hémorragie ou de perforation (voir rubrique 4.3) ainsi que chez le sujet âgé. Chez ces patients, le traitement doit être débuté à la posologie la plus faible possible. Un traitement protecteur de la muqueuse (par exemple misoprostol ou inhibiteur de la pompe à protons) doit être envisagé pour ces patients, comme pour les patients nécessitant un traitement par de faible dose d’acide acétylsalicylique ou traités par d’autres médicaments susceptibles d’augmenter le risque gastro-intestinal (voir ci-dessous et rubrique 4.5).</p>
+<p class=AmmCorpsTexte>Les patients présentant des antécédents gastro-intestinaux, surtout s’il s’agit de patients âgés, doivent signaler tout symptôme abdominal inhabituel (en particulier les saignements gastro-intestinaux), notamment en début de traitement.</p>
+<p class=AmmCorpsTexte>Une attention particulière doit être portée aux patients recevant des traitements associés susceptibles d’augmenter le risque d’ulcération ou d’hémorragie, comme les corticoïdes administrés par voie orale, les anticoagulants oraux tels que la warfarine, les inhibiteurs sélectifs de la recapture de la sérotonine (ISRS), les antiagrégants plaquettaires comme l’acide acétylsalicylique et le nicorandil (voir rubrique 4.5).</p>
+<p class=AmmCorpsTexte>En cas d’apparition d’hémorragie ou d’ulcération survenant chez un patient recevant SURGAM 100 mg, comprimé sécable, le traitement doit être arrêté.</p>
+<p class=AmmCorpsTexte>Les AINS doivent être administrés avec prudence et sous étroite surveillance chez les malades présentant des antécédents de maladies gastro-intestinales (recto-colite hémorragique, maladie de Crohn), en raison d’un risque d’aggravation de la pathologie (voir rubrique 4.8).</p>
+<p class=AmmCorpsTexte><u>Effets cardiovasculaires et cérébrovasculaires :</u></p>
+<p class=AmmCorpsTexte>Une surveillance adéquate et des recommandations sont requises chez les patients présentant des antécédents d’hypertension et/ou d’insuffisance cardiaque légère à modérée, des cas de rétention hydrosodée et d’œdème ayant été rapportés en association au traitement par AINS.</p>
+<p class=AmmCorpsTexte>Des études cliniques et des données épidémiologiques suggèrent que l’utilisation de certains AINS (surtout lorsqu’ils sont utilisés à doses élevées et sur une longue durée) peut être associée à une légère augmentation du risque d’évènements thrombotiques artériels (par exemple, infarctus du myocarde ou accident vasculaire cérébral). Les données sont actuellement insuffisantes pour écarter cette augmentation du risque pour l’acide tiaprofénique.</p>
+<p class=AmmCorpsTexte>Les patients présentant une hypertension non contrôlée, une insuffisance cardiaque congestive, une cardiopathie ischémique, une maladie artérielle périphérique, et/ou ayant un antécédent d’accident vasculaire cérébral (y compris l’accident ischémique transitoire) ne devront être traités par l’acide tiaprofénique qu’après une évaluation attentive du rapport bénéfice-risque. </p>
+<p class=AmmCorpsTexte>Une attention similaire doit être portée avant toute initiation d’un traitement à long terme chez les patients présentant des facteurs de risques pour les pathologies cardiovasculaires (comme une hypertension, une hyperlipidémie, un diabète ou une consommation tabagique).</p>
+<p class=AmmCorpsTexte>Une augmentation du risque d’évènements thromboemboliques artériels ont été rapportés chez des patients traités par des AINS (hors aspirine) pour des douleurs préopératoires dans le cadre de pontage aorto-coronarien.</p>
+<p class=AmmCorpsTexte><u>Effets cutanés :</u></p>
+<p class=AmmCorpsTexte>Des réactions cutanées graves dont certaines d’évolution fatale, incluant des dermatites exfoliatives, des syndromes de Stevens-Johnson et des syndromes de Lyell ont été très rarement rapportées lors de traitements par les AINS (voir rubrique 4.8).</p>
+<p class=AmmCorpsTexte>L’incidence de ces effets indésirables semble plus importante en début de traitement, le délai d’apparition se situant, dans la majorité des cas, pendant le premier mois de traitement. SURGAM 100 mg, comprimé sécable devra être arrêté dès l’apparition d’un rash cutané, de lésions des muqueuses ou de tout autre signe d’hypersensibilité.</p>
+<p class=AmmCorpsTexte><u>Insuffisance rénale fonctionnelle : </u></p>
+<p class=AmmCorpsTexte>Les AINS, en inhibant l’action vasodilatatrice des prostaglandines rénales, sont susceptibles de provoquer une insuffisance rénale fonctionnelle par diminution de la filtration glomérulaire. Cet effet indésirable est dose dépendant. </p>
+<p class=AmmCorpsTexte>En début de traitement ou après une augmentation de la posologie, une surveillance de la diurèse et de la fonction rénale est recommandée chez les patients présentant les facteurs de risque suivants :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>sujets âgés, </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>médicaments associés tels que : IEC, sartans, diurétiques (voir rubrique 4.5), </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>hypovolémie quelle qu’en soit la cause,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>insuffisance cardiaque, </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>insuffisance rénale chronique,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>syndrome néphrotique, </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>néphropathie lupique, </p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>cirrhose hépatique décompensée.</p>
+<p class=AmmCorpsTexte><u>Rétention hydro-sodée : </u></p>
+<p class=AmmCorpsTexte>Rétention hydro-sodée avec possibilité d’œdèmes, d’HTA ou de majoration d’HTA, d’aggravation d’insuffisance cardiaque. Une surveillance clinique est nécessaire, dès le début du traitement en cas d’HTA ou d’insuffisance cardiaque. Une diminution de l’effet des antihypertenseurs est possible (voir rubrique 4.5). </p>
+<p class=AmmCorpsTexte><u>Hyperkaliémie : </u></p>
+<p class=AmmCorpsTexte>Hyperkaliémie favorisée par le diabète ou un traitement concomitant par des médicaments hyperkaliémiants (voir rubrique 4.5). </p>
+<p class=AmmCorpsTexte>Une surveillance régulière de la kaliémie doit être effectuée dans ces circonstances. </p>
+<p class=AmmCorpsTexte><u>Effets urinaires et cystites :</u></p>
+<p class=AmmCorpsTexte>En cas de survenue de symptômes urinaires ou cystites, le traitement par acide tiaprofénique doit être immédiatement arrêté.</p>
+<p class=AmmCorpsTexteGras>Précautions d’emploi :</p>
+<p class=AmmCorpsTexte>L’acide tiaprofénique, comme tout médicament inhibiteur de la synthèse des cyclo-oxygénases et des prostaglandines, peut altérer la fertilité. Son utilisation n’est pas recommandée chez les femmes qui souhaitent concevoir un enfant. Chez les femmes qui présentent des difficultés à procréer ou pour lesquelles des examens sur la fertilité sont en cours, l’arrêt du traitement par AINS doit être envisagé.</p>
+<p class=AmmCorpsTexte>Une augmentation du risque de fibrillation auriculaire a été rapportée en cas d’association avec des traitements par des AINS.</p>
+<p class=AmmCorpsTexte>La varicelle peut exceptionnellement être à l’origine de graves complications infectieuses cutanées et des tissus mous. A ce jour, le rôle favorisant des AINS dans l’aggravation de ces infections ne peut être écarté. Il est donc prudent d’éviter l’utilisation d’acide tiaprofénique en cas de varicelle (voir rubrique 4.8). </p>
+<p class=AmmCorpsTexte>L’acide tiaprofénique doit être utilisé avec précaution dans les affections de nature infectieuse ou comportant un risque infectieux, même bien contrôlé ; en effet : </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>il pourrait être susceptible de réduire les défenses naturelles de l’organisme contre l’infection, </p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>il pourrait être susceptible de masquer les signes et les symptômes habituels de l’infection. </p>
+<p class=AmmCorpsTexte>Des éruptions localisées de type bulleuse et d’évolution régressive sont possibles (voir rubrique 4.8). Leur survenue doit imposer l’arrêt immédiat du traitement.</p>
+<p class=AmmCorpsTexte>L’acide tiaprofénique existe sous forme d’autres dosages qui peuvent être plus adaptés.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278921"><u>Risques liés à l'hyperkaliémie : </u></a></p>
+<p class=AmmCorpsTexte>Certains médicaments ou classes thérapeutiques sont susceptibles de favoriser la survenue d'une hyperkaliémie : les sels de potassium, les diurétiques hyperkaliémiants, les inhibiteurs de l'enzyme de conversion, les antagonistes de l'angiotensine II, les anti-inflammatoires non stéroïdiens, les héparines (de bas poids moléculaire ou non fractionnées), les immunosuppresseurs comme la ciclosporine ou le tacrolimus, le triméthoprime. L’association de ces médicaments majore le risque d’hyperkaliémie. Ce risque est particulièrement important avec les diurétiques épargneurs de potassium, notamment lorsqu’ils sont associés entre eux ou avec des sels de potassium, tandis que l’association d’un IEC et d’un AINS, par exemple, est à moindre risque dès l’instant que sont mises en œuvre les précautions recommandées.</p>
+<p class=AmmCorpsTexte>Pour connaître les risques et les niveaux de contraintes spécifiques aux médicaments hyperkaliémiants, il convient de se reporter aux interactions propres à chaque substance.</p>
+<p class=AmmCorpsTexte>Toutefois certaines substances, comme le triméthoprime, ne font pas l’objet d’interactions spécifiques au regard de ce risque. Néanmoins, ils peuvent agir comme facteurs favorisant lorsqu’ils sont associés à d’autres médicaments comme ceux sus mentionnés.</p>
+<p class=AmmCorpsTexte>L’administration simultanée d’acide tiaprofénique avec les produits suivants nécessite une surveillance rigoureuse de l’état clinique et biologique du malade.</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278922">Associations déconseillées</a></p>
+<p class=AmmCorpsTexteGras>+ Autres AINS </p>
+<p class=AmmCorpsTexte>Majoration du risque ulcérogène et hémorragique digestif.</p>
+<p class=AmmCorpsTexteGras><span class=AmmCorpsTexteGrasCar>+ Acide acétylsalicylique </span>à des doses anti-inflammatoires (&#8805; 1 g par prise et/ou &#8805; 3 g par jour), et à des doses antalgiques ou antipyrétiques (&#8805; 500 mg par prise et/ou < 3 g par jour) </p>
+<p class=AmmCorpsTexte>Majoration du risque ulcérogène et hémorragique digestif.</p>
+<p class=AmmCorpsTexteGras>+ Anticoagulants : antivitamine K (comme la warfarine), inhibiteurs de la thrombine (comme le dabigatran), inhibiteurs direct du facteur Xa (comme l’apixaban, le rivaroxaban, l’edoxaban)</p>
+<p class=AmmCorpsTexte>Augmentation du risque hémorragique </p>
+<p class=AmmCorpsTexte>Si l’association de ne peut être évitée, surveillance clinique étroite, voire biologique.</p>
+<p class=AmmCorpsTexteGras>+ Héparines non fractionnées, héparines de bas poids moléculaire et apparentés (à doses curatives et/ou chez le sujet âgé) </p>
+<p class=AmmCorpsTexte>Augmentation du risque hémorragique (agression de la muqueuse gastro-duodénale par les AINS). Si l'association ne peut être évitée, surveillance clinique étroite. </p>
+<p class=AmmCorpsTexteGras>+ Lithium </p>
+<p class=AmmCorpsTexte>Augmentation de la lithémie pouvant atteindre des valeurs toxiques (diminution de l'excrétion rénale du lithium). </p>
+<p class=AmmCorpsTexte>Si l’association ne peut être évitée, surveiller étroitement la lithémie et adapter la posologie du lithium pendant l'association et après l'arrêt de l'AINS.</p>
+<p class=AmmCorpsTexteGras>+ Méthotrexate (utilisé à des doses supérieures à 20 mg/semaine)</p>
+<p class=AmmCorpsTexte>Augmentation de la toxicité hématologique du méthotrexate (diminution de la clairance rénale du méthotrexate par les anti-inflammatoires).</p>
+<p class=AmmCorpsTexteGras>+ Pemetrexed (patients ayant une fonction rénale faible à modérée, clairance de la créatinine comprise entre 45 ml/min et 80 ml/min) </p>
+<p class=AmmCorpsTexte>Risque de majoration de la toxicité du pemetrexed (diminution de la clairance rénale par les AINS).</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278923">Associations </a>faisant l'objet de précautions d’emploi</p>
+<p class=AmmCorpsTexteGras>+ Antagonistes des récepteurs de l'angiotensine II</p>
+<p class=AmmCorpsTexte>Insuffisance rénale aiguë chez le malade à risque (sujet âgé et/ou déshydraté, traitement associé avec diurétiques, altération de la fonction rénale) par diminution de la filtration glomérulaire (inhibition des prostaglandines vasodilatatrices due aux AINS). Ces effets sont généralement réversibles. Par ailleurs, réduction de l’effet antihypertenseur.</p>
+<p class=AmmCorpsTexte>Hydrater le malade et surveiller la fonction rénale en début de traitement et régulièrement pendant l’association.</p>
+<p class=AmmCorpsTexteGras>+ Diurétiques</p>
+<p class=AmmCorpsTexte>Insuffisance rénale aiguë chez le malade à risque (sujet âgé et/ou déshydraté) par diminution de la filtration glomérulaire (inhibition des prostaglandines vasodilatatrices due aux AINS). </p>
+<p class=AmmCorpsTexte>Par ailleurs, réduction de l’effet antihypertenseur. </p>
+<p class=AmmCorpsTexte>Hydrater le malade et surveiller la fonction rénale en début de traitement. </p>
+<p class=AmmCorpsTexteGras>+ Inhibiteurs de l'enzyme de conversion (IEC)</p>
+<p class=AmmCorpsTexte>Insuffisance rénale aiguë chez le malade à risque (sujet âgé et/ou déshydraté sous diurétiques, avec une fonction rénale altérée) par diminution de la filtration glomérulaire (inhibition des prostaglandines vasodilatatrices due aux AINS). Ces effets sont généralement réversibles. Par ailleurs, réduction de l’effet antihypertenseur. </p>
+<p class=AmmCorpsTexte>Hydrater le malade et surveiller la fonction rénale en début de traitement et régulièrement pendant l’association.</p>
+<p class=AmmCorpsTexteGras>+ Méthotrexate utilisé à faibles doses (inférieures ou égales à 20 mg/semaine) </p>
+<p class=AmmCorpsTexte>Augmentation de la toxicité hématologique du méthotrexate (diminution de la clairance rénale du méthotrexate par les anti-inflammatoires). </p>
+<p class=AmmCorpsTexte>Contrôle hebdomadaire de l'hémogramme durant les premières semaines de l'association. Surveillance accrue en cas d'altération (même légère) de la fonction rénale, ainsi que chez le sujet âgé. </p>
+<p class=AmmCorpsTexteGras>+ Nicorandil</p>
+<p class=AmmCorpsTexte>Chez les patients recevant concomitamment du nicorandil et des AINS, que ce soit en prévention cardiovasculaire ou à des doses anti-inflammatoires, le risque de complications sévères telles que des ulcérations gastro-intestinales, des perforations et des hémorragies est majoré (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexteGras>+ Pemetrexed (chez les patients ayant une fonction rénale normale)</p>
+<p class=AmmCorpsTexte>Risque de majoration de la toxicité du pemetrexed (diminution de sa clairance rénale par les AINS). Surveillance biologique de la fonction rénale.</p>
+<p class=AmmCorpsTexteGras>+ Ciclosporine, Tacrolimus</p>
+<p class=AmmCorpsTexte>Risque d’addition des effets néphrotoxiques, notamment chez le sujet âgé. </p>
+<p class=AmmCorpsTexte>Surveiller la fonction rénale en début de traitement par l’AINS.</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278924">Associations à prendre en compte</a></p>
+<p class=AmmCorpsTexteGras>+ Acide acétylsalicylique aux doses anti agrégantes (de 50 mg à 375 mg par jour en 1 ou plusieurs prises) </p>
+<p class=AmmCorpsTexte>Majoration du risque ulcérogène et hémorragique digestif.</p>
+<p class=AmmCorpsTexteGras>+ Glucocorticoïdes (sauf hydrocortisone en traitement substitutif)</p>
+<p class=AmmCorpsTexte>Augmentation du risque d’ulcération et d’hémorragie gastro-intestinale (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexteGras>+ Anti agrégants plaquettaires </p>
+<p class=AmmCorpsTexte>Augmentation du risque d’hémorragie gastro-intestinale (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexteGras>+ Inhibiteurs de la recapture de la sérotonine (ISRS)</p>
+<p class=AmmCorpsTexte>Augmentation du risque d’hémorragie gastro-intestinale (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexteGras>+ Héparines non fractionnées, héparines de bas poids moléculaires (doses préventives) </p>
+<p class=AmmCorpsTexte>Augmentation du risque hémorragique.</p>
+<p class=AmmCorpsTexteGras>+ Bêta-bloquants (sauf esmolol) </p>
+<p class=AmmCorpsTexte>Réduction de l’effet antihypertenseur (inhibition des prostaglandines vasodilatatrices par les AINS et rétention hydrosodée avec la phénylbutazone).</p>
+<p class=AmmCorpsTexteGras>+ Déférasirox</p>
+<p class=AmmCorpsTexte>Majoration du risque ulcérogène et hémorragique digestif.</p>
+<p class=AmmCorpsTexteGras>+ Autres hyperkaliémiants</p>
+<p class=AmmCorpsTexte>Risque de majoration de l’hyperkaliémie, potentiellement létale.</p>
+<p class=AmmCorpsTexteGras>+ Pentoxifylline</p>
+<p class=AmmCorpsTexte>Augmentation du risque de saignement</p>
+<p class=AmmCorpsTexteGras>Précautions d’emploi</p>
+<p class=AmmCorpsTexteGras>+ Ténofovir disoproxil</p>
+<p class=AmmCorpsTexte>Risque de majoration de la néphrotoxicité du ténofovir.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278928">Grossesse</a></p>
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+<p class=AmmCorpsTexte style='border:none;padding:0cm'><b>A partir du début du 6<sup>ème</sup> mois de grossesse (24 semaines d'aménorrhée) :</b> toute prise de SURGAM 100 mg, comprimé sécable, même ponctuelle, est <b>contre-indiquée</b>. Une prise même unique à partir de 24 semaines d’aménorrhée justifie un contrôle échographique cardiaque et rénal du fœtus et/ou du nouveau-né. </p>
+<p class=AmmCorpsTexte style='border:none;padding:0cm'><b>Sauf nécessité absolue</b>, <b>SURGAM 100 mg, comprimé sécable ne doit pas être</b> <b>prescrit</b> chez une femme qui envisage une grossesse ou au cours des 5 premiers mois de grossesse (avant 24 semaines d’aménorrhée). Le cas échéant, la dose devra être la plus faible possible et la durée du traitement la plus courte possible. Une prise prolongée est fortement déconseillée.</p>
+<p class=AmmCorpsTexte style='border:none;padding:0cm'>En cas de prise à partir de la 20<sup>ème</sup> semaine d’aménorrhée, une surveillance cardiaque et rénale du fœtus pourrait s’avérer nécessaire. </p>
+<p class=AmmCorpsTexte style='border:none;padding:0cm'><b>En cas de survenue d'oligoamnios, ou de constriction du canal artériel, le traitement par SURGAM 100 mg, comprimé sécable doit être interrompu.</b></p>
+</div>
+<p class=AmmCorpsTexte>L’inhibition de la synthèse des prostaglandines par les AINS peut affecter le déroulement de la grossesse et/ou le développement de l’embryon ou du fœtus.</p>
+<p class=AmmCorpsTexte><u>Risques associés à l’utilisation au cours du 1er trimestre</u></p>
+<p class=AmmCorpsTexte>Des études épidémiologiques suggèrent qu’un traitement par un inhibiteur de la synthèse des prostaglandines au cours du 1er trimestre de grossesse est associé à une augmentation du risque de fausse-couche.</p>
+<p class=AmmCorpsTexte>Pour certains AINS, un risque augmenté de malformations cardiaques et de la paroi abdominale (gastroschisis) est également<span style='color:red'> </span>décrit. Le risque absolu de malformation cardiovasculaire fœtale est passé de moins de 1% à approximativement 1,5% en cas d’exposition au 1<sup>er</sup> trimestre. Le risque paraît augmenter en fonction de la dose et de la durée du traitement. </p>
+<p class=AmmCorpsTexte>Chez l’animal, l’administration d’un inhibiteur de la synthèse des prostaglandines au cours de la phase d’organogénèse provoque une perte pré et post-implantatoire accrue, une augmentation de la létalité embryo-fœtale et une incidence supérieure de certaines malformations, y compris cardiovasculaires. </p>
+<p class=AmmCorpsTexte><u>Risques associés à l’utilisation au cours du 2ème et 3ème trimestre</u></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:35.45pt;text-align:justify'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><u>A partir de la 12ème semaine d’aménorrhée </u></p>
+<p class=AmmCorpsTexte>La prise maternelle d’un AINS expose le fœtus à un risque d’atteinte fonctionnelle rénale :</p>
+<p class=AmmListePuces2 style='margin-left:42.55pt;text-align:justify; text-indent:-14.2pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span><i>In utero</i> (mise en route de la diurèse fœtale): un oligoamnios peut survenir peu de temps après le début du traitement. Celui-ci est généralement réversible à l'arrêt du traitement. Il peut se compliquer d’un anamnios en particulier lors d'une exposition prolongée à un AINS. </p>
+<p class=AmmListePuces2 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:42.55pt;margin-bottom:.0001pt;text-align:justify;text-indent: -14.2pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span><i>A la naissance : une insuffisance rénale (réversible ou non) peut être observée voire persister surtout en cas d'exposition tardive et prolongée avec un risque d'hyperkaliémie sévère retardée. </i></p>
+<p class=AmmListePuces1 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:35.45pt;text-align:justify'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><u>A partir de la 20ème semaine d’aménorrhée : </u></p>
+<p class=AmmCorpsTexte>En plus de l’atteinte fonctionnelle rénale (cf. supra), la prise maternelle d’un AINS expose le fœtus à un risque <span style='color:red'></span>de <b>constriction du canal artériel</b> (le plus souvent réversible à l’arrêt du traitement). </p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:35.45pt;text-align:justify'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><u>A partir de la 24ème semaine d’aménorrhée : </u></p>
+<p class=AmmCorpsTexte>Le risque de<b> toxicité cardio-pulmonaire</b> (fermeture prématurée du canal artériel et hypertension artérielle pulmonaire) devient plus important et peut conduire à une insuffisance cardiaque droite fœtale ou néonatale voire à une mort fœtale <i>in utero</i>. Ce risque est d'autant plus important et moins réversible que la prise est proche du terme. Cet effet existe même pour une prise ponctuelle </p>
+<p class=AmmCorpsTexte><u>En fin de grossesse (proche du terme), la prise d’AINS expose également la mère et le nouveau-né à :</u></p>
+<p class=AmmCorpsTexte style='margin-left:14.2pt;text-indent:-14.2pt'>-<span style='font:7.0pt "Times New Roman"'>     </span>un allongement du temps de saignement du fait d’une action anti-agrégante pouvant survenir même après administration de très faibles doses de médicament ;</p>
+<p class=AmmCorpsTexte style='margin-left:14.2pt;text-indent:-14.2pt'>-<span style='font:7.0pt "Times New Roman"'>     </span>une inhibition des contractions utérines entraînant un retard de terme ou un accouchement prolongé.</p>
+<p class=AmmAnnexeTitre3>Allaitement</p>
+<p class=AmmCorpsTexte>Les A.I.N.S. passant dans le lait maternel, ce médicament est déconseillé chez la femme qui allaite.</p>
+<p class=AmmAnnexeTitre3>Fertilité</p>
+<p class=AmmCorpsTexte>Comme tous les AINS, l'utilisation de ce médicament peut temporairement altérer la fertilité féminine en agissant sur l’ovulation ; il est donc déconseillé chez les femmes souhaitant concevoir un enfant. Chez les femmes rencontrant des difficultés pour concevoir ou réalisant des tests de fertilité, l'arrêt du traitement doit être envisagé.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929"><span lang=FR-BE>Prévenir les patients de l’apparition possible de vertiges.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmCorpsTexte>Des études cliniques et des données épidémiologiques suggèrent que l’utilisation de certains AINS (surtout lorsqu’ils sont utilisés à doses élevées et sur une longue durée) peut être associée à une légère augmentation du risque d’évènement thrombotique artériel (par exemple, infarctus du myocarde ou accident vasculaire cérébral) (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexteGras>Affections gastro-intestinales :</p>
+<p class=AmmCorpsTexte>Les effets indésirables les plus fréquemment observés sont de nature gastro-intestinale.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>Très fréquent :</i></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>douleur abdominale</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>Fréquent :</i></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>nausées, vomissements, dyspepsie, diarrhées, constipation, gastrites.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>Fréquence indéterminée :</i></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>flatulences, stomatite ulcérative, melaena, hématémèse, exacerbation d’une recto-colite ou d’une maladie de Crohn (voir rubrique 4.4).</p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>Ces troubles digestifs ont été rapportés à la suite de l’administration d’AINS.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Des ulcères peptiques, perforations ou hémorragies gastro-intestinales, parfois fatales, peuvent survenir, en particulier chez le sujet âgé (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexteGras>Affections cardiovasculaires : </p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Œdème, hypertension et insuffisance cardiaque ont été rapportés en association au traitement par AINS.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>Rarement ont été rapportés : </i></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>élévation de la pression artérielle, tachycardie, douleur thoracique, arythmie, palpitations, hypotension, insuffisance cardiaque congestive.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt;page-break-after:avoid'>Affections du système immunitaire : </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>Fréquent : </i></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>la survenue de crise d’asthme peut être liée chez certains sujets à une allergie à l’aspirine ou à un AINS (voir rubrique 4.3).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>Fréquence indéterminée : </i></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>malaise général avec hypotension, œdème de Quincke, choc anaphylactique.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt;page-break-after:avoid'>Affection de la peau et du tissu sous-cutané : </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>Fréquent : </i></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>rash, urticaire, aggravation d’urticaire chronique, prurit.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>Rare : </i></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>érythème polymorphe.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>Très rare : </i></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>réactions bulleuses (comprenant le syndrome de Stevens Johnson et le syndrome de Lyell) </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>Fréquence indéterminée : </i></p>
+<p class=AmmListePuces2 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>purpura, cas de photosensibilisation, œdème de Quincke.</p>
+<p class=AmmCorpsTexteGras>Affections du système nerveux : </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Sensations vertigineuses.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt;page-break-after:avoid'>Affections de l’oreille et du labyrinthe :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>Fréquence indéterminée : </i></p>
+<p class=AmmListePuces2 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:71.7pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>vertiges, acouphène.</p>
+<p class=AmmCorpsTexteGras>Affections du rein et des voies urinaires : </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>Fréquent :</i> cystite</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Insuffisance rénale aiguë (IRA) fonctionnelle chez les patients présentant des facteurs de risque (voir rubrique 4.4).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Atteintes rénales organiques pouvant se traduire par une IRA ; des cas isolés de néphrite interstitielle, de nécrose tubulaire aiguë, de syndrome néphrotique, de nécrose papillaire ont été rapportés.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Des troubles urinaires de fréquence indéterminée (cystalgie, dysurie et pollakiurie), ou une hématurie peuvent survenir. Des cas graves ont été exceptionnellement rapportés lorsque le traitement a été poursuivi. Ces troubles sont réversibles à l’arrêt du traitement. </p>
+<p class=AmmCorpsTexte><span class=AmmCorpsTexteGrasCar>Autres</span> : </p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>Exceptionnellement</i>, survenue de graves complications infectieuses cutanées et des tissus mous au cours de la varicelle (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexteGras>Troubles du métabolisme et de la nutrition :</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>Fréquence indéterminée : </i></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>rétention hydrosodée, hyperkaliémie (voir rubrique 4.4 et rubrique 4.5).</p>
+<p class=AmmCorpsTexte><span class=AmmCorpsTexteGrasCar>Investigations</span> : </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>Fréquent</i> : </p>
+<p class=AmmListePuces2 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>anomalie des tests hépatiques, </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>Fréquence indéterminée : </i></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>allongement du temps de saignement.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt;page-break-after:avoid'>Affections du sang et du système lymphatique :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>Fréquence indéterminée : </i></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>thrombocytopénie, anémie due à un saignement.</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance &#8209; Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr">https://signalement.social-sante.gouv.fr</a><span style='color:red'> </span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte>En cas d’intoxication massive, le risque est surtout gastro-intestinal. </p>
+<p class=AmmCorpsTexte>Transfert immédiat en milieu hospitalier. </p>
+<p class=AmmCorpsTexte>Evacuation rapide du produit ingéré par lavage gastrique. </p>
+<p class=AmmCorpsTexte>Traitement symptomatique.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : ANTI-INFLAMMATOIRE, ANTIRHUMATISMAL, NON STEROIDIEN &#8209; Code ATC : M01AE11. </a></p>
+<p class=AmmCorpsTexte>L’acide tiaprofénique est un anti-inflammatoire non stéroïdien, appartenant au groupe des propioniques, dérivé de l’acide aryl-carboxylique. </p>
+<p class=AmmCorpsTexte>Il possède les propriétés suivantes : </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>activité antalgique, </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>activité anti-pyrétique, </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>activité anti-inflammatoire, </p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>inhibition des fonctions plaquettaires. </p>
+<p class=AmmCorpsTexte>L’ensemble de ces propriétés est lié à une inhibition de la synthèse des prostaglandines</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmCorpsTexte>Après administration orale unique chez l’homme :</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278934">Absorption</a></p>
+<p class=AmmCorpsTexte>Essentiellement duodénale, rapide, avec C<sub>max</sub> obtenue, en moyenne, 1 heure après l’ingestion.</p>
+<p class=AmmAnnexeTitre3>Distribution</p>
+<p class=AmmCorpsTexte>La demi-vie d’élimination varie de 1,5 à 2,5 heures, indépendamment de la dose ingérée. </p>
+<p class=AmmCorpsTexte>L’acide tiaprofénique ou ses métabolites se distribuent dans tout l’organisme. </p>
+<p class=AmmCorpsTexte>Il y a un passage transplacentaire et il existe un faible passage dans le lait maternel. </p>
+<p class=AmmCorpsTexte>Liaison aux protéines plasmatiques : 98%.</p>
+<p class=AmmAnnexeTitre3>Elimination</p>
+<p class=AmmCorpsTexte>Elle est essentiellement rénale. Il n’y a pas d’accumulation après absorption orale unique ou multiple d’acide tiaprofénique chez les sujets à fonction rénale normale. Chez des sujets ayant une clairance de la créatinine inférieure à 30 ml/min, il y a une augmentation de la demi-vie d’élimination atteignant 4 à 5 heures.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937">Amidon de maïs, amidon de riz, amidon de maïs prégélatinisé, silice colloïdale anhydre, stéarate de magnésium, talc.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">Sans objet.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte>2 ans</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940"><span lang=FR-BE>A conserver à une température ne dépassant pas 25°C. </span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte>30 comprimés sous plaquettes thermoformées (PVC-PVDC/aluminium).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte>Pas d’exigences particulières.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Toc142278943">LABORATOIRES FIDIA</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Hlk158981497">1 PARVIS DE LA DEFENSE</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>IMMEUBLE PAROI NORD DE LA GRANDE ARCHE</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Hlk158981505">92800 PUTEAUX</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 317 792 8 5: 30 comprimés sous plaquettes thermoformées (PVC-PVDC/aluminium).</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste II</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+                              <div id="tabpanel-bon-usage-panel" class="fr-tabs__panel" role="tabpanel"
+                     aria-labelledby="tabpanel-bon-usage"
+                     tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      
+      <div class="fr-col-12 fr-col-md">
+        <div class="fr-editor">
+
+          
+          
+          
+          
+          
+                      <div class="fr-grid-row">
+              <div class="fr-col">
+                <h5 id="heading-informations-importantes" role="heading" aria-level="5">
+                  <span class="fr-icon-information-line text-color-orange" aria-hidden="true"></span> Informations
+                  importantes
+                  <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage" href="#top"
+                     id="section-glossaire__top_link" role="link"
+                     aria-describedby="tooltip-link-page-top"
+                     aria-label="Redirection vers le haut de page"></a>
+                  <span id="tooltip-link-page-top" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                      Redirection vers le haut de page
+                    </span>
+                </h5>
+                <p aria-labelledby="heading-informations-importantes">Les informations importantes disponibles pour ce médicament sont les suivantes : <br /><ul id="liste_infos_importantes" role="list"><li role='listitem'>    <a  target='_blank'    href='https://ansm.sante.fr/actualites/anti-inflammatoires-non-steroidiens-ains-chez-les-femmes-enceintes-ameliorer-linformation-sur-les-risques-pour-un-meilleur-usage'>Anti-inflammatoires non stéroïdiens (AINS) chez les femmes enceintes : améliorer l'information sur les risques pour un meilleur usage</a></li><li role='listitem'>    <a  target='_blank'    href='https://www.ansm.sante.fr/S-informer/Points-d-information-Points-d-information/Anti-inflammatoires-non-steroidiens-AINS-et-complications-infectieuses-graves-Point-d-Information'>Anti-inflammatoires non stéroïdiens (AINS) et complications infectieuses graves - Point d'Information</a></li></ul></p>
+              </div>
+            </div>
+          
+          
+          
+                  </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_SURGAM_100_mg,_comprimé_sécable_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE SURGAM 100 mg, comprimé sécable ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE SURGAM 100 mg, comprimé sécable ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_SURGAM_100_mg,_comprimé_sécable_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE SURGAM 100 mg, comprimé sécable ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE SURGAM 100 mg, comprimé sécable ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_PRENDRE_SURGAM_100_mg,_comprimé_sécable_?"
+                     aria-label="3. COMMENT PRENDRE SURGAM 100 mg, comprimé sécable ? (Lien de redirection)">
+                    3. COMMENT PRENDRE SURGAM 100 mg, comprimé sécable ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_SURGAM_100_mg,_comprimé_sécable_?"
+                     aria-label="5. COMMENT CONSERVER SURGAM 100 mg, comprimé sécable ? (Lien de redirection)">
+                    5. COMMENT CONSERVER SURGAM 100 mg, comprimé sécable ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : SURGAM 100 mg, comprimé sécable - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="SURGAM 100 mg, comprimé sécable, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 26/05/2025</p>
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+<p class=AmmCorpsTexteGras align=center style='margin-top:12.0pt;text-align: center;border:none;padding:0cm'>ATTENTION</p>
+<p class=AmmCorpsTexteGras style='border:none;padding:0cm'>SURGAM 100 mg, comprimé sécable QUI EST UN ANTI-INFLAMMATOIRE NON STEROIDIEN (AINS) PEUT ENTRAINER UNE MORT FŒTALE S’IL EST PRIS A PARTIR DU 6<sup>EME</sup> MOIS DE GROSSESSE (24 semaines d’aménorrhée) MEME APRES UNE SEULE PRISE. </p>
+<p class=AmmCorpsTexteGras style='border:none;padding:0cm'>N’utilisez pas ce médicament si vous êtes enceinte de 6 mois et plus (24 semaines d’aménorrhée et plus).</p>
+<p class=AmmCorpsTexteGras style='border:none;padding:0cm'>Avant le 6<sup>ème</sup> mois ou si vous envisagez une grossesse, vous ne devez pas prendre ce médicament, sauf en cas d’absolue nécessité déterminée par votre médecin.</p>
+</div>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'><a name="_Toc142278999">SURGAM 100 mg, comprimé sécable</a></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Acide tiaprofénique</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279000"><span lang=FR-BE>Veuillez lire attentivement cette notice avant de prendre ce médicament car elle contient des informations importantes pour vous.</span></a></p>
+<p class=AmmListePuces1 style='text-align:justify;page-break-after:avoid'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin ou votre pharmacien.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt;page-break-after: avoid'>1. Qu'est-ce que SURGAM 100 mg, comprimé sécable et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt;page-break-after: avoid'>2. Quelles sont les informations à connaître avant de prendre SURGAM 100 mg, comprimé sécable ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt;page-break-after: avoid'>3. Comment prendre SURGAM 100 mg, comprimé sécable ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt;page-break-after: avoid'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt;page-break-after: avoid'>5. Comment conserver SURGAM 100 mg, comprimé sécable ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt;page-break-after: avoid'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_SURGAM_100_mg,_comprimé_sécable_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE SURGAM 100 mg, comprimé sécable ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after:avoid'><a name="_Toc142279003">Classe pharmacothérapeutique : ANTI-INFLAMMATOIRE, ANTIRHUMATISMAL, NON STEROIDIEN - Code ATC : M01AE11. </a></p>
+<p class=AmmCorpsTexte>SURGAM contient de l’acide tiaprofénique. </p>
+<p class=AmmCorpsTexte>Ce médicament appartient à une famille appelée les anti-inflammatoires non stéroïdiens. </p>
+<p class=AmmCorpsTexte>Ces médicaments sont utilisés notamment pour diminuer l’inflammation et calmer la douleur.</p>
+<p class=AmmCorpsTexte>SURGAM est destiné à l'adulte et l’enfant à partir de 15 kg (soit environ 4 ans).</p>
+<p class=AmmCorpsTexte>SURGAM est utilisé pour soulager les symptômes :</p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><u>En traitement long :</u></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>dans les rhumatismes inflammatoires chroniques (inflammations des articulations),</p>
+<p class=AmmListePuces2 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>dans certaines arthroses douloureuses et invalidantes (usure du cartilage entraînant des douleurs dans les articulations et gênant les mouvements).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><u>En traitement court dans les crises douloureuses :</u> </p>
+<p class=AmmListePuces2 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:72.0pt;text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>qui touchent les articulations (en cas d’arthroses), le bas du dos (lombalgies), dans certains cas, après un traumatisme (douleurs et gonflements).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Lors de règles douloureuses.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En traitement de certaines douleurs provoquées par des inflammations et localisées au niveau de la gorge, des oreilles, de la bouche et/ou du nez.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_SURGAM_100_mg,_comprimé_sécable_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE SURGAM 100 mg, comprimé sécable ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+<p class=AmmCorpsTexteGras style='border:none;padding:0cm'>Ne prenez jamais SURGAM 100 mg, comprimé sécable si vous êtes enceinte de 24 semaines d’aménorrhée et plus (6 mois et plus de grossesse) (voir ci-dessous « Grossesse, allaitement et fertilité »).</p>
+<p class=AmmCorpsTexteGras style='border:none;padding:0cm'>Au cours des 5 premiers mois de grossesse, vous ne devez pas prendre SURGAM 100 mg, comprimé sécable, sauf en cas d’absolue nécessité qui est déterminée par votre médecin.</p>
+<p class=AmmCorpsTexteGras style='border:none;padding:0cm'>Si vous envisagez une grossesse et que vous prenez un AINS, parlez-en à un professionnel de la santé.</p>
+</div>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">Ne prenez jamais SURGAM 100 mg, comprimé sécable :</a></p>
+<p class=AmmListePuces1 style='text-align:justify;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique à la substance active ou à l’un des autres composants contenus dans ce médicament, mentionnés dans la rubrique 6.</p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez déjà eu une crise d’asthme déclenchée ou non par la prise d’acide tiaprofénique ou par d’autres médicaments de la même famille que SURGAM (l’aspirine, les anti-inflammatoires non stéroïdiens).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes enceinte, à partir du début du 6ème mois de grossesse (au-delà de 24 semaines d’aménorrhée),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous avez déjà eu un ulcère de l’estomac ou de l’intestin, ou des saignements digestifs à répétition.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous avez ou avez déjà eu des saignements ou une perforation du tube digestif déclenchée par un précédent traitement de la même famille que SURGAM.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous souffrez d’un ulcère de l'estomac ou de l’intestin.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous avez une hémorragie gastro-intestinale, cérébrale ou une autre hémorragie,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous souffrez d’une maladie grave du foie (insuffisance hépatique sévère), des reins (insuffisance rénale sévère) ou du cœur (insuffisance cardiaque sévère).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>A partir du début du 6ème mois de grossesse.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous prenez un autre médicament, assurez-vous que l’association avec SURGAM n’est pas contre-indiquée (Voir le paragraphe ’’Autres médicaments et SURGAM 100 mg, comprimé sécable’’).</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Chez l’enfant pesant moins de 15 kg (soit environ 4 ans) car ce dosage n’est pas adapté dans ce cas.</p>
+<p class=AmmCorpsTexteGras>Avertissements et précautions</p>
+<p class=AmmCorpsTexte>Adressez-vous à votre médecin ou pharmacien avant de prendre SURGAM 100 mg, comprimé sécable. </p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Vous devez prévenir votre médecin si vous êtes dans l’une des situations suivantes :</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Vous avez déjà eu des problèmes digestifs (comme un ulcère de l'estomac ou de l’intestin, des saignements digestifs, une recto-colite hémorragique, une maladie de Crohn, une hernie hiatale).</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Vous souffrez d’une maladie du foie ou des reins.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Vous êtes diabétique.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Vous souffrez de troubles de la coagulation, </span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Vous êtes actuellement traités par anticoagulant ou anti-agrégant plaquettaire. Ce médicament peut entraîner des manifestations gastro-intestinales graves ;</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez une varicelle. Ce médicament est alors déconseillé en raison d’exceptionnelles infections graves de la peau.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Vous avez de l’asthme associé à des polypes dans le nez ou à une inflammation au niveau du nez ou des sinus (rhinite ou sinusite chronique). L’administration de ce médicament peut entraîner une crise d’asthme, notamment chez certains sujets allergiques à l’acide acétylsalicylique (aspirine) ou à un anti-inflammatoire non stéroïdien (Voir rubrique «Ne prenez jamais SURGAM 100 mg, comprimé sécable»). </span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Vous souffrez d’une infection. La surveillance médicale doit être renforcée.</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Vous souhaitez concevoir un enfant. Si vous êtes une femme, SURGAM peut altérer votre fertilité. Vous ne devez donc pas prendre ce médicament si vous souhaitez concevoir un enfant, si vous présentez des difficultés pour procréer ou si des examens sur votre fonction de reproduction sont en cours. Ce médicament existe sous forme d'autres dosages qui peuvent être plus adaptés.</span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Personnes ayant un risque cardiovasculaire</span></p>
+<p class=AmmCorpsTexte>Vous devez prévenir votre médecin ou votre pharmacien si vous êtes dans l’une des situations suivantes :</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Vous avez des problèmes cardiaques.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Vous avez déjà eu une attaque cérébrale (accident vasculaire cérébral).</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ou vous pensez avoir des facteurs de risques de maladies cardio-vasculaires (par exemple vous avez une tension artérielle élevée, un taux de sucre ou de cholestérol élevé dans le sang ou vous fumez).</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Les médicaments tels que SURGAM, pourraient augmenter le risque de crise cardiaque (infarctus du myocarde) ou d’accident vasculaire cérébral. Le risque est d’autant plus important que les doses utilisées sont élevées et la durée de traitement prolongée. Ne pas dépasser les doses recommandées ni la durée de traitement.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>L’utilisation de SURGAM peut également augmenter le risque de troubles du rythme cardiaque (fibrillation auriculaire).</span></p>
+<p class=AmmCorpsTexte><b><span lang=FR-BE>Pendant le traitement</span></b></p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-indent:-17.85pt; page-break-after:avoid'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Arrêtez le traitement et consultez immédiatement un médecin ou les urgences médicales :</span></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-align:justify; text-indent:-18.0pt'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span><span lang=FR-BE>Si une crise d’asthme ou une difficulté à respirer survient après avoir pris ce médicament. Ceci peut être le signe d’une allergie à ce médicament.</span></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-align:justify; text-indent:-18.0pt'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span><span lang=FR-BE>Si vous avez une éruption de boutons ou des plaques sur la peau, des démangeaisons, un brusque gonflement du visage et du cou. Il peut alors s’agir d’une allergie à ce médicament.</span></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-align:justify; text-indent:-18.0pt'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span><span lang=FR-BE>Si vous rejetez du sang par la bouche, si vous avez du sang dans les selles ou si vos selles sont colorées en noir. Il peut alors s’agir de saignements localisés dans votre estomac et/ou votre intestin (hémorragie digestive).</span></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-align:justify; text-indent:-18.0pt'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span><span lang=FR-BE>Si vous avez des signes qui ressemblent à des brûlures sur votre peau ou vos muqueuses (yeux, bouche, muqueuse génitale) tels qu'une rougeur de la peau avec des bulles, des cloques ou un décollement de la peau.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Arrêtez le traitement en cas de troubles urinaires ou d’infection urinaire.</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Prévenez votre médecin si vous pensez avoir une infection (notamment en cas de fièvre).</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Dans certains cas, votre médecin pourra vous demander de faire une prise de sang pour surveiller le fonctionnement de vos reins et de votre taux de potassium.</span></p>
+<p class=AmmCorpsTexteGras>Enfants </p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et SURGAM 100 mg, comprimé sécable</p>
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; border:none;padding:0cm'>Ce médicament contient un anti-inflammatoire non stéroïdien : <span class=AmmCorpsTexteGrasCar>l’acide tiaprofénique.</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; border:none;padding:0cm'>Vous ne devez pas prendre en même temps que ce médicament d’autres médicaments contenant des anti-inflammatoires non stéroïdiens (incluant les inhibiteurs sélectifs de la cyclo-oxygénase 2) et/ou de l’acide acétylsalicylique (aspirine).</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; border:none;padding:0cm'>Lisez attentivement les notices des autres médicaments que vous prenez afin de vous assurer de l’absence d’anti-inflammatoire non stéroïdien et/ou d’aspirine.</p>
+</div>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Veuillez indiquer à votre médecin ou à votre pharmacien si vous prenez ou avez pris récemment un autre médicament, même s'il s'agit d'un médicament obtenu sans ordonnance car il y a certains médicaments qui ne doivent pas être pris ensemble et d’autres qui peuvent nécessiter une modification de la dose lorsqu’ils sont pris ensemble.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;page-break-after:avoid'>Sauf avis contraire de votre médecin, vous ne devez pas prendre SURGAM en même temps que :</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>des médicaments qui empêchent la formation de caillots et fluidifient le sang (anticoagulant par voie orale comme la warfarine, les inhibiteurs de la thrombine comme le dabigatran, les inhibiteurs direct du facteur Xa comme l’apixaban, le rivaroxaban et l’édoxaban, les antiagrégants plaquettaires, l’héparine injectable). Si la prise ou l’utilisation concomitante de l’un de ces médicaments s’avérait nécessaire, votre médecin devra vous surveiller étroitement en raison d’un risque accru de saignements,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>des médicaments de la même famille que SURGAM (aspirine, anti-inflammatoire non stéroïdien, anti COX 2) qui sont utilisés pour diminuer l’inflammation et la fièvre et/ou pour calmer la douleur,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>un corticostéroïde,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>un médicament contenant du lithium,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>du méthotrexate à une dose supérieure à 20 mg/semaine,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>un inhibiteur de l’enzyme de conversion de l’angiotensine, un diurétique, un bêta-bloquant ou un antagoniste de l’angiotensine II,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>certains antidépresseurs (inhibiteurs sélectifs de la recapture de la sérotonine)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>du pemetrexed alors que vous avez une maladie des reins (insuffisance rénale). </p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt;page-break-after:avoid'>SURGAM 100 mg, comprimé sécable avec des aliments et boissons.</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279012">Grossesse, allaitement et fertilité</a></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Si vous êtes enceinte ou que vous allaitez, si vous pensez être enceinte ou planifiez une grossesse, demandez conseil à votre médecin ou pharmacien avant de prendre tout médicament.</span></p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte><b>A partir du début du 6ème mois </b>(24<sup>ème</sup> semaine d’aménorrhée)<b> jusqu’à la fin de la grossesse</b>, SURGAM 100 mg, comprimé sécable<span style='color:red'> </span>est <b>contre-indiqué. </b>Au cours de cette période, vous ne devez <b>EN AUCUN CAS</b> prendre ce médicament, car ses effets sur votre enfant à naître peuvent avoir des conséquences graves voire fatales. Notamment, il a été observé une toxicité pour le cœur, les poumons et/ou les reins, et cela <b>même avec une seule prise</b>. Cela peut également avoir des répercussions sur vous et votre bébé en favorisant les saignements et entraîner un accouchement plus tardif ou plus long que prévu. </p>
+<p class=AmmCorpsTexte><b>Avant le début du 6<sup>ème</sup> mois </b>(jusqu’à la 24<sup>ème</sup> semaine d’aménorrhée) <b>ou si vous envisagez une grossesse</b>, vous ne devez pas prendre ce médicament, sauf en cas d’absolue nécessité. Celle-ci sera déterminée par votre médecin. Le cas échéant, la dose devra être la plus faible possible et la durée du traitement la plus courte possible. </p>
+<p class=AmmCorpsTexte>En effet, les AINS, dont fait partie SURGAM 100 mg, comprimé sécable,<b> </b>peuvent causer des fausses couches et pour certains, des malformations après une exposition en début de grossesse. </p>
+<p class=AmmCorpsTexte>À partir de 2 mois et demi de grossesse (12 semaines d’aménorrhée), SURGAM 100 mg, comprimé sécable<span style='color:red'> </span>peut provoquer des problèmes rénaux chez votre bébé, s’il est pris pendant plusieurs jours, ce qui peut entraîner un faible niveau du liquide amniotique dans lequel il se trouve (oligoamnios). </p>
+<p class=AmmCorpsTexte>Dès le début du 5<sup>ème</sup> mois de grossesse (20 semaines d’aménorrhée), un rétrécissement des vaisseaux sanguins au niveau du cœur de votre bébé (constriction du canal artériel) peut s’observer. Si un traitement de plusieurs jours est nécessaire pendant le 5<sup>ème</sup> mois de grossesse (entre 20 et 24 semaines d’aménorrhée), votre médecin peut recommander une surveillance supplémentaire.</p>
+<p class=AmmCorpsTexteGras>Si vous avez pris ce médicament alors que vous étiez enceinte, parlez-en immédiatement à votre médecin, afin qu’une surveillance adaptée vous soit proposée si nécessaire.<a name=Bodyblank></a></p>
+<p class=AmmAnnexeTitre3><span lang=FR-BE>Allaitement</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ce médicament passant dans le lait maternel, il est déconseillé de l'utiliser pendant l'allaitement.</span></p>
+<p class=AmmAnnexeTitre3><span lang=FR-BE>Fertilité</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ce médicament, comme tous les anti-inflammatoires non stéroïdiens (AINS), peut altérer la fertilité des femmes et entraîner des difficultés pour devenir enceinte, de façon réversible à l’arrêt du traitement. Informez votre médecin si vous planifiez une grossesse ou si vous avez des difficultés à concevoir.</span></p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>Dans de rares cas, la prise de ce médicament peut entraîner des vertiges. Il est conseillé de ne pas conduire ou d’utiliser de machines si vous ressentez l’un de ces effets.</p>
+<p class=AmmCorpsTexteGras>SURGAM 100 mg, comprimé sécable contient </p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_PRENDRE_SURGAM_100_mg,_comprimé_sécable_?'>3. COMMENT PRENDRE SURGAM 100 mg, comprimé sécable ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279021">Posologie</a></p>
+<p class=AmmCorpsTexte>La dose varie selon l’indication. Votre médecin vous indiquera combien de comprimés vous devez prendre.</p>
+<p class=AmmCorpsTexte><i>A titre d’information :</i></p>
+<p class=AmmCorpsTexte><span class=AmmCorpsTexteGrasCar>Chez l’adulte :</span> </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La dose habituelle est de 3 à 6 comprimés par jour (soit 300 à 600 mg maximum par jour).</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt;page-break-after:avoid'>Utilisation chez les enfants</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Le dosage varie selon le poids. Il est de 10 mg par kg par jour :</p>
+<p class=AmmListePuces2 style='margin-left:71.7pt'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span><u>Pour un enfant qui pèse entre 15 et 20 kg </u>(environ de 4 à 6 ans) : ½ comprimé, 3 fois par jour (soit 150 mg par jour) ou bien, si besoin, 1 comprimé, 2 fois par jour (soit 150 à 200 mg par jour).</p>
+<p class=AmmListePuces2 style='margin-left:71.7pt'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span><u>Pour un enfant qui pèse entre 20 kg et 30 kg</u> (environ de 6 à 10 ans) : 1 comprimé, 2 à 3 fois par jour, (soit 200 à 300 mg par jour).</p>
+<p class=AmmListePuces2 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:71.7pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span><u>Pour un enfant qui pèse plus de 30 kg</u> (environ à partir de 10 ans) : 1 comprimé, 3 fois par jour, (soit 300 mg par jour).</p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Fréquence d’administration</span></p>
+<p class=AmmCorpsTexte>Prenez le(s) comprimé(s) en 2 ou 3 prises conformément à la prescription de votre médecin.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Dans tous les cas, suivez strictement l’ordonnance prescrite.</span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Mode et voie d’administration</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament est utilisé par voie orale. </span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Les comprimés doivent être avalés avec un grand verre d’eau ou dissous dans un grand verre d'eau.</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Les comprimés sont sécables. Le comprimé peut être divisé en doses égales (en 2 parts égales).</span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Durée du traitement</span></p>
+<p class=AmmCorpsTexte>Votre médecin vous précisera la durée de traitement nécessaire.</p>
+<p class=AmmCorpsTexteGras>Si vous avez pris plus de SURGAM 100 mg, comprimé sécable que vous n’auriez dû :</p>
+<p class=AmmCorpsTexte>Arrêtez le traitement et consultez immédiatement votre médecin ou votre pharmacien.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez de prendre SURGAM 100 mg, comprimé sécable :</p>
+<p class=AmmCorpsTexte>Ne prenez pas de dose double pour compenser la dose que vous avez oublié de prendre.</p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez de prendre SURGAM 100 mg, comprimé sécable :</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</a></p>
+<p class=AmmCorpsTexte>Les médicaments tels que SURGAM, pourraient augmenter le risque de crise cardiaque (infarctus du myocarde) ou d’attaque cérébrale (accident vasculaire cérébral). Ne pas dépasser les doses recommandées ni la durée de traitement.</p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Vous devez immédiatement arrêter le traitement et consulter votre médecin en cas de :</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>réaction allergique :</p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-align:justify; text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>au niveau de la peau : éruptions de boutons ou plaques, démangeaisons, urticaire ou aggravation d’une urticaire chronique, petites taches rouges, problème de peau grave pouvant affecter la bouche et d'autres parties du corps : petits boutons rouges, souvent accompagnés de démangeaisons et se transformant en cloques,</p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-align:justify; text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>au niveau respiratoire : crise d’asthme notamment chez les sujets allergiques à l’aspirine ou à d’autres anti-inflammatoires non stéroïdiens,</p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-align:justify; text-indent:-18.0pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span>au niveau général, malaise général avec hypotension artérielle, brusque gonflement du visage et du cou pouvant entrainer une difficulté à respirer (œdème de Quincke) et pouvant aller jusqu’au malaise brutal avec baisse importante de la tension artérielle (choc anaphylactique),</p>
+<p class=AmmListePuces1 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:17.85pt;margin-bottom:.0001pt;text-align:justify;text-indent: -17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>saignement digestif (rejet de sang par la bouche ou présence de sang dans les selles (coloration des selles en noir)), d’autant plus fréquent que la posologie utilisée est élevée et la durée de traitement prolongée.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>exceptionnellement : réaction exagérée de la peau après exposition au soleil ou aux UV,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>très rare éruption de bulles avec décollement de la peau pouvant rapidement s’étendre à tout le corps et mettre en danger le patient (syndrome de Stevens-Johnson et syndrome de Lyell).</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>rarement : des troubles urinaires (douleurs et gêne à uriner, envies fréquentes d’uriner, infection urinaire, présence de sang dans les urines). Ces signes disparaissent une fois le traitement arrêté.</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>une infection grave de la peau chez les personnes qui souffrent déjà de la varicelle.</span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Vous devez avertir votre médecin si l’un des effets suivants survient :</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>troubles digestifs tels que :</p>
+<p class=AmmListePuces2 style='margin-left:71.7pt;page-break-after:auto'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span><span lang=FR-BE>douleurs dans le ventre,</span></p>
+<p class=AmmListePuces2 style='margin-left:71.7pt;page-break-after:auto'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span><span lang=FR-BE>nausées, vomissements,</span></p>
+<p class=AmmListePuces2 style='margin-left:71.7pt;page-break-after:auto'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span><span lang=FR-BE>diarrhée, constipation, flatulence,</span></p>
+<p class=AmmListePuces2 style='margin-left:71.7pt;page-break-after:auto'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span><span lang=FR-BE>ulcère de l’estomac, </span></p>
+<p class=AmmListePuces2 style='margin-left:71.7pt;page-break-after:auto'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span><span lang=FR-BE>inflammation de l'estomac qui peut causer des douleurs, nausées, vomissement (gastrite),</span></p>
+<p class=AmmListePuces2 style='margin-left:71.7pt;page-break-after:auto'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span><span lang=FR-BE>perforation du tube digestif,</span></p>
+<p class=AmmListePuces2 style='margin-left:71.7pt;page-break-after:auto'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span><span lang=FR-BE>aggravation de d’une inflammation de l’intestin, d’une maladie de Crohn,</span></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-indent:-18.0pt'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span><span lang=FR-BE>difficulté pour digérer,</span></p>
+<p class=AmmListePuces2 style='margin-left:72.0pt;text-indent:-18.0pt'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>    </span></span><span lang=FR-BE>inflammation dans la bouche (stomatite),</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>gonflements dus à une rétention hydrosodée (œdème), </span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>vertiges,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>bourdonnements d’oreille (acouphènes),</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>taux anormalement bas de plaquettes pouvant se traduire par un saignement du nez ou des gencives qui sera contrôlé par une analyse de sang, anémie due à un saignement.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>hyperkaliémie, trouble du fonctionnement des reins et/ou du foie. Ils seront contrôlés par une analyse de sang. </span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>tension artérielle élevée, défaillance du cœur.</span></p>
+<p class=AmmCorpsTexteGras>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance &#8209; Site internet: <a href="https://signalement.social-sante.gouv.fr">https://signalement.social-sante.gouv.fr</a> </p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_SURGAM_100_mg,_comprimé_sécable_?'>5. COMMENT CONSERVER SURGAM 100 mg, comprimé sécable ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026"></a><a name="_Toc142279024">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas ce médicament après la date de péremption indiquée sur l’emballage. La date de péremption fait référence au dernier jour de ce mois.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>A conserver à une température ne dépassant pas 25°C.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout <span style='color:black'>ou avec </span>les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient SURGAM 100 mg, comprimé sécable</a></p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est :</p>
+<p class=AmmComposition>Acide tiaprofénique .......................................................................................................100 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un comprimé sécable</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont : amidon de maïs, amidon de riz, amidon de maïs prégélatinisé, silice colloïdale anhydre, stéarate de magnésium, talc.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que SURGAM 100 mg, comprimé sécable et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>SURGAM se présente sous forme de comprimés sécables (le comprimé peut être coupé en deux).</p>
+<p class=AmmCorpsTexte>Chaque boîte contient 30 comprimés sécables.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Toc142279031">LABORATOIRES FIDIA</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>1 PARVIS DE LA DEFENSE</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>IMMEUBLE PAROI NORD DE LA GRANDE ARCHE</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>92800 PUTEAUX</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Toc142279032">LABORATOIRES FIDIA</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>1 PARVIS DE LA DEFENSE</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>IMMEUBLE PAROI NORD DE LA GRANDE ARCHE</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>92800 PUTEAUX</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Toc142279033">FIDIA FARMACEUTICI S.P.A.</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>VIA PONTE DELLA FABBRICA, 3/A</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>35031 ABANO TERME (PD), </p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>ITALIE</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279038">[à compléter ultérieurement par le titulaire]</a></p>
+<p class=AmmCorpsTexteGras>< {MM/AAAA}>< {mois AAAA}.></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

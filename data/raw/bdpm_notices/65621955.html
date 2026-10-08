@@ -1,0 +1,1827 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="hfYiNDqUbQbbuo1qJ/J43Q==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="hfYiNDqUbQbbuo1qJ/J43Q==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 31/08/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée"
+            aria-level="3"
+          >
+            OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                          <p id="tag-generique" class="fr-tag" aria-controls="fr-modal-tag-generique" data-fr-opened="false">
+              <span class="fr-icon-capsule-fill">
+              </span>&nbsp;générique
+          </p>
+              </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 08/08/2005
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0419272">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte><a name="_Toc142279004"></a><a name="_Toc142279003">Classe pharmacothérapeutique : </a>alpha-bloquants - code ATC : G04CA02.</p>
+<p class=AmmCorpsTexte>OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée contient de la tamsulosine, une substance qui appartient à une famille de médicaments appelée alpha-bloquants.</p>
+<p class=AmmCorpsTexte>OMEXEL L.P. est utilisé dans le traitement de certains troubles qui peuvent vous empêcher d’uriner normalement suite à une augmentation de volume (hypertrophie) bénigne de votre prostate.</p>
+<p class=AmmCorpsTexte>Ce médicament est utilisé uniquement chez l’homme <b>dans le traitement des douleurs du bas appareil urinaire associé à un élargissement de la glande prostatique (hyperplasie bénigne de la prostate). Ces douleurs peuvent être des difficultés à uriner (débit urinaire faible), miction goutte à goutte, besoin urgent d’uriner et envie d’uriner fréquemment aussi bien la nuit que le jour.</b></p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament appartient au(x) groupe(s) générique(s) suivants : <br/><ul role="list"><li role='listitem'><a href='/medicament/affiche/groupe-generique/65621955/1046' aria-describedby='tooltip-medicament-generique-0'>TAMSULOSINE (CHLORHYDRATE DE) équivalant à  TAMSULOSINE  0,4 mg - OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée.</a><span id='tooltip-medicament-generique-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Ouvrir la page de détail sur ce groupe générique</span></li></ul></p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Comprimé ( Composition pour un comprimé )<ul role="list"><li role="listitem" style="list-style-type: none;">tamsulosine<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span><span class="italique">0,367 mg</span><ul role="list" style="list-style-type: none;"><li class="sousFormeDe" role="listitem"><i class="fa fa-plus-square" aria-hidden="true"></i> sous forme de : chlorhydrate de tamsulosine<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span><span class="italique">0,400 mg </span></li></ul></li></ul></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > plaquette(s) thermoformée(s) polyamide aluminium PVC-Aluminium PVC PVDC de 30 comprimé(s)  </p><p>Code CIP : 369 624-9 ou 34009 369 624 9 1<br/>Déclaration de commercialisation : 01/06/2006<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 5,20 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 6,22 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :30%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><div class='fr-grid-row'><div class='fr-col'><p>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence. </p></div></div><div class='fr-grid-row'><div class='fr-col'><p>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprès de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-smr-aide-2'>plus d'informations dans l'aide</a>). Les avis et synthèses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-smr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection à la page d'aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'SMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur du SMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td>Modéré</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2857805'>Avis du 13/06/2018</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 13/06/2018 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Renouvellement d'inscription (CT)</td><td class='text-align-center'>La Commission considère que le service médical rendu par les spécialités OMIX LP 0,4 mg, microgranules à libération prolongée en gélule et par OMEXEL LP 0,4 mg, comprimé pelliculé à libération prolongée reste modéré dans l’indication de l’AMM.</td></tr></tbody></table></div></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence.</p></div></div><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprés de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-asmr-aide-3'>plus d'informations dans l'aide</a>). Les avis et synthéses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-asmr-aide-3' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers la page aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'ASMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur de l'ASMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td class="text-align-center">V (Inexistant)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/c_400937'>Avis du 01/03/2006</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 01/03/2006 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Inscription (CT)</td><td class="text-align-center">OMEXEL LP 0,4mg (gel matriciel) n’apporte pas d’amélioration du service.</td></tr></tbody></table></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : ASTELLAS PHARMA</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure nationale</li><li>Code CIS : &nbsp;6 562 195 5</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 14/05/2024</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras>OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée</p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Chlorydrate de tamsulosine...0, 400 mg</p>
+<p class=AmmComposition>Equivalent à tamsulosine0, 367 mg</p>
+<p class=AmmCorpsTexte>Pour un comprimé pelliculé à libération prolongée.</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Comprimé pelliculé à libération prolongée.</a></p>
+<p class=AmmCorpsTexte>Comprimé pelliculé rond, de 9 mm de diamètre environ, bi-convexe, jaune et marqué du code « 04 ».</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">Traitement des symptômes fonctionnels de l’hypertrophie bénigne de la prostate.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278918">Posologie</a></p>
+<p class=AmmCorpsTexte>Un comprimé pelliculé à 0,4 mg par jour.</p>
+<p class=AmmCorpsTexte>Aucun ajustement de dose n’est nécessaire en cas d’insuffisance rénale.</p>
+<p class=AmmCorpsTexte>Aucun ajustement de dose n’est nécessaire chez les patients avec une insuffisance hépatique peu sévère à modérée (cf rubrique 4.3 « contre-indications »).</p>
+<p class=AmmAnnexeTitre4>Population pédiatrique</p>
+<p class=AmmCorpsTexte>L’efficacité et la sécurité d’emploi de la tamsulosine ne sont pas établies chez les enfants âgés de moins de 18 ans.</p>
+<p class=AmmCorpsTexte>Les données actuellement disponibles sont décrites à la rubrique 5.1.</p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>OMEXEL L.P. 0,4 mg peut être pris indifféremment pendant ou en dehors des repas.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Le comprimé pelliculé doit être avalé avec un verre d’eau sans être croqué ni mâché afin de ne pas interférer avec la libération prolongée du principe actif.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278919">Ce produit ne doit pas être administré dans les situations suivantes :</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypersensibilité à la substance active ou à l’un des excipients mentionnés à la rubrique 6.1.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Antécédents d’hypotension orthostatique.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Antécédents d’angio-oedème avec la tamsulosine.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Insuffisance hépatique sévère (classe C de la classification de CHILD-PUGH qui implique la présence simultanée et d’expression marquée, d’au moins quatre des cinq signes suivants : encéphalopathie, ascite, hyperbilirubinémie, hypoalbuminémie, allongement du temps de prothrombine ; elle indique un risque opératoire élevé lors du traitement chirurgical de l’hypertension portale).</p>
+<p class=AmmCorpsTexte>Ce médicament est généralement déconseillé en cas d’antécédent de syncope mictionnelle.</p>
+<p class=AmmCorpsTexte> </p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278920">Mises en garde spéciales</a></p>
+<p class=AmmCorpsTexte>OMEXEL L.P. 0,4 mg ne doit pas être remplacé par d’autres médicaments à base de chlorhydrate de tamsulosine, à l’exception des spécialités figurant dans le même groupe, au répertoire des groupes génériques.</p>
+<p class=AmmCorpsTexte>Avant de débuter un traitement par OMEXEL, un examen du patient devra être réalisé afin d’exclure d’autres causes à l’origine des mêmes symptômes que ceux de l’hypertrophie bénigne de la prostate. Un toucher rectal ainsi que, si nécessaire, un dosage de l’antigène prostatique spécifique (PSA) devra être réalisé avant l’instauration du traitement et, ensuite à intervalles réguliers.</p>
+<p class=AmmAnnexeTitre4>Risque d’hypotension orthostatique :</p>
+<p class=AmmCorpsTexte>Chez certains sujets, une hypotension peut apparaître en orthostatisme. Elle peut conduire très rarement à une syncope. En cas de symptômes prémonitoires (sensations vertigineuses, fatigue, sueurs), le malade devra être allongé jusqu’à leur disparition complète.</p>
+<p class=AmmCorpsTexte>Ces phénomènes, en général transitoires surviennent en début de traitement et n’empêchent pas sa poursuite. Le patient devra être clairement informé de leur survenue.</p>
+<p class=AmmAnnexeTitre4>Angioedèmes :</p>
+<p class=AmmCorpsTexte>Un œdème de la peau ou des muqueuses a été très rarement signalé. Dans ce cas, ce médicament doit être immédiatement arrêté et le patient traité et surveillé jusqu’à disparition de l’oedème. La prescription de tamsulosine ne doit pas être reprise chez ces patients.</p>
+<p class=AmmAnnexeTitre4>Syndrome de l’iris flasque per-opératoire (SIFP) :</p>
+<p class=AmmCorpsTexte>Le « Syndrome de l’iris flasque per-opératoire » (SIFP, une variante du syndrome de pupille étroite) a été observé au cours d’interventions chirurgicales de la cataracte et du glaucome chez certains patients traités ou précédemment traités par le chlorhydrate de tamsulosine.</p>
+<p class=AmmCorpsTexte>Le SIFP peut augmenter le risque de complications oculaires pendant et après l’opération. </p>
+<p class=AmmCorpsTexte>Interrompre le chlorhydrate de tamsulosine 1 à 2 semaines avant une intervention chirurgicale de la cataracte ou du glaucome peut être considéré utile mais le bénéfice de l'interruption du traitement n’a pas été établi. Le SIFP a également été rapporté chez des patients qui avaient interrompu la tamsulosine pendant une plus longue période avant cette chirurgie.</p>
+<p class=AmmCorpsTexte>L’initiation d’un traitement par le chlorhydrate de tamsulosine chez des patients pour lesquels une intervention chirurgicale de cataracte et de glaucome est programmée n’est pas recommandée.</p>
+<p class=AmmCorpsTexte>Au cours de la consultation pré-opératoire, les chirurgiens et leur équipe doivent vérifier si les patients qui vont être opérés de la cataracte ou du glaucome sont ou ont été traités par tamsulosine afin de s’assurer que des mesures appropriées seront mises en place pour prendre en charge la survenue d’un SIFP au cours de l’intervention chirurgicale.</p>
+<p class=AmmCorpsTexte>Le chlorhydrate de tamsulosine ne doit pas être associé à des inhibiteurs puissants du CYP3A4 chez des métaboliseurs lents avec un phénotype CYP2D6.</p>
+<p class=AmmCorpsTexte>Il convient d’être prudent en cas d’administration de chlorhydrate de tamsulosine en association avec des inhibiteurs puissants ou modérés du CYP3A4 (voir rubrique 4.5).</p>
+<p class=AmmCorpsTexte>Il est possible qu’un reste de comprimé soit observé dans les selles.</p>
+<p class=AmmAnnexeTitre3>Précautions d’emploi</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>La prudence s’impose chez les sujets traités par des médicaments antihypertenseurs</i> et notamment avec les antagonistes du calcium qui peuvent provoquer des hypotensions sévères.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Il convient de tenir compte de la potentialisation qui peut en résulter et de réduire la posologie des antihypertenseurs en conséquence.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>Chez les coronariens</i>, le traitement spécifique de l’insuffisance coronaire peut être poursuivi ; mais, en cas de réapparition ou d’aggravation d’un angor, le traitement par la tamsulosine devra être interrompu.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>Chez l’insuffisant rénal chronique</i>, l’insuffisance rénale entraîne une augmentation modérée des taux sanguins sans qu’une incidence accrue des effets indésirables ait été relevée lors des études cliniques. Il ne semble pas nécessaire d’adapter la posologie de la tamsulosine chez les sujets dont la clairance de la créatinine est supérieure à 10 ml/min.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En revanche, la prudence s’impose chez l’insuffisant rénal sévère (clairance créatinine < 10 ml / min) car ces patients n’ont pas été étudiés.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>Chez le sujet âgé de plus de 65 ans</i>, il convient de plus particulièrement prendre en compte la survenue d’une hypotension orthostatique.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278921">Des études d’interactions ont été menées uniquement chez les adultes.</a></p>
+<p class=AmmCorpsTexte>Aucune interaction n’a été observée lors de l’administration concomitante du chlorhydrate de tamsulosine avec de l’aténolol, ou de l’énalapril ou de la théophylline.</p>
+<p class=AmmCorpsTexte>La prise concomitante de cimétidine augmente les concentrations plasmatiques de tamsulosine, la prise de furosémide diminue cette concentration, cependant les concentrations restent dans la fenêtre posologique, aucune adaptation n’est nécessaire.</p>
+<p class=AmmCorpsTexte>Lors des tests in vitro, ni le diazépam, ou le propranolol, le trichlorméthiazide, le chlormadinone, l’amitriptyline, le diclofénac, le glibenclamide, la simvastatine ou la warfarine, ne modifient la fraction libre de tamsulosine dans le plasma humain.</p>
+<p class=AmmCorpsTexte>De même, la tamsulosine ne modifie pas la fraction libre du diazépam, du propranolol, du trichlorméthiazide et de la chlormadinone. </p>
+<p class=AmmCorpsTexte>Cependant le diclofénac et la warfarine peuvent augmenter l’élimination de la tamsulosine.</p>
+<p class=AmmCorpsTexte>L’administration concomitante de chlorhydrate de tamsulosine avec des inhibiteurs forts du CYP3A4 peut conduire à une augmentation de l’exposition au chlorhydrate de tamsulosine. L’administration concomitante avec le kétoconazole (connu comme un inhibiteur puissant du CYP3A4) a entrainé une augmentation de l’ASC et de la C<sub>max</sub> du chlorhydrate de tamsulosine d’un facteur 2.8 et 2.2 respectivement. Le chlorhydrate de tamsulosine ne doit pas être administré de façon concomitante avec un inhibiteur puissant du CYP3A4 chez les patients métaboliseurs lents avec un phénotype CYP2D6.</p>
+<p class=AmmCorpsTexte>Le chlorhydrate de tamsulosine doit être utilisé avec précaution en association avec des inhibiteurs modérés et puissants du CYP3A4.</p>
+<p class=AmmCorpsTexte>L’administration concomitante du chlorhydrate de tamsulosine avec la paroxétine, un inhibiteur puissant du CYP2D6 a entrainé une augmentation de la C<sub>max</sub> et de l’ASC du chlorhydrate de tamsulosine d’un facteur 1.3 et 1.6 respectivement, mais ces augmentations ne sont pas considérées comme étant cliniquement significatives.</p>
+<p class=AmmCorpsTexte>L’administration concomitante avec d’autres alpha1-bloquants peut entrainer des effets hypotenseurs.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmCorpsTexte>Omexel n’est pas indiqué chez la femme </p>
+<p class=AmmCorpsTexte>L’innocuité du chlorhydrate de tamsulosine au cours de la grossesse et le passage du chlorhydrate de tamsulosine dans le lait maternel ne sont pas connus.</p>
+<p class=AmmCorpsTexte>Des troubles de l’éjaculation ont été observés dans des études cliniques à court terme et à long terme avec la tamsulosine.</p>
+<p class=AmmCorpsTexte>Des troubles de l’éjaculation, une éjaculation rétrograde et une diminution ou une absence d’éjaculat ont été rapportés après commercialisation.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929">Une prudence particulière devra être observée par les conducteurs de véhicules et les utilisateurs de machines en raison du risque d’hypotension orthostatique, surtout en début de traitement par la tamsulosine</a>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmCorpsTexte>Les effets indésirables sont classés par fréquence comme suit : Très fréquent (&#8805;1/10) ; fréquent (&#8805;1/100 <1/10) ; peu fréquent (&#8805;1/1,000 <1/100) ; rare (&#8805;1/10,000 <1/1,000) ; très rare (<1/10,000), non déterminé (ne peut être estimée sur la base des données disponibles).</p>
+<p class=AmmCorpsTexte>Les effets indésirables observés sont repris dans le tableau suivant :</p>
+<p class=AmmCorpsTexte> </p>
+<div class='fr-table--lg fr-table'><table>
+<tr style='height:41.5pt'>
+<td width=131 valign=top style='width:97.95pt;border:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:41.5pt'>
+<p class=AmmCorpsTexte><b><span style='font-size:9.0pt;font-family:"Arial",sans-serif'>Classification</span></b></p>
+<p class=AmmCorpsTexte><b><span style='font-size:9.0pt;font-family:"Arial",sans-serif'> </span></b></p>
+<p class=AmmCorpsTexte><b><span style='font-size:9.0pt;font-family:"Arial",sans-serif'>MedDRA</span></b></p>
+</td>
+<td width=115 valign=top style='width:85.95pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:41.5pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:9.0pt;font-family:"Arial",sans-serif'>Fréquents</span></b></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:9.0pt;font-family:"Arial",sans-serif'> </span></b></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:9.0pt;font-family:"Arial",sans-serif'>&#8805; 1/100 </span></b><b><span style='font-size:9.0pt;font-family:Symbol'><</span></b><b><span style='font-size:9.0pt;font-family:"Arial",sans-serif'> 1/10</span></b></p>
+</td>
+<td width=121 valign=top style='width:90.95pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:41.5pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:9.0pt;font-family:"Arial",sans-serif'>Peu fréquents</span></b></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:9.0pt;font-family:"Arial",sans-serif'> </span></b></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:9.0pt;font-family:"Arial",sans-serif'>&#8805; 1/1.000 </span></b></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:9.0pt;font-family:Symbol'><</span></b><b><span style='font-size:9.0pt;font-family:"Arial",sans-serif'> 1/100</span></b></p>
+</td>
+<td width=103 valign=top style='width:77.05pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:41.5pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:9.0pt;font-family:"Arial",sans-serif'>Rares</span></b></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:9.0pt;font-family:"Arial",sans-serif'> </span></b></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:9.0pt;font-family:"Arial",sans-serif'>&#8805; 1/10.000</span></b></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:9.0pt;font-family:Symbol'><</span></b><b><span style='font-size:9.0pt;font-family:"Arial",sans-serif'> 1/1.000</span></b></p>
+</td>
+<td width=111 valign=top style='width:83.6pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:41.5pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:9.0pt;font-family:"Arial",sans-serif'>Très rares, y compris cas isolés</span></b></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:9.0pt;font-family:"Arial",sans-serif'> </span></b></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:9.0pt;font-family:Symbol'><</span></b><b><span style='font-size:9.0pt;font-family:"Arial",sans-serif'> 1/10.000</span></b></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:9.0pt;font-family:"Arial",sans-serif'> </span></b></p>
+</td>
+<td width=95 valign=top style='width:70.95pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:41.5pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:9.0pt;font-family:"Arial",sans-serif'>Non déterminé (ne peut être estimé sur la base des données disponibles)</span></b></p>
+</td>
+</tr>
+<tr>
+<td width=131 valign=top style='width:97.95pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections du système nerveux</p>
+</td>
+<td width=115 valign=top style='width:85.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Etourdissements (1,3 %)</p>
+</td>
+<td width=121 valign=top style='width:90.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Céphalées</p>
+</td>
+<td width=103 valign=top style='width:77.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Syncope</p>
+</td>
+<td width=111 valign=top style='width:83.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+<td width=95 valign=top style='width:70.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+</tr>
+<tr>
+<td width=131 valign=top style='width:97.95pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections oculaires</p>
+</td>
+<td width=115 valign=top style='width:85.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+<td width=121 valign=top style='width:90.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+<td width=103 valign=top style='width:77.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+<td width=111 valign=top style='width:83.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+<td width=95 valign=top style='width:70.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Vision trouble*</p>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Troubles de la vision*</p>
+</td>
+</tr>
+<tr>
+<td width=131 valign=top style='width:97.95pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections cardiaques</p>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+<td width=115 valign=top style='width:85.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+<td width=121 valign=top style='width:90.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Palpitations</p>
+</td>
+<td width=103 valign=top style='width:77.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+<td width=111 valign=top style='width:83.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+<td width=95 valign=top style='width:70.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+</tr>
+<tr>
+<td width=131 valign=top style='width:97.95pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections vasculaires</p>
+</td>
+<td width=115 valign=top style='width:85.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+<td width=121 valign=top style='width:90.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Hypotension orthostatique</p>
+</td>
+<td width=103 valign=top style='width:77.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+<td width=111 valign=top style='width:83.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+<td width=95 valign=top style='width:70.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+</tr>
+<tr>
+<td width=131 valign=top style='width:97.95pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections respiratoires thoraciques et médiastinales</p>
+</td>
+<td width=115 valign=top style='width:85.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+<td width=121 valign=top style='width:90.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Rhinites</p>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Congestions nasales</p>
+</td>
+<td width=103 valign=top style='width:77.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+<td width=111 valign=top style='width:83.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+<td width=95 valign=top style='width:70.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Epistaxis*</p>
+</td>
+</tr>
+<tr>
+<td width=131 valign=top style='width:97.95pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections gastro-intestinales</p>
+</td>
+<td width=115 valign=top style='width:85.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+<td width=121 valign=top style='width:90.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Constipation, diarrhée, nausées, vomissement</p>
+</td>
+<td width=103 valign=top style='width:77.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+<td width=111 valign=top style='width:83.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+<td width=95 valign=top style='width:70.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Sécheresse buccale*</p>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+</tr>
+<tr style='height:26.85pt'>
+<td width=131 valign=top style='width:97.95pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:26.85pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections de la peau et du tissu sous-cutané</p>
+</td>
+<td width=115 valign=top style='width:85.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:26.85pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+<td width=121 valign=top style='width:90.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:26.85pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Rash, prurit, urticaire</p>
+</td>
+<td width=103 valign=top style='width:77.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:26.85pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Angioedème</p>
+</td>
+<td width=111 valign=top style='width:83.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:26.85pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Syndrome de Stevens Johnson</p>
+</td>
+<td width=95 valign=top style='width:70.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:26.85pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Erythème polymorphe*</p>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Dermatite exfoliative*</p>
+</td>
+</tr>
+<tr style='height:26.25pt'>
+<td width=131 valign=top style='width:97.95pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:26.25pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections des organes de reproduction et du sein</p>
+</td>
+<td width=115 valign=top style='width:85.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:26.25pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Troubles de l’éjaculation incluant éjaculation rétrograde et diminution ou absence d’éjaculation</p>
+</td>
+<td width=121 valign=top style='width:90.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:26.25pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+<td width=103 valign=top style='width:77.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:26.25pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+<td width=111 valign=top style='width:83.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:26.25pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Priapisme</p>
+</td>
+<td width=95 valign=top style='width:70.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:26.25pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+</td>
+</tr>
+<tr style='height:34.9pt'>
+<td width=131 valign=top style='width:97.95pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:34.9pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Troubles généraux et anomalies au site d’administration</p>
+</td>
+<td width=115 valign=top style='width:85.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:34.9pt'>
+<p class=AmmCorpsTexte> </p>
+</td>
+<td width=121 valign=top style='width:90.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:34.9pt'>
+<p class=AmmCorpsTexte>Asthénie</p>
+</td>
+<td width=103 valign=top style='width:77.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:34.9pt'>
+<p class=AmmCorpsTexte> </p>
+</td>
+<td width=111 valign=top style='width:83.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:34.9pt'>
+<p class=AmmCorpsTexte> </p>
+</td>
+<td width=95 valign=top style='width:70.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:34.9pt'>
+<p class=AmmCorpsTexte> </p>
+</td>
+</tr>
+</table></div>
+<p class=AmmCorpsTexte>* Observés après commercialisation.</p>
+<p class=AmmCorpsTexte>Expérience après commercialisation :</p>
+<p class=AmmCorpsTexte>Au cours d’interventions chirurgicales de la cataracte ou du glaucome, des cas de pupille étroite, connue sous le nom de syndrome de l’iris flasque per-opératoire (SIFP), ont été associés à la tamsulosine (voir également la rubrique 4.4).</p>
+<p class=AmmCorpsTexte>En plus des événements indésirables mentionnés ci-dessus, une fibrillation auriculaire, une arythmie, une tachycardie et une dyspnée ont été rapportées lors de l'utilisation de la tamsulosine. Ces événements étant rapportés de façon spontanée après la commercialisation au niveau mondial, leur fréquence et le rôle de la tamsulosine dans leur survenue ne peuvent être déterminés.</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet : <a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte>Un surdosage pourrait donner lieu à une hypotension systémique.</p>
+<p class=AmmCorpsTexte>Dans ce cas, mettre le patient en position déclive afin de restaurer la pression artérielle et normaliser le rythme cardiaque et, éventuellement, mettre en place une surveillance des paramètres cardio-vasculaires et rénaux avec restauration de la volémie et utilisation de sympathomimétiques.</p>
+<p class=AmmCorpsTexte>En cas de surdosage, la résorption digestive du médicament peut être diminuée par des vomissements provoqués, un lavage gastrique, l’utilisation de charbon activé et par un laxatif osmotique tel que le sulfate de sodium.</p>
+<p class=AmmCorpsTexte>Il semble inutile, par contre, de procéder à la mise sous dialyse, compte tenu de la liaison pratiquement totale de la tamsulosine aux protéines plasmatiques.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : ALPHA-BLOQUANTS / MEDICAMENTS UTILISES DANS L’HYPERTROPHIE BENIGNE DE LA PROSTATE, code ATC : G04CA02</a></p>
+<p class=AmmAnnexeTitre3>Mécanisme d’action</p>
+<p class=AmmCorpsTexte>La tamsulosine est un antagoniste des récepteurs alpha<sub>1</sub>-adrénergiques post-synaptiques sélectif des sous-types de récepteurs alpha<sub>1A</sub> et alpha<sub>1D</sub>. Ces propriétés se traduisent par une relaxation du muscle lisse de la prostate et de l’urètre.</p>
+<p class=AmmAnnexeTitre3>Effets pharmacodynamiques</p>
+<p class=AmmCorpsTexte>La tamsulosine augmente le débit urinaire et améliore les syndromes obstructifs par la relaxation exercée sur les muscles lisses prostatiques et urétraux.</p>
+<p class=AmmCorpsTexte>Les effets d’OMEXEL sur l’obstruction et la miction sont maintenus lors du traitement à long terme.</p>
+<p class=AmmCorpsTexte>Les alpha<sub>1</sub> - bloquants peuvent entraîner une diminution de la pression artérielle par un mécanisme de diminution des résistances vasculaires périphériques. Au cours des essais cliniques avec la tamsulosine, il n’a pas été rapporté de diminution de la pression artérielle cliniquement significative.</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Une étude en double aveugle, randomisée, de recherche de doses et contrôlée par placebo, a été réalisée chez des enfants porteurs d’une vessie neurologique. Un total de 161 enfants (âgés de 2 à 16 ans) a été randomisé et traité soit par l’une des 3 posologies de tamsulosine (faible [0,001 à 0,002 mg/kg], moyenne [0,002 à 0,004 mg/kg], et forte [0,004 à 0,008 mg/kg]), soit par un placebo. Le critère principal était le nombre de patients qui ont eu une diminution de leur « pression détrusorienne de fuite » (PDF) à une valeur <40 cm d’eau, lors de deux évaluations effectuées le même jour. Les critères secondaires étaient : la valeur et le pourcentage de la variation de la pression détrusorienne de fuite par rapport au début du traitement, l’amélioration ou la stabilisation de l’hydronéphrose et de l’hydro-uretère, la variation du volume urinaire mesuré par cathétérisme et le nombre de fois où les protections étaient humides au moment des cathétérismes, comme rapporté par le calendrier colligeant les cathétérismes.</p>
+<p class=AmmCorpsTexte>Aucune différence statistiquement significative n’a été trouvée entre le groupe placebo et l’un des 3 groupes de posologie de tamsulosine, que ce soit pour le critère principal ou pour les critères secondaires. Aucune réponse n’a été observée quelle que soit la posologie utilisée (voir rubrique 4.2).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278934">Absorption</a></p>
+<p class=AmmCorpsTexte>La tamsulosine est administrée sous forme de comprimés à libération prolongée de type gel matriciel (OCAS). La forme OCAS permet une libération prolongée de la tamsulosine et une exposition suffisante sur 24h avec de légères fluctuations.</p>
+<p class=AmmCorpsTexte>Le chlorhydrate de tamsulosine administré sous forme de comprimés à libération prolongée, est absorbé dans l’intestin. On estime qu’à jeun, 57 % environ de la dose administrée est absorbée.</p>
+<p class=AmmCorpsTexte>La vitesse et le taux d'absorption du chlorhydrate de tamsulosine administré sous forme de comprimés à libération prolongée ne sont pas affectés par la prise d'un repas pauvre en graisses. Le taux d'absorption est augmenté de 64 % et 149 % (respectivement pour l’ASC et la C<sub>max</sub>) par la prise d'un repas riche en graisses par rapport aux valeurs à jeun </p>
+<p class=AmmCorpsTexte>La pharmacocinétique de la tamsulosine est linéaire.</p>
+<p class=AmmCorpsTexte>Après administration d’une dose unique d’OMEXEL L.P. 0,4 mg à jeun, le pic plasmatique est atteint en moyenne 6 heures après la prise.</p>
+<p class=AmmCorpsTexte>Après administrations réitérées, à l’état d’équilibre plasmatique qui est atteint le 4<sup>ème</sup> jour, la concentration plasmatique maximale est atteinte respectivement entre 4 et 6 heures, à jeun ou après un repas. Les concentrations plasmatiques aux pics atteignent 6 ng/ml à la première prise et jusqu’à 11 ng/ml à l’état d’équilibre.</p>
+<p class=AmmCorpsTexte>A jeun, et après un repas, la concentration minimale de la forme prolongée de tamsulosine représente 40 % de la concentration plasmatique maximale.</p>
+<p class=AmmCorpsTexte>Il existe une importante variation inter-individuelle des concentrations plasmatiques atteintes que ce soit après prise unique ou prises répétées.</p>
+<p class=AmmAnnexeTitre3>Distribution</p>
+<p class=AmmCorpsTexte>Chez l’homme, la tamsulosine est liée à 99% aux protéines plasmatiques. Le volume de distribution est faible (environ 0,2 L/kg).</p>
+<p class=AmmAnnexeTitre3>Biotransformation</p>
+<p class=AmmCorpsTexte>L’effet de premier passage du chlorhydrate de tamsulosine est faible ; la molécule est en grande quantité présente dans le plasma sous forme inchangée et est métabolisée lentement au niveau du foie.</p>
+<p class=AmmCorpsTexte>Chez le rat, pratiquement aucune induction des enzymes hépatiques microsomales liée à la tamsulosine n’a été observée.</p>
+<p class=AmmCorpsTexte>Les résultats<i> in vitro</i> suggèrent que le CYP3A4 et le CYP2D6 sont impliqués dans le métabolisme du chlorhydrate de tamsulosine, avec l’intervention possible mineure d'autres isoenzymes CYP. L'inhibition des enzymes CYP3A4 et CYP2D6 responsables du métabolisme des médicaments pourrait entraîner une augmentation de l'exposition au chlorhydrate de tamsulosine (voir rubriques 4.4 et 4.5).</p>
+<p class=AmmCorpsTexte>Aucun des métabolites formés ne montre une activité pharmacologique supérieure à celle de la tamsulosine inchangée.</p>
+<p class=AmmAnnexeTitre3>Élimination</p>
+<p class=AmmCorpsTexte>Le chlorhydrate de tamsulosine et ses métabolites sont principalement éliminés dans les urines. Environ 4 à 6% de la dose administrée sont excrétés sous forme inchangée.</p>
+<p class=AmmCorpsTexte>Après administration d’une dose unique de 0,4 mg de tamsulosine sous forme de comprimé pelliculé, et à l’équilibre, une demi-vie d’élimination respectivement de 19 heures et 15 heures a été mesurée.</p>
+<p class=AmmAnnexeTitre3>Populations particulières</p>
+<p class=AmmCorpsTexte>Chez le sujet âgé, l’insuffisant rénal (clairance de la créatinine supérieure à 10 ml/min.) et l’insuffisant hépatique (classe A et B de CHILD-PUGH), il existe une augmentation modérée des taux sanguins de chlorhydrate de tamsulosine qui ne justifie pas d’adaptation de la posologie. Cependant, la prudence s’impose chez ce type de patients (voir <u>rubrique 4.4</u>).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278935">Les essais de toxicité aiguë permettent d’évaluer une DL 50 per os d’environ 700 mg/kg chez le rat et 1 100 mg/kg chez la souris.</a></p>
+<p class=AmmCorpsTexte>Les principaux risques d’intoxication sont de nature neurovégétative :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les doses sans effet toxique chez le rat sont de : 70 mg/kg/jour pour 3 mois de traitement, 5 mg/kg/jour pour 12 mois de traitement,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les systèmes et organes cibles sont de 3 ordres : effets proprement pharmacologiques, effets sur la sphère génitale, effets fonctionnels hépatiques,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les essais de génotoxicité se sont révélés négatifs,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les fonctions de reproduction ne sont pas altérées,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les études de cancérogenèse montrent une hyperplasie des glandes mammaires en rapport avec l’hyperprolactinémie provoquée par le chlorhydrate de tamsulosine chez le rat.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937">Macrogol 8000, macrogol 7 000 000 (sous forme de mélange : macrogol 7 000 000, butylhydroxytoluène (E321), silice colloïdale anhydre), stéarate de magnésium.</a></p>
+<p class=AmmCorpsTexte>Pelliculage : OPADRY jaune 03F22733 (hypromellose, macrogol 8000, oxyde de fer jaune (E172)).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">Sans objet.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte>3 ans.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940">Pas de précautions particulières de conservation.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278942"></a><a name="_Toc142278941">30 comprimés pelliculés sous plaquettes thermoformées (Polyamide-Aluminium-PVC/Aluminium-PVC-PVDC).</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Pas d’exigences particulières.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142278943"><span lang=FI>ASTELLAS PHARMA</span></a></p>
+<p class=AmmCorpsTexte><span lang=FI style='font-size:10.0pt;font-family:"Arial",sans-serif'>9 PLACE MARIE-JEANNE BASSOT</span></p>
+<p class=AmmCorpsTexte><span lang=FI style='font-size:10.0pt;font-family:"Arial",sans-serif'>92300 LEVALLOIS-PERRET</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 369 624 9 1 : 30 comprimés pelliculés sous plaquettes thermoformées (Polyamide-Aluminium-PVC/Aluminium-PVC-PVDC).</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945"><span style='color:#538135'>[à compléter ultérieurement par le titulaire]</span></a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946"><span style='color:#538135'>[à compléter ultérieurement par le titulaire]</span></a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_OMEXEL_L.P._0,4_mg,_comprimé_pelliculé_à_libération_prolongée_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_OMEXEL_L.P._0,4_mg,_comprimé_pelliculé_à_libération_prolongée_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_PRENDRE_OMEXEL_L.P._0,4_mg,_comprimé_pelliculé_à_libération_prolongée_?"
+                     aria-label="3. COMMENT PRENDRE OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée ? (Lien de redirection)">
+                    3. COMMENT PRENDRE OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_OMEXEL_L.P._0,4_mg,_comprimé_pelliculé_à_libération_prolongée_?"
+                     aria-label="5. COMMENT CONSERVER OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée ? (Lien de redirection)">
+                    5. COMMENT CONSERVER OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 14/05/2024</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'><a name="_Toc142278999">OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée</a></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Chlorhydrate de tamsulosine</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279000"><span lang=FR-BE>Veuillez lire attentivement cette notice avant de prendre ce médicament car elle contient des informations importantes pour vous.</span></a></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin ou votre pharmacien.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou à votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant de prendre OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment prendre OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_OMEXEL_L.P._0,4_mg,_comprimé_pelliculé_à_libération_prolongée_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279004"></a><a name="_Toc142279003">Classe pharmacothérapeutique : </a>alpha-bloquants - code ATC : G04CA02.</p>
+<p class=AmmCorpsTexte>OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée contient de la tamsulosine, une substance qui appartient à une famille de médicaments appelée alpha-bloquants.</p>
+<p class=AmmCorpsTexte>OMEXEL L.P. est utilisé dans le traitement de certains troubles qui peuvent vous empêcher d’uriner normalement suite à une augmentation de volume (hypertrophie) bénigne de votre prostate.</p>
+<p class=AmmCorpsTexte>Ce médicament est utilisé uniquement chez l’homme <b>dans le traitement des douleurs du bas appareil urinaire associé à un élargissement de la glande prostatique (hyperplasie bénigne de la prostate). Ces douleurs peuvent être des difficultés à uriner (débit urinaire faible), miction goutte à goutte, besoin urgent d’uriner et envie d’uriner fréquemment aussi bien la nuit que le jour.</b></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_OMEXEL_L.P._0,4_mg,_comprimé_pelliculé_à_libération_prolongée_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">Ne prenez jamais OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée :</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous êtes allergique (hypersensible) à la substance active (la tamsulosine) ou à l’un des autres composants contenus dans ce médicament, mentionnés dans la rubrique 6.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous êtes allergique (hypersensible) à un médicament de la même famille (les alphabloquants).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous avez déjà eu des gonflements (oedèmes) du visage, des lèvres et de certaines parties de votre corps (les muqueuses) après avoir pris ce médicament.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous avez déjà eu auparavant une baisse de votre tension artérielle lors d’un passage de la position couchée à la position debout pouvant s’accompagner de vertiges et de malaises (hypotension orthostatique).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous avez une maladie sévère du foie (insuffisance hépatique sévère).</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Avertissements et précautions</p>
+<p class=AmmCorpsTexte><b>Faites attention avec OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée</b> <b>:</b></p>
+<div style='border:solid windowtext 1.0pt;padding:3.0pt 4.0pt 1.0pt 4.0pt'>
+<p class=AmmCorpsTexte style='border:none;padding:0cm'><b>OMEXEL L.P. 0,4 mg ne doit pas être remplacé par d’autres médicaments à base de chlorhydrate de tamsulosine, à l’exception des spécialités figurant dans le même groupe, au répertoire des groupes génériques.</b></p>
+</div>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Vous devez prévenir votre médecin si :</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Vous prenez des médicaments pour traiter une tension artérielle élevée (antihypertenseurs).</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Vous avez déjà eu des malaises alors que vous urinez ou après avoir uriné (syncope mictionnelle).</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Vous avez une maladie des reins (insuffisance rénale chronique).</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Vous avez plus de 65 ans.</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Vous avez des maladies du cœur (patient coronarien). En cas d’aggravation d’un angor, le traitement par ce médicament devra être interrompu.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Pendant le traitement, si vous avez des gonflements (œdèmes) du visage, des lèvres et de certaines parties de votre corps (les muqueuses), cela peut être le signe d’une réaction allergique au médicament. Dans ce cas, vous devez arrêter le traitement et consulter immédiatement votre médecin.</p>
+<p class=AmmCorpsTexteGras>Des malaises peuvent survenir rarement avec OMEXEL L.P et des médicaments apparentés. Aux premiers signes de vertiges ou de faiblesse, vous devez vous asseoir ou vous allonger jusqu’à ce que les sensations de malaise disparaissent. </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Vous devez vous faire opérer de la cataracte ou du glaucome</p>
+<p class=AmmCorpsTexte>Si vous devez prochainement vous faire opérer de la cataracte (opacité du cristallin) ou du glaucome, et si vous avez été ou êtes actuellement ou prévoyez d’être traité par OMEXEL L.P., informez-en votre ophtalmologiste avant l’opération. </p>
+<p class=AmmCorpsTexte>Le chirurgien pourra prendre des précautions appropriées en fonction de votre traitement au moment de l’intervention chirurgicale.</p>
+<p class=AmmCorpsTexteGras>Recommandations concernant votre hygiène de vie</p>
+<p class=AmmCorpsTexte>Durant le traitement vous devez respecter certaines mesures d’hygiène de vie et notamment :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>conservez une activité physique (marcher, courir ou faire du sport),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>faites attention à votre alimentation telle que ne pas faire de repas trop riches, trop épicés et/ou trop alcoolisés,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>ne buvez pas trop le soir,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>maintenez un transit intestinal régulier.</p>
+<p class=AmmListePuces1 style='text-indent:0cm'> </p>
+<p class=AmmCorpsTexteGras>Enfants et adolescents</p>
+<p class=AmmCorpsTexte>Ne donnez pas ce médicament à des enfants ou des adolescents de moins de 18 ans, car il n’a pas d’effet thérapeutique dans cette population.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée</p>
+<p class=AmmCorpsTexte>Informez votre médecin ou pharmacien si vous prenez, avez récemment pris ou pourriez prendre tout autre médicament, même s’il s’agit d’un médicament obtenu sans ordonnance.</p>
+<p class=AmmCorpsTexte><b>Ce médicament DOIT ETRE EVITE en association avec</b> des médicaments de la même classe thérapeutique (alpha1-bloquants). Cette association peut entrainer une diminution de la tension artérielle.</p>
+<p class=AmmCorpsTexte>Il est important d’informer votre médecin si vous êtes traités en même temps avec des médicaments qui peuvent diminuer l’élimination de l’Omexel (par exemple kétoconazole, érythromycine).</p>
+<p class=AmmCorpsTexteGras>OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée avec <a name="_Toc142279012">des aliments, des boissons et de l’alcool</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras>Grossesse, allaitement et fertilité</p>
+<p class=AmmCorpsTexte>Omexel n’est pas indiqué chez la femme. La tolérance de ce médicament au cours de la grossesse et son passage dans le lait maternel ne sont pas connus.</p>
+<p class=AmmCorpsTexte>Chez l’homme, une éjaculation anormale a été rapportée (troubles de l’éjaculation).</p>
+<p class=AmmCorpsTexte>Cela signifie que le sperme ne sort pas par l’urètre mais se dirige vers la vessie (éjaculation rétrograde) ou bien le volume d’éjaculation est diminué ou absent (échec de l’éjaculation). Ce phénomène est sans gravité.</p>
+<p class=AmmCorpsTexte>Demandez conseil à votre médecin ou à votre pharmacien avant de prendre tout médicament.</p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>Ce médicament peut provoquer une baisse de la tension lors du passage à la position debout, des vertiges ou des malaises, notamment en début de traitement. Soyez prudent. Il est déconseillé de conduire un véhicule ou d’utiliser une machine si vous ressentez l’un de ces effets.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_PRENDRE_OMEXEL_L.P._0,4_mg,_comprimé_pelliculé_à_libération_prolongée_?'>3. COMMENT PRENDRE OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmAnnexeTitre3><a name="_Toc142279021">Posologie</a></p>
+<p class=AmmCorpsTexte>Veillez à toujours prendre ce médicament en suivant exactement la posologie indiquée par votre médecin. En cas de doute, consultez votre médecin ou votre pharmacien.</p>
+<p class=AmmCorpsTexte>La dose recommandée est de 1 comprimé par jour.</p>
+<p class=AmmAnnexeTitre3>Mode et voie d’administration</p>
+<p class=AmmCorpsTexte>Le médicament est à utiliser par voie orale. Le comprimé doit être avalé avec un verre d’eau sans être croqué ni mâché.</p>
+<p class=AmmAnnexeTitre3>Fréquence d’administration</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Vous devez prendre votre dose quotidienne en une seule prise, indifféremment, pendant ou en dehors d’un repas.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Vous devez prendre votre comprimé chaque jour au même moment de la journée.</p>
+<p class=AmmAnnexeTitre3>Durée du traitement</p>
+<p class=AmmCorpsTexte>Ce traitement nécessite une surveillance médicale régulière et il pourra être nécessaire de le poursuivre plusieurs mois.</p>
+<p class=AmmCorpsTexteGras>Omexel LP est un comprimé avec un principe actif qui est libéré progressivement après ingestion du comprimé. Il est possible que vous observiez un reste de comprimé dans vos selles. Comme le principe actif a déjà été libéré, il n’y a aucun risque que le comprimé soit moins efficace. Habituellement, Omexel est prescrit pendant une longue durée. Les effets sur la vessie et sur les mictions sont maintenus pendant toute la durée du traitement.</p>
+<p class=AmmCorpsTexteGras>Si vous avez pris plus de OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée que vous n’auriez dû</p>
+<p class=AmmCorpsTexte><a name="_Hlk161666722">Contactez rapidement un médecin et allongez-vous</a>.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez de prendre OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée</p>
+<p class=AmmCorpsTexte>Si vous avez oublié 1 jour de traitement, ne prenez pas 2 comprimés le jour suivant mais poursuivez le traitement, le lendemain, au rythme d’un comprimé par jour.</p>
+<p class=AmmCorpsTexte>Ne prenez pas de dose double pour compenser la dose que vous avez oublié de prendre.</p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez de prendre OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée </p>
+<p class=AmmCorpsTexte>Si vous arrêtez de prendre votre traitement de façon prématurée, les symptômes fonctionnels de l’hypertrophie bénigne de la prostate peuvent réapparaître.</p>
+<p class=AmmCorpsTexte>C’est pourquoi il est impératif de poursuivre votre traitement aussi longtemps que votre médecin vous l’a prescrit, même si les troubles dont vous souffrez ont déjà disparu.</p>
+<p class=AmmCorpsTexte>Si vous avez d’autres questions sur l’utilisation de ce médicament, demandez plus d’informations à votre médecin ou à votre pharmacien.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</a></p>
+<p class=AmmCorpsTexteGras>Les effets suivants surviennent fréquemment (de 1 à 10 personnes sur 100) :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Des étourdissements, surtout lors du passage de la position couchée à la position debout.</p>
+<p class=AmmListePuces1 style='margin-bottom:12.0pt'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ejaculation anormale (troubles de l’éjaculation). Cela signifie que le sperme ne sort pas par l’urètre mais se dirige vers la vessie (éjaculation rétrograde) ou bien le volume d’éjaculation est diminué ou absent (échec de l’éjaculation). Ce phénomène est sans gravité.</p>
+<p class=AmmCorpsTexteGras>Les effets suivants surviennent peu fréquemment (de 1 à 10 personnes sur 1000) :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>des maux de tête,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>des palpitations (le cœur bat plus rapidement que la normale et vous pouvez vous en rendre compte par vous-même),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une baisse de la tension artérielle au moment du passage d’une position assise ou allongée à une position debout (hypotension orthostatique),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>un nez bouché et un nez qui coule (rhinite),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>des diarrhées, des nausées et des vomissements, une constipation,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une fatigue (asthénie),</p>
+<p class=AmmListePuces1 style='margin-bottom:12.0pt'><span class=AmmCorpsTexteCar><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span></span>des éruptions et des démangeaisons sur la peau (urticaire).</p>
+<p class=AmmCorpsTexteGras>Les effets suivants surviennent rarement (de 1 à 10 personnes sur 10 000) :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>un malaise (syncope),</p>
+<p class=AmmListePuces1 style='margin-bottom:12.0pt'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une allergie que vous reconnaitrez par des gonflements du visage, des lèvres ou des autres parties du corps, <b>des difficultés à respirer ou des démangeaisons, éruption cutanée comme une réaction allergique (angioedème).</b></p>
+<p class=AmmCorpsTexteGras>Les effets suivants surviennent très rarement (moins de 1 personne sur 10 000) :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Une érection prolongée et douloureuse (priapisme). Celle-ci doit immédiatement donner lieu à une prise en charge médicale,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Eruption cutanée,</p>
+<p class=AmmListePuces1 style='margin-bottom:12.0pt'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Inflammation et formation de vésicules sur la peau et/ou les muqueuses des lèvres, des yeux, de la bouche, des voies nasales ou génitales (syndrome de Stevens-Johnson),</p>
+<p class=AmmCorpsTexteGras style='margin-right:-3.45pt'>Les effets suivants surviennent à une fréquence indéterminée (ne peut être estimée sur la base des données disponibles) :</p>
+<p class=AmmListePuces1 style='margin-right:-3.45pt;text-align:justify'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Vision trouble</p>
+<p class=AmmListePuces1 style='margin-right:-3.45pt;text-align:justify'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Troubles de la vision</p>
+<p class=AmmListePuces1 style='margin-right:-3.45pt;text-align:justify'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Saignements de nez (Epistaxis)</p>
+<p class=AmmListePuces1 style='margin-right:-3.45pt;text-align:justify'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Eruptions cutanées sévères (Erythème polymorphe, dermatite exfoliative)</p>
+<p class=AmmListePuces1 style='margin-right:-3.45pt;text-align:justify'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Rythme cardiaque irrégulier (fibrillation auriculaire, arythmie, tachycardie),</p>
+<p class=AmmListePuces1 style='margin-right:-3.45pt;text-align:justify'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Difficultés à respirer (dyspnée),</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:-3.45pt;margin-bottom: 12.0pt;margin-left:18.0pt;text-align:justify'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Bouche sèche.</p>
+<p class=AmmCorpsTexteGras>Si vous devez vous faire opérer de la cataracte ou du glaucome</p>
+<p class=AmmCorpsTexte>Au cours d’une opération de l’œil (opération de la cataracte ou du glaucome) et si vous prenez ou avez pris ce médicament, la pupille peut mal se dilater et l’iris (la partie colorée de l’œil) peut devenir flasque pendant l’intervention (voir également le paragraphe Si vous devez vous faire opérer de la cataracte ou du glaucome à la <u>rubrique 2</u>).</p>
+<p class=AmmCorpsTexteGras>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet:<span style='color:#353838'> </span><a name="_Hlk161666889"></a><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_OMEXEL_L.P._0,4_mg,_comprimé_pelliculé_à_libération_prolongée_?'>5. COMMENT CONSERVER OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas ce médicament après la date de péremption indiquée sur la </span>boîte <span lang=FR-BE>après {EXP}. La date de péremption fait référence au dernier jour de ce mois.</span></p>
+<p class=AmmCorpsTexte>Pas de précautions particulières de conservation.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout <span style='color:black'>ou avec </span>les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est :</p>
+<p class=AmmComposition>Chlorhydrate de tamsulosine..0,400 mg</p>
+<p class=AmmComposition>Equivalent à tamsulosine0,367 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un comprimé pelliculé à libération prolongée.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont : </p>
+<p class=AmmCorpsTexte>Macrogol 8000, macrogol 7 000 000 (sous forme de mélange : macrogol 7 000 000, butylhydroxytoluène (E321), silice colloïdale anhydre), stéarate de magnésium.</p>
+<p class=AmmCorpsTexte><u>Pelliculage du comprimé</u> : OPADRY jaune 03F22733 (hypromellose, macrogol 8000, oxyde de fer jaune (E172)).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que OMEXEL L.P. 0,4 mg, comprimé pelliculé à libération prolongée et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:6.0pt'><span style='font-size:10.0pt; font-family:"Arial",sans-serif'>Ce médicament se présente sous forme de comprimé pelliculé à libération prolongée (comprimé rond, de 9 mm de diamètre environ, bi-convexe, jaune et marqué du code « 04 »). </span></p>
+<p class=AmmCorpsTexte style='margin-bottom:6.0pt'><span style='font-size:10.0pt; font-family:"Arial",sans-serif'>Chaque boîte contient 30 comprimés.</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmTitulaireNom><a name="_Toc142279031">ASTELLAS PHARMA</a></p>
+<p class=AmmCorpsTexte><span lang=FI style='font-size:10.0pt;font-family:"Arial",sans-serif'>9 PLACE MARIE-JEANNE BASSOT</span></p>
+<p class=AmmTitulaireCpVillePays><span style='font-size:10.5pt'>92300 LEVALLOIS-PERRET</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmTitulaireNom><a name="_Toc142279032">ASTELLAS PHARMA</a></p>
+<p class=AmmCorpsTexte><span lang=FI style='font-size:10.0pt;font-family:"Arial",sans-serif'>9 PLACE MARIE-JEANNE BASSOT</span></p>
+<p class=AmmTitulaireCpVillePays><span style='font-size:10.5pt'>92300 LEVALLOIS-PERRET</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279033"><b><span lang=FI style='font-size: 10.0pt;font-family:"Arial",sans-serif;text-transform:uppercase'>Delpharm Meppel B.V.</span></b></a></p>
+<p class=AmmCorpsTexte><span lang=FI style='font-size:10.0pt;font-family:"Arial",sans-serif; text-transform:uppercase'>Hogemaat 2</span></p>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; text-transform:uppercase'>7942 JG Meppel</span></p>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>PAYS-BAS</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+<p class=AmmCorpsTexte> </p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

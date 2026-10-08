@@ -1,0 +1,1781 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="/EQeb177uZXzB134YW0jKA==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="/EQeb177uZXzB134YW0jKA==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 31/08/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant STILNOX 10 mg, comprimé pelliculé sécable"
+            aria-level="3"
+          >
+            STILNOX 10 mg, comprimé pelliculé sécable
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament STILNOX 10 mg, comprimé pelliculé sécable - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-bon-usage" class="fr-tabs__tab  fr-tabs__tab--icon-left" tabindex="-1" role="tab"
+                            aria-selected="false" aria-controls="tabpanel-bon-usage-panel">Bon usage
+                    </button>
+                  </li>
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                          <p id="tag-generique" class="fr-tag" aria-controls="fr-modal-tag-generique" data-fr-opened="false">
+              <span class="fr-icon-capsule-fill">
+              </span>&nbsp;générique
+          </p>
+              </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 09/06/1987
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : STILNOX 10 mg, comprimé pelliculé sécable - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0415880">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte><a name="_Toc142279004"></a><a name="_Toc142279003">Classe pharmacothérapeutique : hypnotiques et sédatifs - code ATC : N05CF02</a></p>
+<p class=AmmCorpsTexte>Ce médicament est apparenté aux benzodiazépines.</p>
+<p class=AmmCorpsTexte>Ce médicament est indiqué chez l’adulte dans le traitement de courte durée de l’insomnie.</p>
+<p class=AmmCorpsTexte>Chez l’enfant et l’adolescent de moins de 18 ans, étant donné l’absence de données, l’utilisation de ce médicament n’est pas recommandée.</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament appartient au(x) groupe(s) générique(s) suivants : <br/><ul role="list"><li role='listitem'><a href='/medicament/affiche/groupe-generique/63179285/276' aria-describedby='tooltip-medicament-generique-0'>ZOLPIDEM (TARTRATE DE) 10 mg - STILNOX 10 mg, comprimé pelliculé sécable</a><span id='tooltip-medicament-generique-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Ouvrir la page de détail sur ce groupe générique</span></li></ul></p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Comprimé ( Composition pour un comprimé )<ul role="list"><li role="listitem" style="list-style-type: none;"> > tartrate de zolpidem<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">10 mg </span></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > plaquette(s) PVC-Aluminium de 7 comprimé(s)  </p><p>Code CIP : 339 036-1 ou 34009 339 036 1 9<br/>Déclaration de commercialisation : 19/02/1996<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 1,17 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 2,19 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :15%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span><br/><p> > plaquette(s) PVC aluminium de 14 comprimé(s)  </p><p>Code CIP : 346 585-7 ou 34009 346 585 7 0<br/>Déclaration de commercialisation : 31/01/2000<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 1,70 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-1-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 2,72 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :15%</li></ul></span></div><span id='tooltip-info-cnam-1-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></div></div>
+                
+                                  <br /><div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-bon-usage-medicament' >Documents de bon usage du médicament <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-document-bon-usage-medicament' href='#top'></a></h5><span id='tooltip-heading-document-bon-usage-medicament' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><ul><li><a class='lien_bon_usage' href='https://www.has-sante.fr/jcms/c_2015058' target='_blank'>Quelle place pour les benzodiazépines dans l’insomnie ?</a><p>Auteur : Haute autorité de santé<br />Type : Fiche Bon Usage du Médicament<br />Date de mise à jour :Avril  2017<br /></p></li></ul><ul><li><a class='lien_bon_usage' href='https://www.has-sante.fr/jcms/c_2038262/' target='_blank'>Arrêt des benzodiazépines et médicaments apparentés : démarche du médecin traitant en ambulatoire</a><p>Auteur : Haute autorité de santé<br />Type : Fiche mémo<br />Date de mise à jour :Juin  2015<br /></p></li></ul></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><div class='fr-grid-row'><div class='fr-col'><p>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence. </p></div></div><div class='fr-grid-row'><div class='fr-col'><p>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprès de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-smr-aide-2'>plus d'informations dans l'aide</a>). Les avis et synthèses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-smr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection à la page d'aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'SMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur du SMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td>Faible</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2748751'>Avis du 08/02/2017</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 08/02/2017 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Renouvellement d'inscription (CT)</td><td class='text-align-center'>Le service médical rendu de STILNOX et ses génériques est faible dans le traitement des « troubles sévères du sommeil dans les cas suivants : insomnie occasionnelle, insomnie transitoire ».</td></tr></tbody></table></div></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div><div class='fr-col'><p>Pas d'ASMR disponible pour ce médicament (<a href='/aide#le-medicament-que-je-recherche-ne-mentionne-pas-de-service-medical-rendu-(SMR)-ni-amelioration-du-service-medical-rendu-(ASMR)' aria-describedby='tooltip-asmr-aide'>plus d'informations dans l\'aide</a>)</p><span id='tooltip-asmr-aide' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers aide</span></div></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : SANOFI WINTHROP INDUSTRIE</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li>chevauchement interdit sauf mention expresse du prescripteur portée sur l'ordonnance</li><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li><li>prescription en toutes lettres sur ordonnance sécurisée</li><li>prescription limitée à 4 semaines</li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure nationale</li><li>Code CIS : &nbsp;6 317 928 5</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : STILNOX 10 mg, comprimé pelliculé sécable - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="STILNOX 10 mg, comprimé pelliculé sécable, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 08/02/2024</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras>STILNOX 10 mg, comprimé pelliculé sécable</p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition><a name="_Toc142278914">Tartrate de zolpidem............................................................................................................... 10 mg</a></p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un comprimé pelliculé sécable.</p>
+<p class=AmmCorpsTexte>Excipient à effet notoire : lactose.</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Comprimé pelliculé sécable.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">Les indications sont limitées à un traitement à court-terme des troubles sévères du sommeil chez l’adulte :</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>insomnie occasionnelle,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>insomnie transitoire.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278918">Posologie</a></p>
+<p class=AmmAnnexeTitre4>Dose</p>
+<p class=AmmCorpsTexte>Le traitement doit être pris en une seule prise et ne doit pas être ré-administré durant la même nuit.</p>
+<p class=AmmCorpsTexte>La dose journalière recommandée pour les adultes est de 10 mg.</p>
+<p class=AmmCorpsTexte>La prise doit avoir lieu immédiatement au moment du coucher.</p>
+<p class=AmmCorpsTexte>Le traitement sera initié à la dose efficace la plus faible et la dose maximale de 10 mg ne doit pas être dépassée.</p>
+<p class=AmmAnnexeTitre4>Sujets âgés ou fragilisés</p>
+<p class=AmmCorpsTexte>Les sujets âgés ou fragilisés étant particulièrement sensibles aux effets du zolpidem, la posologie recommandée dans cette population est de 5 mg (soit 1/2 comprimé).</p>
+<p class=AmmAnnexeTitre4>Insuffisants hépatiques</p>
+<p class=AmmCorpsTexte>L'élimination et le métabolisme du zolpidem étant diminués en cas d'insuffisance hépatique, le traitement doit être initié chez ces patients à la posologie de 5 mg par jour, en prêtant une attention particulière chez les sujets âgés.</p>
+<p class=AmmCorpsTexte>Dans tous les cas, la posologie ne doit pas dépasser 10 mg par jour.</p>
+<p class=AmmCorpsTexte>STILNOX 10 mg, comprimé pelliculé sécable peut être prescrit, soit de façon continue, soit à la demande, selon la symptomatologie du patient.</p>
+<p class=AmmAnnexeTitre4>Population pédiatrique</p>
+<p class=AmmCorpsTexte>La tolérance et l’efficacité du zolpidem n’a pas été démontrée chez les enfants et les adolescents de moins de 18 ans. Par conséquent, le zolpidem n’est pas recommandé dans cette population. Les données disponibles des essais cliniques contrôlés <i>versus</i> placebo sont présentées en rubrique 5.1.</p>
+<p class=AmmAnnexeTitre4>Durée</p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Comme avec tous les hypnotiques, l'utilisation à long terme du zolpidem n'est pas recommandée. </span>Le traitement doit être aussi bref que possible et ne doit pas excéder 4 semaines, y compris la période de réduction de la posologie (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexte>La durée du traitement doit être présentée au patient :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>2 à 5 jours en cas d'insomnie occasionnelle (comme par exemple lors d'un voyage),</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>2 à 3 semaines en cas d'insomnie transitoire (comme lors de la survenue d'un événement grave).</p>
+<p class=AmmCorpsTexte>Les traitements très brefs ne nécessitent pas d'arrêt progressif.</p>
+<p class=AmmCorpsTexte>La prolongation du traitement au-delà de la période maximale préconisée <span style='color:#222222'>ne doit pas avoir lieu sans réévaluation de l’état du patient, car le risque d'abus et de dépendance augmente avec la durée du traitement (voir rubrique 4.4).</span></p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte>Voie orale.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278919">Ce médicament ne doit <u>jamais</u> être utilisé dans les situations suivantes :</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>hypersensibilité à la substance active ou à l’un des excipients mentionnés à la rubrique 6.1,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>insuffisance respiratoire sévère,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>syndrome d'apnée du sommeil,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>insuffisance hépatique sévère, aiguë ou chronique (risque de survenue d'une encéphalopathie),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>antécédents de comportements complexes du sommeil après la prise de zolpidem (voir rubrique 4.4),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>myasthénie.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278920">Mises en garde spéciales</a></p>
+<p class=AmmCorpsTexte><u>TOLERANCE PHARMACOLOGIQUE</u></p>
+<p class=AmmCorpsTexte>L'effet sédatif ou hypnotique des benzodiazépines et apparentés peut diminuer progressivement malgré l'utilisation de la même dose en cas d'administration durant plusieurs semaines.</p>
+<p class=AmmCorpsTexte><u>ABUS ET DEPENDANCE</u></p>
+<p class=AmmCorpsTexte>Tout traitement par le zolpidem, notamment en cas d'utilisation prolongée, peut entraîner un usage abusif et/ou un état de pharmacodépendance physique et psychique.</p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Le risque de dépendance augmente avec la dose et la durée du traitement. </span></p>
+<p class=AmmCorpsTexte>Des cas de dépendance ont été rapportés plus fréquemment chez les patients traités par le zolpidem pendant plus de 4 semaines. <span style='color:#222222'>Le risque d'abus et de dépendance est également plus élevé chez les patients ayant des antécédents de troubles psychiatriques et/ou de dépendance à l’alcool, aux drogues ou d’abus de médicaments. Le zolpidem doit être utilisé avec une extrême précaution chez les patients souffrant </span>ou présentant des antécédents <span style='color:#222222'>d’alcoolisme ou d’usage de substance(s). </span></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Une</span> pharmacodépendance peut survenir à doses thérapeutiques et/ou chez des patients sans facteur de risque individualisé.</p>
+<p class=AmmCorpsTexte><u>SYNDROME DE SEVRAGE </u></p>
+<p class=AmmCorpsTexte>A l’arrêt du traitement, un syndrome de sevrage peut apparaitre.</p>
+<p class=AmmCorpsTexte>Certains symptômes sont fréquents et d'apparence banale : insomnie, céphalées, anxiété importante, myalgies, tension musculaire, irritabilité.</p>
+<p class=AmmCorpsTexte>D'autres symptômes sont plus rares : agitation voire épisode confusionnel, paresthésies des extrémités, hyperréactivité à la lumière, au bruit, et au contact physique, dépersonnalisation, déréalisation, phénomènes hallucinatoires, délire, convulsions.</p>
+<p class=AmmCorpsTexte>Les symptômes du sevrage peuvent se manifester dans les jours qui suivent l'arrêt du traitement. Pour les benzodiazépines à durée d'action brève, et surtout si elles sont données à doses élevées, les symptômes peuvent même se manifester dans l'intervalle qui sépare deux prises.</p>
+<p class=AmmCorpsTexte>L'association de plusieurs benzodiazépines risque, quelle qu'en soit l'indication anxiolytique ou hypnotique, d'accroître le risque de pharmacodépendance.</p>
+<p class=AmmCorpsTexte>Voir rubrique 4.4, paragraphe « <span style='text-transform:uppercase'>Modalités d’arrêt progressif du traitement</span> ».</p>
+<p class=AmmCorpsTexte><u>PHENOMENE DE REBOND</u></p>
+<p class=AmmCorpsTexte>Ce syndrome transitoire peut se manifester sous la forme d'une exacerbation de l'insomnie qui avait motivé le traitement par les benzodiazépines et apparentés.</p>
+<p class=AmmCorpsTexte>Voir rubrique 4.4, paragraphe « <span style='text-transform:uppercase'>Modalités d’arrêt progressif du traitement</span> ».</p>
+<p class=AmmCorpsTexte><u>ALTERATIONS DES FONCTIONS PSYCHOMOTRICES</u></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Comme d'autres médicaments sédatifs/hypnotiques, le zolpidem a des effets dépresseurs sur le Système Nerveux Central </span>(SNC)<span style='color:#222222'>.</span></p>
+<p class=AmmCorpsTexte>Des altérations des fonctions psychomotrices sont susceptibles d’apparaître dans les heures qui suivent la prise.</p>
+<p class=AmmCorpsTexte>Le risque d’altération des fonctions psychomotrices, dont l’aptitude à conduire, augmente dans les situations suivantes :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>prise de ce médicament moins de 8 heures avant d’exercer une activité qui requiert une vigilance (voir rubrique 4.7) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>prise d’une dose supérieure à la dose recommandée ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>coadministration avec d’autres dépresseurs du système nerveux central, d’autres molécules qui augmentent les concentrations sanguines de zolpidem, ou avec de l’alcool ou encore des substances illicites (voir rubriques 4.5 et 4.7).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Le zolpidem doit être pris en une seule prise immédiatement au moment du coucher et ne doit pas être ré-administré durant la même nuit.</p>
+<p class=AmmCorpsTexte><u>AMNESIE</u></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>Une amnésie antérograde est susceptible d’apparaître dans les heures qui suivent la prise.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Pour diminuer ces risques, les patients doivent s’assurer qu’ils pourront avoir une durée de sommeil ininterrompue de 8 heures (voir rubrique 4.8).</p>
+<p class=AmmCorpsTexte><u>TROUBLES DU COMPORTEMENT</u></p>
+<p class=AmmCorpsTexte>Chez certains sujets, les benzodiazépines et produits apparentés peuvent entraîner un syndrome associant à des degrés divers une altération de l'état de conscience et des troubles du comportement et de la mémoire.</p>
+<p class=AmmCorpsTexte>Peuvent être observés :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>insomnie exacerbée, cauchemars, agitation, nervosité,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>délire ou idées délirantes, hallucinations, état confuso-onirique, symptômes de type psychotique,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>désinhibition avec impulsivité,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>euphorie, irritabilité,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>amnésie antérograde,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>suggestibilité.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Ce syndrome peut s'accompagner de troubles potentiellement dangereux pour le patient ou pour autrui, à type de :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>comportement inhabituel pour le patient,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>comportement auto- ou hétéro-agressif, notamment si l'entourage tente d'entraver l'activité du patient,</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>conduites automatiques avec amnésie post-événementielle.</p>
+<p class=AmmCorpsTexte>Ces manifestations imposent l'arrêt du traitement.</p>
+<p class=AmmCorpsTexte><u>SOMNAMBULISME ET COMPORTEMENTS ASSOCIES</u></p>
+<p class=AmmCorpsTexte>Des comportements complexes du sommeil, notamment le somnambulisme et d’autres comportements associés tels que conduire en état de somnambulisme, préparer et consommer des aliments, passer des appels téléphoniques ou avoir des relations sexuelles, accompagnés d'amnésie au réveil, ont été rapportés chez des patients qui ont pris du<i> z</i>olpidem et n’étaient pas totalement éveillés. Ces évènements peuvent se produire après la première prise ou toute utilisation ultérieure de <i>z</i>olpidem. Le traitement par zolpidem doit être immédiatement arrêté si un patient présent<i>e</i> un comportement complexe du sommeil, en raison du risque pour lui-même et son entourage (voir rubrique 4.3). La consommation d'alcool ou d'autres dépresseurs du système nerveux central avec du<i> z</i>olpidem semble augmenter le risque de tels comportements, tout comme la prise de zolpidem à des doses supérieures à la dose maximale recommandée.</p>
+<p class=AmmCorpsTexte><u>RISQUE D'ACCUMULATION</u></p>
+<p class=AmmCorpsTexte>Les benzodiazépines et apparentés (comme tous les médicaments) persistent dans l'organisme pour une période de l'ordre de 5 demi-vies (voir rubrique 5.2).</p>
+<p class=AmmCorpsTexte>Chez les personnes âgées ou souffrant d'insuffisance rénale ou hépatique, la demi-vie peut s'allonger considérablement. Lors de prises répétées, le médicament ou ses métabolites atteignent le plateau d'équilibre beaucoup plus tard et à un niveau beaucoup plus élevé. Ce n'est qu'après l'obtention d'un plateau d'équilibre qu'il est possible d'évaluer à la fois l'efficacité et la sécurité du médicament.</p>
+<p class=AmmCorpsTexte>Une adaptation posologique peut être nécessaire (voir rubrique 4.2).</p>
+<p class=AmmCorpsTexte>Ceci n'est pas attendu avec le zolpidem en cas d'insuffisance rénale, compte-tenu de son métabolisme (voir rubrique 5.2).</p>
+<p class=AmmCorpsTexte><u>RISQUE EN CAS DE PRISE CONCOMITANTE D’OPIOÏDES </u></p>
+<p class=AmmCorpsTexte>La prise concomitante de zolpidem et d’opioïdes peut entrainer une sédation, une dépression respiratoire, un coma et un décès. En raison de ces risques, la prescription concomitante d’opioïdes et de médicaments sédatifs, comme les benzodiazépines ou produits apparentés, tel que le zolpidem doit être réservée aux patients pour lesquels les alternatives thérapeutiques ne sont pas possibles.</p>
+<p class=AmmCorpsTexte>Si la décision est prise de prescrire de façon concomitante du zolpidem et des opioïdes, la dose efficace la plus faible doit être prescrite et la durée de traitement doit être la plus courte possible (voir rubrique 4.2). Le patient doit être étroitement suivi concernant les signes et les symptômes de dépression respiratoire et de sédation. Dans ce cadre, il est fortement recommandé de sensibiliser le patient et son entourage sur ces symptômes (voir rubrique 4.5).</p>
+<p class=AmmCorpsTexte><u>SUJET AGE</u></p>
+<p class=AmmCorpsTexte>Les benzodiazépines et produits apparentés doivent être utilisés avec prudence chez le sujet âgé, en raison du risque de sédation et/ou d'effet myorelaxant qui peuvent favoriser les chutes, avec des conséquences souvent graves dans cette population, et en raison de la fréquence plus importante des troubles du comportement.</p>
+<p class=AmmCorpsTexte><u>INSUFFISANT HEPATIQUE</u></p>
+<p class=AmmCorpsTexte>Le risque d’accumulation conduit à adapter la posologie (voir rubrique 4.2).</p>
+<p class=AmmCorpsTexte>Le zolpidem ne doit pas être utilisé chez les patients présentant une insuffisance hépatique sévère car cela peut entraîner une encéphalopathie (voir rubriques 4.2, 4.3 et 4.8).</p>
+<p class=AmmCorpsTexte>LIEE A LA PRESENCE D’EXCIPIENT A EFFET NOTOIRE</p>
+<p class=AmmCorpsTexte>Ce médicament contient du lactose. Son utilisation est déconseillée chez les patients présentant une intolérance au galactose, un déficit en lactase de Lapp ou un syndrome de malabsorption du glucose ou du galactose (maladies héréditaires rares).</p>
+<p class=AmmAnnexeTitre3>Ce médicament contient moins de 1 mmol (23 mg) de sodium par comprimé, c’est-à-dire qu’il est essentiellement « sans sodium ».Précautions particulières d'emploi</p>
+<p class=AmmCorpsTexte>La plus grande prudence est recommandée en cas d'antécédents d'alcoolisme ou d'autres dépendances, médicamenteuses ou non (voir rubrique 4.5).</p>
+<p class=AmmCorpsTexte>Dans tous les cas, l'évaluation de l'insomnie doit être systématiquement réalisée, et ses causes traitées, avant la prescription d'un hypnotique.</p>
+<p class=AmmCorpsTexte>Une insomnie peut révéler un trouble physique ou psychiatrique sous-jacent. La persistance ou l'aggravation de l'insomnie après une période courte de traitement rend nécessaire une réévaluation du diagnostic clinique.</p>
+<p class=AmmCorpsTexte><u>DUREE DE TRAITEMENT</u></p>
+<p class=AmmCorpsTexte>Elle doit être clairement énoncée au patient, en fonction du type de l'insomnie (voir rubrique 4.2).</p>
+<p class=AmmCorpsTexte><u>SUICIDE - DEPRESSION - EPISODE DEPRESSIF MAJEUR</u></p>
+<p class=AmmCorpsTexte>Certaines études épidémiologiques montrent une augmentation de l’incidence <span style='color:#222222'>des idées suicidaires</span>, des tentatives de suicide et des suicides chez les patients dépressifs ou non, et traités par des benzodiazépines et autres hypnotiques, y compris le zolpidem. Cependant, le lien de causalité n’a pas été établi. </p>
+<p class=AmmCorpsTexte>L'insomnie pouvant être un des symptômes de la dépression, celle-ci doit être traitée. En cas de persistance de l'insomnie, le patient doit être réévalué.</p>
+<p class=AmmCorpsTexte>Chez le sujet présentant un épisode dépressif majeur :</p>
+<p class=AmmCorpsTexte>Les benzodiazépines et apparentés ne doivent pas être prescrits seuls car ils laissent la dépression évoluer pour son propre compte avec persistance ou majoration du risque suicidaire.</p>
+<p class=AmmCorpsTexte>Le risque suicidaire étant présent chez ces patients, la plus petite quantité de zolpidem doit être mise à disposition de ces patients (prescription et délivrance) afin de limiter la possibilité d'un surdosage intentionnel.</p>
+<p class=AmmCorpsTexte><u>MODALITES D'ARRET PROGRESSIF DU TRAITEMENT</u></p>
+<p class=AmmCorpsTexte>Elles doivent être énoncées au patient de façon précise.</p>
+<p class=AmmCorpsTexte>Outre la nécessité de décroissance progressive des doses, les patients devront être avertis de la possibilité d'un phénomène de rebond, afin de minimiser l'insomnie qui pourrait découler des symptômes liés à cette interruption, même progressive.</p>
+<p class=AmmCorpsTexte>Le patient doit être prévenu du caractère éventuellement inconfortable de cette phase.</p>
+<p class=AmmCorpsTexte><u>POPULATION PEDIATRIQUE</u></p>
+<p class=AmmCorpsTexte>L'utilisation de STILNOX 10 mg, comprimé pelliculé sécable n'est pas recommandée chez l'enfant en l'absence d'études.</p>
+<p class=AmmCorpsTexte><u>SUJET AGE</u></p>
+<p class=AmmCorpsTexte>Le risque d'accumulation conduit à adapter la posologie (voir rubrique 4.2).</p>
+<p class=AmmCorpsTexte><u>INSUFFISANT RESPIRATOIRE</u></p>
+<p class=AmmCorpsTexte>Chez l'insuffisant respiratoire, il convient de prendre en compte l'effet dépresseur des benzodiazépines et apparentés (d'autant que l'anxiété et l'agitation peuvent constituer des signes d'appel d'une décompensation de la fonction respiratoire qui justifie le passage en unité de soins intensifs).</p>
+<p class=AmmCorpsTexte><u>PATIENTS ATTEINTS DU SYNDROME DU QT LONG</u></p>
+<p class=AmmCorpsTexte>Dans des conditions expérimentales utilisant une très forte concentration et des cellules souches pluripotentes, une étude électrophysiologique cardiaque <i>in vitro</i> a montré que le zolpidem peut réduire la perméabilité des canaux potassiques hERG. La conséquence potentielle de cet effet chez les patients ayant un syndrome du QT long congénital n’est pas connue. Par mesure de précaution, le rapport bénéfice/risque du traitement par zolpidem chez les patients ayant un syndrome du QT long congénital doit être évalué avec attention.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278924"></a><a name="_Toc142278921">Hypnotiques</a></p>
+<p class=AmmCorpsTexte>Les hypnotiques actuellement prescrits sont soit des benzodiazépines et apparentés (zolpidem, zopiclone), soit des antihistaminiques H1. Outre une majoration de la sédation lorsqu’ils sont prescrits avec d’autres médicaments dépresseurs du SNC, ou en cas de consommation alcoolique, il faut prendre en compte également, pour les benzodiazépines, la possibilité de majoration de l’effet dépresseur respiratoire lorsqu’elles sont associées avec des morphinomimétiques, d’autres benzodiazépines, ou du phénobarbital, et cela notamment chez le sujet âgé.</p>
+<p class=AmmAnnexeTitre3 style='margin-top:0cm'>Médicaments dépresseurs du système nerveux central</p>
+<p class=AmmCorpsTexte>Il faut prendre en compte le fait que de nombreux médicaments ou substances peuvent additionner leurs effets dépresseurs du système nerveux central et contribuer à diminuer la vigilance. Il s'agit des dérivés morphiniques (analgésiques, antitussifs et traitements de substitution), des neuroleptiques, des barbituriques, des benzodiazépines, des anxiolytiques autres que les benzodiazépines (par exemple, le méprobamate), des hypnotiques, des antidépresseurs sédatifs (amitriptyline, doxépine, miansérine, mirtazapine, trimipramine), des antihistaminiques H1 sédatifs, des antihypertenseurs centraux, du baclofène, de la thalidomide, des antiépileptiques et des anesthésiques.</p>
+<p class=AmmAnnexeTitre3 style='margin-top:0cm'><a name="_Toc142278922">Associations déconseillées</a></p>
+<p class=AmmCorpsTexteGras>+ Alcool (boisson ou excipient)</p>
+<p class=AmmCorpsTexte>Majoration par l’alcool de l’effet sédatif des benzodiazépines et apparentés. L’altération de la vigilance peut rendre dangereuses la conduite de véhicules et l’utilisation de machines.</p>
+<p class=AmmCorpsTexte>Eviter la prise de boissons alcoolisées et de médicaments contenant de l’alcool.</p>
+<p class=AmmCorpsTexteGras>+ Fluvoxamine</p>
+<p class=AmmCorpsTexte>L’administration concomitante de la fluvoxamine peut augmenter le niveau sanguin de zolpidem. L’utilisation simultanée est déconseillée.</p>
+<p class=AmmCorpsTexteGras>+ Inhibiteurs et inducteurs du CYP 450</p>
+<p class=AmmCorpsTexte>L’administration concomitante de la ciprofloxacine peut augmenter le niveau sanguin de zolpidem. L’utilisation simultanée est déconseillée.</p>
+<p class=AmmCorpsTexteGras>+ Millepertuis</p>
+<p class=AmmCorpsTexte>Il a été montré une interaction pharmacocinétique entre le millepertuis et le zolpidem. Lorsque le millepertuis est administré de façon concomitante au zolpidem, la C<sub>max</sub> et l’AUC de zolpidem sont diminuées (respectivement de 33,7 % et 30,0 %) par rapport au zolpidem administré seul. L’administration concomitante du millepertuis peut diminuer le taux sanguin de zolpidem. L’utilisation simultanée est déconseillée.</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278923">Associations </a>faisant l'objet de précautions d’emploi</p>
+<p class=AmmCorpsTexteGras>+ Rifampicine</p>
+<p class=AmmCorpsTexte>Diminution des concentrations plasmatiques et de l’efficacité du zolpidem par augmentation de son métabolisme hépatique. Surveillance clinique. Utiliser éventuellement un autre hypnotique.</p>
+<p class=AmmAnnexeTitre3>Associations à prendre en compte</p>
+<p class=AmmCorpsTexteGras>+ Autres dépresseurs du système nerveux central </p>
+<p class=AmmCorpsTexte>Augmentation possible de la somnolence et de l’altération des fonctions psychomotrices le lendemain de la prise. L’altération de la vigilance peut rendre dangereuses la conduite de véhicules et l’utilisation de machines (voir rubriques 4.4 et 4.7).</p>
+<p class=AmmCorpsTexte>Des cas isolés d’hallucination visuelle ont été rapportés chez les patients prenant du zolpidem en association avec des antidépresseurs comme le bupropion, la fluoxétine, la sertraline et la venlafaxine.</p>
+<p class=AmmCorpsTexteGras>+ Barbituriques</p>
+<p class=AmmCorpsTexte>Risque majoré de dépression respiratoire, pouvant être fatale en cas de surdosage.</p>
+<p class=AmmCorpsTexteGras>+ Buprénorphine</p>
+<p class=AmmCorpsTexte>Avec la buprénorphine utilisée en traitement de substitution : risque majoré de dépression respiratoire pouvant être fatale. Evaluer attentivement le rapport bénéfice/risque de cette association. Informer le patient de la nécessité de respecter les doses prescrites.</p>
+<p class=AmmCorpsTexteGras>+ Clozapine</p>
+<p class=AmmCorpsTexte>Risque accru de collapsus avec arrêt respiratoire et/ou cardiaque.</p>
+<p class=AmmCorpsTexteGras>+ Opioïdes</p>
+<p class=AmmCorpsTexte>La prise concomitante d’opioïdes et de médicaments sédatifs, comme les benzodiazépines ou les produits apparentés, tel que le zolpidem augmente le risque de sédation, de dépression respiratoire, de coma et de décès, en raison de la majoration des effets dépresseurs du système nerveux central. Les doses et la durée du traitement concomitant doivent être limitées (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexteGras>+ Clarithromycine, érythromycine, télithromycine</p>
+<p class=AmmCorpsTexte>Légère augmentation des effets sédatifs du zolpidem.</p>
+<p class=AmmCorpsTexteGras>+ Kétoconazole, itraconazole, voriconazole</p>
+<p class=AmmCorpsTexte>Légère augmentation des effets sédatifs du zolpidem.</p>
+<p class=AmmCorpsTexteGras>+ Nelfinavir, inhibiteurs de protéases boostés par ritonavir</p>
+<p class=AmmCorpsTexte>Légère augmentation des effets sédatifs du zolpidem.</p>
+<p class=AmmCorpsTexte>Aucune interaction pharmacocinétique significative n’a été observée lors de l’administration du zolpidem avec la ranitidine.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte>De nombreuses données issues d’études de cohorte n’ont pas mis en évidence la survenue d’effets malformatifs lors d’une exposition aux benzodiazépines au cours du 1<sup>er</sup> trimestre de la grossesse. Cependant, dans certaines études épidémiologiques cas-témoins, une augmentation de la survenue de fentes labio-palatines a été observée avec les benzodiazépines. Selon ces données, l’incidence des fentes labio-palatines chez les nouveau-nés serait inférieure à 2/1000 après exposition aux benzodiazépines au cours de la grossesse alors que le taux attendu dans la population générale est de 1/1000.</p>
+<p class=AmmCorpsTexte>En cas de prise de benzodiazépines à fortes doses aux 2<sup>ème</sup> et/ou 3<sup>ème</sup> trimestres de grossesse une diminution des mouvements actifs fœtaux et une variabilité du rythme cardiaque fœtal ont été décrits. Un traitement en fin de grossesse par benzodiazépines même à faibles doses, peut être responsable chez le nouveau-né de signes d'imprégnation tels qu'hypotonie axiale, troubles de la succion entraînant une faible prise de poids. Ces signes sont réversibles, mais peuvent durer 1 à 3 semaines en fonction de la demi-vie de la benzodiazépine prescrite. A doses élevées, une dépression respiratoire ou des apnées, et une hypothermie peuvent apparaître chez le nouveau-né. Par ailleurs, un syndrome de sevrage néo-natal est possible, même en l'absence de signes d'imprégnation. Il est caractérisé notamment par une hyperexcitabilité, une agitation et des trémulations du nouveau-né survenant à distance de l'accouchement. Le délai de survenue dépend de la demi-vie d'élimination du médicament et peut être important quand celle-ci est longue.</p>
+<p class=AmmCorpsTexte>Compte tenu de ces données, par mesure de prudence, l'utilisation de zolpidem est déconseillée au cours de la grossesse quel qu'en soit le terme.</p>
+<p class=AmmCorpsTexte>En cas de prescription de zolpidem à une femme en âge de procréer, celle-ci devrait être avertie de la nécessité de contacter son médecin si une grossesse est envisagée ou débutée afin qu’il réévalue l’intérêt du traitement.</p>
+<p class=AmmCorpsTexte>En fin de grossesse, s'il s'avère réellement nécessaire d'instaurer un traitement par zolpidem, éviter de prescrire des doses élevées et tenir compte, pour la surveillance du nouveau-né, des effets précédemment décrits.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Allaitement</p>
+<p class=AmmCorpsTexte>L'utilisation de ce médicament pendant l'allaitement est déconseillée.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929"><span lang=FR-BE>STILNOX </span>10 mg, comprimé pelliculé sécable </a><span lang=FR-BE>peut influer de façon conséquente l’aptitude à conduire des véhicules et à utiliser des machines.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Prévenir les conducteurs de véhicules et les utilisateurs des machines, comme avec tout autres hypnotique, du risque possible de somnolence, d’allongement du temps de réaction, de vertiges, de torpeur, de vision floue ou double, et d’une diminution de la vigilance ainsi que d’une altération de la conduite le matin suivant la prise du traitement (voir rubrique 4.8).</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Afin de minimiser ce risque, une durée de sommeil ininterrompue de 8 heures est recommandée entre la prise de zolpidem et la conduite automobile, l’utilisation des machines ou tout travail en hauteur.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>L’altération de l’aptitude à conduire et des comportements tels que l’endormissement au volant sont apparus sous zolpidem utilisé seul à dose thérapeutique.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>De plus, ces phénomènes sont accentués par la prise concomitante d’alcool ou d’autres dépresseurs du système nerveux central (voir rubriques 4.4 et 4.5). Les patients doivent être informés de ne pas prendre d’alcool ou d’autres substances psychoactives lors d’un traitement par zolpidem.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmCorpsTexte>Les effets indésirables ont été classés en fonction de leur incidence en utilisant la classification suivante :</p>
+<p class=AmmCorpsTexte>Très fréquent (&#8805; 1/10) ; fréquent (&#8805; 1/100, < 1/10) ; peu fréquent (&#8805; 1/1 000, < 1/100) ; rare (&#8805; 1/10 000, < 1/1 000) ; très rare (< 1/10 000) ; fréquence indéterminée (ne peut être estimée sur la base des données disponibles).</p>
+<p class=AmmCorpsTexte>Ils sont en rapport avec la dose ingérée et la sensibilité individuelle du patient.</p>
+<p class=AmmAnnexeTitre3>Affections du système immunitaire</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Fréquence indéterminée : œdème de Quincke.</p>
+<p class=AmmAnnexeTitre3>Affections psychiatriques (voir rubrique 4.4)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Fréquent : hallucinations, agitation, cauchemars, dépression (voir rubrique 4.4).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Peu fréquent : confusion, irritabilité, nervosité, agressivité, somnambulisme (voir rubrique 4.4), euphorie, comportements complexes du sommeil (voir rubrique 4.4). </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Rare : troubles de la libido.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Très rare : dépendance physique et psychique, même à doses thérapeutiques avec syndrome de sevrage ou phénomène de rebond pouvant survenir à l’arrêt du traitement.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Fréquence indéterminée : troubles du comportement, colère, délire (voir rubrique 4.4).</p>
+<p class=AmmAnnexeTitre3>Affections du système nerveux (voir rubrique 4.4)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Fréquent : baisse de la vigilance voire somnolence (particulièrement chez le sujet âgé), céphalées, vertiges, insomnie, troubles cognitifs tels qu’une amnésie antérograde, qui peut survenir aux doses thérapeutiques, le risque augmentant proportionnellement à la dose.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Peu fréquent : paresthésie, tremblement, troubles de l’attention et de la parole.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Rare : altération de la conscience.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Fréquence indéterminée : ataxie, tension.</p>
+<p class=AmmAnnexeTitre3>Affections oculaires</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Peu fréquent : diplopie, vision trouble.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Rare : déficience visuelle.</p>
+<p class=AmmAnnexeTitre3>Affections respiratoires, thoraciques et médiastinales</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Très rare : dépression respiratoire (Voir rubrique 4.4).</p>
+<p class=AmmAnnexeTitre3>Affections gastro-intestinales</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Fréquent : diarrhée, nausée, vomissement, douleur abdominale.</p>
+<p class=AmmAnnexeTitre3>Affections hépatobiliaires</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Peu fréquent : augmentation des enzymes hépatiques. </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Rare : lésions hépatocellulaires, atteintes cholestatique ou mixte du foie (voir rubriques 4.2, 4.3 et 4.4).</p>
+<p class=AmmAnnexeTitre3>Troubles du métabolisme et de la nutrition</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Peu fréquent : troubles de l’appétit.</p>
+<p class=AmmAnnexeTitre3>Affections de la peau et des tissus sous-cutanés</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Peu fréquent : éruptions cutanées, prurit.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Rare : urticaires.</p>
+<p class=AmmAnnexeTitre3>Affections musculo-squelettiques et systémiques</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Peu fréquent : arthralgie, myalgie, spasmes musculaires, hypotonie musculaire.</p>
+<p class=AmmAnnexeTitre3>Infections et infestations</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Fréquent : infections de l’appareil respiratoire hautes et basses. </p>
+<p class=AmmAnnexeTitre3>Troubles généraux et anomalies au site d’administration</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Fréquent : asthénie.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Rare : troubles de l’équilibre voire chutes.</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté <i>via</i> le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet : <a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278931">Le pronostic vital peut être menacé, notamment dans les cas de polyintoxication impliquant d'autres dépresseurs du système nerveux central (y compris l'alcool). Dans le cas du zolpidem, le pronostic a toujours été favorable pour une mono-intoxication avec des doses de zolpidem allant jusqu'à 400 mg.</a></p>
+<p class=AmmCorpsTexte>En cas de prise massive de zolpidem seul ou en association avec d'autres dépresseurs du système nerveux central (y compris l'alcool), les signes de surdosage se manifestent principalement par une dépression du SNC pouvant aller de la somnolence jusqu'au coma, selon la quantité ingérée.</p>
+<p class=AmmCorpsTexte>Les cas bénins se manifestent par des signes de confusion mentale, une léthargie.</p>
+<p class=AmmCorpsTexte>Les cas plus sérieux rapportés se manifestent par une ataxie, une hypotonie, une hypotension, une dépression respiratoire, exceptionnellement un décès.</p>
+<p class=AmmCorpsTexte>En cas de surdosage oral antérieur à 1 heure, l'induction de vomissement sera pratiquée si le patient est conscient ou, à défaut, un lavage gastrique avec protection des voies aériennes. Passé ce délai, l'administration de charbon activé peut permettre de réduire l'absorption.</p>
+<p class=AmmCorpsTexte>Une surveillance particulière des fonctions cardio-respiratoires en milieu spécialisé est recommandée.</p>
+<p class=AmmCorpsTexte>L'administration de flumazénil peut être utile pour le diagnostic et/ou le traitement d'un surdosage intentionnel ou accidentel en benzodiazépines.</p>
+<p class=AmmCorpsTexte>L'antagonisme par le flumazénil de l'effet des benzodiazépines peut favoriser l'apparition de troubles neurologiques (convulsions), notamment chez le patient épileptique.</p>
+<p class=AmmCorpsTexte>Le zolpidem n'est pas dialysable.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : hypnotiques et sédatifs, code ATC : N05CF02 (N : système nerveux central)</a><span style='font-size:8.0pt'>.</span></p>
+<p class=AmmCorpsTexte>Le zolpidem est une imidazopyridine hypnotique apparentée aux benzodiazépines et a une activité pharmacodynamique qualitativement semblable à celle des autres composés de cette classe :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>myorelaxante,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>anxiolytique,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>sédative,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>hypnotique,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>anticonvulsivante,</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>amnésiante.</p>
+<p class=AmmCorpsTexte>Les études expérimentales ont montré un effet sédatif à des doses inférieures aux doses nécessaires pour obtenir des effets anticonvulsivants, myorelaxants ou anxiolytiques.</p>
+<p class=AmmCorpsTexte>Ces effets sont liés à une action agoniste spécifique sur un récepteur central faisant partie du complexe "récepteurs macromoléculaires GABA-OMEGA", également appelés BZ1 et BZ2 et modulant l'ouverture du canal chlore.</p>
+<p class=AmmCorpsTexte>Le zolpidem se fixe de façon préférentielle sur le sous-type oméga 1 (ou BZ1).</p>
+<p class=AmmCorpsTexte>Chez l'homme, le zolpidem raccourcit le délai d'endormissement, réduit le nombre de réveils nocturnes, augmente la durée totale du sommeil et en améliore la qualité. Ces effets sont associés à un profil électroencéphalographique caractéristique, différent de celui des benzodiazépines. Les études d'enregistrement du sommeil de nuit ont montré que le zolpidem prolonge le stade II aussi bien que les stades de sommeil profond (III et IV). A la posologie recommandée, le zolpidem n'a pas d'influence sur la durée totale du sommeil paradoxal (R.E.M.).</p>
+<p class=AmmCorpsTexte>Les essais randomisés ont seulement démontré l’efficacité de zolpidem à la dose de 10 mg.</p>
+<p class=AmmCorpsTexte>Dans une étude randomisée en double aveugle menée chez 462 sujets volontaires sains âgés de moins de 65 ans présentant une insomnie transitoire, zolpidem à la dose de 10 mg a diminué le temps moyen d’endormissement de 10 mn par rapport au placebo, contre 3 mn pour le zolpidem utilisé à la dose 5 mg.</p>
+<p class=AmmCorpsTexte>Dans une étude randomisée en double aveugle menée chez 114 patients âgés de moins de 65 ans présentant une insomnie chronique, zolpidem à la dose de 10 mg a diminué le temps moyen d’endormissement de 30 minutes par rapport au placebo, contre 15 minutes pour le zolpidem utilisé à la dose de 5 mg.</p>
+<p class=AmmCorpsTexte>Chez certains patients, une dose de 5 mg peut se révéler efficace.</p>
+<p class=AmmAnnexeTitre3>Enfant et adolescent</p>
+<p class=AmmCorpsTexte>Une étude contrôlée randomisée <i>versus</i> placebo menée dans une population de 201 enfants et adolescents âgés de 6 à 17 ans présentant une insomnie associée à un trouble déficit de l’attention/hyperactivité (TDAH) n’a pas démontré d’efficacité du zolpidem à la dose de 0,25 mg/kg/jour (avec un maximum de 10 mg/jour) en comparaison au placebo. Les troubles psychiatriques et neurologiques étaient les évènements indésirables les plus fréquemment observés chez les patients traités par zolpidem en comparaison au groupe placebo, incluant des vertiges (23,5 % <i>versus</i> 1,5 %), des céphalées (12,5 % <i>versus</i> 9,2 %) et des hallucinations (7,4 % <i>versus</i> 0 %).</p>
+<p class=AmmCorpsTexte>Par conséquent, et en l'absence de nouvelles études, le zolpidem ne doit pas être prescrit à cette population (voir rubrique 4.2).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278934">Absorption</a></p>
+<p class=AmmCorpsTexte>Après administration orale, le zolpidem présente une biodisponibilité d'environ 70 % avec une concentration plasmatique maximale atteinte en 0,5 à 3 heures.</p>
+<p class=AmmAnnexeTitre3>Distribution</p>
+<p class=AmmCorpsTexte>Aux doses thérapeutiques, sa pharmacocinétique est linéaire. La fixation aux protéines plasmatiques est d'environ 92 %. Le volume de distribution chez l'adulte est de 0,54 ± 0,02 l/kg.</p>
+<p class=AmmAnnexeTitre3>Elimination</p>
+<p class=AmmCorpsTexte>Le zolpidem est éliminé sous forme de métabolites inactifs (métabolisme hépatique), principalement dans les urines (environ 60 %) et les fèces (environ 40 %). Il ne possède pas d'effet inducteur sur les enzymes hépatiques.</p>
+<p class=AmmCorpsTexte>La demi-vie d'élimination plasmatique est en moyenne de 2,4 heures (0,7 - 3,5 heures).</p>
+<p class=AmmAnnexeTitre3>Populations à risques</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Chez le sujet âgé, une diminution de la clairance hépatique est observée. La concentration au pic est augmentée d'environ 50 % sans qu'il y ait d'allongement significatif de la demi-vie (3 heures en moyenne). Le volume de distribution diminue à 0,34 ± 0,05 l/kg.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Chez les insuffisants rénaux, dialysés ou non, on observe une diminution modérée de la clairance. Les autres paramètres cinétiques ne sont pas modifiés. Le zolpidem n'est pas dialysable.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Chez les insuffisants hépatiques, la biodisponibilité du zolpidem est augmentée. Sa clairance est sensiblement réduite et la demi-vie d'élimination est allongée (environ 10 heures).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278935">Non renseignée.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmAnnexeTitre4><a name="_Toc142278937">Noyau : </a></p>
+<p class=AmmCorpsTexte>Lactose monohydraté, cellulose microcristalline, carboxyméthylamidon sodique, hypromellose, stéarate de magnésium.</p>
+<p class=AmmAnnexeTitre4>Pelliculage : </p>
+<p class=AmmCorpsTexte>Hypromellose, suspension de dioxyde de titane, macrogol 400.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">Sans objet.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278939">3 ans.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940"><span lang=FR-BE>Pas de précautions particulières de conservation.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278942"></a><a name="_Toc142278941">7, 14, 20, 21, 28, 50, 100 ou 150 comprimés sous plaquettes (PVC - Aluminium).</a></p>
+<p class=AmmCorpsTexte>20 ou 100 comprimés en flacon (polypropylène).</p>
+<p class=AmmListePuces1 style='margin-left:0cm;text-indent:0cm'>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Pas d’exigences particulières.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142278943">SANOFI WINTHROP INDUSTRIE</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>82 AVENUE RASPAIL</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>94250 GENTILLY</p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><a name="_Toc142278944"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 329 611 3 9 : 20 comprimés en flacon (polypropylène).</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 555 846 8 1 : 100 comprimés en flacon (polypropylène).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 339 036 1 9 : 7 comprimés sous plaquettes (PVC - Aluminium).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 346 585 7 0 : 14 comprimés sous plaquettes (PVC - Aluminium).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 329 610 7 8 : 20 comprimés sous plaquettes (PVC - Aluminium).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 346 586 3 1 : 21 comprimés sous plaquettes (PVC - Aluminium).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 346 588 6 0 : 28 comprimés sous plaquettes (PVC - Aluminium).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 557 763 2 1 : 50 comprimés sous plaquettes (PVC - Aluminium).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 555 845 1 3 : 100 comprimés sous plaquettes (PVC - Aluminium).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 563 132 0 4 : 150 comprimés sous plaquettes (PVC - Aluminium).</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Liste I </p>
+<p class=AmmCorpsTexte>Durée de prescription limitée à 28 jours </p>
+<p class=AmmCorpsTexte>Prescription en toutes lettres sur ordonnance sécurisée.</p>
+<p class=AmmCorpsTexte>Chevauchement interdit sauf mention expresse du prescripteur portée sur l’ordonnance.</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+                              <div id="tabpanel-bon-usage-panel" class="fr-tabs__panel" role="tabpanel"
+                     aria-labelledby="tabpanel-bon-usage"
+                     tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      
+      <div class="fr-col-12 fr-col-md">
+        <div class="fr-editor">
+
+          
+          
+          
+          
+          
+                      <div class="fr-grid-row">
+              <div class="fr-col">
+                <h5 id="heading-informations-importantes" role="heading" aria-level="5">
+                  <span class="fr-icon-information-line text-color-orange" aria-hidden="true"></span> Informations
+                  importantes
+                  <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage" href="#top"
+                     id="section-glossaire__top_link" role="link"
+                     aria-describedby="tooltip-link-page-top"
+                     aria-label="Redirection vers le haut de page"></a>
+                  <span id="tooltip-link-page-top" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                      Redirection vers le haut de page
+                    </span>
+                </h5>
+                <p aria-labelledby="heading-informations-importantes">Les informations importantes disponibles pour ce médicament sont les suivantes : <br /><ul id="liste_infos_importantes" role="list"><li role='listitem'>    <a  target='_blank'    href='https://ansm.sante.fr/actualites/medicaments-de-linsomnie-des-boites-de-zopiclone-zolpidem-et-nitrazepam-avec-moins-de-comprimes-pour-un-meilleur-usage'>Médicaments de l'insomnie : des boîtes de zopiclone, zolpidem et nitrazépam avec moins de comprimés pour un meilleur usage</a></li><li role='listitem'>    <a  target='_blank'    href='https://ansm.sante.fr/actualites/lansm-lance-une-campagne-de-sensibilisation-au-bon-usage-des-medicaments-dans-le-traitement-de-lanxiete-et-de-linsomnie'>L'ANSM lance une campagne de sensibilisation au bon usage des médicaments dans le traitement de l'anxiété et de l'insomnie</a></li></ul></p>
+              </div>
+            </div>
+          
+          
+          
+                  </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_STILNOX_10_mg,_comprimé_pelliculé_sécable_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE STILNOX 10 mg, comprimé pelliculé sécable ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE STILNOX 10 mg, comprimé pelliculé sécable ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_STILNOX_10_mg,_comprimé_pelliculé_sécable_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE STILNOX 10 mg, comprimé pelliculé sécable ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE STILNOX 10 mg, comprimé pelliculé sécable ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_PRENDRE_STILNOX_10_mg,_comprimé_pelliculé_sécable_?"
+                     aria-label="3. COMMENT PRENDRE STILNOX 10 mg, comprimé pelliculé sécable ? (Lien de redirection)">
+                    3. COMMENT PRENDRE STILNOX 10 mg, comprimé pelliculé sécable ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_STILNOX_10_mg,_comprimé_pelliculé_sécable_?"
+                     aria-label="5. COMMENT CONSERVER STILNOX 10 mg, comprimé pelliculé sécable ? (Lien de redirection)">
+                    5. COMMENT CONSERVER STILNOX 10 mg, comprimé pelliculé sécable ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : STILNOX 10 mg, comprimé pelliculé sécable - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="STILNOX 10 mg, comprimé pelliculé sécable, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 08/02/2024</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'><a name="_Toc142278999">STILNOX 10 mg, comprimé pelliculé sécable</a></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Tartrate de zolpidem</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279000"><span lang=FR-BE>Veuillez lire attentivement cette notice avant de prendre ce médicament car elle contient des informations importantes pour vous.</span></a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin ou votre pharmacien.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><a name="_Toc142279001">1. Qu'est-ce que STILNOX 10 mg, comprimé pelliculé sécable et dans quels cas est-il utilisé ?</a></p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant de prendre STILNOX 10 mg, comprimé pelliculé sécable ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment prendre STILNOX 10 mg, comprimé pelliculé sécable ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver STILNOX 10 mg, comprimé pelliculé sécable ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_STILNOX_10_mg,_comprimé_pelliculé_sécable_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE STILNOX 10 mg, comprimé pelliculé sécable ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279004"></a><a name="_Toc142279003">Classe pharmacothérapeutique : hypnotiques et sédatifs - code ATC : N05CF02</a></p>
+<p class=AmmCorpsTexte>Ce médicament est apparenté aux benzodiazépines.</p>
+<p class=AmmCorpsTexte>Ce médicament est indiqué chez l’adulte dans le traitement de courte durée de l’insomnie.</p>
+<p class=AmmCorpsTexte>Chez l’enfant et l’adolescent de moins de 18 ans, étant donné l’absence de données, l’utilisation de ce médicament n’est pas recommandée.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_STILNOX_10_mg,_comprimé_pelliculé_sécable_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE STILNOX 10 mg, comprimé pelliculé sécable ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279015">Si votre médecin vous a informé(e) d'une intolérance à certains sucres, contactez-le avant de prendre ce médicament.</a></p>
+<p class=AmmCorpsTexteGras>Ne prenez jamais STILNOX 10 mg, comprimé pelliculé sécable :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous êtes allergique à la substance active (Zolpidem), à la classe de produits apparentés aux benzodiazépines ou à l’un des autres composants contenus dans ce médicament, mentionnés dans la rubrique 6.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous avez une insuffisance respiratoire grave.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous avez une maladie grave du foie (insuffisance hépatique grave).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous souffrez d’un syndrome d’apnée du sommeil (trouble caractérisé par des arrêts de la respiration pendant le sommeil).</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous souffrez de myasthénie (maladie des muscles).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Sur une période prolongée. Le traitement doit être aussi court que possible car le risque de dépendance augmente avec la durée du traitement.</span></p>
+<p class=AmmListePuces1 style='margin-bottom:12.0pt;text-align:justify'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE style='color:#222222'>Si</span><span style='color:#222222'> vous avez déjà présenté des épisodes de somnambulisme ou tout autre comportement inhabituel en dormant (comme conduire, manger, passer un appel téléphonique ou avoir des relations sexuelles, etc.) sans être complètement éveillé(e) après avoir pris </span>STILNOX 10 mg, comprimé pelliculé sécable ou d’autres médicaments contenant du zolpidem<span lang=FR-BE>.</span></p>
+<p class=AmmCorpsTexteGras>Avertissements et précautions</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Adressez-vous à votre médecin ou pharmacien avant de prendre </span>STILNOX 10 mg, comprimé pelliculé sécable.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Prévenez votre médecin si votre ECG (électrocardiogramme) montre un problème cardiaque appelé « allongement de l'intervalle QT ».</span></p>
+<p class=AmmCorpsTexte><u>Risque d’ABUS, de DEPENDANCE et de SYNDROME DE SEVRAGE</u></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Veuillez informer votre médecin ou pharmacien si vous avez déjà souffert de troubles psychiatriques ou si vous avez abusé ou avez été dépendant de l'alcool, de médicaments ou de drogues.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas STILNOX 10 mg, comprimé pelliculé sécable sur une période prolongée. Le traitement doit être aussi court que possible.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>La prise de ce type de médicament peut entraîner, surtout en cas d’utilisation prolongée, un usage abusif et un état de dépendance physique et psychique (effets physiques ou psychiques produits par une compulsion à continuer à prendre le médicament). </span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Le risque de dépendance augmente avec la dose et la durée du traitement. Des cas de dépendance ont été rapportés plus fréquemment chez les patients traités par STILNOX 10 mg, comprimé pelliculé sécable pendant plus de 4 semaines. Le risque de dépendance est également augmenté si vous avez des antécédents de troubles psychiatriques et/ou d’alcoolisme, de dépendance aux médicaments ou aux drogues ou d’abus médicamenteux ou de drogues. </span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>La dépendance peut survenir même en l'absence de ces facteurs favorisants.</span><span lang=FR-BE> </span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si une perte d'efficacité survient lors de l'utilisation répétée du médicament, n'augmentez pas la dose.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Pour plus d'information, parlez-en à votre médecin ou à votre pharmacien.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Arrêter BRUTALEMENT ce traitement peut provoquer l'apparition d'un phénomène de SEVRAGE. Celui-ci se caractérise par l'apparition, en quelques heures ou en quelques jours, de signes tels qu’une anxiété importante, une insomnie, des douleurs musculaires, mais on peut observer également une agitation, une irritabilité, des maux de tête, un engourdissement ou des picotements des extrémités, une sensibilité anormale au bruit, à la lumière ou aux contacts physiques, etc...</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Les modalités de l'arrêt du traitement doivent être définies avec votre médecin.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>La diminution très PROGRESSIVE des doses et l'espacement des prises représentent la meilleure prévention de ce phénomène de sevrage. Cette période sera d'autant plus longue que le traitement aura été prolongé.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Risque d’un PHENOMENE DE REBOND</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Malgré la décroissance progressive des doses, un phénomène de REBOND sans gravité peut se produire, avec réapparition TRANSITOIRE des symptômes (insomnie) qui avaient justifié la mise en route du traitement.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Troubles de la mémoire</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Des troubles de la mémoire sont susceptibles d'apparaître dans les heures qui suivent la prise du médicament.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Dans les heures qui suivent, il peut survenir une difficulté à coordonner certains mouvements (altération des fonctions psychomotrices), une diminution de la capacité à conduire, en particulier si :</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>vous prenez ce médicament moins de 8 heures avant d’effectuer des activités nécessitant de la vigilance,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>vous prenez une dose supérieure à la dose recommandée,</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>vous prenez du zolpidem alors que vous utilisez déjà un autre médicament sédatif ou qui augmente la quantité de STILNOX 10 mg, comprimé pelliculé sécable dans le sang, ou encore des boissons alcoolisées ou des médicaments contenant de l’alcool, ou des substances illicites.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Pour diminuer ces risques, il est conseillé de prendre le médicament en une seule prise immédiatement au moment du coucher (voir rubrique 3), de se mettre dans les conditions les plus favorables pour une durée de sommeil ininterrompue de plusieurs heures et ne pas prendre une autre dose durant la même nuit.</span></p>
+<p class=AmmCorpsTexte><u><span lang=FR-BE>Réactions contraires à l’effet recherché, somnambulisme et </span>comportements inhabituels pendant le sommeil</u></p>
+<p class=AmmCorpsTexte>Chez certains sujets, ce médicament peut provoquer des réactions contraires à l’effet recherché : insomnie, cauchemars, agitation, nervosité, euphorie ou irritabilité, tension, modifications de la conscience, voire des comportements potentiellement dangereux (agressivité envers soi-même ou son entourage, ainsi que des troubles du comportement et des actes automatiques).</p>
+<p class=AmmCorpsTexte>STILNOX 10 mg, comprimé pelliculé sécable peut provoquer du somnambulisme ou d’autres comportements inhabituels en dormant <span lang=FR-BE>(comme conduire, manger, passer un appel téléphonique ou avoir des relations sexuelles, etc.) sans être complètement éveillé(e). Le lendemain matin, vous pouvez ne pas vous souvenir de vos actes durant la nuit.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous présentez l'une des situations ci-dessus, arrêtez immédiatement le traitement avec </span>STILNOX 10 mg, comprimé pelliculé sécable<span lang=FR-BE> et contactez votre médecin ou votre pharmacien </span>car ces comportements du sommeil peuvent vous exposer, vous ou d’autres personnes, à un risque grave de blessure.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Boire de l'alcool, ou prendre d'autres médicaments qui rendent somnolent, avec </span>STILNOX 10 mg, comprimé pelliculé sécable peut augmenter le risque de survenue de ces comportements du sommeil.<u> </u></p>
+<p class=AmmCorpsTexte><u><span lang=FR-BE>Utilisation chez le sujet âgé</span></u></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Les benzodiazépines et produits apparentés doivent être utilisés avec prudence chez le sujet âgé, en raison du risque de somnolence et/ou de relâchement musculaire qui peuvent favoriser les chutes, avec des conséquences souvent graves dans cette population.</span></p>
+<p class=AmmCorpsTexte><u><span lang=FR-BE>Utilisation chez les insuffisants hépatiques sévères</span></u></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas STILNOX 10 mg, comprimé pelliculé sécable si vous avez une insuffisance hépatique sévère car cela peut entraîner un risque de maladie inflammatoire du cerveau (encéphalopathie).</span></p>
+<p class=AmmCorpsTexte><u><span lang=FR-BE>Autres avertissements et précautions</span></u></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ce traitement médicamenteux ne peut à lui seul résoudre les difficultés liées à une insomnie. Il convient de demander conseil à votre médecin. Il vous indiquera les conduites pouvant favoriser le sommeil.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>La prise de ce médicament nécessite un suivi médical renforcé notamment en cas de maladie chronique du foie, d'alcoolisme et d'insuffisance respiratoire.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Une insomnie peut révéler un autre trouble, physique ou psychiatrique.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>En cas de persistance ou d'aggravation de l'insomnie après une période courte de traitement, consultez votre médecin.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ce médicament ne traite pas la dépression. Chez le sujet présentant une dépression, il ne doit pas être utilisé seul car il laisserait la dépression évoluer pour son propre compte avec persistance ou majoration du risque suicidaire.</span></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Certaines études ont montré un risque accru d'idées suicidaires, de tentatives de suicide et de suicides chez les patients prenant certains sédatifs et hypnotiques, y compris ce médicament. Cependant, il n'a pas été établi si cela est dû au médicament ou s'il peut y avoir d'autres raisons. Si vous avez des idées suicidaires, contactez votre médecin le plus tôt possible pour obtenir un conseil médical.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>La prise d'alcool est formellement déconseillée pendant la durée du traitement.</span></p>
+<p class=AmmCorpsTexteGras>Enfants</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et STILNOX 10 mg, comprimé pelliculé sécable</p>
+<p class=AmmCorpsTexte>Informez votre médecin ou pharmacien si vous prenez, avez récemment pris ou pourriez prendre tout autre médicament.</p>
+<p class=AmmCorpsTexte>Si vous prenez du STILNOX 10 mg, comprimé pelliculé sécable avec les traitements suivants, cela peut augmenter la somnolence, les difficultés à coordonner certains mouvements le lendemain de la prise et diminuer la capacité à conduire un véhicule et utiliser une machine :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>médicaments utilisés pour traiter certains troubles de l’humeur et du comportement (antipsychotiques),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>médicaments utilisés pour traiter les troubles du sommeil (hypnotiques),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>médicaments utilisés pour calmer ou réduire l’anxiété,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>médicaments utilisés dans le traitement de la dépression,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>traitements des douleurs modérées à sévères (analgésiques narcoleptiques),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>antiépileptiques,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>anesthésiques,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>médicaments utilisés pour traiter les rhinites allergiques ou toute autre allergie et pouvant vous faire dormir (antihistaminiques sédatifs).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Si vous prenez du STILNOX 10 mg, comprimé pelliculé sécable en association avec des antidépresseurs comme le bupropion, la fluoxétine, la sertraline et la venlafaxine, vous pouvez voir, entendre ou sentir des choses qui n’existent pas (hallucination). Il est déconseillé de prendre du STILNOX 10 mg, comprimé pelliculé sécable avec la fluvoxamine, la ciprofloxacine et/ou le millepertuis.</p>
+<p class=AmmCorpsTexte>L'utilisation concomitante du STILNOX 10 mg, comprimé pelliculé sécable et d'opioïdes (analgésiques puissants, médicaments de substitution et certains médicaments contre la toux) augmente le risque de somnolence, de difficultés respiratoires (dépression respiratoire), de coma et peut mettre votre vie en danger. Pour cette raison, l'utilisation concomitante ne doit être envisagée que lorsque d'autres traitements ne sont pas possibles.</p>
+<p class=AmmCorpsTexte>Toutefois, si votre médecin vous prescrit STILNOX 10 mg, comprimé pelliculé sécable en même temps que des opioïdes, la posologie et la durée du traitement concomitant doivent être limitées par votre médecin.</p>
+<p class=AmmCorpsTexte>Informez votre médecin de tous les médicaments opioïdes que vous prenez et suivez attentivement les recommandations de votre médecin concernant la posologie. Il pourrait être utile d'informer vos amis ou votre famille des signes et des symptômes indiqués ci-dessus.</p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Contactez votre médecin en cas de tels symptômes.</span></p>
+<p class=AmmCorpsTexteGras>STILNOX 10 mg, comprimé pelliculé sécable avec des aliments et boissons</p>
+<p class=AmmCorpsTexte>La prise d'alcool est formellement déconseillée pendant la durée du traitement.</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279012">Grossesse et allaitement</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous êtes enceinte ou que vous allaitez, si vous pensez être enceinte ou planifiez une grossesse, demandez conseil à votre médecin</span><span lang=FR-BE> </span><span lang=FR-BE>ou pharmacien avant de prendre ce médicament.</span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Grossesse</span></p>
+<p class=AmmCorpsTexte>Ce médicament est déconseillé pendant la grossesse. Si vous découvrez que vous êtes enceinte ou que vous souhaitez l’être, consultez votre médecin afin qu’il réévalue l’intérêt du traitement.</p>
+<p class=AmmCorpsTexte>Si vous prenez STILNOX <span style='color:#222222'>10 mg, comprimé pelliculé sécable</span> au cours du 1<sup>er</sup> trimestre de la grossesse : de nombreuses données n’ont pas montré d’effet malformatif des benzodiazépines. Cependant, certaines études ont décrit un risque potentiellement augmenté de survenue de fente labio-palatine chez le nouveau-né par rapport au risque présent dans la population générale. Une fente labio-palatine (parfois nommée « bec de lièvre ») est une malformation congénitale causée par une fusion incomplète du palais et de la lèvre supérieure. Selon ces données, l’incidence des fentes labio-palatines chez les nouveau-nés serait inférieure à 2/1000 après exposition aux benzodiazépines au cours de la grossesse alors que le taux attendu dans la population générale est de 1/1000.</p>
+<p class=AmmCorpsTexte>Si vous prenez STILNOX <span style='color:#222222'>10 mg, comprimé pelliculé sécable</span> au 2<sup>ème</sup> et/ou 3<sup>ème</sup> trimestre de grossesse, une diminution des mouvements actifs fœtaux et une variabilité du rythme cardiaque fœtal peuvent survenir.</p>
+<p class=AmmCorpsTexte>Si vous prenez STILNOX <span style='color:#222222'>10 mg, comprimé pelliculé sécable </span>en fin de grossesse, informez-en l’équipe médicale, une surveillance du nouveau-né pourrait être effectuée : une faiblesse musculaire (hypotonie axiale), des difficultés d'alimentation (troubles de la succion entraînant une faible prise de poids), une hyperexcitabilité, une agitation ou des tremblements peuvent survenir chez le nouveau-né, ces troubles étant réversibles. A fortes doses, une insuffisance respiratoire ou des apnées, une baisse de la température centrale du corps (hypothermie) pourraient également survenir chez le nouveau-né.</p>
+<p class=AmmCorpsTexte>Si votre bébé présente un ou plusieurs de ces symptômes à la naissance ou à distance de la naissance, contactez votre médecin et/ou votre sage-femme.</p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Allaitement</span></p>
+<p class=AmmCorpsTexte>Ce médicament passe dans le lait maternel : en conséquence, l'allaitement est déconseillé.</p>
+<p class=AmmCorpsTexte>Demandez conseil à votre médecin ou à votre pharmacien avant de prendre tout médicament.</p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>STILNOX 10 mg, comprimé pelliculé sécable peut avoir une influence sur votre capacité à conduire des véhicules et à utiliser des machines avec un risque d’endormissement au volant. Le jour suivant la prise de STILNOX 10 mg, comprimé pelliculé sécable (comme tout autre hypnotique), vous devez savoir que :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>vous pouvez ressentir de la somnolence, avoir envie de dormir, avoir la tête qui tourne (vertige) ou être désorienté,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>vos prises de décision rapides peuvent être rallongées,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>votre vision peut devenir floue ou double,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>vous pouvez être moins vigilant.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Afin de réduire ces risques, vous devez dormir au moins 8 heures entre la prise de STILNOX 10 mg, comprimé pelliculé sécable et la conduite automobile, l’utilisation des machines ou tout autre travail en hauteur.</p>
+<p class=AmmCorpsTexte>Quand vous prenez du STILNOX 10 mg, comprimé pelliculé sécable, vous ne devez pas boire de boisson alcoolisée, de médicaments contenant de l’alcool, ou prendre d’autres médicaments utilisés pour traiter certains troubles de l’humeur et du comportement (antipsychotiques), car cela peut accentuer les phénomènes ci-dessus.</p>
+<p class=AmmCorpsTexteGras>STILNOX 10 mg, comprimé pelliculé sécable contient du lactose et du sodium</p>
+<p class=AmmCorpsTexte>Ce médicament contient du lactose. Son utilisation est déconseillée chez les patients présentant une intolérance au galactose, un déficit en lactase de Lapp ou un syndrome de malabsorption du glucose ou du galactose (maladies héréditaires rares).</p>
+<p class=AmmCorpsTexte>Ce médicament contient moins de 1 mmol (23 mg) de sodium par comprimé, c’est-à-dire qu’il est essentiellement « sans sodium ».</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_PRENDRE_STILNOX_10_mg,_comprimé_pelliculé_sécable_?'>3. COMMENT PRENDRE STILNOX 10 mg, comprimé pelliculé sécable ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279021"><span lang=FR-BE>Posologie</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>La posologie est strictement individuelle et les doses usuelles peuvent être variables.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>La dose recommandée de STILNOX </span>10 mg, comprimé pelliculé sécable <span lang=FR-BE>est de 10 mg par jour. Cependant une dose plus faible peut vous être prescrite.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Dans tous les cas, votre médecin s'attachera à trouver la dose minimale qui vous conviendra.</span></p>
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+<p class=AmmCorpsTexte style='border:none;padding:0cm'><span lang=FR-BE>Ne jamais dépasser une dose de 10 mg par jour.</span></p>
+</div>
+<p class=AmmCorpsTexte><span lang=FR-BE>Chez l’enfant et l’adolescent de moins de 18 ans, en l’absence de données, l’utilisation de ce médicament n’est pas recommandée.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Dans tous les cas, conformez-vous à la prescription de votre médecin traitant.</span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Mode d’administration</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Voie orale</span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Fréquence d'administration</span></p>
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+<p class=AmmCorpsTexte style='border:none;padding:0cm'><span lang=FR-BE>Prenez votre médicament en une seule prise par jour, immédiatement avant de vous coucher.</span></p>
+</div>
+<p class=AmmCorpsTexte><u><span lang=FR-BE>Assurez-vous de ne pas exercer une activité qui vous demande d’être vigilant dans un délai d’au moins 8 heures après la prise de ce médicament.</span></u></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Durée du traitement</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>La durée du traitement doit être aussi brève que possible et ne devrait pas dépasser 4 semaines (<u>voir rubrique 2, paragraphe « Avertissements et précautions »</u>).</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si l'insomnie persiste, consultez votre médecin.</span></p>
+<p class=AmmCorpsTexteGras>Si vous avez pris plus de STILNOX 10 mg, comprimé pelliculé sécable que vous n’auriez dû</p>
+<p class=AmmCorpsTexte>Consultez immédiatement votre médecin ou votre pharmacien.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez de prendre STILNOX 10 mg, comprimé pelliculé sécable</p>
+<p class=AmmCorpsTexte>Prenez la dose suivante à l’heure habituelle le lendemain. Ne prenez pas de dose double pour compenser la dose simple que vous avez oublié de prendre.</p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez de prendre STILNOX 10 mg, comprimé pelliculé sécable</p>
+<p class=AmmCorpsTexte>Phénomènes de sevrage et de rebond (voir rubrique 2, paragraphe « Avertissements et précautions »).</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ils dépendent de la dose ingérée et de votre propre sensibilité.</span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Les effets indésirables suivants surviennent fréquemment (1 à 10 personnes sur 100) :</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>hallucinations,</span></p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>agitation,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>cauchemars,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>dépression,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>baisse de vigilance voire somnolence (particulièrement chez les personnes âgées),</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>maux de tête,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>vertiges,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>insomnie,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>perte de la mémoire concernant les évènements survenus pendant le traitement (amnésie antérograde) associée à un comportement anormal. Cet effet peut survenir aux doses prescrites par votre médecin. Le risque augmente proportionnellement à la dose,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>diarrhée,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>nausée,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>vomissement,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>douleur abdominale,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>infections de l’appareil respiratoire,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>fatigue.</span></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><span lang=FR-BE>Les effets indésirables suivants surviennent peu fréquemment (1 à 10 personnes sur 1000) :</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>confusion,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>irritabilité,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>nervosité,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>agressivité,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>somnambulisme, </span><span style='color:#222222'>ou autre comportement inhabituel en dormant (comme conduire, manger, passer un appel téléphonique ou avoir des relations sexuelles, etc.) sans être complètement éveillé(e)</span> <span lang=FR-BE>(voir rubrique 2, paragraphe « Avertissements et précautions »),</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>excitation (humeur euphorique), </span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>sensation de picotement dans les mains et les pieds (paresthésie),</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>tremblements,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>trouble de l’attention et de la parole,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>vision double,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>vision trouble,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>augmentation des enzymes du foie,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>troubles de l’appétit,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>éruptions sur la peau et démangeaisons, douleurs articulaires,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>douleurs musculaires, contractions musculaires et faiblesse musculaire.</span></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><span lang=FR-BE>Les effets indésirables suivants surviennent </span><span class=AmmCorpsTexteGrasCar><span style='font-weight:normal'>rarement (1 à 10 personnes sur 10 000</span></span><span lang=FR-BE>) :</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>troubles de la libido,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>troubles de la conscience,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>atteinte de la vision (déficience visuelle),</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>atteinte du foie,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>plaques rouges sur la peau qui démangent (urticaire),</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>troubles de l’équilibre, chutes.</span></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt;page-break-after:avoid'><span lang=FR-BE>Les effets indésirables suivants surviennent très rarement (moins d’1 personne sur 10 000) :</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>dépendance physique et psychique même à des doses recommandées par votre médecin, syndrome de sevrage ou rebond de l’insomnie pouvant survenir à l’arrêt du traitement (voir rubrique 2, paragraphe « </span>Avertissements et précautions »<span lang=FR-BE>),</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>difficulté respiratoire.</span></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt;page-break-after:avoid'><span lang=FR-BE>Les effets indésirables suivants peuvent survenir mais on ne connaît par leur fréquence :</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>brusque gonflement du visage et/ou du cou pouvant entraîner une difficulté à respirer et mettre en danger le patient (œdème de Quincke),</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>troubles du comportement,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>colère,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>difficulté à coordonner certains mouvements,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>tension,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>délire (un changement soudain et grave de l’état mental qui fait qu’une personne semble confuse ou désorientée).</span></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><u>Déclaration des effets secondaires</u></p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement <i>via</i> le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet : <a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_STILNOX_10_mg,_comprimé_pelliculé_sécable_?'>5. COMMENT CONSERVER STILNOX 10 mg, comprimé pelliculé sécable ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026"></a><a name="_Toc142279024">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas ce médicament après la date de péremption indiquée sur l’emballage après EXP {MM/AAAA}. La date de péremption fait référence au dernier jour de ce mois.</span></p>
+<p class=AmmCorpsTexte><a name="_Toc142279025"><span lang=FR-BE>Pas de précautions particulières de conservation.</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout <span style='color:black'>ou avec </span>les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient STILNOX 10 mg, comprimé pelliculé sécable</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est :</p>
+<p class=AmmComposition>Tartrate de zolpidem............................................................................................................... 10 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un comprimé pelliculé sécable.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont : </p>
+<p class=AmmCorpsTexte><i><u>Noyau : </u></i></p>
+<p class=AmmCorpsTexte>Lactose monohydraté, cellulose microcristalline, carboxyméthylamidon sodique, hypromellose, stéarate de magnésium.</p>
+<p class=AmmCorpsTexte><i><u>Pelliculage : </u></i></p>
+<p class=AmmCorpsTexte>Hypromellose, suspension de dioxyde de titane, macrogol 400.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que STILNOX 10 mg, comprimé pelliculé sécable et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>Ce médicament se présente sous forme de comprimé pelliculé sécable. </p>
+<p class=AmmCorpsTexte>Boîte de 7, 14, 20, 21, 28, 50, 100 ou 150. </p>
+<p class=AmmCorpsTexte>Flacon de 20 ou 100.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279031"><span lang=EN-US>SANOFI WINTHROP INDUSTRIE</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>82 AVENUE RASPAIL</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>94250 GENTILLY</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279032"><span lang=EN-US>SANOFI WINTHROP INDUSTRIE</span></a><span lang=EN-US> </span><span lang=EN-GB>82 AVENUE RASPAIL</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=EN-GB>94250 GENTILLY</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279033"><span lang=EN-US>SANOFI WINTHROP INDUSTRIE</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=EN-US>30-36, AVENUE GUSTAVE EIFFEL</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>Z.I. DE SAINT-SYMPHORIEN</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>37100 TOURS</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Ou</p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>DELPHARM DIJON</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>6, BOULEVARD DE L’EUROPE</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>21800 QUETIGNY</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

@@ -6,7 +6,7 @@ latin. Ils verifient le pont entre les deux, pas la qualite de Whisper.
 """
 import pytest
 
-from translitteration import cle_phonetique, contient_arabe, translitterer
+from nlp.linking.translitteration import cle_phonetique, contient_arabe, translitterer
 
 
 @pytest.mark.parametrize("texte, attendu", [

@@ -1,0 +1,2415 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="eVus2o7i3/BqOolpZ0NSSA==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="eVus2o7i3/BqOolpZ0NSSA==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 31/08/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant BIODALGIC 50 mg, comprimé effervescent"
+            aria-level="3"
+          >
+            BIODALGIC 50 mg, comprimé effervescent
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament BIODALGIC 50 mg, comprimé effervescent - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-bon-usage" class="fr-tabs__tab  fr-tabs__tab--icon-left" tabindex="-1" role="tab"
+                            aria-selected="false" aria-controls="tabpanel-bon-usage-panel">Bon usage
+                    </button>
+                  </li>
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                          <p id="tag-generique" class="fr-tag" aria-controls="fr-modal-tag-generique" data-fr-opened="false">
+              <span class="fr-icon-capsule-fill">
+              </span>&nbsp;générique
+          </p>
+              </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 25/06/1999
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : BIODALGIC 50 mg, comprimé effervescent - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0449652">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte><a name="_Toc142279004"></a><a name="_Toc142279003">Classe pharmacothérapeutique : ANALGESIQUE OPIOIDE (N : Système nerveux central) - code ATC : N02AX02</a></p>
+<p class=AmmCorpsTexte>Ce médicament est un antalgique (il calme la douleur).</p>
+<p class=AmmCorpsTexte><span style='color:black'>Il est indiqué dans le traitement des douleurs modérées à intenses de l'adulte</span>.</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament appartient au(x) groupe(s) générique(s) suivants : <br/><ul role="list"><li role='listitem'><a href='/medicament/affiche/groupe-generique/68106394/242' aria-describedby='tooltip-medicament-generique-0'>TRAMADOL (CHLORHYDRATE DE) 50 mg - CONTRAMAL 50 mg, gélule - TOPALGIC 50 mg, gélule.</a><span id='tooltip-medicament-generique-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Ouvrir la page de détail sur ce groupe générique</span></li></ul></p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Comprimé ( Composition pour un comprimé )<ul role="list"><li role="listitem" style="list-style-type: none;"> > chlorhydrate de tramadol<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">50 mg </span></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > 2 tube(s) polypropylène de 15 comprimé(s)  </p><p>Code CIP : 350 673-4 ou 34009 350 673 4 0<br/>Déclaration de commercialisation : 15/02/2000<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 3,42 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 4,44 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :65%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></div></div>
+                
+                                  <br /><div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-bon-usage-medicament' >Documents de bon usage du médicament <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-document-bon-usage-medicament' href='#top'></a></h5><span id='tooltip-heading-document-bon-usage-medicament' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><ul><li><a class='lien_bon_usage' href='https://www.has-sante.fr/jcms/c_2010340/' target='_blank'>Prise en charge médicamenteuse de la douleur chez l'enfant : alternatives à la codéine</a><p>Auteur : Haute autorité de santé<br />Type : Fiche mémo<br />Date de mise à jour :Février  2016<br /></p></li></ul><ul><li><a class='lien_bon_usage' href='https://www.has-sante.fr/jcms/r_1439696' target='_blank'>Les médicaments des accès douloureux paroxystiques du cancer</a><p>Auteur : Haute autorité de santé<br />Type : Fiche Bon Usage du Médicament<br />Date de mise à jour :Juin  2014<br /></p></li></ul></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'>Ce médicament étant un générique, le SMR n'a pas été évalué par la commission de la transparence (CT), il est possible de se référer à la /aux spécialité(s) de référence du groupe générique auquel appartient ce médicament <a href='#heading-groupe-generique' arial-label='cliquez ici pour aller à la rubrique des groupes génériques'>(cliquez ici pour aller à la rubrique des groupes génériques)</a></p></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div><div class='fr-col'><p>Ce médicament étant un générique, l'ASMR n'a pas été évalué par la commission de la transparence (CT), il est possible de se référer à la /aux spécialité(s) de référence du groupe générique auquel appartient ce médicament <a href='#heading-groupe-generique' arial-label='cliquez ici pour aller à la rubrique des groupes génériques'>(cliquez ici pour aller à la rubrique des groupes génériques)</a></p></div></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : LABORATOIRES FRILAB</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li><li>prescription en toutes lettres sur ordonnance sécurisée</li><li>prescription limitée à 12 semaines</li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure nationale</li><li>Code CIS : &nbsp;6 810 639 4</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : BIODALGIC 50 mg, comprimé effervescent - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="BIODALGIC 50 mg, comprimé effervescent, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 04/08/2026</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras>BIODALGIC 50 mg, comprimé effervescent</p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Tramadol (chlorhydrate)......................................................................................................... 50,00 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un comprimé effervescent.</p>
+<p class=AmmCorpsTexte><i><u>Excipients à effet notoire</u></i> : aspartam (source de phénylalanine), lactose, sodium.</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Comprimé effervescent.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">Traitement des douleurs modérées à intense de l’adulte.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278918">Posologie</a></p>
+<p class=AmmCorpsTexte>Comme pour tous les médicaments antalgiques, la posologie du tramadol doit être adaptée à l'intensité de la douleur et à la réponse clinique de chaque patient.</p>
+<p class=AmmCorpsTexte><i>Douleurs aiguës :</i></p>
+<p class=AmmCorpsTexte>La dose d'attaque est de 100 mg (2 comprimés) suivie de 50 ou 100 mg (1 ou 2 comprimés) toutes les 4-6 heures sans dépasser 400 mg/24 h (8 comprimés).</p>
+<p class=AmmCorpsTexte><i>Douleurs chroniques :</i></p>
+<p class=AmmCorpsTexte>La dose d'attaque est de 50 ou 100 mg (1 ou 2 comprimés) suivie de 50 ou 100 mg (1 ou 2 comprimés) toutes les 4-6 heures sans dépasser 400 mg/24 h (8 comprimés).</p>
+<p class=AmmListePuces1><a name="_Hlk528775979"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>A partir de 75 ans, il est recommandé d'augmenter l'intervalle entre les prises (toutes les 9 heures).</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En cas d'insuffisance hépatique : réduire la dose unitaire de moitié ou augmenter de 2 fois l'intervalle entre les prises (toutes les 12 heures).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En cas d'insuffisance rénale : augmenter de 2 fois l'intervalle entre les prises (toutes les 12 heures pour une clairance de la créatinine < 30 ml/min).</p>
+<p class=AmmCorpsTexte>Eviter d'utiliser le tramadol si la clairance de la créatinine est < 10 ml/min<i><u>.</u></i></p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte>Voie orale.</p>
+<p class=AmmCorpsTexte>Boire immédiatement après dissolution complète du comprimé dans un peu d'eau<span lang=FR-BE>.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmListePuces1 style='text-align:justify'><a name="_Toc142278919"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypersensibilité à la substance active, aux opiacés ou à l’un des excipients mentionnés à la rubrique 6.1.</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><a name="_Hlk528776074"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Intoxication aiguë ou surdosage avec des produits dépresseurs du système nerveux central (alcool, hypnotiques, autres analgésiques...).</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Traitement simultané ou récent (arrêt de moins de 15 jours) par les IMAO.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Insuffisance respiratoire sévère.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Insuffisance hépato cellulaire sévère.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Enfant de moins de 15 ans.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Allaitement, si un traitement au long cours est nécessaire (voir rubrique 4.6).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Epilepsie non contrôlée par un traitement (voir rubrique 4.4).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Association avec la buprénorphine, la nalbuphine et la pentazocine (voir rubrique 4.5).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En raison de la présence d'aspartam, ce médicament est contre-indiqué en cas de phénylcétonurie.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Ce médicament ne doit généralement pas être utilisé :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Pendant la grossesse,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En association avec la carbamazépine.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278920">Mises en garde spéciales</a></p>
+<p class=AmmCorpsTexte>Troubles respiratoires liés au sommeil, les opioïdes peuvent provoquer des troubles respiratoires liés au sommeil, notamment l’apnée centrale du sommeil (ACS) et l’hypoxémie liée au sommeil. Le risque d’ACS augmente en fonction de la dose d’opioïdes utilisée. Chez les patients présentant une ACS, une diminution de la dose totale d’opioïdes doit être envisagée.</p>
+<p class=AmmCorpsTexte>Insuffisance surrénalienne : les antalgiques opioïdes peuvent occasionnellement provoquer une insuffisance surrénalienne réversible nécessitant une surveillance et un traitement de substitution par glucocorticoïde. Les symptômes d'insuffisance surrénale aiguë ou chronique peuvent inclure par ex. douleur abdominale sévère, nausées et vomissements, hypotension artérielle, fatigue extrême, diminution de l’appétit et perte de poids.</p>
+<p class=AmmCorpsTexte>Une tolérance ainsi qu’une dépendance physique et psychique peuvent survenir, particulièrement après une utilisation au long cours. Chez les patients prédisposés, le traitement doit se faire sous surveillance médicale stricte.</p>
+<p class=AmmCorpsTexte>Le tramadol n'est pas adapté au traitement de sevrage ou de substitution chez les patients présentant une dépendance aux opioïdes. Bien qu'agoniste des opioïdes, le tramadol ne peut pas corriger les symptômes de sevrage de la morphine.</p>
+<p class=AmmCorpsTexte>L’utilisation du tramadol chez les patients sous anti-vitaminiques K est déconseillée (voir rubrique 4.5).</p>
+<p class=AmmCorpsTexte>Le tramadol doit être utilisé avec prudence chez le patient diabétique en raison du risque d’hypoglycémie.</p>
+<p class=AmmCorpsTexte>Des convulsions ont été rapportées chez des patients recevant du tramadol aux doses recommandées. Le risque de convulsions est accru si les doses de tramadol dépassent la limite supérieure de la dose quotidienne recommandée (400 mg). Le tramadol peut en outre accroître le risque de convulsions chez les patients prenant d'autres produits qui abaissent le seuil épileptogène (voir rubrique 4.5).</p>
+<p class=AmmCorpsTexte>Les patients épileptiques contrôlés ou les patients susceptibles de présenter des convulsions ne devront être traités par le tramadol qu'en cas de nécessité absolue.</p>
+<p class=AmmCorpsTexte>La prise d'alcool pendant le traitement est déconseillée.</p>
+<p class=AmmCorpsTexte>En raison de la présence de lactose, ce médicament est contre-indiqué en cas de galactosémie congénitale, de syndrome de malabsorption du glucose et du galactose ou d'un déficit en lactase.</p>
+<p class=AmmCorpsTexte><i>Métabolisme par le CYP2D6</i></p>
+<p class=AmmCorpsTexte>Le tramadol est métabolisé par l’intermédiaire d’une enzyme hépatique, le CYP2D6. En cas de déficit ou d’absence totale de cette enzyme chez le patient, l’effet analgésique attendu pourra ne pas être obtenu. Il est estimé que jusqu’à 7 % de la population caucasienne pourrait présenter ce déficit. Toutefois, si le patient est un métaboliseur ultra-rapide, il existe un risque, même à dose recommandée, de manifestation d’effets indésirables liés à la toxicité des opiacés.</p>
+<p class=AmmCorpsTexte>Les symptômes généraux de toxicité des opiacés incluent une confusion mentale, une somnolence, une respiration superficielle, des pupilles contractées, des nausées, des vomissements, une constipation et une perte d’appétit. Dans les cas graves, les patients peuvent présenter les symptômes d’une défaillance circulatoire et respiratoire pouvant engager le pronostic vital et conduire à une issue fatale dans de très rares cas.</p>
+<p class=AmmCorpsTexte>Les prévalences estimées de métaboliseurs ultra-rapides dans différentes populations sont résumées ci-dessous :</p>
+<p class=AmmCorpsTexte>Population % de prévalence</p>
+<p class=AmmCorpsTexte>Africain/Ethiopien 29 %</p>
+<p class=AmmCorpsTexte>Afro-américain de 3,4 % à 6,5 %</p>
+<p class=AmmCorpsTexte>Asiatique de 1,2 % à 2 %</p>
+<p class=AmmCorpsTexte>Caucasien de 3,6 % à 6,5 %</p>
+<p class=AmmCorpsTexte>Grec 6,0 %</p>
+<p class=AmmCorpsTexte>Hongrois 1,9 %</p>
+<p class=AmmCorpsTexte>Européen du nord de 1 % à 2 %</p>
+<p class=AmmCorpsTexte><i>Utilisation post-opératoire chez les enfants</i></p>
+<p class=AmmCorpsTexte>La littérature rapporte des cas de tramadol administré à des enfants en postopératoire après une amygdalectomie et/ou une adénoïdectomie dans le cadre du traitement de l’apnée obstructive du sommeil, ayant mené à des événements indésirables rares mais pouvant engager le pronostic vital. L’administration de tramadol à des enfants pour le soulagement de douleurs postopératoires doit être sujette à la plus grande prudence et doit s’accompagner d’une étroite surveillance des symptômes en lien avec la toxicité des opiacés, notamment la dépression respiratoire.</p>
+<p class=AmmCorpsTexte><i>Enfants présentant une fonction respiratoire altérée</i></p>
+<p class=AmmCorpsTexte>L’utilisation du tramadol n’est pas recommandée chez les enfants présentant une fonction respiratoire altérée, notamment en cas de déficit neuromusculaire, d’affections cardiaques ou respiratoires sévères, d’infections des voies aériennes supérieures ou des poumons, de polytraumatismes ou d’interventions chirurgicales lourdes. Ces facteurs sont susceptibles d’aggraver les symptômes de toxicité des opiacés.</p>
+<p class=AmmCorpsTexte><i>Syndrome sérotoninergique</i></p>
+<p class=AmmCorpsTexte>Le syndrome sérotoninergique, une affection potentiellement mortelle, a été rapporté chez des patients traités par le tramadol en association avec d’autres agents sérotoninergiques ou par le tramadol seul (voir rubriques 4.5, 4.8 et 4.9). </p>
+<p class=AmmCorpsTexte>Si un traitement concomitant avec d’autres agents sérotoninergiques est justifié sur le plan clinique, il est conseillé d’observer attentivement le patient, tout particulièrement pendant l’instauration du traitement et les augmentations de dose.</p>
+<p class=AmmCorpsTexte>Les symptômes du syndrome sérotoninergique peuvent comprendre des modifications de l’état mental, une instabilité autonome, des anomalies neuromusculaires et/ou des symptômes gastro-intestinaux.</p>
+<p class=AmmCorpsTexte>En cas de suspicion de syndrome sérotoninergique, une réduction de dose ou un arrêt du traitement devra être envisagé(e) en fonction de la gravité des symptômes. Le retrait des médicaments sérotoninergiques apporte généralement une amélioration rapide.</p>
+<p class=AmmAnnexeTitre3>Précautions d'emploi</p>
+<p class=AmmCorpsTexte>Le tramadol ne doit être utilisé qu'après une évaluation soigneuse du rapport bénéfice- risque, suivant l'origine de la douleur et le profil du patient (voir rubrique 5.3).</p>
+<p class=AmmCorpsTexte>En cas d’arrêt de traitement par tramadol, il est conseillé de réduire progressivement la dose afin d’éviter les symptômes de sevrage.</p>
+<p class=AmmCorpsTexte>Le tramadol doit être utilisé avec précaution chez les patients présentant une hypertension intracrânienne, un traumatisme crânien, une altération de la conscience sans cause évidente, des troubles du centre ou de la fonction respiratoire.</p>
+<p class=AmmCorpsTexte>Le tramadol doit être utilisé avec précaution chez le sujet âgé, du fait du risque de chute et de perte de connaissance.</p>
+<p class=AmmCorpsTexte><a name="_Hlk512602333">Ce médicament contient 214 mg de sodium par comprimé, ce qui équivaut à 10,7% de l’apport alimentaire quotidien maximal recommandé par l’OMS de 2 g de sodium par adulte. </a></p>
+<p class=AmmCorpsTexte>Ce médicament contient du lactose. Les patients présentant une intolérance au galactose, un déficit total en lactase ou un syndrome de malabsorption du glucose et du galactose (maladie héréditaires rares) ne doivent pas prendre ce médicament.</p>
+<p class=AmmCorpsTexte>Ce médicament contient de l’aspartam. Il faut noter qu’il n’existe aucune donnée clinique ou non clinique concernant l’utilisation de l’aspartam chez les enfants âgés de moins de 12 semaines.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278921">Les études pharmacocinétiques, réalisées à ce jour, ont montré que l'administration concomitante ou antérieure de cimétidine (inhibiteur enzymatique) est peu susceptible de provoquer des interactions cliniquement pertinentes.</a></p>
+<p class=AmmAnnexeTitre3>Médicaments à l’origine d’un syndrome sérotoninergique</p>
+<p class=AmmCorpsTexte>Le tramadol peut provoquer des convulsions et augmenter le potentiel épileptogène des inhibiteurs sélectifs de la recapture de la sérotonine (ISRS), des inhibiteurs de la recapture de la sérotonine et de l'adrénaline (IRSA), des antidépresseurs tricycliques, des antipsychotiques et d'autres médicaments abaissant le seuil épileptogène (tels que le bupropion, la mirtazapine, le tétrahydrocannabinol).</p>
+<p class=AmmCorpsTexte>L’usage thérapeutique concomitant de tramadol et de médicaments sérotoninergiques, tels que les inhibiteurs sélectifs de la recapture de la sérotonine (ISRS), les inhibiteurs de la recapture de la sérotonine et de la noradrénaline (IRSN), les inhibiteurs de la MAO (voir rubrique 4.3), les antidépresseurs tricycliques et la mirtazapine peuvent causer un syndrome sérotoninergique, une affection potentiellement mortelle (voir rubriques 4.4 et 4.8).</p>
+<p class=AmmCorpsTexte>L'interruption des produits sérotoninergiques conduit généralement à une amélioration rapide. Le traitement dépend du type et de la sévérité des symptômes.</p>
+<p class=AmmCorpsTexte>D'autres médicaments, connus pour inhiber le CYP3A4 tels que le kétoconazole et l'érythromycine, pourraient inhiber le métabolisme du tramadol (N-déméthylation) et probablement également le métabolisme du métabolite O&#8209;déméthylé actif. L'importance clinique d'une telle interaction n'a pas fait l'objet d'études (voir rubrique 4.8).</p>
+<p class=AmmAnnexeTitre3>Médicaments abaissant le seuil épileptogène</p>
+<p class=AmmCorpsTexte>L'utilisation conjointe de médicaments proconvulsivants, ou abaissant le seuil épileptogène, devra être soigneusement pesée, en raison de la sévérité du risque encouru. Ces médicaments sont représentés notamment par la plupart des antidépresseurs (imipraminiques, inhibiteurs sélectifs de la recapture de la sérotonine), les neuroleptiques (phénothiazines et butyrophénones), la méfloquine, la chloroquine, le bupropion, le tramadol et les fluoroquinolones.</p>
+<p class=AmmAnnexeTitre3>Médicaments sédatifs</p>
+<p class=AmmCorpsTexte>Il faut prendre en compte le fait que de nombreux médicaments ou substances peuvent additionner leurs effets dépresseurs du système nerveux central et contribuer à diminuer la vigilance. Il s'agit des dérivés morphiniques (analgésiques, antitussifs et traitements de substitution), des neuroleptiques, des barbituriques, des benzodiazépines, des anxiolytiques autres que les benzodiazépines (par exemple, le méprobamate), des hypnotiques, des antidépresseurs sédatifs (amitriptyline, doxépine, miansérine, mirtazapine, trimipramine), des antihistaminiques H1 sédatifs, des antihypertenseurs centraux, du baclofène et du thalidomide.</p>
+<p class=AmmAnnexeTitre3>Associations contre-indiquées (voir rubrique 4.3)</p>
+<p class=AmmCorpsTexteGras>+ IMAO irréversibles (iproniazide)</p>
+<p class=AmmCorpsTexte>Risque d'apparition d'un syndrome sérotoninergique : diarrhée, tachycardie, sueurs, tremblements, confusion voire coma.</p>
+<p class=AmmCorpsTexte>Respecter un délai de deux semaines entre l'arrêt de l'IMAO et le début du traitement par tramadol, et d'au moins une semaine entre l'arrêt du traitement par tramadol et le début de l'IMAO.</p>
+<p class=AmmAnnexeTitre3>Associations déconseillées</p>
+<p class=AmmCorpsTexteGras>+ Agonistes-antagonistes morphiniques (buprénorphine, nalbuphine, pentazocine)</p>
+<p class=AmmCorpsTexte>Diminution de l'effet antalgique par blocage compétitif des récepteurs, avec risque d'apparition d'un syndrome de sevrage.</p>
+<p class=AmmCorpsTexteGras>+ Alcool (boisson ou excipient)</p>
+<p class=AmmCorpsTexte>Majoration par l'alcool de l'effet sédatif des analgésiques morphiniques.</p>
+<p class=AmmCorpsTexte>L'altération de la vigilance peut rendre dangereuses la conduite de véhicules et l'utilisation de machines.</p>
+<p class=AmmCorpsTexte>Eviter la prise de boissons alcoolisées et de médicaments contenant de l'alcool.</p>
+<p class=AmmCorpsTexteGras>+ Carbamazépine</p>
+<p class=AmmCorpsTexte>Risque de diminution des concentrations plasmatiques de tramadol.</p>
+<p class=AmmCorpsTexte>L'administration simultanée ou antérieure de carbamazépine (inducteur enzymatique) peut réduire les effets analgésiques et raccourcir la durée d'action du tramadol.</p>
+<p class=AmmCorpsTexteGras>+ IMAO réversibles A y compris linézolide et bleu de méthylène</p>
+<p class=AmmCorpsTexte>Risque d'apparition d'un syndrome sérotoninergique : diarrhée, tachycardie, sueurs, tremblements, confusion voire coma.</p>
+<p class=AmmCorpsTexte>Si l'association ne peut être évitée, surveillance clinique très étroite. Débuter l'association aux posologies minimales recommandées.</p>
+<p class=AmmCorpsTexteGras>+ Morphiniques antagonistes partiels </p>
+<p class=AmmCorpsTexte>Risque de diminution de l’effet antalgique.</p>
+<p class=AmmCorpsTexteGras>+ Naltrexone</p>
+<p class=AmmCorpsTexte>Risque de diminution de l'effet antalgique.</p>
+<p class=AmmCorpsTexteGras>+ Oxybate de sodium</p>
+<p class=AmmCorpsTexte>Majoration de la dépression centrale.</p>
+<p class=AmmCorpsTexte>L'altération de la vigilance peut rendre dangereuses la conduite de véhicules et l'utilisation de machines.</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278923">Associations </a>faisant l'objet de précautions d’emploi</p>
+<p class=AmmCorpsTexteGras>+ Antivitamine K</p>
+<p class=AmmCorpsTexte>Risque d'augmentation de l'effet de l’antivitamine K et du risque hémorragique. Contrôle plus fréquent de l’INR. Adaptation éventuelle de la posologie de l’antivitamine K pendant le traitement par le tramadol et après son arrêt.</p>
+<p class=AmmAnnexeTitre3>Associations à prendre en compte</p>
+<p class=AmmCorpsTexteGras>+ Autres analgésiques morphiniques agonistes, antitussifs morphine-like (dextrométhorphane, noscapine, pholcodine), antitussifs morphiniques vrais (codéine, éthylmorphine)</p>
+<p class=AmmCorpsTexte>Risque majoré de dépression respiratoire pouvant être fatale en cas de surdosage.</p>
+<p class=AmmCorpsTexteGras>+ Autres médicaments abaissant le seuil épileptogène</p>
+<p class=AmmCorpsTexte>Risque accru de convulsions.</p>
+<p class=AmmCorpsTexteGras>+ Autres médicaments sédatifs</p>
+<p class=AmmCorpsTexte>Majoration de la dépression centrale.</p>
+<p class=AmmCorpsTexte>L'altération de la vigilance peut rendre dangereuses la conduite de véhicules et l'utilisation de machines.</p>
+<p class=AmmCorpsTexteGras>+ Benzodiazépines et apparentés</p>
+<p class=AmmCorpsTexte>Risque majoré de dépression respiratoire pouvant être fatale en cas de surdosage.</p>
+<p class=AmmCorpsTexteGras>+ Barbituriques</p>
+<p class=AmmCorpsTexte>Risque majoré de dépression respiratoire pouvant être fatale en cas de surdosage.</p>
+<p class=AmmCorpsTexteGras>+ IMAO-B</p>
+<p class=AmmCorpsTexte>Risque d'apparition d'un syndrome sérotoninergique.</p>
+<p class=AmmCorpsTexteGras>+ Inhibiteurs sélectifs de la recapture de la sérotonine (citalopram, escitalopram, fluoxétine, fluvoxamine, paroxétine, sertraline)</p>
+<p class=AmmCorpsTexte>Risque d'apparition de convulsions et/ou d'un syndrome sérotoninergique.</p>
+<p class=AmmCorpsTexteGras>+ Venlafaxine</p>
+<p class=AmmCorpsTexte>Risque d'apparition de convulsions et/ou d'un syndrome sérotoninergique.</p>
+<p class=AmmCorpsTexteGras>+ Bupropion</p>
+<p class=AmmCorpsTexte>Augmentation des concentrations plasmatiques du tramadol par diminution de son métabolisme hépatique par le bupropion. De plus, risque de convulsions par addition des effets des deux médicaments.</p>
+<p class=AmmCorpsTexteGras>+ Ondansétron</p>
+<p class=AmmCorpsTexte>Diminution de l’intensité et de la durée de l’effet analgésique du tramadol et risque de diminution de l’effet antiémétique de l’ondansétron.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte>Les études animales, utilisant le tramadol, ont montré à des doses très élevées des effets sur le développement des organes, l’ossification et la mortalité néonatale. Des effets tératogènes n’ont pas été mis en évidence. Le tramadol traverse la barrière placentaire. On ne dispose pas de preuves suffisantes, concernant la sécurité d’emploi du tramadol pendant la grossesse dans l’espèce humaine. BIODALGIC 50 mg, gélule ne doit donc pas être utilisé chez les femmes enceintes.</p>
+<p class=AmmCorpsTexte>Administré avant ou pendant l’accouchement, le tramadol ne modifie pas la contractilité utérine. Le tramadol peut provoquer chez les nouveau-nés des modifications de la fréquence respiratoire, qui sont généralement sans conséquences cliniques préjudiciables. Une utilisation prolongée pendant la grossesse peut entraîner un syndrome de sevrage chez le nouveau-né.</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278927">Allaitement</a></p>
+<p class=AmmCorpsTexte>Environ 0,1% de la dose de tramadol administrée à la mère est excrété dans le lait maternel. Durant la période du post-partum immédiat, une prise orale quotidienne jusqu’à 400 mg de tramadol par la mère correspond à une quantité moyenne de tramadol ingérée par le nourrisson allaité de 3% de la dose prise par la mère ajustée au poids corporel. Ainsi, il convient soit de ne pas utiliser le tramadol pendant la lactation, soit d’interrompre l’allaitement lors d’un traitement par tramadol. L’interruption de l’allaitement n’est généralement pas nécessaire à la suite d’une prise unique de tramadol.</p>
+<p class=AmmAnnexeTitre3>Fertilité</p>
+<p class=AmmCorpsTexte>Les études après-commercialisation n’ont pas mis en évidence d’effet du tramadol sur la fertilité. Les études chez l’animal n’ont pas montré d’effet du tramadol sur la fertilité.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929"><span lang=FR-BE>L'altération possible de la vigilance peut rendre dangereuses la conduite de véhicules et l'utilisation de machines, notamment en cas d'absorption concomitante de boissons alcoolisées ou de médicaments dépresseurs du système nerveux central.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<div class='fr-table--lg fr-table'><table>
+<thead>
+<tr>
+<td width=113 valign=top style='width:85.1pt;border:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b><span style='font-size:9.0pt'>Système - Organe</span></b></p>
+</td>
+<td width=107 valign=top style='width:80.6pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b><span style='font-size:9.0pt'>Très fréquents (1 patient sur 10)</span></b></p>
+</td>
+<td width=98 valign=top style='width:74.65pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b><span style='font-size:9.0pt'>Fréquents (1 à 10 patient sur 100)</span></b></p>
+</td>
+<td width=95 valign=top style='width:72.3pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:center'><b><span style='font-size:9.0pt'>Rares </span></b></p>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b><span style='font-size:9.0pt'>(1 à 10 patient sur 1000)</span></b></p>
+</td>
+<td width=112 valign=top style='width:84.45pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b><span style='font-size:9.0pt'>Très rarement (1 à 10 patient sur 10 000)</span></b></p>
+</td>
+<td width=122 valign=top style='width:88.4pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b><span style='font-size:9.0pt'>Fréquence indéterminée (Fréquence ne pouvant être estimée à partir des données disponibles)</span></b></p>
+</td>
+</tr>
+</thead>
+<tr>
+<td width=113 valign=top style='width:85.1pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Affections du système immunitaire</span></p>
+</td>
+<td width=107 valign=top style='width:80.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=98 valign=top style='width:74.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=95 valign=top style='width:72.3pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=112 valign=top style='width:84.45pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Réactions allergiques (à type d’urticaire, d’œdème de Quincke, de bronchospasme ainsi que des cas exceptionnels de choc anaphylactique pouvant être fatal)</span></p>
+</td>
+<td width=122 valign=top style='width:88.4pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=113 valign=top style='width:85.1pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Affections du système nerveux central</span></p>
+</td>
+<td width=107 valign=top style='width:80.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Somnolence, céphalées, vertiges, hypersudation, sensation de malaise</span></p>
+</td>
+<td width=98 valign=top style='width:74.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=95 valign=top style='width:72.3pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Syncope, contractions musculaires involontaires</span></p>
+</td>
+<td width=112 valign=top style='width:84.45pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=122 valign=top style='width:88.4pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Syndrome sérotoninergique</span></p>
+</td>
+</tr>
+<tr>
+<td width=113 valign=top style='width:85.1pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'>Affections cardiaques</span></p>
+</td>
+<td width=107 valign=top style='width:80.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=98 valign=top style='width:74.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'>Tachycardie, hypotension, palpitations, élévation de la pression artérielle</span></p>
+</td>
+<td width=95 valign=top style='width:72.3pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=112 valign=top style='width:84.45pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=122 valign=top style='width:88.4pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=113 valign=top style='width:85.1pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Affections gastro-intestinales</span></p>
+</td>
+<td width=107 valign=top style='width:80.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Nausées, vomissements, bouche sèche, constipation</span></p>
+</td>
+<td width=98 valign=top style='width:74.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Douleurs abdominales </span></p>
+</td>
+<td width=95 valign=top style='width:72.3pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=112 valign=top style='width:84.45pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=122 valign=top style='width:88.4pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=113 valign=top style='width:85.1pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'>Affections cutanées et des tissus sous-cutanés</span></p>
+</td>
+<td width=107 valign=top style='width:80.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=98 valign=top style='width:74.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Rash</span></p>
+</td>
+<td width=95 valign=top style='width:72.3pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=112 valign=top style='width:84.45pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=122 valign=top style='width:88.4pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=113 valign=top style='width:85.1pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Affections urinaires et rénales</span></p>
+</td>
+<td width=107 valign=top style='width:80.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=98 valign=top style='width:74.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=95 valign=top style='width:72.3pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=112 valign=top style='width:84.45pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Troubles mictionnels à type de dysurie et/ou de rétention urinaire</span></p>
+</td>
+<td width=122 valign=top style='width:88.4pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=113 valign=top style='width:85.1pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Affections visuelles</span></p>
+</td>
+<td width=107 valign=top style='width:80.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=98 valign=top style='width:74.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Troubles mineurs de la vision</span></p>
+</td>
+<td width=95 valign=top style='width:72.3pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=112 valign=top style='width:84.45pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=122 valign=top style='width:88.4pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=113 valign=top style='width:85.1pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Affections hépato-biliaires</span></p>
+</td>
+<td width=107 valign=top style='width:80.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=98 valign=top style='width:74.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=95 valign=top style='width:72.3pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=112 valign=top style='width:84.45pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=122 valign=top style='width:88.4pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Cholestase (tramadol seul)</span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Cytolyse hépatique (surtout en association au paracétamol)</span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Elévation des enzymes hépatiques</span></p>
+</td>
+</tr>
+<tr>
+<td width=113 valign=top style='width:85.1pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Affections respiratoires, thoraciques et médiastinales</span></p>
+</td>
+<td width=107 valign=top style='width:80.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=98 valign=top style='width:74.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=95 valign=top style='width:72.3pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=112 valign=top style='width:84.45pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><a name="_Hlk512612370"><span style='font-size:9.0pt'>Troubles de la fréquence respiratoire. Une dépression respiratoire peut survenir si les doses administrées dépassent largement les doses recommandées ou si d'autres médicaments dépresseurs centraux sont administrés de façon concomitante</span></a><span style='font-size:9.0pt'>.</span></p>
+</td>
+<td width=122 valign=top style='width:88.4pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>hoquet</span></p>
+</td>
+</tr>
+<tr>
+<td width=113 valign=top style='width:85.1pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Affections générales et anomalies au site d’administration</span></p>
+</td>
+<td width=107 valign=top style='width:80.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=98 valign=top style='width:74.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Asthénie, euphorie.</span></p>
+</td>
+<td width=95 valign=top style='width:72.3pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=112 valign=top style='width:84.45pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=122 valign=top style='width:88.4pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=113 valign=top style='width:85.1pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'>Affections psychiatriques</span></p>
+</td>
+<td width=107 valign=top style='width:80.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=98 valign=top style='width:74.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=95 valign=top style='width:72.3pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=112 valign=top style='width:84.45pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><a name="_Hlk512612439"><span style='font-size:9.0pt'>Symptômes de sevrage (attaque de panique, anxiété sévère, hallucination, paresthésies, acouphènes, autres troubles de SNC)</span></a></p>
+</td>
+<td width=122 valign=top style='width:88.4pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmListePuces1 style='margin-left:0cm;text-indent:0cm'><span style='font-size:9.0pt'>troubles neuropsychiques (en fonction de la réactivité individuelle et principalement chez les personnes âgées) à type de confusion et exceptionnellement à type d'hallucination et/ou délire ;</span></p>
+<p class=AmmListePuces1 style='margin-left:0cm;text-indent:0cm'><span style='font-size:9.0pt'>des convulsions principalement après l'administration de doses élevées ou après un traitement concomitant par des médicaments qui peuvent abaisser le seuil épileptogène ou qui déclenchent eux-mêmes des convulsions (voir rubrique 4.4).</span></p>
+</td>
+</tr>
+<tr>
+<td width=113 valign=top style='width:85.1pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Affections de métabolisme et de la nutrition</span></p>
+</td>
+<td width=107 valign=top style='width:80.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=98 valign=top style='width:74.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=95 valign=top style='width:72.3pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=112 valign=top style='width:84.45pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=122 valign=top style='width:88.4pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Hypoglycémie</span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Hyponatrémie</span></p>
+</td>
+</tr>
+</table></div>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte>Les signes de surdosage sont : myosis, vomissements, collapsus cardio-vasculaire, dépression respiratoire pouvant aller jusqu'à l'arrêt respiratoire, coma et convulsions.</p>
+<p class=AmmCorpsTexte>Le syndrome sérotoninergique a également été rapporté.</p>
+<p class=AmmCorpsTexte>Les premiers gestes thérapeutiques seront le maintien des fonctions respiratoire et cardio-vasculaire et le transfert en urgence en milieu hospitalier.</p>
+<p class=AmmCorpsTexte>La naloxone peut être utilisée en cas de dépression respiratoire, sous couvert d'un contrôle des fonctions respiratoires.</p>
+<p class=AmmCorpsTexte>Le diazépam peut être utilisé en cas de convulsions.</p>
+<p class=AmmCorpsTexte>Le tramadol est peu ou pas hémodialysable.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278933">Le tramadol est un analgésique central dont l'efficacité est due à la synergie, aux doses thérapeutiques :</a></p>
+<p class=AmmListePuces1 style='text-align:justify;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>D'un effet opioïde dû à la fixation sur les récepteurs opioïdes de type &#956;,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>D'un effet monoaminergique central dû à une inhibition du recaptage de la noradrénaline et de la sérotonine, mécanisme impliqué dans le contrôle de la transmission nociceptive centrale.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Comme les autres produits de cette classe, le tramadol possède des propriétés antitussives. Les effets sur le tractus gastro-intestinal sont faibles aux doses thérapeutiques. Les effets dépresseurs respiratoires du tramadol sont moindres que ceux de la morphine. Les études réalisées chez l'animal ont montré un potentiel de dépendance réduit par rapport à celui de la morphine, et un potentiel de tolérance très faible.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278934">Après administration orale unique d'une dose de 50 à 100 mg, la biodisponibilité est comprise entre 70 et 90 %.</a></p>
+<p class=AmmCorpsTexte>Après administration orale, répétée toutes les 6 heures, de 50 à 100 mg, l'état d'équilibre est rapidement atteint en 36 heures environ et la biodisponibilité augmente, dépassant 90 %.</p>
+<p class=AmmCorpsTexte>Le pic sérique après administration orale de 100 mg de tramadol est d'environ 300 ng/ml (Cmax) et est atteint après environ 2 h (tmax).</p>
+<p class=AmmCorpsTexte>La liaison aux protéines plasmatiques est de 20 %, et le volume de distribution est important (3 à 4 l/kg). </p>
+<p class=AmmCorpsTexte>Le tramadol traverse la barrière placentaire et passe en très faible quantité dans le lait maternel (environ 0,1 % de la dose maternelle administrée).</p>
+<p class=AmmCorpsTexte>La demi-vie d'élimination est comprise entre 5 et 7 h chez le volontaire sain ; 90% du tramadol est métabolisé, principalement au niveau du foie ; un des métabolites deméthylés possède un effet analgésique ; sa demi-vie est du même ordre que celle du tramadol.</p>
+<p class=AmmCorpsTexte>Le tramadol et ses métabolites sont presque totalement excrétés par voie rénale (95 %). Le reste est éliminé dans les fèces. </p>
+<p class=AmmCorpsTexte>La pharmacocinétique du tramadol n'est que très peu modifiée par l'âge du patient ; chez le sujet âgé de plus de 75 ans, la demi-vie est légèrement augmentée.</p>
+<p class=AmmCorpsTexte>Chez l'insuffisant rénal, la clairance du tramadol est diminuée parallèlement à la clairance de la créatinine ; la demi-vie est en moyenne de 12 heures.</p>
+<p class=AmmCorpsTexte>Chez l'insuffisant hépatique, la clairance du tramadol est diminuée, en fonction de la sévérité de l'insuffisance hépatique.</p>
+<p class=AmmCorpsTexte>L’inhibition de l’un ou des deux cytochromes CYP3A4 et CYP2D6 participant à la biotransformation du tramadol peut modifier la concentration plasmatique du tramadol ou de ses métabolites actifs.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278935">Chez l'animal, les signes d'intoxication qui apparaissent après administration répétée à doses élevées sont compatibles avec une intoxication morphinique.</a></p>
+<p class=AmmCorpsTexte>Certains des tests de mutagénicité in vitro conduits avec le tramadol se sont avérés positifs.</p>
+<p class=AmmCorpsTexte>Toutefois, les essais in vivo chez la souris, le rat et le hamster chinois au niveau de la moelle osseuse et des cellules germinales ont permis d'exclure un potentiel mutagène in vivo du tramadol.</p>
+<p class=AmmCorpsTexte>Les études de reproduction ont mis en évidence une élévation du taux de mortalité néo-natale et un retard du développement de certains organes pour des doses très supérieures à celles utilisées en clinique.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937">Acide citrique anhydre, bicarbonate de sodium, sulfate de sodium anhydre, lactose monohydraté, macrogol 6000, carbonate de sodium anhydre, cyclamate de sodium, povidone K25, aspartam, arôme orange*, siméticone.</a></p>
+<p class=AmmCorpsTexte><i><u>*Composition de l'arôme orange</u></i> : huile d'orange, huile essentielle d'orange, acide citrique monohydraté, butylhydroxyanisole, dextrine, gomme arabique.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">Sans objet.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte>3 ans</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940"><span lang=FR-BE>Pas de précautions particulières de conservation.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte>15 comprimés, 1 tube de 15 en polypropylène avec dessicant </p>
+<p class=AmmCorpsTexte>30 comprimés, 2 tubes de 15 en polypropylène avec dessicant.</p>
+<p class=AmmCorpsTexte>90 comprimés, 6 tubes de 15 en polypropylène avec dessicant.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Pas d’exigences particulières.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142278943">LABORATOIRES FRILAB</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>104 BOULEVARD AUGUSTE BLANQUI</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>75013 PARIS</p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 302 780 3 1: 15 comprimés en tube (polypropylène)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 350 673 4 0 : 30 comprimés en tube (polypropylène).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 561 772 2 6 : 90 comprimés en tube (polypropylène).</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I.</p>
+<p class=AmmCorpsTexte>Prescription limitée à 12 semaines.</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+                              <div id="tabpanel-bon-usage-panel" class="fr-tabs__panel" role="tabpanel"
+                     aria-labelledby="tabpanel-bon-usage"
+                     tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      
+      <div class="fr-col-12 fr-col-md">
+        <div class="fr-editor">
+
+          
+          
+          
+          
+          
+                      <div class="fr-grid-row">
+              <div class="fr-col">
+                <h5 id="heading-informations-importantes" role="heading" aria-level="5">
+                  <span class="fr-icon-information-line text-color-orange" aria-hidden="true"></span> Informations
+                  importantes
+                  <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage" href="#top"
+                     id="section-glossaire__top_link" role="link"
+                     aria-describedby="tooltip-link-page-top"
+                     aria-label="Redirection vers le haut de page"></a>
+                  <span id="tooltip-link-page-top" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                      Redirection vers le haut de page
+                    </span>
+                </h5>
+                <p aria-labelledby="heading-informations-importantes">Les informations importantes disponibles pour ce médicament sont les suivantes : <br /><ul id="liste_infos_importantes" role="list"><li role='listitem'>    <a  target='_blank'    href='https://ansm.sante.fr/actualites/tramadol-et-codeine-les-nouvelles-regles-de-prescription-et-delivrance-entrent-en-vigueur-le-1er-mars-2025'>Tramadol et codéine : les nouvelles règles de prescription et délivrance entrent en vigueur le 1er mars 2025</a></li><li role='listitem'>    <a  target='_blank'    href='https://ansm.sante.fr/actualites/tramadol-et-codeine-devront-etre-prescrits-sur-une-ordonnance-securisee-des-le-1er-decembre'>Tramadol et codéine devront être prescrits sur une ordonnance sécurisée dès le 1er décembre</a></li><li role='listitem'>    <a  target='_blank'    href='https://ansm.sante.fr/actualites/tramadol-moins-de-comprimes-dans-les-boites-pour-un-meilleur-usage'>Tramadol : moins de comprimés dans les boîtes pour un meilleur usage</a></li></ul></p>
+              </div>
+            </div>
+          
+          
+          
+                  </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_BIODALGIC_50_mg,_comprimé_effervescent_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE BIODALGIC 50 mg, comprimé effervescent ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE BIODALGIC 50 mg, comprimé effervescent ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_BIODALGIC_50_mg,_comprimé_effervescent_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE BIODALGIC 50 mg, comprimé effervescent ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE BIODALGIC 50 mg, comprimé effervescent ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_PRENDRE_BIODALGIC_50_mg,_comprimé_effervescent_?"
+                     aria-label="3. COMMENT PRENDRE BIODALGIC 50 mg, comprimé effervescent ? (Lien de redirection)">
+                    3. COMMENT PRENDRE BIODALGIC 50 mg, comprimé effervescent ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_BIODALGIC_50_mg,_comprimé_effervescent_?"
+                     aria-label="5. COMMENT CONSERVER BIODALGIC 50 mg, comprimé effervescent ? (Lien de redirection)">
+                    5. COMMENT CONSERVER BIODALGIC 50 mg, comprimé effervescent ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : BIODALGIC 50 mg, comprimé effervescent - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="BIODALGIC 50 mg, comprimé effervescent, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 04/08/2026</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'><a name="_Toc142278999">BIODALGIC 50 mg, comprimé effervescent</a></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Tramadol (chlorhydrate)</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279000"><span lang=FR-BE>Veuillez lire attentivement cette notice avant de prendre ce médicament car elle contient des informations importantes pour vous.</span></a></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin ou votre pharmacien.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que BIODALGIC 50 mg, comprimé effervescent et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant de prendre BIODALGIC 50 mg, comprimé effervescent ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment prendre BIODALGIC 50 mg, comprimé effervescent ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver BIODALGIC 50 mg, comprimé effervescent ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_BIODALGIC_50_mg,_comprimé_effervescent_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE BIODALGIC 50 mg, comprimé effervescent ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279004"></a><a name="_Toc142279003">Classe pharmacothérapeutique : ANALGESIQUE OPIOIDE (N : Système nerveux central) - code ATC : N02AX02</a></p>
+<p class=AmmCorpsTexte>Ce médicament est un antalgique (il calme la douleur).</p>
+<p class=AmmCorpsTexte><span style='color:black'>Il est indiqué dans le traitement des douleurs modérées à intenses de l'adulte</span>.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_BIODALGIC_50_mg,_comprimé_effervescent_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE BIODALGIC 50 mg, comprimé effervescent ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">Ne prenez jamais BIODALGIC 50 mg, comprimé effervescent :</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous êtes allergique à la substance active, aux morphiniques ou à l’un des autres composants contenus dans ce médicament, mentionnés dans la rubrique 6.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En cas d’intoxication aiguë ou surdosage avec les produits agissant sur le système nerveux central (alcool, somnifères, autres médicaments contre la douleur...),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En cas de traitement simultané ou récent par certains antidépresseurs,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous souffrez d’une insuffisance respiratoire sévère,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous souffrez d’une maladie sévère du foie,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Enfant de moins de 15 ans,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En cas de traitement prolongé l'allaitement est contre-indiqué,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En cas d’épilepsie non contrôlée par un traitement (voir Mises en garde spéciales),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En association avec la buprénorphine, la nalbuphine, la pentazocine.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En raison de la présence d'aspartam, ce médicament est contre-indiqué en cas de phénylcétonurie (maladie héréditaire dépistée à la naissance). </p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><a name="_Hlk69488196">Ce médicament ne doit généralement pas être utilisé, sauf avis contraire de votre médecin </a>:</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Pendant la grossesse,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En association avec la carbamazépine (médicament de l'épilepsie). </p>
+<p class=AmmListePuces1 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:justify;text-indent:0cm'>En cas de doute, il est indispensable de demander l'avis de votre médecin ou de votre pharmacien.</p>
+<p class=AmmCorpsTexteGras>Avertissements et précautions</p>
+<p class=AmmCorpsTexteGras><a name="Ann3b_MisesEnGarde_7"></a>Mises en garde spéciales</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Adressez-vous à votre médecin ou pharmacien avant de prendre </span>BIODALGIC 50 mg, comprimé effervescent<span lang=FR-BE> :</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous souffrez de dépression et prenez des antidépresseurs, dans la mesure où certains d’entre eux peuvent interagir avec le tramadol (voir «Autres médicaments et BIODALGIC»). Respectez la prescription de votre médecin.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='color:black'>si vous estimez que vous êtes dépendant à d’autres antalgiques (opioïdes) : c</span>e médicament n'est pas adapté dans le traitement de sevrage ou de substitution chez les toxicomanes.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='color:black'>si vous présentez une tendance à l’épilepsie ou aux convulsions : </span>ce médicament peut être responsable de convulsions à doses thérapeutiques et en particulier en cas de prise de forte dose et d'association avec certains médicaments dont les traitements antidépresseurs, le bupropion, la méfloquine et certains traitements des troubles de la personnalité.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='color:black'>si vous présentez une intolérance à certains sucres : </span>en raison de la présence de lactose, ce médicament ne doit pas être utilisé en cas de galactosémie (maladies métaboliques rares) de syndrome de malabsorption du glucose et du galactose ou d'un déficit en lactase.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='color:black'>si vous êtes atteint d’une maladie du foie ou des reins : </span>le tramadol est transformé dans le foie par une enzyme. Des variations au niveau de cette enzyme sont présentes chez certains patients, ce qui peut avoir des conséquences différentes selon les personnes. Chez certains, la douleur pourra ne pas être suffisamment soulagée, tandis que d’autres seront plus susceptibles de présenter des effets indésirables graves. </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous remarquez l’un des effets indésirables suivants, vous devez arrêter de prendre ce médicament et consulter immédiatement un médecin : respiration lente ou superficielle, confusion, somnolence, rétrécissement des pupilles, nausées ou vomissements, constipation, fatigue extrême, manque d'appétit, douleurs abdominales intenses, nausées, vomissements ou hypotension. Cela peut indiquer que vous avez une insuffisance surrénalienne (faible taux de cortisol). Si vous présentez ces symptômes, contactez votre médecin, qui décidera si vous devez prendre un supplément hormonal.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span class=AmmCorpsTexteCar><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span></span><span class=AmmCorpsTexteCar>si vous présentez des troubles respiratoires liés au sommeil : <span style='text-transform:uppercase'>Biodalgic</span> peut provoquer des troubles respiratoires liés au sommeil, tels que l’apnée centrale du sommeil (respiration superficielle/pause respiratoire pendant le sommeil) et l’hypoxémie liée au sommeil (faible taux d’oxygène dans le sang). Les symptômes peuvent inclure des pauses respiratoires pendant le sommeil, un réveil nocturne dû à un essoufflement, des difficultés à maintenir le sommeil ou une somnolence excessive pendant la journée. Si vous ou une autre personne observez ces symptômes, contactez votre médecin. Une réduction de dose peut être envisagée par votre médecin.</span></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Il existe un faible risque que vous présentiez un syndrome sérotoninergique susceptible de survenir après avoir pris du tramadol en association avec certains antidépresseurs ou du tramadol seul. Consultez immédiatement un médecin si vous avez des symptômes liés à ce syndrome sévère (voir rubrique 4 «Quels sont les effets indésirables éventuels?»)</p>
+<p class=AmmCorpsTexteGras>Enfants et adolescents</p>
+<p class=AmmCorpsTexte><i>Utilisation chez les enfants présentant des problèmes respiratoires</i></p>
+<p class=AmmCorpsTexte>Le tramadol n’est pas recommandé chez les enfants présentant des problèmes respiratoires car les symptômes de toxicité du tramadol peuvent être plus graves chez ces enfants.</p>
+<p class=AmmAnnexeTitre3>Précautions d'emploi</p>
+<p class=AmmCorpsTexte>Prévenez votre médecin en cas de maladie grave du foie ou des reins, car il convient alors de modifier la posologie.</p>
+<p class=AmmCorpsTexte>En cas de doute ne pas hésiter à demander l'avis de votre médecin ou de votre pharmacien.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et BIODALGIC 50 mg, comprimé effervescent</p>
+<p class=AmmCorpsTexte>Ce médicament doit être évité en association avec la carbamazépine, la buprénorphine, la nalbuphine, la pentazocine, la prise d'alcool, le naltrexone.</p>
+<p class=AmmCorpsTexte>Le risque d’effets indésirables augmente si vous prenez certains antidépresseurs : BIODALGIC peut interagir avec ces médicaments et vous pouvez présenter un syndrome sérotoninergique (voir la rubrique 4 « Quels sont les effets indésirables éventuels ? »).</p>
+<p class=AmmCorpsTexte>Informez votre médecin ou pharmacien si vous prenez, avez récemment pris ou pourriez prendre tout autre médicament.</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279012">BIODALGIC 50 mg, comprimé effervescent avec l’alcool</a></p>
+<p class=AmmCorpsTexte>Il est déconseillé de consommer des boissons alcoolisées pendant le traitement.</p>
+<p class=AmmCorpsTexteGras>Grossesse et allaitement</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous êtes enceinte ou que vous allaitez, si vous pensez être enceinte ou planifiez une grossesse, demandez conseil à votre médecin</span><span lang=FR-BE> </span><span lang=FR-BE>ou pharmacien avant de prendre ce médicament.</span><i><span lang=FR-BE> </span></i></p>
+<p class=AmmCorpsTexte><i>Grossesse</i></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Il n’existe que très peu d’informations concernant la sécurité d’emploi du tramadol chez la femme enceinte. Vous ne devez donc pas utiliser BIODALGIC 50 mg, comprimé effervescent si vous êtes enceinte.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>L’utilisation de façon prolongée pendant la grossesse peut entraîner un syndrome de sevrage chez le nouveau-né.</span></p>
+<p class=AmmCorpsTexte><i>Allaitement</i></p>
+<p class=AmmCorpsTexte>Le tramadol est excrété dans le lait maternel. Pour cette raison, vous ne devez pas prendre BIODALGIC 50 mg, comprimé effervescent plus d’une fois au cours de la période d’allaitement ou, si vous prenez BIODALGIC 50 mg, comprimé effervescent plus d’une fois, vous devez interrompre l’allaitement.</p>
+<p class=AmmCorpsTexte><i>Fertilité</i></p>
+<p class=AmmCorpsTexte>D’après les données disponibles, le tramadol n’aurait pas d’influence sur la fertilité féminine et masculine.</p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>L'attention des conducteurs de véhicules et des utilisateurs de machine est attirée sur le fait que cette spécialité peut entraîner un risque de somnolence. Ce risque est majoré en cas de prise concomitante d'alcool ou de médicaments sédatifs.</p>
+<p class=AmmCorpsTexteGras>BIODALGIC 50 mg, comprimé effervescent contient de l’aspartam (source de phénylalanine), du lactose et du sodium.</p>
+<p class=AmmCorpsTexte>Ce médicament contient 10 mg d’aspartam par comprimé. L’aspartam contient une source de phénylalanine. Il peut être dangereux pour les personnes atteintes de phénylcétonurie (PCU), une maladie génétique rare caractérisée par l’accumulation de phénylalanine ne pouvant être éliminée correctement. </p>
+<p class=AmmCorpsTexte>Ce médicament contient du lactose. Si votre médecin vous a informé d’une intolérance à certains sucres, contactez-le avant de prendre ce médicament. </p>
+<p class=AmmCorpsTexte>Ce médicament contient 214 mg de sodium (composant principal du sel de cuisine/table) par comprimé. Cela équivaut à 10.7% de l’apport alimentaire quotidien maximal recommandé de sodium pour un adulte.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_PRENDRE_BIODALGIC_50_mg,_comprimé_effervescent_?'>3. COMMENT PRENDRE BIODALGIC 50 mg, comprimé effervescent ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279021">Veillez à toujours prendre ce médicament en suivant exactement les indications de votre médecin ou pharmacien. Vérifiez auprès de votre médecin ou pharmacien en cas de doute.</a></p>
+<p class=AmmAnnexeTitre3><span lang=FR-BE>Posologie</span></p>
+<p class=AmmCorpsTexte>Comme pour tous les médicaments antalgiques, la posologie du tramadol doit être adaptée à l'intensité de la douleur et à la réponse clinique de chaque patient.</p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><u><span lang=FR-BE>Douleurs aiguës :</span></u></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>La dose d'attaque est de 100</span> <span lang=FR-BE>mg (2</span> <span lang=FR-BE>comprimés) suivie de 50 ou 100mg (1 ou 2 comprimés) toutes les 4-6 heures sans dépasser 400</span> <span lang=FR-BE>mg/24 h (8 comprimés).</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><u><span lang=FR-BE>Douleurs chroniques :</span></u></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>La dose d'attaque est de 50 ou 100 mg (1 ou 2 comprimés) suivie de 50 ou 100 mg (1 ou 2 comprimés) toutes les 4-6 heures sans dépasser 400 mg/24 h (8 comprimés).</span></p>
+<p class=AmmListePuces2><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span><span lang=FR-BE>A partir de 75 ans, il est recommandé d'augmenter l'intervalle entre les prises (toutes les 9 heures).</span></p>
+<p class=AmmListePuces2><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span><span lang=FR-BE>En cas d'insuffisance hépatique : réduire la dose unitaire de moitié ou augmenter de 2 fois l'intervalle entre les prises (toutes les 12 heures).</span></p>
+<p class=AmmListePuces2><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span><span lang=FR-BE>En cas d'insuffisance rénale : augmenter de 2 fois l'intervalle entre les prises (toutes les 12 heures pour une clairance de la créatinine < 30 ml/min).</span></p>
+<p class=AmmListePuces2 style='text-indent:0cm'><span lang=FR-BE>Eviter d'utiliser le tramadol si la clairance de la créatinine est < 10 ml/min.</span></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><span lang=FR-BE>Si vous avez l'impression que l'effet de BIODALGIC 50 mg, comprimé effervescent est trop fort ou trop faible, consultez votre médecin ou votre pharmacien.</span></p>
+<p class=AmmAnnexeTitre3><span lang=FR-BE>Mode d'administration</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Voie orale.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Boire immédiatement après dissolution complète du comprimé dans un peu d'eau.</span></p>
+<p class=AmmCorpsTexteGras>Si vous avez pris plus de BIODALGIC 50<span lang=FR-BE> </span>mg, comprimé effervescent que vous n’auriez dû</p>
+<p class=AmmCorpsTexte>Consultez immédiatement votre médecin ou votre pharmacien</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez de prendre BIODALGIC 50<span lang=FR-BE> </span>mg, comprimé effervescent</p>
+<p class=AmmCorpsTexte>Ne prenez pas de dose double pour compenser la dose que vous avez oublié de prendre.</p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez de prendre BIODALGIC 50<span lang=FR-BE> </span>mg, comprimé effervescent</p>
+<p class=AmmCorpsTexte>Vous ne devez pas arrêter brutalement de prendre ce médicament, sauf indication contraire de votre médecin. Si vous souhaitez arrêter de prendre ce médicament, parlez-en d’abord à votre médecin, surtout si vous en prenez depuis longtemps. </p>
+<p class=AmmCorpsTexte>Votre médecin vous indiquera quand et comment arrêter, ceci pourra s’effectuer en diminuant progressivement la dose afin de réduire les risques d’apparition d’effets indésirables évitables (symptômes de sevrage).</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</a></p>
+<p class=AmmCorpsTexte>Vous devez immédiatement voir un médecin s'il apparaît des symptômes de réaction allergique tels qu'un œdème du visage, de la langue et/ou de la gorge et/ou des difficultés de déglutition ou une urticaire s'accompagnant de difficultés respiratoires.</p>
+<div align=center>
+<div class='fr-table--lg fr-table'><table>
+<tbody>
+<tr>
+<td width=137 valign=top style='width:102.9pt;border:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'><a name="_Hlk69748425"><b><span style='font-size:9.0pt'>Système - Organe</span></b></a></p>
+</td>
+<td width=104 valign=top style='width:77.95pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b><span style='font-size:9.0pt'>Très fréquent (1 patient sur 10)</span></b></p>
+</td>
+<td width=94 valign=top style='width:70.85pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b><span style='font-size:9.0pt'>Fréquent (1 à 10 patient sur 100)</span></b></p>
+</td>
+<td width=95 valign=top style='width:70.9pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b><span style='font-size:9.0pt'>Rare (1 à 10 patient sur 1 000)</span></b></p>
+</td>
+<td width=114 valign=top style='width:3.0cm;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b><span style='font-size:9.0pt'>Très rarement (1 à 10 patient sur 10 000)</span></b></p>
+</td>
+<td width=127 valign=top style='width:95.6pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b><span style='font-size:9.0pt'>Fréquence indéterminée (Fréquence ne pouvant être estimée à partir des données disponibles)</span></b></p>
+</td>
+</tr>
+</tbody>
+<tr>
+<td width=137 valign=top style='width:102.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:9.0pt'>Affections du système immunitaire</span></p>
+</td>
+<td width=104 valign=top style='width:77.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=94 valign=top style='width:70.85pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=95 valign=top style='width:70.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=114 valign=top style='width:3.0cm;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Réactions allergiques (éruption cutanée, œdème de Quincke, choc anaphylactique)</span></p>
+</td>
+<td width=127 valign=top style='width:95.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:9.0pt'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=137 valign=top style='width:102.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'>Affections du système nerveux central</span></p>
+</td>
+<td width=104 valign=top style='width:77.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'>Somnolence, maux de tête, vertiges, sueurs, sensation de malaise</span><span style='font-size:9.0pt'>.</span></p>
+</td>
+<td width=94 valign=top style='width:70.85pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=95 valign=top style='width:70.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'>Perte de conscience transitoire (syncope), contractions musculaires, mouvements non coordonnés.</span></p>
+</td>
+<td width=114 valign=top style='width:3.0cm;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=127 valign=top style='width:95.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'>Syndrome sérotoninergique, qui peut se manifester par des modifications de l’état mental (par exemple, une agitation, des hallucinations, un coma), et d’autres effets, tels que de la fièvre, une augmentation de la fréquence cardiaque, une tension artérielle instable, des contractions musculaires involontaires, une rigidité musculaire, un manque de coordination et/ou des symptômes gastro-intestinaux (par exemple des nausées, des vomissements, une diarrhée) (voir rubrique 2 «Quelles sont les informations à connaître avant de prendre BIODALGIC</span></p>
+</td>
+</tr>
+<tr>
+<td width=137 valign=top style='width:102.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Affections cardiaques</span></p>
+</td>
+<td width=104 valign=top style='width:77.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=94 valign=top style='width:70.85pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Tachycardie, hypotension, palpitations, élévation de la pression artérielle</span></p>
+</td>
+<td width=95 valign=top style='width:70.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=114 valign=top style='width:3.0cm;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=127 valign=top style='width:95.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=137 valign=top style='width:102.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Affections gastro-intestinales</span></p>
+</td>
+<td width=104 valign=top style='width:77.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Nausées, vomissements, sécheresse buccale, et en traitement prolongé, constipation.</span></p>
+</td>
+<td width=94 valign=top style='width:70.85pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Douleurs abdominales </span></p>
+</td>
+<td width=95 valign=top style='width:70.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=114 valign=top style='width:3.0cm;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=127 valign=top style='width:95.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=137 valign=top style='width:102.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Affections cutanées et des tissus sous-cutanés</span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=104 valign=top style='width:77.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=94 valign=top style='width:70.85pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Eruption cutanée.</span></p>
+</td>
+<td width=95 valign=top style='width:70.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=114 valign=top style='width:3.0cm;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=127 valign=top style='width:95.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=137 valign=top style='width:102.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Affections urinaires et rénales</span></p>
+</td>
+<td width=104 valign=top style='width:77.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=94 valign=top style='width:70.85pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=95 valign=top style='width:70.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=114 valign=top style='width:3.0cm;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Difficulté pour uriner.</span></p>
+</td>
+<td width=127 valign=top style='width:95.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=137 valign=top style='width:102.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Affections visuelles</span></p>
+</td>
+<td width=104 valign=top style='width:77.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=94 valign=top style='width:70.85pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Troubles mineurs de la vision</span></p>
+</td>
+<td width=95 valign=top style='width:70.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=114 valign=top style='width:3.0cm;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=127 valign=top style='width:95.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=137 valign=top style='width:102.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'>Affections hépato-biliaires</span></p>
+</td>
+<td width=104 valign=top style='width:77.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=94 valign=top style='width:70.85pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=95 valign=top style='width:70.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=114 valign=top style='width:3.0cm;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=127 valign=top style='width:95.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'>Elévation des enzymes hépatiques</span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'>Cholestase (tramadol seul)</span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'>Cytolyse hépatique (souvent en association au paracétamol)</span></p>
+</td>
+</tr>
+<tr>
+<td width=137 valign=top style='width:102.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Affections respiratoires, thoraciques et médiastinales</span></p>
+</td>
+<td width=104 valign=top style='width:77.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=94 valign=top style='width:70.85pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=95 valign=top style='width:70.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=114 valign=top style='width:3.0cm;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Troubles de la respiration</span></p>
+</td>
+<td width=127 valign=top style='width:95.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Hoquet</span></p>
+</td>
+</tr>
+<tr>
+<td width=137 valign=top style='width:102.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Affections générales et anomalies au site d’administration</span></p>
+</td>
+<td width=104 valign=top style='width:77.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=94 valign=top style='width:70.85pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Asthénie, euphorie.</span></p>
+</td>
+<td width=95 valign=top style='width:70.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=114 valign=top style='width:3.0cm;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=127 valign=top style='width:95.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=137 valign=top style='width:102.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Affections psychiatriques</span></p>
+</td>
+<td width=104 valign=top style='width:77.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=94 valign=top style='width:70.85pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=95 valign=top style='width:70.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=114 valign=top style='width:3.0cm;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Dépendance, syndrome de sevrage après une utilisation prolongée entraînant des symptômes tels que : agitation, anxiété, nervosité, insomnie, tremblements et troubles gastro-intestinaux. D'autres symptômes de sevrages ont été rarement rapportés, incluant : attaque de panique, anxiété sévère, hallucinations, sensations de picotement et/ou de fourmillement, sifflement et/ou bourdonnement d'oreille, autres troubles du système nerveux</span></p>
+</td>
+<td width=127 valign=top style='width:95.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Possibilité de troubles neuro-psychiques de type confusion et exceptionnellement hallucinations et/ou délire ; convulsions principalement chez des patients prédisposés ou traités par de fortes doses</span></p>
+</td>
+</tr>
+<tr>
+<td width=137 valign=top style='width:102.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Affections de métabolisme et de la nutrition</span></p>
+</td>
+<td width=104 valign=top style='width:77.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=94 valign=top style='width:70.85pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=95 valign=top style='width:70.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=114 valign=top style='width:3.0cm;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=127 valign=top style='width:95.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Hypoglycémie</span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size:9.0pt'>Hyponatrémie</span></p>
+</td>
+</tr>
+</table></div>
+</div>
+<p class=AmmAnnexeTitre3>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_BIODALGIC_50_mg,_comprimé_effervescent_?'>5. COMMENT CONSERVER BIODALGIC 50 mg, comprimé effervescent ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026"></a><a name="_Toc142279024">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte>Ce médicament ne nécessite pas de précaution particulière de conservation.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas ce médicament après la date de péremption indiquée sur l’emballage après EXP. La date de péremption fait référence au dernier jour de ce mois.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout <span style='color:black'>ou avec </span>les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient BIODALGIC 50 mg, comprimé effervescent</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est :</p>
+<p class=AmmComposition style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt'>Tramadol (chlorhydrate)................................................................................................ 50,00<span lang=FR-BE> </span>mg</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont : </p>
+<p class=AmmListePuces1 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:17.85pt;margin-bottom:.0001pt;text-indent:0cm'>Acide citrique anhydre, bicarbonate de sodium, sulfate de sodium anhydre, lactose monohydraté, macrogol 6000, carbonate de sodium anhydre, cyclamate de sodium, povidone K25, aspartam, arôme orange, siméticone</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que BIODALGIC 50 mg, comprimé effervescent et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>Ce médicament se présente sous forme de comprimé effervescent. Tube de 15, 30 ou 90.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279031">LABORATOIRES FRILAB</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>104 BOULEVARD AUGUSTE BLANQUI</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>75013 PARIS</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>LABORATOIRES FRILAB</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>104 BOULEVARD AUGUSTE BLANQUI</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>75013 PARIS</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Toc142279033">LOSAN PHARMA GmbH</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>OTTO HAHNSTRASSE 13</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>79395 NEUENBURG</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>ALLEMAGNE</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'> </p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>ou</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'> </p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE>LOSAN PHARMA GmbH</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE>ESCHBACHER STRASSE 2</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>79427 ESCHBACH</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>ALLEMAGNE</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'> </p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>ou </p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'> </p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><b>ATHENA IPS</b></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>ZI N°2 DE PROUVY –  ROUVIGNIES</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>1 RUE NUNGESSER</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>59121 PROUVY</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>FRANCE</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+</BODY>
+</HTML>
+
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import Icon from './Icon'
 import Logo from './Logo'
 import { NAVIGATION } from '../lib/navigation'
 
@@ -9,6 +10,7 @@ export default function Sidebar() {
         <Logo />
       </div>
 
+      <p className="flanc-legende">Menu</p>
       <nav className="flanc-groupe" aria-label="Navigation principale">
         {NAVIGATION.map((item) => (
           <NavLink
@@ -17,18 +19,30 @@ export default function Sidebar() {
             end={item.exact}
             className={({ isActive }) => `lien ${isActive ? 'lien-actif' : ''}`}
           >
-            <span className="lien-glyphe" aria-hidden="true">{item.glyphe}</span>
+            <span className="lien-glyphe">
+              <Icon nom={item.icone} />
+            </span>
             {item.libelle}
           </NavLink>
         ))}
       </nav>
 
       <div className="flanc-bas">
+        <div className="flanc-carte">
+          <div className="flanc-carte-titre">
+            <Icon nom="bouclier" taille={16} />
+            Donnees officielles
+          </div>
+          <p>Medicaments AMMPS, prix et remboursements CNOPS et CNSS.</p>
+        </div>
+
         <NavLink
           to="/parametres"
           className={({ isActive }) => `lien ${isActive ? 'lien-actif' : ''}`}
         >
-          <span className="lien-glyphe" aria-hidden="true">⚙️</span>
+          <span className="lien-glyphe">
+            <Icon nom="reglages" />
+          </span>
           Parametres
         </NavLink>
         <p className="flanc-note">

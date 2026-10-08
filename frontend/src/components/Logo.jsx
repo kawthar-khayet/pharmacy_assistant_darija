@@ -1,14 +1,20 @@
-/** Khatim : l'etoile a huit branches du zellige, redessinee en trait fin.
- *  Seule citation marocaine explicite de l'interface -- tout le reste du
- *  vocabulaire visuel reste contemporain. */
-export function Khatim({ className }) {
+/** Signe DwaTalk : une croix de pharmacie traversee par un trait de pouls.
+ *  La croix dit « sante » avant meme qu'on lise le nom ; le pouls, qu'il
+ *  s'agit d'un service vivant, qui repond. */
+export function Signe({ className }) {
   return (
-    <svg className={className} viewBox="0 0 64 64" aria-hidden="true">
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path
-        d="M32 5 L39 19 L54 14 L49 29 L63 32 L49 35 L54 50 L39 45 L32 59 L25 45 L10 50 L15 35 L1 32 L15 29 L10 14 L25 19 Z"
-        fill="none"
+        d="M9 3.5h6v5.5h5.5v6H15v5.5H9V15H3.5V9H9z"
         stroke="currentColor"
-        strokeWidth="4.5"
+        strokeWidth="1.8"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M5 12h3.2l1.6-2.6 2.6 5.2 1.6-2.6H19"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
         strokeLinejoin="round"
       />
     </svg>
@@ -19,7 +25,7 @@ export default function Logo({ compact = false }) {
   return (
     <span className="marque">
       <span className="marque-signe">
-        <Khatim />
+        <Signe />
       </span>
       {!compact && (
         <span className="marque-mot">

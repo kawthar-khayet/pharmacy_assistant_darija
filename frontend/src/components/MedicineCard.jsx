@@ -1,4 +1,6 @@
+import Icon from './Icon'
 import { versModele } from '../lib/medicament'
+import { LANGUE_PAR_DEFAUT, t } from '../lib/langues'
 
 function Fait({ libelle, valeur, classe = '' }) {
   if (!valeur) return null
@@ -18,20 +20,25 @@ function Fait({ libelle, valeur, classe = '' }) {
  * Les donnees viennent en un seul bloc de texte cote API ; les eclater en faits
  * separes rend la reponse balayable d'un coup d'oeil au lieu d'un paragraphe.
  */
-export default function MedicineCard({ resultat, onOuvrir }) {
+export default function MedicineCard({ resultat, onOuvrir, langue = LANGUE_PAR_DEFAUT }) {
   const m = versModele(resultat)
+  const remboursement = m.remboursement
+    ? m.remboursement.nul ? t(langue, 'non_rembourse') : m.remboursement.texte
+    : null
   const cliquable = Boolean(onOuvrir)
 
   const contenu = (
     <>
       <div className="fiche-tete">
-        <span className="fiche-glyphe" aria-hidden="true">💊</span>
+        <span className="fiche-glyphe">
+          <Icon nom="pilule" taille={20} />
+        </span>
         <div style={{ minWidth: 0 }}>
           <div className="fiche-etiquette">
-            Medicament
+            {t(langue, 'medicament')}
             {m.confiance === 'a_confirmer' && (
               <span className="marqueur marqueur-verifier" style={{ marginLeft: 8 }}>
-                Nom approchant, a verifier
+                {t(langue, 'nom_approchant')}
               </span>
             )}
           </div>
@@ -41,12 +48,9 @@ export default function MedicineCard({ resultat, onOuvrir }) {
       </div>
 
       <dl className="fiche-faits">
-        <Fait libelle="Prix indicatif" valeur={m.prix} classe="fait-prix" />
-        <Fait libelle="Forme" valeur={[m.dosage, m.forme].filter(Boolean).join(' — ')} />
-        <Fait
-          libelle="Remboursement"
-          valeur={m.remboursement ? m.remboursement.texte : null}
-        />
+        <Fait libelle={t(langue, 'prix_indicatif')} valeur={m.prix} classe="fait-prix" />
+        <Fait libelle={t(langue, 'forme')} valeur={[m.dosage, m.forme].filter(Boolean).join(' — ')} />
+        <Fait libelle={t(langue, 'remboursement')} valeur={remboursement} />
       </dl>
     </>
   )

@@ -1,18 +1,14 @@
-"""Entity linking : resolution des noms de medicaments et de pharmacies."""
+"""Linking : retrouver medicaments, lieux et pharmacies malgre les fautes."""
 import pytest
 
-from entity_linking import MedicamentMatcher, equivalents, famille_forme, normalize
-from pharmacy_linking import PharmacyMatcher
+from nlp.linking.lieux import est_pharmacie, resoudre_lieu
+from nlp.linking.medicaments import MedicamentMatcher, dose_mg, famille_forme, filtrer_dosage
+from nlp.linking.pharmacies import chercher_pharmacie
 
 
 @pytest.fixture(scope="module")
 def meds():
     return MedicamentMatcher()
-
-
-@pytest.fixture(scope="module")
-def pharmas():
-    return PharmacyMatcher()
 
 
 # ---------------------------------------------------------------- medicaments
@@ -88,6 +84,20 @@ def test_filtre_par_dosage(meds):
     assert variantes and all("1" in (v["dosage"] or "") for v in variantes)
 
 
+
+@pytest.mark.parametrize("dosage, mg", [
+    ("1000", 1000), ("1000mg", 1000), ("1g", 1000), ("1 G", 1000), ("1 gr", 1000),
+    ("12,5 MG", 12.5), ("500 µg", 0.5), ("1000 UI", None), ("5 %", None),
+])
+def test_dose_en_mg(dosage, mg):
+    assert dose_mg(dosage) == mg
+
+
+@pytest.mark.parametrize("dosage", ["1000", "1000mg", "1g", "1000g"])  # 1000g : faute pour mg
+def test_doliprane_1000_trouve_1_g(meds, dosage):
+    lignes = meds.df[meds.df["nom_norm"] == "DOLIPRANE"]
+    assert set(filtrer_dosage(lignes, dosage)["dosage"]) == {"1 G"}
+
 def test_aucune_valeur_nan_dans_les_resultats(meds):
     """Une case vide doit sortir en None (null en JSON), jamais en NaN."""
     for r in meds.match("doliprane", top_k=3):
@@ -99,148 +109,108 @@ def test_aucune_valeur_nan_dans_les_resultats(meds):
 def test_requete_vide(meds):
     assert meds.match("   ") == []
 
+# ---------------------------------------------------------------------- lieux
 
-# --------------------------------------------------------------- pharmacies
+@pytest.mark.parametrize("ecrit", ["maarif", "f m3arif", "Maârif", "المعاريف", "فالمعاريف", "maarif casa"])
+def test_quartier_ecrit_de_plusieurs_facons(ecrit):
+    """Preposition, arabizi, accents, graphie arabe, ville ajoutee : meme quartier."""
+    lieu = resoudre_lieu(ecrit)
+    assert (lieu.statut, lieu.ville) == ("quartier", "Casablanca")
+    assert lieu.latitude and lieu.longitude
 
-@pytest.mark.parametrize("nom, lieu, attendu", [
-    ("Granada", "Nador", "Pharmacie Granada"),
-    ("Grenada", "Nador", "Pharmacie Granada"),   # faute
-    ("Al Hikmaa", "Rabat", "Pharmacie Al Hikma"),
+
+@pytest.mark.parametrize("ecrit, ville", [
+    ("casa", "Casablanca"), ("كازا", "Casablanca"), ("الدار البيضاء", "Casablanca"),
+    ("rbat", "Rabat"), ("الرباط", "Rabat"), ("tanja", "Tanger"), ("fes", "Fès"),
 ])
-def test_pharmacie_par_nom_et_lieu(pharmas, nom, lieu, attendu):
-    premier = pharmas.match(nom=nom, location=lieu, top_k=1)[0]
-    assert premier["nom"] == attendu
+def test_ville_ecrite_en_darija_ou_en_arabe(ecrit, ville):
+    lieu = resoudre_lieu(ecrit)
+    assert (lieu.statut, lieu.ville) == ("ville", ville)
 
 
-def test_quartier_resolu_vers_sa_ville(pharmas):
-    resultats = pharmas.match(location="Maarif", top_k=5)
-    assert resultats and {r["ville"] for r in resultats} == {"Casablanca"}
+def test_quartier_homonyme_ambigu_sauf_ville_connue():
+    lieu = resoudre_lieu("agdal")
+    assert lieu.statut == "ambigu" and {"Rabat", "Fès"} <= set(lieu.villes_possibles)
+    assert resoudre_lieu("agdal", ville_connue="Rabat").ville == "Rabat"
 
 
-def test_quartier_ambigu_signale(pharmas):
-    """'Maarif' existe dans plusieurs villes : le choix de la ville dominante
-    doit etre signale, pas fait en silence."""
-    pharmas.match(location="Maarif", top_k=3)
-    assert pharmas.last_location_note and "Casablanca" in pharmas.last_location_note
+def test_quartier_absent_d_osm_retrouve_par_les_adresses():
+    """Beaucoup de quartiers manquent dans OSM ; l'annuaire les cite dans ses adresses."""
+    lieu = resoudre_lieu("daoudiate")
+    assert (lieu.statut, lieu.ville, lieu.source) == ("quartier", "Marrakech", "adresses")
 
 
-def test_lieu_inconnu_ne_renvoie_rien(pharmas):
-    assert pharmas.match(location="Zzzqqqville", top_k=3) == []
+def test_osm_et_annuaire_sont_reunis():
+    """OSM ne connait que le Oulfa d'El Jadida ; l'annuaire cite celui de
+    Casablanca. Le patient doit pouvoir choisir, pas etre envoye a El Jadida."""
+    assert set(resoudre_lieu("oulfa").villes_possibles) == {"Casablanca", "El Jadida"}
+    assert resoudre_lieu("oulfa casa").ville == "Casablanca"
 
 
-@pytest.mark.parametrize("ville_dite, attendue", [
-    ("الدار البيضاء", "Casablanca"),
-    ("كازا", "Casablanca"),
-    ("casa", "Casablanca"),          # diminutif d'usage, a l'ecrit comme a l'oral
-    ("الرباط", "Rabat"),
-    ("مراكش", "Marrakech"),
-    ("طنجة", "Tanger"),
+def test_un_quartier_n_est_pas_pris_pour_une_commune_voisine():
+    """« yacoub el mansour » (Rabat) contient presque le nom de la commune El Mansouria."""
+    lieu = resoudre_lieu("yacoub el mansour")
+    assert lieu.ville != "El Mansouria"
+    # c'est aussi un boulevard de Casablanca : demander la ville est legitime
+    assert lieu.ville == "Rabat" or "Rabat" in lieu.villes_possibles
+    assert resoudre_lieu("yacoub el mansour", ville_connue="Rabat").ville == "Rabat"
+
+
+def test_quartier_inconnu_dans_une_ville_connue():
+    lieu = resoudre_lieu("xyzzy casa")
+    assert (lieu.statut, lieu.ville, lieu.quartier_inconnu) == ("ville", "Casablanca", "Xyzzy")
+
+
+@pytest.mark.parametrize("bruit", ["qwerty", "zzzqqqville", ""])
+def test_lieu_inconnu(bruit):
+    assert resoudre_lieu(bruit).statut == "introuvable"
+
+
+# ----------------------------------------------------------------- pharmacies
+
+@pytest.mark.parametrize("nom, attendu", [
+    ("Parapharmacie Ibn Rochd", False), ("Droguerie Al Mal", False), ("Big Para", False),
+    ("Pharmacie Ibn Sina", True), ("Para & Pharmacie Benzit", True), ("صيدلية النخيل", True),
 ])
-def test_ville_dite_en_arabe_ou_en_diminutif(pharmas, ville_dite, attendue):
-    """Un toponyme n'est pas la transcription sonore de l'autre : « الدار
-    البيضاء » et « Casablanca » n'ont aucune lettre commune. Ces cas passent
-    par la table d'alias, pas par la translitteration."""
-    resultats = pharmas.match(location=ville_dite, top_k=3)
-    assert resultats and {r["ville"] for r in resultats} == {attendue}
+def test_parapharmacies_et_drogueries_ecartees(nom, attendu):
+    assert est_pharmacie(nom) is attendu
 
 
-def test_nom_porte_par_plusieurs_villes_signale(pharmas):
-    """Les noms d'officine sont tres repetitifs au Maroc. Sans ville, le
-    matcher ne peut pas trancher : il doit le dire plutot que de renvoyer la
-    premiere de la liste comme si c'etait la bonne."""
-    pharmas.match(nom="Pharmacie Granada", top_k=3)
-    note = pharmas.last_name_note
-    assert note and "Nador" in note and "Al Hoceima" in note
+def test_pharmacie_par_nom_et_ville():
+    r = chercher_pharmacie("ibn sina", ville="Rabat")
+    assert r.statut == "trouve" and r.pharmacies[0]["ville"] == "Rabat"
 
 
-def test_nom_avec_ville_ne_declenche_pas_l_alerte(pharmas):
-    """Une fois la ville donnee, il n'y a plus d'ambiguite a signaler."""
-    pharmas.match(nom="Granada", location="Nador", top_k=3)
-    assert pharmas.last_name_note is None
+def test_nom_present_dans_plusieurs_villes_ambigu():
+    r = chercher_pharmacie("ibn sina")
+    assert r.statut == "ambigu" and len(r.villes_possibles) > 10
+    assert chercher_pharmacie("ibn sina", ville_connue="Fès").pharmacies[0]["ville"] == "Fès"
 
 
-def test_nom_unique_ne_declenche_pas_l_alerte(pharmas):
-    pharmas.match(nom="Branes", top_k=3)
-    assert pharmas.last_name_note is None
+def test_pharmacie_dictee_en_arabe():
+    r = chercher_pharmacie("صيدلية النخيل")
+    assert r.statut in ("trouve", "ambigu") and "NAKHIL" in r.nom.upper()
 
 
-def test_nom_absurde_ne_declenche_pas_l_alerte(pharmas):
-    pharmas.match(nom="Bidon Inexistante Xyz123", top_k=3)
-    assert pharmas.last_name_note is None
+def test_un_mot_court_commun_ne_suffit_pas():
+    """« IBN » figure dans des centaines de noms : seul, il faisait proposer
+    Ibn Rochd ou Lina a qui cherchait Ibn Sina."""
+    r = chercher_pharmacie("ibn sina", ville="Casablanca")
+    assert all("SINA" in p["nom"].upper() for p in r.pharmacies)
 
 
-def test_pharmacie_dictee_en_arabe(pharmas):
-    """« صيدلية » (pharmacie) ouvre presque toutes les demandes dictees en
-    arabe : comme « Pharmacie », il ne discrimine rien et doit etre ignore."""
-    resultats = pharmas.match(nom="صيدلية ابن سينا", location="الرباط", top_k=3)
-    assert resultats[0]["nom"] == "Pharmacie Ibn Sina"
-    assert resultats[0]["ville"] == "Rabat"
+@pytest.mark.parametrize("bruit", ["Bidon Inexistante Xyz123", "qwerty asdf"])
+def test_nom_absurde_introuvable(bruit):
+    assert chercher_pharmacie(bruit).statut == "introuvable"
 
 
-def test_nom_absurde_dicte_en_arabe_jamais_fiable(pharmas):
-    assert all(
-        r["confidence"] == "non_fiable"
-        for r in pharmas.match(nom="صيدلية بيدون إينكسيستانت", top_k=3)
-    )
+def test_fiche_sans_nan():
+    r = chercher_pharmacie("ibn sina", ville="Rabat", pres_de=(34.0, -6.8))
+    for valeur in r.pharmacies[0].values():
+        assert not (isinstance(valeur, float) and valeur != valeur)
 
 
-def test_nom_absurde_jamais_fiable(pharmas):
-    assert all(r["confidence"] == "non_fiable" for r in pharmas.match(nom="Bidon Inexistante Xyz123", top_k=3))
-
-
-# ------------------------------------------------------------ equivalents
-
-def _lignes(meds, nom):
-    return meds.df[meds.df["nom_norm"] == normalize(nom)]
-
-
-def test_equivalents_du_moins_cher_au_plus_cher(meds):
-    r = equivalents(meds, "DOLIPRANE", "500mg")
-    prix = [e["ppv"] for e in r["equivalents"]]
-    assert prix and prix == sorted(prix)
-    assert all(e["nom"] != "DOLIPRANE" for e in r["equivalents"])
-
-
-def test_equivalents_meme_molecule_et_meme_dosage(meds):
-    r = equivalents(meds, "DOLIPRANE", "500mg")
-    for e in r["equivalents"]:
-        lignes = _lignes(meds, e["nom"])
-        assert (lignes["dci_norm"] == "PARACETAMOL").any(), e["nom"]
-        assert normalize(e["dosage"]).replace(" ", "") == "500MG", e
-
-
-def test_association_jamais_remplacee_par_une_seule_molecule(meds):
-    """Regression : la liste CNSS decoupe l'Augmentin (amoxicilline + acide
-    clavulanique) en une ligne par molecule, et le premier prototype proposait
-    NEOMOX -- de l'amoxicilline seule, injectable."""
-    r = equivalents(meds, "AUGMENTIN")
-    assert "CLAVULANIQUE" in normalize(r["reference"]["dci"])
-    assert r["equivalents"]
-    for e in r["equivalents"]:
-        assert "NEOMOX" not in e["nom"]
-        assert _lignes(meds, e["nom"])["dci_norm"].str.contains("CLAVULANIQUE").any(), e["nom"]
-
-
-def test_meme_voie_d_administration(meds):
-    """Regression : un suppositoire etait propose a la place d'un comprime."""
-    for nom in ["DOLIPRANE", "AUGMENTIN", "VOLTARENE"]:
-        r = equivalents(meds, nom)
-        famille = famille_forme(r["reference"]["forme"])
-        for e in r["equivalents"]:
-            assert famille_forme(e["forme"]) == famille, (nom, e)
-
-
-def test_jamais_de_produit_retire_ou_non_commercialise(meds):
-    for nom in ["DOLIPRANE", "AUGMENTIN", "VOLTARENE", "CLAMOXYL"]:
-        for e in equivalents(meds, nom)["equivalents"]:
-            statuts = set(_lignes(meds, e["nom"])["statut_commercialisation"].dropna())
-            assert not statuts or "Commercialisé" in statuts, (e["nom"], statuts)
-
-
-def test_forme_orale_preferee_sans_precision(meds):
-    """Sans precision, "Spasfon" designe le comprime, pas le suppositoire."""
-    assert famille_forme(equivalents(meds, "SPASFON")["reference"]["forme"]) == "orale_solide"
-
+# ---------------------------------------------------------------- formes
 
 @pytest.mark.parametrize("forme, famille", [
     ("COMPRIME EFFERVESCENT", "orale_solide"),

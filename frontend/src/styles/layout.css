@@ -5,7 +5,7 @@
 .coquille {
   height: 100%;
   display: flex;
-  background: var(--ivoire);
+  background: var(--fond);
 }
 
 .zone {
@@ -17,9 +17,9 @@
 }
 
 .page {
-  max-width: 1120px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 40px 40px 72px;
+  padding: 36px 40px 72px;
 }
 
 .page-etroite { max-width: 880px; }
@@ -34,31 +34,33 @@
 
 .marque-signe {
   flex: none;
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   display: grid;
   place-items: center;
-  border-radius: 11px;
-  background: linear-gradient(145deg, var(--terre) 0%, var(--rose) 130%);
+  border-radius: 10px;
+  background: linear-gradient(145deg, var(--bleu) 0%, var(--ciel) 120%);
   color: #fff;
-  box-shadow: 0 2px 8px -2px rgba(192, 94, 69, .5);
+  box-shadow: 0 4px 12px -4px rgba(42, 123, 214, .6);
 }
 
-.marque-signe svg { width: 19px; height: 19px; }
+.marque-signe svg { width: 22px; height: 22px; }
 
 .marque-mot {
-  font-size: 1.12rem;
+  font-size: 1.15rem;
   font-weight: 800;
   letter-spacing: -.03em;
 }
 
 .marque-mot em {
   font-style: normal;
-  color: var(--terre);
+  color: var(--ciel);
 }
 
 /* --------------------------------------------------------- barre laterale */
 
+/* Barre marine : elle ancre l'interface et donne d'emblee le ton « outil de
+   sante » ; le contenu, lui, reste sur fond clair pour la lecture. */
 .flanc {
   flex: none;
   width: var(--flanc);
@@ -66,35 +68,35 @@
   flex-direction: column;
   gap: 4px;
   padding: 22px 14px 18px;
-  background: var(--ivoire);
-  border-right: 1px solid var(--trait);
+  background: var(--marine);
+  color: #fff;
 }
 
-.flanc-marque { padding: 0 10px 22px; }
+.flanc-marque { padding: 0 8px 26px; }
 
 .flanc-groupe {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
 }
 
 .flanc-legende {
-  padding: 16px 10px 7px;
+  padding: 4px 12px 8px;
   font-size: .68rem;
   font-weight: 700;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: var(--encre-pale);
+  color: rgba(184, 203, 224, .6);
 }
 
 .lien {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 11px;
-  padding: 9px 11px;
+  gap: 12px;
+  padding: 10px 12px;
   border-radius: var(--r-sm);
-  color: var(--encre-douce);
+  color: #b8cbe0;
   font-size: .92rem;
   font-weight: 500;
   transition: background var(--transition), color var(--transition);
@@ -102,23 +104,21 @@
 
 .lien-glyphe {
   flex: none;
-  width: 19px;
+  width: 20px;
   display: grid;
   place-items: center;
-  font-size: 1.02rem;
-  line-height: 1;
 }
 
-.lien:hover { background: var(--sable); color: var(--encre); }
+.lien:hover { background: rgba(255, 255, 255, .06); color: #fff; }
 
 .lien-actif {
-  background: var(--terre-voile);
-  color: var(--terre-vive);
+  background: rgba(92, 200, 240, .14);
+  color: #fff;
   font-weight: 650;
 }
 
-/* fine barre verticale a gauche de l'onglet courant : plus discret qu'un
-   fond pleine largeur, et suffisant pour situer l'utilisateur. */
+.lien-actif .lien-glyphe { color: var(--ciel); }
+
 .lien-actif::before {
   content: '';
   position: absolute;
@@ -126,15 +126,41 @@
   top: 50%;
   transform: translateY(-50%);
   width: 3px;
-  height: 20px;
+  height: 22px;
   border-radius: 0 3px 3px 0;
-  background: var(--terre);
+  background: var(--ciel);
 }
 
 .flanc-bas {
   margin-top: auto;
   padding-top: 14px;
-  border-top: 1px solid var(--trait);
+  border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+.flanc-carte {
+  margin: 0 2px 14px;
+  padding: 14px;
+  border-radius: var(--r);
+  background: var(--marine-2);
+  border: 1px solid rgba(255, 255, 255, .06);
+}
+
+.flanc-carte-titre {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .82rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.flanc-carte-titre svg { color: var(--ciel); }
+
+.flanc-carte p {
+  margin-top: 6px;
+  font-size: .74rem;
+  line-height: 1.5;
+  color: #9fb4cc;
 }
 
 .flanc-note {
@@ -144,6 +170,8 @@
   color: var(--encre-pale);
 }
 
+.flanc .flanc-note { color: #7f97b3; }
+
 /* ------------------------------------------------------- navigation basse */
 
 .barre-basse { display: none; }
@@ -152,33 +180,46 @@
 
 .entete {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 20px;
   margin-bottom: 26px;
 }
 
+.entete-surtitre {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--bleu);
+}
+
 .entete h1 {
-  font-size: 1.62rem;
+  font-size: 1.75rem;
+  color: var(--marine);
 }
 
 .entete-sous {
   margin-top: 5px;
   color: var(--encre-douce);
-  font-size: .94rem;
+  font-size: .95rem;
 }
 
 .pastille-dispo {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
   padding: 6px 13px 6px 11px;
   border-radius: 999px;
-  background: var(--carte);
-  border: 1px solid var(--trait);
+  background: var(--dispo-voile);
+  border: 1px solid rgba(18, 163, 111, .2);
   font-size: .8rem;
-  font-weight: 600;
-  color: var(--encre-douce);
+  font-weight: 650;
+  color: #0b7a52;
   white-space: nowrap;
 }
 
@@ -188,13 +229,11 @@
   height: 7px;
   border-radius: 50%;
   background: var(--dispo);
-  box-shadow: 0 0 0 3px rgba(62, 143, 111, .16);
+  box-shadow: 0 0 0 3px rgba(18, 163, 111, .18);
 }
 
 /* ------------------------------------------------- transition de page */
 
-/* Un fondu-monte tres court a chaque changement de route : assez pour que la
-   navigation se sente fluide, assez discret pour ne jamais faire attendre. */
 .transition-page {
   animation: entre-page 220ms cubic-bezier(.2, .8, .3, 1) both;
 }
@@ -207,8 +246,8 @@
 /* ------------------------------------------------------------- responsive */
 
 @media (max-width: 1024px) {
-  :root { --flanc: 216px; }
-  .page { padding: 32px 28px 72px; }
+  :root { --flanc: 224px; }
+  .page { padding: 30px 28px 72px; }
 }
 
 @media (max-width: 860px) {
@@ -216,7 +255,7 @@
 
   .zone { padding-bottom: 72px; }
 
-  .page { padding: 24px 18px 40px; }
+  .page { padding: 20px 16px 40px; }
 
   .barre-basse {
     position: fixed;
@@ -226,9 +265,10 @@
     justify-content: space-around;
     gap: 2px;
     padding: 7px 6px calc(7px + env(safe-area-inset-bottom));
-    background: rgba(253, 251, 248, .94);
+    background: rgba(255, 255, 255, .96);
     backdrop-filter: blur(14px);
     border-top: 1px solid var(--trait);
+    box-shadow: 0 -6px 20px -12px rgba(15, 42, 74, .2);
   }
 
   .onglet {
@@ -247,9 +287,9 @@
     transition: color var(--transition);
   }
 
-  .onglet-glyphe { font-size: 1.16rem; line-height: 1; }
-  .onglet-actif { color: var(--terre-vive); }
+  .onglet-glyphe { display: grid; place-items: center; }
+  .onglet-actif { color: var(--bleu); }
 
-  .entete { flex-direction: column; gap: 12px; }
-  .entete h1 { font-size: 1.4rem; }
+  .entete { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .entete h1 { font-size: 1.45rem; }
 }

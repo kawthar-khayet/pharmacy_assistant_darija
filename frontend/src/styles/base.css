@@ -1,53 +1,62 @@
 /* ===========================================================================
    DwaTalk — socle : jetons de design, remise a zero, typographie.
-   Palette ivoire / terre cuite douce / rose poudre, texte brun charbon.
-   Le terre cuite est un accent, jamais une surface plein ecran.
+   Palette health-tech : bleu marine (structure), bleu franc (action),
+   bleu ciel (accent vivant), sur un fond gris-bleu tres clair.
+   Le marine porte la navigation et les en-tetes forts ; le bleu franc est
+   reserve a ce qui se clique.
    =========================================================================== */
 
 :root {
   /* --- surfaces --- */
-  --ivoire:      #fdfbf8;
-  --sable:       #f6f0e8;
-  --sable-fonce: #efe7db;
+  --fond:        #f4f7fb;
+  --fond-2:      #eaf0f7;
   --carte:       #ffffff;
 
-  /* --- marque --- */
-  --terre:       #c05e45;
-  --terre-vive:  #a94c34;
-  --terre-voile: #fbede8;
-  --terre-trait: #f0d8d0;
+  /* --- structure --- */
+  --marine:      #0f2a4a;
+  --marine-2:    #163a63;
+  --marine-3:    #21497a;
 
-  /* --- accent rose poudre --- */
-  --rose:        #c98d80;
-  --rose-voile:  #f9efec;
+  /* --- action --- */
+  --bleu:        #2a7bd6;
+  --bleu-vif:    #1d64b8;
+  --bleu-voile:  #eaf2fd;
+  --bleu-trait:  #cfe0f5;
+
+  /* --- accent --- */
+  --ciel:        #5cc8f0;
+  --ciel-voile:  #e5f6fd;
 
   /* --- texte --- */
-  --encre:       #2a2420;
-  --encre-douce: #6e635b;
-  --encre-pale:  #9c9189;
+  --encre:       #0f2233;
+  --encre-douce: #52647a;
+  --encre-pale:  #8a9bb0;
 
   /* --- utilitaires --- */
-  --trait:       #ece3d9;
-  --trait-fort:  #e0d4c6;
-  --dispo:       #3e8f6f;
-  --alerte:      #b5822a;
-  --alerte-voile:#fbf3e3;
+  --trait:       #e2e9f2;
+  --trait-fort:  #d0dbe8;
+  --dispo:       #12a36f;
+  --dispo-voile: #e3f6ee;
+  --alerte:      #b7791f;
+  --alerte-voile:#fff7e8;
+  --danger:      #c2413b;
+  --danger-voile:#fdeeed;
 
   /* --- rayons --- */
   --r-xs: 8px;
-  --r-sm: 12px;
-  --r:    16px;
-  --r-lg: 22px;
-  --r-xl: 30px;
+  --r-sm: 10px;
+  --r:    14px;
+  --r-lg: 18px;
+  --r-xl: 24px;
 
-  /* --- elevations : douces, jamais dures --- */
-  --ombre-1: 0 1px 2px rgba(42, 36, 32, .04);
-  --ombre-2: 0 1px 3px rgba(42, 36, 32, .05), 0 6px 16px -6px rgba(42, 36, 32, .08);
-  --ombre-3: 0 2px 6px rgba(42, 36, 32, .06), 0 18px 40px -18px rgba(42, 36, 32, .16);
+  /* --- elevations : froides et nettes --- */
+  --ombre-1: 0 1px 2px rgba(15, 42, 74, .05);
+  --ombre-2: 0 1px 3px rgba(15, 42, 74, .06), 0 8px 20px -8px rgba(15, 42, 74, .12);
+  --ombre-3: 0 2px 6px rgba(15, 42, 74, .06), 0 20px 44px -18px rgba(15, 42, 74, .22);
 
   /* --- rythme --- */
-  --flanc: 248px;
-  --lecture: 760px;
+  --flanc: 252px;
+  --lecture: 780px;
 
   --transition: 180ms cubic-bezier(.4, 0, .2, 1);
 }
@@ -58,7 +67,7 @@ html, body, #root { height: 100%; }
 
 body {
   margin: 0;
-  background: var(--ivoire);
+  background: var(--fond);
   color: var(--encre);
   /* Plus Jakarta Sans porte le latin ; le navigateur bascule glyphe par glyphe
      sur IBM Plex Sans Arabic des qu'il rencontre de l'arabe, ce qui evite de
@@ -73,7 +82,7 @@ body {
 h1, h2, h3, h4 {
   margin: 0;
   font-weight: 700;
-  letter-spacing: -.018em;
+  letter-spacing: -.02em;
   line-height: 1.25;
 }
 
@@ -85,7 +94,7 @@ button { cursor: pointer; }
 a { color: inherit; text-decoration: none; }
 
 :focus-visible {
-  outline: 2px solid var(--terre);
+  outline: 2px solid var(--bleu);
   outline-offset: 2px;
   border-radius: 6px;
 }
@@ -113,11 +122,8 @@ a { color: inherit; text-decoration: none; }
   border: 0;
 }
 
-/* Motif zellige : un khatim minuscule, repete en texture derriere certaines
-   sections. Volontairement minuscule et a peine teinte -- a taille reelle on
-   doit le sentir comme un grain de papier, jamais le lire comme un decor.
-   Une version plus grande avait ete essayee : elle attirait l'oeil et faisait
-   basculer la page du cote folklorique qu'on veut eviter. */
+/* Trame de points : texture de fond discrete, facon papier millimetre
+   medical. S'efface vers le bas pour ne pas concurrencer le contenu. */
 .filigrane {
   position: relative;
   isolation: isolate;
@@ -128,12 +134,10 @@ a { color: inherit; text-decoration: none; }
   position: absolute;
   inset: 0;
   z-index: -1;
-  opacity: .055;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46' viewBox='0 0 72 72'%3E%3Cpath d='M36 8 L43 21 L57 16 L52 30 L65 36 L52 42 L57 56 L43 51 L36 64 L29 51 L15 56 L20 42 L7 36 L20 30 L15 16 L29 21 Z' fill='none' stroke='%23c05e45' stroke-width='1.6'/%3E%3C/svg%3E");
-  background-size: 46px 46px;
-  /* s'efface vers le bas pour ne pas concurrencer le contenu principal */
-  -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 82%);
-  mask-image: linear-gradient(180deg, #000 0%, transparent 82%);
+  background-image: radial-gradient(circle, rgba(42, 123, 214, .16) 1px, transparent 1.4px);
+  background-size: 18px 18px;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 85%);
+  mask-image: linear-gradient(180deg, #000 0%, transparent 85%);
   pointer-events: none;
 }
 

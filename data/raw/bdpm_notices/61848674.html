@@ -1,0 +1,1829 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="9OiGRCOvApjUKwjEz1Z6Wg==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="9OiGRCOvApjUKwjEz1Z6Wg==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 31/08/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant GLUCOSE 10 % AGUETTANT, solution pour perfusion"
+            aria-level="3"
+          >
+            GLUCOSE 10 % AGUETTANT, solution pour perfusion
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament GLUCOSE 10 % AGUETTANT, solution pour perfusion - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                      </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 07/10/1986
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : GLUCOSE 10 % AGUETTANT, solution pour perfusion - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0440745">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexteGras>Classe pharmacothérapeutique - code ATC : solution pour nutrition parentérale –  B05BA03</p>
+<p class=AmmCorpsTexte>Ce médicament est indiqué dans les situations suivantes :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Prévention des déshydratations.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Réhydratation lorsqu'il existe une perte d'eau supérieure à la perte en électrolytes (sels de l'organisme).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Prévention et traitement de la cétose (acétone dans le sang) dans les dénutritions.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Véhicule ou diluant pour apport thérapeutique en période préopératoire, peropératoire et postopératoire immédiate.</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament n'appartient à aucun groupe générique</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Solution ( Composition pour 100 ml de solution pour perfusion )<ul role="list"><li role="listitem" style="list-style-type: none;">glucose<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span><span class="italique">10 g </span><ul role="list" style="list-style-type: none;"><li class="sousFormeDe" role="listitem"><i class="fa fa-plus-square" aria-hidden="true"></i> sous forme de : glucose monohydraté</li></ul></li></ul></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > 1 poche(s) polyoléfine suremballée(s)/surpochée(s) de 100 ml  </p><p>Code CIP : 362 569-2 ou 34009 362 569 2 7<br/>Déclaration de commercialisation : 18/12/2008<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p>Prix libre, médicament non remboursable ( <a href='/aide#que-signifie-la-notion-de-prix-libre-un-medicament-non-rembourse'>cliquez ici pour en savoir plus sur les médicaments non remboursables</a> )<br/><p> > 1 poche(s) polyoléfine suremballée(s)/surpochée(s) de 250 ml  </p><p>Code CIP : 362 571-7 ou 34009 362 571 7 7<br/>Déclaration de commercialisation : 31/05/2005<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p>Prix libre, médicament non remboursable ( <a href='/aide#que-signifie-la-notion-de-prix-libre-un-medicament-non-rembourse'>cliquez ici pour en savoir plus sur les médicaments non remboursables</a> )<br/><p> > 1 poche(s) polyoléfine suremballée(s)/surpochée(s) de 500 ml  </p><p>Code CIP : 362 572-3 ou 34009 362 572 3 8<br/>Déclaration de commercialisation : 30/04/2004<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p>Prix libre, médicament non remboursable ( <a href='/aide#que-signifie-la-notion-de-prix-libre-un-medicament-non-rembourse'>cliquez ici pour en savoir plus sur les médicaments non remboursables</a> )</div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><p>Pas de SMR disponible pour ce médicament ( <a href='/aide#le-medicament-que-je-recherche-ne-mentionne-pas-de-service-medical-rendu-(SMR)-ni-amelioration-du-service-medical-rendu-(ASMR)' aria-describedby='tooltip-smr-aide'>plus d'informations dans l'aide</a><span id='tooltip-smr-aide' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers aide</span> )</p></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div><div class='fr-col'><p>Pas d'ASMR disponible pour ce médicament (<a href='/aide#le-medicament-que-je-recherche-ne-mentionne-pas-de-service-medical-rendu-(SMR)-ni-amelioration-du-service-medical-rendu-(ASMR)' aria-describedby='tooltip-asmr-aide-2'>plus d'informations dans l'aide )</a></p><span id='tooltip-asmr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers la page aide</span></div></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : Laboratoire  AGUETTANT</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure nationale</li><li>Code CIS : &nbsp;6 184 867 4</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : GLUCOSE 10 % AGUETTANT, solution pour perfusion - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="GLUCOSE 10 % AGUETTANT, solution pour perfusion, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 25/11/2025</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras>GLUCOSE 10 % AGUETTANT, solution pour perfusion</p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Glucose.................................................................................................................................... 10 g</p>
+<p class=AmmCorpsTexte>(sous forme de glucose monohydraté)</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>pour 100 mL de solution pour perfusion.</p>
+<p class=AmmCorpsTexte>Une poche de 25 mL contient 2,5 g de glucose</p>
+<p class=AmmCorpsTexte>Une poche de 50 mL contient 5 g de glucose</p>
+<p class=AmmCorpsTexte>Une poche de 100 mL contient 10 g de glucose</p>
+<p class=AmmCorpsTexte>Une poche de 150 mL contient 15 g de glucose</p>
+<p class=AmmCorpsTexte>Une poche de 250 mL contient 25 g de glucose</p>
+<p class=AmmCorpsTexte>Une poche de 500 mL contient 50 g de glucose</p>
+<p class=AmmCorpsTexte>Une poche de 1000 mL contient 100 g de glucose</p>
+<p class=AmmCorpsTexte>Une poche de 2000 mL contient 200 g de glucose</p>
+<p class=AmmCorpsTexte>Une poche de 3000 mL contient 300 g de glucose</p>
+<p class=AmmCorpsTexte>Apport calorique glucidique : 400 kcal/L (soit 1675 kJ/L)</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Solution pour perfusion.</p>
+<p class=AmmCorpsTexte>Solution incolore à faiblement colorée jaune paille, exempte de particules visibles.</p>
+<p class=AmmCorpsTexte>Glucose : 555 mmol/L.</p>
+<p class=AmmCorpsTexte>Osmolarité théorique : 555 mOsm/L.</p>
+<p class=AmmCorpsTexte>pH compris entre 3,5 - 4,4. </p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Prévention des déshydratations intra et extracellulaires ; </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Réhydratation lorsqu'il existe une perte d'eau supérieure à la perte en électrolytes ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Prophylaxie et traitement de la cétose dans les dénutritions ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Véhicule ou diluant pour apport thérapeutique en période préopératoire, peropératoire et postopératoire immédiate.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmAnnexeTitre3>Posologie</p>
+<p class=AmmCorpsTexte>La concentration et la posologie d'une solution de glucose pour usage intraveineux dépendent de plusieurs facteurs comprenant l'âge, le poids et l'état clinique du patient. Les concentrations sériques de glucose peuvent nécessiter une surveillance étroite. </p>
+<p class=AmmCorpsTexte>La posologie recommandée pour le traitement de la déplétion en eau et en hydrates de carbone est la suivante: </p>
+<p class=AmmCorpsTexte><i><u>Adulte :</u></i> 500 mL à 3 litres/24 h.</p>
+<p class=AmmAnnexeTitre4>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Le débit et le volume de perfusion dépendent de l’âge, du poids, du statut clinique et métabolique du patient et du traitement concomitant. La solution doit être administrée par un personnel expérimenté.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>0-10 kg de poids corporel : 50 mL/kg/24 h.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>10-20 kg de poids corporel : 500 mL + 25 mL /kg au-dessus de 10 kg / 24 h.</p>
+<p class=AmmListePuces1 style='margin-bottom:6.0pt'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>> 20 kg de poids corporel : 750 mL + 10 mL / kg au-dessus de 20 kg / 24 h.</p>
+<p class=AmmCorpsTexte>Le débit de perfusion ne doit pas dépasser les capacités d'oxydation du glucose du patient (ex. perturbation du métabolisme oxydatif du glucose en période post-opératoire ou post-traumatique précoce ou en présence d'hypoxie ou de défaillance d’un organe), de manière à éviter une hyperglycémie. Par conséquent, les doses maximales sont de 5 mg/kg/min pour les adultes et comprises entre 10 et 18 mg/kg/min pour les nouveau-nés, les nourrissons et les enfants, selon l'âge et la masse corporelle totale.</p>
+<p class=AmmCorpsTexte>Lorsque GLUCOSE 10 % AGUETTANT, solution pour perfusion est utilisée comme véhicule ou diluant pour préparation injectable d'autres médicaments, la posologie et le débit de perfusion seront principalement fonction de la nature et de la posologie du médicament à administrer.</p>
+<p class=AmmCorpsTexte>L’équilibre hydrique, le glucose sérique, le sodium sérique et d’autres électrolytes pourront faire l’objet d’une surveillance avant ou pendant l’administration, en particulier chez les patients présentant une libération non-osmotique excessive de la vasopressine (syndrome de sécrétion inappropriée de l’hormone antidiurétique, SIADH) et chez les patients traités concomitamment par des médicaments agonistes de la vasopressine, en raison du risque d’hyponatrémie.</p>
+<p class=AmmCorpsTexte>La surveillance du sodium sérique est particulièrement importante pour les solutés physiologiquement hypotoniques. GLUCOSE 10 % AGUETTANT, solution pour perfusion peut devenir extrêmement hypotonique après administration du fait de la métabolisation du glucose dans l’organisme (voir rubriques 4.4, 4.5 et 4.8).</p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte>Perfusion intraveineuse </p>
+<p class=AmmCorpsTexte>Lorsque la solution est utilisée pour la dilution et l’administration de médicaments complémentaires par perfusion intraveineuse, les instructions d'utilisation des substances ajoutées détermineront les volumes appropriés pour chaque traitement.</p>
+<p class=AmmCorpsTexte>Précautions à prendre avant la manipulation ou l’administration du médicament : voir la rubrique 6.6.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypersensibilité au maïs (voir rubriques 4.4 et 4.8),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hyperglycémie non contrôlée,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Diabète décompensé,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Autres intolérances connues au glucose (ex. situations de stress métabolique, états de choc aigu, collapsus),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Coma hyperosmolaire,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hyperlactatémie,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Acidose métabolique,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Inflation hydrique. L’administration de volumes élevés peut notamment donner lieu, en raison d'une surcharge liquidienne, aux contre-indications suivantes :</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Hyperhydratation</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Insuffisance cardiaque aiguë</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Œdème pulmonaire</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>La solution ne doit pas être utilisée seule à des fins d'apport liquidien ou de réhydratation car elle ne contient pas d'électrolytes (voir rubrique 4.4).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmCorpsTexte>Respecter une vitesse de perfusion lente au risque de voir apparaître une diurèse osmotique indésirable. Une surveillance clinique particulière est nécessaire au début de toute perfusion intraveineuse. L'administration doit être effectuée sous une surveillance régulière et attentive.</p>
+<p class=AmmCorpsTexte>GLUCOSE 10 % AGUETTANT, solution pour perfusion est une solution HYPERTONIQUE. L'administration de solutions hyperosmolaires peut provoquer une inflammation veineuse et une phlébite. Si des signes d'irritation veineuse, de phlébite ou de thrombophlébite apparaissent pendant la perfusion veineuse périphérique, il faut envisager de changer de site de perfusion.</p>
+<p class=AmmCorpsTexte>La perfusion doit être immédiatement arrêtée en cas d’apparition de signes anormaux ou de symptômes d'une réaction allergique (tels que sueurs, fièvre, frissons, céphalées, rashs cutanés ou dyspnée). GLUCOSE 10 % AGUETTANT, solution pour perfusion contient du glucose dérivé du maïs, ce qui provoque des réactions d'hypersensibilité chez les patients allergiques au maïs.</p>
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+<p class=AmmCorpsTexte style='border:none;padding:0cm'>GLUCOSE 10 % AGUETTANT, solution pour perfusion ne doit pas être utilisé à des fins de substitution liquidienne sans un apport en électrolytes approprié, en particulier dans les traitements de réhydratation, car son administration peut entraîner une diminution importante des électrolytes sériques (hyponatrémie et hypokaliémie graves) (voir rubriques 4.3 et 4.8), ainsi que la survenue d’effets indésirables tels que des lésions cérébrales ou des atteintes cardiaques.</p>
+</div>
+<p class=AmmCorpsTexte>Les solutions pour perfusion de glucose intraveineuses sont généralement des solutions isotoniques. Cependant, dans l’organisme, les solutions contenant du glucose peuvent devenir extrêmement hypotoniques sur le plan physiologique en raison de la métabolisation rapide du glucose (voir rubrique 4.2).</p>
+<p class=AmmCorpsTexte>En fonction de la tonicité de la solution, du volume et de la vitesse de perfusion, ainsi que de l’état clinique sous-jacent du patient et de sa capacité à métaboliser le glucose, l’administration de glucose par voie intraveineuse peut entraîner des déséquilibres électrolytiques, dont le plus important est une hyponatrémie hypo-osmotique ou hyperosmotique.</p>
+<p class=AmmCorpsTexte>Hyponatrémie:</p>
+<p class=AmmCorpsTexte>Les patients présentant une libération non-osmotique de la vasopressine (ex. en cas d’affections aiguës, de douleur, de stress postopératoire, d’infections, de brûlures, et de pathologies du système nerveux central), les patients atteints de pathologies cardiaques, hépatiques et rénales ainsi que les patients exposés à des agonistes de la vasopressine (voir rubrique 4.5) encourent un risque particulièrement élevé d’hyponatrémie aiguë lié à la perfusion de solutés hypotoniques.</p>
+<p class=AmmCorpsTexte>L’hyponatrémie aiguë peut conduire à une encéphalopathie hyponatrémique aiguë (oedème cérébral) caractérisée par des céphalées, des nausées, des convulsions, une léthargie et des vomissements. Les patients présentant un oedème cérébral encourent un risque particulièrement élevé de lésion cérébrale sévère, irréversible et engageant le pronostic vital.</p>
+<p class=AmmCorpsTexte>Les enfants, les femmes en âge de procréer et les patients présentant une compliance cérébrale réduite (ex. à la suite d’une méningite, de saignements intracrâniens ou d’une contusion cérébrale) encourent un risque particulièrement élevé d’oedème cérébral sévère et engageant le pronostic vital, dû à une hyponatrémie aiguë.</p>
+<p class=AmmCorpsTexte>La perfusion de volumes importants doit être effectuée sous une surveillance particulière chez les patients atteints d'intoxication hydrique, d'insuffisance cardiaque, pulmonaire ou rénale sévère, et/ou d'oligurie/anurie.</p>
+<p class=AmmCorpsTexte>L'administration de la solution pour perfusion GLUCOSE 10 % AGUETTANT peut provoquer une hyperglycémie. Dans ce contexte, il est recommandé de ne pas utiliser cette solution après un accident ischémique cérébral car l'hyperglycémie a été impliquée dans l'augmentation des lésions cérébrales ischémiques et la détérioration de la récupération.</p>
+<p class=AmmCorpsTexte>La perfusion de solution de glucose n’est pas recommandée dans les 24 premières heures suivant un traumatisme crânien et la concentration sanguine en glucose doit être surveillée attentivement lors d'épisodes d'hypertension intracrânienne. L'administration de solutions de glucose, en particulier hyperosmolaires, à des patients présentant une atteinte de la barrière hémato-encéphalique peut entraîner une augmentation de la pression intracrânienne/intramédullaire.</p>
+<p class=AmmCorpsTexte>Les paramètres biologiques et cliniques, en particulier la glycémie, doivent être contrôlés.</p>
+<p class=AmmCorpsTexte>Si une hyperglycémie survient, ajuster le débit de perfusion et/ou administrer de l'insuline. Si besoin, apporter des compléments parentéraux en potassium.</p>
+<p class=AmmCorpsTexte>La tolérance au glucose peut se détériorer chez les patients atteints d'insuffisance rénale ou de diabète.</p>
+<p class=AmmCorpsTexte>Chez le diabétique ou l'insuffisant rénal, surveiller attentivement la glycémie et la glycosurie et ajuster éventuellement la posologie du traitement hypoglycémiant et/ou du potassium.</p>
+<p class=AmmCorpsTexte>L’ajout de médicament ou l'utilisation d'une technique d'administration incorrecte peuvent entraîner l'apparition de réactions fébriles dues à l'introduction éventuelle de substances pyrogènes. En cas d'effet indésirable, la perfusion doit être immédiatement arrêtée.</p>
+<p class=AmmCorpsTexte>En cas d'ajout de médicament, vérifier la compatibilité, la limpidité et la couleur avant usage (voir rubrique 6.2).</p>
+<p class=AmmCorpsTexte>Ne pas conserver le mélange (voir rubrique 6.6).</p>
+<p class=AmmCorpsTexte><i><u>Extravasation</u></i></p>
+<p class=AmmCorpsTexte>Le site du cathéter doit être régulièrement contrôlé pour détecter les signes d'extravasation. En cas d'extravasation, l'administration doit être interrompue immédiatement, tout en maintenant en place la canule ou le cathéter inséré pour une prise en charge immédiate du patient. Si possible, une aspiration doit être pratiquée à travers la canule/le cathéter inséré afin de réduire la quantité de liquide présent dans les tissus avant de retirer la canule/l/le cathéter. Si une extrémité est atteinte, le membre concerné doit être surélevé.</p>
+<p class=AmmCorpsTexte>Selon le produit extravasé (y compris les produits mélangés avec GLUCOSE 10 % AGUETTANT, solution pour perfusion le cas échéant) et le stade/l'étendue des lésions éventuelles, des mesures spécifiques appropriées doivent être prises. Les options thérapeutiques peuvent inclure des interventions non pharmacologiques, pharmacologiques et/ou chirurgicales. En cas de dégradation de la zone affectée (douleur continue, nécrose, ulcération), un chirurgien plasticien doit être consulté immédiatement (voir rubrique 4.8).</p>
+<p class=AmmCorpsTexte>Le site d'extravasation doit être contrôlé au moins toutes les 4 heures pendant les premières 24 heures, puis une fois par jour.</p>
+<p class=AmmCorpsTexte><i><u>Syndrome de renutrition</u></i></p>
+<p class=AmmCorpsTexte>La réalimentation de patients sévèrement dénutris peut entraîner un syndrome de renutrition qui est caractérisé par le passage du potassium, du phosphore et du magnésium en intracellulaire car le patient devient anabolique. Une carence en thiamine et une rétention d'eau peuvent également se développer. La mise en place d’une surveillance particulière et l’augmentation progressive des apports en nutriments tout en évitant la suralimentation peuvent prévenir ces complications.</p>
+<p class=AmmCorpsTexte><i><u>Risque d'embolie gazeuse</u></i> (voir rubrique 6.6) </p>
+<p class=AmmCorpsTexte><i><u>Population gériatrique </u></i></p>
+<p class=AmmCorpsTexte>Lors de la sélection du type de solution pour perfusion et du volume/débit de perfusion pour un patient âgé, il est nécessaire de prendre en considération la susceptibilité de ces patients à présenter des maladies cardiaques, rénales, hépatiques ou autres, ainsi que leurs traitements médicamenteux concomitants.</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique </p>
+<p class=AmmCorpsTexte>Le débit et le volume de perfusion dépendent de l’âge, du poids, de l’état métabolique et clinique du patient, du traitement associé, et doivent être déterminés par un médecin expérimenté.</p>
+<p class=AmmCorpsTexte>Les nouveau-nés, en particulier les prématurés et ceux présentant un faible poids à la naissance, ont un risque élevé de développer une hypo- ou une hyperglycémie et nécessitent, de ce fait, une surveillance étroite pendant toute la durée du traitement par des solutions intraveineuses de glucose, afin d’assurer un contrôle glycémique approprié et d’éviter d'éventuels effets indésirables à long terme.</p>
+<p class=AmmCorpsTexte>L’hypoglycémie chez les nouveau-nés peut entraîner des convulsions, un coma, et des lésions cérébrales. </p>
+<p class=AmmCorpsTexte>L’hyperglycémie chez les nouveau-nés a été associée à des cas d’hémorragie intra-ventriculaire, d’infection bactérienne et fongique d’installation tardive, de rétinopathie du prématuré, d’entérocolite nécrosante, de dysplasie broncho-pulmonaire, d’hospitalisation prolongée et de décès.</p>
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+<p class=AmmCorpsTexte style='border:none;padding:0cm'>Les enfants, les nourrissons et les nouveau-nés présentent un risque accru de développer une hyponatrémie hypoosmotique ainsi qu’une encéphalopathie hyponatrémique. Ainsi, les concentrations d'électrolytes plasmatiques doivent être étroitement surveillées dans la population pédiatrique. </p>
+<p class=AmmCorpsTexte style='border:none;padding:0cm'>Une correction rapide de l'hyponatrémie hypoosmotique est potentiellement dangereuse (risque de complications neurologiques graves). La posologie, le taux et la durée d'administration doivent être déterminés par un médecin expérimenté. </p>
+</div>
+<p class=AmmCorpsTexte>Afin d'éviter une perfusion excessive de solutions intraveineuses potentiellement fatale chez le nouveau-né, une attention particulière doit être accordée au mode d'administration. </p>
+<p class=AmmCorpsTexte>Lors de l’utilisation d’un pousse-seringue pour l’administration de solutions ou de médicaments par voie intraveineuse à des nouveau-nés, la poche de liquide ne doit pas rester connectée à la seringue.</p>
+<p class=AmmCorpsTexte>Lors de l’utilisation d’une pompe pour perfusion, tous les clamps du set d'administration intraveineuse doivent être fermés avant de retirer le set d'administration ou avant d’éteindre la pompe. Ceci est nécessaire, que le set d’administration dispose ou non d'un dispositif anti-fuite.</p>
+<p class=AmmCorpsTexte>Le dispositif de perfusion intraveineuse et le matériel d'administration doivent être contrôlés régulièrement.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmCorpsTexte>Ne pas administrer du sang simultanément, au moyen du même dispositif de perfusion, en raison du risque de pseudo-agglutination et d’hémolyse.</p>
+<p class=AmmCorpsTexte>Comme avec toutes les solutions parentérales, la compatibilité des additifs avec la solution doit être vérifiée avant administration de ce médicament (voir rubrique 6.2).</p>
+<p class=AmmCorpsTexte>+ Médicaments augmentant l’effet de la vasopressine </p>
+<p class=AmmCorpsTexte>Les médicaments cités ci-dessous augmentent l’effet de la vasopressine, ce qui entraîne une diminution de l’excrétion rénale d’eau sans électrolyte et une augmentation du risque d’hyponatrémie nosocomiale à la suite d’un traitement à base de solutés intraveineux incorrectement équilibré (voir rubriques 4.2, 4.4 et 4.8).</p>
+<p class=AmmCorpsTexte>+ Médicaments stimulant la libération de vasopressine, ex. : chlorpropamide, clofibrate, carbamazépine, vincristine, inhibiteurs sélectifs de la recapture de la sérotonine, 3,4-méthylènedioxy-N-méthamphétamine, ifosfamide, antipsychotiques, narcotiques </p>
+<p class=AmmCorpsTexte>+ Médicaments potentialisant la libération de vasopressine, ex. : chlorpropamide, anti-inflammatoires non stéroïdiens (AINS), cyclophosphamide </p>
+<p class=AmmCorpsTexte>+ Analogues de la vasopressine, ex. : desmopressine, ocytocine, vasopressine, terlipressine </p>
+<p class=AmmCorpsTexte>Parmi les autres médicaments qui augmentent le risque d’hyponatrémie figurent également les diurétiques en général et les antiépileptiques tels que l’oxcarbazépine.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmCorpsTexte>Compte tenu des données disponibles, l'utilisation chez la femme enceinte ou qui allaite est possible.</p>
+<p class=AmmCorpsTexte>Les risques et les bénéfices pour chaque patiente doivent être attentivement considérés avant d'administrer la solution de glucose.</p>
+<p class=AmmCorpsTexte>La perfusion de glucose par voie intraveineuse pendant l'accouchement peut entraîner un risque d'hyperglycémie fœtale et d'acidose métabolique, entraînant la production d'insuline fœtale ainsi qu'une hypoglycémie de rebond chez le nouveau-né.</p>
+<p class=AmmCorpsTexte>Des précautions particulières s’imposent lors de l’administration de <span lang=FR-BE>GLUCOSE 10 % AGUETTANT, solution pour perfusion </span>à des femmes enceintes pendant le travail, en particulier s’il est administré en combinaison avec de l’ocytocine, en raison du risque d’hyponatrémie (voir rubriques 4.4, 4.5 et 4.8).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>GLUCOSE 10 % AGUETTANT, solution pour perfusion n’a aucun effet ou un effet négligeable sur l’aptitude à conduire des véhicules et à utiliser des machines.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmCorpsTexte>Les effets indésirables pouvant survenir chez des patients traités avec GLUCOSE 10 % AGUETTANT par perfusion intraveineuse sont indiqués ci-dessous. </p>
+<p class=AmmCorpsTexte>Les effets indésirables listés dans cette rubrique sont mentionnés selon la convention suivante : très fréquent (&#8805; 1/10), fréquent (&#8805; 1/100 et < 1/10), peu fréquent (&#8805; 1/1 000 et < 1/100), rare (&#8805; 1/10 000 et < 1/1 000), très rare (< 1/10 000) et fréquence indéterminée (ne peut être estimée sur la base des données disponibles).</p>
+<div align=center>
+<div class='fr-table--lg fr-table'><table>
+<tr>
+<td width=221 valign=top style='width:165.95pt;border:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Classe de systèmes d’organe (SOC)</p>
+</td>
+<td width=260 valign=top style='width:195.35pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras><span lang=EN-US>Effet indésirable (Terme MedDRA)</span></p>
+</td>
+<td width=140 valign=top style='width:104.8pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras><span lang=EN-US>Fréquence</span></p>
+</td>
+</tr>
+<tr>
+<td width=221 rowspan=2 valign=top style='width:165.95pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras><span lang=EN-US>Affections du système immunitaire</span></p>
+</td>
+<td width=260 valign=top style='width:195.35pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Réaction anaphylactique*</span></p>
+</td>
+<td width=140 valign=top style='width:104.8pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Indéterminée</span></p>
+</td>
+</tr>
+<tr>
+<td width=260 valign=top style='width:195.35pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Hypersensibilité*</span></p>
+</td>
+<td width=140 valign=top style='width:104.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+</tr>
+<tr>
+<td width=221 rowspan=7 valign=top style='width:165.95pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Troubles du métabolisme et de la nutrition</p>
+</td>
+<td width=260 valign=top style='width:195.35pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Déséquilibre électrolytique</span></p>
+</td>
+<td width=140 valign=top style='width:104.8pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+</tr>
+<tr>
+<td width=260 valign=top style='width:195.35pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Hypokaliémie</span></p>
+</td>
+<td width=140 valign=top style='width:104.8pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+</tr>
+<tr>
+<td width=260 valign=top style='width:195.35pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Hypomagnésémie</span></p>
+</td>
+<td width=140 valign=top style='width:104.8pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+</tr>
+<tr>
+<td width=260 valign=top style='width:195.35pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Hypophosphatémie</span></p>
+</td>
+<td width=140 valign=top style='width:104.8pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Indéterminée</span></p>
+</td>
+</tr>
+<tr>
+<td width=260 valign=top style='width:195.35pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Hyperglycémie</span></p>
+</td>
+<td width=140 valign=top style='width:104.8pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+</tr>
+<tr>
+<td width=260 valign=top style='width:195.35pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Déshydratation</span></p>
+</td>
+<td width=140 valign=top style='width:104.8pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+</tr>
+<tr style='height:11.0pt'>
+<td width=260 valign=top style='width:195.35pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:11.0pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Hypervolémie</span></p>
+<p class=AmmCorpsTexte><span lang=EN-US>Hyperlactatémie</span></p>
+<p class=AmmCorpsTexte><span lang=EN-US>Hyponatrémie nosocomiale***</span></p>
+</td>
+<td width=140 valign=top style='width:104.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:11.0pt'></td>
+</tr>
+<tr>
+<td width=221 valign=top style='width:165.95pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras><span lang=EN-US>Affections vasculaires</span></p>
+</td>
+<td width=260 valign=top style='width:195.35pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Thrombose veineuse</span></p>
+<p class=AmmCorpsTexte><span lang=EN-US>Thrombophlébite</span></p>
+</td>
+<td width=140 valign=top style='width:104.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Indéterminée</span></p>
+</td>
+</tr>
+<tr>
+<td width=221 valign=top style='width:165.95pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Affections du rein et des voies urinaires</p>
+</td>
+<td width=260 valign=top style='width:195.35pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Polyurie</span></p>
+<p class=AmmCorpsTexte><span lang=EN-US>Glycosurie</span></p>
+</td>
+<td width=140 valign=top style='width:104.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Indéterminée</span></p>
+</td>
+</tr>
+<tr>
+<td width=221 rowspan=7 valign=top style='width:165.95pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Troubles généraux et anomalies au site d’administration</p>
+</td>
+<td width=260 valign=top style='width:195.35pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Frissons*</span></p>
+</td>
+<td width=140 valign=top style='width:104.8pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+</tr>
+<tr>
+<td width=260 valign=top style='width:195.35pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Fièvre*</span></p>
+</td>
+<td width=140 valign=top style='width:104.8pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+</tr>
+<tr>
+<td width=260 valign=top style='width:195.35pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Infection du site de perfusion<span style='font-family: "Calibri",sans-serif'> </span></p>
+</td>
+<td width=140 valign=top style='width:104.8pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+</tr>
+<tr>
+<td width=260 valign=top style='width:195.35pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Irritation au site de perfusion</p>
+</td>
+<td width=140 valign=top style='width:104.8pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Indéterminée</span></p>
+</td>
+</tr>
+<tr>
+<td width=260 valign=top style='width:195.35pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Extravasation</span></p>
+</td>
+<td width=140 valign=top style='width:104.8pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+</tr>
+<tr>
+<td width=260 valign=top style='width:195.35pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Réaction locale</span></p>
+</td>
+<td width=140 valign=top style='width:104.8pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+</tr>
+<tr>
+<td width=260 valign=top style='width:195.35pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Douleur locale**</span></p>
+<p class=AmmCorpsTexte><span lang=EN-US>Nécrose / ulcère**</span></p>
+</td>
+<td width=140 valign=top style='width:104.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+</tr>
+<tr>
+<td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 0cm 0cm 0cm'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Affections du système nerveux</span></b></p>
+</td>
+<td width=260 valign=top style='width:195.35pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Encéphalopathie hyponatrémique***</span></p>
+</td>
+<td width=140 valign=top style='width:104.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Indéterminée</span></p>
+</td>
+</tr>
+</table></div>
+</div>
+<p class=AmmCorpsTexte>* Manifestation potentielle chez les patients présentant une allergie au maïs (voir rubriques 4.3 et 4.4). </p>
+<p class=AmmCorpsTexte>** Effets indésirables pouvant être notamment associés à une extravasation</p>
+<p class=AmmCorpsTexte>*** L’hyponatrémie nosocomiale peut causer des lésions cérébrales irréversibles et entraîner le décès en raison du développement d’une encéphalopathie hyponatrémique aiguë (voir rubriques 4.2 et 4.4).</p>
+<p class=AmmCorpsTexte>Lorsque GLUCOSE 10 % AGUETTANT, solution pour perfusion est utilisé comme véhicule ou diluant pour des préparations injectables d'autres médicaments, d'autres effets indésirables associés au médicament ajouté à la solution peuvent survenir.</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet <a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte><i>Symptômes </i></p>
+<p class=AmmCorpsTexte>Une administration prolongée ou une perfusion rapide de volumes importants de solution pour perfusion de glucose à 10 % peut provoquer deux types d’effets indésirables pouvant engager le pronostic vital (voir rubriques 4.4 et 4.8) :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>en raison de l’hyperglycémie : une hyperosmolarité entraînant une hyponatrémie, une déshydratation cellulaire, une hyperglycémie, une glycosurie, une diurèse osmotique, susceptibles d'évoluer vers une déshydratation extracellulaire, un coma hyperosmolaire hyperglycémique et des déséquilibres électrolytiques, incluant des pertes de sodium et de potassium (voir rubrique 4.4) et des perturbations acido-basiques. </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>en raison de la quantité d’eau libre (une fois que le glucose est métabolisé) : une inflation hydrique avec œdème ou intoxication hydrique, entraînant une hyponatrémie aiguë hypoosmotique sévère, conduisant à une hyperhydratation cellulaire, et potentiellement un œdème cérébral engageant le pronostic vital (encéphalopathie hyponatrémique). Les symptômes comprennent des convulsions, nausées, léthargie et vomissements (voir rubriques 4.4 et 4.8).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>L’hyperglycémie sévère et l’hyponatrémie peuvent être fatales.</p>
+<p class=AmmCorpsTexte><i>Traitement</i></p>
+<p class=AmmCorpsTexte>Un surdosage cliniquement significatif de solutions de glucose constitue, par conséquent, une urgence médicale.</p>
+<p class=AmmCorpsTexte>Selon le type et la gravité des troubles : arrêt immédiat de la perfusion, instaurer un traitement symptomatique et de soutien adapté, en fonction des besoins (notamment administration d'électrolytes, de diurétiques ou d'insuline).</p>
+<p class=AmmCorpsTexte>En cas d’utilisation comme véhicule ou diluant pour préparation injectable d’autres médicaments, d’autres symptômes de surdosage liés à ce médicament peuvent se manifester. Se référer également au résumé des caractéristiques du produit de ce médicament.</p>
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+<p class=AmmCorpsTexte style='border:none;padding:0cm'>Une correction rapide de l’hyponatrémie peut engager le pronostic vital en raison du risque de démyélinisation osmotique et de complications neurologiques graves. Le traitement et la surveillance doivent être déterminés par un médecin expérimenté.</p>
+</div>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras>Classe pharmacothérapeutique : solution pour nutrition parentérale, code ATC : B05BA03</p>
+<p class=AmmCorpsTexte>Solution de glucose hypertonique (osmolarité : 555 mOsm/L).</p>
+<p class=AmmCorpsTexte>Les propriétés pharmacodynamiques de cette solution sont celles du glucose avec un apport calorique glucidique de 400 kcal/L.</p>
+<p class=AmmCorpsTexte>Le glucose, un substrat naturel des cellules de l'organisme, est métabolisé de manière ubiquitaire. Dans des conditions physiologiques, le glucose est la principale source d’énergie avec une valeur calorique d'environ 17 kJ/g ou 4 kcal/g. </p>
+<p class=AmmCorpsTexte>En cas d’ajout de médicament, la pharmacodynamie de la préparation dépendra aussi du médicament ajouté.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmAnnexeTitre3>Absorption</p>
+<p class=AmmCorpsTexte><i>Biodisponibilité</i></p>
+<p class=AmmCorpsTexte>La solution étant administrée par voie intraveineuse, sa biodisponibilité est de 100 %.</p>
+<p class=AmmAnnexeTitre3>Distribution</p>
+<p class=AmmCorpsTexte>Après administration, le glucose passe tout d'abord dans le compartiment intravasculaire, puis dans le compartiment intracellulaire.</p>
+<p class=AmmAnnexeTitre3>Biotransformation</p>
+<p class=AmmCorpsTexte>Au cours de la glycolyse, le glucose est métabolisé en pyruvate. Dans des conditions aérobies, le pyruvate est totalement oxydé pour donner du dioxyde de carbone et de l'eau. En cas d'hypoxie, le pyruvate est transformé en lactate.</p>
+<p class=AmmAnnexeTitre3>Élimination</p>
+<p class=AmmCorpsTexte>Les derniers métabolites issus de l'oxydation complète du glucose sont éliminés par les poumons en gaz carbonique et par les reins en eau. </p>
+<p class=AmmCorpsTexte>Chez les sujets sains, le glucose n'est pratiquement pas éliminé par les reins. </p>
+<p class=AmmCorpsTexte>Dans les états métaboliques pathologiques associés à de l'hyperglycémie (par ex. diabète sucré ou syndrome post-agression), le glucose est excrété par les reins.</p>
+<p class=AmmCorpsTexte>En cas d’ajout de médicament, la pharmacocinétique de la préparation dépendra aussi du médicament ajouté.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte>Des données de sécurité concernant le glucose chez l'animal ne sont pas applicables à l'Homme, étant donné que le glucose est un composant normal du plasma à la fois chez l'animal et chez l'Homme.</p>
+<p class=AmmCorpsTexte>Les données de sécurité de l'additif doivent être considérées séparément.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte>Eau pour préparations injectables.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte>Comme avec toutes les solutions parentérales, la compatibilité des médicaments avec la solution doit être vérifiée avant ajout.</p>
+<p class=AmmCorpsTexte>L'incompatibilité du médicament vis-à-vis de la solution de GLUCOSE 10 % AGUETTANT doit être déterminée en contrôlant un éventuel changement de couleur et/ou une éventuelle formation de précipité, de complexe insoluble ou de cristaux. Se référer également à la notice accompagnant le médicament à ajouter.</p>
+<p class=AmmCorpsTexte>En cas d'ajout de médicament, vérifier si le médicament est compatible avec la zone de pH de la solution de GLUCOSE 10 % AGUETTANT.</p>
+<p class=AmmCorpsTexte>Lorsqu'un médicament compatible est ajouté à la solution de GLUCOSE 10 % AGUETTANT, solution pour perfusion le mélange doit être administré immédiatement.</p>
+<p class=AmmCorpsTexte>Les médicaments connus pour être incompatibles ne doivent pas être utilisés.</p>
+<p class=AmmCorpsTexte>Ne pas administrer du sang simultanément, au moyen du même dispositif de perfusion, en raison du risque de pseudo-agglutination et d’hémolyse (voir rubrique 4.5).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexteGras><u>Avant ouverture</u></p>
+<p class=AmmCorpsTexte>3 ans.</p>
+<p class=AmmCorpsTexteGras><u>Durée de conservation lors de l'utilisation </u></p>
+<p class=AmmCorpsTexte>Après ouverture/dilution, le produit doit être utilisé immédiatement.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>A conserver à une température ne dépassant pas 25° C et dans son emballage d’origine, à l’abri de la lumière. </span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Pour les conditions de conservation du médicament après première ouverture, voir la rubrique 6.3.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte>Poche COSINUS (polyoléfine) suremballée de 25 mL, 50 mL, 100 mL, 150 mL, 250 mL, 500 mL, 1 000 mL, 2000 mL ou 3000 mL. Boîte de 1.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne pas utiliser si l'emballage / la poche est endommagé(e). </span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne pas réutiliser : usage unique.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Eliminer toute poche partiellement utilisée.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne pas reconnecter une poche partiellement utilisée.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Retirer le suremballage juste avant utilisation. Le conditionnement primaire maintient la stérilité du produit.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>En cas d’ajout de médicament, bien mélanger la solution avant utilisation.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>La solution doit être inspectée visuellement afin de détecter toute particule, tout dommage de la poche et tout signe visible de détérioration avant administration.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>En cas d’ajout de médicament, la solution doit être administrée avec un matériel stérile et en utilisant une technique aseptique.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Tout médicament non utilisé ou déchet doit être éliminé conformément à la réglementation en vigueur.</span></p>
+<p class=AmmCorpsTexte><i><u><span lang=FR-BE>Risque d'embolie gazeuse</span></u></i></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ne pas utiliser les poches plastiques pour des connexions en série. Cette utilisation pourrait entraîner une embolie gazeuse en raison de l'aspiration de l'air résiduel de la première poche avant la fin de l'administration de solution venant de la deuxième poche.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>L’exercice d’une pression sur le récipient en plastique flexible contenant la solution intraveineuse pour augmenter le débit peut entraîner une embolie gazeuse si l’air résiduel contenu dans le récipient n’est pas complètement évacué avant l’administration.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>L’utilisation d’un set d’administration par voie intraveineuse avec une prise d’air en position ouverte pourrait entraîner une embolie gazeuse. Les sets d’administration par voie intraveineuse avec une prise d’air en position ouverte ne doivent pas être utilisés avec des récipients en plastique souple.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Hlk129187594"><span style='text-transform:uppercase'>Laboratoire Aguettant</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>1 rue Alexander Fleming</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>69007 Lyon</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 362 566 3 7 : 1 poche polyoléfine de 25 mL.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 362 568 6 6 : 1 poche polyoléfine de 50 mL.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 362 569 2 7 : 1 poche polyoléfine de 100 mL.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 362 570 0 9 : 1 poche polyoléfine de 150 mL.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 362 571 7 7 : 1 poche polyoléfine de 250 mL.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 362 572 3 8 : 1 poche polyoléfine de 500 mL.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 362 574 6 7 : 1 poche polyoléfine de 1000 mL.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 362 575 2 8 : 1 poche polyoléfine de 2000 mL.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 362 576 9 6 : 1 poche polyoléfine de 3000 mL.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_GLUCOSE_10_%_AGUETTANT,_solution_pour_perfusion_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE GLUCOSE 10 % AGUETTANT, solution pour perfusion ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE GLUCOSE 10 % AGUETTANT, solution pour perfusion ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_GLUCOSE_10_%_AGUETTANT,_solution_pour_perfusion_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER GLUCOSE 10 % AGUETTANT, solution pour perfusion ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER GLUCOSE 10 % AGUETTANT, solution pour perfusion ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_UTILISER_GLUCOSE_10_%_AGUETTANT,_solution_pour_perfusion_?"
+                     aria-label="3. COMMENT UTILISER GLUCOSE 10 % AGUETTANT, solution pour perfusion ? (Lien de redirection)">
+                    3. COMMENT UTILISER GLUCOSE 10 % AGUETTANT, solution pour perfusion ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_GLUCOSE_10_%_AGUETTANT,_solution_pour_perfusion_?"
+                     aria-label="5. COMMENT CONSERVER GLUCOSE 10 % AGUETTANT, solution pour perfusion ? (Lien de redirection)">
+                    5. COMMENT CONSERVER GLUCOSE 10 % AGUETTANT, solution pour perfusion ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : GLUCOSE 10 % AGUETTANT, solution pour perfusion - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="GLUCOSE 10 % AGUETTANT, solution pour perfusion, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 25/11/2025</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>GLUCOSE 10 % AGUETTANT, solution pour perfusion</p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Glucose</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Veuillez lire attentivement cette notice avant d’utiliser ce médicament car elle contient des informations importantes pour vous.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin, votre pharmacien ou votre infirmier/ère.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin, votre pharmacien ou votre infirmier/ère. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que GLUCOSE 10 % AGUETTANT, solution pour perfusion et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant d'utiliser GLUCOSE 10 % AGUETTANT, solution pour perfusion ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment utiliser GLUCOSE 10 % AGUETTANT, solution pour perfusion ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver GLUCOSE 10 % AGUETTANT, solution pour perfusion ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_GLUCOSE_10_%_AGUETTANT,_solution_pour_perfusion_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE GLUCOSE 10 % AGUETTANT, solution pour perfusion ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras>Classe pharmacothérapeutique - code ATC : solution pour nutrition parentérale –  B05BA03</p>
+<p class=AmmCorpsTexte>Ce médicament est indiqué dans les situations suivantes :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Prévention des déshydratations.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Réhydratation lorsqu'il existe une perte d'eau supérieure à la perte en électrolytes (sels de l'organisme).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Prévention et traitement de la cétose (acétone dans le sang) dans les dénutritions.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Véhicule ou diluant pour apport thérapeutique en période préopératoire, peropératoire et postopératoire immédiate.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_GLUCOSE_10_%_AGUETTANT,_solution_pour_perfusion_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER GLUCOSE 10 % AGUETTANT, solution pour perfusion ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras>N’utilisez jamais GLUCOSE 10 % AGUETTANT, solution pour perfusion :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique (hypersensible) au maïs (car le sucre contenu dans ce médicament est dérivé du maïs) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez un taux de sucre dans le sang supérieur à la normale (hyperglycémie non contrôlée) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous souffrez d’un diabète non correctement traité donnant lieu à des taux de sucre anormalement élevés dans le sang (diabète décompensé) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>en cas d’autre intolérance au glucose comme dans les situations de stress métabolique (lorsque le métabolisme du corps ne fonctionne pas correctement, par exemple, en raison d’une maladie grave) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>en cas de coma hyperosmolaire (perte de connaissance). Ce type de coma peut survenir si vous souffrez de diabète et ne recevez pas suffisamment de médicaments ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez un taux de lactate anormalement élevé dans le sang (hyperlactatémie) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez trop de substances acides dans le sang (acidose métabolique) ;</p>
+<p class=AmmListePuces1 style='margin-bottom:6.0pt;text-align:justify'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>en cas de rétention d’eau (inflation hydrique/surcharge liquidienne) notamment si vous avez une insuffisance cardiaque aiguë ou si vous avez de l'eau dans les poumons (œdème pulmonaire).</p>
+<p class=AmmCorpsTexte>Ce médicament ne doit pas être utilisé pour traiter les déficits en liquides sans une administration adéquate de sels minéraux (voir également « Mises en garde et précautions d’emploi » ci-dessous).</p>
+<p class=AmmCorpsTexte>Si un autre médicament est ajouté à votre solution pour perfusion, lisez la notice d’information de ce médicament. Vous pouvez ainsi vérifier si ce médicament ne représente pas un danger pour vous. </p>
+<p class=AmmCorpsTexte>EN CAS DE DOUTE IL EST INDISPENSABLE DE DEMANDER L’AVIS DE VOTRE MEDECIN OU DE VOTRE PHARMACIEN.</p>
+<p class=AmmCorpsTexteGras>Avertissements et précautions</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Adressez-vous à votre médecin, pharmacien ou votre infirmier/ère avant d’utiliser </span>GLUCOSE 10 % AGUETTANT, solution pour perfusion<span lang=FR-BE>.</span></p>
+<p class=AmmCorpsTexte>L’administration de ce médicament doit se faire sous surveillance médicale.</p>
+<p class=AmmCorpsTexte>GLUCOSE 10 % AGUETTANT, solution pour perfusion est une solution HYPERTONIQUE (dont la concentration est supérieure à celle du plasma sanguin). Si des signes d'irritation veineuse ou d'inflammation de la paroi d'une veine apparaissent au niveau du site de perfusion, votre médecin envisagera de changer de site de perfusion. Votre médecin prendra des précautions particulières avec vous en cas d'atteinte de votre barrière hématoencéphalique, car dans ce cas ce médicament peut entraîner une augmentation de la pression dans votre crâne ou votre moelle épinière.</p>
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+<p class=AmmCorpsTexte style='border:none;padding:0cm'>Ce médicament ne doit pas être utilisé pour traiter les déficits en liquides sans une administration adéquate de sels minéraux (voir également « N'utilisez jamais GLUCOSE 10 % AGUETTANT, solution pour perfusion» ci-dessus et rubrique 4) parce qu'il peut entraîner une diminution significative de la concentration en sels minéraux de votre sang (en particulier en potassium et en sodium) et des problèmes cardiaques et cérébraux.</p>
+</div>
+<p class=AmmCorpsTexte>Aucun ajout de médicaments ne doit être fait sans avoir préalablement vérifié la compatibilité avec la solution et le contenant. </p>
+<p class=AmmCorpsTexte>Lorsqu’un médicament compatible est ajouté à la solution de glucose, le mélange doit être administré immédiatement. </p>
+<p class=AmmCorpsTexte>Informez votre médecin si vous souffrez ou avez souffert des troubles suivants :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>allergie au maïs (ce médicament contient du sucre dérivé du maïs)<span lang=FR-BE> ;</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>insuffisance<span lang=FR-BE> cardiaque ;</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>insuffisante respiratoire (maladie des poumons) ;</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>insuffisance rénale ;</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>diminution de la production d’urine (oligurie ou anurie) ;</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>excès d’eau dans le corps (intoxication à l’eau) ;</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>taux faible de sodium dans le sang (hyponatrémie) <span lang=FR-BE>;</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>lésion de la tête dans les dernières 24 heures <span lang=FR-BE>;</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une pression élevée dans le crâne (hypertension intracrânienne) <span lang=FR-BE>;</span></p>
+<p class=AmmListePuces1 style='margin-bottom:6.0pt;text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>attaque cérébrale due à un caillot dans un vaisseau sanguin du cerveau (</span>accident vasculaire ischémique). </p>
+<p class=AmmCorpsTexte>Lorsque cette perfusion vous sera administrée, votre médecin effectuera des prélèvements sanguins et d’urines pour contrôler : </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>les concentrations en substances chimiques dans votre sang comme le potassium (électrolytes plasmatiques) </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>les taux de sucre (glucose) </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>la quantité de fluide dans votre corps (votre équilibre hydrique) </p>
+<p class=AmmListePuces1 style='margin-bottom:6.0pt;text-align:justify'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>l'acidité du sang et des urines (changements dans l'équilibre acido-basique)</p>
+<p class=AmmCorpsTexte>GLUCOSE 10 % AGUETTANT, solution pour perfusion contient du sucre (glucose) et peut provoquer un taux élevé de sucre dans le sang (hyperglycémie). Dans ce cas, votre médecin pourra :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>ajuster le débit de la perfusion </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>vous administrer de l’insuline pour réduire le taux de sucre dans votre sang</p>
+<p class=AmmListePuces1 style='margin-bottom:6.0pt;text-align:justify'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>vous donner du potassium si nécessaire</p>
+<p class=AmmCorpsTexte>Ceci est particulièrement important : </p>
+<p class=AmmListePuces1 style='text-align:justify;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes diabétique. Votre médecin ajustera éventuellement la dose de votre traitement hypoglycémiant.</p>
+<p class=AmmListePuces1 style='text-align:justify;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vos reins ne fonctionnent pas normalement</p>
+<p class=AmmListePuces1 style='margin-bottom:6.0pt;text-align:justify; page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez eu récemment un accident vasculaire cérébral (AVC ischémique aigu). Des taux élevés de sucre dans le sang peuvent aggraver les effets de l’accident et affecter la guérison.</p>
+<p class=AmmCorpsTexteGras>Enfants et adolescents</p>
+<p class=AmmCorpsTexte>GLUCOSE 10 % AGUETTANT, solution pour perfusion doit être administré avec précaution. Le débit et le volume de perfusion dépendent de l’âge, du poids, de l’état clinique et des paramètres métaboliques de l’enfant.</p>
+<p class=AmmCorpsTexte>Les nouveau-nés, en particulier les prématurés et ceux présentant un faible poids à la naissance, ont un risque élevé de présenter des taux faibles ou élevés de sucre dans le sang (hypo- ou hyperglycémie) après une perfusion de solution contenant du glucose. Ils nécessitent de ce fait une surveillance étroite pendant l’administration intraveineuse de solutions de glucose pour assurer un contrôle adéquat du taux de sucre dans le sang et éviter la survenue d'éventuels effets néfastes à long terme. Un faible taux de sucre dans le sang chez les nouveau-nés peut entraîner des convulsions (contractions involontaires du corps), un coma (altération totale de l’état de conscience), et des lésions au niveau du cerveau. Des taux élevés de sucre ont été associés à des saignements au niveau du cerveau, des infections liées à des bactéries ou à des champignons d’installation tardive, des atteintes des yeux (rétinopathie du prématuré), des infections du tractus intestinal (entérocolite nécrosante), des affections des poumons (dysplasies broncho-pulmonaires), des hospitalisations prolongées et des décès.</p>
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+<p class=AmmCorpsTexte style='border:none;padding:0cm'>Les enfants, les nourrissons et les nouveau-nés qui reçoivent du GLUCOSE 10 % AGUETTANT, solution pour perfusion présentent plus de risques de développer de faibles taux de sodium dans le sang (hyponatrémie hypoosmotique) et un trouble appelé encéphalopathie hyponatrémique (trouble affectant le cerveau en raison de faibles taux de sodium).</p>
+</div>
+<p class=AmmCorpsTexte>Lors de l’administration à un nouveau-né, la poche de solution doit être connectée à une pompe pour perfusion qui permet l’administration exacte de la quantité de solution requise dans un intervalle de temps défini. Votre médecin ou votre infirmier/ère contrôlera le dispositif afin d’assurer une administration sécurisée.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et GLUCOSE 10 % AGUETTANT, solution pour perfusion</p>
+<p class=AmmCorpsTexte>Informez votre médecin ou pharmacien si vous utilisez, avez récemment utilisé ou pourriez utiliser tout autre médicament.</p>
+<p class=AmmCorpsTexte>En cas d’ajout de médicament, votre médecin vérifiera leur compatibilité avec la solution avant que ce médicament ne vous soit administré.</p>
+<p class=AmmCorpsTexte>GLUCOSE 10 % AGUETTANT, solution pour perfusion ne doit pas être administré simultanément avec du sang au moyen du même dispositif de perfusion.</p>
+<p class=AmmCorpsTexteGras>GLUCOSE 10 % AGUETTANT, solution pour perfusion avec des aliments, boissons et de l’alcool</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras>Grossesse, allaitement et fertilité</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous êtes enceinte ou que vous allaitez, si vous pensez être enceinte ou planifiez une grossesse, demandez conseil à votre médecin avant de prendre ce médicament.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Compte tenu des données disponibles, l'utilisation chez la femme enceinte ou qui allaite est possible.</span></p>
+<p class=AmmCorpsTexte>Des précautions particulières s’imposent lors de l’administration de GLUCOSE 10 % AGUETTANT, solution pour perfusion à des femmes enceintes pendant le travail, en particulier s’il est administré en combinaison avec de l’ocytocine (hormone), en raison du risque d’hyponatrémie (voir rubrique 4).</p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras>GLUCOSE 10 % AGUETTANT, solution pour perfusion contient</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_UTILISER_GLUCOSE_10_%_AGUETTANT,_solution_pour_perfusion_?'>3. COMMENT UTILISER GLUCOSE 10 % AGUETTANT, solution pour perfusion ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><u>Posologie </u></p>
+<p class=AmmCorpsTexte>Votre médecin veillera à un débit de perfusion adapté à vos besoins et à votre état clinique.</p>
+<p class=AmmCorpsTexte>SE CONFORMER A L'AVIS MEDICAL </p>
+<p class=AmmCorpsTexteGras><u>Mode et voie d'administration </u></p>
+<p class=AmmCorpsTexte>Perfusion intraveineuse </p>
+<p class=AmmCorpsTexte>SE CONFORMER A L'AVIS MEDICAL</p>
+<p class=AmmCorpsTexteGras><u>Fréquence d'administration </u></p>
+<p class=AmmCorpsTexte>SE CONFORMER A L'AVIS MEDICAL </p>
+<p class=AmmCorpsTexteGras><u>Durée du traitement </u></p>
+<p class=AmmCorpsTexte>SE CONFORMER A L'AVIS MEDICAL</p>
+<p class=AmmCorpsTexteGras>Si vous avez utilisé plus de GLUCOSE 10 % AGUETTANT, solution pour perfusion que vous n'auriez dû : </p>
+<p class=AmmCorpsTexte>Un surdosage en glucose, une administration prolongée ou une perfusion trop rapide peuvent entraîner:</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une hyperglycémie (taux anormalement élevé de sucre dans le sang), </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une glycosurie (taux anormalement élevé de sucre dans les urines),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une hyperosmolarité (concentration anormalement élevée des éléments dissous dans le sang), </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>des troubles de la conscience ou une perte de connaissance voire un coma dus à des taux de glucose extrêmement élevés dans le sang ou une hyperosmolarité,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>un œdème cérébral engageant le pronostic vital (encéphalopathie hyponatrémique). Les symptômes comprennent des convulsions, nausées, léthargie et vomissements (voir rubriques 2 et 4),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une déshydratation (déficit en liquide),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une polyurie osmotique (augmentation de la quantité d’urine émise).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une tension accrue de la peau</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une lourdeur et un gonflement des jambes (congestion veineuse)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>un œdème (gonflement des tissus)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>intoxication hydrique avec hyponatrémie (intoxication par l’eau avec des taux anormalement bas de sodium dans le sang)</p>
+<p class=AmmListePuces1 style='margin-bottom:6.0pt;text-align:justify'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>des troubles de l’équilibre acido-basique. </p>
+<p class=AmmCorpsTexte>L’hyperglycémie sévère et l’hyponatrémie peuvent être fatales.</p>
+<p class=AmmCorpsTexte>D’autres signes de surdosage peuvent être observés avec les médicaments dilués ou dissous dans le GLUCOSE 10 % AGUETTANT, solution pour perfusion.</p>
+<p class=AmmCorpsTexte>Votre médecin évaluera le traitement, notamment l’administration d’insuline, de médicaments augmentant le débit urinaire (diurétiques) ou de sels, ou si la perfusion doit être ralentie ou arrêtée.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez d’utiliser GLUCOSE 10 % AGUETTANT, solution pour perfusion</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez d’utiliser GLUCOSE 10 % AGUETTANT, solution pour perfusion </p>
+<p class=AmmCorpsTexte>Votre médecin décidera quand arrêter la perfusion.</p>
+<p class=AmmCorpsTexte>Si vous avez d’autres questions sur l’utilisation de ce médicament, demandez plus d’informations à votre médecin, à votre pharmacien ou à votre infirmier/ère.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte>Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</p>
+<p class=AmmCorpsTexteGras>Fréquence indéterminée : ne peut être estimée sur la base des données disponibles</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Réaction allergique (hypersensibilité), manifestation potentielle chez les patients présentant une allergie au maïs</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Fièvre</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Frissons</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Infection au niveau du site de perfusion</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Réaction locale</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Douleur locale</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Eruption</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Irritation veineuse</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Thrombose veineuse ou phlébite s’étendant à partir du site de perfusion (formation d’un caillot qui obstrue un vaisseau sanguin)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Extravasation (passage du produit hors des vaisseaux) pouvant entraîner notamment une douleur locale, voire un ulcère ou la mort des cellules tissulaires (nécrose de la peau)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypervolémie (augmentation du volume du sang)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Déséquilibre en sels minéraux de l’organisme (troubles électrolytiques)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Taux de sodium anormalement bas dans le sang (hyponatrémie)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Taux de sucre anormalement élevé dans le sang (hyperglycémie)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Déshydratation (perte en eau de l’organisme)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Taux de potassium anormalement bas dans le sang (hypokaliémie)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Taux de magnésium anormalement bas dans le sang (hypomagnésémie)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Taux de phosphate anormalement bas dans le sang (hypophosphatémie)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Taux de lactate anormalement élevé dans le sang (hyperlactatémie)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Polyurie osmotique au glucose (augmentation de la quantité d’urine)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Présence de sucre dans les urines (glycosurie)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Lésions cérébrales liées à un taux de sodium trop bas</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Ces effets indésirables peuvent être associés à la technique d'administration ou à un débit d’administration trop rapide.</p>
+<p class=AmmCorpsTexte>Si un médicament a été ajouté à la solution pour perfusion, celui-ci peut aussi provoquer des effets indésirables. Consultez la notice de ce médicament pour identifier des effets indésirables possibles.</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin, votre pharmacien ou à votre infirmier/ère. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet:<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_GLUCOSE_10_%_AGUETTANT,_solution_pour_perfusion_?'>5. COMMENT CONSERVER GLUCOSE 10 % AGUETTANT, solution pour perfusion ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte>Tenir ce médicament hors de la vue et de la portée des enfants.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas ce médicament après la date de péremption indiquée sur la poche EXP. La date de péremption fait référence au dernier jour de ce mois.</span></p>
+<p class=AmmCorpsTexteGras><u><span lang=FR-BE>Avant ouverture </span></u></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>A conserver à une température ne dépassant pas 25°C et dans son emballage d’origine, à l’abri de la lumière. </span></p>
+<p class=AmmCorpsTexteGras><u><span lang=FR-BE>Durée de conservation lors de l'utilisation </span></u></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Après ouverture/ dilution, le produit doit être utilisé immédiatement.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>La solution doit être inspectée visuellement afin de détecter toute particule, tout dommage de la poche et tout signe visible de détérioration avant administration.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout <span style='color:black'>ou avec </span>les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient GLUCOSE 10 % AGUETTANT, solution pour perfusion</a></p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est :</p>
+<p class=AmmComposition style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:18.0pt;page-break-after:avoid'>Glucose.............................................................................................................................. 10 g</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt'>(sous forme de glucose monohydraté)</p>
+<p class=AmmComposition align=center style='text-align:center'>pour 100 mL de perfusion.</p>
+<p class=AmmListePuces1 style='margin-bottom:6.0pt'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>L’autre composant excipient est l’eau pour préparations injectables</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt'>Quantité totale en glucose </p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt'>Une poche de 25 mL contient 2,5 g de glucose</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt'>Une poche de 50 mL contient 5 g de glucose</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt'>Une poche de 100 mL contient 10 g de glucose</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt'>Une poche de 150 mL contient 15 g de glucose</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt'>Une poche de 250 mL contient 25 g de glucose</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt'>Une poche de 500 mL contient 50 g de glucose</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt'>Une poche de 1000 mL contient 100 g de glucose</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt'>Une poche de 2000 mL contient 200 g de glucose</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt'>Une poche de 3000 mL contient 300 g de glucose</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt'>Glucose : 555 mmol/L</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt'>Osmolarité théorique : 555 mOsm/L</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt'>pH compris entre 3,5 - 4,4.</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt'>Apport calorique glucidique : 400 kcal/L (soit 1675 kJ/L)</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que GLUCOSE 10 % AGUETTANT, solution pour perfusion et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>Ce médicament se présente sous forme de solution pour perfusion, incolore à faiblement coloré jaune paille, exempte de particules visibles.</p>
+<p class=AmmCorpsTexte>25, 50, 100, 150, 250, 500, 1000, 2000 et 3000 mL en poche polyoléfine.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>Laboratoire Aguettant</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>1 rue Alexander Fleming</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>69007 Lyon</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>Laboratoire Aguettant</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>1 rue Alexander Fleming</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>69007 Lyon</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>AGUETTANT Mouvaux</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>Rue Michel Raillard</span></p>
+<p class=AmmCorpsTexte><span style='text-transform:uppercase'>59420 Mouvaux</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>
