@@ -1,0 +1,1730 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="0V5il8hL8sSzkNVIrN17gw==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="0V5il8hL8sSzkNVIrN17gw==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 31/08/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale"
+            aria-level="3"
+          >
+            DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                      </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 02/06/1998
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0440065">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexteGras><a name="_Toc142279003">Classe pharmacothérapeutique : Alcaloïdes de l’ergot - code ATC : N02CA01</a></p>
+<p class=AmmCorpsTexte>DIERGOSPRAY contient une substance appelée mésilate de dihydroergotamine.</p>
+<p class=AmmCorpsTexte>DIERGOSPRAY appartient à la classe de médicaments connue sous le nom d'alcaloïdes de l'ergot de seigle. Il agit sur des récepteurs spécifiques (appelés récepteurs 5HT), qui seraient impliqués dans la crise de migraine. DIERGOSPRAY peut alors diminuer la sévérité d'une crise de migraine.</p>
+<p class=AmmCorpsTexte>DIERGOSPRAY est destiné au traitement de la crise de migraine avec ou sans aura (troubles de la vue qui chez certains patients précèdent la crise de migraine).</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament n'appartient à aucun groupe générique</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Solution ( Composition pour un flacon )<ul role="list"><li role="listitem" style="list-style-type: none;"> > mésilate de dihydroergotamine<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">4 mg </span></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > 1 flacon(s) en verre brun de 1 ml avec dispositif pulvérisateur (PULVADOZ) polypropylène  </p><p>Code CIP : 347 382-2 ou 34009 347 382 2 7<br/>Déclaration de commercialisation : 10/04/2000<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 4,51 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 5,53 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :30%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><div class='fr-grid-row'><div class='fr-col'><p>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence. </p></div></div><div class='fr-grid-row'><div class='fr-col'><p>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprès de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-smr-aide-2'>plus d'informations dans l'aide</a>). Les avis et synthèses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-smr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection à la page d'aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'SMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur du SMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td>Modéré</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2041958'>Avis du 17/06/2015</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 17/06/2015 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Renouvellement d'inscription (CT)</td><td class='text-align-center'>Le service médical rendu par DIERGOSPRAY et DIHYDROERGOTAMINE AMDIPHARM reste modéré dans les indications de l’AMM.</td></tr></tbody></table></div></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div><div class='fr-col'><p>Pas d'ASMR disponible pour ce médicament (<a href='/aide#le-medicament-que-je-recherche-ne-mentionne-pas-de-service-medical-rendu-(SMR)-ni-amelioration-du-service-medical-rendu-(ASMR)' aria-describedby='tooltip-asmr-aide-2'>plus d'informations dans l'aide )</a></p><span id='tooltip-asmr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers la page aide</span></div></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : AMDIPHARM Ltd</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste II</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure de reconnaissance mutuelle</li><li>Code CIS : &nbsp;6 245 537 1</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 05/11/2025</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras>DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale</p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Mésilate de dihydroergotamine.............................................................................................. 4,0 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour 1 ml de solution pour pulvérisation nasale.</p>
+<p class=AmmCorpsTexte>1 dose délivre 0,5 mg de mésilate de dihydroergotamine.</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Solution pour pulvérisation nasale.</a></p>
+<p class=AmmCorpsTexte>DIERGOSPRAY solution pour pulvérisation nasale est une solution pour application locale utilisant un dispositif pulvérisateur.</p>
+<p class=AmmCorpsTexte>La solution est claire, incolore à légèrement jaune, marron-jaune ou vert-jaune.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">Traitement des crises de migraine avec ou sans aura.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278918"><span style='border:none windowtext 1.0pt; padding:0cm'>La solution dans le flacon a été spécialement développée pour l'administration intranasale et ne doit pas être injectée.</span></a></p>
+<p class=AmmAnnexeTitre3>Posologie</p>
+<p class=AmmCorpsTexte>Une pulvérisation (0,5 mg) de <a name="OLE_LINK1">DIERGOSPRAY solution pour pulvérisation nasale</a> dans chaque narine dès l’apparition de la céphalée migraineuse.</p>
+<p class=AmmCorpsTexte>Quinze minutes plus tard, chez les patients pour qui la première dose de DIERGOSPRAY solution pour pulvérisation nasale (1 mg) n’a pas été suffisante, une nouvelle pulvérisation (0,5 mg) peut être administrée dans chaque narine, aboutissant à une dose totale de quatre pulvérisations (2,0 mg) par crise.</p>
+<p class=AmmCorpsTexte><u>Les recommandations suivantes doivent être observées :</u></p>
+<p class=AmmCorpsTexte>La dose maximale de DIERGOSPRAY solution pour pulvérisation nasale à ne pas dépasser par 24h est de 2 mg (= 4 pulvérisations) et la dose maximale à ne pas dépasser par semaine est de 8 mg (= 16 pulvérisations).</p>
+<p class=AmmCorpsTexte>Après le traitement d’une crise de migraine par DIERGOSPRAY solution pour pulvérisation nasale, un intervalle d’au moins 24 heures doit être respecté avant le traitement d’une nouvelle crise par la dihydroergotamine (en pulvérisation nasale ou sous forme injectable) ou par tout autre médicament contenant de l’ergotamine, du sumatriptan ou un autre agoniste des récepteurs de la 5-hydroxytryptamine 1.</p>
+<p class=AmmCorpsTexte>Après le traitement d’une seule crise de migraine dans les conditions décrites ci-dessus (1 mg ou 2 mg respectivement), le pulvérisateur et la solution pour pulvérisation doivent être jetés.</p>
+<p class=AmmAnnexeTitre4>Sujets âgés</p>
+<p class=AmmCorpsTexte>L’utilisation de DIERGOSPRAY solution pour pulvérisation nasale n’est pas recommandée chez les patients de plus de 65 ans en absence de données d’efficacité et de sécurité d’emploi.</p>
+<p class=AmmAnnexeTitre4>Insuffisance hépatique</p>
+<p class=AmmCorpsTexte><span style='color:#212121'>La prudence est recommandée chez les patients présentant une insuffisance hépatique légère à </span>modérée, en particulier chez les patients présentant une hépatite cholestatique (voir rubriques 4.4 et 5.2). DIERGOSPRAY solution pour pulvérisation nasale est contre-indiqué chez les patients présentant une insuffisance hépatique sévère (voir rubrique 4.3).</p>
+<p class=AmmAnnexeTitre4>Population pédiatrique</p>
+<p class=AmmCorpsTexte>L’utilisation de DIERGOSPRAY solution pour pulvérisation nasale n’est pas recommandée chez les patients de moins de 16 ans en absence de données d’efficacité et de sécurité d’emploi.</p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmAnnexeTitre4>Instructions d’utilisation</p>
+<p class=AmmCorpsTexte>La solution pour pulvérisation nasale doit être préparée juste avant son utilisation (c’est-à-dire dès l’apparition de la céphalée migraineuse). Une fois le dispositif pulvérisateur assemblé, il doit être utilisé dans les 8 heures.</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt;text-indent:-18.0pt'>1.<span style='font:7.0pt "Times New Roman"'>     </span>Soulever un bord de la capsule bleue sans la détacher du collier métallique.</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt;text-indent:-18.0pt'>2.<span style='font:7.0pt "Times New Roman"'>     </span>Enlever la capsule et le collier métallique. La capsule bleue et le collier métallique doivent s’enlever d’une seule pièce. Si la capsule bleue s’arrache, retirer le collier métallique en prenant extrêmement garde aux rebords qui peuvent être tranchants.</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt;text-indent:-18.0pt'>3.<span style='font:7.0pt "Times New Roman"'>     </span>Enlever avec soin le bouchon en caoutchouc du flacon.</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt;text-indent:-18.0pt'>4.<span style='font:7.0pt "Times New Roman"'>     </span>Enlever délicatement le capuchon protecteur de la partie inférieure du dispositif de pulvérisation.</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt;text-indent:-18.0pt'>5.<span style='font:7.0pt "Times New Roman"'>     </span>Insérer la pompe du pulvérisateur nasal dans le flacon ouvert et la fixer dans le sens des aiguilles d’une montre.</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt;text-indent:-18.0pt'>6.<span style='font:7.0pt "Times New Roman"'>     </span>Tout en maintenant le flacon en position verticale, enlever délicatement le capuchon protecteur bleu de l’embout nasal.</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt;text-indent:-18.0pt'>7.<span style='font:7.0pt "Times New Roman"'>     </span>Le pulvérisateur doit être amorcé avant la première utilisation : tenir le pulvérisateur nasal en position verticale et appuyer fermement vers le bas 4 fois. L’amorçage s’accompagne normalement de projection d’un peu de liquide.</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt;text-indent:-18.0pt'>8.<span style='font:7.0pt "Times New Roman"'>     </span>Maintenir le pulvérisateur en position verticale, introduire l’embout dans une narine et pulvériser une fois. Faire la deuxième pulvérisation dans l’autre narine. Inspirer fortement par le nez plusieurs fois pour éviter que la solution ne s’écoule des narines. Eviter de se moucher immédiatement après les pulvérisations.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Replacer le capuchon protecteur bleu et garder le pulvérisateur à portée de la main au cas où il devrait être réutilisé. Il est inutile de réamorcer la pompe.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmListePuces1><a name="_Toc142278919"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypersensibilité aux alcaloïdes de l’ergot de seigle ou à l’un des excipients mentionnés à la rubrique 6.1.</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Conditions prédisposant à des réactions angiospastiques : insuffisance coronaire (en particulier angor instable ou spastique), états infectieux sévères (septicémie), choc, maladie vasculaire oblitérante, maladies vasculaires périphériques telles que syndrome de Raynaud, antécédents d’accident ischémique transitoire ou de souffrance cérébrale ou d’hypertension artérielle mal contrôlée.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Artérite temporale.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Traitement de la migraine familiale hémiplégique.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Traitement de la migraine basilaire.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Grossesse et allaitement (voir rubrique 4.6).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Patients présentant une insuffisance hépatique sévère.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Patients traités simultanément par inhibiteurs puissants du CYP 3A comme les antibiotiques de type macrolides, les inhibiteurs de la protéase du VIH, les antifongiques azolés et autres médicaments (voir rubrique 4.5).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Patients traités simultanément par les vasoconstricteurs périphériques y compris ceux contenant des dérivés de l’ergot de seigle, le sumatriptan et les autres agonistes des récepteurs à la 5-hydroxytryptamine1 (5-HT1) (voir rubrique 4.5).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278920">DIERGOSPRAY solution pour pulvérisation nasale n’est pas destinée au traitement prophylactique de la migraine et ne doit pas être utilisé continuellement à long terme en raison du risque d’effets indésirables graves et des complications liées à son utilisation.</a></p>
+<p class=AmmCorpsTexte>La dihydroergotamine peut avoir des effets indésirables graves, appelés fibrose, notamment une fibrose rétropéritonéale, cardiaque, pulmonaire et pleurale et un ergotisme (y compris des cas graves de constriction des vaisseaux sanguins périphériques) pouvant être mortels.</p>
+<p class=AmmCorpsTexte>Les patients ayant des antécédents de fibrose liée à des médicaments, telle qu’une fibrose rétropéritonéale et pleurale, doivent être suivis avec attention.</p>
+<p class=AmmCorpsTexte>L'utilisation prolongée de dihydroergotamine ou d'autres dérivés de l'ergot de seigle doit être évitée car elle peut entraîner une dépendance.</p>
+<p class=AmmCorpsTexte>L’usage journalier chronique de DIERGOSPRAY solution pour pulvérisation nasale ou son emploi au-delà des doses recommandées doit être évité car il peut entraîner un vasospasme.</p>
+<p class=AmmCorpsTexte>L’abus chronique de DIERGOSPRAY solution pour pulvérisation nasale peut causer des céphalées de rebond. Si cette situation est suspectée, le traitement doit être suspendu.</p>
+<p class=AmmCorpsTexte>Dans de rares cas, des spasmes vasculaires peuvent être observés, particulièrement dans les membres inférieurs. Si des signes et des symptômes de spasmes vasculaires apparaissent, DIERGOSPRAY solution pour pulvérisation nasale doit être arrêté et un traitement par vasodilatateurs périphériques doit être instauré (voir rubrique 4.9).</p>
+<p class=AmmCorpsTexte>Il convient d’informer le patient des doses maximales de DIERGOSPRAY solution pour pulvérisation nasale à ne pas dépasser et de lui signaler quels sont les premiers symptômes d’un surdosage : paresthésie (par ex. engourdissement, fourmillements) au niveau des doigts et des orteils, nausées et vomissements sans rapport avec la migraine, symptômes d’ischémie myocardique et douleurs précordiales. Dès l’apparition de symptômes de surdosage, le traitement doit être interrompu et le patient doit aussitôt consulter son médecin.</p>
+<p class=AmmCorpsTexte>Une surveillance particulière est recommandée chez les patients souffrant de rhinite, de congestion nasale et de rhinite allergique ainsi que chez les patients atteints d’insuffisance hépatique légère à modérée et plus spécialement en cas d’hépatite cholestatique.</p>
+<p class=AmmCorpsTexte><i><u>Note</u></i> : la solution contenue dans le flacon en verre teinté est réservée à la voie nasale et ne doit pas être injectée.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278921">Inhibiteurs puissants du CYP3A4</a></p>
+<p class=AmmCorpsTexte>L’administration concomitante d’inhibiteurs puissants du cytochrome P450 3A (CYP3A) et de DIERGOSPRAY solution pour pulvérisation nasale est contre-indiquée. Les inhibiteurs puissants du CYP 3A incluent : antibiotiques de type macrolide (ex. érythromycine, troléandomycine, clarithromycine, telithromycine) et tétracycline, les inhibiteurs de la protéase du VIH(ex. ritonavir, indinavir, nelfinavir, fosamprénavir, amprénavir, atazanavir), les inhibiteurs de la transcriptase inverse (ex. delavirdine, éfavirenz), les antifongiques dérivés de l’imidazole (ex. kétokonazole, micanazole) dérivés triazoles (ex. itraconazole, voriconazole, posaconazole) (voir rubrique 4.3). L’administration concomitante peut entraîner une élévation de l’exposition à la dihydroergotamine et à une toxicité de l’ergot (vasospasme, ischémie et possible nécrose des extrémités et autres tissus). </p>
+<p class=AmmAnnexeTitre3>Vasoconstricteurs</p>
+<p class=AmmCorpsTexte>L’utilisation concomitante de vasoconstricteurs incluant les produits contenant de l’ergotamine, les alcaloïdes de l’ergot de seigle, et de sympathomimétiques est contre-indiquée puisqu’elle peut aggraver la vasoconstriction, provoquer une ischémie et une possible nécrose des extrémités et d’autres tissus (voir rubrique 4.3).</p>
+<p class=AmmCorpsTexte>Compte tenu des propriétés vasoconstrictrices de la dihydroergotamine, l’utilisation de nicotine (par exemple : tabagisme important, traitement de substitution avec la nicotine) doit se faire avec précaution.</p>
+<p class=AmmCorpsTexte>DIERGOSPRAY solution pour pulvérisation nasale <span style='color:#212121'>doit être pris au moins 24 heures avant ou 6 heures après le sumatriptan, l'almotriptan, le rizatriptan et le zolmitriptan. De plus, l'utilisation concomitante avec l'élétriptan, le frovatriptan ou le naratriptan doit être éloignée d'au moins 24 heures en raison du risque accru de vasoconstriction.</span></p>
+<p class=AmmAnnexeTitre3>Inhibiteurs faibles à modérés du CYP3A4</p>
+<p class=AmmCorpsTexte><span style='border:none windowtext 1.0pt;padding:0cm'>Des inhibiteurs faibles à modérés du CYP3A4 tels que le jus de pamplemousse, le saquinavir, la cimétidine, le métronidazole, la quinupristine/dalfopristine, le clotrimazole, le fluconazole, la néfazodone, la fluoxétine, la fluvoxamine et le zileuton peuvent également augmenter l'exposition à l'ergotamine et une prudence est recommandée en cas d’utilisation concomitante.</span></p>
+<p class=AmmCorpsTexte><span style='border:none windowtext 1.0pt;padding:0cm'>Il n'y a pas d'autres interactions pharmacocinétiques connues avec d'autres isoenzymes P450.</span></p>
+<p class=AmmCorpsTexte>Bien que l’association aux &#946;-bloquants (par exemple le propranolol) soit généralement bien tolérée, la prudence est requise chez les patients atteints de troubles de la circulation périphérique.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte>L’utilisation de DIERGOSPRAY solution pour pulvérisation nasale est contre-indiquée pendant la grossesse.</p>
+<p class=AmmCorpsTexte>L’expérience clinique avec la dihydroergotamine par voie parentérale suggère qu’en raison de son activité utéro-tonique et des effets vasoconstricteurs sur le placenta et le cordon ombilical, la dihydroergotamine puisse être néfaste pour le fœtus.</p>
+<p class=AmmCorpsTexte>Les études chez l’animal ont démontré une reprotoxicité (voir rubrique 5.3).</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278927">Allaitement</a></p>
+<p class=AmmCorpsTexte>Il est probable que la dihydroergotamine soit excrétée dans le lait maternel. L’utilisation de DIERGOSPRAY solution pour pulvérisation nasale est donc contre-indiquée chez la femme allaitante.</p>
+<p class=AmmAnnexeTitre3>Fertilité</p>
+<p class=AmmCorpsTexte>Aucune donnée de l'effet de la dihydroergotamine sur la fertilité chez l'être humain n'est disponible. Chez le rat, aucun effet sur la fertilité masculine et féminine n'a été observé après l'administration intranasale et orale de dihydroergotamine à des doses supérieures à la dose quotidienne maximale recommandée chez l'Homme.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929"><span lang=FR-BE>Les patients présentant des sensations vertigineuses ou d’autres troubles du système nerveux central, incluant des troubles visuels lors de l’utilisation de DIERGOSPRAY solution pour pulvérisation nasale, ne doivent ni conduire un véhicule ni utiliser des machines.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmCorpsTexte>Les effets indésirables les plus fréquemment rapportés sont : rhinite, nausées et vomissements, dysgueusies, réactions dose-dépendantes au site d’application (par exemple obstruction nasale, rhinorrhée), diarrhée, pharyngite, sensations vertigineuses et flush.</p>
+<p class=AmmCorpsTexte>La classification selon la fréquence utilise la convention suivante : très fréquents (&#8805;1/10), fréquents (&#8805;1/100 à <1/10), peu fréquents (&#8805;1/1000 à <1/100), rares (&#8805;1/10000 à <1/1000), fréquence indéterminée (ne peut être estimée avec les données disponibles).</p>
+<p class=AmmCorpsTexte>Dans chaque groupe de fréquence, les effets indésirables sont présentés en ordre décroissant de sévérité.</p>
+<div class='fr-table--lg fr-table'><table>
+<tr style='height:20.5pt'>
+<td width=619 colspan=2 valign=top style='width:464.3pt;border:solid windowtext 1.0pt;
+border-bottom:none;padding:0cm 5.4pt 0cm 5.4pt;height:20.5pt'>
+<p class=AmmCorpsTexteGras><u>Affections du système immunitaire</u></p>
+</td>
+</tr>
+<tr>
+<td width=185 valign=top style='width:138.65pt;border-top:none;border-left:
+solid windowtext 1.0pt;border-bottom:solid windowtext 1.0pt;border-right:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Rares : </p>
+</td>
+<td width=434 valign=top style='width:325.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Réactions d’hypersensibilité (rash cutané, œdème de la face, urticaire, dyspnée)</p>
+</td>
+</tr>
+<tr>
+<td width=619 colspan=2 valign=top style='width:464.3pt;border-top:none;
+border-left:solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras><u>Affections du système nerveux</u></p>
+</td>
+</tr>
+<tr>
+<td width=185 valign=top style='width:138.65pt;border-top:none;border-left:
+solid windowtext 1.0pt;border-bottom:solid windowtext 1.0pt;border-right:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Peu fréquents : </p>
+</td>
+<td width=434 valign=top style='width:325.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Paresthésie/hyposthésie, sensations vertigineuses, dysgueusie</p>
+</td>
+</tr>
+<tr>
+<td width=619 colspan=2 valign=top style='width:464.3pt;border-top:none;
+border-left:solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras><u>Affections cardiaques</u></p>
+</td>
+</tr>
+<tr>
+<td width=185 valign=top style='width:138.65pt;border-top:none;border-left:
+solid windowtext 1.0pt;border-bottom:solid windowtext 1.0pt;border-right:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Rares : </p>
+</td>
+<td width=434 valign=top style='width:325.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Symptômes d’ischémie myocardique</p>
+</td>
+</tr>
+<tr>
+<td width=619 colspan=2 valign=top style='width:464.3pt;border-top:none;
+border-left:solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras><u>Affections vasculaires</u></p>
+</td>
+</tr>
+<tr>
+<td width=185 valign=top style='width:138.65pt;border:none;border-left:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Peu fréquents :</p>
+</td>
+<td width=434 valign=top style='width:325.65pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Flush</p>
+</td>
+</tr>
+<tr>
+<td width=185 valign=top style='width:138.65pt;border-top:none;border-left:
+solid windowtext 1.0pt;border-bottom:solid windowtext 1.0pt;border-right:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Rares :</p>
+</td>
+<td width=434 valign=top style='width:325.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Spasme artériel (particulièrement dans les extrémités inférieures) (voir rubriques 4.4 et 4.9)</p>
+</td>
+</tr>
+<tr>
+<td width=619 colspan=2 valign=top style='width:464.3pt;border-top:none;
+border-left:solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras><u>Affections respiratoires, thoraciques et mediastinales</u></p>
+</td>
+</tr>
+<tr>
+<td width=185 valign=top style='width:138.65pt;border:none;border-left:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Peu fréquents :</p>
+</td>
+<td width=434 valign=top style='width:325.65pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Congestion nasale, rhinite</p>
+</td>
+</tr>
+<tr>
+<td width=185 valign=top style='width:138.65pt;border:none;border-left:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Rares :</p>
+</td>
+<td width=434 valign=top style='width:325.65pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Pharyngite, dyspnée</p>
+</td>
+</tr>
+<tr>
+<td width=185 valign=top style='width:138.65pt;border-top:none;border-left:
+solid windowtext 1.0pt;border-bottom:solid windowtext 1.0pt;border-right:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Indéterminée :</p>
+</td>
+<td width=434 valign=top style='width:325.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Epistaxis</p>
+</td>
+</tr>
+<tr>
+<td width=619 colspan=2 valign=top style='width:464.3pt;border-top:none;
+border-left:solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras><u>Affections musculo-squelettiques et du tissu sous-cutané</u></p>
+</td>
+</tr>
+<tr>
+<td width=185 valign=top style='width:138.65pt;border-top:none;border-left:
+solid windowtext 1.0pt;border-bottom:solid windowtext 1.0pt;border-right:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Indéterminée :</p>
+</td>
+<td width=434 valign=top style='width:325.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Spasmes musculaires</p>
+</td>
+</tr>
+<tr>
+<td width=619 colspan=2 valign=top style='width:464.3pt;border-top:none;
+border-left:solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras><u>Affections gastro-intestinales</u></p>
+</td>
+</tr>
+<tr>
+<td width=185 valign=top style='width:138.65pt;border:none;border-left:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Peu fréquents :</p>
+</td>
+<td width=434 valign=top style='width:325.65pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Nausées, vomissements</p>
+</td>
+</tr>
+<tr>
+<td width=185 valign=top style='width:138.65pt;border:none;border-left:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Rares :</p>
+</td>
+<td width=434 valign=top style='width:325.65pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Diarrhée</p>
+</td>
+</tr>
+<tr>
+<td width=185 valign=top style='width:138.65pt;border-top:none;border-left:
+solid windowtext 1.0pt;border-bottom:solid windowtext 1.0pt;border-right:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Indéterminée :</p>
+</td>
+<td width=434 valign=top style='width:325.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Douleur abdominale</p>
+</td>
+</tr>
+<tr>
+<td width=619 colspan=2 valign=top style='width:464.3pt;border-top:none;
+border-left:solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras><u>Troubles généraux et anomalies au site d’administration</u></p>
+</td>
+</tr>
+<tr>
+<td width=185 valign=top style='width:138.65pt;border:none;border-left:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Peu fréquents :</p>
+</td>
+<td width=434 valign=top style='width:325.65pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Réactions au site d’administration</p>
+</td>
+</tr>
+<tr>
+<td width=185 valign=top style='width:138.65pt;border-top:none;border-left:
+solid windowtext 1.0pt;border-bottom:solid windowtext 1.0pt;border-right:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Rares :</p>
+</td>
+<td width=434 valign=top style='width:325.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Douleur thoracique</p>
+</td>
+</tr>
+</table></div>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>L’ergotisme peut survenir chez certains patients qui ont pris de la dihydroergotamine par voie orale de façon continue pendant des années. Le développement de changements fibrotiques, en particulier de la plèvre et du rétropéritoine, a été observé. Des cas de changements fibrotiques des valves cardiaques ont été rapportés (voir rubrique 4.4). L'utilisation chronique peut entraîner une dépendance (voir rubrique 4.4).</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr">https://signalement.social-sante.gouv.fr</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmAnnexeTitre3>Symptômes</p>
+<p class=AmmCorpsTexte>Aucun cas de surdosage avec DIERGOSPRAY solution pour pulvérisation nasale n’a été rapporté. On peut cependant s’attendre à ce que les symptômes soient semblables à ceux observés après une ingestion d’une dose orale excessive : nausées, vomissements, maux de tête, tachycardie, vertiges, signes et symptômes périphériques de vasospasme (par exemple engourdissement, fourmillements et douleurs dans les extrémités), symptômes d’ischémie myocardique, douleur thoracique et coma. Il est à noter que la survenue de symptômes angiospastiques peut être retardée de 24 heures par rapport à l’administration.</p>
+<p class=AmmAnnexeTitre3>Prise en charge</p>
+<p class=AmmCorpsTexte>Après arrêt de son utilisation, le traitement du surdosage est symptomatique et requiert une surveillance étroite du système cardio-vasculaire.</p>
+<p class=AmmCorpsTexte>En cas de réactions angiospastiques intenses, il est recommandé de procéder à l’administration intraveineuse d’un vasodilatateur périphérique (comme le nitroprussiate, la phentolamine, ou la dihydralazine), à l’application locale de chaleur sur les endroits atteints ainsi qu’un traitement préventif des lésions tissulaires. En cas de spasme coronarien, il faut débuter un traitement adapté tel que l’administration de nitroglycérine.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : Alcaloïdes de l’ergot, code ATC : N02CA01</a></p>
+<p class=AmmAnnexeTitre3>Mécanisme d’action</p>
+<p class=AmmCorpsTexte>La dihydroergotamine présente une affinité moyenne à élevée pour divers sous-types de récepteurs sérotoninergiques. Elle possède une activité agoniste particulièrement puissante au niveau des récepteurs 5-HT1D, qui est supposée sous-tendre son efficacité antimigraineuse.</p>
+<p class=AmmCorpsTexte>Cette activité agoniste entraîne une diminution de la fonction des neurones en rapport avec la 5-HT et, de ce fait, il y a un effet sur des éléments de la vascularisation crânienne et/ou elle prévient l’inflammation neurogène et la stimulation des récepteurs nociceptifs qui en résulte.</p>
+<p class=AmmCorpsTexte>L’administration de DIERGOSPRAY solution pour pulvérisation nasale a un début d’action rapide. Lors des crises de migraines d’intensité légère à sévère, DIERGOSPRAY solution pour pulvérisation nasale atténue les maux de tête et les symptômes associés tels que la phonophobie et la photophobie.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278934">Absorption</a></p>
+<p class=AmmCorpsTexte>Après administration nasale, la dihydroergotamine est rapidement absorbée (Tmax d’environ 45 min). Sa biodisponibilité absolue est d’environ 43 ± 24 %.</p>
+<p class=AmmAnnexeTitre3>Distribution</p>
+<p class=AmmCorpsTexte>La liaison de la dihydroergotamine aux protéines plasmatiques est de 93 % ; son volume apparent de distribution est d’environ 800 litres à l’état d’équilibre.</p>
+<p class=AmmAnnexeTitre3>Biotransformation</p>
+<p class=AmmCorpsTexte>70 à 80 % des concentrations plasmatiques représentent la substance inchangée, indiquant un métabolisme de la dihydroergotamine plus faible par voie nasale que par voie orale.</p>
+<p class=AmmAnnexeTitre3>Élimination</p>
+<p class=AmmCorpsTexte>La clairance corporelle totale est d’environ 1,5 litres/min. reflétant principalement la clairance hépatique. L’élimination plasmatique est biphasique avec une demi-vie terminale d’environ 10 heures. L’excrétion se fait essentiellement par les fèces via la bile. Après administration nasale, l’excrétion urinaire de la substance mère et des métabolites est d’environ 2 %.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278935">Toxicité pour la reproduction</a></p>
+<p class=AmmCorpsTexte>À des doses orales allant jusqu’à 30 mg/kg par jour, la dihydroergotamine n’était pas tératogène chez les rats et les lapins gravides et n’avait aucun effet sur le développement périnatal ou postnatal chez le rat et le lapin. L'administration orale de 5 mg/kg par jour à des singes gravides n'était pas tératogène. Cependant, après une administration intraveineuse et nasale, une toxicité développementale (diminution du poids corporel du fœtus et/ou une ossification squelettique retardée) a été observée chez des animaux expérimentaux. Cette observation a été attribuée à une diminution du débit sanguin utéro-placentaire résultant d'une vasoconstriction prolongée des vaisseaux utérins et/ou d'une augmentation du tonus du myomètre induite par la dihydroergotamine.</p>
+<p class=AmmAnnexeTitre3>Génotoxicité</p>
+<p class=AmmCorpsTexte><span style='border:none windowtext 1.0pt;padding:0cm'>Les tests de mutagénicité in vitro ont donné des résultats contradictoires. Les modèles in vivo n'ont montré aucun signe d'activité mutagène de la dihydroergotamine qui est donc considéré comme dépourvu de potentiel génotoxique. </span></p>
+<p class=AmmAnnexeTitre3><span style='border:none windowtext 1.0pt;padding: 0cm'>Carcinogénicité</span></p>
+<p class=AmmCorpsTexte><span style='color:#212121'>Des études de </span><span style='border:none windowtext 1.0pt;padding:0cm'>carcinogénicité</span><span style='color:#212121'> chez le rat (administration intranasale de 0,08, 0,24 ou 0,8 mg par jour) et chez la souris (administration sous-cutanée avec 0,5, 1,5 ou 5 mg/kg par jour) ont permis de conclure que la dihydroergotamine n’avait aucun effet carcinogène. </span></p>
+<p class=AmmCorpsTexte><span style='color:#212121'>Une incidence accrue de fibrosarcomes au site d'injection dans l'étude chez la souris (à 5 mg/kg par jour) a été considérée comme liée au mode d'administration (par voie sous-cutanée) sans pertinence pour l'utilisation intermittente chez l'homme.</span> </p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937">Caféine anhydre, glucose anhydre, eau purifiée.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">Sans objet.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte>2 ans.</p>
+<p class=AmmCorpsTexte>Après ouverture du flacon, la solution a une durée d’utilisation de 8 heures.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940"><span lang=FR-BE>A conserver à une température ne dépassant pas 25°C.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte>DIERGOSPRAY solution pour pulvérisation nasale est disponible en boîte contenant 1 ml de solution en flacon de 3,5 ml (verre brun de type I) avec un dispositif pulvérisateur constitué d’une pompe et d’un tube plongeur, conditionnés dans une pochette en plastique. Le flacon est fermé par un bouchon en caoutchouc scellé au moyen d’un couvercle bleu, fixé sur un collier métallique.</p>
+<p class=AmmCorpsTexte>Après amorçage du dispositif pulvérisateur, DIERGOSPRAY solution pour pulvérisation nasale contient au moins quatre doses de solution calibrées à 0,125 ml chacune.</p>
+<p class=AmmCorpsTexte>Boîte de 1, 2 ou 6 flacons/dispositifs pulvérisateurs.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Pas d’exigences particulières.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142278943"><span lang=EN-US>AMDIPHARM LIMITED</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=EN-GB>UNIT 17, NORTHWOOD HOUSE</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=EN-GB>NORTHWOOD CRESCENT</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>NORTHWOOD</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>DUBLIN 9 D09 V504</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>IRLANDE</p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 347 382- 2 7 : 1 ml en flacon (verre brun) avec dispositif pulvérisateur (Polypropylène)</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945">[À compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946">[À compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste II</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_DIERGOSPRAY_4_mg/ml,_solution_pour_pulvérisation_nasale_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_DIERGOSPRAY_4_mg/ml,_solution_pour_pulvérisation_nasale_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_PRENDRE_DIERGOSPRAY_4_mg/ml,_solution_pour_pulvérisation_nasale_?"
+                     aria-label="3. COMMENT PRENDRE DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale ? (Lien de redirection)">
+                    3. COMMENT PRENDRE DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_DIERGOSPRAY_4_mg/ml,_solution_pour_pulvérisation_nasale_?"
+                     aria-label="5. COMMENT CONSERVER DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale ? (Lien de redirection)">
+                    5. COMMENT CONSERVER DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 05/11/2025</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'><a name="_Toc142278999">DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale</a></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Mésilate de dihydroergotamine</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279000"><span lang=FR-BE>Veuillez lire attentivement cette notice avant de prendre ce médicament car elle contient des informations importantes pour vous.</span></a></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin ou votre pharmacien.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant de prendre DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment prendre DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_DIERGOSPRAY_4_mg/ml,_solution_pour_pulvérisation_nasale_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279003">Classe pharmacothérapeutique : Alcaloïdes de l’ergot - code ATC : N02CA01</a></p>
+<p class=AmmCorpsTexte>DIERGOSPRAY contient une substance appelée mésilate de dihydroergotamine.</p>
+<p class=AmmCorpsTexte>DIERGOSPRAY appartient à la classe de médicaments connue sous le nom d'alcaloïdes de l'ergot de seigle. Il agit sur des récepteurs spécifiques (appelés récepteurs 5HT), qui seraient impliqués dans la crise de migraine. DIERGOSPRAY peut alors diminuer la sévérité d'une crise de migraine.</p>
+<p class=AmmCorpsTexte>DIERGOSPRAY est destiné au traitement de la crise de migraine avec ou sans aura (troubles de la vue qui chez certains patients précèdent la crise de migraine).</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_DIERGOSPRAY_4_mg/ml,_solution_pour_pulvérisation_nasale_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">Ne prenez jamais DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale :</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous êtes allergique au mésilate de dihydroergotamine ou à l'un des autres composants contenus dans DIERGOSPRAY, mentionnés dans la rubrique 6;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous avez une migraine associée à une perte transitoire de l'usage d'une moitié de votre corps (appelée migraine familiale hémiplégique), ou une migraine accompagnée de vertiges, vision double (appelée migraine basilaire).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous souffrez d'une inflammation d'une artère sur le côté de la tête (artérite temporale). </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous avez certaines maladies du cœur (angine de poitrine non contrôlée) ou des vaisseaux sanguins (y compris un syndrome de Raynaud), une hypertension mal contrôlée, des antécédents de souffrance cérébrale ou d'accident ischémique transitoire, états infectieux sévères, choc. </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous allaitez, si vous êtes enceinte ou si vous envisagez de l'être (voir plus bas).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous avez une affection grave du foie.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous êtes traité pour une infection par certains antibiotiques (par exemple : érythromycine, troléandomycine ou clarithromycine). </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous avez été traité par d'autres médicaments vasoconstricteurs périphériques et qui sont utilisés pour traiter la migraine comme le sumatriptan, naratriptan ou zolmitriptan, ou d'autres dérivés de l'ergot de seigle</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous êtes traité pour le SIDA/VIH par des médicaments antiviraux inhibiteurs de la protéase (ritonavir, indinavir, nelfinavir). </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous avez été traité par des médicaments antifongiques azolés par exemple : kétoconazole, itraconazole ou voriconazole.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Si vous êtes concerné par l'une de ces situations, <b>prévenez votre médecin avant de prendre DIERGOSPRAY.</b></p>
+<p class=AmmCorpsTexteGras>Avertissements et précautions</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Adressez-vous à votre médecin ou, pharmacien avant de prendre DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale. </span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous avez une obstruction nasale, une inflammation aiguë ou chronique de la muqueuse nasale (rhinite) ou une rhinite d'origine allergique.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous avez un épaississement de la membrane qui tapisse les poumons et les parois de la cavité pleurale (fibrose pleurale) ou un épaississement du tissu retropéritonéal qui peut occasionner une obstruction des voies urinaires (fibrose rétropéritonéale) causée par d'autres médicaments.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous avez une maladie légère à modérée du foie, spécialement une hépatite cholestasique. Votre médecin pourra réduire les doses.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous utilisez DIERGOSPRAY pour une durée prolongée. </p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt; margin-left:0cm'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Si vous êtes concerné par l'une de ces situations, <b>prévenez votre médecin avant de prendre </b></span><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>DIERGOSPRAY.</span></b></p>
+<p class=AmmCorpsTexte><b>Ce médicament ne doit en aucun cas être utilisé pour prévenir les crises de migraine</b>. Il est exclusivement destiné au traitement de la crise de migraine.</p>
+<p class=AmmCorpsTexte>L'abus de DIERGOSPRAY peut provoquer :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>des maux de tête chroniques quotidiens quand vous arrêtez son utilisation ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>des spasmes vasculaires des mains et/ou pieds avec des symptômes comme par exemple : sensation de froid, engourdissement et fourmillement, paralysie, spasmes musculaires, pâleur, douleur et perte de force.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Si vous présentez un de ces symptômes, arrêtez de prendre votre médicament et contactez votre médecin immédiatement.</p>
+<p class=AmmCorpsTexteGras>Enfants et adolescents</p>
+<p class=AmmCorpsTexte>Ce médicament ne doit pas être pris chez l’enfant de moins de 16 ans car l'efficacité et la sécurité d'emploi n'ont pas été démontrées.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale</p>
+<p class=AmmCorpsTexte>Informez votre médecin ou pharmacien si vous prenez, avez récemment pris ou pourriez prendre tout autre médicament.</p>
+<p class=AmmCorpsTexteGras>Ne prenez pas DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale si vous prenez un des médicaments suivants :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><b>antibiotiques</b> comme par exemple : tétracycline, érythromycine, troléandomycine,clarithromycine, télithromycine, josamycine, métronidazole, et quinupristine-dalfopristine ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>médicaments <b>antiviraux</b> inhibiteurs de la protéase pour traiter le SIDA/VIH comme par exemple : ritonavir, indinavir, fosamprénavir, nelfinavir, delavirdine ou éfavirenz ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>médicaments <b>antifongiques</b> azolés (par exemple : kétoconazole, itraconazole, voriconazole, posaconazole, clotrimazole, fluconazole) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>prendre au moins 24 heures avant ou 6 heures après le sumatriptan, l'almotriptan, le rizatriptan et le zolmitriptan. De plus, l'utilisation concomitante avec l'élétriptan, le frovatriptan ou le naratriptan doit être éloignée d'au moins 24 heures.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>d'autres médicaments à base d'ergotamine ou dérivés de l'ergot de seigle,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>traitement <b>antidépresseur</b> comme la fluoxétine, la fluvoxamine et la néfazodone.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>&#914;-bloquants comme le propranolol (médicament utilisé pour prévenir les crises de migraines ou pour traiter l’hypertension artérielle). </p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Si vous êtes un gros fumeur ou si vous prenez un substitut nicotinique, parlez-en à votre médecin avant de prendre ce médicament. </p>
+<p class=AmmCorpsTexteGras>DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale avec des aliments, boissons et de l’alcool</p>
+<p class=AmmCorpsTexte>La prise concomitante de DIERGOSPRAY avec du jus de pamplemousse peut accroitre les effets due à une exposition accrue à la dihydroergotamine.</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279012">Grossesse et allaitement </a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous êtes enceinte ou que vous allaitez, si vous pensez être enceinte ou planifiez une grossesse, demandez conseil à votre médecin ou pharmacien avant de prendre ce médicament.</span></p>
+<p class=AmmCorpsTexte><u><span lang=FR-BE>Grossesse</span></u></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N'utilisez pas DIERGOSPRAY si vous êtes enceinte. L'utilisation de ce médicament pendant la grossesse peut occasionner des lésions sévères au fœtus. Prévenez votre médecin si vous pensez être enceinte. </span></p>
+<p class=AmmCorpsTexte><u><span lang=FR-BE>Allaitement</span></u></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N'utilisez pas DIERGOSPRAY si vous allaitez. Prévenez votre médecin si vous allaitez.</span></p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>En cas de vertiges ou de troubles de la vision lors de l'utilisation de ce médicament, vous ne devez pas conduire des véhicules ni utiliser des machines.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_PRENDRE_DIERGOSPRAY_4_mg/ml,_solution_pour_pulvérisation_nasale_?'>3. COMMENT PRENDRE DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279021">Respectez toujours la posologie indiquée par votre médecin ou pharmacien. En cas de doute, consultez votre médecin ou votre pharmacien.</a></p>
+<p class=AmmCorpsTexte>Vous devez utiliser une pulvérisation (0,5 mg = 1 dose) dans chaque narine dès l'apparition des maux de tête.</p>
+<p class=AmmCorpsTexte>Quinze minutes plus tard, si la première administration n'a pas été suffisante, une nouvelle pulvérisation peut être administrée dans une ou dans chaque narine.</p>
+<p class=AmmCorpsTexteGras>Utilisation chez les sujets âgés</p>
+<p class=AmmCorpsTexte>L’utilisation de DIERGOSPRAY n’est pas recommandée chez les patients de plus de 65 ans en absence de données d’efficacité et de sécurité d’emploi.</p>
+<p class=AmmCorpsTexteGras>Utilisation chez les patients présentant une insuffisance hépatique</p>
+<p class=AmmCorpsTexte>Informez votre médecin si vous souffrez d’une maladie du foie. Votre médecin voudra peut-être vous faire des prises de sang régulièrement pour surveiller votre fonction hépatique. L’utilisation de ce médicament n'est pas recommandée chez les patients présentant des problèmes hépatiques graves.</p>
+<p class=AmmCorpsTexteGras>Utilisation chez les enfants et les adolescents</p>
+<p class=AmmCorpsTexte>L’utilisation de DIERGOSPRAY solution pour pulvérisation nasale n’est pas recommandée chez les patients de moins de 16 ans en absence de données d’efficacité et de sécurité d’emploi.</p>
+<p class=AmmCorpsTexteGras>Les recommandations suivantes doivent être prises en compte :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Pour une crise de migraine n'utilisez pas plus de 2 pulvérisations par narine (4 doses).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>N'utilisez pas DIERGOSPRAY pour traiter une autre crise dans les 24 heures qui suivent.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La dose maximale à ne pas dépasser par 24 heures est de 2 pulvérisations par narine (soit 4 doses) et la dose totale administrée sur une période d'une semaine ne doit pas dépasser 8 pulvérisations par narine (soit 16 doses).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous n'utilisez pas les 4 doses du dispositif une fois la crise traitée, le dispositif doit être jeté. Il ne peut pas servir pour une nouvelle crise.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ne pas utiliser une injection de dihydroergotamine ou d'autre produit contenant de l'ergotamine ou d'autres traitements pour la migraine par exemple sumatriptan, zolmitriptan, naratriptan ou rizatriptan dans les 24 heures suivant l'utilisation de DIERGOSPRAY.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ne pas utiliser DIERGOSPRAY dans les 6 heures suivant l'utilisation d'un triptan (sumatriptan, zolmitriptan, élétriptan, almotriptan, frovatriptan).</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Ne pas utiliser une dose supérieure ou plus fréquemment que celle recommandée par votre médecin. Si votre crise de migraine ne s'améliore pas ou s'aggrave, consultez votre médecin.</p>
+<p class=AmmCorpsTexte>La solution contenue dans le flacon est réservée à la<b> voie </b>intranasale. Elle ne doit pas être injectée, ni prise par voie orale.</p>
+<p class=AmmCorpsTexteGras>Comment préparer votre spray nasal</p>
+<p class=AmmCorpsTexte>Ne préparez le dispositif que lorsque vous ressentez les premiers symptômes de la crise. Une fois que le dispositif a été préparé il doit être utilisé dans les <b>8 heures</b> qui suivent.</p>
+<p class=AmmCorpsTexte><img border=0 width=129 height=152 id="Image 1" src="/images/N0440065/image001.png" alt="image 1"> <img border=0 width=103 height=140 id="Image 2" src="/images/N0440065/image002.png" alt="image 2"><img border=0 width=121 height=169 id="Image 3" src="/images/N0440065/image003.png" alt="image 3"><img border=0 width=131 height=175 id="Image 4" src="/images/N0440065/image004.png" alt="image 4"></p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte align=left style='text-align:left'>1. Soulever un bord de la capsule bleue sans la détacher du collier métallique.</p>
+<p class=AmmCorpsTexte>2. Puis enlever la capsule et le collier métallique. La capsule bleue et le collier métallique doivent s'enlever d'une seule pièce. Si la capsule bleue s'arrache, retirer le collier métallique en prenant extrêmement garde aux rebords qui peuvent être tranchants.</p>
+<p class=AmmCorpsTexte align=left style='text-align:left'>3. Enlever avec soin le bouchon de caoutchouc du flacon.</p>
+<p class=AmmCorpsTexte>4. Ouvrir la pochette en plastique, enlever délicatement le dispositif de pulvérisation et insérer la pompe du pulvérisateur nasal dans le flacon ouvert et la fixer en tournant dans le sens des aiguilles d'une montre.</p>
+<p class=AmmCorpsTexteGras>Comment utiliser votre spray nasal</p>
+<p class=AmmCorpsTexte><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif'><img border=0 width=157 height=228 id="Image 5" src="/images/N0440065/image005.png" alt="image 5"> </span><img border=0 width=165 height=231 id="Image 6" src="/images/N0440065/image006.png" alt="image 6"><img border=0 width=155 height=227 id="Image 7" src="/images/N0440065/image007.png" alt="image 7"></b></p>
+<p class=AmmCorpsTexte>5. Tout en maintenant le flacon en position verticale, enlever délicatement le capuchon protecteur bleu de l'embout nasal.</p>
+<p class=AmmCorpsTexte>6. Le pulvérisateur doit être amorcé avant la première utilisation : tenir le pulvérisateur nasal en position verticale et appuyer fermement vers le bas 4 fois. L'amorçage s'accompagne normalement de projection d'un peu de liquide<b>.</b></p>
+<p class=AmmCorpsTexte>7. Maintenir le pulvérisateur en position verticale, introduire l'embout dans une narine et pulvériser une fois. Faire la deuxième pulvérisation dans l'autre narine. Inspirer fortement par le nez à plusieurs reprises pour éviter que la solution s'écoule des narines. Eviter de se moucher immédiatement après avoir fait les pulvérisations.</p>
+<p class=AmmCorpsTexte>Replacer le capuchon protecteur bleu sur l'embout et garder le pulvérisateur à portée de la main pour le cas où il devrait être réutilise. Il est inutile de réamorcer la pompe.</p>
+<p class=AmmCorpsTexteGras>Si vous avez pris plus de DIERGOSPRAY mg/ml, solution pour pulvérisation nasale que vous n'auriez dû</p>
+<p class=AmmCorpsTexte>Consultez immédiatement votre médecin, si vous avez accidentellement pris une dose supérieure à celle qui vous a été prescrite ou si vous ressentez, après la prise, l'un des symptômes suivants : engourdissements et picotements des doigts et orteils, nausées, vomissements, maux de tête ou douleur dans la poitrine.</p>
+<p class=AmmCorpsTexte>Si vous avez d'autres questions sur l'utilisation de ce médicament, demandez plus d'informations à votre médecin ou à votre pharmacien.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez de prendre DIERGOSPRAY mg/ml, solution pour pulvérisation nasale </p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez de prendre DIERGOSPRAY mg/ml, solution pour pulvérisation nasale</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</a></p>
+<p class=AmmCorpsTexteGras>Certains effets indésirables peuvent être graves :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>douleurs thoraciques,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>symptômes de spasme vasculaire des mains et/ou pieds avec des symptômes comme par exemple : sensation de froid, engourdissement et fourmillement, paralysies, spasmes musculaires, douleur et perte de force,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>réactions allergiques (hypersensibilité) comme éruption cutanée, gonflement de la face, urticaire, difficulté respiratoire. </p>
+<p class=AmmListePuces1><span lang=ES style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>symptômes de douleurs thoracique, étourdissements, transpiration, essoufflement et toux. Ceux-ci pourraient être des signes d'une crise cardiaque.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span lang=ES style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Essoufflement </p>
+<p class=AmmCorpsTexteGras>Si vous présentez un de ces symptômes, arrêtez de prendre votre médicament et contactez votre médecin immédiatement.</p>
+<p class=AmmAnnexeTitre3>Autres effets indésirables possibles :</p>
+<p class=AmmCorpsTexte><b>Peu fréquents</b> <i>(concernent jusqu'à 1 personne sur 100)</i><i> :</i></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>éternuements,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>congestion du nez ou nez bouché (rhinite),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>accès de rougeur de la peau (sensation de chaud),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>nausées ou vomissements,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>vertiges,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>engourdissements et picotements des doigts et des orteils,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>diminution de la sensibilité de la peau,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>altération du goût,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>sensation de brûlures et de piqûre,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>contraction soudaine et involontaire d’un muscle, ou d’un groupe de muscles</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><b>Rares</b> (<i>concernent jusqu'à 1 personne sur </i><i>1000) :</i></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>diarrhée,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>irritation de la gorge</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><b>Fréquence indéterminée</b> <i>(ne peut être estimée sur la base des données disponibles)</i><i> :</i></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>saignement du nez,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>spasmes musculaires,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>douleur abdominale.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Si un des effets indésirables s'aggrave ou si vous remarquez des effets indésirables non mentionnés dans cette notice, veuillez en informer votre médecin ou pharmacien.</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr">https://signalement.social-sante.gouv.fr</a></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_DIERGOSPRAY_4_mg/ml,_solution_pour_pulvérisation_nasale_?'>5. COMMENT CONSERVER DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279026"></a><a name="_Toc142279024"><span style='font-weight:normal'>Tenir ce médicament hors de la vue et de la portée des enfants.</span></a></p>
+<p class=AmmCorpsTexte>Ne pas utiliser après la date de péremption figurant sur la boîte. La date d'expiration fait référence au dernier jour du mois.</p>
+<p class=AmmCorpsTexte>A conserver à une température ne dépassant pas 25°C.</p>
+<p class=AmmCorpsTexte>Après ouverture du flacon, la solution a une durée d'utilisation de 8 heures.</p>
+<p class=AmmCorpsTexte>Les médicaments ne doivent pas être jetés au tout à l'égout ou avec les ordures ménagères. Demandez à votre pharmacien ce qu'il faut faire des médicaments inutilisés. Ces mesures permettront de protéger l'environnement.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est :</p>
+<p class=AmmComposition style='margin-top:6.0pt'>Mésilate de dihydroergotamine................................................................................................ 4 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour 1 ml de solution pour pulvérisation nasale.</p>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Une dose délivre 0,5 mg de mésilate de dihydroergotamine.</p>
+<p class=AmmListePuces1 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:17.85pt;margin-bottom:.0001pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont : caféine anhydre, glucose anhydre, eau purifiée.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que DIERGOSPRAY 4 mg/ml, solution pour pulvérisation nasale et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>Ce médicament se présente sous la forme d’une solution claire, incolore à légèrement jaune, marron-jaune ou vert-jaune.</p>
+<p class=AmmCorpsTexte>Boîte de 1, 2 ou 6 flacons.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279031"><span lang=EN-US>AMDIPHARM LIMITED</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=EN-GB>UNIT 17, NORTHWOOD HOUSE</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=EN-GB>NORTHWOOD CRESCENT</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=SV>NORTHWOOD</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=SV>DUBLIN 9 D09 V504</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=SV>IRLANDE</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>CENTRE DE SPECIALITES PHARMACEUTIQUES</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>76 AVENUE DU MIDI</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>63802 COURNON D'AUVERGNE</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Toc142279033"><span lang=ES>MIPHARM S.P.A.</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><span lang=ES style='text-transform:uppercase'>Via B Quaranta 12</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><span lang=ES style='text-transform:uppercase'>Milano 20141</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><span lang=ES style='text-transform:uppercase'>ITALIE</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexteGras>Ce médicament est autorisé dans les Etats membres de l'Espace Economique Européen sous les noms suivants : Conformément à la réglementation en vigueur. </p>
+<p class=AmmCorpsTexte>[À compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279038">[À compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import Header from '../components/Header'
+import Icon from '../components/Icon'
 import SearchBar from '../components/SearchBar'
 import MedicineCard from '../components/MedicineCard'
 import MedicineDetails from '../components/MedicineDetails'
@@ -55,6 +56,8 @@ export default function Medicines() {
     <div className="page">
       <Header
         titre="Medicaments"
+        surtitre="Base de reference"
+        icone="base"
         sousTitre="Prix, forme et remboursement des medicaments autorises au Maroc."
       />
 
@@ -73,7 +76,7 @@ export default function Medicines() {
           <div className="puces" style={{ justifyContent: 'flex-start' }}>
             {COURANTS.map((nom) => (
               <button key={nom} className="puce" onClick={() => lancer(nom)}>
-                <span aria-hidden="true">💊</span>
+                <Icon nom="pilule" taille={15} />
                 {nom}
               </button>
             ))}
@@ -92,7 +95,9 @@ export default function Medicines() {
 
       {erreur && (
         <div className="vide" style={{ marginTop: 28 }}>
-          <div className="vide-glyphe" aria-hidden="true">🔌</div>
+          <div className="vide-glyphe">
+            <Icon nom="debranche" taille={24} />
+          </div>
           <h3>Recherche indisponible</h3>
           <p>{erreur}</p>
         </div>
@@ -100,7 +105,9 @@ export default function Medicines() {
 
       {!enCours && !erreur && resultats?.length === 0 && (
         <div className="vide" style={{ marginTop: 28 }}>
-          <div className="vide-glyphe" aria-hidden="true">🔍</div>
+          <div className="vide-glyphe">
+            <Icon nom="loupe" taille={24} />
+          </div>
           <h3>Aucun medicament trouve</h3>
           <p>
             Verifie l’orthographe, ou essaie la molecule plutot que le nom commercial
@@ -112,7 +119,8 @@ export default function Medicines() {
       {!enCours && ouvert && (
         <div style={{ marginTop: 28 }}>
           <button className="bouton-doux" onClick={() => setOuvert(null)} style={{ marginBottom: 16 }}>
-            ← Retour aux resultats
+            <Icon nom="retour" taille={15} />
+            Retour aux resultats
           </button>
           <MedicineDetails resultat={ouvert} />
         </div>

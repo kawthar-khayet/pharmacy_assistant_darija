@@ -42,8 +42,85 @@
 
 - `pharmacies_reference.csv` — **2652 pharmacies/parapharmacies** nettoyées :
   - `id`, `nom`, `type_etablissement` (pharmacie / parapharmacie / laboratoire / autre_point_de_vente), `telephone`, `adresse`, `ville`, `garde` (horaires si établissement de garde, sinon vide)
-  - Alimente l'intent `info_pharmacie` du NLU (voir `nlu/schema.json`, entité `PHARMACIE`/`LOCALISATION`).
+  - Source de l'annuaire : complétée par OpenStreetMap dans `pharmacies_fusion.csv`, que le bot utilise (voir plus bas).
 - `pharmacies_report.txt` — statistiques de nettoyage (doublons supprimés, répartition par type/ville).
+
+## Sources ajoutées (septembre 2026)
+
+Trois jeux de données complètent la base initiale : positions GPS des pharmacies, classification thérapeutique et informations de sécurité.
+
+### Coordonnées GPS des pharmacies
+- **OpenStreetMap / Overpass** (`scripts/fetch_osm_pharmacies.py`) — 6947 pharmacies cartographiées au Maroc → `data/raw/osm_pharmacies.csv`. Licence ODbL, attribution requise.
+- **Nominatim** (`scripts/geocode_pharmacies.py`) — géocodage des adresses restantes, 1 requête/seconde comme l'impose la politique d'usage du service.
+
+Quatre colonnes ajoutées à `pharmacies_reference.csv` : `latitude`, `longitude`, `precision_gps`, `source_gps`.
+
+| `precision_gps` | Pharmacies | Signification |
+|---|---|---|
+| `exacte` | 1278 | position de l'officine |
+| `rue` | 108 | la voie, pas le numéro |
+| `quartier` | 44 | le quartier seulement |
+| `ville` | 1197 | centre-ville, faute de mieux |
+| (vide) | 25 | rien de trouvé |
+
+⚠️ **Seule la précision `exacte` désigne l'officine.** Afficher une épingle pour une position `ville` enverrait un patient au mauvais endroit — l'interface ne doit s'en servir que pour cadrer un plan. `source_gps` dit quelle recherche a produit la position (`osm`, `nominatim_nom`, `nominatim_voie`, `nominatim_quartier`, `centre_ville`).
+
+Le rapprochement OSM exige un nom ressemblant à moins de 25 km du centre de la ville, et un écart d'au moins 6 points avec le deuxième candidat : sans cette marge, deux homonymes étaient départagés au hasard. Tout résultat au-delà de ce rayon est rejeté. Une recherche par quartier ne peut jamais produire une précision `exacte`, même quand Nominatim répond par un bâtiment.
+
+### Classification ATC — `dci_atc.csv`
+- **RxNav / RxClass** (NIH, API publique sans clé), `scripts/fetch_atc.py` → 2208 DCI sur 2731 classées (80,8 %), 549 codes ATC distincts.
+- Colonnes : `dci`, `principe_actif`, `rxcui`, `code_atc`, `groupe_atc`, `libelle_atc`.
+
+⚠️ Plusieurs codes ATC par molécule est la règle : l'ibuprofène est M01AE par voie orale et M02AA en gel. RxNav rattache aussi une molécule aux classes d'**associations** qui la contiennent (l'amoxicilline seule apparaît sous « associations pour éradiquer Helicobacter pylori ») sans dire laquelle est la sienne. Aucune n'est donc élue : pour le code officiel d'une molécule, utiliser `code_atc_notice` de `securite_medicaments.csv`.
+
+Les 523 DCI sans code n'ont pas d'ATC : allergènes, produits de contraste, excipients, solutés de dialyse. Les libellés sont en anglais.
+
+### Informations de sécurité — `securite_medicaments.csv`
+- **BDPM** (ANSM, Licence Ouverte), `scripts/fetch_securite_bdpm.py` → 221 molécules sur les 300 les plus répandues au Maroc.
+- Fichiers plats `CIS_bdpm.txt` et `CIS_COMPO_bdpm.txt` pour la composition ; notices HTML mises en cache dans `data/raw/bdpm_notices/`, une par seconde.
+- Colonnes : `dci`, `principes_actifs`, `nb_produits_maroc`, `cis_bdpm`, `specialite_bdpm`, `code_atc_notice`, `indications`, `contre_indications`, `precautions`, `interactions`, `grossesse_allaitement`, `effets_indesirables`, `source_url`, `date_recuperation`.
+
+| Rubrique | Molécules |
+|---|---|
+| **indications** (à quoi sert le médicament) | **218** |
+| précautions | 217 |
+| effets indésirables | 213 |
+| grossesse et allaitement | 207 |
+| interactions | 205 |
+| contre-indications | 193 |
+| `code_atc_notice` | 193 |
+
+La rubrique `indications` vient du titre 1 de la notice (« QU'EST-CE QUE X ET DANS QUELS CAS EST-IL UTILISÉ ? »). Elle répond à « chno kaydir had dwa ? », que la base marocaine ne documente pas. La ligne d'en-tête « Classe pharmacothérapeutique — code ATC » en est retirée : elle est reprise à part dans `code_atc_notice`, et elle ouvrirait l'explication sur du jargon.
+
+Pourquoi la BDPM et non openFDA ou DailyMed : les spécialités marocaines viennent de la même filière que les françaises (Doliprane, Spasfon, Augmentin y figurent sous le même nom) et les notices sont déjà en français — aucune traduction, donc aucun risque de déformer une contre-indication.
+
+⚠️ La spécialité de référence doit avoir une composition **strictement identique** à la DCI marocaine. Sans cette égalité, le paracétamol tombait sur ACTRON (paracétamol + aspirine + caféine) et l'amoxicilline sur Augmentin : on aurait affiché les contre-indications de l'aspirine sous une boîte de Doliprane.
+
+⚠️ Le texte décrit la **molécule**, pas la spécialité marocaine : conditionnement, dosage et titulaire peuvent différer. Il est conservé mot pour mot, avec son URL source et sa date de récupération.
+
+#### Résumés en darija — `securite_resumes.json`
+
+`scripts/precalculer_resumes.py` fait produire par le LLM un résumé de trois phrases par molécule et par langue, à partir du **seul** texte officiel. Il sert de porte d'entrée pour un patient qui ne lit pas le français médical ; le texte intégral reste affiché en dessous, et l'interface indique que le résumé est automatique.
+
+Garde-fous, parce qu'une contre-indication reformulée est une erreur de santé et non une maladresse de style :
+
+- le prompt interdit d'ajouter quoi que ce soit, de donner une dose ou un conseil, et autorise le modèle à répondre `RIEN` ;
+- il impose de nommer les organes comme le texte les nomme — un premier essai avait écrit « estomac » là où la notice disait « foie » ;
+- une réponse dont `finishReason` n'est pas `STOP` est jetée : coupée en plein milieu, une contre-indication peut dire l'inverse de la notice ;
+- `thinkingBudget: 0` — sans cela, le modèle dépensait son budget de sortie en raisonnement interne (341 jetons de « pensées » pour 18 de réponse) et l'un des premiers résumés contenait ce raisonnement (« Confidence Score: 1. Simple French? Yes. »).
+
+Les résumés sont mis en cache : une molécule a un texte stable, et le palier gratuit limite les appels par minute.
+
+Les 79 molécules absentes se répartissent en 53 sans équivalent français exact (insuline humaine, concentré pour hémodialyse, produits de diagnostic) et 26 dont la notice n'expose aucune rubrique reconnaissable.
+
+## Données du bot (octobre 2026)
+
+Le moteur `nlp/` lit ces fichiers, préparés une fois par les scripts de `nlp/preparation/` :
+
+- `pharmacies_fusion.csv` — **toutes les pharmacies du Maroc** : OpenStreetMap (commune par commune, position exacte) complété par l'annuaire (adresse, téléphone, garde). Une pharmacie de l'annuaire est fusionnée avec OSM si elle est à moins de 300 m avec un nom ressemblant, ou seule de ce nom dans la même ville ; sinon elle est ajoutée telle quelle. Les pharmacies OSM sans nom sont écartées ; le bot écarte aussi, au chargement, les parapharmacies et drogueries qu'OSM classe en « pharmacy ». Script : `py -m nlp.preparation.pharmacies_fusion` ; rapport et 30 exemples de fusion à relire dans `pharmacies_fusion_report.txt`. Licence ODbL (OSM).
+- `quartiers.csv` — 1 854 quartiers OSM géolocalisés, avec leurs noms latins et arabes. Le bot y cherche le quartier cité, puis, à défaut, dans les adresses de l'annuaire (beaucoup de quartiers manquent dans OSM). Script : `py -m nlp.preparation.quartiers`.
+- `conseil_symptomes.csv` — liste blanche du conseil pour un symptôme bénin : symptôme, molécule (correspondance exacte de la DCI), durée maximale sans avis médical, signes d'alerte, professionnel vers qui orienter. ⚠️ **À faire relire par un pharmacien.**
+- `securite_medicaments.csv` et `securite_resumes.json` — la notice et ses résumés (voir plus haut).
 
 ## Limites connues
 - Le rapprochement CNOPS/AMMPS est fait sur correspondance exacte de texte normalisé (nom+dosage+forme) : pas de fuzzy matching, donc des variantes d'écriture (pluriel, ponctuation) ne matchent pas toujours — acceptable pour un premier jeu de données propre, à améliorer si besoin (ex. rapprochement par DCI + dosage, ou similarité de chaînes).

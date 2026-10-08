@@ -61,3 +61,16 @@ export function urlItineraire(adresse, ville) {
   const requete = [adresse, ville, 'Maroc'].filter(Boolean).join(', ')
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(requete)}`
 }
+
+/** Itineraire vers un point precis. Prefere l'adresse texte des qu'on a les
+ *  coordonnees de l'officine : une adresse marocaine ecrite a la main ("hay
+ *  essalam, imm. bicha") est souvent illisible pour un moteur de cartes. */
+export function urlItineraireVers(lat, lon) {
+  return `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`
+}
+
+/** Plan centre sur un point, avec un marqueur pose dessus. */
+export function urlPlanPoint(lat, lon, rayon = 0.004) {
+  const bbox = [lon - rayon, lat - rayon * 0.62, lon + rayon, lat + rayon * 0.62]
+  return `https://www.openstreetmap.org/export/embed.html?bbox=${bbox.join('%2C')}&layer=mapnik&marker=${lat}%2C${lon}`
+}

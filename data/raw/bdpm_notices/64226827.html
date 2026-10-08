@@ -1,0 +1,1789 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="ZPTPr8G7ryAKdw4y5/n7Kw==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="ZPTPr8G7ryAKdw4y5/n7Kw==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 31/08/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant CLARADOL CODEINE 500 mg/20 mg, comprimé"
+            aria-level="3"
+          >
+            CLARADOL CODEINE 500 mg/20 mg, comprimé
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament CLARADOL CODEINE 500 mg/20 mg, comprimé - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-bon-usage" class="fr-tabs__tab  fr-tabs__tab--icon-left" tabindex="-1" role="tab"
+                            aria-selected="false" aria-controls="tabpanel-bon-usage-panel">Bon usage
+                    </button>
+                  </li>
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                      </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 27/07/1990
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : CLARADOL CODEINE 500 mg/20 mg, comprimé - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0444830">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexteGras><a name="_Toc142279004">Classe pharmacothérapeutique  </a></p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Classe pharmacothérapeutique : - code ATC : N02BE51.</span></p>
+<p class=AmmCorpsTexte>Ce médicament contient du paracétamol et de la codéine. Réservé à l'adulte (à partir de 15 ans).</p>
+<p class=AmmCorpsTexte>Le paracétamol est un antalgique (calme la douleur) et un antipyrétique (fait baisser la fièvre).</p>
+<p class=AmmCorpsTexte>La codéine appartient à un groupe de médicaments appelés antalgiques opioïdes qui agissent pour soulager la douleur. Elle peut être utilisée seule ou en association avec d’autres antalgiques comme le paracétamol.</p>
+<p class=AmmCorpsTexte>Traitement des douleurs modérées à intenses qui ne sont pas soulagées par l'aspirine, le paracétamol ou l'ibuprofène utilisé seul.</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament n'appartient à aucun groupe générique</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Comprimé ( Composition pour un comprimé )<ul role="list"><li role="listitem" style="list-style-type: none;"> > paracétamol<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">500 mg </span><li role="listitem" style="list-style-type: none;">phosphate de codéine anhydre<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span><span class="italique">20 mg</span><ul role="list" style="list-style-type: none;"><li class="sousFormeDe" role="listitem"><i class="fa fa-plus-square" aria-hidden="true"></i> sous forme de : phosphate de codéine hémihydraté<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span><span class="italique">20,5 mg </span></li></ul></li></ul></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > plaquette(s) thermoformée(s) PVC-aluminium de 16  comprimé(s)  </p><p>Code CIP : 333 046-5 ou 34009 333 046 5 2<br/>Déclaration de commercialisation : 19/12/1991<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 1,72 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 2,74 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :65%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></div></div>
+                
+                                  <br /><div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-bon-usage-medicament' >Documents de bon usage du médicament <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-document-bon-usage-medicament' href='#top'></a></h5><span id='tooltip-heading-document-bon-usage-medicament' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><ul><li><a class='lien_bon_usage' href='https://www.has-sante.fr/jcms/p_3425923' target='_blank'>Prévenir le risque de surdose d’opioïdes</a><p>Auteur : Haute autorité de santé<br />Type : Fiche Bon Usage du Médicament<br />Date de mise à jour :Avril  2023<br /></p></li></ul><ul><li><a class='lien_bon_usage' href='https://www.has-sante.fr/jcms/c_2674284/' target='_blank'>Prise en charge de la fièvre chez l’enfant</a><p>Auteur : Haute autorité de santé<br />Type : Fiche mémo<br />Date de mise à jour :Octobre  2016<br /></p></li></ul><ul><li><a class='lien_bon_usage' href='https://www.has-sante.fr/jcms/c_2010340/' target='_blank'>Prise en charge médicamenteuse de la douleur chez l'enfant : alternatives à la codéine</a><p>Auteur : Haute autorité de santé<br />Type : Fiche mémo<br />Date de mise à jour :Février  2016<br /></p></li></ul><ul><li><a class='lien_bon_usage' href='https://www.has-sante.fr/jcms/r_1439696' target='_blank'>Les médicaments des accès douloureux paroxystiques du cancer</a><p>Auteur : Haute autorité de santé<br />Type : Fiche Bon Usage du Médicament<br />Date de mise à jour :Juin  2014<br /></p></li></ul></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><div class='fr-grid-row'><div class='fr-col'><p>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence. </p></div></div><div class='fr-grid-row'><div class='fr-col'><p>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprès de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-smr-aide-2'>plus d'informations dans l'aide</a>). Les avis et synthèses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-smr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection à la page d'aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'SMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur du SMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2676762'>Avis du 21/09/2016</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 21/09/2016 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Renouvellement d'inscription (CT)</td><td class='text-align-center'>Le service médical rendu par CLARADOL CODEINE, comprimé, reste important dans l’indication de l’AMM.</td></tr><tr><td>Insuffisant</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2676762'>Avis du 21/09/2016</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 21/09/2016 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Renouvellement d'inscription (CT)</td><td class='text-align-center'>Le service médical rendu par CLARADOL CODEINE, comprimé, devient insuffisant dans les populations suivantes :<br>• la femme allaitante,<br>• les patients connus pour être métaboliseurs rapides et,<br>• les patients ayant une fonction respiratoire altérée, et en particulier, <br>• les patients de moins de 18 ans après amygdalectomie et/ou adénoïdectomie dans le cadre d’un syndrome d’apnée obstructive du sommeil.</td></tr></tbody></table></div></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div><div class='fr-col'><p>Pas d'ASMR disponible pour ce médicament (<a href='/aide#le-medicament-que-je-recherche-ne-mentionne-pas-de-service-medical-rendu-(SMR)-ni-amelioration-du-service-medical-rendu-(ASMR)' aria-describedby='tooltip-asmr-aide-2'>plus d'informations dans l'aide )</a></p><span id='tooltip-asmr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers la page aide</span></div></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : TEOFARMA</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li><li>prescription en toutes lettres sur ordonnance sécurisée</li><li>prescription limitée à 12 semaines</li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure nationale</li><li>Code CIS : &nbsp;6 422 682 7</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : CLARADOL CODEINE 500 mg/20 mg, comprimé - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="CLARADOL CODEINE 500 mg/20 mg, comprimé, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 03/03/2026</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmDenomination>CLARADOL CODEINE 500 mg/20 mg, comprimé</p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Paracétamol ................................................................................................................... 500,00 mg</p>
+<p class=AmmComposition>Phosphate de codéine hémihydraté ................................................................................... 20,50 mg</p>
+<p class=AmmComposition>Quantité correspondant à phosphate de codéine anhydre ..................................................... 20,0 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un comprimé</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Comprimé.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">Traitement des douleurs modérées à intenses qui ne sont pas soulagées par l'aspirine, le paracétamol ou l'ibuprofène utilisé seul.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmCorpsTexte>RÉSERVÉ À L'ADULTE (À PARTIR DE 15 ANS).</p>
+<p class=AmmAnnexeTitre3>Posologie</p>
+<p class=AmmCorpsTexte>1 comprimé, à renouveler si nécessaire au bout de 6 heures, ou éventuellement 2 comprimés en cas de douleur intense sans dépasser <b>6 comprimés par jour.</b></p>
+<p class=AmmCorpsTexte>Il n'est généralement pas nécessaire de dépasser 3 g de paracétamol par jour. Cependant, en cas de douleurs plus intenses, la posologie maximale peut être augmentée jusqu'à 4 g de paracétamol par jour (soit 8 comprimés par jour).</p>
+<p class=AmmAnnexeTitre3>Mode d'administration</p>
+<p class=AmmCorpsTexte>Voie orale.</p>
+<p class=AmmCorpsTexte>Les comprimés doivent être avalés tels quels, avec un verre d'eau.</p>
+<p class=AmmCorpsTexte>Objectifs et arrêt du traitement </p>
+<p class=AmmCorpsTexte>Avant d’instaurer le traitement par CLARADOL CODEINE 500 mg/20 mg, comprimé, une stratégie thérapeutique précisant la durée et les objectifs du traitement ainsi qu’un plan pour la fin du traitement doivent être convenus avec le patient, conformément aux lignes directrices relatives à la prise en charge de la douleur. Au cours du traitement, le médecin et le patient doivent être en contact fréquent 8 afin d’évaluer la nécessité de poursuivre le traitement, d’envisager son arrêt et d’ajuster la posologie si nécessaire. Si un patient ne nécessite plus de traitement par la codéine, il peut être conseillé de réduire progressivement la dose pour éviter les symptômes de sevrage. En l’absence de contrôle adéquat de la douleur, la possibilité d’une hyperalgésie, d’une tolérance au médicament ou d’une progression de la maladie sous-jacente doit être envisagée (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexte><b>Durée du traitement</b></p>
+<p class=AmmCorpsTexte>La durée du traitement doit être aussi courte que possible et, si la douleur n’est pas efficacement soulagée, il doit être conseillé aux patients/aidants de demander l’avis d’un médecin.</p>
+<p class=AmmCorpsTexte><b>Fréquence d'administration</b></p>
+<p class=AmmCorpsTexte>Les prises systématiques permettent d'éviter les oscillations de douleur ou de fièvre.</p>
+<p class=AmmCorpsTexte><u>Chez l'adulte</u> : elles doivent être espacées de préférence de 6 heures et au minimum de 4 heures.</p>
+<p class=AmmCorpsTexte><u>Sujet âgé</u> : la posologie initiale sera diminuée de moitié par rapport à la posologie conseillée chez l'adulte, et pourra éventuellement être augmentée en fonction de la tolérance et des besoins.</p>
+<p class=AmmCorpsTexte><u>Insuffisance rénale:</u></p>
+<p class=AmmCorpsTexte>En cas d'insuffisance rénale sévère (clairance de la créatinine inférieure à 10 ml/min), l'intervalle entre 2 prises sera au minimum de <u>8 heures</u>. La dose de paracétamol ne devra pas dépasser 3 g par jour soit 6 unités.</p>
+<p class=AmmCorpsTexte>Les comprimés sont à avaler tels quels, avec un grande verre d’eau.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><u>Enfant de moins de 15 ans</u>,</p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypersensibilité aux substances actives ou à l'un des excipients mentionnés à la rubrique 6.1,</p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Au cours de l’allaitement (voir rubrique 4.6)</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;page-break-after:avoid'><u>Liées au paracétamol :</u></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Insuffisance hépatocellulaire sévère (score de Child-Pugh>9).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><u>Liées à la codéine</u> :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Asthme et insuffisance respiratoire (en raison de la présence de codéine).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Chez tous les patients de moins 18 ans après amygdalectomie eu/ou adénoïdectomie dans le cadre d'un syndrome d'apnée obstructive du sommeil en raison de l'augmentation du risque d'évènement indésirable grave pouvant mettre en jeu le pronostic vital (voir rubrique 4.4).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Chez les patients connus pour être des métaboliseurs CYP2D6 ultra-rapides.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278920"><b>Mises en garde spéciales</b></a></p>
+<p class=AmmCorpsTexte>Pour éviter un risque de surdosage ; vérifier l'absence de paracétamol dans la composition d'autres médicaments.</p>
+<p class=AmmCorpsTexte>Chez l'adulte et l'enfant de plus de 50 kg, LA DOSE TOTALE DE PARACETAMOL NE DOIT PAS EXCEDER 4 GRAMMES PAR JOUR (cf. rubrique 4.9).</p>
+<p class=AmmCorpsTexte>Comme pour d’autres opioïdes, en cas de contrôle insuffisant de la douleur malgré une augmentation de la dose de codéine, la possibilité d’une hyperalgésie induite par les opioïdes doit être envisagée. Une réduction de la dose ou une réévaluation du traitement peuvent être indiquées.</p>
+<p class=AmmCorpsTexte>Les opioïdes peuvent entraîner des troubles respiratoires liés au sommeil, notamment une apnée centrale du sommeil (ACS) et une hypoxémie liée au sommeil. La consommation d’opioïdes augmente le risque d’ACS de manière dose-dépendante. Chez les patients atteints d’une ACS, envisager une diminution de la dose totale d’opioïdes.</p>
+<p class=AmmCorpsTexte>Affections hépatobiliaires </p>
+<p class=AmmCorpsTexte>La codéine peut causer une dysfonction et un spasme du sphincter d’Oddi, augmentant ainsi le risque de symptômes liés aux voies biliaires et de pancréatite. Par conséquent, la codéine/paracétamol doit être administrée avec prudence chez les patients atteints de pancréatite et de maladies des voies biliaires.</p>
+<p class=AmmCorpsTexte><u>Dépendance, abus et mésusage</u></p>
+<p class=AmmCorpsTexte>Tolérance et trouble de l’usage d’opioïde (abus et dépendance) </p>
+<p class=AmmCorpsTexte>Une tolérance, une dépendance physique et psychologique, et un trouble de l’usage d’opioïde (TUO) peuvent se développer en cas d’administration répétée d’opioïdes tels que CLARADOL CODEINE 500 mg/20 mg, comprimé. L’utilisation répétée de CLARADOL CODEINE 500 mg/20 mg, comprimé peut entraîner un TUO. L’augmentation de la dose et une durée plus longue du traitement par opioïdes peuvent augmenter le risque de développer un TUO. L’abus ou le mésusage intentionnel de CLARADOL CODEINE 500 mg/20 mg, comprimé peut entraîner un surdosage et/ou le décès du patient. Le risque de développer un TUO est augmenté chez les patients ayant un antécédent personnel ou familial (parents ou frères et sœurs) de troubles liés à la consommation de substances (y compris troubles liés à la consommation abusive d’alcool), chez les fumeurs ou chez les patients ayant des antécédents personnels de troubles de santé mentale (par ex. dépression majeure, anxiété et trouble de la personnalité). </p>
+<p class=AmmCorpsTexte>Avant d’instaurer le traitement par CLARADOL CODEINE 500 mg/20 mg, comprimé et au cours du traitement, les objectifs du traitement et un plan d’arrêt du traitement doivent être convenus avec le patient (voir rubrique 4.2). Avant et pendant le traitement, le patient doit également être informé des risques et des symptômes du TUO. En cas d’apparition de ces signes, il est conseillé aux patients de contacter leur médecin. </p>
+<p class=AmmCorpsTexte>Les patients devront être surveillés afin de détecter les signes d’une consommation excessive de médicament (par ex. des demandes précoces de renouvellement d’ordonnance). Cela inclut la vérification des médicaments opioïdes et psychoactifs concomitants (tels que les benzodiazépines). Pour les patients présentant des signes et symptômes de TUO, une consultation avec un addictologue doit être envisagée.Les douleurs par désafférentation (douleurs neurogènes) ne répondent pas à l'association codéine paracétamol.</p>
+<p class=AmmCorpsTexte>La prise concomitante de ce médicament avec des agonistes-antagonistes morphiniques, de l'alcool ou de la naltrexone est déconseillée (cf. rubrique 4.5).</p>
+<p class=AmmCorpsTexte>La codéine est métabolisée en morphine par l'enzyme hépatique CYP2D6, son métabolite actif. En cas de déficit ou d'absence de cette enzyme, l'effet analgésique attendu ne sera pas obtenu. </p>
+<p class=AmmCorpsTexte>Il est estimé que jusqu'à 7% de la population caucasienne peut présenter ce déficit.</p>
+<p class=AmmCorpsTexte>Cependant, si le patient est un métaboliseur rapide ou ultra-rapide, il a un risque augmenté, même à dose thérapeutique, de développer des effets indésirables dus à la toxicité des opioïdes. Ces patients transforment la codéine en morphine rapidement, en conséquence leur taux de morphine dans le sérum est plus élevé qu'attendu.</p>
+<p class=AmmCorpsTexte>Les symptômes généraux de la toxicité des opioïdes incluent une confusion, une somnolence, une respiration superficielle, un myosis, des nausées, des vomissements, une constipation et un manque d'appétit. Dans les cas graves, les patients peuvent présenter des symptômes de dépression respiratoire et circulatoire, pouvant mettre en jeu le pronostic vital et être dans de très rares cas fatals.</p>
+<p class=AmmCorpsTexte>Les prévalences estimées des métaboliseurs ultra-rapides dans les différentes populations sont résumées ci-dessous :</p>
+<div align=center>
+<div class='fr-table--lg fr-table'><table>
+<tr>
+<td width=297 style='width:223.1pt;border:solid windowtext 1.0pt;padding:
+0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Population</p>
+</td>
+<td width=279 style='width:208.9pt;border:solid windowtext 1.0pt;border-left:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Prévalence en %</p>
+</td>
+</tr>
+<tr>
+<td width=297 style='width:223.1pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Africain /Ethiopien</p>
+</td>
+<td width=279 style='width:208.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>29%</p>
+</td>
+</tr>
+<tr>
+<td width=297 style='width:223.1pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Afro-Américains</p>
+</td>
+<td width=279 style='width:208.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>3.4% à 6.5%</p>
+</td>
+</tr>
+<tr>
+<td width=297 style='width:223.1pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Asiatiques</p>
+</td>
+<td width=279 style='width:208.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>1.2% à 2%</p>
+</td>
+</tr>
+<tr>
+<td width=297 style='width:223.1pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Caucasiens</p>
+</td>
+<td width=279 style='width:208.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>3.6% à 6.5%</p>
+</td>
+</tr>
+<tr>
+<td width=297 style='width:223.1pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Grecs</p>
+</td>
+<td width=279 style='width:208.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>6%</p>
+</td>
+</tr>
+<tr>
+<td width=297 style='width:223.1pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Hongrois</p>
+</td>
+<td width=279 style='width:208.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>1.9%</p>
+</td>
+</tr>
+<tr>
+<td width=297 style='width:223.1pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Européen du nord</p>
+</td>
+<td width=279 style='width:208.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>1% à 2%</p>
+</td>
+</tr>
+</table></div>
+</div>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmCorpsTexte><u>Utilisation en post-opératoire chez les enfants</u></p>
+<p class=AmmCorpsTexte>Des cas publiés dans la littérature ont montré que la codéine utilisée en post-opératoire chez les enfants après une amygdalectomie et/ou une adénoïdectomie dans le cadre d'un syndrome d'apnée obstructive du sommeil, entraine de effets indésirables rares mais pouvant mettre en jeu le pronostic vital voire entrainer le décès (voir rubrique 4.3)<span style='color:#4C4C4C'>. </span>Tous ces enfants avaient reçu de la codéine aux doses recommandées<span style='color:#4C4C4C'>; </span>cependant des éléments permettaient de mettre en évidence que ces enfants étaient des métaboliseurs rapides ou ultra-rapides de la codéine en morphine<span style='color:#4C4C4C'>.</span></p>
+<p class=AmmCorpsTexte><u>Enfants présentant une fonction respiratoire altérée</u></p>
+<p class=AmmCorpsTexte>La codéine n<span style='color:#4C4C4C'>'</span>est pas recommandée chez les enfants pouvant présenter une fonction respiratoire altérée du fait de désordres neuromusculaires<span style='color:#4C4C4C'>, </span>d'affections cardiaques ou respiratoires sévères, d<span style='color:#4C4C4C'>'</span>infections des voies respiratoires supérieures ou pulmonaires, de traumatismes multiples ou de procédures chirurgicales longues<span style='color:#4C4C4C'>. </span>Ces facteurs peuvent aggraver les symptômes de la toxicité de la morphine.</p>
+<p class=AmmCorpsTexte><b>Précautions d'emploi</b></p>
+<p class=AmmAnnexeTitre4>Liées à la codéine</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En cas d'hypertension intracrânienne, la codéine risque d'augmenter l'importance de cette hypertension.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Insuffisance rénale : (clairance de la créatinine inférieure à 10 ml/min), augmenter l'intervalle entre les prises (minimum 8 heures).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Chez le patient cholécystectomisé, la codéine peut provoquer un syndrome douloureux abdominal aigu de type biliaire ou pancréatique, le plus souvent associé à des anomalies biologiques, évocateur d'un spasme du sphincter d'Oddi.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En cas de toux productive, la codéine peut entraver l'expectoration</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Sujet âgé : diminuer la posologie initiale de moitié par rapport à la posologie recommandée, et l'augmenter éventuellement secondairement en fonction de la tolérance et des besoins.</p>
+<p class=AmmCorpsTexte><span class=souligne1>Liées à la présence de paracétamol</span><span class=italique1>:</span></p>
+<p class=AmmCorpsTexte>En raison de son hépatotoxicité, le paracétamol ne doit pas être utilisé à des doses ou pendant une durée plus importante que celles recommandées. Une utilisation sur une durée plus longue que recommandée peut entrainer des séquelles hépatiques sévères, comme une cirrhose hépatique. Un surdosage aigu ou chronique peut conduire à une hépatotoxicité sévère, exceptionnellement d’issue fatale (voir rubrique 4.9).</p>
+<p class=AmmCorpsTexte>Les patients souffrant de pathologies hépatiques ou d’infections affectant le foie telles qu’une hépatite virale doivent consulter un médecin avant de prendre du paracétamol. Chez ces patients, une évaluation de la fonction hépatique doit être réalisée à intervalles réguliers pendant un traitement à forte dose ou à long terme, en particulier chez les patients présentant une pathologie hépatique préexistante.</p>
+<p class=AmmCorpsTexte>Les patients présentant une insuffisance hépatique (Child-Pugh < 9) doivent utiliser le paracétamol avec prudence.</p>
+<p class=AmmCorpsTexte>Une élévation de l’alanine aminotransférase (ALAT) peut survenir lors de l’administration de paracétamol à des doses thérapeutiques.</p>
+<p class=AmmCorpsTexte>Une prise d’alcool modérée, associée à une prise de paracétamol, peut potentiellement conduire à une augmentation du risque de toxicité hépatique. Les patients souffrant de pathologies rénales doivent consulter un médecin avant de prendre du paracétamol, dans la mesure où un ajustement de la posologie peut s’avérer nécessaire. En cas d’insuffisance rénale sévère (clairance de la créatinine < 10 mL/min), le médecin devra évaluer de façon critique le rapport bénéfice/risque de l’utilisation du paracétamol. Un ajustement posologique et une surveillance continue doivent être réalisés.</p>
+<p class=AmmCorpsTexte>De manière générale, l’utilisation en continue du paracétamol, en particulier en association avec d’autres analgésiques, peut conduire à des lésions rénales permanentes et à un risque d’insuffisance rénale (néphropathie analgésique).</p>
+<p class=AmmCorpsTexte>Une utilisation prolongée à forte dose peut conduire à des lésions hépatiques et rénales. Les situations qui augmentent le stress oxydatif hépatique et diminuent la réserve hépatique en glutathion, telles que l’association à certains médicaments, l’alcoolisme, un sepsis, ou un diabète sucré, peuvent augmenter le risque de toxicité hépatique à des doses thérapeutiques.</p>
+<p class=AmmCorpsTexte>Des cas d’acidose métabolique à trou anionique élevé (AMTAE) due à une acidose pyroglutamique ont été rapportés chez les patients atteints d’une maladie grave telle qu’une insuffisance rénale sévère et un sepsis, ou chez les patients souffrant de malnutrition ou d'autres sources de déficit en glutathion (par exemple, l’alcoolisme chronique) qui ont été traités par du paracétamol à une dose thérapeutique pendant une période prolongée ou par une association de paracétamol et de flucloxacilline. En cas de suspicion d’AMTAE due à une acidose pyroglutamique, il est recommandé d’arrêter immédiatement le paracétamol et d’effectuer une surveillance étroite. La mesure de la 5 oxoproline urinaire peut être utile pour identifier l’acidose pyroglutamique comme cause sous jacente de l’AMTAE chez les patients présentant de multiples facteurs de risque.</p>
+<p class=AmmCorpsTexte>Des cas de réactions cutanées sévères ont été très rarement rapportés. En cas de rougissement cutané, de rash, d’apparition de vésicules ou de desquamations, la prise de paracétamol doit être arrêtée et une prise en charge médicale doit être apportée immédiatement (voir rubrique 4.8).</p>
+<p class=AmmCorpsTexte>L’utilisation du paracétamol chez des patients présentant un syndrome de Gilbert peut conduire à une hyperbilirubinémie plus prononcée et des symptômes cliniques associés comme une jaunisse. Aussi, ces patients doivent utiliser le paracétamol avec prudence.</p>
+<p class=AmmCorpsTexte>La prise concomitante d’autres médicaments contenant du paracétamol doit être évitée.</p>
+<p class=AmmCorpsTexte>Si de nouveaux symptômes apparaissent ou si la douleur et/ou la fièvre ne sont pas soulagées en 3 jours, il est recommandé aux patients d’arrêter le traitement et de consulter un médecin.</p>
+<p class=AmmCorpsTexte>Les patients présentant une déficience héréditaire en glucose-6-phosphate-déshydrogénase doivent consulter leur médecin avant de prendre du paracétamol (risque d’anémie hémolytique).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmAnnexeTitre3>Liées au paracétamol</p>
+<p class=AmmAnnexeTitre3>Associations faisant l'objet de précautions d’emploi</p>
+<p class=AmmCorpsTexte><b>+ Antivitamines K:</b></p>
+<p class=AmmCorpsTexte>Risque d'augmentation de l'effet de l'antivitamine K et du risque hémorragique en cas de prise de paracétamol aux doses maximales (4 g/j) pendant au moins 4 jours. </p>
+<p class=AmmCorpsTexte>Contrôle plus fréquent de l'INR. Adaptation éventuelle de la posologie de l'antivitamine K pendant le traitement par le paracétamol et après son arrêt.</p>
+<p class=AmmCorpsTexte><b><u>Liées à la codéine</u></b></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278922">Associations déconseillées</a> <span style='text-decoration:none'>(cf. rubrique 4.4)</span></p>
+<p class=AmmIAM><span style='font-family:Symbol;font-weight:normal'>+<span style='font:7.0pt "Times New Roman"'>        </span></span>Morphiniques agonistes-antagonistes (buprénorphine, nalbuphine, pentazocine)</p>
+<p class=AmmCorpsTexte>Diminution de l'effet antalgique ou antitussif du morphinique, par blocage compétitif des récepteurs, avec risque d'apparition d'un syndrome de sevrage.</p>
+<p class=AmmIAM><span style='font-family:Symbol;font-weight:normal'>+<span style='font:7.0pt "Times New Roman"'>        </span></span>Alcool (boisson ou excipient)</p>
+<p class=AmmCorpsTexte>Majoration par l'alcool de l'effet sédatif des analgésiques morphiniques.</p>
+<p class=AmmCorpsTexte>L'altération de la vigilance peut rendre dangereuse la conduite de véhicules et l'utilisation de machines.</p>
+<p class=AmmCorpsTexte>Eviter la prise de boissons alcoolisées ou de médicaments contenant de l'alcool.</p>
+<p class=AmmIAM><span style='font-family:Symbol;font-weight:normal'>+<span style='font:7.0pt "Times New Roman"'>        </span></span>Morphiniques antagonistes partiels (nalméfène, naltrexone)</p>
+<p class=AmmCorpsTexte>Risque de diminution de l'effet antalgique. Si nécessaire, augmenter les doses du dérivé morphinique.</p>
+<p class=AmmIAM><span style='font-family:Symbol;font-weight:normal'>+<span style='font:7.0pt "Times New Roman"'>        </span></span>Sodium (oxybate de)</p>
+<p class=AmmCorpsTexte>Majoration de la dépression centrale. L’altération de la vigilance peut rendre dangereuse les conduites de véhicule et l’utilisation de machines.</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278924">Associations à prendre en compte</a></p>
+<p class=AmmIAM><span style='font-family:Symbol; font-weight:normal'>+<span style='font:7.0pt "Times New Roman"'>        </span></span>Autres analgésiques morphiniques agonistes (alfentanil, dextromoramide, dihydrocodéine, fentanyl, hydromorphone, morphine, oxycodone, péthidine, phénopéridine, rémifentanil, sufentanil, tapentadol, tramadol), antitussifs morphine-like (dextrométhorphane, noscapine, pholcodine), antitussifs morphines vrais (codéine, éthylmorphine), benzodiazépines, barbituriques, méthadone</p>
+<p class=AmmCorpsTexte>Risque majoré de dépression respiratoire pouvant être fatale en cas de surdosage.</p>
+<p class=AmmIAM><span style='font-family:Symbol;font-weight:normal'>+<span style='font:7.0pt "Times New Roman"'>        </span></span>Autres médicaments sédatifs : dérivés morphiniques (analgésiques, antitussifs et traitements de substitution), neuroleptiques, barbituriques, benzodiazépines, anxiolytiques autres que benzodiazépines (méprobamate), hypnotiques, antidépresseurs sédatifs (amitriptyline, doxépine, miansérine, mirtazapine, trimipramine), antihistaminiques H1 sédatifs, antihypertenseurs centraux, baclofène et thalidomide.</p>
+<p class=AmmCorpsTexte>Majoration de la dépression centrale. L'altération de la vigilance peut rendre dangereuses la conduite de véhicules et l'utilisation de machines.</p>
+<p class=AmmCorpsTexteGras><span class=gras1>Autres interactions liées à la présence de paracétamol :</span></p>
+<p class=AmmCorpsTexte>Les médicaments conduisant à un retard de la vidange gastrique peuvent conduire à une absorption plus lente du paracétamol et de ce fait à un délai d’action retardé.</p>
+<p class=AmmCorpsTexte>Les médicaments conduisant à une accélération de la vidange gastrique (par exemple métoclopramide), peuvent conduire à une absorption plus rapide du paracétamol et de ce fait à un délai d’action plus rapide.</p>
+<p class=AmmCorpsTexte>L’utilisation concomitante de médicaments qui provoquent une induction des enzymes hépatiques, par exemple certains médicaments hypnotiques et antiépileptiques (phénobarbital, phénytoïne, carbamazépine etc.) ou la rifampicine peuvent conduire à des lésions hépatiques, même à des doses de paracétamol qui seraient par ailleurs sans risque. En cas de consommation excessive d’alcool, la prise de paracétamol, même à des doses thérapeutiques, peut conduire à des lésions hépatiques.</p>
+<p class=AmmCorpsTexte>Les effets des médicaments suivants sont intensifiés : l’association avec le chloramphénicol peut prolonger sa demi-vie et ainsi potentiellement augmenter sa toxicité.</p>
+<p class=AmmCorpsTexte>Le tropisétron et le granisétron, des antagonistes aux récepteurs 5HT-3 à la sérotonine, peuvent totalement inhiber l’effet analgésique du paracétamol en raison d’une interaction pharmacodynamique.</p>
+<p class=AmmCorpsTexte>L’utilisation concomitante de paracétamol et d’AZT (zidovudine) augmente la tendance vers une réduction de la numération sanguine en globules blancs (neutropénie). Aussi le paracétamol ne doit pas être pris en association avec l’AZT, sauf sur avis médical.</p>
+<p class=AmmCorpsTexte>Il est préférable d’éviter un traitement continu combiné avec plus d’un analgésique ; il existe peu de preuves d’un bénéfice supplémentaire pour le patient, et l’incidence des effets secondaires est généralement additive.</p>
+<p class=AmmCorpsTexte><span class=AmmCorpsTexteCar>Il convient d'être prudent lors de l'utilisation concomitante de paracétamol et de flucloxacilline, car la prise simultanée a été associée à une acidose métabolique à trou anionique élevé due à une acidose pyroglutamique, en particulier chez les patients présentant des facteurs de risque (voir rubrique 4.4).</span></p>
+<p class=AmmCorpsTexte>L’utilisation concomitante de CLARADOL CODEINE avec des gabapentinoïdes (gabapentine et prégabaline) peut entraîner une dépression respiratoire, une hypotension, une sédation profonde, un coma ou le décès (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexte><u>Interactions avec les examens paracliniques</u> :</p>
+<p class=AmmCorpsTexte>La prise de paracétamol peut fausser le dosage de l'uricémie par la méthode à l'acide phosphotungstique, et le dosage de la glycémie par la méthode au glucose oxydase-peroxydase.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278926"><u>Grossesse</u></a></p>
+<p class=AmmCorpsTexte>L'utilisation <u>ponctuelle</u> de ce médicament peut être envisagée au cours de la grossesse si besoin quel que soit le terme, mais son utilisation chronique doit être évitée. </p>
+<p class=AmmCorpsTexte>En cas d'administration en fin de grossesse, tenir compte des propriétés morphino-mimétiques de ce médicament (risque théorique de dépression respiratoire chez le nouveau-né après de fortes doses avant l'accouchement, risque de syndrome de sevrage en cas d'administration chronique en fin de grossesse).</p>
+<p class=AmmCorpsTexte><u>Données concernant le paracétamol</u></p>
+<p class=AmmCorpsTexte>Une vaste quantité de données portant sur les femmes enceintes démontrent l’absence de toute malformation ou de toute toxicité fœtale/néonatale. Les études épidémiologiques consacrées au neurodéveloppement des enfants exposés au paracétamol in utero produisent des résultats non concluants. Si cela s’avère nécessaire d’un point de vue clinique, le paracétamol peut être utilisé pendant la grossesse ; cependant, il devra être utilisé à la dose efficace la plus faible, pendant la durée la plus courte possible et à la fréquence la plus réduite possible.</p>
+<p class=AmmCorpsTexte><u>Données concernant la codéine</u></p>
+<p class=AmmCorpsTexte>En clinique, bien que quelques études cas-témoin mettent en évidence une augmentation du risque de survenue de malformations cardiaques, la plupart des études épidémiologiques écartent un risque malformatif.</p>
+<p class=AmmCorpsTexte>Les études réalisées chez l'animal ont mis en évidence un effet tératogène.</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278927"><u>Allaitement</u></a></p>
+<p class=AmmCorpsTexte>Le paracétamol et la codéine passent dans le lait maternel.</p>
+<p class=AmmCorpsTexte>La conduite à tenir au cours de l’allaitement est conditionnée par la présence de codéine. </p>
+<p class=AmmCorpsTexte>A des doses thérapeutiques normales, la codéine et son métabolite actif peuvent être présents dans le lait maternel à des doses très faibles et il est peu probable qu'elle entraîne des effets indésirables chez l'enfant allaité. Cependant, si la patiente est un métaboliseur CYP2D6 ultra-rapide, une quantité importante du métabolite actif, la morphine, peut être présente dans le sang maternel ainsi que dans le lait maternel. Dans de très rares cas, ces taux élevés peuvent entrainer des symptômes de toxicité opioïde chez l'enfant (somnolence, difficulté de succion, pauses voire dépression respiratoires et hypotonie) qui peuvent être fatals.</p>
+<p class=AmmCorpsTexte>En conséquence, ce médicament est contre-indiqué pendant l’allaitement (voir rubrique 4.3).</p>
+<p class=AmmCorpsTexteGras><u>Fertilité </u></p>
+<p class=AmmCorpsTexte><u>Données liées au paracétamol</u></p>
+<p class=AmmCorpsTexte>Les données sont limitées sur le fait que les médicaments qui inhibent la cyclo-oxygénase ou la synthèse de prostaglandines pourraient altérer la fertilité des femmes, par un effet sur l’ovulation, réversible à l’arrêt du traitement. Le paracétamol étant suspecté d’inhiber la synthèse des prostaglandines, il est possible qu’il puisse altérer la fertilité, bien que cela n’ait pas été démontré.</p>
+<p class=AmmCorpsTexte>Lié à la codéine:</p>
+<p class=AmmCorpsTexte>Il n’y a pas de donne chez l’animal concernant la fertilité mâle et femelle.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><u>L'attention est attirée, notamment chez les conducteurs de véhicules et les utilisateurs de machines, sur les risques de somnolence dus à la présence de codéine.</u></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Certains patients utilisant du paracétamol peuvent présenter des vertiges ou une somnolence. Les patients doivent être prudents s’ils pratiquent des activités qui nécessitent de la vigilance.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmAnnexeTitre3>Liés au paracétamol</p>
+<p class=AmmCorpsTexte>Les effets indésirables listés sont basés sur des déclarations spontanées, aussi une organisation suivant les catégories de fréquence des CIOMS III n’est pas possible.</p>
+<p class=AmmAnnexeTitre3>Affections hématologiques et du système lymphatique</p>
+<p class=AmmCorpsTexte>Modifications de la numération sanguine, notamment thrombocytopénie, purpura thrombocytopénique, leucopénie, et pancytopénie.</p>
+<p class=AmmAnnexeTitre3>Troubles du métabolisme et de la nutrition </p>
+<p class=AmmCorpsTexte>Acidose métabolique à trou anionique élevé avec fréquence «indéterminée» (ne peut être estimée à partir des données disponibles) </p>
+<p class=AmmCorpsTexte><b>Description des effets indésirables sélectionnés</b></p>
+<p class=AmmCorpsTexte><i><u>Acidose métabolique à trou anionique élevé </u></i></p>
+<p class=AmmCorpsTexte>Des cas d’acidose métabolique à trou anionique élevé due à une acidose pyroglutamique ont été observés chez des patients présentant des facteurs de risque et prenant du paracétamol (voir rubrique 4.4). Une acidose pyroglutamique peut survenir chez ces patients en raison des faibles taux de glutathion.</p>
+<p class=AmmAnnexeTitre3>Affections gastro-intestinales</p>
+<p class=AmmCorpsTexte>Nausée, vomissements, maux d’estomac, diarrhée et douleur abdominale.</p>
+<p class=AmmAnnexeTitre3>Affections hépatobiliaires</p>
+<p class=AmmCorpsTexte>Atteinte hépatique, hépatite, insuffisance hépatique dose-dépendante, nécrose hépatique (y compris d’issue fatale). Une utilisation chronique non conforme peut conduire à une fibrose hépatique, une cirrhose hépatique, y compris d’issue fatale (voir rubriques 4.4 et 4.9).</p>
+<p class=AmmAnnexeTitre3>Affections du système immunitaire</p>
+<p class=AmmCorpsTexte>Réactions allergiques, réaction anaphylactique, et choc anaphylactique.</p>
+<p class=AmmAnnexeTitre3>Affections du système nerveux</p>
+<p class=AmmCorpsTexte>Vertiges, somnolence.</p>
+<p class=AmmAnnexeTitre3>Affections du rein et des voies urinaires</p>
+<p class=AmmCorpsTexte>Atteinte rénale en particulier en cas de surdosage.</p>
+<p class=AmmAnnexeTitre3>Affections respiratoires, thoraciques et médiastinales</p>
+<p class=AmmCorpsTexte>Bronchospasme et asthme, notamment syndrome d’asthme analgésique.</p>
+<p class=AmmAnnexeTitre3>Affections de la peau et du tissu sous-cutané</p>
+<p class=AmmCorpsTexte>De très rares cas de réactions cutanées sévères ont été rapportés.</p>
+<p class=AmmCorpsTexte>Rash, prurit, urticaire, œdème allergique et angioedème, pustulose exanthémateuse aiguë généralisée, érythème pigmenté fixe, érythème multiforme, syndrome de Stevens-Johnson et nécrolyse épidermique toxique (y compris d’issue fatale).</p>
+<p class=AmmCorpsTexte><b><u>Liés à la codéine</u></b></p>
+<p class=AmmCorpsTexte><b><u>Affections psychiatriques</u></b></p>
+<p class=AmmCorpsTexte>Fréquence indéterminée : abus. L’utilisation prolongée entraine un risque de dépendance médicamenteuse (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexte>Il existe un risque de dépendance et de syndrome de sevrage à l’arrêt brutal, qui peut être observé chez l’utilisateur et chez le nouveau-né de mère intoxiquée à la codéine (voir rubrique 4.6).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Possibilité de :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>sédation, euphorie, dysphorie,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>myosis, rétention urinaire,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>réactions d'hypersensibilité (prurit, urticaire et rash),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>constipation, nausées, vomissements,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>somnolence, états vertigineux,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>bronchospasme, dépressions respiratoires (cf. rubrique 4.3 Contre-indications),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>syndrome douloureux abdominal aigu de type biliaire ou pancréatique, évocateur d'un spasme du sphincter d'Oddi, survenant particulièrement chez les patients cholécystectomisés,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>il existe un risque de dépendance et de syndrome de sevrage à l'arrêt brutal, qui peut être observé chez l'utilisateur et le nouveau-né de mère intoxiquée à la codéine.</p>
+<p class=AmmAnnexeTitre3>Affections hépatobiliaires</p>
+<p class=AmmCorpsTexte><b>Dysfonction du sphincter d’Oddi </b>avec fréquence «indéterminée» (ne peut être estimée à partir des données disponibles) </p>
+<p class=AmmAnnexeTitre3><span style='font-weight:normal;text-decoration:none'>Pharmacodépendance </span></p>
+<p class=AmmAnnexeTitre3><span style='font-weight:normal;text-decoration:none'>L’utilisation répétée de CLARADOL CODEINE 500 mg/20 mg, comprimé peut conduire à une dépendance au médicament (pharmacodépendance), même aux doses thérapeutiques. Le risque de pharmacodépendance peut varier en fonction des facteurs de risque individuels du patient, de la posologie et de la durée du traitement opioïde (voir rubrique 4.4).</span></p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet: <a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmAnnexeTitre3>Lié au paracétamol</p>
+<p class=AmmCorpsTexte>L'intoxication est à craindre chez les sujets âgés et surtout chez les jeunes enfants (surdosage thérapeutique ou intoxication accidentelle fréquente) où elle peut être mortelle.</p>
+<p class=AmmCorpsTexte>En cas de surdosage de paracétamol, il faut contacter un médecin ou un centre anti-poison immédiatement.</p>
+<p class=AmmAnnexeTitre3>Toxicité aiguë</p>
+<p class=AmmCorpsTexte>L’effet le plus important de l’intoxication aiguë du paracétamol est l’hépatotoxicité : les lésions hépatocellulaires sont causées par la liaison des métabolites réactifs du paracétamol aux protéines cellulaires hépatiques. A des doses thérapeutiques, ces métabolites sont liés par le glutathion, et forment des conjugués non toxiques. Dans le cas d’un surdosage massif, l’approvisionnement du foie en donneurs de groupement – SH (qui favorise la formation de glutathion) est épuisé, les métabolites toxiques s’accumulent et provoquent une nécrose cellulaire hépatique, résultant en une altération de la fonction hépatique progressant vers un coma hépatique. Une atteinte rénale suite à une nécrose des tubules rénaux a aussi été décrite de façon indépendante.</p>
+<p class=AmmCorpsTexte>Le seuil de surdosage peut être abaissé chez les patients prenant certains médicaments ou de l’alcool, ou qui sont sérieusement dénutris.</p>
+<p class=AmmAnnexeTitre3>Toxicité chronique</p>
+<p class=AmmCorpsTexte>La toxicité chronique inclut diverses atteintes hépatiques (voir « Symptômes d’intoxication »). Les données relatives à la toxicité chronique et en particulier à la néphrotoxicité du paracétamol sont controversées. Il convient d’accorder de l’importance à la possible influence sur la numération sanguine périphérique lors d’une utilisation chronique.</p>
+<p class=AmmAnnexeTitre4>Symptomatologie</p>
+<p class=AmmCorpsTexte>Nausées, vomissements, anorexie, pâleur, douleurs abdominales, transpiration et malaise général apparaissent généralement dans les 24 premières heures. L’état du patient peut s’améliorer dans les 24 à 48 heures, bien que les symptômes puissent ne pas disparaître complètement.</p>
+<p class=AmmCorpsTexte>La taille du foie augmente rapidement, les transaminases et la bilirubine sont élevées, le temps de prothrombine devient pathologique, le débit urinaire chute, une légère azotémie peut se développer. Une hypokaliémie et une acidose métabolique (notamment une acidose lactique) peuvent aussi se développer dans le cadre d’un surdosage aigu et/ou chronique. Les manifestations cliniques fréquentes après 3 à 5 jours sont : jaunisse, fièvre, foetor hépatique, diathèse hémorragique, hypoglycémie, et insuffisance hépatique. Une insuffisance hépatique peut progresser vers tous les stades d’encéphalopathie hépatique, vers un œdème cérébral, et le décès.</p>
+<p class=AmmCorpsTexte>Une insuffisance rénale aiguë avec nécrose aiguë des tubules rénaux, fortement évoquée par une douleur dorsale, une hématurie et une protéinurie, pouvant se développer même en l’absence d’atteinte hépatique sévère.</p>
+<p class=AmmCorpsTexte>Un surdosage à partir de 10 g de paracétamol en une seule prise chez l'adulte et 150 mg/kg chez l'enfant en une seule prise, provoque une cytolyse hépatique susceptible d'aboutir à une nécrose complète et irréversible se traduisant par une insuffisance hépatocellulaire, une acidose métabolique, une encéphalopathie pouvant aller jusqu'au coma et entraîner la mort.</p>
+<p class=AmmCorpsTexte>Simultanément, on observe une augmentation des transaminases hépatiques, de la lacticodéshydrogénase, de la bilirubine et une diminution du taux de prothrombine pouvant apparaître 12 à 48 heures après l’ingestion.</p>
+<p class=AmmAnnexeTitre4>Conduite d’urgence</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Des soins intensifs médicaux avec surveillance étroite des signes vitaux, des examens de laboratoire et de l’état circulatoire doivent généralement être initiés.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Transfert immédiat en milieu hospitalier. Une assistance médicale rapide est critique aussi bien pour les adultes que pour les enfants, même si aucun signe ou symptôme n’est apparent</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Prélever un tube de sang pour faire le dosage plasmatique initial du paracétamol,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Evacuation rapide du produit ingéré, par lavage gastrique (dans les six premières heures).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Le traitement du surdosage comprend classiquement l'administration aussi précoce que possible de l'antidote N-acétylcystéine, donneur de groupements – SH (ou méthionine, cystéamine) par voie IV ou voie orale si possible avant la dixième heure, dans la mesure où ils conjuguent les métabolites réactifs et de ce fait contribuent à leur détoxification normale. La N-acétylcystéine peut être protectrice jusqu’à un certain degré jusqu’à 48 heures après l’ingestion.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Traitement symptomatique.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Une hémodialyse et une hémoperfusion contribuent à l’élimination du produit. Il est recommandé de contrôler la concentration plasmatique en paracétamol.</p>
+<p class=AmmAnnexeTitre3>Lié à la codéine</p>
+<p class=AmmAnnexeTitre4>Symptomatologie</p>
+<p class=AmmListePuces1 style='text-align:justify;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Chez l'adulte : dépression aiguë des centres respiratoires (cyanose, bradypnée), somnolence, rash, vomissements, prurit, ataxie, œdème pulmonaire (plus rare)</p>
+<p class=AmmListePuces1 style='margin-bottom:6.0pt;text-align:justify'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Chez l'enfant, (seuil toxique : 2 mg/kg en prise unique) : bradypnée, pauses respiratoires, myosis, convulsions, signes d'histaminolibération ; flush et œdème du visage, éruption urticarienne, rétention d'urine.</p>
+<p class=AmmAnnexeTitre4>Conduite à tenir</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Assistance respiratoire</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Naloxone.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : </a><a name="OLE_LINK3">AUTRES ANALGESIQUES ET ANTIPYRETIQUES, Code ATC : N02BE51</a></p>
+<p class=AmmCorpsTexte>Association de deux principes actifs :</p>
+<p class=AmmCorpsTexte style='margin-left:14.2pt;text-indent:-14.2pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>       </span></span>Paracétamol : antalgique périphérique, antipyrétique. Son mécanisme d’action analgésique n’a pas encore été totalement élucidé. Son action résulterait principalement d’une inhibition de la synthèse des prostaglandines dans le système nerveux central (SNC).</p>
+<p class=AmmCorpsTexte style='margin-left:14.2pt;text-indent:-14.2pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>       </span></span>codéine phosphate hémihydraté : antalgique opioïde.</p>
+<p class=AmmCorpsTexte>L'association de paracétamol et de phosphate de codéine possède une activité antalgique supérieure à celle de ses composants pris isolément, avec un effet plus prolongé dans le temps.</p>
+<p class=AmmCorpsTexte>La codéine est un antalgique <span style='font-size: 9.5pt'>à </span>faible action centrale. Elle exerce son effet grâce <span style='font-size:9.5pt'>à </span>son action sur les récepteurs opioïdes <span style='font-family:"Times New Roman",serif'>µ</span> bien que son affinité pour ces récepteurs soit faible. Son effet analgésique est du <span style='font-size:9.5pt'>à </span>sa conversion en morphine. La codéine, en particulier lorsqu'elle est associée <span style='font-size:10.5pt;font-family: "Times New Roman",serif'>à </span>d'autres antalgiques comme le paracétamol a montré son efficacité dans le traitement des douleurs nociceptives.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmCorpsTexte>Le paracétamol, la codéine et ses sels ont une absorption et une cinétique superposables qui ne sont pas modifiées lorsqu'ils sont associés.</p>
+<p class=AmmCorpsTexte><a name="_Toc142278934"><b><u>Liées au paracétamol</u></b></a></p>
+<p class=AmmAnnexeTitre3>Absorption</p>
+<p class=AmmCorpsTexte>L'absorption du paracétamol par voie orale est complète et rapide. Les concentrations plasmatiques maximales sont atteintes 30 à 90 minutes après ingestion, en fonction de la formulation.</p>
+<p class=AmmAnnexeTitre3>Distribution</p>
+<p class=AmmCorpsTexte>Le paracétamol se distribue rapidement dans tous les tissus. Les concentrations sont comparables dans le sang, la salive et le plasma. La liaison aux protéines plasmatiques est faible.</p>
+<p class=AmmAnnexeTitre3>Biotransformation</p>
+<p class=AmmCorpsTexte>Le paracétamol est métabolisé essentiellement au niveau du foie. Les 2 voies métaboliques majeures sont la glycuroconjugaison et la sulfoconjugaison. Cette dernière voie est rapidement saturable aux posologies supérieures aux doses thérapeutiques. Une voie mineure, catalysée par le cytochrome P 450, est la formation d'un intermédiaire réactif (le N-acétyl benzoquinone imine), qui, dans les conditions normales d'utilisation, est rapidement détoxifié par le glutathion réduit et éliminé dans les urines après conjugaison à la cystéine et à l'acide mercaptopurique. En revanche, lors d'intoxications massives, la quantité de ce métabolite toxique est augmentée.</p>
+<p class=AmmAnnexeTitre3>Elimination</p>
+<p class=AmmCorpsTexte>L'élimination est essentiellement urinaire. 80% de la dose ingérée est éliminée par le rein en 24 heures, principalement sous forme glycuroconjuguée (60 à 80 %) et sulfoconjuguée (20 à 30 %).</p>
+<p class=AmmCorpsTexte>Seulement 1 à 3 % est éliminé sous forme inchangée. L’élimination est retardée chez les patients avec une fonction hépatique ou rénale altérée.</p>
+<p class=AmmCorpsTexte>La demi-vie d'élimination est de 1,5 à 2,5 heures.</p>
+<p class=AmmAnnexeTitre3>Variations physiopathologiques</p>
+<p class=AmmCorpsTexte style='margin-left:14.2pt;text-indent:-14.2pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>       </span></span>Insuffisance rénale : en cas d'insuffisance rénale sévère (clairance de la créatinine inférieure à 10 ml/min), l'élimination du paracétamol et de ses métabolites est retardée.</p>
+<p class=AmmCorpsTexte style='margin-left:14.2pt;text-indent:-14.2pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>       </span></span>Sujet âgé : la capacité de conjugaison n'est pas modifiée.</p>
+<p class=AmmCorpsTexte><b><u>Liées à la Codéine</u></b></p>
+<p class=AmmCorpsTexte>Après ingestion orale, la codéine est bien absorbée et sa biodisponibilité relative par rapport à la voie intramusculaire est de 40-70 %. Les concentrations plasmatiques atteignent leur pic en 1 heure puis diminuent avec une demi-vie de 2 à 4 heures. La codéine est métabolisée pour donner la codéine-6-glucuronide, la morphine et la norcodéine.</p>
+<p class=AmmCorpsTexte>L'élimination de la codéine et de ses métabolites se produit quasi-intégralement par voie rénale (85-90 %), essentiellement sous forme de conjugués glucuroniques ; l'élimination est considérée comme complète au bout de 48 heures. Les pourcentages de la dose administrée (produit libre + conjugué) retrouvés dans les urines sont les suivant s: environ 10 % sous forme de morphine, 10 % de norcodéine, 50 -70 % de codéine. Près de 25 à 30 % de la codéine administrée se lie aux protéines plasmatiques.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmAnnexeTitre3>Données relatives au paracétamol</p>
+<p class=AmmAnnexeTitre4>Toxicité aiguë</p>
+<p class=AmmCorpsTexte>Après administration par voie orale, le paracétamol est légèrement toxique pour les rats adultes et les cobayes. La toxicité considérablement plus importante chez la souris et les rats nouveau-nés est probablement due à un métabolisme du produit différent chez la souris et à l’immaturité du système enzymatique hépatique chez les rats nouveau-nés.</p>
+<p class=AmmCorpsTexte>L’administration de doses plus élevées chez le chient et le chat a provoqué des vomissements, rendant ainsi impossible la détermination de la DL50 orale pour ces espèces.</p>
+<p class=AmmAnnexeTitre4>Toxicité chronique</p>
+<p class=AmmCorpsTexte>Après l’administration de doses toxiques, les tests chez l’animal ont montré un développement pondéral plus lent, des mictions plus fréquentes, une acidurie, une déshydratation et une augmentation de la sensibilité aux infections. Lors de l’autopsie, une augmentation du volume des organes abdominaux, une irritation de la muqueuse intestinale et, chez les animaux mâles, une atrophie testiculaire avec inhibition de la spermatogénèse ont été observés. Lors d’une étude sur 100 jours chez le rat, les organes cibles sur le plan toxicologique ont été le foie et les reins. Chez les humains, un facteur de sécurité d’approximativement 7 en relation avec la dose journalière et 43 avec une dose unique a été calculé à partir des données chez l’animal pour une durée de traitement ne dépassant pas 10 jours.</p>
+<p class=AmmAnnexeTitre4>Potentiel mutagène et tumorigène</p>
+<p class=AmmCorpsTexte>Un potentiel génotoxique a été observé chez le rat à des doses hépatotoxiques, s’expliquant par une conséquence indirecte de l’hépatotoxicité/myelotoxicité, et non comme atteinte directe de l’ADN. En conséquence, une dose seuil peut être supposée. Dans une étude de 2 ans chez des rats mâles recevant un régime alimentaire contenant jusqu’à 6000 ppm de paracétamol, aucune preuve de carcinogénicité n’a été démontrée. Chez les rats femelles, il a été démontré une carcinogénicité basée sur l’augmentation de l’incidence de leucémies à cellules mononucléées. Dans une étude de 2 ans chez des souris recevant jusqu’à 6000 ppm de paracétamol, aucune preuve de carcinogénicité n’a été démontrée.</p>
+<p class=AmmAnnexeTitre4>Toxicité sur la reproduction</p>
+<p class=AmmCorpsTexte>Aucune étude conventionnelle s’appuyant sur les normes actuellement admises pour évaluer la toxicité pour la reproduction et le développement n’est disponible.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937">Amidon de maïs prégélatinisé, povidone, cellulose microcristalline, carmellose modifiée type A, stéarate de magnésium.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte>4 ans.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940">A conserver dans l’emballage d’origine à l’abri de l’humidité.</a></p>
+<p class=AmmCorpsTexte>A conserver à une température ne dépassant pas 25°C.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur'>6.5. Nature et contenu de l'emballage extérieur</span></a></p>
+<p class=AmmCorpsTexte>16 comprimés sous plaquette thermoformée (Aluminium/PVC).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmTitulaireNom><a name="_Toc142278943"><span lang=IT>TEOFARMA S.R.l.</span></a></p>
+<p class=AmmTitulaireAdresse><span lang=IT>VIA F.LLI CERVI, 8</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>27010 VALLE SALIMBENE (PV)</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>ITALIE</p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>333 046-5 : 16 comprimés sous plaquette thermoformée (Aluminium/PVC).</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Liste I</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Prescription en toutes lettres sur ordonnance sécurisée. </p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Prescription limitée à 12 semaines.</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+                              <div id="tabpanel-bon-usage-panel" class="fr-tabs__panel" role="tabpanel"
+                     aria-labelledby="tabpanel-bon-usage"
+                     tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      
+      <div class="fr-col-12 fr-col-md">
+        <div class="fr-editor">
+
+          
+          
+          
+          
+          
+                      <div class="fr-grid-row">
+              <div class="fr-col">
+                <h5 id="heading-informations-importantes" role="heading" aria-level="5">
+                  <span class="fr-icon-information-line text-color-orange" aria-hidden="true"></span> Informations
+                  importantes
+                  <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage" href="#top"
+                     id="section-glossaire__top_link" role="link"
+                     aria-describedby="tooltip-link-page-top"
+                     aria-label="Redirection vers le haut de page"></a>
+                  <span id="tooltip-link-page-top" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                      Redirection vers le haut de page
+                    </span>
+                </h5>
+                <p aria-labelledby="heading-informations-importantes">Les informations importantes disponibles pour ce médicament sont les suivantes : <br /><ul id="liste_infos_importantes" role="list"><li role='listitem'>    <a  target='_blank'    href='https://ansm.sante.fr/actualites/tramadol-et-codeine-les-nouvelles-regles-de-prescription-et-delivrance-entrent-en-vigueur-le-1er-mars-2025'>Tramadol et codéine : les nouvelles règles de prescription et délivrance entrent en vigueur le 1er mars 2025</a></li><li role='listitem'>    <a  target='_blank'    href='https://ansm.sante.fr/actualites/tramadol-et-codeine-devront-etre-prescrits-sur-une-ordonnance-securisee-des-le-1er-decembre'>Tramadol et codéine devront être prescrits sur une ordonnance sécurisée dès le 1er décembre</a></li></ul></p>
+              </div>
+            </div>
+          
+          
+          
+                  </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_CLARADOL_CODEINE_500_mg/20_mg,_comprimé_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE CLARADOL CODEINE 500 mg/20 mg, comprimé ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE CLARADOL CODEINE 500 mg/20 mg, comprimé ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_CLARADOL_CODEINE_500_mg/20_mg,_comprimé_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE CLARADOL CODEINE 500 mg/20 mg, comprimé ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE CLARADOL CODEINE 500 mg/20 mg, comprimé ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_PRENDRE_CLARADOL_CODEINE_500_mg/20_mg,_comprimé_?"
+                     aria-label="3. COMMENT PRENDRE CLARADOL CODEINE 500 mg/20 mg, comprimé ? (Lien de redirection)">
+                    3. COMMENT PRENDRE CLARADOL CODEINE 500 mg/20 mg, comprimé ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_CLARADOL_CODEINE_500_mg/20_mg,_comprimé_?"
+                     aria-label="5. COMMENT CONSERVER CLARADOL CODEINE 500 mg/20 mg, comprimé ? (Lien de redirection)">
+                    5. COMMENT CONSERVER CLARADOL CODEINE 500 mg/20 mg, comprimé ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : CLARADOL CODEINE 500 mg/20 mg, comprimé - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="CLARADOL CODEINE 500 mg/20 mg, comprimé, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 03/03/2026</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmDenomination align=center style='text-align:center'>CLARADOL CODEINE 500 mg/20 mg, comprimé</p>
+<p class=AmmDenomination align=center style='text-align:center'>Paracétamol, Phosphate de codéine hémihydraté</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt; margin-left:0cm'><b><span lang=FR-BE style='font-size:10.0pt;font-family:"Arial",sans-serif'>Veuillez lire attentivement cette notice avant de prendre ce médicament car elle contient des informations importantes pour vous.</span></b></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin ou votre pharmacien.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt; margin-left:0cm'><a name="_Toc223740391"><b><span style='font-size:10.0pt; font-family:"Arial",sans-serif;color:#0B3D92'>Que contient cette notice ?</span></b></a></p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que CLARADOL CODEINE 500 mg/20 mg, comprimé et dans quel cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant de prendre CLARADOL CODEINE<span style='text-transform:uppercase'> </span>500 mg/20 mg, comprimé <span style='text-transform:uppercase'>?</span></p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment prendre CLARADOL CODEINE 500 mg/20 mg, comprimé <span style='text-transform: uppercase'>?</span></p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver CLARADOL CODEINE 500 mg/20 mg, comprimé <span style='text-transform: uppercase'>?</span></p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>6. <span style='color:black'>Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_CLARADOL_CODEINE_500_mg/20_mg,_comprimé_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE CLARADOL CODEINE 500 mg/20 mg, comprimé ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279004">Classe pharmacothérapeutique  </a></p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Classe pharmacothérapeutique : - code ATC : N02BE51.</span></p>
+<p class=AmmCorpsTexte>Ce médicament contient du paracétamol et de la codéine. Réservé à l'adulte (à partir de 15 ans).</p>
+<p class=AmmCorpsTexte>Le paracétamol est un antalgique (calme la douleur) et un antipyrétique (fait baisser la fièvre).</p>
+<p class=AmmCorpsTexte>La codéine appartient à un groupe de médicaments appelés antalgiques opioïdes qui agissent pour soulager la douleur. Elle peut être utilisée seule ou en association avec d’autres antalgiques comme le paracétamol.</p>
+<p class=AmmCorpsTexte>Traitement des douleurs modérées à intenses qui ne sont pas soulagées par l'aspirine, le paracétamol ou l'ibuprofène utilisé seul.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_CLARADOL_CODEINE_500_mg/20_mg,_comprimé_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE CLARADOL CODEINE 500 mg/20 mg, comprimé ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras>Ne prenez jamais CLARADOL CODEINE 500 mg/20 mg, comprimé </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez moins de 15 ans,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique (hypersensible) au paracétamol ou à la codéine ou à l'un des autres composants contenus dans ce médicament, mentionnées dans la rubrique 6,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>pour soulager la douleur chez des patients de moins de 18 ans après ablation des amygdales ou des végétations dans le cadre d’un syndrome d’apnée obstructive du sommeil.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous souffrez d’une maladie grave du foie,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous souffrez d’asthme,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous présentez une insuffisance respiratoire,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous savez que vous êtes un métaboliseur ultra-rapide de la codéine en morphine</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous allaitez</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'> </p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Avertissements et précautions</p>
+<div style='border:solid windowtext 1.5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; border:none;padding:0cm'>Ce médicament contient du paracétamol et de la codéine. D'autres médicaments en contiennent. </p>
+<p class=AmmCorpsTexte style='border:none;padding:0cm'>Ne les associez pas afin de ne pas dépasser les doses maximales conseillées (<a href="#Ann3b_PosoModAdmin_9"><span class=MsoPageNumber><span style='font-family: "Arial",sans-serif'>voir rubrique «Posologie et mode d'administration »</span></span></a>).</p>
+</div>
+<p class=AmmCorpsTexte>Tolérance, dépendance et addiction </p>
+<div style='border:solid windowtext 1.5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+<p class=AmmCorpsTexte style='border:none;padding:0cm'>Ce médicament contient de la codéine, qui est un médicament opioïde. Il peut provoquer une dépendance et/ou une addiction. </p>
+</div>
+<p class=AmmCorpsTexte>L’utilisation répétée d’opioïdes peut entraîner une diminution de l’efficacité du médicament (vous vous y habituez, c’est ce qu’on appelle la tolérance). L’utilisation répétée de CLARADOL CODEINE 500 mg/20 mg, comprimé peut également entraîner une dépendance, un abus et une addiction, ce qui peut aboutir à un surdosage potentiellement mortel. Le risque de survenue de ces effets indésirables peut augmenter avec une dose plus élevée et une durée d’utilisation plus longue. </p>
+<p class=AmmCorpsTexte>La dépendance ou l’addiction peuvent vous donner l’impression que vous ne contrôlez plus la quantité de médicament que vous devez prendre ou la fréquence à laquelle vous devez le prendre. </p>
+<p class=AmmCorpsTexte>Le risque de développer une dépendance ou une addiction varie d’une personne à l’autre. Vous pouvez présenter un risque plus important de dépendance ou d’addiction à CLARADOL CODEINE 500 mg/20 mg, comprimé si :</p>
+<p class=AmmCorpsTexte>–  vous ou un membre de votre famille avez déjà consommé de façon abusive de l’alcool ou avez été dépendant(e) à l’alcool, à des médicaments prescrits sur ordonnance ou à des substances illicites (« addiction ») ; </p>
+<p class=AmmCorpsTexte>–  vous êtes fumeur ; </p>
+<p class=AmmCorpsTexte>–  vous avez déjà présenté des troubles de l’humeur (dépression, anxiété ou trouble de la personnalité) ou avez déjà été traité(e) par un psychiatre pour d’autres troubles de la santé mentale. </p>
+<p class=AmmCorpsTexte>Si vous remarquez l’un des signes suivants pendant que vous prenez CLARADOL CODEINE 500 mg/20 mg, comprimé, il pourrait s’agir d’un signe que vous avez développé une dépendance ou une addiction : </p>
+<p class=AmmCorpsTexte>–  vous avez besoin de prendre ce médicament pendant une durée plus longue que celle recommandée par votre médecin ; </p>
+<p class=AmmCorpsTexte>–  vous avez besoin de prendre une dose supérieure à la dose recommandée ; </p>
+<p class=AmmCorpsTexte>&#8722; vous avez peut-être l’impression que vous devez continuer à prendre votre médicament, même quand cela n’aide pas à soulager votre ; </p>
+<p class=AmmCorpsTexte>–  vous utilisez ce médicament pour des raisons autres que celles pour lesquelles il vous a été prescrit, par exemple « pour rester calme » ou « pour vous aider à dormir » ; </p>
+<p class=AmmCorpsTexte>–  vous avez tenté à plusieurs reprises et sans succès d’arrêter ou de contrôler l’utilisation de ce médicament ; </p>
+<p class=AmmCorpsTexte>–  lorsque vous arrêtez de prendre ce médicament, vous vous sentez mal et vous vous sentez mieux lorsque vous le prenez à nouveau (« symptômes de sevrage »). 10 </p>
+<p class=AmmCorpsTexte>Si vous remarquez l’un de ces signes, parlez-en à votre médecin pour déterminer la meilleure stratégie de traitement pour vous, y compris le moment approprié pour arrêter de le prendre et comment vous pouvez l’arrêter en toute sécurité (voir rubrique 3, Si vous arrêtez de prendre CLARADOL CODEINE 500 mg/20 mg, comprimé.Ne pas utiliser de façon prolongée sans avis du médecin, en particulier si les troubles persistent au bout de 3 jours et/ou en cas de survenue de tout autre signe après la prise du médicament.</p>
+<p class=AmmCorpsTexte>Contactez votre médecin si vous présentez une douleur abdominale haute sévère irradiant possiblement dans le dos, des nausées, des vomissements ou de la fièvre car il pourrait s’agir de symptômes associés à une inflammation du pancréas (pancréatite) et des voies biliaires.</p>
+<p class=AmmCorpsTexte>Troubles respiratoires liés au sommeil</p>
+<p class=AmmCorpsTexte>CLARADOL CODEINE 500 mg/20 mg, comprimé peut causer des troubles respiratoires liés au sommeil tels qu’une apnée du sommeil (pauses respiratoires pendant le sommeil) et une hypoxémie (faible taux d’oxygène dans le sang) liée au sommeil. Les symptômes peuvent inclure des pauses respiratoires au cours du sommeil, des réveils nocturnes liés à un essoufflement, des difficultés à maintenir l’état de sommeil ou une somnolence excessive pendant la journée. Si vous ou une autre personne observez ces symptômes, contactez votre médecin. Une réduction de la dose peut être envisagée par votre médecin.</p>
+<p class=AmmCorpsTexte>La prise concomitante de ce médicament avec certains médicaments agissant sur le système nerveux central (naltrexone, buprénorphine, nalbuphine, pentazocine, oxybate de sodium) ou avec la consommation d'alcool (sous forme de boisson ou de constituant d’un médicament) est déconseillée (voir rubrique « Prise ou utilisation d'autres médicaments »).</p>
+<p class=AmmCorpsTexte>Prévenez votre médecin en cas :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>de maladies des reins ou du foie,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>de maladies respiratoires (dont l'asthme),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>d'encombrement bronchique (toux avec expectoration) (voir « Prise ou utilisation d'autres médicaments »),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>d'opération de la vésicule biliaire.</p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>de maladie héréditaire portant sur des enzymes des globules rouges</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>de syndrome de Gilbert</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>de diabète sucré</span></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><span lang=FR-BE>La prise prolongée de paracétamol, en particulier avec d’autres médicaments anti-douleur, peut conduire à un risque d’insuffisance rénale. La prise prolongée de paracétamol à haute dose peut conduire à des lésions hépatiques et rénales. L’association du paracétamol à certains médicaments, l’alcoolisme, une infection généralisée ou un diabète sucré peut augmenter le risque de toxicité hépatique à des doses thérapeutiques.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>En cas d’apparition de rougeurs, de vésicules ou de desquamations de la peau, la prise de paracétamol doit être arrêtée et il faut consulter un médecin immédiatement.</span></p>
+<p class=AmmCorpsTexteGras>Pendant le traitement par CLARADOL CODEINE 500 mg/20 mg, comprimé, informez immédiatement votre médecin si: </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>vous avez des maladies graves, y compris une insuffisance rénale grave ou un sepsis (lorsque des bactéries et leurs toxines circulent dans le sang, entraînant des lésions au niveau des organes), ou si vous êtes atteint de malnutrition, d’alcoolisme chronique ou si vous prenez également de la flucloxacilline (un antibiotique). Une affection grave appelée acidose métabolique (une anomalie du sang et des fluides) a été signalée chez les patients qui prennent régulièrement du paracétamol pendant une période prolongée ou qui prennent du paracétamol en association avec de la flucloxacilline. Les symptômes de l’acidose métabolique peuvent inclure: de graves difficultés respiratoires avec une respiration rapide et profonde, une somnolence, une envie de vomir (nausée) et des vomissements</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>vous ressentez une douleur ou une augmentation de la sensibilité à la douleur (hyperalgésie) qui ne répond pas à une dose plus élevée de votre médicament. </p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexteGras>Enfants et adolescents</p>
+<p class=AmmListePuces1 style='margin-left:0cm;text-indent:0cm;page-break-after: avoid'><b>Patients de moins de 18 ans :</b></p>
+<p class=AmmCorpsTexte>Utilisation après une chirurgie:</p>
+<p class=AmmCorpsTexte>La codéine ne doit pas être utilisée après ablation des amygdales ou des végétations dans le cadre d'un syndrome d'apnée obstructive du sommeil.</p>
+<p class=AmmCorpsTexte>Utilisation lors de problèmes respiratoires :</p>
+<p class=AmmCorpsTexte>La codéine n'est pas recommandée chez les enfants avec des problèmes respiratoires car les symptômes de toxicité de la morphine sont aggravés chez ces enfants.</p>
+<p class=AmmCorpsTexte><b>Autres médicaments et CLARADOL CODEINE 500 mg/20 mg, comprimé</b></p>
+<p class=AmmCorpsTexte>La prise concomitante de ce médicament avec certains médicaments agissant sur le système nerveux central (naltrexone, buprénorphine, nalbuphine, pentazocine, oxybate de sodium) ou avec la consommation d'alcool (sous forme de boisson ou de constituant d’un médicament) est déconseillée.</p>
+<p class=AmmCorpsTexte>Veuillez informer votre médecin ou votre pharmacien si vous prenez : </p>
+<p class=AmmCorpsTexte>-flucloxacilline (antibiotique), en raison d'un risque grave d'anomalie sanguine et plasmatique (appelée acidose métabolique) qui doit faire l'objet d'un traitement urgent (voir rubrique 2).</p>
+<p class=AmmCorpsTexte>-gabapentine ou prégabaline pour traiter l’épilepsie ou la douleur liée à des problèmes nerveux (douleurs neuropathiques). </p>
+<p class=AmmCorpsTexte>Informez votre médecin ou pharmacien si vous prenez, avez récemment pris ou pourriez prendre tout autre médicament. Signalez que vous prenez ce médicament si votre médecin vous prescrit un dosage d'acide urique ou de sucre dans le sang.</p>
+<p class=AmmCorpsTexteGras>CLARADOL CODEINE 500 mg/20 mg, comprimé avec des aliments, boissons et de l’alcool</p>
+<p class=AmmCorpsTexte>L'absorption d'alcool est déconseillée, <u>le risque de toxicité au niveau de foie pouvant être augmenté chez les patients souffrant d’alcoolisme.</u></p>
+<p class=AmmCorpsTexteGras>Grossesse et allaitement et fertilité</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous êtes enceinte ou que vous allaitez, si vous pensez être enceinte ou planifiez une grossesse, demandez conseil à votre médecin ou pharmacien avant de prendre ce médicament</span><span lang=FR-BE>.</span></p>
+<p class=AmmCorpsTexteGras>Grossesse </p>
+<p class=AmmCorpsTexte>Au besoin, CLARADOL CODEINE 500 mg/20 mg, comprimé peut être utilisé pendant la grossesse. Vous devez utiliser la dose la plus faible possible qui permette de soulager la douleur et/ou la fièvre et la prendre pendant la durée la plus courte possible. Contactez votre médecin si la douleur et/ou la fièvre ne diminuent pas ou si vous devez prendre le médicament plus fréquemment.</p>
+<p class=AmmCorpsTexte>Il est possible de prendre ce médicament pendant la grossesse, pour un temps bref (quelques jours<span style='background:#FBE4D5'>),</span> aux doses recommandées. Cependant, en fin de grossesse, la prise abusive de codéine peut entraîner une toxicité chez le nouveau-né. Par conséquent, il convient de toujours demander l'avis de votre médecin avant de prendre ce médicament et de ne jamais dépasser la dose préconisée.</p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>Allaitement</p>
+<p class=AmmCorpsTexte>Ne prenez pas ce médicament si vous allaitez car il contient de la la codéine. La codéine et la morphine passent dans le lait maternel.</p>
+<p class=AmmCorpsTexte>En cas d'allaitement, en dehors d'une prise ponctuelle sur prescription de votre médecin ce médicament est contre-indiqué.</p>
+<p class=AmmCorpsTexteGras>Fertilité</p>
+<p class=AmmCorpsTexte>Il est possible que le paracétamol puisse altérer la fertilité féminine de façon réversible à l’arrêt du traitement.</p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>L'attention est appelée notamment chez les conducteurs de véhicules et les utilisateurs de machines, sur les risques de somnolence dus à la présence de codéine dans ce médicament. Ce phénomène s'atténue après plusieurs prises, il peut être utile de commencer ce traitement le soir. Ce phénomène est accentué par la prise de boissons alcoolisées.</p>
+<p class=AmmCorpsTexte>Des vertiges ou une somnolence peuvent survenir en cas de prise de paracétamol. Les patients doivent être prudents en cas d’activité nécessitant de la vigilance.</p>
+<p class=AmmCorpsTexteGras>CLARADOL CODEINE 500 mg/20 mg, comprimé contient</p>
+<p class=AmmCorpsTexte>Sans objet</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_PRENDRE_CLARADOL_CODEINE_500_mg/20_mg,_comprimé_?'>3. COMMENT PRENDRE CLARADOL CODEINE 500 mg/20 mg, comprimé ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte>Veillez à toujours prendre ce médicament en suivant exactement les indications de votre médecin ou pharmacien. Vérifiez auprès de votre médecin ou pharmacien en cas de doute.</p>
+<p class=AmmCorpsTexte>Avant de débuter le traitement et régulièrement au cours du traitement, votre médecin discutera avec vous de ce que vous pouvez attendre de l’utilisation de CLARADOL CODEINE 500 mg/20 mg, comprimé, quand et pendant combien de temps vous devez le prendre, quand contacter votre médecin, et quand vous devez arrêter de le prendre (voir également, « Si vous arrêtez de prendre CLARADOL CODEINE 500 mg/20 mg, comprimé »).</p>
+<p class=AmmCorpsTexte>RESERVE A L'ADULTE ET A L'ENFANT A PARTIR DE 15 ANS (soit de plus de 50 kg)</p>
+<p class=AmmCorpsTexte>1 comprimé, à renouveler en cas de besoin au bout de 4 à 6 heures. Eventuellement, prendre 2 comprimés en une prise en cas de douleur intense, <b>sans dépasser 6 comprimés par jour.</b></p>
+<p class=AmmCorpsTexte>Il n'est généralement pas nécessaire de dépasser 6 comprimés. Cependant, en cas de douleurs plus intenses et sur avis de votre médecin, la dose maximale peut être augmentée jusqu'à 8 comprimés par jour.</p>
+<p class=AmmCorpsTexte>NE JAMAIS PRENDRE PLUS DE 4 GRAMMES DE PARACETAMOL PAR JOUR (en tenant compte de <u>tous les médicaments</u> contenant du paracétamol dans leur formule).</p>
+<p class=AmmCorpsTexte>Toujours respecter un intervalle de 4 heures minimum entre les prises.</p>
+<p class=AmmCorpsTexte>En cas d'insuffisance rénale; les prises seront espacées de 8 heures minimum et une réduction de la dose totale sera envisagée.</p>
+<p class=AmmCorpsTexte>CE MEDICAMENT VOUS A ETE PERSONNELLEMENT DELIVRE DANS UNE SITUATION PRECISE :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>IL PEUT NE PAS ETRE ADAPTE A UN AUTRE CAS,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>NE PAS LE CONSEILLER À UNE AUTRE PERSONNE.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>EN CAS DE DOUTE, DEMANDEZ CONSEIL À VOTRE MEDECIN OU A VOTRE PHARMACIEN. </p>
+<p class=AmmCorpsTexte>Voie orale.</p>
+<p class=AmmCorpsTexte>Les comprimés sont à avaler tels quels avec un grand verre d'eau.</p>
+<p class=AmmCorpsTexte>En général les prises sont espacées de 6 heures et au minimum de 4 heures. En cas de douleur persistante, les prises systématiques permettent d'éviter les pics de douleur. En cas de maladie grave des reins (insuffisance rénale sévère), les prises seront espacées de 8 heures minimum.</p>
+<p class=AmmCorpsTexte><b><u>Durée de traitement</u></b></p>
+<p class=AmmCorpsTexte>Si la douleur persiste plus de 4 à 5 jours, ne pas continuer le traitement sans l'avis de votre médecin.</p>
+<p class=AmmCorpsTexte>CLARADOL CODEINE 500 mg/20 mg, comprimé doit être utilisé pendant la durée la plus courte nécessaire pour soulager les symptômes. Si la douleur n’est pas soulagée efficacement pendant la prise du médicament, vous devez demander conseil à un médecin.</p>
+<p class=AmmCorpsTexteGras>Si vous avez pris plus de CLARADOL CODEINE 500 mg/20 mg, comprimé que vous n'auriez dû:</p>
+<p class=AmmCorpsTexte>Consultez immédiatement votre médecin ou votre pharmacien.</p>
+<p class=AmmCorpsTexte>En cas de surdosage ou d'intoxication accidentelle, prévenir en urgence un médecin, même si aucun symptôme n’est apparent.</p>
+<p class=AmmCorpsTexte>Les principaux signes du surdosage en codéine sont la somnolence et des difficultés respiratoires.</p>
+<p class=AmmCorpsTexte>En cas de surdosage en paracétamol, c’est principalement le foie qui risque d’être atteint. Le seuil de surdosage peut être abaissé chez les personnes qui prennent certains médicaments, qui consomment de l’alcool ou qui sont dénutries.</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279020">Si vous oubliez de prendre CLARADOL CODEINE 500 mg/20 mg, comprimé :</a></p>
+<p class=AmmCorpsTexte>N'augmentez pas la dose et respectez le délai entre les prises. </p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez de prendre CLARADOL CODEINE 500 mg/20 mg, comprimé :</p>
+<p class=AmmCorpsTexte>En cas de traitement prolongé l'arrêt brutal de ce médicament peut entraîner un syndrome de sevrage.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte>Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</p>
+<p class=AmmCorpsTexte><u>Liés à la présence de codéine</u></p>
+<p class=AmmCorpsTexte>Possibilité de :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>sensation d'endormissement, euphorie, trouble de l'humeur,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>rétrécissement de la pupille, difficulté à uriner,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>réaction d'hypersensibilité (démangeaison, urticaire, éruption cutanée étendue),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>constipation, nausées, vomissements,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>somnolence, états vertigineux,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>réactions d'hypersensibilité (prurit, urticaire et, dans de rares cas, éruption cutanée étendue),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>gêne respiratoire,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>douleurs abdominales en particulier chez les patients cholécystectomisés (sans vésicule biliaire),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>abus, dépendance, syndrome de sevrage en cas d’utilisation prolongée,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>syndrome de sevrage chez le nouveau-né de mère exposé en chronique <i>in utero,</i></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>problème affectant une valve dans les intestins (dysfonction du sphincter d’Oddi)</i>.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><u>Liés à la présence de paracétamol</u></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Il est possible que survienne une éruption ou une rougeur cutanée, des réactions cutanées importantes, ou une réaction allergique pouvant se manifester par un brusque gonflement du visage et du cou ou par un malaise brutal avec chute de la pression artérielle. Il faut immédiatement arrêter le traitement, avertir votre médecin et ne plus jamais reprendre de médicaments contenant du paracétamol.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Des modifications biologiques nécessitant un contrôle du bilan sanguin ont pu être observées : taux anormalement bas de certains globules blancs ou de certaines cellules du sang comme les plaquettes pouvant se traduire par des saignements de nez ou des gencives. Dans ce cas, consultez un médecin.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Des cas de nausées, vomissements, maux d’estomac, diarrhée, maladies du foie et des reins, vertiges, somnolence, de bronchospasme et d’asthme peuvent également survenir</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Fréquence indéterminée (ne peut être estimée à partir des données disponibles): Une affection grave qui peut rendre le sang plus acide (appelée acidose métabolique), chez les patients atteints d’une maladie grave et utilisant du paracétamol (voir rubrique 2)</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt; margin-left:0cm;page-break-after:avoid'><b><u><span style='font-size:10.0pt; font-family:"Arial",sans-serif'>Déclaration des effets secondaires</span></u></b></p>
+<p class=AmmCorpsTexte style='margin-bottom:6.0pt'><span style='font-size:10.0pt; font-family:"Arial",sans-serif'>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien ou à votre infirmier/ère. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice.</span><span style='font-size:10.0pt;font-family: "Arial",sans-serif'> </span><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : </span><span style='font-size:10.0pt;font-family: "Arial",sans-serif'>Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - </span><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Site internet:<span style='color:red'> </span></span><a href="https://signalement.social-sante.gouv.fr/"><span style='font-size:10.0pt; font-family:"Arial",sans-serif'>https://signalement.social-sante.gouv.fr/</span></a><span style='font-size:10.0pt;font-family:"Arial",sans-serif;color:#353838'>.</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:6.0pt'><span style='font-size:10.0pt; font-family:"Arial",sans-serif'>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_CLARADOL_CODEINE_500_mg/20_mg,_comprimé_?'>5. COMMENT CONSERVER CLARADOL CODEINE 500 mg/20 mg, comprimé ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279024">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte>N’utilisez pas ce médicament après la date de péremption indiquée sur la boîte </p>
+<p class=AmmCorpsTexte>La date de péremption fait référence au dernier jour de ce mois.</p>
+<p class=AmmCorpsTexte>Conservez ce médicament dans un espace de stockage sûr et sécurisé, auquel les autres n’ont pas accès. Ce médicament peut avoir des effets nocifs graves et entraîner le décès des personnes auxquelles il n’est pas destiné. </p>
+<p class=AmmCorpsTexte>A conserver dans l’emballage d’origine à l’abri de l’humidité.</p>
+<p class=AmmCorpsTexte>A conserver à une température ne dépassant pas 25°C.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout ni avec les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient CLARADOL CODEINE 500 mg/20 mg, comprimé</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les substances actives sont :</p>
+<p class=AmmComposition>Paracétamol ................................................................................................................... 500,00 mg</p>
+<p class=AmmComposition>Phosphate de codéine hémihydraté................................................................................... 20,50 mg</p>
+<p class=AmmComposition>Quantité correspondant à phosphate de codéine anhydre ..................................................... 20,0 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un comprimé </p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont : </p>
+<p class=AmmComposition>Amidon de maïs prégélatinisé, Povidone, Cellulose microcristalline, Carmellose modifiée type A, Stéarate de magnésium. </p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que CLARADOL CODEINE 500 mg/20 mg, comprimé et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>Ce médicament se présente sous forme de comprimé. Boîte de 16.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmTitulaireNom><span lang=IT>TEOFARMA S.R.l.</span></p>
+<p class=AmmTitulaireAdresse><span lang=IT>VIA F.LLI CERVI, 8</span></p>
+<p class=AmmTitulaireAdresse>27010 VALLE SALIMBENE (PV)</p>
+<p class=AmmTitulaireAdresse>ITALIE</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmTitulaireNom><a name="_Toc142279032"><span lang=IT>TEOFARMA S.R.l.</span></a></p>
+<p class=AmmTitulaireAdresse><span lang=IT>VIA F.LLI CERVI, 8</span></p>
+<p class=AmmTitulaireAdresse>27010 VALLE SALIMBENE (PV)</p>
+<p class=AmmTitulaireAdresse>ITALIE</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmTitulaireNom>DELPHARM GAILLARD</p>
+<p class=AmmTitulaireAdresse>33, rue de l'Industrie</p>
+<p class=AmmTitulaireAdresse>74240 GAILLARD</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class=AmmCorpsTexteGras>{MM/AAAA} {mois AAAA}.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

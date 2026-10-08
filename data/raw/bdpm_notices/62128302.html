@@ -1,0 +1,1773 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="N98cyGqT18L/R4oAWGknoQ==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="N98cyGqT18L/R4oAWGknoQ==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 31/08/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant DOMPERIDONE ARROW 10 mg, comprimé orodispersible"
+            aria-level="3"
+          >
+            DOMPERIDONE ARROW 10 mg, comprimé orodispersible
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament DOMPERIDONE ARROW 10 mg, comprimé orodispersible - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                          <p id="tag-generique" class="fr-tag" aria-controls="fr-modal-tag-generique" data-fr-opened="false">
+              <span class="fr-icon-capsule-fill">
+              </span>&nbsp;générique
+          </p>
+              </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 14/10/2008
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : DOMPERIDONE ARROW 10 mg, comprimé orodispersible - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0445478">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte><a name="_Toc142279003">Classe pharmacothérapeutique : stimulants de la motricité intestinale - code ATC : A03FA03</a></p>
+<p class=AmmCorpsTexte>Ce médicament est utilisé pour traiter les nausées (envie de vomir) et les vomissements chez l’adulte et l’adolescent (à partir de 12 ans et de 35 kg).</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament appartient au(x) groupe(s) générique(s) suivants : <br/><ul role="list"><li role='listitem'><a href='/medicament/affiche/groupe-generique/62128302/617' aria-describedby='tooltip-medicament-generique-0'>DOMPERIDONE 10 mg - MOTILYO 10 mg, lyophilisat oral.</a><span id='tooltip-medicament-generique-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Ouvrir la page de détail sur ce groupe générique</span></li></ul></p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Comprimé ( Composition pour un comprimé )<ul role="list"><li role="listitem" style="list-style-type: none;"> > dompéridone<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">10 mg </span></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > plaquette(s) PVC PVDC aluminium de 20 comprimé(s)  </p><p>Code CIP : 389 070-9 ou 34009 389 070 9 4<br/>Déclaration de commercialisation : 12/12/2016<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 1,40 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 2,42 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :15%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span><section class="fr-accordion">
+    <h3 class="fr-accordion__title">
+        <button class="fr-accordion__btn" aria-expanded="false" aria-controls="indicRestreintes-0">
+            Les indications ouvrant droit au remboursement par l'Assurance Maladie sont disponibles en cliquant ici
+        </button>
+    </h3>
+    <div class="fr-collapse" id="indicRestreintes-0">
+        Ce médicament peut être pris en charge ou remboursé par l'Assurance Maladie dans les cas suivants :<br><br>- Nausées et vomissements de l'adulte ; JOURNAL OFFICIEL ; 23/03/17
+    </div>
+</section></div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><div class='fr-grid-row'><div class='fr-col'><p>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence. </p></div></div><div class='fr-grid-row'><div class='fr-col'><p>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprès de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-smr-aide-2'>plus d'informations dans l'aide</a>). Les avis et synthèses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-smr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection à la page d'aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'SMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur du SMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td>Faible</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2655974'>Avis du 29/06/2016</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 29/06/2016 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Inscription (CT)</td><td class='text-align-center'>Chez l’adulte dans l’indication de l’AMM et sous réserve du respect des mesures de minimisation des risques cardio-vasculaires, le service médical rendu par les spécialités à base de dompéridone est faible.</td></tr><tr><td>Insuffisant</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2655974'>Avis du 29/06/2016</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 29/06/2016 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Inscription (CT)</td><td class='text-align-center'>Chez l’enfant dans l’indication de l’AMM, le service médical rendu par les spécialités à base de dompéridone est insuffisant pour une prise en charge par la solidarité nationale.</td></tr><tr><td>Faible</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2627636'>Avis du 06/04/2016</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 06/04/2016 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Réévaluation SMR</td><td class='text-align-center'>Chez l’adulte dans l’indication de l’AMM et sous réserve du respect des mesures de minimisation des risques cardio-vasculaires, la Commission considère que le service médical rendu par les spécialités à base de dompéridone est faible.</td></tr><tr><td>Insuffisant</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2627636'>Avis du 06/04/2016</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 06/04/2016 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Réévaluation SMR</td><td class='text-align-center'>Chez l’enfant dans l’indication de l’AMM, le service médical rendu par les spécialités à base de dompéridone est insuffisant pour une prise en charge par la solidarité nationale.</td></tr></tbody></table></div></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence.</p></div></div><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprés de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-asmr-aide-3'>plus d'informations dans l'aide</a>). Les avis et synthéses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-asmr-aide-3' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers la page aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'ASMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur de l'ASMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td class="text-align-center">V (Inexistant)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/c_2655974'>Avis du 29/06/2016</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 29/06/2016 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Inscription (CT)</td><td class="text-align-center">Cette spécialité est un complément de gamme qui n’apporte pas d’amélioration du service médical rendu (ASMR V) par rapport aux présentations déjà inscrites.</td></tr></tbody></table></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : ARROW GENERIQUES</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste II</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure nationale</li><li>Code CIS : &nbsp;6 212 830 2</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : DOMPERIDONE ARROW 10 mg, comprimé orodispersible - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="DOMPERIDONE ARROW 10 mg, comprimé orodispersible, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 25/03/2026</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras>DOMPERIDONE ARROW 10 mg, comprimé orodispersible</p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Dompéridone.................................................................................................................... 10,00 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un comprimé orodispersible</p>
+<p class=AmmCorpsTexte>Excipients à effet notoire : anhydride sulfureux (E220) (sulfites), maltodextrine (source de glucose).</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Comprimé orodispersible.</p>
+<p class=AmmCorpsTexte>Comprimé blanc à sensiblement blanc, rond, biconvexe.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte>DOMPERIDONE ARROW est indiqué pour le soulagement des symptômes de type nausées et vomissements.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmAnnexeTitre3>Posologie</p>
+<p class=AmmCorpsTexte>DOMPERIDONE ARROW doit être utilisé à la dose minimale efficace pour la durée la plus courte nécessaire pour contrôler les nausées et les vomissements.</p>
+<p class=AmmCorpsTexte>Il est recommandé de prendre DOMPERIDONE ARROW avant les repas. Si le médicament est pris après les repas, son absorption est quelque peu retardée.</p>
+<p class=AmmCorpsTexte>Les patients doivent s’efforcer de prendre chaque dose à l’heure prévue. Si une dose prévue est oubliée, cette dose ne doit pas être prise et le schéma d’administration habituel doit être poursuivi. La dose ne doit pas être doublée pour compenser une dose omise.</p>
+<p class=AmmCorpsTexte>Habituellement, la durée maximale du traitement ne doit pas dépasser une semaine.</p>
+<p class=AmmAnnexeTitre4>Adultes et adolescents (à partir de 12 ans et de 35 kg)</p>
+<p class=AmmCorpsTexte>Un comprimé à 10 mg, jusqu’à 3 fois par jour, la dose maximale étant de 30 mg par jour.</p>
+<p class=AmmAnnexeTitre4>Insuffisance hépatique</p>
+<p class=AmmCorpsTexte>DOMPERIDONE ARROW est contre-indiqué en cas d’insuffisance hépatique modérée ou sévère (voir rubrique 4.3). </p>
+<p class=AmmCorpsTexte>Une modification de la dose n’est cependant pas nécessaire en cas d’insuffisance hépatique légère (voir rubrique 5.2).</p>
+<p class=AmmAnnexeTitre3><i><span style='font-weight:normal'>Insuffisance rénale</span></i></p>
+<p class=AmmCorpsTexte>Etant donné que la demi-vie d’élimination de la dompéridone est allongée en cas d’insuffisance rénale sévère, en cas d’administrations répétées, la fréquence d’administration de DOMPERIDONE ARROW doit être réduite à une ou deux prise(s) par jour en fonction du degré de sévérité de l’insuffisance rénale. Une diminution de la dose peut s’avérer nécessaire.</p>
+<p class=AmmAnnexeTitre3><i><span style='font-weight:normal'>Population pédiatrique</span></i></p>
+<p class=AmmCorpsTexte>L'efficacité de DOMPERIDONE ARROW chez les enfants âgés de moins de 12 ans n'a pas été établie (voir rubrique 5.1).</p>
+<p class=AmmCorpsTexte>L'efficacité de DOMPERIDONE ARROW chez les adolescents âgés de plus de 12 ans et pesant moins de 35 kg n'a pas été établie.</p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte>Le comprimé orodispersible se dissout rapidement dans la bouche avec l’aide de la salive et il peut être pris avec ou sans eau. Lorsqu’il est pris sans eau, le comprimé doit être placé sur la langue et dissous dans la bouche avant de l’avaler. Il est possible de boire un verre d’eau juste après.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmCorpsTexte><a name="_Hlk212123350">DOMPERIDONE ARROW est contre-indiqué dans les situations suivantes : </a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>hypersensibilité à la substance active ou à l’un des excipients mentionnés à la rubrique 6.1 ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>tumeur hypophysaire à prolactine (prolactinome) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>lorsque la stimulation de la motricité gastrique peut s’avérer nocive, par exemple chez les patients présentant une hémorragie gastro-intestinale, une obstruction mécanique ou une perforation ; </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>chez les patients atteints d’une insuffisance hépatique modérée ou sévère (voir rubrique 5.2) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>chez les patients ayant un allongement connu des intervalles de conduction cardiaque, notamment de l’intervalle QTc, les patients présentant des troubles électrolytiques importants ou des maladies cardiaques sous-jacentes telles qu’une insuffisance cardiaque congestive (voir rubrique 4.4) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>administration concomitante avec les médicaments qui allongent l’intervalle QT, à l’exception de l’apomorphine (voir les rubriques 4.4 et 4.5) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>administration concomitante avec les inhibiteurs puissants du CYP3A4 (quels que soient leurs effets d’allongement de l’intervalle QT) (voir rubrique 4.5) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>phéochromocytome confirmé ou suspecté en raison du risque d’épisodes d’hypertension sévères.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmAnnexeTitre3>Insuffisance rénale</p>
+<p class=AmmCorpsTexte>La demi-vie d'élimination de la dompéridone est allongée en cas d'insuffisance rénale sévère. En conséquence, en cas d'administrations répétées, la fréquence d'administration de la dompéridone doit être réduite à une ou deux prises par jour en fonction du degré de sévérité de l'insuffisance rénale. Une diminution de la dose peut s'avérer nécessaire.</p>
+<p class=AmmAnnexeTitre3>Effets cardiovasculaires</p>
+<p class=AmmCorpsTexte>La dompéridone a été associée à un allongement de l'intervalle QT à l'électrocardiogramme. Au cours de la surveillance après commercialisation, de très rares cas d'allongement de l'intervalle QT et de torsades de pointes ont été rapportés chez des patients traités par la dompéridone. Ces cas concernent des patients avec des facteurs de risque, des anomalies électrolytiques et des traitements associés qui ont pu être des facteurs contributifs (voir rubrique 4.8).</p>
+<p class=AmmCorpsTexte>Des études épidémiologiques ont mis en évidence que la dompéridone est associée à un risque accru d'arythmies ventriculaires graves ou de mort subite (voir rubrique 4.8). Un risque plus élevé a été observé chez les patients de plus de 60 ans, les patients traités par des doses quotidiennes supérieures à 30 mg et les patients traités simultanément par des médicaments qui allongent l'intervalle QT ou des inhibiteurs du CYP3A4.</p>
+<p class=AmmCorpsTexte>La dompéridone doit être utilisée à la dose efficace la plus faible.</p>
+<p class=AmmCorpsTexte>La dompéridone est contre-indiquée chez les patients ayant un allongement connu des intervalles de conduction cardiaque, notamment de l'intervalle QTc, les patients présentant des troubles électrolytiques importants (hypokaliémie, hyperkaliémie, hypomagnésémie) ou une bradycardie, ou les patients présentant des maladies cardiaques sous-jacentes telles qu'une insuffisance cardiaque congestive en raison du risque accru d'arythmies ventriculaires (voir rubrique 4.3). Les troubles électrolytiques (hypokaliémie, hyperkaliémie, hypomagnésémie) et la bradycardie sont connus pour augmenter le risque pro-arythmique.</p>
+<p class=AmmCorpsTexte>Le traitement par la dompéridone doit être arrêté en cas de survenue de signes ou symptômes pouvant être associés à une arythmie cardiaque et les patients doivent consulter leur médecin.</p>
+<p class=AmmCorpsTexte>Les patients doivent être invités à rapporter immédiatement tout symptôme cardiaque.</p>
+<p class=AmmCorpsTexteGras><u>Utilisation avec l’apomorphine</u></p>
+<p class=AmmCorpsTexte>La dompéridone est contre-indiquée avec les médicaments qui allongent l’intervalle QT, notamment l’apomorphine, sauf si le bénéfice de l’administration concomitante avec l’apomorphine est supérieur aux risques, et uniquement si les précautions recommandées pour l’administration concomitante mentionnées dans le RCP de l'apomorphine sont strictement respectées. Veuillez-vous reporter au RCP de l’apomorphine.</p>
+<p class=AmmAnnexeTitre3>Excipients à effet notoire</p>
+<p class=AmmCorpsTexte>Ce médicament contient de la maltodextrine, source de glucose. Les patients présentant un syndrome de malabsorption du glucose et du galactose (maladie héréditaire rare) ne doivent pas prendre ce médicament.</p>
+<p class=AmmCorpsTexte>Ce médicament contient de l’anhydride sulfureux (E220) (sulfites) et peut, dans de rares cas, provoquer des réactions d’hypersensibilité sévères et des bronchospasmes.</p>
+<p class=AmmCorpsTexte>Ce médicament contient moins de 1 mmol (23 mg) de sodium par comprimé orodispersible, c’est-à-dire qu’il est essentiellement « sans sodium ».</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmCorpsTexte><a name="_Hlk212123367">Si des médicaments antiacides ou antisécrétoires sont également prescrits, ils ne<b> </b>doivent pas être pris en même temps que DOMPERIDONE ARROW (dompéridone base). Ainsi, ils devront</a> être pris après le repas et non avant.</p>
+<p class=AmmAnnexeTitre3>Association avec la lévodopa</p>
+<p class=AmmCorpsTexte><span style='layout-grid-mode:line'>Bien qu’un ajustement posologique de la lévodopa ne soit pas jugé nécessaire, une augmentation de la concentration plasmatique (de 30 à 40 % maximum) a été observée lorsque la dompéridone est prise de façon concomitante à la lévodopa.</span></p>
+<p class=AmmCorpsTexte>La voie métabolique principale de la dompéridone implique le CYP3A4. Les données <i>in vitro</i> suggèrent que l’administration concomitante de médicaments qui inhibent le CYP3A4 de façon importante peut entraîner l’augmentation des concentrations plasmatiques de dompéridone.</p>
+<p class=AmmCorpsTexte>Risque accru d’allongement de l’intervalle QT en raison d’interactions pharmacodynamiques et/ou pharmacocinétiques.</p>
+<p class=AmmAnnexeTitre3>Associations contre-indiquées</p>
+<p class=AmmCorpsTexte>Médicaments qui allongent l'intervalle QTc (risque de torsades de pointes) :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>antiarythmiques de classe IA (par exemple disopyramide, hydroquinidine, quinidine) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>antiarythmiques de classe III (par exemple amiodarone, dofétilide, dronédarone, ibutilide, sotalol) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>certains antipsychotiques (par exemple halopéridol, pimozide, sertindole) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>certains antidépresseurs (par exemple citalopram, escitalopram) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>certains antibiotiques (par exemple érythromycine, lévofloxacine, moxifloxacine, spiramycine) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>certains antifongiques (par exemple fluconazole, pentamidine) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>certains antipaludéens (en particulier halofantrine, luméfantrine) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>certains médicaments à visée digestive (par exemple cisapride, dolasétron, prucalopride) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>certains antihistaminiques (par exemple méquitazine, mizolastine) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>certains anticancéreux (par exemple torémifène, vandétanib, vincamine) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>certains autres médicaments (par exemple bépridil, diphémanil, méthadone) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>apomorphine, sauf si le bénéfice de l’administration concomitante est supérieur aux risques, et uniquement si les précautions recommandées pour l’administration concomitante sont strictement respectées. Veuillez-vous reporter au RCP de l’apomorphine. </p>
+<p class=AmmListePuces1 style='margin-left:0cm;text-indent:0cm'>(voir rubrique 4.3).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Inhibiteurs puissants du CYP3A4 (<u>quels que soient leurs effets d'allongement de l'intervalle QT</u>), c’est-à-dire :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>anti-protéases (par exemple ritonavir, saquinavir et télaprévir) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>antifongiques azolés systémiques (par exemple itraconazole, kétoconazole, posaconazole, voriconazole) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>certains antibiotiques de la classe des macrolides (par exemple, clarithromycine et télithromycine).</p>
+<p class=AmmListePuces1 style='margin-left:0cm;text-indent:0cm'>(voir rubrique 4.3).</p>
+<p class=AmmAnnexeTitre3>Associations déconseillées</p>
+<p class=AmmCorpsTexte>Inhibiteurs modérés du CYP3A4, c’est-à-dire diltiazem, vérapamil et certains macrolides.</p>
+<p class=AmmAnnexeTitre3>Associations faisant l’objet de précautions d'emploi</p>
+<p class=AmmCorpsTexte>La prudence est de rigueur avec les médicaments qui induisent une bradycardie et une hypokaliémie ainsi qu’avec les macrolides suivants, qui allongent l'intervalle QT : azithromycine et roxithromycine (la clarithromycine est contre-indiquée car elle est un inhibiteur puissant du CYP3A4).</p>
+<p class=AmmCorpsTexte>La liste de substances citées ci-dessus est représentative et non exhaustive.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte>Il existe peu de données après commercialisation sur l’utilisation de la dompéridone chez les femmes enceintes. Une étude chez le rat a montré un effet toxique sur la reproduction en cas de dose élevée, toxique pour la mère. Le risque éventuel chez l’homme est inconnu.</p>
+<p class=AmmCorpsTexte>De ce fait, DOMPERIDONE ARROW ne doit être utilisé pendant la grossesse que lorsque le bénéfice thérapeutique attendu le justifie.</p>
+<p class=AmmAnnexeTitre3>Allaitement</p>
+<p class=AmmCorpsTexte>La dompéridone est excrétée dans le lait maternel humain et les enfants allaités reçoivent moins de 0,1 % de la dose maternelle ajustée selon le poids. La survenue d'effets indésirables, en particulier des effets cardiaques, ne peut être exclue après l'exposition via le lait maternel. Une décision doit être prise d'arrêter l'allaitement ou d'interrompre/de s’abstenir du traitement par la dompéridone en tenant compte du bénéfice de l'allaitement pour l'enfant et du bénéfice du traitement pour la mère. La prudence est de rigueur en présence de facteurs de risque d'allongement de l'intervalle QTc chez les enfants allaités.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte>Une somnolence et des sensations vertigineuses ont été observées suite à l’utilisation de dompéridone (voir rubrique 4.8). En conséquence, les patients doivent être informés qu’ils ne doivent pas conduire ni utiliser de machines, ni se livrer à d’autres activités nécessitant de la vigilance et de la coordination, avant de connaître l’effet que DOMPERIDONE ARROW produit sur eux.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmCorpsTexte>La sécurité d’emploi de la dompéridone a été évaluée au cours d’essais cliniques et lors de l’expérience après commercialisation. Les essais cliniques (31 études en double-aveugle, contrôlées <i>versus</i> placebo) ont inclus 1 275 patients présentant une dyspepsie, un reflux gastro-œsophagien (RGO), un syndrome du côlon irritable, des nausées et des vomissements ou d’autres pathologies similaires. </p>
+<p class=AmmCorpsTexte>Tous les patients étaient âgés d’au moins 15 ans et ont reçu au moins une dose de dompéridone (base). La dose quotidienne totale médiane était de 30 mg (intervalle de 10 à 80 mg). La durée médiane d’exposition était de 28 jours (intervalle de 1 à 28 jours).</p>
+<p class=AmmCorpsTexte>Les études réalisées chez des patients présentant des gastroparésies diabétiques, des symptômes secondaires à des chimiothérapies ou une maladie de Parkinson ont été exclues.</p>
+<p class=AmmCorpsTexte>Les effets indésirables sont classés selon leur fréquence, selon la convention suivante : très fréquent (&#8805; 1/10), fréquent (&#8805; 1/100 à < 1/10), peu fréquent (&#8805; 1/1 000 à < 1/100), rare (&#8805; 1/10 000 à < 1/1 000) et très rare (< 1/10 000). Lorsque la fréquence n’a pas pu être estimée sur la base des données cliniques, elle est indiquée comme « indéterminée ».</p>
+<div align=center>
+<div class='fr-table--lg fr-table'><table>
+<thead>
+<tr>
+<td width=143 valign=top style='width:107.0pt;border:solid black 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='margin-top:3.0pt;text-align:center; page-break-after:avoid'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>Système Organe</span></b></p>
+<p class=AmmCorpsTexte align=center style='margin-top:3.0pt;text-align:center; page-break-after:avoid'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>Classe </span></b></p>
+</td>
+<td width=476 colspan=3 valign=top style='width:357.3pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='margin-top:3.0pt;text-align:center; page-break-after:avoid'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>Effet indésirable</span></b></p>
+<p class=AmmCorpsTexte align=center style='margin-bottom:3.0pt;text-align:center; page-break-after:avoid'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>Fréquence</span></b></p>
+</td>
+</tr>
+<tr>
+<td width=143 valign=top style='width:107.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td width=129 style='width:97.1pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif;color:black'>Fréquent</span></b></p>
+</td>
+<td width=151 style='width:112.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif;color:black'>Peu fréquent</span></b></p>
+</td>
+<td width=196 valign=top style='width:147.3pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b><span lang=FR-BE style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>Indéterminée</span></b></p>
+</td>
+</tr>
+</thead>
+<tr>
+<td width=143 valign=top style='width:107.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif;color:black'>Affections du système immunitaire</span></b></p>
+</td>
+<td width=129 valign=top style='width:97.1pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td width=151 valign=top style='width:112.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td width=196 valign=top style='width:147.3pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Réaction anaphylactique (incluant choc anaphylactique)</span></p>
+</td>
+</tr>
+<tr>
+<td width=143 valign=top style='width:107.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif;color:black'>Affections psychiatriques</span></b></p>
+</td>
+<td width=129 valign=top style='width:97.1pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td width=151 valign=top style='width:112.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Perte de la libido</span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Anxiété</span><span style='font-size:10.0pt;font-family:"Arial",sans-serif;color:black; background:yellow'> </span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Agitation</span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Nervosité</span></p>
+</td>
+<td width=196 valign=top style='width:147.3pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+</tr>
+<tr>
+<td width=143 valign=top style='width:107.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif;color:black'>Affections du système nerveux</span></b></p>
+</td>
+<td width=129 valign=top style='width:97.1pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td width=151 valign=top style='width:112.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Sensations vertigineuses</span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Somnolence</span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Céphalées</span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Troubles extrapyramidaux</span></p>
+</td>
+<td width=196 valign=top style='width:147.3pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Convulsions</span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Syndrome des jambes sans repos*</span></p>
+</td>
+</tr>
+<tr>
+<td width=143 valign=top style='width:107.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif;color:black'>Affections oculaires</span></b></p>
+</td>
+<td width=129 valign=top style='width:97.1pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td width=151 valign=top style='width:112.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td width=196 valign=top style='width:147.3pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Crise oculogyre</span></p>
+</td>
+</tr>
+<tr>
+<td width=143 valign=top style='width:107.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span lang=FR-BE style='font-size:10.0pt;font-family:"Arial",sans-serif;color:black'>Affections cardiaques</span></b></p>
+</td>
+<td width=129 valign=top style='width:97.1pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td width=151 valign=top style='width:112.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td width=196 valign=top style='width:147.3pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Arythmies ventriculaires Allongement de l’intervalle QTc</span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Torsade de pointes</span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Mort subite</span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>(voir rubrique 4.4)</span></p>
+</td>
+</tr>
+<tr>
+<td width=143 valign=top style='width:107.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif;color:black'>Affections gastro-intestinales</span></b></p>
+</td>
+<td width=129 valign=top style='width:97.1pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Bouche sèche</span></p>
+</td>
+<td width=151 valign=top style='width:112.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Diarrhées</span></p>
+</td>
+<td width=196 valign=top style='width:147.3pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+</tr>
+<tr>
+<td width=143 valign=top style='width:107.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif;color:black'>Affections de la peau et du tissu sous-cutané</span></b></p>
+</td>
+<td width=129 valign=top style='width:97.1pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td width=151 valign=top style='width:112.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Eruption cutanée</span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Prurit</span><span style='font-size:10.0pt;font-family:"Arial",sans-serif;color:black; background:yellow'> </span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span lang=FR-BE style='font-size:10.0pt;font-family:"Arial",sans-serif;color:black'>Urticaire</span></p>
+</td>
+<td width=196 valign=top style='width:147.3pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Angio-œdème</span></p>
+</td>
+</tr>
+<tr>
+<td width=143 valign=top style='width:107.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif;color:black'>Affections du rein et des voies urinaires</span></b></p>
+</td>
+<td width=129 valign=top style='width:97.1pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td width=151 valign=top style='width:112.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td width=196 valign=top style='width:147.3pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Rétention urinaire</span></p>
+</td>
+</tr>
+<tr>
+<td width=143 valign=top style='width:107.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif;color:black'>Affections des organes de reproduction et du sein</span></b></p>
+</td>
+<td width=129 valign=top style='width:97.1pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td width=151 valign=top style='width:112.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Galactorrhée</span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Douleur mammaire</span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Hypersensibilité mammaire</span></p>
+</td>
+<td width=196 valign=top style='width:147.3pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Gynécomastie</span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Aménorrhée</span></p>
+</td>
+</tr>
+<tr>
+<td width=143 valign=top style='width:107.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif;color:black'>Troubles généraux et anomalies au site d’administration</span></b></p>
+</td>
+<td width=129 valign=top style='width:97.1pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td width=151 valign=top style='width:112.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Asthénie</span></p>
+</td>
+<td width=196 valign=top style='width:147.3pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+</tr>
+<tr>
+<td width=143 valign=top style='width:107.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif;color:black'>Investigations</span></b></p>
+</td>
+<td width=129 valign=top style='width:97.1pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td width=151 valign=top style='width:112.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td width=196 valign=top style='width:147.3pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Anomalies des tests de la fonction hépatique</span></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Augmentation de la prolactinémie</span></p>
+</td>
+</tr>
+</table></div>
+</div>
+<p class=AmmCorpsTexte>* exacerbation du syndrome des jambes sans repos chez les patients atteints de maladie de Parkinson.</p>
+<p class=AmmCorpsTexte>La dompéridone a été utilisée à des doses plus élevées dans 45 études cliniques de plus longue durée et dans des indications telles que les gastroparésies diabétiques. Dans ces études, la fréquence des évènements indésirables (excepté la bouche sèche) était considérablement plus élevée, en particulier les effets pharmacologiques connus et liés à l’augmentation de la prolactine. En plus des effets listés ci-dessus, ont également été observés les effets suivants : akathisie, écoulement mammaire, augmentation du volume des seins, gonflement des seins, dépression, hypersensibilité, troubles de la lactation et irrégularité des règles.</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmAnnexeTitre3>Symptômes</p>
+<p class=AmmCorpsTexte>Les cas de surdosage ont été rapportés essentiellement chez les nourrissons et les enfants. Les symptômes de surdosage peuvent inclure agitation, troubles de la conscience, convulsions, désorientation, somnolence et réactions extrapyramidales.</p>
+<p class=AmmAnnexeTitre3>Traitement</p>
+<p class=AmmCorpsTexte>Il n’existe pas d’antidote spécifique à la dompéridone. En cas de surdosage, un traitement symptomatique standard doit être administré immédiatement. Une surveillance ECG est recommandée en raison de la possibilité d’allongement de l’intervalle QT. Une surveillance médicale étroite et un traitement symptomatique sont recommandés.</p>
+<p class=AmmCorpsTexte>Les médicaments anti-cholinergiques ou anti-parkinsoniens peuvent être utiles pour contrôler les troubles extrapyramidaux.</p>
+<p class=AmmCorpsTexte>Il est conseillé de contacter un centre antipoison afin d’obtenir les dernières recommandations dans la prise en charge du surdosage.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras>Classe pharmacothérapeutique : stimulants de la motricité intestinale, code ATC : A03FA03.</p>
+<p class=AmmCorpsTexte>La dompéridone est un antagoniste de la dopamine aux propriétés antiémétiques qui ne traverse pas facilement la barrière hémato-encéphalique. Chez les utilisateurs de dompéridone, en particulier chez les adultes, les troubles extrapyramidaux sont très rares, mais la dompéridone entraîne la libération de prolactine par l’hypophyse. Son effet antiémétique semble dû à une combinaison d’effets périphériques (motilité gastrique) et à un antagonisme des récepteurs dopaminergiques dans la zone de stimulation des chimiorécepteurs, située hors de la barrière hémato-encéphalique, dans l’<i>area postrema</i>. Les études chez l’animal, ainsi que les faibles concentrations trouvées dans le cerveau, indiquent un effet périphérique prédominant de la dompéridone sur les récepteurs dopaminergiques. Les études chez l’homme ont montré que la dompéridone <i>per os</i> augmente le tonus du sphincter inférieur de l’œsophage, améliore la motilité antroduodénale et accélère la vidange gastrique. Il n’y a pas d’effet sur la sécrétion gastrique.</p>
+<p class=AmmCorpsTexte>Conformément à la directive ICH-E14, une étude approfondie de l'intervalle QT a été réalisée. Cette étude comportait un placebo, un comparateur actif et un témoin positif et elle a été conduite chez des sujets sains à une dose de 10 ou 20 mg de dompéridone administrée 4 fois par jour jusqu'à une dose quotidienne maximale de 80 mg. Cette étude a mis en évidence une différence maximale de l'intervalle QTc entre la dompéridone et le placebo (d'après la méthode des moindres carrés pour la variation par rapport à l'inclusion) de 3,4 ms avec 20 mg de dompéridone administrés 4 fois par jour au Jour 4. L'IC bilatéral à 90 % (1,0 à 5,9 ms) n'a pas dépassé 10 ms. Aucun effet cliniquement pertinent sur l'intervalle QTc n'a été observé dans cette étude lorsque la dompéridone a été administrée jusqu'à une dose de 80 mg/jour (c’est-à-dire, plus de deux fois la dose maximale recommandée).</p>
+<p class=AmmCorpsTexte>Toutefois, deux études antérieures d'interactions médicamenteuses ont montré un certain allongement de l'intervalle QTc en cas d'administration de la dompéridone en monothérapie (10 mg 4 fois par jour). La différence moyenne la plus importante de l'intervalle QTcF, ajustée en fonction du temps, entre la dompéridone et le placebo a été respectivement de 5,4 ms (IC à 95 % : -1,7 à 12,4) et 7,5 ms (IC à 95 % : 0,6 à 14,4).</p>
+<p class=AmmAnnexeTitre3>Les études cliniques chez le nourrisson et chez l’enfant de 12 ans et moins</p>
+<p class=AmmCorpsTexte>Une étude prospective multicentrique, en double aveugle, randomisée, contrôlée <i>versus</i> placebo et en groupes parallèles, a été menée pour évaluer la sécurité et l'efficacité de la dompéridone chez 292 enfants âgés de 6 mois à 12 ans atteints de gastro-entérite aiguë (âge médian 7 ans). En plus du traitement par réhydratation orale (TRO), les sujets randomisés ont reçu une suspension orale de dompéridone à raison de 0,25 mg/kg (jusqu'à un maximum de 30 mg de dompéridone/jour), ou un placebo, 3 fois par jour pendant 7 jours au maximum. Dans cette étude, le critère principal n'a pas été atteint : la suspension de dompéridone associée au TRO n’a pas démontré une efficacité supérieure au placebo associé au TRO pour réduire les vomissements au cours des premières 48 heures après la première administration du traitement (voir rubrique 4.2).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmAnnexeTitre3>Absorption</p>
+<p class=AmmCorpsTexte>La dompéridone est rapidement absorbée après administration orale, avec un pic de concentration plasmatique atteint en 1 h environ. Les valeurs de la C<sub>max</sub> et de l'aire sous la courbe (ASC) de la dompéridone augmentent proportionnellement à la dose dans l'intervalle de doses comprises entre 10 mg et 20 mg. Une augmentation de 2 à 3 fois de l'ASC de la dompéridone a été observée en cas d'administrations répétées quatre fois par jour (toutes les 5 h) de dompéridone pendant 4 jours.</p>
+<p class=AmmCorpsTexte>Bien que la biodisponibilité de la dompéridone soit plus élevée chez les sujets sains en cas de prise après un repas, les patients ayant des troubles gastro-intestinaux doivent prendre la dompéridone 15 à 30 minutes avant le repas. Une acidité gastrique réduite diminue l’absorption de la dompéridone. La biodisponibilité orale diminue en cas d’administration concomitante préalable de cimétidine et de bicarbonate de sodium. </p>
+<p class=AmmAnnexeTitre3>Distribution</p>
+<p class=AmmCorpsTexte>La dompéridone se lie entre 91 et 93 % aux protéines plasmatiques. Des études de distribution chez l’animal avec des médicaments radiomarqués ont montré une large distribution dans les tissus, mais une faible concentration dans le cerveau. De faibles quantités de produit actif traversent le placenta chez la rate.</p>
+<p class=AmmAnnexeTitre3>Biotransformation</p>
+<p class=AmmCorpsTexte>La dompéridone subit un métabolisme hépatique rapide et important par hydroxylation et N-désalkylation. Les études de métabolisme <i>in vitro</i> utilisant des inhibiteurs diagnostiques ont révélé que le CYP3A4 est une forme majeure du cytochrome P-450 jouant un rôle dans la N-désalkylation de la dompéridone, alors que le CYP3A4, le CYP1A2 et le CYP2E1 interviennent dans l’hydroxylation aromatique de la dompéridone.</p>
+<p class=AmmAnnexeTitre3>Elimination</p>
+<p class=AmmCorpsTexte>Les excrétions urinaires et fécales représentent respectivement 31 et 66 % de la dose orale. La proportion de produit excrété sous forme inchangée est faible (10 % des excrétions fécales et environ 1 % des excrétions urinaires). La demi-vie plasmatique après une dose orale unique est de 7 à 9 heures chez les sujets sains, mais est prolongée chez les patients souffrant d’insuffisance rénale sévère.</p>
+<p class=AmmAnnexeTitre3>Insuffisance hépatique</p>
+<p class=AmmCorpsTexte>Chez les sujets présentant une insuffisance hépatique modérée (score de Pugh de 7 à 9, classification B de Child-Pugh), l’ASC et la C<sub>max </sub>de la dompéridone sont respectivement 2,9 et 1,5 fois supérieures à celles de sujets sains. La fraction libre est augmentée de 25 %, et la demi-vie d’élimination terminale est prolongée, passant de 15 à 23 heures. Les sujets atteints d'une légère insuffisance hépatique montrent, sur la base de la C<sub>max</sub> et de l'ASC, une exposition systémique légèrement inférieure à celle des sujets sains, sans qu'il y ait de changement dans la liaison aux protéines ni dans la demi-vie terminale. Aucune étude n'a été menée chez des sujets atteints d'insuffisance hépatique sévère. DOMPERIDONE ARROW est contre-indiqué chez les patients atteints d’une insuffisance hépatique modérée ou sévère (voir rubrique 4.3).</p>
+<p class=AmmAnnexeTitre3>Insuffisance rénale</p>
+<p class=AmmCorpsTexte>Chez les sujets présentant une insuffisance rénale sévère (clairance de la créatinine < 30 mL/min/1,73 m²), la demi-vie de la dompéridone a été augmentée, passant de 7,4 à 20,8 heures, mais les taux plasmatiques du médicament sont inférieurs à ceux observés chez des sujets sains. Étant donné que la dompéridone n'est que très faiblement excrétée sous forme inchangée (environ 1 %) via les reins, il est peu probable que, lors d'une administration unique, la dose doive être ajustée chez les patients atteints d’insuffisance rénale. Cependant, en cas d'administrations répétées, la fréquence d'administration doit être réduite à une ou deux prises par jour en fonction du degré de l'insuffisance rénale et une diminution de la dose peut s'avérer nécessaire.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte>Des études électrophysiologiques réalisées <i>in vitro</i> et <i>in vivo</i> indiquent que chez l'être humain, la dompéridone induit un risque global modéré d'allongement de l'intervalle QTc. Lors d'études réalisées <i>in vitro</i> sur des cellules isolées ayant subi une transfection du gène hERG et sur des myocytes isolés de cobayes, les rapports d'exposition variaient entre 26 et 47 fois, sur la base des IC 50 inhibant la conduction à travers les canaux ioniques IKr, par rapport aux concentrations plasmatiques libres observées chez l'être humain après l'administration de la dose quotidienne maximale de 10 mg trois fois par jour. </p>
+<p class=AmmCorpsTexte>Au cours d'études <i>in vitro</i> réalisées sur des tissus cardiaques isolés, les marges de sécurité pour l'allongement de la durée du potentiel d'action étaient 45 fois supérieures aux concentrations plasmatiques libres observées chez l'être humain en cas d'administration de la dose quotidienne maximale (10 mg trois fois par jour). Dans les modèles pro-arythmiques <i>in vitro</i> (cœur isolé perfusé selon la méthode de Langendorff), les marges de sécurité étaient entre 9 et 45 fois supérieures aux concentrations plasmatiques libres observées chez l'être humain en cas d'administration de la dose quotidienne maximale (10 mg trois fois par jour). </p>
+<p class=AmmCorpsTexte>Dans des modèles <i>in vivo</i>, les doses sans effet sur l'allongement de l'intervalle QTc chez le chien et sur l'induction d'arythmies dans un modèle de lapin sensibilisé aux torsades de pointe étaient respectivement 22 fois et 435 fois supérieures aux concentrations plasmatiques libres observées chez l'être humain en cas d'administration de la dose quotidienne maximale (10 mg trois fois par jour). Dans le modèle de cobaye anesthésié après des perfusions intraveineuses lentes, aucun effet sur l'intervalle QTc n'a été observé à des concentrations plasmatiques totales de 45,4 ng/mL, qui sont 3 fois supérieures aux concentrations plasmatiques totales observées chez l'être humain en cas d'administration de la dose quotidienne maximale (10 mg trois fois par jour). La pertinence de cette dernière étude pour l'être humain après l'exposition à la dompéridone administrée par voie orale est incertaine.</p>
+<p class=AmmCorpsTexte>En cas d'inhibition du métabolisme dépendant du CYP3A4, les concentrations plasmatiques libres de dompéridone peuvent être multipliées jusqu'à 3 fois.</p>
+<p class=AmmCorpsTexte>Chez le rat, en cas d'administration de doses toxiques élevées à la mère (plus de 40 fois la posologie recommandée chez l'être humain), on a observé la survenue d'effets tératogènes. Chez la souris et le lapin, aucune tératogénicité n'a été observée.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte>Cellulose microcristalline, crospovidone, arôme citron*, stéarate de magnésium, saccharine sodique, laurylsulfate de sodium, silice hydrophobe colloïdale.</p>
+<p class=AmmCorpsTexte>*Composition de l'arôme citron : maltodextrine (source de glucose), gomme arabique, hydroxyanisol butylé (E320), anhydride sulfureux (E220), alpha-pinène, beta-pinène, myrcène, limonène, gamma-terpinène, neral et geranial.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte>3 ans.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte>A conserver à l'abri de l'humidité.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte>10, 20, 21, 30, 40, 60 et 100 comprimés sous plaquettes (PVC/PVDC/Aluminium).</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte>Pas d’exigences particulières.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>ARROW GENERIQUES</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>26 AVENUE TONY GARNIER</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>69007 LYON</p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 389 069 0 5 : 10 comprimés sous plaquette (PVC/PVDC/Aluminium).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 389 070 9 4 : 20 comprimés sous plaquette (PVC/PVDC/Aluminium).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 300 582 8 2 : 21 comprimés sous plaquette (PVC/PVDC/Aluminium).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 550 211 8 6 : 30 comprimés sous plaquette (PVC/PVDC/Aluminium).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 550 211 9 3 : 40 comprimés sous plaquette (PVC/PVDC/Aluminium).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 550 212 1 6 : 60 comprimés sous plaquette (PVC/PVDC/Aluminium).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 550 212 2 3 : 100 comprimés sous plaquette (PVC/PVDC/Aluminium).</p>
+<p class=AmmAnnexeTitre1>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION </p>
+<p class=AmmCorpsTexte><span style='color:#538135'>[à compléter ultérieurement par le titulaire]</span></p>
+<p class=AmmAnnexeTitre1>10. DATE DE MISE A JOUR DU TEXTE </p>
+<p class=AmmCorpsTexte><span style='color:#538135'>[à compléter ultérieurement par le titulaire]</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet. </p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste II.</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_DOMPERIDONE_ARROW_10_mg,_comprimé_orodispersible_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE DOMPERIDONE ARROW 10 mg, comprimé orodispersible ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE DOMPERIDONE ARROW 10 mg, comprimé orodispersible ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_DOMPERIDONE_ARROW_10_mg,_comprimé_orodispersible_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE DOMPERIDONE ARROW 10 mg, comprimé orodispersible ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE DOMPERIDONE ARROW 10 mg, comprimé orodispersible ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_PRENDRE_DOMPERIDONE_ARROW_10_mg,_comprimé_orodispersible_?"
+                     aria-label="3. COMMENT PRENDRE DOMPERIDONE ARROW 10 mg, comprimé orodispersible ? (Lien de redirection)">
+                    3. COMMENT PRENDRE DOMPERIDONE ARROW 10 mg, comprimé orodispersible ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_DOMPERIDONE_ARROW_10_mg,_comprimé_orodispersible_?"
+                     aria-label="5. COMMENT CONSERVER DOMPERIDONE ARROW 10 mg, comprimé orodispersible ? (Lien de redirection)">
+                    5. COMMENT CONSERVER DOMPERIDONE ARROW 10 mg, comprimé orodispersible ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : DOMPERIDONE ARROW 10 mg, comprimé orodispersible - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="DOMPERIDONE ARROW 10 mg, comprimé orodispersible, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 25/03/2026</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'><a name="_Toc142278999">DOMPERIDONE ARROW 10 mg, comprimé orodispersible</a></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Dompéridone</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279000"><span lang=FR-BE>Veuillez lire attentivement cette notice avant de prendre ce médicament car elle contient des informations importantes pour vous.</span></a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin ou votre pharmacien.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que DOMPERIDONE ARROW 10 mg, comprimé orodispersible et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant de prendre DOMPERIDONE ARROW 10 mg, comprimé orodispersible ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment prendre DOMPERIDONE ARROW 10 mg, comprimé orodispersible ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver DOMPERIDONE ARROW 10 mg, comprimé orodispersible ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_DOMPERIDONE_ARROW_10_mg,_comprimé_orodispersible_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE DOMPERIDONE ARROW 10 mg, comprimé orodispersible ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279003">Classe pharmacothérapeutique : stimulants de la motricité intestinale - code ATC : A03FA03</a></p>
+<p class=AmmCorpsTexte>Ce médicament est utilisé pour traiter les nausées (envie de vomir) et les vomissements chez l’adulte et l’adolescent (à partir de 12 ans et de 35 kg).</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_DOMPERIDONE_ARROW_10_mg,_comprimé_orodispersible_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE DOMPERIDONE ARROW 10 mg, comprimé orodispersible ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">Ne prenez jamais DOMPERIDONE ARROW 10 mg, comprimé orodispersible :</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique à la dompéridone ou à l’un des autres composants contenus dans ce médicament, mentionnés dans la rubrique 6 ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez des saignements de l’estomac ou si vous avez régulièrement des douleurs abdominales sévères ou des selles noires persistantes ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez les intestins obstrués ou perforés ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez une tumeur de la glande pituitaire (prolactinome) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous souffrez d’une maladie modérée ou sévère du foie ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si votre ECG (électrocardiogramme) montre un problème cardiaque appelé « allongement de l'intervalle QT corrigé » ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez ou avez eu un problème qui fait que votre cœur ne peut pas pomper le sang dans l'ensemble de votre corps aussi bien qu'il le devrait (affection appelée insuffisance cardiaque) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez un problème qui entraîne une diminution du taux de potassium ou de magnésium ou une augmentation du taux de potassium dans votre sang ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous prenez certains médicaments (voir « Autres médicaments et DOMPERIDONE ARROW 10 mg, comprimé orodispersible ») ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>s’il est confirmé ou suspecté que vous présentez une tumeur rare de la glande surrénale (phéochromocytome), en raison du risque d’augmentation de la tension artérielle.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Avertissements et précautions</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Adressez-vous à votre médecin ou pharmacien avant de prendre </span>DOMPERIDONE ARROW 10 mg, comprimé orodispersible si vous<span lang=FR-BE> : </span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>souffrez de problèmes au foie (défaillance des fonctions du foie ou insuffisance hépatique) (voir « Ne prenez jamais DOMPERIDONE ARROW 10 mg, comprimé orodispersible ») ;</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>souffrez de problèmes aux reins (défaillance des fonctions du rein ou insuffisance rénale). Vous devez demander conseil à votre médecin en cas de traitement prolongé car vous devrez peut-être prendre une dose plus faible ou prendre ce médicament moins souvent et votre médecin pourra être amené à vous examiner régulièrement.</span></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><span lang=FR-BE>La dompéridone peut être associée à un risque accru de trouble du rythme cardiaque et d'arrêt cardiaque. Ce risque peut être plus élevé chez les patients de plus de 60 ans ou chez ceux prenant des doses supérieures à 30 mg par jour. Le risque est également plus élevé lorsque la dompéridone est administrée avec certains médicaments. Prévenez votre médecin ou votre pharmacien si vous prenez des médicaments pour traiter des infections (infections fongiques ou bactériennes) et/ou si vous avez des problèmes au cœur ou le SIDA (voir rubrique « Autres médicaments et DOMPERIDONE ARROW 10 mg, comprimé orodispersible »).</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>DOMPERIDONE ARROW doit être utilisé à la dose efficace la plus faible.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Pendant le traitement par DOMPERIDONE ARROW, contactez votre médecin si vous présentez des troubles du rythme cardiaque, tels que des palpitations, des difficultés à respirer, une perte de conscience. Le traitement par DOMPERIDONE ARROW devra alors être arrêté.</span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Enfants et </span>adolescents pesant moins de 35 kg</p>
+<p class=AmmCorpsTexte>DOMPERIDONE ARROW ne doit pas être donné aux adolescents âgés de plus de 12 ans et pesant moins de 35 kg, ni aux enfants âgés de moins de 12 ans car il n’est pas efficace pour ces tranches d’âge.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et DOMPERIDONE ARROW 10 mg, comprimé orodispersible</p>
+<p class=AmmCorpsTexte>Informez votre médecin ou pharmacien si vous prenez, avez récemment pris ou pourriez prendre tout autre médicament.</p>
+<p class=AmmCorpsTexte>Ne prenez jamais DOMPERIDONE ARROW si vous prenez des médicaments pour traiter les pathologies suivantes :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>infections fongiques, par exemple la pentamidine ou les antifongiques azolés, en particulier l’itraconazole, le kétoconazole oral, le fluconazole, le posaconazole ou le voriconazole ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>infections bactériennes, en particulier l’érythromycine, la clarithromycine, la télithromycine, la lévofloxacine, la moxifloxacine, la spiramycine (ce sont des antibiotiques) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>problèmes cardiaques ou une hypertension artérielle (par exemple l’amiodarone, la dronédarone, l’ibutilide, le disopyramide, le dofétilide, le sotalol, l’hydroquinidine, la quinidine) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>psychose (par exemple l’halopéridol, le pimozide, le sertindole) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>dépression (par exemple le citalopram, l’escitalopram) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>troubles gastro-intestinaux (par exemple le cisapride, le dolasétron, le prucalopride) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>allergie (par exemple la méquitazine, la mizolastine) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>paludisme (en particulier l’halofantrine, la luméfantrine) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>VIH/SIDA, tels que le ritonavir ou le saquinavir (ce sont des inhibiteurs de protéase) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>hépatite C (par exemple le télaprévir) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>cancer (par exemple le torémifène, le vandétanib, la vincamine).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Ne prenez pas DOMPERIDONE ARROW si vous prenez certains autres médicaments (par exemple, le bépridil, le diphémanil, la méthadone). </p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Prévenez votre médecin ou votre pharmacien si vous prenez des médicaments pour traiter une infection, des problèmes cardiaques, le VIH/SIDA ou la maladie de Parkinson. </p>
+<p class=AmmCorpsTexte>Avant que vous n’utilisiez DOMPERIDONE ARROW et l’apomorphine, votre médecin s’assurera que vous tolérez les deux médicaments lorsqu'ils sont utilisés simultanément. Interrogez votre médecin ou votre spécialiste pour obtenir un conseil personnalisé. Veuillez-vous reporter à la notice de l’apomorphine.</p>
+<p class=AmmCorpsTexte>Il est important de demander à votre médecin ou votre pharmacien si DOMPERIDONE ARROW est sûr pour vous lorsque vous prenez d’autres médicaments, y compris des médicaments délivrés sans ordonnance.</p>
+<p class=AmmCorpsTexteGras>DOMPERIDONE ARROW 10 mg, comprimé orodispersible avec des aliments et boissons</p>
+<p class=AmmCorpsTexte>Prenez DOMPERIDONE ARROW avant les repas. S’il est pris après les repas, son absorption est quelque peu retardée. </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279012">Grossesse et allaitement</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Le risque associé à la prise de DOMPERIDONE ARROW pendant la grossesse n’est pas connu.</span></p>
+<p class=AmmAnnexeTitre3><span lang=FR-BE style='font-weight:normal;text-decoration: none'>Si vous êtes enceinte ou que vous allaitez, si vous pensez être enceinte ou planifiez une grossesse, demandez conseil à votre médecin ou pharmacien avant de prendre ce médicament. Il décidera si vous pouvez prendre DOMPERIDONE ARROW.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>De petites quantités de dompéridone ont été détectées dans le lait maternel. DOMPERIDONE ARROW peut entraîner des effets indésirables sur le cœur du nourrisson allaité. DOMPERIDONE ARROW doit être utilisé au cours de l’allaitement uniquement si votre médecin le juge absolument nécessaire. Demandez conseil à votre médecin avant de prendre ce médicament.</span></p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=ammcorpstexte0 style='text-align:justify'><span style='font-size:10.0pt'>Certains patients ont rapporté des sensations vertigineuses ou une somnolence après la prise de DOMPERIDONE ARROW. Ne conduisez pas ou n’utilisez pas de machines lorsque vous prenez DOMPERIDONE ARROW, avant de connaître l’effet que DOMPERIDONE ARROW produit sur vous.</span></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>DOMPERIDONE ARROW 10 mg, comprimé orodispersible contient de l’anhydride sulfureux (E220) (sulfites), de la maltodextrine (source de glucose) et du sodium</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><span style='font-weight: normal'>L’anhydride sulfureux (E220) peut, dans de rares cas, provoquer des réactions d’hypersensibilité sévères et des bronchospasmes.</span></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><span style='font-weight: normal'>Si votre médecin vous a informé(e) d’une intolérance à certains sucres, contactez-le avant de prendre ce médicament.</span></p>
+<p class=AmmCorpsTexte>Ce médicament contient moins de 1 mmol (23 mg) de sodium par comprimé orodispersible, c’est-à-dire qu’il est essentiellement « sans sodium ».</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_PRENDRE_DOMPERIDONE_ARROW_10_mg,_comprimé_orodispersible_?'>3. COMMENT PRENDRE DOMPERIDONE ARROW 10 mg, comprimé orodispersible ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279021"><span class=ui-provider>Veillez à toujours prendre ce médicament en suivant exactement les indications de votre médecin. </span></a><span lang=FR-BE>Vérifiez auprès de votre médecin ou pharmacien en cas de doute.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Prenez DOMPERIDONE ARROW avant les repas. S’il est pris après les repas, son absorption est quelque peu retardée.</span></p>
+<p class=AmmCorpsTexteGras>Durée du traitement</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Les symptômes disparaissent habituellement en 3 à 4 jours de prise du médicament. Ne prenez pas DOMPERIDONE ARROW au-delà de 7 jours sans consulter votre médecin.</span></p>
+<p class=AmmCorpsTexteGras>Posologie</p>
+<p class=AmmAnnexeTitre4><span lang=FR-BE>Adultes et adolescents à partir de 12 ans et de 35 kg </span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>La dose habituelle est d’un comprimé à prendre jusqu’à trois fois par jour, si possible avant les repas.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne prenez pas plus de trois comprimés par jour.</span></p>
+<p class=AmmCorpsTexteGras>Mode d’administration</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Voie orale.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Le comprimé orodispersible est un comprimé qui se délite rapidement dans la bouche grâce à la salive et peut être avalé sans eau.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>En règle générale, laisser fondre le comprimé dans la bouche sans le croquer. Si besoin, boire un verre d'eau, après la prise du comprimé.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Le comprimé peut être également dispersé dans un demi-verre d'eau en agitant, immédiatement avant administration.</span></p>
+<p class=AmmCorpsTexteGras>Si vous avez pris plus de DOMPERIDONE ARROW 10 mg, comprimé orodispersible que vous n’auriez dû</p>
+<p class=AmmCorpsTexte>Si vous avez utilisé ou pris trop de DOMPERIDONE ARROW, contactez immédiatement votre médecin, votre pharmacien ou un centre antipoison. En cas de surdosage, un traitement symptomatique peut être administré. Une surveillance électrocardiographique peut être instaurée en raison de la possibilité de survenue d'un problème cardiaque appelé allongement de l'intervalle QT.</p>
+<p class=AmmCorpsTexte>Informations pour le médecin : une surveillance attentive et un traitement symptomatique sont recommandés. Un traitement anti-parkinsonien anti-cholinergique peut aider à neutraliser les troubles extrapyramidaux.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez de prendre DOMPERIDONE ARROW 10 mg, comprimé orodispersible</p>
+<p class=AmmCorpsTexte><a name="_Toc142279020">Prenez votre médicament dès que vous vous en souvenez. S'il est presque l'heure de votre prochaine dose, attendez cette prochaine dose, puis continuez comme d'habitude. Ne prenez pas de dose double pour compenser la dose que vous avez oublié de prendre.</a></p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez de prendre DOMPERIDONE ARROW 10 mg, comprimé orodispersible</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexte>Si vous avez d’autres questions sur l’utilisation de ce médicament, demandez plus d’informations à votre médecin ou à votre pharmacien.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023"></a><a name="_Hlk212123975"><span lang=FR-BE>Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</span></a></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Peu fréquent </span><span lang=FR-BE>(peut toucher jusqu’à 1 personne sur 100) :</span><span lang=FR-BE> </span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>mouvements involontaires de la face ou des bras et des jambes, tremblements excessifs, raideur musculaire excessive ou spasmes musculaires.</span></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><span lang=FR-BE>Fréquence indéterminée </span><span lang=FR-BE>(ne peut être estimée sur la base des données disponibles)</span><span lang=FR-BE style='font-weight:normal'> :</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>convulsions ;</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>réaction pouvant survenir rapidement après l’administration et se traduisant par une éruption cutanée, des démangeaisons, un essoufflement et/ou un gonflement du visage ;</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>réaction d’hypersensibilité sévère pouvant survenir rapidement après l’administration, caractérisée par de l’urticaire, des démangeaisons, des rougeurs, un évanouissement et des difficultés respiratoires, entre autres symptômes possibles ;</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>affections du système cardiovasculaire : des troubles du rythme cardiaque (battements cardiaques rapides ou irréguliers) ont été rapportés ; si tel est le cas, vous devez arrêter immédiatement le traitement. La dompéridone peut être associée à un risque accru de troubles du rythme cardiaque et d'arrêt cardiaque. Ce risque peut être plus élevé chez les patients de plus de 60 ans ou chez ceux prenant des doses supérieures à 30 mg par jour. La dompéridone doit être utilisée à la dose efficace la plus faible.</span></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><b><span lang=FR-BE>Arrêtez le traitement par DOMPERIDONE ARROW et contactez immédiatement votre médecin</span></b><span lang=FR-BE> si vous présentez un des évènements indésirables décrits ci-dessus.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>D’autres effets indésirables observés avec la dompéridone sont listés ci-dessous :</span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Fréquent </span><span lang=FR-BE>(peut toucher jusqu’à 1 personne sur 10) :</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>bouche sèche.</span></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><span lang=FR-BE>Peu fréquent </span><span lang=FR-BE>(peut toucher jusqu’à 1 personne sur 100) :</span><span lang=FR-BE style='font-weight:normal'> </span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>anxiété,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>agitation,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>nervosité,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>perte ou diminution de l’intérêt pour le sexe,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>maux de tête,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>somnolence,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>diarrhée,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>éruption cutanée,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>démangeaisons,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>urticaire,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>seins douloureux ou sensibles,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>écoulement de lait par le mamelon,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>sensation générale de faiblesse,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>sensations vertigineuses.</span></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><span lang=FR-BE>Fréquence indéterminée </span><span lang=FR-BE>(ne peut être estimée sur la base des données disponibles) :</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>mouvements incontrôlés des yeux, les fixant vers le haut,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>arrêt des règles chez la femme,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>augmentation du volume des seins chez l’homme,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>incapacité d'uriner,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>changements de certains résultats d’analyses de laboratoire,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>syndrome des jambes sans repos (sensation d’inconfort avec un besoin irrésistible de bouger les jambes et parfois les bras et d’autres parties de votre corps).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><span lang=FR-BE>Certains patients qui ont utilisé de la dompéridone dans des conditions et à des posologies nécessitant une surveillance médicale ont subi les effets indésirables suivants : agitation, gonflement ou augmentation du volume des seins, écoulement inhabituel des seins, règles irrégulières chez la femme, difficultés à allaiter, dépression, hypersensibilité.</span></p>
+<p class=AmmCorpsTexteGras>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_DOMPERIDONE_ARROW_10_mg,_comprimé_orodispersible_?'>5. COMMENT CONSERVER DOMPERIDONE ARROW 10 mg, comprimé orodispersible ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026"></a><a name="_Toc142279024">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas ce médicament après la date de péremption indiquée sur l’emballage après EXP. La date de péremption fait référence au dernier jour de ce mois.</span></p>
+<p class=AmmCorpsTexte><a name="_Toc142279025"><span lang=FR-BE>A conserver à l'abri de l'humidité.</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout <span style='color:black'>ou avec </span>les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient DOMPERIDONE ARROW 10 mg, comprimé orodispersible</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est :</p>
+<p class=AmmComposition style='margin-left:18.0pt'>Dompéridone................................................................................................................... 10 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un comprimé orodispersible</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont : cellulose microcristalline, crospovidone, arôme citron*, stéarate de magnésium, saccharine sodique, laurylsulfate de sodium, silice hydrophobe colloïdale.</p>
+<p class=AmmListePuces1 style='text-align:justify;text-indent:0cm'>*Composition de l'arôme citron : maltodextrine (source de glucose), gomme arabique, hydroxyanisol butylé (E320), anhydride sulfureux (E220), alpha-pinène, beta-pinène, myrcène, limonène, gamma-terpinène, neral et geranial.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que DOMPERIDONE ARROW 10 mg, comprimé orodispersible et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>Ce médicament se présente sous forme de comprimé orodispersible.</p>
+<p class=AmmCorpsTexte>Boîte de 10, 20, 21, 30, 40, 60 et 100 comprimés.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279031">ARROW GENERIQUES</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>26 AVENUE TONY GARNIER</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>69007 LYON</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>ARROW GENERIQUES</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>26 AVENUE TONY GARNIER</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>69007 LYON</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279033">DELPHARM EVREUX</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>5, RUE DU GUESCLIN</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>27000 EVREUX</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>ou</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><b>MARTIN DOW PHARMACEUTICALS</b></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>GOUALLE LE PUY</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>CHAMP DE LACHAUD</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>19250 MEYMAC</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279038"><span style='color:#385623'>[à compléter ultérieurement par le titulaire]</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

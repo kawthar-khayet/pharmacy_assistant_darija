@@ -1,8 +1,9 @@
 // Entrees de navigation, partagees par la barre laterale et la barre basse.
+// `icone` designe un trace de components/Icon.jsx.
 export const NAVIGATION = [
-  { to: '/', glyphe: '🏠', libelle: 'Accueil', exact: true },
-  { to: '/assistant', glyphe: '💬', libelle: 'Assistant' },
-  { to: '/medicaments', glyphe: '💊', libelle: 'Medicaments' },
-  { to: '/pharmacies', glyphe: '📍', libelle: 'Pharmacies' },
-  { to: '/historique', glyphe: '🕘', libelle: 'Historique' },
+  { to: '/', icone: 'accueil', libelle: 'Accueil', exact: true },
+  { to: '/assistant', icone: 'message', libelle: 'Assistant' },
+  { to: '/medicaments', icone: 'pilule', libelle: 'Medicaments' },
+  { to: '/pharmacies', icone: 'lieu', libelle: 'Pharmacies' },
+  { to: '/historique', icone: 'historique', libelle: 'Historique' },
 ]

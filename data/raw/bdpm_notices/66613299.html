@@ -1,0 +1,1639 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="Sybea8kMrdbeO5egVngMQg==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="Sybea8kMrdbeO5egVngMQg==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 31/08/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant NEBCINE 100 mg, solution injectable"
+            aria-level="3"
+          >
+            NEBCINE 100 mg, solution injectable
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament NEBCINE 100 mg, solution injectable - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                      </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 19/05/1982
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : NEBCINE 100 mg, solution injectable - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0376587">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte><a name="_Toc142279003">Classe pharmacothérapeutique : AMINOSIDES ANTIBACTERIENS (J : antiinfectieux généraux à usage systémique).</a></p>
+<p class=AmmCorpsTexte>Ce médicament est un antibiotique qui appartient à la famille des aminosides, il est indiqué pour le traitement de certaines infections notamment de la peau et des voies urinaires.</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament n'appartient à aucun groupe générique</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Solution ( Composition pour un flacon ampoule )<ul role="list"><li role="listitem" style="list-style-type: none;">tobramycine<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span><span class="italique">100 mg </span><ul role="list" style="list-style-type: none;"><li class="sousFormeDe" role="listitem"><i class="fa fa-plus-square" aria-hidden="true"></i> sous forme de : sulfate de tobramycine</li></ul></li></ul></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > 1 flacon(s) ampoule(s) en verre de 2 ml  </p><p>Code CIP : 316 487-7 ou 34009 316 487 7 2<br/>Déclaration de commercialisation : 01/12/2005<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 3,37 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 4,39 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :65%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></div></div>
+                
+                                  <br /><div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-bon-usage-medicament' >Documents de bon usage du médicament <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-document-bon-usage-medicament' href='#top'></a></h5><span id='tooltip-heading-document-bon-usage-medicament' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><ul><li><a class='lien_bon_usage' href='https://www.has-sante.fr/jcms/c_2722914' target='_blank'>Choix et durée de l'antibiothérapie : Pyélonéphrite aiguë de la femme</a><p>Auteur : Haute autorité de santé<br />Type : Fiche mémo<br />Date de mise à jour :Mai  2025<br /></p></li></ul><ul><li><a class='lien_bon_usage' href='https://www.has-sante.fr/jcms/c_2722914' target='_blank'>Choix et durée de l'antibiothérapie : Pyélonéphrite aiguë de la femme</a><p>Auteur : Haute autorité de santé<br />Type : Fiche mémo<br />Date de mise à jour :Mai  2025<br /></p></li></ul></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><div class='fr-grid-row'><div class='fr-col'><p>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence. </p></div></div><div class='fr-grid-row'><div class='fr-col'><p>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprès de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-smr-aide-2'>plus d'informations dans l'aide</a>). Les avis et synthèses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-smr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection à la page d'aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'SMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur du SMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_1778248'>Avis du 22/10/2014</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 22/10/2014 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Renouvellement d'inscription (CT)</td><td class='text-align-center'>Le service médical rendu par les spécialités NEBCINE reste important dans les indications de l’AMM.</td></tr></tbody></table></div></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div><div class='fr-col'><p>Pas d'ASMR disponible pour ce médicament (<a href='/aide#le-medicament-que-je-recherche-ne-mentionne-pas-de-service-medical-rendu-(SMR)-ni-amelioration-du-service-medical-rendu-(ASMR)' aria-describedby='tooltip-asmr-aide-2'>plus d'informations dans l'aide )</a></p><span id='tooltip-asmr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers la page aide</span></div></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : LABORATOIRE X.O</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure nationale</li><li>Code CIS : &nbsp;6 661 329 9</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : NEBCINE 100 mg, solution injectable - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="NEBCINE 100 mg, solution injectable, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 31/08/2021</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras>NEBCINE 100 mg, solution injectable</p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Tobramycine........................................................................................................................ 100 mg</p>
+<p class=AmmCorpsTexte><span style='color:black'>sous forme de sulfate de tobramycine.</span></p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un flacon ampoule.</p>
+<p class=AmmCorpsTexte>Excipient(s) à effet notoire : sodium, métabisulfite de sodium</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Solution injectable.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">Elles procèdent de l'activité antibactérienne et des caractéristiques pharmacocinétiques de la tobramycine. Elles tiennent compte à la fois des études cliniques auxquelles a donné lieu le médicament et de sa place dans l'éventail des produits antibactériens actuellement disponibles.</a></p>
+<p class=AmmCorpsTexte>Elles sont limitées : </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>aux infections à Bacilles Gram négatif définis ci-dessus comme sensibles, notamment dans leurs manifestations rénales et urologiques.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>l'association de la tobramycine avec un autre antibiotique pourra être justifiée dans certaines infections à germes sensibles en se basant sur les données bactériologiques, en particulier dans leurs manifestations :</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>rénales, urologiques et génitales, </p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>septicémiques et endocarditiques,</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>méningées (en y adjoignant un traitement local),</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>respiratoires,</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>cutanées (staphylococcie cutanée maligne de la face),</p>
+<p class=AmmListePuces2 style='margin-bottom:6.0pt'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>articulaires.</p>
+<p class=AmmCorpsTexte>Il convient de tenir compte des recommandations officielles concernant l'utilisation appropriée des antibactériens.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+<p class=AmmCorpsTexte style='border:none;padding:0cm'><a name="_Toc142278918"><u>ATTENTION : en l’absence de données, l’administration de Nebcine, solution injectable, par voie inhalée n’est pas recommandée (<span class=MsoHyperlink>voir rubrique 4.4</span>)</u></a></p>
+</div>
+<p class=AmmAnnexeTitre3>Posologie</p>
+<p class=AmmCorpsTexte>Chez le sujet normo-rénal, la tobramycine peut être administrée par voie intramusculaire et par voie intraveineuse.</p>
+<p class=AmmCorpsTexte><i><u>Adultes</u></i></p>
+<p class=AmmCorpsTexte>3 mg/kg/jour en 3 injections également réparties.</p>
+<p class=AmmCorpsTexte><i><u>Enfants</u></i></p>
+<p class=AmmCorpsTexte>3 mg/kg/jour en 3 injections I.M. également réparties</p>
+<p class=AmmCorpsTexte>Dans les infections mettant en jeu le pronostic vital on peut administrer jusqu'à 5 mg/kg/jour en trois ou quatre injections également réparties. Cette posologie doit être réduite à 4 mg/kg/jour aussitôt que l'état clinique le permet. Pour prévenir la possibilité de toxicité accrue liée à des taux sériques trop élevés, la posologie ne doit pas dépasser 5 mg/kg/jour, sauf si les taux sanguins sont contrôlés.</p>
+<p class=AmmCorpsTexte><i><u>Nourrissons</u></i></p>
+<p class=AmmCorpsTexte>3 mg/kg/jour en 3 injections I.M., sous contrôle des taux sériques de l'antibiotique.</p>
+<p class=AmmCorpsTexte><i><u>Nouveau-nés (à terme ou prématuré)</u></i></p>
+<p class=AmmCorpsTexte>On peut administrer une posologie atteignant jusqu'à 3 à 4 mg/kg/jour en deux injections I.V. également réparties sous contrôle des taux sériques de l'antibiotique.</p>
+<p class=AmmCorpsTexte>Depuis la mise à disposition des aminosides, il a été montré qu'il était possible, par la même posologie quotidienne de réduire le nombre d'administrations. Classiquement le nombre d'injections était de 3 par jour. L'expérience acquise indique qu'en général le nombre d'injections est de 2 voire une seule par jour :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La dose quotidienne peut être administrée en une injection quotidienne (IM ou perfusion courte) :</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>chez les patients de moins de 65 ans,</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>à fonction rénale normale,</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>lorsque le traitement n'excède pas 10 jours,</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>en l'absence de neutropénie,</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>à l'exclusion des infections à germes Gram positif,</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>pour des infections à germes Gram négatif, à l'exclusion des Pseudomonas et des Serratia.</p>
+<p class=AmmCorpsTexte style='margin-left:17.85pt'>Dans ces circonstances, une efficacité au moins identique et une tolérance parfois meilleure ont été démontrées avec une injection quotidienne par rapport aux modalités classiques (q. 8 heures).</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Dans les autres cas, l'administration bi-quotidienne de la dose usuelle est le plus souvent recommandée, en dehors de l'insuffisance rénale qui implique le maintien des mesures habituelles.</p>
+<p class=AmmCorpsTexte>Les dosages plasmatiques sont utiles lorsque le traitement doit dépasser 7 à 10 jours ; une concentration résiduelle inférieure à 2 mcg/ml indique que le rythme d'administration choisi est adapté aux capacités d'épuration du patient.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmListePuces1><a name="_Toc142278919"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypersensibilité à la substance active ou à l’un des excipients mentionnés à la rubrique 6.1.</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Allergie aux antibiotiques de la famille des aminoglycosides.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Myasthénie.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Association aux autres antibiotiques de la famille des aminosides (en cas d’administration simultanée).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Association à l’ataluren.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278920">Mises en garde</a></p>
+<p class=AmmCorpsTexte>En l’absence de données, l’utilisation de Nebcine, solution injectable par voie inhalée n’est pas recommandée. </p>
+<p class=AmmCorpsTexte>De plus la présence de sulfites de sodium peut provoquer des réactions allergiques sévères et un bronchospasme. (Voir rubrique 4.2)</p>
+<p class=AmmAnnexeTitre3>Précautions d’emploi</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Chez les sujets porteurs d'anomalie vestibulaire et cochléaire.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La néphrotoxicité et l'ototoxicité de la tobramycine imposent les précautions d'emploi suivantes :</p>
+<p class=AmmListePuces2 style='text-align:justify;page-break-after:auto'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>en cas d'insuffisance rénale n'utiliser la tobramycine qu'en cas de stricte nécessité et adapter la posologie en fonction de la clairance de la créatinine. Une surveillance médicale portant sur les fonctions rénale et auditive est nécessaire. Les taux sériques de l'antibiotique seront contrôlés, dans toute la mesure du possible.</p>
+<p class=AmmListePuces2 style='text-align:justify;page-break-after:auto'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>compte tenu de la pharmacocinétique du produit et du mécanisme de l'ototoxicité et de la néphrotoxicité, éviter les traitements itératifs et/ou prolongés, particulièrement chez les sujets âgés.</p>
+<p class=AmmListePuces2 style='text-align:justify;page-break-after:auto'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>éviter d'associer la tobramycine aux diurétiques très actifs et, en général, à tout produit ototoxique et néphrotoxique (<span class=MsoHyperlink>voir rubrique 4.5</span> Interactions avec d'autres médicaments et autres formes d'interactions). </p>
+<p class=AmmListePuces2 style='text-align:justify;page-break-after:auto'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Les patients présentant des mutations de l’ADN mitochondrial, en particulier la substitution du nucléotide 1555 A en G du gène ARNr 12S, peuvent présenter un risque plus élevé d’ototoxicité, même si les niveaux sériques d’aminosides du patient se situent dans l’intervalle recommandé.</p>
+<p class=AmmListePuces2> En cas d’antécédents familiaux de surdité induite par les aminosides ou de mutations connues de l’ADN mitochondrial du gène ARNr 12s, il peut être nécessaire d’envisager des traitements alternatifs autres que les aminosides.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La tobramycine peut potentialiser l'action du curare, des myorelaxants et des anesthésiques généraux (<span class=MsoHyperlink>voir rubrique 4.5</span> Interactions avec d'autres médicaments et autres formes d'interactions).</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En cas d'intervention chirurgicale informer l'anesthésiste-réanimateur de la prise de ce médicament.</p>
+<p class=AmmCorpsTexte>Ce médicament contient du métabisulfite de sodium et peut provoquer des réactions allergiques sévères et un bronchospasme.</p>
+<p class=AmmCorpsTexte>Ce médicament contient du sodium. Le taux de sodium est inférieur à 1 mmol par flacon, c'est-à-dire sans « sodium ». </p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmCorpsTexte>Eviter de mélanger la tobramycine dans un même flacon ou une même seringue avec un autre médicament, en particulier avec un antibiotique de la famille des bêta-lactamines.</p>
+<p class=AmmAnnexeTitre3>Associations contre-indiquées</p>
+<p class=AmmCorpsTexteGras>+ AUTRES AMINOSIDES</p>
+<p class=AmmCorpsTexte>En cas d’administration simultanée : Risque accru de néphrotoxicité et d'ototoxicité (l'ototoxicité est cumulative en cas d'administrations successives).</p>
+<p class=AmmCorpsTexteGras>+ ATALUREN</p>
+<p class=AmmCorpsTexte>Risque de potentialisation de la toxicité rénale de l’aminoside.</p>
+<p class=AmmAnnexeTitre3>Associations déconseillées</p>
+<p class=AmmCorpsTexteGras>+ BOTULIQUE (TOXINE)</p>
+<p class=AmmCorpsTexte>Risque d'augmentation des effets de la toxine botulique avec les aminosides (par extrapolation à partir des effets observés au cours du botulisme). </p>
+<p class=AmmCorpsTexte>Utiliser un autre antibiotique.</p>
+<p class=AmmCorpsTexteGras>+ POLYMYXINE B</p>
+<p class=AmmCorpsTexte>Addition des effets néphrotoxiques. Si l'association ne peut être évitée, surveillance stricte avec une justification bactériologique indiscutable.</p>
+<p class=AmmAnnexeTitre3>Associations faisant l'objet de précautions d’emploi</p>
+<p class=AmmCorpsTexteGras>+ CEFALOTINE</p>
+<p class=AmmCorpsTexte>L'augmentation de la néphrotoxicité des aminosides par la céfalotine est discutée.</p>
+<p class=AmmCorpsTexte>Surveillance de la fonction rénale.</p>
+<p class=AmmCorpsTexteGras>+ CURARES</p>
+<p class=AmmCorpsTexte>Potentialisation des curares lorsque l'antibiotique est administré par voie parentérale et/ou péritonéale avant, pendant ou après l'agent curarisant.</p>
+<p class=AmmCorpsTexte>Surveiller le degré de curarisation en fin d'anesthésie.</p>
+<p class=AmmCorpsTexteGras>+ DIURÉTIQUES DE L'ANSE</p>
+<p class=AmmCorpsTexte>Augmentation des risques néphrotoxiques et ototoxiques de l'aminoside (insuffisance rénale fonctionnelle liée à la déshydratation entraînée par le diurétique).</p>
+<p class=AmmCorpsTexte>Association possible sous contrôle de l'état d'hydratation, des fonctions rénale et cochléovestibulaire, et éventuellement, des concentrations plasmatiques de l'aminoside.</p>
+<p class=AmmAnnexeTitre3>Associations à prendre en compte</p>
+<p class=AmmCorpsTexteGras>+ AUTRES AMINOSIDES</p>
+<p class=AmmCorpsTexte>En cas d'administrations successives : Risque accru de néphrotoxicité et d'ototoxicité (l'ototoxicité est cumulative en cas d'administrations successives).</p>
+<p class=AmmCorpsTexteGras>+ AUTRES MÉDICAMENTS NÉPHROTOXIQUES</p>
+<p class=AmmCorpsTexte>Risque de majoration de la néphrotoxicité.</p>
+<p class=AmmCorpsTexteGras>+ AUTRES MÉDICAMENTS OTOTOXIQUES </p>
+<p class=AmmCorpsTexte>Majoration de l'ototoxicité.</p>
+<p class=AmmCorpsTexteGras>+ AMPHOTERICINE B</p>
+<p class=AmmCorpsTexte>Avec l'amphotéricine B administrée par voie IV : risque accru de néphrotoxicité.</p>
+<p class=AmmCorpsTexteGras>+ CICLOSPORINE</p>
+<p class=AmmCorpsTexte>Augmentation de la créatininémie plus importante que sous ciclosporine seule, avec majoration du risque néphrotoxique.</p>
+<p class=AmmCorpsTexteGras>+ ORGANOPLATINES</p>
+<p class=AmmCorpsTexte>Addition des effets néphrotoxiques et/ou ototoxiques, notamment en cas d'insuffisance rénale préalable.</p>
+<p class=AmmCorpsTexteGras>+ TACROLIMUS</p>
+<p class=AmmCorpsTexte>Augmentation de la créatininémie plus importante que sous tacrolimus seul (synergie des effets néphrotoxiques des deux substances).</p>
+<p class=AmmAnnexeTitre3>Problèmes particuliers du déséquilibre de l'INR</p>
+<p class=AmmCorpsTexte>De nombreux cas d'augmentation de l'activité des anticoagulants oraux ont été rapportés chez des patients recevant des antibiotiques. Le contexte infectieux ou inflammatoire marqué, l'âge et l'état général du patient apparaissent comme des facteurs de risque. Dans ces circonstances, il apparaît difficile de faire la part entre la pathologie infectieuse et son traitement dans la survenue du déséquilibre de l'INR. Cependant, certaines classes d'antibiotiques sont davantage impliquées : il s'agit notamment des fluoroquinolones, des macrolides, des cyclines, du cotrimoxazole et de certaines céphalosporines.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte>L'utilisation de ce médicament est déconseillée au cours de la grossesse en raison d'un risque potentiel d'ototoxicité et de néphrotoxicité fœtales. Son utilisation sera strictement limitée aux pathologies infectieuses graves.</p>
+<p class=AmmCorpsTexte>En effet, en clinique quelques cas d'atteinte cochléovestibulaire néonatale ont été décrits avec les aminosides, notamment la streptomycine et la kanamycine, et, les études animales ont mis en évidence une atteinte cochléaire et rénale.</p>
+<p class=AmmCorpsTexte>Dans le cas d'une exposition à ce médicament en cours de grossesse, une évaluation de la fonction auditive (autoémissions) et rénale du nouveau-né est recommandée.</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278927">Allaitement</a></p>
+<p class=AmmCorpsTexte>Le passage des aminosides dans le lait maternel est documenté, cependant les concentrations retrouvées dans le lait sont faibles voire négligeables. Le risque majeur consisterait en une modification de la flore intestinale de l'enfant. En conséquence, l'allaitement est possible en cas de traitement bref (quelques jours) par ce médicament et si la fonction rénale maternelle est normale. En cas de survenue de troubles digestifs chez le nourrisson (candidose intestinale, diarrhée), il est nécessaire d'interrompre l'allaitement.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929">Les effets sur l'aptitude à conduire des véhicules et à utiliser des machines n'ont pas été étudiés. Dans le cas d'une administration ambulatoire, la conduite de véhicules et l'utilisation de machines devront se faire avec prudence en raison des possibles effets indésirables de type étourdissements</a><b><span lang=FR-BE>.</span></b></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Néphrotoxicité</p>
+<p class=AmmCorpsTexte style='margin-left:17.5pt'>Ce médicament appartient à la famille des aminosides pour laquelle des cas d'insuffisance rénale ont été rapportés. Ils étaient, la plupart du temps, en rapport avec une posologie trop élevée ou des traitements prolongés des altérations rénales antérieures, des troubles de l'hémodynamique ou des associations à des produits réputés néphrotoxiques.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ototoxicité</p>
+<p class=AmmCorpsTexte style='margin-left:17.5pt'>Ce médicament appartient à la famille des aminosides pour laquelle des cas d'atteinte cochléo vestibulaire ont été signalés. Ils étaient favorisés par une posologie trop élevée, une longue durée du traitement, une insuffisance rénale pré-existante ou par des associations à ries produits ototoxiques.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><u>Des réactions allergiques mineures</u> (rash, urticaire) ont été décrites. Ces phénomènes ont cessé à l'arrêt du traitement.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>D'autres effets secondaires ont été rapportés : élévation des transaminases (SGOT GGPT) de la bilirubine sérique, anémie, granulocytopénie et thrombopénie, fièvre, nausées, vomissements, céphalées et somnolence.</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="http://www.signalement-sante.gouv.fr">www.signalement-sante.gouv.fr</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278931">L'intervalle thérapeutique de la tobramycine est réduit. En cas d'accumulation (en raison, par exemple, d'une insuffisance rénale), des lésions rénales et des lésions du nerf vestibulo-cochléaire peuvent se produire. Les techniques d'épuration extrarénale sont particulièrement indiquées chez les sujets atteints d'insuffisance rénale.</a></p>
+<p class=AmmCorpsTexte>Traitement en cas de surdosage :</p>
+<p class=AmmCorpsTexte>Arrêter le traitement. Il n'existe aucun antidote spécifique. La tobramycine peut être éliminée du sang par hémodialyse (l'élimination est plus lente et plus irrégulière par dialyse péritonéale).</p>
+<p class=AmmCorpsTexte>Traitement des blocages neuromusculaires :</p>
+<p class=AmmCorpsTexte>En cas de blocage neuromusculaire (généralement provoqué par des interactions, <span class=MsoHyperlink>voir rubrique 4.5</span>), l'administration de chlorure de calcium par voie intraveineuse est recommandée, ainsi que le recours à la respiration artificielle si nécessaire.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278933">La tobramycine est un antibiotique de la famille des aminoglycosides.</a></p>
+<p class=AmmCorpsTexte>SPECTRE D'ACTIVITE ANTI-BACTERIENNE</p>
+<p class=AmmCorpsTexte>Les concentrations critiques séparent les souches sensibles des souches de sensibilité intermédiaire et ces dernières, des résistantes :</p>
+<p class=AmmCorpsTexte>S &#8804; 4 mg/l et R > 8 mg/l</p>
+<p class=AmmCorpsTexte>La prévalence de la résistance acquise peut varier en fonction de la géographie et du temps pour certaines espèces. Il est donc utile de disposer d’informations sur la prévalence de la résistance locale, surtout pour le traitement d’infections sévères. Ces données ne peuvent apporter qu’une orientation sur les probabilités de la sensibilité d’une souche bactérienne à cet antibiotique.</p>
+<p class=AmmCorpsTexte>Lorsque la variabilité de la prévalence de la résistance en Europe est connue pour une espèce bactérienne, elle est indiquée dans le tableau ci-dessous :</p>
+<div class='fr-table--lg fr-table'><table>
+<tr style='page-break-inside:avoid'>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Catégories</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Fréquence de résistance acquise en Europe (> 10%) (valeurs extrêmes)</p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><u>ESPÈCES SENSIBLES</u></p>
+<p class=AmmCorpsTexteGras>Aérobies à Gram positif</p>
+<p class=AmmCorpsTexte><i>Corynebacterium</i></p>
+<p class=AmmCorpsTexte><i>Listeria monocytogenes</i></p>
+<p class=AmmCorpsTexte><i>Staphylococcus aureus</i> méticilline-sensible</p>
+<p class=AmmCorpsTexte>Staphylocoque coagulase-négative<i> </i>méticilline-sensible</p>
+<p class=AmmCorpsTexteGras>Aérobies à Gram négatif</p>
+<p class=AmmCorpsTexte><i>Acinetobacter</i></p>
+<p class=AmmCorpsTexte><i>Acinetobacter baumannii</i></p>
+<p class=AmmCorpsTexte><i>Branhamella catarrhalis</i></p>
+<p class=AmmCorpsTexte><i>Campylobacter</i></p>
+<p class=AmmCorpsTexte><i>Citrobacter freundii</i></p>
+<p class=AmmCorpsTexte><i>Citrobacter koseri</i></p>
+<p class=AmmCorpsTexte><i>Enterobacter aerogenes</i></p>
+<p class=AmmCorpsTexte><i>Enterobacter cloacae</i></p>
+<p class=AmmCorpsTexte><i>Escherichia coli</i></p>
+<p class=AmmCorpsTexte><i>Haemophilus influenzae</i></p>
+<p class=AmmCorpsTexte><i>Klebsiella</i></p>
+<p class=AmmCorpsTexte><i>Morganella morganii</i></p>
+<p class=AmmCorpsTexte><i>Proteus mirabilis</i></p>
+<p class=AmmCorpsTexte><i>Proteus vulgaris</i></p>
+<p class=AmmCorpsTexte><i>Pseudomonas aeruginosa</i></p>
+<p class=AmmCorpsTexte><i>Salmonella</i></p>
+<p class=AmmCorpsTexte><i>Serratia</i></p>
+<p class=AmmCorpsTexte><i>Shigella</i></p>
+<p class=AmmCorpsTexte><i>Yersinia</i></p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte>0 - 12 %</p>
+<p class=AmmCorpsTexte align=left style='text-align:left'>0 - 20 %<br> <br> </p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte>0 - 40 %</p>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+<p class=AmmCorpsTexte align=left style='text-align:left'>0 - 16 %</p>
+<p class=AmmCorpsTexte align=left style='text-align:left'> </p>
+<p class=AmmCorpsTexte align=left style='text-align:left'>0 - 65 %</p>
+<p class=AmmCorpsTexte align=left style='text-align:left'>0 - 14 %</p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte>0 - 11 %</p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte>0 - 12 %</p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte>0 - 36 %</p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte>0 - 66 %</p>
+<p class=AmmCorpsTexte> </p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><u>ESPÈCES MODÉRÉMENT SENSIBLES</u></p>
+<p class=AmmCorpsTexte>(in vitro de sensibilité intermédiaire)</p>
+<p class=AmmCorpsTexteGras>Aérobies à Gram négatif</p>
+<p class=AmmCorpsTexte><i>Pasteurella</i></p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte> </p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><u>ESPÈCES RÉSISTANTES</u></p>
+<p class=AmmCorpsTexteGras>Aérobies à Gram positif</p>
+<p class=AmmCorpsTexte>Entérocoques *</p>
+<p class=AmmCorpsTexte><i>Nocardia asteroïdes</i></p>
+<p class=AmmCorpsTexte><i>Staphylococcus méti-R **</i></p>
+<p class=AmmCorpsTexte><i>Streptococcus</i></p>
+<p class=AmmCorpsTexteGras>Aérobies à Gram négatif</p>
+<p class=AmmCorpsTexte><i>Alcaligenes denitrificans</i></p>
+<p class=AmmCorpsTexte><i><span lang=EN-US>Burkholderia cepacia</span></i></p>
+<p class=AmmCorpsTexte><i><span lang=EN-US>Flavobacterium sp.</span></i></p>
+<p class=AmmCorpsTexte><i><span lang=EN-US>Providencia stuartii</span></i></p>
+<p class=AmmCorpsTexte><i>Stenotrophomonas maltophilia</i></p>
+<p class=AmmCorpsTexteGras>Anaérobies</p>
+<p class=AmmCorpsTexte>Bactéries anaérobies strictes</p>
+<p class=AmmCorpsTexteGras>Autres</p>
+<p class=AmmCorpsTexte><i>Chlamydia</i></p>
+<p class=AmmCorpsTexte>Mycoplasmes</p>
+<p class=AmmCorpsTexte>Rickettsies</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte> </p>
+</td>
+</tr>
+</table></div>
+<p class=AmmCorpsTexte>* Dans certaines indications, la tobramycine peut être utilisée en association, en particulier avec les bêta-lactamines (septicémies, endocardites) à l’exception des infections à Enterococcus faecium. Toutefois, la synergie est abolie lorsque les espèces impliquées (streptocoques, entérocoques) présentent une résistance acquise de haut niveau à la tobramycine.</p>
+<p class=AmmCorpsTexte>** La fréquence de résistance à la méticilline peut atteindre 50 % de l’ensemble des staphylocoques dans certains pays européens et se rencontre surtout en milieu hospitalier.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278934">Absorption - Distribution</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Concentrations sanguines : après injection intramusculaire. Les pics sériques de la tobramycine s'observent entre la 30<sup>ème</sup> et la 60<sup>ème</sup> minute. L'administration intramusculaire d'une dose de 1 mg/kg de poids corporel permet d'obtenir des pics sériques de l'ordre de 4 à 6 mcg/ml on retrouve des taux mesurables pendant au moins huit heures. Après perfusion I.V. d'une heure, les taux sériques sont similaires à ceux obtenus par voie I.M. Après injection I.V. directe d'une dose unique de 1,5 mcg/kg, les pics sériques vont de 9,2 à 29,8 mcg/ml. Ces taux tombent à moins de 11 mcg/ml en quinze minutes.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La demi-vie sérique chez le sujet normal est de deux heures (méthode microbiologique).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Diffusion humorale et tissulaire : la tobramycine est présente dans les tissus et les humeurs après administration parentérale. Dans la bile et les selles les concentrations de tobramycine sont généralement faibles, témoignant ainsi d'une excrétion biliaire négligeable. Dans le liquide céphalorachidien les taux sont bas après administration parentérale. La tobramycine a également été mise en évidence au niveau des expectorations, du liquide péritonéal et des exsudats d'abcès. L'antibiotique traverse les membranes placentaires.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Liaison aux protéines plasmatiques : elle est pratiquement inexistante (méthode des ultrafiltrations).</p>
+<p class=AmmAnnexeTitre3>Élimination</p>
+<p class=AmmCorpsTexte>La tobramycine est éliminée sous forme inchangée presqu'exclusivement par filtration glomérulaire. La clairance rénale est identique à celle de la créatinine endogène.</p>
+<p class=AmmCorpsTexte>Chez le malade à fonction rénale normale on retrouve dans les urines de huit heures jusqu'à 84 % de la dose administrée un total de 93 % est retrouvé au bout de 24 heures.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278935">Non renseigné.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937">Edétate disodique, phénol, métabisulfite de sodium, eau pour préparations injectables.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">En l’absence d’études de compatibilité, ce médicament ne doit pas être mélangé avec d’autres médicaments.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte>3 ans.</p>
+<p class=AmmCorpsTexte>Après ouverture du flacon ampoule : le produit doit être utilisé immédiatement.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940"><span lang=FR-BE>Pas de précautions particulières de conservation.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte>2 ml en flacon ampoule (verre). Boîte de 1.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Pas d’exigences particulières.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142278943">LABORATOIRE X.O</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>170 bureaux de la Colline</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>92213 saint-cloud cedex</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><a name="_Toc142278944"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>CIP 34009 316 487 7 2 : 2 ml en flacon ampoule (verre). Boîte de 1.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945"><span style='color:#538135'>[à compléter ultérieurement par le titulaire]</span></a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946"><span style='color:#538135'>[à compléter ultérieurement par le titulaire]</span></a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I </p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_NEBCINE_100_mg,_solution_injectable_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE NEBCINE 100 mg, solution injectable ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE NEBCINE 100 mg, solution injectable ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_NEBCINE_100_mg,_solution_injectable_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER NEBCINE 100 mg, solution injectable ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER NEBCINE 100 mg, solution injectable ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_UTILISER_NEBCINE_100_mg,_solution_injectable_?"
+                     aria-label="3. COMMENT UTILISER NEBCINE 100 mg, solution injectable ? (Lien de redirection)">
+                    3. COMMENT UTILISER NEBCINE 100 mg, solution injectable ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_NEBCINE_100_mg,_solution_injectable_?"
+                     aria-label="5. COMMENT CONSERVER NEBCINE 100 mg, solution injectable ? (Lien de redirection)">
+                    5. COMMENT CONSERVER NEBCINE 100 mg, solution injectable ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : NEBCINE 100 mg, solution injectable - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="NEBCINE 100 mg, solution injectable, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 31/08/2021</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'><a name="_Toc142278999"><span style='font-size:11.0pt'>NEBCINE 100 mg, solution injectable</span></a></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'><span style='font-size:11.0pt'>Tobramycine</span></p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279000"><span lang=FR-BE>Veuillez lire attentivement cette notice avant d’utiliser ce médicament car elle contient des informations importantes pour vous.</span></a></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin ou votre pharmacien.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que NEBCINE 100 mg, solution injectable et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant d'utiliser NEBCINE 100 mg, solution injectable ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment utiliser NEBCINE 100 mg, solution injectable ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver NEBCINE 100 mg, solution injectable ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_NEBCINE_100_mg,_solution_injectable_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE NEBCINE 100 mg, solution injectable ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279003">Classe pharmacothérapeutique : AMINOSIDES ANTIBACTERIENS (J : antiinfectieux généraux à usage systémique).</a></p>
+<p class=AmmCorpsTexte>Ce médicament est un antibiotique qui appartient à la famille des aminosides, il est indiqué pour le traitement de certaines infections notamment de la peau et des voies urinaires.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_NEBCINE_100_mg,_solution_injectable_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER NEBCINE 100 mg, solution injectable ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">N’utilisez jamais NEBCINE 100 mg, solution injectable :</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique à la substance active ou à l’un des autres composants contenus dans ce médicament, mentionnés dans la rubrique 6.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez une maladie des muscles (myasthénie),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous prenez d’autres antibiotiques de la famille des aminosides (en cas d’administration simultanée),</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes traité par ataluren (médicament utilisé dans la dystrophie musculaire de Duchenne, une maladie génétique rare neuromusculaire).</p>
+<p class=AmmCorpsTexte>EN CAS DE DOUTE, IL EST INDISPENSABLE DE DEMANDER L'AVIS DE VOTRE MEDECIN OU DE VOTRE PHARMACIEN.</p>
+<p class=AmmCorpsTexteGras>Avertissements et précautions</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Adressez-vous à votre médecin pharmacien avant d’utiliser </span>NEBCINE 100 mg, solution injectable.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>En cas d'intervention chirurgicale, prévenir l'anesthésiste-réanimateur de la prise de ce médicament.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Prévenir votre médecin en cas de :</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Troubles de l'audition,</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Troubles de l'équilibre,</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Insuffisance rénale,</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Prise concomitante d'autres médicaments et notamment les diurétiques (voir Autres médicaments et NEBCINE 100 mg, solution injectable)</span></p>
+<p class=AmmCorpsTexte>Si vous ou les membres de votre famille souffrez d’une maladie due à une mutation mitochondriale (affection provoquée par des variations du génome des mitochondries, les parties de vos cellules qui aident à produire de l’énergie) ou d’une perte d’audition due à des antibiotiques ; certaines mutations mitochondriales sont susceptibles d’aggraver votre perte d’audition avec ce produit.<span lang=FR-BE>Ce médicament contient du métabisulfite de sodium et peut provoquer des réactions allergiques sévères et une gêne respiratoire</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Nebcine solution injectable ne doit pas être utilisée par voie inhalée du fait de risques de réactions allergiques sévères, de type bronchospasme. </span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ce médicament contient du sodium. Le taux de sodium est inférieur à 1 mmol par dose, c'est-à-dire sans « sodium ».</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>EN CAS DE DOUTE, NE PAS HESITER A DEMANDER L'AVIS DE VOTRE MEDECIN OU DE VOTRE PHARMACIEN.</span></p>
+<p class=AmmCorpsTexteGras>Enfants et adolescents</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et NEBCINE 100 mg, solution injectable</p>
+<p class=AmmCorpsTexte>Informez votre médecin ou pharmacien si vous utilisez, avez récemment utilisé ou pourriez utiliser tout autre médicament.</p>
+<p class=AmmCorpsTexte>Ce médicament ne doit pas être associé aux médicaments à : </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>des médicaments contenant un autre aminoside (antibiotique de la même classe que NEBCINE 100 mg, solution injectable) dans le cas d’une administration simultanée avec NEBCINE 100 mg, solution injectable,</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>l’ataluren (médicament utilisé dans la dystrophie musculaire de Duchenne, une maladie génétique rare neuromusculaire).</p>
+<p class=AmmCorpsTexte>Si vous prenez, avez récemment pris ou pourriez prendre les médicaments suivants, informez votre médecin, il pourrait choisir de vous traiter avec un autre antibiotique ou mettre en place une surveillance stricte :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>toxine botulique (utilisée comme antirides mais aussi pour certaines cicatrisations, torticolis, troubles de la motricité des yeux...),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>polymyxine B (antibiotique de la famille des polypeptides).</p>
+<p class=AmmCorpsTexte>La prise concomitante de ce médicament avec les médicaments suivants nécessite des précautions d'emploi, parlez-en à votre médecin ou votre pharmacien :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>céfalotine (antibiotique de la classe des céphalosporines),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>curares (médicaments utilisés en anesthésie),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>certains diurétiques, médicaments utilisés pour traiter l'hypertension artérielle et les œdèmes (gonflements des membres inférieurs),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>autres aminosides (antibiotique de la même classe que NEBCINE 100 mg, solution injectable), dans le cas de traitements successifs avec NEBCINE 100 mg, solution injectable,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>médicaments pouvant entraîner des effets néfastes sur le rein ou sur l’oreille,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>amphotéricine B (antibiotique antifongique de la famille des macrolides utilisé pour traiter certains champignons),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>ciclosporine (médicament immunosuppresseur utilisé dans la prise en charge de rejets de greffes ou pour traiter certaines uvéites, certains syndromes néphrotiques, certaines formes de polyarthrite rhumatoïde, de psoriasis et de dermatite atopique),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>organoplatines (médicaments utilisés contre certains cancers),</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>tacrolimus (médicament immunosuppresseur utilisé dans la prise en charge de rejets de greffes ou pour traiter certaines dermatites atopiques).</p>
+<p class=AmmCorpsTexte>La solution injectable ne doit pas être mélangée avec un autre médicament dans la même seringue.</p>
+<p class=AmmCorpsTexteGras>NEBCINE 100 mg, solution injectable avec des aliments, boissons et de l’alcool</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279012">Grossesse, allaitement et fertilité</a></p>
+<p class=AmmCorpsTexte>L'utilisation de ce médicament est déconseillée, sauf avis contraire de votre médecin, pendant la grossesse. Si vous découvrez que vous êtes enceinte pendant le traitement, consultez rapidement votre médecin : lui seul pourra adapter le traitement à votre état.</p>
+<p class=AmmCorpsTexte>L'allaitement est possible en cas de traitement bref (quelques jours). Toutefois, si des troubles digestifs (diarrhées) apparaissent chez votre enfant, stoppez l'allaitement maternel et consultez rapidement votre médecin.</p>
+<p class=AmmCorpsTexte>D'une façon générale, il convient de demander conseil à votre médecin ou à votre pharmacien avant de prendre tout médicament. </p>
+<p class=AmmCorpsTexte>Si vous êtes enceinte ou que vous allaitez, si vous pensez être enceinte ou planifiez une grossesse, demandez conseil à votre médecin ou pharmacien avant de prendre ce médicament.</p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>Ce médicament contient des substances actives qui peuvent remettre en cause l'aptitude à la conduite de véhicules ou à l'utilisation de machines et nécessitent l'avis d'un professionnel de santé.</p>
+<p class=AmmCorpsTexteGras>NEBCINE 100 mg, solution injectable contient <span class=AmmCorpsTexteCar><span style='font-weight:normal'>du sodium, du métabisulfite de sodium (voir Avertissements et précautions)</span></span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_UTILISER_NEBCINE_100_mg,_solution_injectable_?'>3. COMMENT UTILISER NEBCINE 100 mg, solution injectable ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279021">Veillez à toujours utiliser ce médicament en suivant exactement les indications de votre médecin ou pharmacien. Vérifiez auprès de votre médecin ou pharmacien en cas de doute.</a></p>
+<p class=AmmCorpsTexte><u>Ce médicament s'administre par voie intramusculaire ou par voie intraveineuse lente</u></p>
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+<p class=AmmCorpsTexteGras style='border:none;padding:0cm'>Nebcine solution injectable ne doit pas être administrée par voie inhalée. </p>
+</div>
+<p class=AmmCorpsTexte>La dose recommandée est de 3 mg/kg/jour.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La dose est répartie en une, deux ou trois injections en particulier chez l'insuffisant rénal.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Chez <i>l'insuffisant rénal</i> : la posologie doit être adaptée.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><i>Administration intraveineuse</i> :</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Chez l'adulte, la dose est habituellement diluée dans 50 à 100 ml de solution de chlorure de sodium à 0,9 % pour injection ou de solution de glucose à 5 % pour injection.</p>
+<p class=AmmListePuces2 style='margin-bottom:6.0pt'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Chez l'enfant, le volume de dilution doit être proportionnellement moins important que celui utilisé chez l'adulte.</p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Durée du traitement</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Se conformer à la prescription de votre médecin traitant</span></p>
+<p class=AmmCorpsTexteGras>Si vous avez utilisé plus de NEBCINE 100 mg, solution injectable que vous n’auriez dû</p>
+<p class=AmmCorpsTexte>En cas de surdosage ou d'atteinte toxique, une hémodialyse ou une dialyse péritonéale peut être mise en place pour procéder à une épuration sérique accélérée de l'antibiotique. Les techniques d'épuration extrarénale sont particulièrement indiquées chez les sujets atteints d'insuffisance rénale</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez d’utiliser NEBCINE 100 mg, solution injectable</p>
+<p class=AmmCorpsTexte><a name="_Toc142279020">Sans objet.</a></p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez d’utiliser NEBCINE 100 mg, solution injectable</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexte style='margin-top:12.0pt'>Si vous avez d’autres questions sur l’utilisation de ce médicament, demandez plus d’informations à votre médecin ou à votre pharmacien. </p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>atteinte du rein,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>atteinte de l’oreille,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>réaction allergique se manifestant par une éruption cutanée,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>fièvre,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>nausées, vomissements,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>maux de tête,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>somnolence,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>élévation de certaines enzymes du foie (transaminases: ALAT, ASAT) et de la bilirubine du sang (élément de la bile),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>diminution de la quantité de certains globules blancs dans le sang,</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>diminution de la quantité de plaquettes dans le sang.</p>
+<p class=AmmCorpsTexteGras>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet:<span style='color:red'> </span><a href="http://www.signalement-sante.gouv.fr.">www.signalement-sante.gouv.fr.</a></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_NEBCINE_100_mg,_solution_injectable_?'>5. COMMENT CONSERVER NEBCINE 100 mg, solution injectable ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026"></a><a name="_Toc142279024">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte>N’utilisez pas ce médicament après la date de péremption indiquée sur l’emballage après EXP. La date de péremption fait référence au dernier jour de ce mois.</p>
+<p class=AmmCorpsTexte>Après ouverture du flacon ampoule : le produit doit être utilisé immédiatement.</p>
+<p class=AmmCorpsTexte>Ne jetez aucun médicament au tout-à-l’égout ou avec les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient NEBCINE 100 mg, solution injectable</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est :</p>
+<p class=AmmComposition>Tobramycine........................................................................................................................ 100 mg</p>
+<p class=AmmCorpsTexte>sous forme de sulfate de tobramycine.</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un flacon ampoule.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont : Edétate disodique, phénol, métabisulfite de sodium, eau pour préparations injectables.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que NEBCINE 100 mg, solution injectable et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279030">Ce médicament se présente sous forme de solution injectable. Boîte de 1 flacon-ampoule de 2 ml.</a></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmTitulaireNom><a name="_Toc142279031">LABORATOIRE X.O</a></p>
+<p class=AmmTitulaireCpVillePays>170 bureaux de la Colline</p>
+<p class=AmmTitulaireCpVillePays>92213 saint-cloud cedex</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Toc142279032">LABORATOIRE X.O</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><span style='text-transform:uppercase'>170 bureaux de la Colline</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><span style='text-transform:uppercase'>92213 saint-cloud cedex</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Toc142279033">LISAPHARMA S.P.A.</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>VIA LICINIO 11</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>22036 ERBA (CO)</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>ITALIE</p>
+<p class=AmmCorpsTexte>ou</p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><span lang=EN-US>VIANEX S.A.</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><span lang=EN-US>PLANT A</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><span lang=EN-US>12 KM NATIONAL ROAD ATHINON-LAMIAS</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>14451 METAMORFOSI ATTIKI</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>GREECE</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279038"><span style='color:#538135'>[à compléter ultérieurement par le titulaire]</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+<p class=AmmCorpsTexteGras>Conseil d’éducation sanitaire : </p>
+<p class=AmmCorpsTexteGras>QUE SAVOIR SUR LES ANTIBIOTIQUES ?</p>
+<p class=AmmCorpsTexte>Les antibiotiques sont efficaces pour combattre les infections dues aux bactéries. Ils ne sont pas efficaces contre les infections dues aux virus.</p>
+<p class=AmmCorpsTexte>Aussi, votre médecin a choisi de vous prescrire cet antibiotique parce qu’il convient précisément à votre cas et à votre maladie actuelle.</p>
+<p class=AmmCorpsTexte>Les bactéries ont la capacité de survivre ou de se reproduire malgré l’action d’un antibiotique. Ce phénomène est appelé résistance : il rend certains traitements antibiotiques inactifs.</p>
+<p class=AmmCorpsTexte>La résistance s’accroît par l’usage abusif ou inapproprié des antibiotiques.</p>
+<p class=AmmCorpsTexte>Vous risquez de favoriser l’apparition de bactéries résistantes et donc de retarder votre guérison ou même de rendre inactif ce médicament, si vous ne respectez pas :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>la dose à prendre,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>les moments de prise,</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>et la durée de traitement.</p>
+<p class=AmmCorpsTexteGras><u>En conséquence, pour préserver l’efficacité de ce médicament :</u></p>
+<p class=AmmCorpsTexteGras>1- N’utilisez un antibiotique que lorsque votre médecin vous l’a prescrit.</p>
+<p class=AmmCorpsTexteGras>2- Respectez strictement votre ordonnance.</p>
+<p class=AmmCorpsTexteGras>3- Ne réutilisez pas un antibiotique sans prescription médicale même si vous pensez combattre une maladie apparemment semblable.</p>
+<p class=AmmCorpsTexteGras>4- Ne donnez jamais votre antibiotique à une autre personne, il n’est peut-être pas adapté à sa maladie.</p>
+<p class=AmmCorpsTexteGras>5- Une fois votre traitement terminé, rapportez à votre pharmacien toutes les boîtes entamées pour une destruction correcte et appropriée de ce médicament.</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

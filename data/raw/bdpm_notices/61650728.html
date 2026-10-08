@@ -1,0 +1,1655 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="FA7WyIr3pc7qBLJksoTOUg==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="FA7WyIr3pc7qBLJksoTOUg==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 31/08/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant PRAVASTATINE ACCORD 10 mg, comprimé"
+            aria-level="3"
+          >
+            PRAVASTATINE ACCORD 10 mg, comprimé
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament PRAVASTATINE ACCORD 10 mg, comprimé - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                          <p id="tag-generique" class="fr-tag" aria-controls="fr-modal-tag-generique" data-fr-opened="false">
+              <span class="fr-icon-capsule-fill">
+              </span>&nbsp;générique
+          </p>
+              </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 02/09/2010
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : PRAVASTATINE ACCORD 10 mg, comprimé - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0445346">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte><a name="_Toc142279003">Classe pharmacothérapeutique - code ATC : C10AA03</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279004">PRAVASTATINE ACCORD 10 mg, comprimé appartient à un groupe de médicaments appelés statines (ou inhibiteurs de l’HMG-CoA réductase). Il empêche la fabrication du cholestérol par le foie et réduit ainsi les taux de cholestérol et d'autres graisses (les triglycérides) dans votre organisme. En excès dans le sang, le cholestérol s'accumule sur la paroi des vaisseaux sanguins et les obstrue.</a></p>
+<p class=AmmCorpsTexte>Cette situation est appelée durcissement des artères ou athérosclérose et peut provoquer :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une angine de poitrine (angor), lorsqu'un vaisseau du cœur est bloqué partiellement,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une attaque cardiaque (infarctus du myocarde), lorsqu'un vaisseau du cœur est bloqué totalement,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une attaque cérébrale (accident vasculaire cérébral), lorsqu'un vaisseau du cerveau est bloqué totalement.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Ce médicament est utilisé dans 3 situations :</p>
+<p class=AmmCorpsTexte><u>Dans le traitement des taux élevés de cholestérol et de graisses dans le sang</u></p>
+<p class=AmmCorpsTexte>PRAVASTATINE ACCORD 10 mg, comprimé est utilisé pour réduire des taux élevés de &quot;mauvais&quot; cholestérol et augmenter les taux de &quot;bon&quot; cholestérol dans le sang quand le changement des habitudes alimentaires et l'activité physique n'ont pas réussi à le faire baisser de façon satisfaisante.</p>
+<p class=AmmCorpsTexte><u>Dans la prévention des maladies du cœur et des vaisseaux sanguins</u></p>
+<p class=AmmCorpsTexte>Si vous avez un taux élevé de cholestérol dans le sang ainsi que des facteurs de risque favorisant les maladies du cœur et des vaisseaux sanguins (tels que tabac, surpoids, taux élevé de sucre dans le sang, tension artérielle élevée, absence d'activité physique), PRAVASTATINE ACCORD 10 mg, comprimé est utilisé pour diminuer les risques d'apparition de ces maladies et les risques de décès liés à ces maladies.</p>
+<p class=AmmCorpsTexte>Si vous avez déjà eu une attaque cérébrale ou si vous avez une angine de poitrine (angor instable), et même si votre taux de cholestérol est normal, PRAVASTATINE ACCORD 10 mg, comprimé est utilisé pour réduire le risque que vous fassiez à nouveau une attaque cardiaque ou une attaque cérébrale et pour diminuer le risque de décès lié à ces maladies.</p>
+<p class=AmmCorpsTexte><u>Après une greffe d'organe</u></p>
+<p class=AmmCorpsTexte>Si vous avez eu une greffe d'organe et recevez un traitement pour éviter le rejet de l'organe greffé, PRAVASTATINE ACCORD 10 mg, comprimé est utilisé pour réduire les taux élevés de graisses dans le sang.</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament appartient au(x) groupe(s) générique(s) suivants : <br/><ul role="list"><li role='listitem'><a href='/medicament/affiche/groupe-generique/61650728/379' aria-describedby='tooltip-medicament-generique-0'>PRAVASTATINE SODIQUE 10 mg - ELISOR 10 mg, comprimé sécable - VASTEN 10 mg, comprimé sécable.</a><span id='tooltip-medicament-generique-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Ouvrir la page de détail sur ce groupe générique</span></li></ul></p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Comprimé ( Composition pour un comprimé )<ul role="list"><li role="listitem" style="list-style-type: none;"> > pravastatine sodique<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">10 mg </span></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > plaquette(s) thermoformée(s) aluminium de 28 comprimé(s)  </p><p>Code CIP : 492 976-7 ou 34009 492 976 7 2<br/>Déclaration de commercialisation : 05/05/2011<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 3,19 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 4,21 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :65%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'>Ce médicament étant un générique, le SMR n'a pas été évalué par la commission de la transparence (CT), il est possible de se référer à la /aux spécialité(s) de référence du groupe générique auquel appartient ce médicament <a href='#heading-groupe-generique' arial-label='cliquez ici pour aller à la rubrique des groupes génériques'>(cliquez ici pour aller à la rubrique des groupes génériques)</a></p></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div><div class='fr-col'><p>Ce médicament étant un générique, l'ASMR n'a pas été évalué par la commission de la transparence (CT), il est possible de se référer à la /aux spécialité(s) de référence du groupe générique auquel appartient ce médicament <a href='#heading-groupe-generique' arial-label='cliquez ici pour aller à la rubrique des groupes génériques'>(cliquez ici pour aller à la rubrique des groupes génériques)</a></p></div></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : ACCORD HEALTHCARE France SAS</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure nationale</li><li>Code CIS : &nbsp;6 165 072 8</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : PRAVASTATINE ACCORD 10 mg, comprimé - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="PRAVASTATINE ACCORD 10 mg, comprimé, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 18/03/2026</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras>PRAVASTATINE ACCORD 10 mg, comprimé</p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Pravastatine sodique ....................................................................................................... 10,00 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un comprimé.</p>
+<p class=AmmCorpsTexte>Excipient à effet notoire : <span style='color:black'>chaque comprimé</span> contient 71,656 mg de lactose monohydraté</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Comprimé.</a></p>
+<p class=AmmCorpsTexte>Comprimé jaune, de forme rectangulaire et arrondie, biconvexe, portant l'inscription gravée « PDT » sur une face et « 10 » sur l'autre face.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278917">Hypercholestérolémie</a></p>
+<p class=AmmCorpsTexte>Traitement des hypercholestérolémies primaires ou des dyslipidémies mixtes, en complément d'un régime, quand la réponse au régime et aux autres traitements non pharmacologiques (par exemple, exercice, perte de poids) est insuffisante.</p>
+<p class=AmmAnnexeTitre3>Prévention primaire</p>
+<p class=AmmCorpsTexte>Réduction de la mortalité et de la morbidité cardiovasculaires chez les patients présentant une hypercholestérolémie modérée ou sévère et exposés à un risque élevé de premier événement cardiovasculaire, en complément d'un régime (<a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0262616.htm#Rcp_5_1_PropPharmacodynamie_6">voir rubrique 5.1</a>).</p>
+<p class=AmmAnnexeTitre3>Prévention secondaire</p>
+<p class=AmmCorpsTexte>Réduction de la mortalité et de la morbidité cardiovasculaires chez les patients ayant un antécédent d'infarctus du myocarde (IDM) ou d'angor instable et un taux de cholestérol normal ou élevé, en plus de la correction des autres facteurs de risque (<a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0262616.htm#Rcp_5_1_PropPharmacodynamie_6">voir rubrique 5.1</a>).</p>
+<p class=AmmAnnexeTitre3>Post-transplantation</p>
+<p class=AmmCorpsTexte>Réduction des hyperlipidémies post-transplantation chez les patients recevant un traitement immunosuppresseur à la suite d'une transplantation d'organe (<a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0262616.htm#Rcp_4_2_PosoAdmin_1">voir rubriques 4.2</a>, <a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0262616.htm#Rcp_4_5_Interactions_4">4.5</a> et <a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0262616.htm#Rcp_5_1_PropPharmacodynamie_6">5.1</a>).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278918">Posologie</a></p>
+<p class=AmmCorpsTexte>Avant de débuter un traitement par PRAVASTATINE ACCORD, toute cause secondaire d'hypercholestérolémie doit être éliminée et les patients doivent être soumis à un régime hypocholestérolémiant standard qui doit être poursuivi pendant toute la durée du traitement.</p>
+<p class=AmmCorpsTexte><b>Hypercholestérolémie :</b> la dose recommandée est de 10 à 40 mg une fois par jour. La réponse thérapeutique est observée une semaine après le début du traitement et l'effet maximum d'une dose donnée après quatre semaines. De ce fait, des bilans lipidiques périodiques doivent être pratiqués et la posologie ajustée en conséquence. La dose journalière maximale est de 40 mg.</p>
+<p class=AmmCorpsTexte><b>Prévention cardiovasculaire <u>:</u></b> dans toutes les études de prévention de la morbidité et de la mortalité, la seule dose initiale et d'entretien étudiée était de 40 mg par jour.</p>
+<p class=AmmCorpsTexte><b>Posologie après transplantation <u>:</u></b> à la suite d'une transplantation d'organe, la dose initiale recommandée chez les patients recevant un traitement immunosuppresseur (<a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0262616.htm#Rcp_4_5_Interactions_4"><span class=MsoPageNumber><span style='font-family:"Arial",sans-serif;color:windowtext; text-decoration:none'>voir rubrique 4.5</span></span></a>) est de 20 mg par jour. En fonction de la réponse sur les paramètres lipidiques, la posologie peut être augmentée à 40 mg sous stricte surveillance médicale (<a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0262616.htm#Rcp_4_5_Interactions_4"><span class=MsoPageNumber><span style='font-family:"Arial",sans-serif;color:windowtext; text-decoration:none'>voir rubrique 4.5</span></span></a>)</p>
+<p class=AmmCorpsTexte><b>Patients âgés :</b> aucun ajustement posologique n'est nécessaire chez ces patients, sauf s'ils présentent des facteurs de risque prédisposants (<a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0262616.htm#Rcp_4_4_MisesEnGarde_3"><span class=MsoPageNumber><span style='font-family:"Arial",sans-serif;color:windowtext; text-decoration:none'>voir rubrique 4.4</span></span></a>).</p>
+<p class=AmmCorpsTexte><b>Insuffisance rénale ou hépatique :</b> une dose initiale de 10 mg par jour est recommandée chez les patients atteints d'insuffisance rénale modérée ou sévère ou d'insuffisance hépatique significative. La posologie doit être ajustée sous surveillance médicale en fonction de la réponse sur les paramètres lipidiques.</p>
+<p class=AmmCorpsTexte><b>Traitements concomitants :</b> les effets hypolipidémiants de PRAVASTATINE ACCORD sur le cholestérol total et le LDL-cholestérol (LDL-C) sont majorés en cas d'association à une résine chélatrice des acides biliaires (par ex., cholestyramine, colestipol). PRAVASTATINE ACCORD doit être administré soit une heure avant, soit au moins quatre heures après la résine (<a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0262616.htm#Rcp_4_5_Interactions_4"><span class=MsoPageNumber><span style='font-family:"Arial",sans-serif;color:windowtext; text-decoration:none'>voir rubrique 4.5</span></span></a>).</p>
+<p class=AmmCorpsTexte>Pour les patients prenant de la ciclosporine, associée ou non à d'autres immunosuppresseurs, le traitement doit être initié par 20 mg de pravastatine une fois par jour et une augmentation à 40 mg doit être réalisée avec précaution (<a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0262616.htm#Rcp_4_5_Interactions_4"><span class=MsoPageNumber><span style='font-family:"Arial",sans-serif;color:windowtext; text-decoration:none'>voir rubrique 4.5</span></span></a>).</p>
+<p class=AmmAnnexeTitre4><a name="_Hlk505174561"></a><a name="_Hlk505173727">Population pédiatrique</a></p>
+<p class=AmmCorpsTexte><a name="_Hlk505173735"><b>Enfants et adolescents (8-18 ans) </b>avec une hypercholestérolémie familiale hétérozygote: la dose recommandée est de 10 à 20 mg une fois par jour entre 8 et 13 ans, des doses supérieures à 20 mg n'ayant pas été étudiées dans cette population; et de 10 à 40 mg par jour entre 14 et 18 ans (pour les filles et adolescentes en âge de procréer, </a><a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0262616.htm#Rcp_4_6_GrossAllait_5"><span class=MsoPageNumber><span style='font-family:"Arial",sans-serif;color:windowtext; text-decoration:none'>voir rubrique 4.6</span></span></a>; pour les résultats de l'étude <a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0262616.htm#Rcp_5_1_PropPharmacodynamie_6"><span class=MsoPageNumber><span style='font-family:"Arial",sans-serif;color:windowtext; text-decoration:none'>voir rubrique 5.1</span></span></a>). Il n’y a pas de données cliniques chez l’enfant de moins de 8 ans.</p>
+<p class=AmmAnnexeTitre3><a name="_Hlk505173720">Mode d’administration</a></p>
+<p class=AmmCorpsTexte>PRAVASTATINE ACCORD est administré par voie orale, en une prise par jour, de préférence le soir, pendant ou en dehors des repas.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmListePuces1><a name="_Toc142278919"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypersensibilité à la substance active ou à l'un des excipients mentionnés à la rubrique 6.1;</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Affection hépatique évolutive, y compris élévations prolongées et inexpliquées des taux de transaminases sériques au-delà de 3 fois la limite supérieure de la normale (> 3 N) (voir rubrique 4.4);</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Grossesse et allaitement (voir rubrique 4.6).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278920">La pravastatine n'a pas été évaluée chez les patients atteints d'hypercholestérolémie familiale homozygote. Le traitement n'est pas adapté quand l'hypercholestérolémie est liée à un HDL-cholestérol élevé.</a></p>
+<p class=AmmCorpsTexte>Comme pour les autres inhibiteurs de la HMG-CoA réductase, l'association de la pravastatine et des fibrates n'est pas recommandée.</p>
+<p class=AmmAnnexeTitre3>Effets hépatiques</p>
+<p class=AmmCorpsTexte>Comme avec les autres traitements hypolipidémiants, une élévation modérée des taux de transaminases hépatiques a été observée. Dans la majorité des cas, les taux de transaminases hépatiques sont revenus à leur valeur initiale sans qu'il ait été nécessaire d'arrêter le traitement. Une attention particulière doit être portée aux patients chez lesquels survient une élévation des taux de transaminases et le traitement doit être interrompu si une élévation de l'alanine-aminotransférase (ALAT) et de l'aspartate-aminotransférase (ASAT) supérieure à trois fois la limite supérieure de la normale persiste.</p>
+<p class=AmmCorpsTexte><a name="_Hlk505173934">De rares cas d’insuffisance hépatique (dont certains ayant entrainé le décès) ont été rapportés, après la mise sur le marché, chez les patients traités par les statines dont la pravastatine. Le traitement doit être arrêté sans délai chez les patients présentant, en cours de traitement, une atteinte hépatique sévère avec signes cliniques et/ou hyper-bilirubinémie ou jaunisse. Si aucune autre étiologie n’est retrouvée, le traitement ne doit pas être repris.</a></p>
+<p class=AmmCorpsTexte>Il convient d'être prudent quand la pravastatine est administrée à des patients ayant un antécédent d'affection hépatique ou de consommation importante d'alcool.</p>
+<p class=AmmAnnexeTitre3>Effets musculaires</p>
+<p class=AmmCorpsTexte>Comme avec les autres inhibiteurs de l'HMG-CoA réductase (statines), la pravastatine a été associée à la survenue de myalgies, d'atteintes musculaires et très rarement de rhabdomyolyses. Une atteinte musculaire doit être envisagée chez tout patient traité par une statine présentant des symptômes musculaires inexpliqués tels que: douleur ou sensibilité musculaire, faiblesse musculaire ou crampes musculaires. Dans de tels cas, un dosage de créatine phosphokinase (CPK) devra être pratiqué (voir ci-dessous).</p>
+<p class=AmmCorpsTexte>Le traitement par statine doit être temporairement interrompu si le taux de CPK est > 5 N ou s'il existe des signes cliniques sévères. Très rarement (de l'ordre de 1 cas sur 105<sup> </sup>patient-années), une rhabdomyolyse peut survenir, associée ou non à une insuffisance rénale secondaire. Une rhabdomyolyse est une atteinte aiguë des muscles striés potentiellement mortelle qui peut apparaître de façon imprévisible durant le traitement et qui se caractérise par une destruction musculaire massive associée à une élévation majeure du taux de CPK (en général > 30 ou 40 N), conduisant à une myoglobinurie.</p>
+<p class=AmmCorpsTexte>Le risque d'atteinte musculaire avec les statines semble être exposition-dépendant et peut ainsi varier entre les différentes molécules (caractères lipophiles et profils pharmacocinétiques différents), y compris en fonction de leur dosage et de leur potentiel d'interactions médicamenteuses. Bien qu'il n'y ait pas de contre-indication d'ordre musculaire à la prescription d'une statine, certains facteurs prédisposants qui incluent un âge avancé (> 65), une hypothyroïdie non contrôlée, et une insuffisance rénale, peuvent augmenter le risque de toxicité musculaire et en conséquence justifient une évaluation soigneuse du rapport bénéfice/risque et une surveillance clinique particulière. Un dosage des CPK est indiqué avant l'initiation du traitement par statine chez ces patients (voir ci-dessous).</p>
+<p class=AmmCorpsTexte>De très rares cas de myopathies nécrosantes à médiation auto-immune (IMNM) ont été signalés pendant ou après le traitement par certaines statines. La myopathie nécrosante à médiation auto-immune (IMNM) est caractérisée cliniquement par une faiblesse musculaire proximale et une élévation de la créatine kinase sérique, qui persistent malgré l’arrêt du traitement par la statine.</p>
+<p class=AmmCorpsTexte>Au cours d'un traitement par statine, le risque et la sévérité des troubles musculaires sont augmentés par l'association à des médicaments entraînant des interactions médicamenteuses comme la ciclosporine, la clarithromycine et les autres macrolides ou la niacine. L'utilisation des fibrates seuls est occasionnellement associée à une atteinte musculaire. L'utilisation combinée d'une statine et des fibrates doit généralement être évitée. Une augmentation de l'incidence des atteintes musculaires a également été décrite chez les patients recevant d'autres statines en association avec des inhibiteurs du cytochrome P450. Ceci peut résulter d'interactions pharmacocinétiques qui n'ont pas été documentées pour la pravastatine (<a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0262616.htm#Rcp_4_5_Interactions_4">voir rubrique 4.5</a>). Les symptômes musculaires associés à un traitement par statine disparaissent généralement après l'arrêt du traitement.</p>
+<p class=AmmCorpsTexte>Les statines, incluant la pravastatine, ne doivent pas être administrées simultanément à l’acide fusidique sous forme systémique, et jusque dans les 7 jours suivant l'arrêt d’un traitement par acide fusidique. Chez les patients où l'utilisation d’acide fusidique systémique est considérée comme essentielle, le traitement par statine doit être interrompu pendant toute la durée du traitement par l'acide fusidique. Des cas de rhabdomyolyse (dont certains fatals) ont été rapportés chez des patients recevant de l’acide fusidique et une statine en association (voir la rubrique 4.5). Les patients doivent être informés de la nécessité de consulter immédiatement un médecin s'ils présentent des symptômes de faiblesse musculaire, douleur ou sensibilité.</p>
+<p class=AmmCorpsTexte>Le traitement par statine peut être réintroduit sept jours après la dernière dose d'acide fusidique.</p>
+<p class=AmmCorpsTexte>Dans des circonstances exceptionnelles, où un traitement prolongé par acide fusidique systémique est nécessaire, par exemple pour le traitement d’infections graves, la nécessité d'une co-administration de pravastatine et d’acide fusidique ne doit être envisagée qu'au cas par cas et sous surveillance médicale étroite.</p>
+<p class=AmmCorpsTexte><a name="_Hlk505173914"><span style='color:black'>Des cas de myopathie, en particulier de rhabdomyolyse ont été rapportés lors d’une administration concomitante de pravastatine et de colchicine. Des mesures de précaution doivent être prises en cas de prescription de pravastatine avec de la colchicine (voir la rubrique </span></a><a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0310210.htm#Interactions_avec_autres_m%C3%A9dicaments">4.5</a><span style='color:black'>).</span></p>
+<p class=AmmCorpsTexte>Dans quelques cas, il a été rapporté que les statines induisaient de novo ou aggravaient une myasthénie préexistante ou une myasthénie oculaire (voir rubrique 4.8). PRAVASTATINE ACCORD doit être arrêté en cas d’aggravation des symptômes. Des récurrences ont été rapportées lorsque la même statine ou une statine différente a été (ré)administrée.</p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmAnnexeTitre4>Mesure et interprétation de la CPK :</p>
+<p class=AmmCorpsTexte>Un dosage de routine des taux de CPK ou d'autres enzymes musculaires n'est pas recommandé chez les patients asymptomatiques traités par statine. Toutefois, le dosage de CPK est recommandé avant traitement par statine chez les patients ayant des facteurs prédisposants et chez les patients présentant des symptômes musculaires durant leur traitement par statine, comme décrit ci-après. Si le taux basal de CPK est significativement augmenté (> 5 N), une nouvelle mesure devra être effectuée environ 5 à 7 jours plus tard pour confirmer le résultat.</p>
+<p class=AmmCorpsTexte>Lors de la mesure, le taux de CPK doit être interprété en tenant compte d'autres facteurs potentiels pouvant entraîner un dommage musculaire provisoire tel qu'un effort musculaire intense ou un traumatisme musculaire.</p>
+<p class=AmmCorpsTexte><i><u>Avant l'initiation du traitement</u></i> : une attention particulière doit être portée aux patients ayant des facteurs prédisposants tels que: insuffisance rénale, hypothyroïdie, antécédents de toxicité musculaire avec un fibrate ou une statine, antécédent personnel ou familial de maladie musculaire héréditaire ou abus d'alcool. Dans ces situations, un dosage de CPK doit être effectué avant l'initiation du traitement. Un dosage de CPK doit également être envisagé avant traitement chez les personnes âgées de plus de 70 ans, en particulier lorsqu'il existe d'autres facteurs prédisposants.</p>
+<p class=AmmCorpsTexte>Si le taux basal de CPK est significativement augmenté (> 5 N), le traitement ne doit pas être initié et une nouvelle mesure devra être effectuée 5 à 7 jours plus tard. L'intérêt du taux basal de CPK est de disposer d'une référence en cas d'élévation ultérieure sous traitement par statine.</p>
+<p class=AmmCorpsTexte><i><u>Pendant le traitement :</u></i> les patients doivent être avertis qu'ils doivent signaler rapidement toute apparition inexpliquée de douleur ou sensibilité musculaire, de faiblesse musculaire ou de crampes. Dans ces situations, un dosage de CPK devra être effectué. Si une augmentation sensible (> 5 N) du taux de CPK est détectée, le traitement par statine doit être interrompu. Un arrêt du traitement doit également être envisagé si les signes musculaires sont importants avec une gêne fonctionnelle quotidienne, même si le taux de CPK reste = 5 N. Si les symptômes disparaissent et si le taux de CPK redevient normal, on peut alors réintroduire le traitement par statine, à la dose la plus faible et sous surveillance étroite. Si une maladie musculaire génétique est suspectée, il n'est pas recommandé de reprendre le traitement.</p>
+<p class=AmmAnnexeTitre3>Pneumopathie interstitielle</p>
+<p class=AmmCorpsTexte>Des cas exceptionnels de pneumopathie interstitielle ont été rapportés avec certaines statines, en particulier dans des traitements au long cours (voir rubrique 4.8). </p>
+<p class=AmmCorpsTexte>Elle peut se caractériser par une dyspnée, une toux non productive et une altération de l'état général (fatigue, perte de poids, fièvre). </p>
+<p class=AmmCorpsTexte>Si une pneumopathie interstitielle est suspectée chez un patient, le traitement par la statine doit être arrêté.</p>
+<p class=AmmAnnexeTitre3>Diabète </p>
+<p class=AmmCorpsTexte>Certaines données suggèrent que les statines en tant que classe pharmacologique, augmenteraient la glycémie. Chez certains patients à risque élevé de survenue d’un diabète, les statines peuvent entraîner une hyperglycémie nécessitant l’instauration d’un traitement antidiabétique. Ce risque est néanmoins compensé par la réduction du risque vasculaire sous statines et par conséquent il ne doit pas être un motif d’arrêt des statines. Les patients à risque (glycémie à jeun comprise entre 5,6 et 6,9 mmol/l, IMC > 30 kg/m², augmentation du taux des triglycérides, hypertension artérielle) devront faire l’objet d’une surveillance clinique et biologique conformément aux recommandations nationales.</p>
+<p class=AmmAnnexeTitre3>Lactose </p>
+<p class=AmmCorpsTexte>Ce médicament contient du lactose. Son utilisation est déconseillée chez les patients présentant une intolérance au galactose, un déficit en lactase de Lapp ou un syndrome de malabsorption du glucose ou du galactose (maladies héréditaires rares).</p>
+<p class=AmmAnnexeTitre3><a name="_Hlk505174687"></a><a name="_Hlk505173868">Population pédiatrique</a></p>
+<p class=AmmCorpsTexte>Chez les enfants avant la puberté, le bénéfice/risque du traitement devra être soigneusement évalué par les médecins avant initiation du traitement.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Hlk505174695"></a><a name="_Hlk505173951"></a><a name="_Toc142278921">Associations contre-indiquées</a></p>
+<p class=AmmCorpsTexte><b>+ Acide fusidique</b></p>
+<p class=AmmCorpsTexte>Le risque de myopathie, y compris la rhabdomyolyse, peut être augmenté par la co-administration d'acide fusidique par voie systémique et de statine. Ce mécanisme d'interaction (qu'il soit pharmacodynamique, pharmacocinétique ou les deux) est encore inconnu. Des cas de rhabdomyolyse (dont certains fatals) ont été rapportés chez des patients recevant cette association.</p>
+<p class=AmmCorpsTexte>Si le traitement par l’acide fusidique par voie systémique est nécessaire, le traitement par pravastatine doit être interrompu pendant la durée du traitement par l’acide fusidique (voir rubrique 4.4).</p>
+<p class=AmmAnnexeTitre3>Associations déconseillées</p>
+<p class=AmmCorpsTexte><b>+ Fibrates</b></p>
+<p class=AmmCorpsTexte>L'utilisation de fibrates seuls est occasionnellement associée à des atteintes musculaires. Une augmentation du risque d'effets indésirables musculaires, notamment de rhabdomyolyse, a été décrit lorsque les fibrates sont associés avec d'autres inhibiteurs de l'HMG-CoA réductase. Ces effets indésirables ne pouvant être exclus avec la pravastatine, l'utilisation concomitante de la pravastatine et des fibrates (par exemple le gemfibrozil, le fénofibrate) doit généralement être évitée (<span class=MsoHyperlink><a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0262616.htm#Rcp_4_4_MisesEnGarde_3">voir rubrique 4.4</a></span>). Si cette association est jugée nécessaire, une surveillance étroite de l'état clinique et des CPK des patients sous un tel traitement est nécessaire.</p>
+<p class=AmmAnnexeTitre3><a name="_Hlk505173959"></a><a name="_Toc142278923">Associations </a>faisant l'objet de précautions d’emploi</p>
+<p class=AmmCorpsTexte><b>+ Cholestyramine/Colestipol</b></p>
+<p class=AmmCorpsTexte>L'administration concomitante conduit à une diminution d'environ 40 à 50 % de la biodisponibilité de la pravastatine. Aucune diminution cliniquement significative de la biodisponibilité ou de l'effet thérapeutique n'a été observée quand la pravastatine était administrée une heure avant ou quatre heures après la cholestyramine ou une heure avant le colestipol (<span class=MsoHyperlink><a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0262616.htm#Rcp_4_2_PosoAdmin_1">voir rubrique 4.2</a></span>).</p>
+<p class=AmmCorpsTexte><b>+ Ciclosporine</b></p>
+<p class=AmmCorpsTexte>Une administration concomitante de pravastatine et de ciclosporine conduit à une augmentation d'un facteur 4 environ de l'exposition systémique à la pravastatine. Toutefois, chez certains patients, l'augmentation de l'exposition à la pravastatine peut être plus importante. Une surveillance clinique et biochimique des patients recevant cette association est recommandée (<span class=MsoHyperlink><a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0262616.htm#Rcp_4_2_PosoAdmin_1">voir rubrique 4.2</a></span>).</p>
+<p class=AmmCorpsTexte><a name="_Hlk505173966"><b><span style='color:black'>+ Anti-vitamine K (AVK) </span></b></a></p>
+<p class=AmmCorpsTexte><span style='color:black'>Comme pour les autres inhibiteurs de la HMG-CoA réductase, l’initiation du traitement et l’augmentation progressive des doses de pravastatine chez les patients traités concomitamment avec des AVK (par ex: warfarine ou autre anticoagulant coumarinique) peut entrainer une augmentation de l’INR (International Normalised Ratio). L’arrêt ou la diminution des doses de pravastatine peut entrainer une diminution de l’INR. Dans ces situations, le contrôle approprié de l’INR est requis.</span></p>
+<p class=AmmCorpsTexte><b>+ Macrolides</b></p>
+<p class=AmmCorpsTexte>Les macrolides peuvent augmenter l'exposition aux statines pendant qu'ils sont utilisés en association. La pravastatine doit être utilisée avec précaution en association avec des antibiotiques macrolides (par exemple érythromycine, clarithromycine, roxithromycine) en raison du potentiel risque accru de myopathies.</p>
+<p class=AmmCorpsTexte>Dans une des deux études d'interactions médicamenteuses entre la pravastatine et l'érythromycine, une augmentation statistiquement significative de l'ASC de la pravastatine (70%) et du C<sub>max</sub> (121%) a été constatée. Dans une étude similaire portant sur la clarithromycine, une augmentation statistiquement significative de l'ASC (110%) et du C<sub>max</sub> (127%) a été observée. Bien que ces modifications soient mineures, il convient de se montrer prudent lors de l’association de la pravastatine à l’érythromycine ou la clarithromycine.</p>
+<p class=AmmCorpsTexte><b>+ Warfarine et autres anticoagulants oraux</b></p>
+<p class=AmmCorpsTexte>Les paramètres de biodisponibilité de la pravastatine à l'état d'équilibre n'ont pas été modifiés après administration de warfarine. L'administration chronique des deux produits n'a pas modifié l'action anticoagulante de la warfarine.</p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexteGras><a name="_Hlk505174721"></a><a name="_Hlk505173984">+ Colchicine</a></p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Précautions d’emploi : En raison d’un risque augmenté de myopathie/rhabdomyolyse, le suivi clinique et biologique des patients est recommandé, particulièrement lors de l’initiation du traitement associant la pravastatine et la colchicine.</span></p>
+<p class=AmmCorpsTexteGras>+ Acide nicotinique</p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Le risque de toxicité musculaire est augmenté quand les statines sont administrées en association avec l’acide nicotinique. Dans une étude, les patients Chinois ayant pris de l’acide nicotinique et du laropiprant simultanément avec la simvastatine ont présenté une fréquence plus élevée de myopathie et de rhabdomyolyse en comparaison avec les patients Caucasiens.</span></p>
+<p class=AmmCorpsTexteGras>+ Rifampicine </p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Dans une étude d’interaction où la pravastatine était administrée en association avec la rifampicine, une augmentation d’environ 3 fois de l’AUC et du C<sub>max</sub> a été observée. Par conséquent, des précautions doivent être prises lorsque l’on associe la pravastatine à la rifampicine si les deux médicaments sont pris en même temps. Aucune interaction n’est attendue si les prises médicamenteuses sont séparées d’au moins deux heures.</span></p>
+<p class=AmmCorpsTexteGras>+ Lénalidomide</p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Le risque de rhabdomyolyse est augmenté lorsque les statines sont associées au lénalidomide. Il est nécessaire d’effectuer un suivi clinique et biologique renforcé, notamment dans les premières semaines de traitement.</span></p>
+<p class=AmmCorpsTexte><b>+ Produits métabolisés par le cytochrome P450</b></p>
+<p class=AmmCorpsTexte>La pravastatine n'est pas métabolisée à un degré cliniquement significatif par le système du cytochrome P450. C'est pourquoi les produits métabolisés ou inhibiteurs du cytochrome P450, peuvent être ajoutés à un traitement équilibré par pravastatine sans induire de variation importante de la concentration plasmatique de pravastatine, contrairement à ce qui est observé avec d'autres statines. L'absence d'interaction pharmacocinétique significative avec la pravastatine a été spécifiquement démontrée avec plusieurs produits, notamment ceux qui sont des substrats/inhibiteurs du CYP3A4, par exemple, le diltiazem, le vérapamil, l'itraconazole, le kétoconazole, les inhibiteurs de protéase, le jus de pamplemousse et les inhibiteurs du CYP2C9 (par exemple, le fluconazole).</p>
+<p class=AmmCorpsTexte><b>+ Autres produits</b></p>
+<p class=AmmCorpsTexte>Dans des études d'interaction, aucune différence statistiquement significative en termes de biodisponibilité n'a été observée quand la pravastatine était administrée avec l'acide acétylsalicylique, les anti-acides (pris une heure avant la pravastatine), l'acide nicotinique ou le probucol.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte><a name="_Toc142278927">La pravastatine est contre-indiquée pendant la grossesse et doit être administrée aux femmes en âge de procréer uniquement si une conception est improbable et si ces patientes ont été informées du risque potentiel. Une attention particulière est recommandée chez les adolescentes en âge de procréer pour s'assurer de leur bonne compréhension du risque potentiel d'un traitement par pravastatine pendant la grossesse.</a></p>
+<p class=AmmCorpsTexte>Si une patiente prévoit ou déclare une grossesse, le médecin doit être immédiatement informé et l'administration de la pravastatine doit être arrêtée en raison du risque potentiel pour le fœtus <span style='color:black'>(voir rubrique 4.3)</span>.</p>
+<p class=AmmAnnexeTitre3>Allaitement</p>
+<p class=AmmCorpsTexte>Une faible quantité de pravastatine est excrétée dans le lait maternel. En conséquence, l'administration de pravastatine pendant l'allaitement est contre-indiquée (<a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0262616.htm#Rcp_4_3_ContreIndic_2"><span class=MsoPageNumber><span style='font-family:"Arial",sans-serif;color:windowtext; text-decoration:none'>voir rubrique 4.3</span></span></a>).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929">La pravastatine n'a <span style='color:black'>aucun effet ou qu'un effet négligeable</span> sur l'aptitude à conduire des véhicules ou à utiliser des machines. Toutefois, lors de la conduite de véhicules ou l'utilisation de machines, il devra être pris en compte la possible survenue de vertiges et de troubles visuels pendant le traitement.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmCorpsTexte>Les fréquences des événements indésirables sont classées comme suit : très fréquent (&#8805; 1/10); fréquent (&#8805; 1/100, < 1/10); peu fréquent (&#8805; 1/1 000, < 1/100); rare (&#8805; 1/10 000, < 1/1 000); très rare (< 1/10 000).</p>
+<p class=AmmCorpsTexte><b><u>Essais cliniques :</u></b><span style='color:black'> </span>La pravastatine a été étudiée à la dose de 40 mg au cours de sept études randomisées, en double aveugle, contrôlées contre placebo portant sur plus de 21 000 patients traités par pravastatine (N= 10 764) ou placebo (N= 10 719), représentant plus de 47 000 patient-années d'exposition à la pravastatine. Plus de 19 000 patients ont été suivis pendant une durée médiane de 4,8 à 5,9 ans.</p>
+<p class=AmmCorpsTexte>Les événements indésirables suivants ont été rapportés ; aucun d'entre eux n'a été observé à une fréquence supérieure de 0,3 % dans le groupe traité par pravastatine, comparativement au groupe sous placebo.</p>
+<p class=AmmCorpsTexte><u>Affections du système nerveux :</u></p>
+<p class=AmmCorpsTexte>Peu fréquent : étourdissement, céphalées, troubles du sommeil, insomnies.</p>
+<p class=AmmCorpsTexte>Fréquence indéterminée : myasthénie.</p>
+<p class=AmmCorpsTexte><u>Affections oculaires :</u></p>
+<p class=AmmCorpsTexte>Peu fréquent : troubles de la vision (notamment vision trouble et diplopie).</p>
+<p class=AmmCorpsTexte>Fréquence indéterminée : myasthénie oculaire.</p>
+<p class=AmmCorpsTexte><u>Affections gastro-intestinales :</u></p>
+<p class=AmmCorpsTexte>Peu fréquent : dyspepsie/pyrosis, douleur abdominale, nausées/vomissements, constipation, diarrhées, flatulences.</p>
+<p class=AmmCorpsTexte><u>Affections de la peau et du système sous-cutané :</u></p>
+<p class=AmmCorpsTexte>Peu fréquent : prurit, éruptions cutanées, urticaire, problèmes capillaires et du cuir chevelu (y compris alopécie).</p>
+<p class=AmmCorpsTexte><u>Affections du rein et des voies urinaires :</u></p>
+<p class=AmmCorpsTexte>Peu fréquent : miction anormale (notamment dysurie, fréquence, nycturie).</p>
+<p class=AmmCorpsTexte><u>Affections des organes de reproduction et du sein :</u></p>
+<p class=AmmCorpsTexte>Peu fréquent : troubles sexuels.</p>
+<p class=AmmCorpsTexte><u>Troubles généraux :</u></p>
+<p class=AmmCorpsTexte>Peu fréquent : fatigue.</p>
+<p class=AmmCorpsTexte><b><u>Evénements présentant un intérêt clinique particulier</u></b></p>
+<p class=AmmCorpsTexte><u>Muscles squelettiques :</u></p>
+<p class=AmmCorpsTexte>Des effets sur les muscles squelettiques, par exemple, des douleurs musculo-squelettiques, notamment des arthralgies, des crampes musculaires, des myalgies, une faiblesse musculaire et des taux de CPK élevés ont été rapportés dans les études cliniques. Dans le cadre des études <span style='color:black'> « Cholesterol and Recurrent Events » </span> (CARE), <span style='color:black'> « West of Scotland Coronary Prevention Study » </span> (WOSCOPS) et<span style='color:black'> « Long-term Intervention with Pravastatin in Ischemic Disease » (</span>LIPID), le pourcentage de myalgies (1,4 % sous pravastatine contre 1,4 % sous placebo), de faiblesse musculaire (0,1 % sous pravastatine contre < 0,1 % sous placebo) et l'incidence des taux de CPK > 3 N et > 10 N (1,6 % sous pravastatine contre 1,6 % sous placebo et 1,0 % sous pravastatine contre 1,0 % sous placebo, respectivement) était similaire au placebo (<span class=MsoHyperlink><a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0262616.htm#Rcp_4_4_MisesEnGarde_3">voir rubrique 4.4</a></span>).</p>
+<p class=AmmCorpsTexte><u>Effets hépatiques :</u></p>
+<p class=AmmCorpsTexte>Des élévations des transaminases sériques ont été rapportées. Dans les trois études à long terme, contrôlées contre placebo, CARE, WOSCOPS et LIPID, la fréquence des anomalies marquées des taux d'ALAT et d'ASAT (> 3 N) était similaire dans les deux groupes de traitement (=1,2 %).</p>
+<p class=AmmCorpsTexte><b><u>Depuis la mise sur le marché</u></b></p>
+<p class=AmmCorpsTexte>En plus des événements cités ci-dessus, les événements indésirables suivants ont été rapportés depuis la mise sur le marché de la pravastatine:</p>
+<p class=AmmCorpsTexte><u>Affections du système nerveux :</u></p>
+<p class=AmmCorpsTexte>Très rare : polyneuropathie périphérique, en particulier en cas d'utilisation prolongée, paresthésies.</p>
+<p class=AmmCorpsTexte><u>Affections du système immunitaire :</u></p>
+<p class=AmmCorpsTexte>Très rare : réactions d'hypersensibilité: anaphylaxie, angio-œdème, syndrome pseudo-lupique érythémateux.</p>
+<p class=AmmCorpsTexte><u>Affections gastro-intestinales :</u></p>
+<p class=AmmCorpsTexte>Très rare : pancréatite.</p>
+<p class=AmmCorpsTexte><u>Affections hépato-biliaires :</u></p>
+<p class=AmmCorpsTexte>Très rare : ictère, hépatite, nécrose hépatique fulminante.</p>
+<p class=AmmCorpsTexte><a name="_Hlk505174028">Inconnu : insuffisance hépatique fatale ou non.</a></p>
+<p class=AmmCorpsTexte><u>Affections musculosquelettiques et du tissu conjonctif :</u></p>
+<p class=AmmCorpsTexte>Très rare : rhabdomyolyse, qui peut être associée à une insuffisance rénale aiguë secondaire à la myoglobinurie, atteinte musculaire (<span class=MsoHyperlink><a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0262616.htm#Rcp_4_4_MisesEnGarde_3">voir rubrique 4.4</a></span>), myosite, polymyosite.</p>
+<p class=AmmCorpsTexte>Peu fréquent : troubles tendineux, en particulier des tendinites, parfois compliqués par une rupture.</p>
+<p class=AmmCorpsTexte>Fréquence indéterminée : myopathie nécrosante à médiation auto-immune (voir rubrique 4.4), déchirure musculaire. </p>
+<p class=AmmAnnexeTitre4><span style='font-style:normal'>Affections de la peau et du tissu sous-cutané :</span></p>
+<p class=AmmCorpsTexte>Rare : photosensibilité</p>
+<p class=AmmCorpsTexte>Très rare : dermatomyosite</p>
+<p class=AmmCorpsTexte><a name="_Hlk505174036">Inconnu : éruption lichénoïde.</a></p>
+<p class=AmmCorpsTexte><u>Les effets indésirables suivants ont été rapportés avec la classe des statines :</u></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>cauchemar,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>perte de mémoire,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>dépression,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>cas exceptionnels de pneumopathie interstitielle, en particulier dans les traitements au long cours (voir rubrique 4.4),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>diabète : la fréquence dépend de la présence ou non de facteurs de risque (glycémie à jeun<span style='color:black'> </span><span style='font-family:Symbol'>³</span><span style='color:black'> </span>5,6 mmol/l, IMC > 30 kg/m², augmentation du taux des triglycérides, antécédents d’hypertension artérielle).</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><span class=MsoHyperlink><a href="https://signalement.social-sante.gouv.fr">https://signalement.social-sante.gouv.fr</a></span>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte>On dispose à ce jour d'une expérience limitée concernant le surdosage de pravastatine. Il n'existe pas de traitement spécifique en cas de surdosage. Dans un tel cas, le patient doit recevoir un traitement symptomatique et les mesures d'appoint qui s'imposent.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : HYPOLIPIDEMIANTS / HYPOCHOLESTEROLEMIANTS ET HYPOTRIGLYCERIDEMIANTS / INHIBITEURS DE LA HMG-COA REDUCTASE, code ATC : C10AA03</a></p>
+<p class=AmmAnnexeTitre3>Mécanisme d’action</p>
+<p class=AmmCorpsTexte>La pravastatine est un inhibiteur compétitif de l'hydroxy-3 méthyl-3 glutaryl cœnzyme A (HMG-CoA) réductase, enzyme agissant dans les premières étapes de la biosynthèse du cholestérol, et produit son effet hypolipidémiant de deux façons. En premier lieu, de par son inhibition compétitive réversible et spécifique de la HMG-CoA réductase, elle induit une diminution modérée de la synthèse de cholestérol intracellulaire. Cela induit une augmentation du nombre des récepteurs de LDL à la surface des cellules ainsi qu'un catabolisme via ces récepteurs et une clairance du LDL-C circulant renforcés.</p>
+<p class=AmmCorpsTexte>En second lieu, la pravastatine inhibe la production des LDL en inhibant la synthèse hépatique du VLDL-cholestérol, précurseur du LDL-C.</p>
+<p class=AmmCorpsTexte>Chez les sujets sains tout comme chez les patients hypercholestérolémiques, la pravastatine sodique abaisse les valeurs des paramètres lipidiques suivantes : cholestérol total, LDL-C, apolipoprotéine B, VLDL-cholestérol et triglycérides; le HDL-cholestérol et l'apolipoprotéine A sont quant à eux augmentés.</p>
+<p class=AmmAnnexeTitre3>Efficacité et sécurité clinique</p>
+<p class=AmmCorpsTexte><u>Prévention primaire</u></p>
+<p class=AmmCorpsTexte>L'étude WOSCOPS est un essai randomisé, en double aveugle, contrôlé contre placebo portant sur 6 595 patients de sexe masculin âgés de 45 à 64 ans présentant une hypercholestérolémie modérée à sévère (LDL-C: 155-232 mg/dl [4.0-6.0 mmol/l]) et sans antécédent d'IDM, traités pendant une durée moyenne de 4,8 ans soit par la pravastatine 40 mg/j soit par placebo, en complément d'un régime. Les résultats obtenus chez les patients traités par la pravastatine ont été les suivants :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>réduction du risque de décès d'origine coronaire ou d’IDM non fatal (réduction du risque relatif RRR de 31 %; p = 0,0001 avec un risque absolu de 7,9 % dans le groupe placebo et de 5,5 % dans le groupe des patients traités par pravastatine); les effets sur ces événements cardiovasculaires cumulés ont été évidents dès 6 mois de traitement;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>réduction du nombre total de décès d'origine cardiovasculaires (RRR de 32 %; p = 0,03);</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>en prenant en compte les facteurs de risque, un RRR de 24 % (p = 0,039) de la mortalité totale a également été observée chez les patients traités par pravastatine;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>réduction du risque relatif de recours à des interventions de revascularisation coronaire (pontage coronarien ou angioplastie coronaire) de 37 % (p = 0,009) et à une coronarographie de 31 % (p = 0,007).</p>
+<p class=AmmListePuces1 style='text-indent:0cm'> </p>
+<p class=AmmCorpsTexte>Le bénéfice du traitement sur les critères cités ci-dessus n'est pas connu chez les patients âgés de plus de 65 ans, qui ne pouvaient pas être inclus dans l'étude.</p>
+<p class=AmmCorpsTexte>En l'absence de données chez les patients ayant une hypercholestérolémie associée à un taux de triglycérides supérieur à 6 mmol/l (5,3 g/l) après 8 semaines de régime, dans cette étude, le bénéfice du traitement par pravastatine n'est pas établi chez ce type de patient.</p>
+<p class=AmmCorpsTexte><u>Prévention secondaire</u></p>
+<p class=AmmCorpsTexte>L'étude LIPID est un essai multicentrique, randomisé, en double aveugle, contrôlé contre placebo, comparant l'effet de la pravastatine (40 mg/jour) à celui d'un placebo chez 9 014 patients âgés de 31 à 75 ans pendant une durée moyenne de 5,6 années et présentant un taux de cholestérol sérique normal ou élevé (cholestérol total initial = 155 à 271 mg/dl [4,0-7,0 mmol/l], cholestérol total moyen = 219 mg/dl [5,66 mmol/l]) ainsi que des taux variables de triglycérides allant jusqu'à 443 mg/dl [5,0 mmol/l] et un antécédent d’IDM ou d'angor instable dans les 3 à 36 mois précédents. Le traitement par la pravastatine a significativement réduit le risque relatif de décès d'origine coronaire de 24 % (p = 0,0004, avec un risque absolu de 6,4 % dans le groupe placebo, et de 5,3 % dans le groupe des patients traités par pravastatine), le risque relatif d'événements coronariens (décès d'origine coronaire ou IDM non fatal) de 24 % (p < 0,0001) et le risque relatif d’IDM fatal ou non de 29 % (p < 0,0001). Chez les patients traités par pravastatine, les résultats ont montré :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une réduction du risque relatif de mortalité totale de 23 % (p < 0,0001) et du risque de mortalité cardiovasculaire de 25 % (p < 0,0001);</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une réduction du risque relatif de recours à des interventions de revascularisation coronaire (pontage coronarien ou angioplastie transluminale percutanée coronaire) de 20 % (p< 0,0001);</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une réduction du risque relatif d'accident vasculaire cérébral de 19 % (p = 0,048).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>L'étude CARE, est un essai randomisé, en double aveugle, contrôlé contre placebo, comparant les effets de la pravastatine (40 mg/jour) à ceux d'un placebo sur les décès d'origine coronaire et sur les IDM non fatals sur une durée moyenne de 4,9 ans chez 4 159 patients âgés de 21 à 75 ans présentant un taux de cholestérol total normal (cholestérol total initial moyen < 240 mg/dl) et ayant déjà fait un IDM dans les 3 à 20 mois précédents. Le traitement par la pravastatine a significativement réduit :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>le taux de récidives d'événements coronariens (décès d'origine coronaire ou IDM non fatal) de 24 % (p = 0,003, placebo 13,3 %, pravastatine 10,4 %);</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>le risque relatif de recours à des interventions de revascularisation coronaire (pontage coronarien ou angioplastie transluminale percutanée coronaire) de 27 % (p< 0,001).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Le risque relatif d'accident vasculaire cérébral a également été réduit de 32 % (p = 0,032) et le risque combiné d'accident vasculaire cérébral ou d'accident ischémique transitoire (AIT) de 27 % (p = 0,02).</p>
+<p class=AmmCorpsTexte>Le bénéfice du traitement sur les critères cités ci-dessus n'est pas connu chez les patients âgés de plus de 75 ans, qui ne pouvaient pas être inclus dans les études CARE et LIPID.</p>
+<p class=AmmCorpsTexte>En l'absence de données chez les patients ayant une hypercholestérolémie associée à un taux de triglycérides supérieur à 4 mmol/l (3,5 g/l) ou supérieur à 5 mmol/l (4,45 g/l) après 4 ou 8 semaines de régime, dans les études CARE et LIPID respectivement, le bénéfice du traitement par pravastatine n'est pas établi chez ce type de patient.</p>
+<p class=AmmCorpsTexte>Dans les études CARE et LIPID, environ 80 % des patients ont reçu de l'acide acétylsalicylique dans le cadre de leur traitement.</p>
+<p class=AmmCorpsTexte><u>Transplantation cardiaque et rénale</u></p>
+<p class=AmmCorpsTexte>L'efficacité de la pravastatine chez les patients recevant un traitement immunosuppresseur à la suite :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>d'une transplantation cardiaque a été évaluée au cours d'une étude prospective randomisée, contrôlée (n = 97). Les patients ont reçu à la fois de la pravastatine (20-40 mg) ou non, et un traitement immunosuppresseur standard constitué de ciclosporine, prednisone et azathioprine. Le traitement par pravastatine a significativement réduit le taux de rejet cardiaque avec retentissement hémodynamique à un an, a amélioré la survie à un an (p = 0,025), et réduit le risque d'anomalie vasculaire coronaire du greffon déterminée par angiographie et à l'autopsie (p = 0,049);</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>d'une transplantation rénale a été évaluée au cours d'une étude prospective non contrôlée, non randomisée (n = 48) sur durée de 4 mois. Les patients ont reçu à la fois de la pravastatine (20 mg) ou non, et un traitement immunosuppresseur standard constitué de ciclosporine et prednisone. Chez les patients ayant subi une transplantation rénale, la pravastatine a significativement réduit à la fois l'incidence des épisodes de rejets multiples et l'incidence des épisodes de rejet aigu confirmés par biopsie, et le recours aux injections répétées de prednisolone et de Muromonab-CD3.</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmCorpsTexte><u>Enfants et adolescents (8-18 ans)</u></p>
+<p class=AmmCorpsTexte>Une étude en double aveugle contre placebo chez 214 patients pédiatriques ayant une hypercholesterolémie familiale hétérozygote a été conduite sur 2 ans. Les enfants (8-13 ans) ont été randomisés sous placebo (n=63) ou 20 mg de pravastatine par jour (n=65) et les adolescents (âgés de 14 à 18 ans) ont été randomisés sous placebo (n=45) ou 40 mg de pravastatine par jour (n=41).</p>
+<p class=AmmCorpsTexte>L'inclusion dans cette étude nécessitait un parent ayant un diagnostic clinique ou moléculaire d'hypercholestérolémie familiale. La valeur moyenne basale de LDL-C était de 239 mg/dl (6,2 mmol/l) dans le groupe pravastatine (entre 151 et 405 mg/dl [3,9 - 10,5 mmol/l] et de 237 mg/dl (6,1 mmol/l) dans le groupe placebo (entre 154 et 375 mg/dl [4,0 - 9,7 mmol/l]). Lors de l'analyse des données groupées des enfants et des adolescents, il a été montré une réduction moyenne significative de LDL-C de - 22,9 % ainsi que du Cholestérol total (- 17,2 %), similaire à l'efficacité démontrée chez les adultes sous 20 mg de pravastatine.</p>
+<p class=AmmCorpsTexte>Les effets du traitement par pravastatine étaient similaires dans les deux groupes d'âges. Le LDL-C moyen obtenu était de 186 mg/dl (4,8 mmol/l) (entre 67 et 363 mg/dl [1,7 - 9,4 mmol/l]) dans le groupe pravastatine comparé à 236 mg/dl (6,1 mmol/l) (entre 105 et 438 mg/dl [2,7 - 11,3 mmol/l]) dans le groupe placebo. Chez les sujets recevant la pravastatine, il n'y a pas eu de différence observée sur aucun des paramètres endocriniens surveillés [ACTH, Cortisol, DHEAS, FSH, LH, TSH, estradiol (filles) et testostérone (garçons)] par rapport au placebo. Il n'a pas été observé de différences du développement, de modification du volume testiculaire ni de différences de score de Tanner par rapport au placebo. La puissance de cette étude pour détecter une différence entre les groupes de traitement était faible.</p>
+<p class=AmmCorpsTexte>L'efficacité à long terme d'un traitement par la pravastatine pendant l'enfance pour réduire la morbidité et la mortalité à l'âge adulte n'a pas été établie.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278934">Absorption</a></p>
+<p class=AmmCorpsTexte>La pravastatine est administrée par voie orale sous forme active. Elle est rapidement absorbée ; les pics sériques sont atteints 1 à 1,5 heures après l'ingestion. En moyenne, 34 % de la dose administrée par voie orale sont absorbés, avec une biodisponibilité absolue de 17 %.</p>
+<p class=AmmCorpsTexte>La présence d'aliments dans le tube digestif entraîne une réduction de la biodisponibilité, mais l'effet hypolipidémiant de la pravastatine est identique, qu'elle soit prise pendant ou en dehors des repas.</p>
+<p class=AmmCorpsTexte>Après absorption, 66 % de la pravastatine subit un effet de premier passage hépatique, principal site de son action ainsi que de la synthèse du cholestérol et de la clairance du LDL-C. Des études<span style='color:black'> </span><i>in vitro</i><span style='color:black'> </span>ont démontré que la pravastatine est transportée dans les hépatocytes, avec une entrée nettement moindre dans les autres cellules.</p>
+<p class=AmmCorpsTexte>Compte-tenu de cet effet important de premier passage hépatique, les concentrations plasmatiques de la pravastatine n'ont qu'une valeur prédictive limitée de l'effet hypolipidémiant.</p>
+<p class=AmmCorpsTexte>Les concentrations plasmatiques sont proportionnelles aux doses administrées.</p>
+<p class=AmmAnnexeTitre3>Distribution</p>
+<p class=AmmCorpsTexte>Environ 50 % de la pravastatine circulante est liée aux protéines plasmatiques.</p>
+<p class=AmmCorpsTexte>Le volume de distribution est d'environ 0,5 l/kg.</p>
+<p class=AmmCorpsTexte>Une faible quantité de pravastatine passe dans le lait maternel.</p>
+<p class=AmmAnnexeTitre3><a name="_Hlk505174068">Métabolisme</a></p>
+<p class=AmmCorpsTexte>La pravastatine n'est pas significativement métabolisée par le cytochrome P450 et ne semble pas non plus être un substrat ou un inhibiteur de la glycoprotéine P mais plutôt un substrat d'autres protéines de transport.</p>
+<p class=AmmAnnexeTitre3><a name="_Hlk505174072"></a><a name="_Hlk505174804">Elimination</a></p>
+<p class=AmmCorpsTexte>Après administration par voie orale, 20 % de la dose initiale sont éliminés dans l'urine et 70 % dans les fèces. La demi-vie d'élimination plasmatique de la pravastatine prise oralement est de 1,5 à 2 heures.</p>
+<p class=AmmCorpsTexte>Après administration intraveineuse, 47 % de la dose est éliminée par excrétion rénale et 53 % par excrétion biliaire et biotransformation. Le principal produit de dégradation de la pravastatine est le métabolite isomérique 3-alpha-hydroxy. L'activité inhibitrice de ce métabolite sur la HMG-CoA réductase est de 1/10 à 1/40 de celle du composé mère.</p>
+<p class=AmmCorpsTexte>La clairance systémique de la pravastatine est de 0,81 l/H/kg et la clairance rénale est de 0,38 l/H/kg, ce qui indique une sécrétion tubulaire.</p>
+<p class=AmmAnnexeTitre3><a name="_Hlk505174827"></a><a name="_Hlk505174083">Population </a>pédiatrique</p>
+<p class=AmmCorpsTexte>La C<sub>max</sub><span style='color:black'> </span>moyenne de pravastatine et les valeurs d'AUC pour des sujets pédiatriques de tout âge et sexe rassemblés ont été similaires aux valeurs observées chez les adultes après une dose orale de 20 mg.</p>
+<p class=AmmCorpsTexte><b><u>Populations à risque</u></b></p>
+<p class=AmmCorpsTexte><i><u>Insuffisance hépatique</u></i></p>
+<p class=AmmCorpsTexte>Chez les patients atteints de cirrhose alcoolique, l'exposition systémique à la pravastatine et à ses métabolites est accrue d'environ 50 % comparativement à un patient ayant une fonction hépatique normale.</p>
+<p class=AmmCorpsTexte><i><u>Insuffisance rénale</u></i></p>
+<p class=AmmCorpsTexte>Aucune modification significative n'a été observée chez les patients ayant une insuffisance rénale légère. Toutefois, une insuffisance rénale sévère ou modérée peut entraîner une multiplication par deux de l'exposition systémique à la pravastatine et ses métabolites.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278935"></a><a name="_Toc142278922"><span style='color:black'>D'après les études conventionnelles pharmacologiques d'innocuité, de toxicité à doses répétées et de toxicité sur la reproduction, il n'y a pas d'autres risques pour le patient que ceux attendus compte-tenu du mécanisme d'action pharmacologique.</span></a></p>
+<p class=AmmCorpsTexte>Les études à doses répétées indiquent que la pravastatine peut induire une atteinte musculaire et une hépato-toxicité à des degrés variables ; en général, les effets importants sur ces tissus ne sont apparus qu'à des doses au moins 50 fois supérieures à la dose maximale chez l'homme en mg/kg.</p>
+<p class=AmmCorpsTexte>Les études<span style='color:black'> </span><i>in vitro</i><span style='color:black'> </span>et<span style='color:black'> </span><i>in vivo</i><span style='color:black'> </span>de génotoxicité n'ont pas mis en évidence de risque mutagène.</p>
+<p class=AmmCorpsTexte>Chez la souris, une étude de carcinogénicité sur deux ans avec la pravastatine, a démontré aux doses de 250 et 500 mg/kg/jour (&#8805; 310 fois la dose maximale chez l'homme en mg/kg), des augmentations statistiquement significatives de l'incidence des carcinomes hépatocellulaires chez les mâles et chez les femelles, et des adénomes pulmonaires chez les femelles uniquement. Chez le rat, une étude de carcinogénicité sur 2 ans à la dose de 100 mg/kg/jour (= 125 fois la dose maximale chez l'homme en mg/kg), a montré une augmentation statistiquement significative de l'incidence des carcinomes hépatocellulaires chez le mâle uniquement.</p>
+<p class=AmmCorpsTexte>Après administration à des rats juvéniles, âgés de 4 à 80 jours, de pravastatine à des doses allant de 5 à 45 mg/kg/jour, un amincissement du corps calleux a été observé à des niveaux d’exposition sériques > 1 fois (ASC) la dose maximale de 40 mg utilisée chez l'enfant et l'adolescent sur la base de l’ASC. Pour des niveaux d’exposition > 2 fois (ASC) à la dose de 40 mg utilisée chez l'homme, des changements neurocomportementaux ont été observés (majoration du réflexe de tressaillement et augmentation de taux d’erreurs lors du test du Morris Water Maze qui évalue la mémoire spatiale). Aucun amincissement du corps calleux n'a été observé chez les rats recevant de la pravastatine (> 250 mg/kg/jour) à compter du 35ème jour après la naissance et pendant 3 mois, suggérant une sensibilité accrue chez les jeunes rats. La cause ainsi que l'importance de l'amincissement du corps calleux et des effets neurocomportementaux chez les jeunes rats sont inconnus.</p>
+<p class=AmmCorpsTexte>Une altération du sperme et une fertilité réduite ont été observées chez les rats mâles recevant des doses équivalentes à 335 fois (ASC) la dose utilisée chez l’homme. La dose sans effet observé sur le système reproducteur a été de 1 (mâle) et 2 (femelle) fois (ASC) la dose de 40 mg utilisée chez l’homme.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937">Microcelac 100 [75 % de lactose monohydraté et 25 % de cellulose microcristalline], lactose monohydraté, oxyde de magnésium léger, croscarmellose sodique, oxyde de fer jaune (E172), povidone, stéarate de magnésium.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">Sans objet.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte>3 ans</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940">Pas de précautions particulières de conservation.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte>10, 14, 20, 28, 30, 56, 60 ou 98 comprimés sous plaquettes thermoformées (Aluminium/Aluminium).</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Pas d’exigences particulières.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Toc142278943">ACCORD HEALTHCARE FRANCE SAS</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>635 RUE DE LA CHAUDE RIVIERE</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>59000 LILLE</p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><a name="_Toc142278944"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 492 973 8 2 : 10 comprimés sous plaquettes thermoformées (Aluminium/Aluminium).</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 492 974 4 3 : 14 comprimés sous plaquettes thermoformées (Aluminium/Aluminium).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 492 975 0 4 : 20 comprimés sous plaquettes thermoformées (Aluminium/Aluminium).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 492 976 7 2 : 28 comprimés sous plaquettes thermoformées (Aluminium/Aluminium).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 492 977 3 3 : 30 comprimés sous plaquettes thermoformées (Aluminium/Aluminium).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 492 979 6 2 : 56 comprimés sous plaquettes thermoformées (Aluminium/Aluminium).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 492 980 4 4 : 60 comprimés sous plaquettes thermoformées (Aluminium/Aluminium).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 577 982 1 5 : 98 comprimés sous plaquettes thermoformées (Aluminium/Aluminium).</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I.</p>
+<span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92'><br
+clear=all>
+</span>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_PRAVASTATINE_ACCORD_10_mg,_comprimé_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE PRAVASTATINE ACCORD 10 mg, comprimé ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE PRAVASTATINE ACCORD 10 mg, comprimé ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_PRAVASTATINE_ACCORD_10_mg,_comprimé_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE PRAVASTATINE ACCORD 10 mg, comprimé ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE PRAVASTATINE ACCORD 10 mg, comprimé ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_PRENDRE_PRAVASTATINE_ACCORD_10_mg,_comprimé_?"
+                     aria-label="3. COMMENT PRENDRE PRAVASTATINE ACCORD 10 mg, comprimé ? (Lien de redirection)">
+                    3. COMMENT PRENDRE PRAVASTATINE ACCORD 10 mg, comprimé ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_PRAVASTATINE_ACCORD_10_mg,_comprimé_?"
+                     aria-label="5. COMMENT CONSERVER PRAVASTATINE ACCORD 10 mg, comprimé ? (Lien de redirection)">
+                    5. COMMENT CONSERVER PRAVASTATINE ACCORD 10 mg, comprimé ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : PRAVASTATINE ACCORD 10 mg, comprimé - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="PRAVASTATINE ACCORD 10 mg, comprimé, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 18/03/2026</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'><a name="_Toc142278999">PRAVASTATINE ACCORD 10 mg, comprimé</a></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Pravastatine sodique</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279000"><span lang=FR-BE>Veuillez lire attentivement cette notice avant de prendre ce médicament car elle contient des informations importantes pour vous.</span></a></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin ou votre pharmacien.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que PRAVASTATINE ACCORD 10 mg, comprimé et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant de prendre PRAVASTATINE ACCORD 10 mg, comprimé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment prendre PRAVASTATINE ACCORD 10 mg, comprimé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver PRAVASTATINE ACCORD 10 mg, comprimé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_PRAVASTATINE_ACCORD_10_mg,_comprimé_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE PRAVASTATINE ACCORD 10 mg, comprimé ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279003">Classe pharmacothérapeutique - code ATC : C10AA03</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279004">PRAVASTATINE ACCORD 10 mg, comprimé appartient à un groupe de médicaments appelés statines (ou inhibiteurs de l’HMG-CoA réductase). Il empêche la fabrication du cholestérol par le foie et réduit ainsi les taux de cholestérol et d'autres graisses (les triglycérides) dans votre organisme. En excès dans le sang, le cholestérol s'accumule sur la paroi des vaisseaux sanguins et les obstrue.</a></p>
+<p class=AmmCorpsTexte>Cette situation est appelée durcissement des artères ou athérosclérose et peut provoquer :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une angine de poitrine (angor), lorsqu'un vaisseau du cœur est bloqué partiellement,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une attaque cardiaque (infarctus du myocarde), lorsqu'un vaisseau du cœur est bloqué totalement,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une attaque cérébrale (accident vasculaire cérébral), lorsqu'un vaisseau du cerveau est bloqué totalement.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Ce médicament est utilisé dans 3 situations :</p>
+<p class=AmmCorpsTexte><u>Dans le traitement des taux élevés de cholestérol et de graisses dans le sang</u></p>
+<p class=AmmCorpsTexte>PRAVASTATINE ACCORD 10 mg, comprimé est utilisé pour réduire des taux élevés de "mauvais" cholestérol et augmenter les taux de "bon" cholestérol dans le sang quand le changement des habitudes alimentaires et l'activité physique n'ont pas réussi à le faire baisser de façon satisfaisante.</p>
+<p class=AmmCorpsTexte><u>Dans la prévention des maladies du cœur et des vaisseaux sanguins</u></p>
+<p class=AmmCorpsTexte>Si vous avez un taux élevé de cholestérol dans le sang ainsi que des facteurs de risque favorisant les maladies du cœur et des vaisseaux sanguins (tels que tabac, surpoids, taux élevé de sucre dans le sang, tension artérielle élevée, absence d'activité physique), PRAVASTATINE ACCORD 10 mg, comprimé est utilisé pour diminuer les risques d'apparition de ces maladies et les risques de décès liés à ces maladies.</p>
+<p class=AmmCorpsTexte>Si vous avez déjà eu une attaque cérébrale ou si vous avez une angine de poitrine (angor instable), et même si votre taux de cholestérol est normal, PRAVASTATINE ACCORD 10 mg, comprimé est utilisé pour réduire le risque que vous fassiez à nouveau une attaque cardiaque ou une attaque cérébrale et pour diminuer le risque de décès lié à ces maladies.</p>
+<p class=AmmCorpsTexte><u>Après une greffe d'organe</u></p>
+<p class=AmmCorpsTexte>Si vous avez eu une greffe d'organe et recevez un traitement pour éviter le rejet de l'organe greffé, PRAVASTATINE ACCORD 10 mg, comprimé est utilisé pour réduire les taux élevés de graisses dans le sang.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_PRAVASTATINE_ACCORD_10_mg,_comprimé_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE PRAVASTATINE ACCORD 10 mg, comprimé ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">Ne prenez jamais PRAVASTATINE ACCORD 10 mg, comprimé :</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique (hypersensible) à la substance active ou à l’un des autres composants contenus dans ce médicament, mentionnés dans la rubrique 6. </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes enceinte, souhaitez être enceinte ou si vous allaitez (voir « Grossesse et allaitement ») ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous souffrez actuellement d'une maladie du foie (affection hépatique évolutive) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si plusieurs analyses de sang ont montré que votre foie fonctionne anormalement (augmentation du niveau d'enzymes hépatiques dans le sang).</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Avertissements et précautions</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Adressez-vous à votre médecin ou votre pharmacien avant de prendre </span>PRAVASTATINE ACCORD 10 mg, comprimé<span lang=FR-BE>. </span></p>
+<p class=AmmCorpsTexte>Avant de prendre ce médicament, indiquez à votre médecin si vous avez ou si vous avez eu dans le passé <span style='color:black'>un problème médical tel que :</span> </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une maladie des reins,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>un fonctionnement insuffisant de la thyroïde (hypothyroïdie),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une maladie du foie ou des problèmes avec l'alcool (consommation d'importantes quantités d'alcool),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>des problèmes musculaires dus à une maladie héréditaire,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>des problèmes musculaires dus à un autre médicament appartenant au groupe des statines (inhibiteurs de l'HMG-CoA réductase) ou au groupe des fibrates (voir « Autres médicaments et PRAVASTATINE ACCORD 10 mg, comprimé »),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez ou avez eu une myasthénie (maladie accompagnée d'une faiblesse musculaire générale, pouvant parfois toucher les muscles utilisés pour respirer) ou une myasthénie oculaire (maladie provoquant une faiblesse musculaire au niveau des yeux), car les statines peuvent parfois aggraver ces affections ou entraîner leur apparition (voir rubrique 4).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><a name="_Hlk505174165">Votre médecin doit faire réaliser une analyse de sang avant que vous ne commenciez à prendre PRAVASTATINE ACCORD 10 mg, comprimé ou si vous présentez l’un des symptômes d’atteinte hépatique lorsque vous prenez PRAVASTATINE ACCORD 10 mg, comprimé. Cette analyse permet de vérifier le bon fonctionnement de votre foie.</a></p>
+<p class=AmmCorpsTexte>Votre médecin peut aussi vous demander de réaliser des analyses de sang supplémentaires pour contrôler le bon fonctionnement de votre foie après le début de votre traitement par PRAVASTATINE ACCORD 10 mg, comprimé.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><span style='color:black'>Le risque de dégradation musculaire est augmenté chez certains patients. Contacter votre médecin si l’une des situations suivantes s’applique à vous :</span></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Si vous prenez ou avez pris au cours des 7 derniers jours un médicament appelé acide fusidique (pour traiter les infections bactériennes) sous forme orale ou par injection. L'association d’acide fusidique et de PRAVASTATINE ACCORD peut entraîner des troubles musculaires graves (rhabdomyolyse).</p>
+<p class=AmmCorpsTexte>Si vous avez été concerné par l'un de ces problèmes ou si vous avez plus de 70 ans, votre médecin devra effectuer une analyse de sang avant et éventuellement pendant votre traitement. Ces analyses de sang serviront à évaluer votre risque d'effets indésirables touchant les muscles.</p>
+<p class=AmmCorpsTexte>Au cours du traitement, si vous ressentez de façon inexpliquée des crampes ou des douleurs musculaires, prévenez immédiatement votre médecin.</p>
+<p class=AmmCorpsTexte>Au cours de votre traitement avec ce médicament, si vous êtes diabétique ou si vous présentez un risque de survenue d’un diabète, vous serez suivi attentivement par votre médecin. Vous pouvez débuter un diabète si vous avez un taux de sucre (glycémie) et de graisses élevés dans le sang, si vous êtes en surpoids et si vous avez une pression artérielle (tension) élevée.</p>
+<p class=AmmCorpsTexte>Prévenez également votre médecin ou votre pharmacien si vous avez une faiblesse musculaire constante. Des examens complémentaires et un traitement peuvent être nécessaires pour la diagnostiquer et la traiter.</p>
+<p class=AmmCorpsTexte>L'utilisation de ce médicament est déconseillée chez les patients présentant une intolérance au galactose, un déficit en lactase de Lapp ou un syndrome de malabsorption du glucose ou du galactose (maladies héréditaires rares).</p>
+<p class=AmmCorpsTexteGras>Vérifiez avec votre médecin ou votre pharmacien avant de prendre PRAVASTATINE ACCORD 10 mg, comprimé :</p>
+<p class=AmmCorpsTexte>Si vous avez une insuffisance respiratoire grave.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et PRAVASTATINE ACCORD 10 mg, comprimé</p>
+<p class=AmmCorpsTexte>Informez votre médecin ou pharmacien si vous prenez, avez récemment pris ou pourriez prendre tout autre médicament.</p>
+<p class=AmmCorpsTexte><a name="_Hlk505174206">Prendre PRAVASTATINE ACCORD 10 mg, comprimé avec l’un des médicaments suivants peut augmenter le risque de développer des problèmes musculaires :</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>un médicament qui abaisse votre taux de cholestérol dans le sang (les fibrates, par exemple le gemfibrozil, le fénofibrate) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>un médicament qui abaisse les défenses immunitaires du corps (la ciclosporine);</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>un médicament qui traite des infections dues à des bactéries (un antibiotique tel que l'érythromycine et la clarithromycine);</p>
+<p class=AmmListePuces1><a name="_Hlk505174959"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous devez prendre </a><a name="_Hlk505174222">un médicament </a>par voie orale <a name="_Hlk505174228"><span style='color:black'>contenant de l’acide fusidique </span></a>pour traiter une infection bactérienne, vous devrez temporairement <a name="_Hlk505174240"><span style='color:black'>arrêter </span></a>de prendre ce médicament. Votre médecin vous <a name="_Hlk505174246"><span style='color:black'>dira </span></a>quand vous pourrez <a name="_Hlk505174251"><span style='color:black'>à nouveau prendre </span></a>PRAVASTATINE ACCORD en toute sécurité. <a name="_Hlk505174259">La prise </a>de PRAVASTATINE ACCORD avec de l’acide fusidique peut entraîner <a name="_Hlk505174280">dans de rares cas une</a> faiblesse <a name="_Hlk505174288">musculaire, une raideur, </a>une sensibilité ou une douleur musculaire (rhabdomyolyse). Pour plus d'informations <a name="_Hlk505174295">sur </a>la rhabdomyolyse, voir la rubrique 4 ;</p>
+<p class=AmmListePuces1><a name="_Hlk505174311"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>colchicine (utilisée dans le traitement de la goutte) ;</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>acide nicotinique (utilisé dans le traitement des taux élevés de cholestérol) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>rifampicine (utilisée dans le traitement de l’infection appelée tuberculose) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>lénalidomide (utilisé dans le traitement d’un certain type de cancer appelé myélome multiple).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Si vous utilisez aussi un médicament qui abaisse votre taux de graisse dans le sang (de type résine comme la colestyramine ou le colestipol), ce traitement doit être pris 1 heure avant ou 4 heures après la prise de la résine. Cette précaution doit être prise car la résine peut affecter l'absorption de PRAVASTATINE ACCORD 10 mg, comprimé si les deux médicaments sont pris de manière trop rapprochée dans le temps.</p>
+<p class=AmmCorpsTexteGras>PRAVASTATINE ACCORD 10 mg, comprimé avec des aliments, boissons <a name="_Hlk505175054">et de l’alcool.</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279012">Ce traitement peut être pris pendant ou en dehors des repas, avec un demi-verre d'eau.</a></p>
+<p class=AmmCorpsTexte>Vous devez toujours limiter votre consommation d'alcool au minimum. Si vous êtes inquiet de la quantité d'alcool que vous pouvez boire lorsque vous prenez ce médicament vous devez en discuter avec votre médecin.</p>
+<p class=AmmCorpsTexteGras>Grossesse et allaitement </p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous êtes enceinte ou que vous allaitez, si vous pensez être enceinte ou planifiez une grossesse, demandez conseil à votre médecin ou pharmacien avant de prendre ce médicament.</span></p>
+<p class=AmmCorpsTexte><b><u>Grossesse</u></b></p>
+<p class=AmmCorpsTexte><span style='color:black'>Vous ne devez pas prendre</span> PRAVASTATINE ACCORD 10 mg, comprimé pendant la grossesse. Si vous découvrez que vous êtes enceinte pendant le traitement, <span style='color:black'>vous devez informer immédiatement </span>votre médecin.</p>
+<p class=AmmCorpsTexte>Demandez conseil à votre médecin ou à votre pharmacien avant de prendre tout médicament.</p>
+<p class=AmmCorpsTexte><b><u>Allaitement</u></b></p>
+<p class=AmmCorpsTexte><span style='color:black'>Vous ne devez pas prendre </span>PRAVASTATINE ACCORD 10 mg, comprimé si vous souhaitez allaiter car ce médicament passe dans le lait maternel.</p>
+<p class=AmmCorpsTexte>Demandez conseil à votre médecin ou à votre pharmacien avant de prendre tout médicament.</p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>Soyez prudent. Ne pas conduire sans avoir lu la notice.</p>
+<p class=AmmCorpsTexte>Habituellement, PRAVASTATINE ACCORD 10 mg, comprimé<span style='color:black'> n'influence pas votre</span> aptitude à conduire des véhicules ou à utiliser des machines. <span style='color:black'>Si vous ressentez des vertiges ou des troubles de la vue au cours du traitement, assurez-vous avant de conduire ou d'utiliser une machine que vous êtes en mesure de le faire.</span></p>
+<p class=AmmCorpsTexte><b><span style='color:black'>PRAVASTATINE ACCORD 10 mg, comprimé contient du lactose.</span></b></p>
+<p class=AmmCorpsTexte>Si votre médecin vous a informé(e) que vous avez une intolérance à certains sucres, contactez-le avant de prendre ce médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_PRENDRE_PRAVASTATINE_ACCORD_10_mg,_comprimé_?'>3. COMMENT PRENDRE PRAVASTATINE ACCORD 10 mg, comprimé ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279021"><span style='color:black'>Votre médecin vous conseillera un régime pauvre en graisse que vous devrez poursuivre durant toute la durée du traitement.</span> </a></p>
+<p class=AmmCorpsTexte><a name="_Hlk505174353">Respectez toujours la posologie indiquée par votre médecin. En cas d'incertitude, consultez votre médecin ou votre pharmacien. </a></p>
+<p class=AmmCorpsTexte>PRAVASTATINE ACCORD 10 mg, comprimé<span style='color:black'> peut être pris pendant ou en dehors des repas, avec un demi-verre d'eau.</span></p>
+<p class=AmmCorpsTexte><b><u>Posologie</u></b></p>
+<p class=AmmCorpsTexte><u>Adultes :</u></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Dans le traitement des taux élevés de cholestérol et de graisses dans le sang : la dose habituelle est de 10 à 40 mg une fois par jour, de préférence le soir. </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Dans la prévention des maladies du cœur et des vaisseaux sanguins : la dose habituelle est de 40 mg une fois par jour, de préférence le soir.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>La dose quotidienne maximale de 40 mg ne doit pas être dépassée. Votre médecin vous dira quelle dose vous convient.</p>
+<p class=AmmCorpsTexte><u>Après une transplantation d'organe :</u></p>
+<p class=AmmCorpsTexte>Votre médecin peut commencer le traitement avec une dose initiale de 20 mg une fois par jour. Il pourra ajuster cette dose jusqu'à 40 mg par jour.</p>
+<p class=AmmCorpsTexte>Si vous prenez un traitement qui diminue les défenses de l'organisme (ciclosporine), votre médecin peut commencer le traitement avec une dose initiale de 20 mg une fois par jour. Il pourra ajuster cette dose jusqu'à 40 mg par jour.</p>
+<p class=AmmCorpsTexte>Si vous souffrez d'une maladie sévère du foie ou d'une maladie des reins, votre médecin peut vous prescrire une dose plus faible de PRAVASTATINE ACCORD 10 mg, comprimé.</p>
+<p class=AmmCorpsTexte>Si vous avez l'impression que l'effet de ce médicament est trop fort ou trop faible, parlez-en à votre médecin ou à votre pharmacien.</p>
+<p class=AmmAnnexeTitre3><a name="_Hlk505175085"></a><a name="_Hlk505174387">Utilisation chez les enfants et les adolescents</a></p>
+<p class=AmmCorpsTexte><u>Enfants (8-13 ans) et adolescents (14-18 ans) avec une maladie héréditaire augmentant le taux de cholestérol dans le sang :</u></p>
+<p class=AmmCorpsTexte>La dose habituelle est de 10 à 20 mg une fois par jour entre 8 et 13 ans et de 10 à 40 mg une fois par jour entre 14 et 18 ans.</p>
+<p class=AmmCorpsTexte><b><u>Durée du traitement</u></b></p>
+<p class=AmmCorpsTexte>Votre médecin vous indiquera la durée de votre traitement par PRAVASTATINE ACCORD 10 mg, comprimé. Ce médicament doit être pris très régulièrement, et aussi longtemps que votre médecin vous l'a conseillé, même si c'est pour une durée très longue. N'arrêter pas votre traitement de vous-même.</p>
+<p class=AmmCorpsTexte><b><span style='color:black'>Si vous avez pris plus de PRAVASTATINE ACCORD 10 mg, comprimé que vous n'auriez dû :</span></b> </p>
+<p class=AmmCorpsTexte><span style='color:black'>Si vous avez pris trop de comprimés, ou si une autre personne en a avalé accidentellement, contactez votre médecin ou l'hôpital le plus proche afin de recevoir les conseils appropriés.</span></p>
+<p class=AmmCorpsTexteGras>Si vous oubliez de prendre PRAVASTATINE ACCORD 10 mg, comprimé :</p>
+<p class=AmmCorpsTexte>Si vous oubliez une dose, prenez normalement la prochaine dose prévue.</p>
+<p class=AmmCorpsTexte>Ne prenez pas de dose double pour compenser la dose que vous avez oublié de prendre.</p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez de prendre PRAVASTATINE ACCORD 10 mg, comprimé :</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexte style='margin-top:12.0pt'>Si vous avez d’autres questions sur l’utilisation de ce médicament, demandez plus d’informations à votre médecin ou à votre pharmacien.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</a></p>
+<p class=AmmCorpsTexte><b>Arrêtez de prendre PRAVASTATINE ACCORD 10 mg, comprimé et contactez votre médecin aussitôt que possible,</b><span style='color:black'> </span>en cas de douleur musculaire, sensibilité musculaire douloureuse, faiblesse ou crampe musculaire, inexpliquée ou persistante, surtout si vous ressentez un malaise ou si vous avez de la fièvre en même temps.</p>
+<p class=AmmCorpsTexte>Dans de très rares cas, les problèmes musculaires peuvent être graves (rhabdomyolyse) et entraîner une maladie sévère du rein qui peut mettre votre vie en danger.</p>
+<p class=AmmCorpsTexte>Des réactions allergiques sévères et brusques avec gonflement de la face, des lèvres, de la langue ou de la trachée peuvent entraîner de grandes difficultés à respirer. Ces réactions sont très rares et peuvent être graves. Vous devez contacter votre médecin aussitôt que possible si elles surviennent.</p>
+<p class=AmmCorpsTexte><u>Les effets indésirables suivants sont peu fréquents et peuvent toucher moins de 1 personne sur 100 :</u></p>
+<p class=AmmCorpsTexte><b><i>Effets sur le système nerveux :</i></b><span style='color:black'> </span>des étourdissements, de la fatigue, des maux de tête ou des troubles du sommeil y compris insomnie.</p>
+<p class=AmmCorpsTexte><b><i>Effets sur la vue</i></b><b><i><span style='color:black'> </span></i></b>: une vision floue ou une vision double.</p>
+<p class=AmmCorpsTexte><b><i>Effets digestifs</i></b><b><i><span style='color:black'> </span></i></b>: une indigestion, des nausées, des vomissements, une gêne ou une douleur abdominale, une diarrhée ou une constipation, des flatulences.</p>
+<p class=AmmCorpsTexte><b><i>Effets sur la peau et les cheveux</i></b><b><i><span style='color:black'> </span></i></b>: des démangeaisons, des boutons, de l'urticaire, des rougeurs, des problèmes touchant les cheveux ou le cuir chevelu (comme une chute de cheveux).</p>
+<p class=AmmCorpsTexte><b><i>Effets urinaires et génitaux</i></b><b><i><span style='color:black'> </span></i></b>: problèmes de vessie (douleurs au moment d'uriner, urines plus fréquentes, obligation d'uriner pendant la nuit), difficultés sexuelles.</p>
+<p class=AmmCorpsTexte><b><i>Effets sur les muscles et les os</i></b><b><i><span style='color:black'> </span></i></b>: des douleurs musculaires et articulaires.</p>
+<p class=AmmCorpsTexte><u>Les effets indésirables suivants sont rares et peuvent toucher moins de 1 personne sur 1 000:</u></p>
+<p class=AmmCorpsTexte>Sensibilité de la peau au soleil</p>
+<p class=AmmCorpsTexte><u>Les effets indésirables suivants sont très rares et peuvent toucher moins de 1 personne sur 10 000 :</u></p>
+<p class=AmmCorpsTexte><b><i>Effets sur le système nerveux :</i></b><span style='color:black'> </span>des problèmes de toucher dont des sensations de brûlure ou de picotement ou des fourmillements qui pourraient indiquer une atteinte des nerfs.</p>
+<p class=AmmCorpsTexte><b><i>Effets sur la peau :</i></b><span style='color:black'> </span>une maladie sévère de la peau (syndrome érythémateux pseudo-lupique).</p>
+<p class=AmmCorpsTexte><b><i>Effets sur le foie :</i></b><span style='color:black'> </span>une inflammation du foie ou du pancréas, jaunisse (reconnaissable par un jaunissement de la peau et du blanc des yeux), une destruction très rapide des cellules du foie (nécrose hépatique foudroyante).</p>
+<p class=AmmCorpsTexte><b><i>Effets sur les muscles et les os :</i></b><span style='color:black'> </span>une inflammation d'un ou plusieurs muscles entraînant une douleur ou une faiblesse musculaire (myosite ou polymyosite ou dermatomyosite), des douleurs ou faiblesse musculaires, une inflammation des tendons pouvant se compliquer par la rupture des tendons.</p>
+<p class=AmmCorpsTexte><b><i>Anomalie des tests sanguins :</i></b><b><i><span style='color:black'> </span></i></b>augmentation des transaminases (groupe d'enzymes qui se trouvent naturellement dans le sang) pouvant être un signe d'atteinte du foie. Votre médecin peut vous prescrire des tests sanguins réguliers pour les surveiller.</p>
+<p class=AmmCorpsTexte><b><i>Autres effets indésirables éventuels :</i></b></p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>cauchemars,</p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>perte de mémoire,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>dépression,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>problèmes respiratoires, y compris toux persistante et/ou essoufflement et fièvre </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>diabète :<span style='color:black'> </span>vous pouvez débuter un diabète si vous avez un taux de sucre (glycémie) et de graisses élevés dans le sang, si vous êtes en surpoids et si vous avez une pression artérielle (tension) élevée. Vous serez suivi attentivement par votre médecin au cours de votre traitement avec ce médicament.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><u>Effets indésirables de fréquence indéterminée</u><u><span style='color:black'> </span></u>: </p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Faiblesse musculaire constante, <span style='color:black'>insuffisance hépatique, éruption cutanée (éruption lichénoïde), myasthénie (maladie provoquant une faiblesse musculaire générale, pouvant parfois toucher les muscles utilisés pour respirer), myasthénie oculaire (maladie provoquant une faiblesse des muscles oculaires), déchirure musculaire</span>.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><u><span lang=FR-BE>Adressez-vous à votre médecin si vous présentez une faiblesse dans vos bras ou vos jambes qui s’aggrave après des périodes d’activité, une vision double ou des paupières tombantes, des difficultés à avaler ou un essoufflement</span></u>.</p>
+<p class=AmmCorpsTexteGras>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet:<span style='color:red'> </span>https://signalement.social-sante.gouv.fr </p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_PRAVASTATINE_ACCORD_10_mg,_comprimé_?'>5. COMMENT CONSERVER PRAVASTATINE ACCORD 10 mg, comprimé ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026">Tenir </a><a name="_Hlk505174419">ce médicament </a>hors de la vue et de la portée des enfants.</p>
+<p class=AmmCorpsTexte>N’utilisez pas ce médicament après la date de péremption indiquée sur <a name="_Hlk505174423">la boîte et la plaquette </a>après EXP.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>La date de péremption fait référence au dernier jour de ce mois.</span></p>
+<p class=AmmCorpsTexte><a name="_Hlk505174429">A conserver à une température ne dépassant pas 25°C. A conserver dans l'emballage d'origine, à l'abri de l'humidité et de la lumière.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout <span style='color:black'>ou avec </span>les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient PRAVASTATINE ACCORD 10 mg, comprimé</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est :</p>
+<p class=AmmComposition style='margin-left:18.0pt'>Pravastatine sodique................................................................................................... 10,00 mg</p>
+<p class=AmmComposition align=center style='text-align:center'>Pour un comprimé.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont :</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt'>Microcelac 100 [75 % de lactose monohydraté et 25 % de cellulose microcristalline], lactose monohydraté, oxyde de magnésium léger, croscarmellose sodique, oxyde de fer jaune (E172), povidone, stéarate de magnésium. </p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que PRAVASTATINE ACCORD 10 mg, comprimé et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>Ce médicament se présente sous forme de comprimé jaune, de forme rectangulaire et arrondie, biconvexe, portant l'inscription gravée « PDT » sur une face et « 10 » sur l'autre face.</p>
+<p class=AmmCorpsTexte>Boîte de 10, 14, 20, 28, 30, 56, 60 ou 98 comprimés sous plaquettes thermoformées.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Toc142279031">ACCORD HEALTHCARE FRANCE SAS</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>635 RUE DE LA CHAUDE RIVIERE </p>
+<p class=AmmCorpsTexte>59000 LILLE</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279032">ACCORD HEALTHCARE FRANCE SAS</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>635 RUE DE LA CHAUDE RIVIERE </p>
+<p class=AmmCorpsTexte><span lang=EN-US>59800 LILLE</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279033"><b><span lang=EN-GB>ACCORD HEALTHCARE POLSKA SP.Z O.O.</span></b></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>UL. LUTOMIERSKA 50</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>95-200 PABIANICE</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>POLOGNE</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=EN-GB>OU</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><b><span lang=EN-GB>ACCORD HEALTHCARE SINGLE MEMBER S.A.</span></b></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=EN-GB>64TH KM NATIONAL ROAD ATHENS,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>LAMIA, SCHIMATARI, 32009, GRECE</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279038">[à compléter ultérieurement par le titulaire]</a></p>
+<p class=AmmCorpsTexteGras>< {MM/AAAA}>< {mois AAAA}.></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

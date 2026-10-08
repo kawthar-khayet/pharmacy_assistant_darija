@@ -37,7 +37,9 @@ export function remboursementLisible(variante) {
   if (valeurs.size === 1) {
     const v = [...valeurs][0]
     const qui = regimes.join(' et ')
-    return v === 0 ? { texte: 'Non rembourse', detail: qui } : { texte: `${v}%`, detail: qui }
+    return v === 0
+      ? { texte: 'Non rembourse', detail: qui, nul: true }
+      : { texte: `${v}%`, detail: qui }
   }
   return {
     texte: regimes.map((r) => `${r} ${taux[r]}%`).join(' · '),
@@ -57,6 +59,7 @@ export function versModele(resultat) {
 
   return {
     nom: casseTitre(resultat?.nom_candidat ?? base.nom),
+    dciBrute: base.dci ?? null,
     nomBrut: resultat?.nom_candidat ?? base.nom,
     dci: casseTitre(base.dci),
     dosage: base.dosage ?? null,
@@ -64,6 +67,9 @@ export function versModele(resultat) {
     presentation: casseTitre(base.presentation),
     laboratoire: casseTitre(avecLabo.laboratoire),
     classe: casseTitre(avecClasse.classe_therapeutique),
+    // Classification ATC (OMS) : plusieurs codes par molecule est la regle,
+    // l'ibuprofene etant M01AE en comprime et M02AA en gel.
+    classesAtc: resultat?.classes_atc ?? [],
     statut: casseTitre(base.statut_commercialisation),
     prix: prixLisible(avecPrix.ppv),
     remboursement: remboursementLisible(avecPrix) ?? remboursementLisible(base),

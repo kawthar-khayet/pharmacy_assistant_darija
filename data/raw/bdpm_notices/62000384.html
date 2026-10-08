@@ -1,0 +1,1490 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="/Rjt5G9AjWrbB/E6kvQplQ==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="/Rjt5G9AjWrbB/E6kvQplQ==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 31/08/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant PHOSPHOSORB 660 mg, comprimé pelliculé"
+            aria-level="3"
+          >
+            PHOSPHOSORB 660 mg, comprimé pelliculé
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament PHOSPHOSORB 660 mg, comprimé pelliculé - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                      </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 07/09/2007
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : PHOSPHOSORB 660 mg, comprimé pelliculé - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0434528">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte><a name="_Toc142279004">Classe pharmacothérapeutique : Médicaments de l´hyperkaliémie et de l´hyperphosphatémie –  Code ATC : VO3AE07 </a></p>
+<p class=AmmCorpsTexte>PHOSPHOSORB contient de l'acétate de calcium comme substance active. Il appartient au groupe des chélateurs du phosphate et permet de réduire l’apport alimentaire de phosphate.</p>
+<p class=AmmCorpsTexte>PHOSPHOSORB est utilisé pour le traitement :</p>
+<p class=AmmListePuces1 style='text-align:justify;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>D’une <b>concentration de phosphate anormalement élevée dans le sang</b>, chez des patients adultes en insuffisance rénale chronique sous dialyse (hémodialyse, dialyse péritonéale).</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament n'appartient à aucun groupe générique</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Comprimé ( Composition pour un comprimé )<ul role="list"><li role="listitem" style="list-style-type: none;">calcium élément<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span><span class="italique">167 mg</span><ul role="list" style="list-style-type: none;"><li class="sousFormeDe" role="listitem"><i class="fa fa-plus-square" aria-hidden="true"></i> sous forme de : calcium (acétate de)<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span><span class="italique">660 mg </span></li></ul></li></ul></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > flacon(s) polyéthylène haute densité (PEHD) de 200 comprimé(s)  </p><p>Code CIP : 381 466-0 ou 34009 381 466 0 8<br/>Déclaration de commercialisation : 23/06/2010<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 23,32 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 2,76 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 26,08 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :65%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><div class='fr-grid-row'><div class='fr-col'><p>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence. </p></div></div><div class='fr-grid-row'><div class='fr-col'><p>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprès de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-smr-aide-2'>plus d'informations dans l'aide</a>). Les avis et synthèses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-smr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection à la page d'aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'SMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur du SMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2617892'>Avis du 02/03/2016</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 02/03/2016 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Renouvellement d'inscription (CT)</td><td class='text-align-center'>Le service médical rendu par PHOSPHOSORB 660 mg, comprimé pelliculé reste important dans l’indication de l’AMM.</td></tr></tbody></table></div></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence.</p></div></div><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprés de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-asmr-aide-3'>plus d'informations dans l'aide</a>). Les avis et synthéses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-asmr-aide-3' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers la page aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'ASMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur de l'ASMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td class="text-align-center">V (Inexistant)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/c_847970'>Avis du 22/07/2009</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 22/07/2009 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Inscription (CT)</td><td class="text-align-center">PHOSPHOSORB (acétate de calcium) n'apporte pas d'amélioration du service médical rendu (ASMR V) dans la prise en charge des patients insuffisants rénaux chroniques dialysés avec hyperphophorémie.</td></tr></tbody></table></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : FRESENIUS MEDICAL CARE NEPHROLOGICA DEUTSCHLAND GmbH</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste II</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure de reconnaissance mutuelle</li><li>Code CIS : &nbsp;6 200 038 4</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : PHOSPHOSORB 660 mg, comprimé pelliculé - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="PHOSPHOSORB 660 mg, comprimé pelliculé, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 13/06/2025</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras>PHOSPHOSORB 660 mg, comprimé pelliculé</p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Acétate de calcium............................................................................................................... 660 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center;page-break-after: avoid'>Pour un comprimé pelliculé</p>
+<p class=AmmCorpsTexte>Chaque comprimé pelliculé contient 660 mg d’acétate de calcium, équivalent à 167 mg de calcium.</p>
+<p class=AmmCorpsTexte>Excipient à effet notoire : chaque comprimé pelliculé contient 68.3 mg de saccharose.</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Comprimé pelliculé.</a></p>
+<p class=AmmCorpsTexte>Comprimé de couleur blanche à jaunâtre, de forme oblongue avec barre de cassure.</p>
+<p class=AmmCorpsTexte>La barre de cassure permet seulement de faciliter la prise du comprimé, elle ne le divise pas en doses égales.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">Hyperphosphatémie chez des patients adultes insuffisants rénaux chroniques dialysés (hémodialyse, dialyse péritonéale).</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278918">Le traitement par PHOSPHOSORB doit toujours faire l’objet d’une surveillance médicale stricte (voir rubrique 4.4).</a></p>
+<p class=AmmAnnexeTitre3>Posologie</p>
+<p class=AmmCorpsTexte>La dose initiale recommandée est de 2 comprimés (334 mg de calcium) trois fois par jour. La dose doit être progressivement augmentée jusqu'à ce que le taux de phosphore sérique souhaité soit atteint, à condition qu’il n’y ait pas d’hypercalcémie. Pour la plupart des patients, 3 à 4 comprimés sont nécessaires à chaque repas.</p>
+<p class=AmmCorpsTexte>Il peut être nécessaire d’augmenter ou de diminuer la dose en fonction de l'apport alimentaire en phosphate ou de son élimination au cours de la dialyse.</p>
+<p class=AmmAnnexeTitre4>Population pédiatrique </p>
+<p class=AmmCorpsTexte>La sécurité et l’efficacité de PHOSPHOSORB chez les enfants et adolescents n’ont pas été établies. Par conséquent, l’administration de<span style='text-transform:uppercase'> Phosphosorb</span> n’est pas recommandée chez les enfants et adolescents âgés de moins de 18 ans.</p>
+<p class=AmmAnnexeTitre4>Patients âgés </p>
+<p class=AmmCorpsTexte>Une posologie normale est recommandée chez les patients âgées.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Mode d’administration</p>
+<p class=AmmCorpsTexte>Les comprimés ne doivent être pris qu’au moment des repas pour assurer une chélation optimale du phosphate. Les comprimés doivent, de préférence, être avalés entiers. La barre de cassure permet uniquement de casser le comprimé en cas de difficulté à l'avaler en entier. Si les comprimés doivent être divisés en deux, cela doit être fait juste avant l’ingestion pour éviter qu’ils ne développent un goût d’acide acétique. </p>
+<p class=AmmCorpsTexte>En cas de dose oubliée, la dose suivante doit être prise au moment normal (ne pas prendre de dose complémentaire pour remplacer la dose manquée).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmListePuces1><a name="_Toc142278919"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypophosphatémie</a></p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypercalcémie</p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypersensibilité à la substance active ou à l’un des excipients mentionnés à la rubrique 6.1.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278920">Les patients doivent être avertis de ne pas prendre un des médicaments administrés par voie orale mentionnés en rubrique 4.5 dans les 1 à 2 h précédant et suivant la prise de PHOSPHOSORB.</a></p>
+<p class=AmmCorpsTexte>Pendant un traitement à long terme par PHOSPHOSORB, il convient de surveiller l'évolution ou l'apparition de calcifications vasculaires et des tissus mous. Le risque d’hypercalcémie est augmenté en cas de traitement simultané par des diurétiques thiazidiques ou des médicaments à base de vitamine D. </p>
+<p class=AmmCorpsTexte>Des quantités accrues de sels de calcium dans le tractus gastro-intestinal peut donner lieu à la précipitation d'acides gras et biliaires sous forme de savon de calcium. Ceci peut conduire à une constipation.</p>
+<p class=AmmCorpsTexte>Les concentrations de phosphore et de calcium sériques doivent être contrôlées à intervalles réguliers. Le produit phosphocalcique ne doit pas être supérieur à 5,25 mmol<sup>2</sup>/L<sup>2</sup>, car l'incidence de calcification des tissus mous augmente au-dessus de cette valeur. Ce contrôle doit être plus fréquent après le début du traitement, par exemple chaque semaine ou toutes les 2 semaines pendant 3 mois. Par la suite, des contrôles effectués chaque mois sont suffisants, selon l’état médical du patient. Généralement la fréquence des contrôles relève de la décision du médecin traitant et dépend du profil médical du patient. Des taux de produit phosphocalcique supérieurs à 5,25 mmol<sup>2</sup>/L<sup>2</sup> de manière prolongée doivent inciter à un changement de traitement. </p>
+<p class=AmmCorpsTexte>Chez les patients ayant des difficultés à contrôler leur concentration de phosphore sérique, par exemple en raison d’une hyperphosphatémie sévère (concentration sérique > 2,26 mmol/L), les chélateurs de phosphate sans calcium peuvent être utilisés comme traitement de courte durée (4 semaines).</p>
+<p class=AmmCorpsTexte>Les patients doivent être avertis de symptômes possibles d'hypercalcémie, voir rubrique 4.8.</p>
+<p class=AmmCorpsTexte>En cas d'hypercalcémie la dose doit être réduite ou le traitement interrompu, selon le degré d'hypercalcémie.</p>
+<p class=AmmCorpsTexte>Les sels de calcium devraient généralement être évités chez des patients présentant des calculs rénaux calciques, ou un antécédent de calcul rénal. Les sels de calcium doivent être administrés avec précaution aux patients présentant des maladies associées à l’hypercalcémie.</p>
+<p class=AmmCorpsTexte>L’utilisation de chélateurs de phosphate doit être précédée d’une consultation diététique avec le patient à propos des apports alimentaires en phosphate, et peut dépendre du type de dialyse du patient.</p>
+<p class=AmmCorpsTexte>Ce produit contient du saccharose. Pour cette raison, les patients présentant des problèmes héréditaires rares d'intolérance au fructose, de syndrome de malabsorption du glucose et du galactose ou d'insuffisance en saccharase/isomaltase ne doivent pas utiliser ce médicament.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278921">Etant donné que le taux et/ou le degré d'absorption d'autres médicaments administrés par voie orale peut varier lors d’une utilisation concomitante avec PHOSPHOSORB, les patients doivent être avertis de ne pas prendre les médicaments administrés par voie orale mentionnés dans cette rubrique dans les 1-2 heures précédant et suivant l'administration de PHOSPHOSORB.</a></p>
+<p class=AmmAnnexeTitre3>Effets d'autres médicaments sur PHOSPHOSORB</p>
+<p class=AmmCorpsTexte>Il existe un risque accru d'hypercalcémie en cas d'administration concomitante de diurétiques thiazidiques ou de préparations à base de vitamine D. Si ces médicaments sont prescrits simultanément, un suivi complémentaire, par exemple chaque semaine, du taux de calcium sérique peut s’avérer nécessaire, en plus du suivi aux fréquences préconisées à la rubrique 4.4.</p>
+<p class=AmmCorpsTexte>L'utilisation conjointe d’œstrogènes ou de médicaments à base de vitamine A avec PHOSPHOSORB peut augmenter le taux de calcium sérique.</p>
+<p class=AmmAnnexeTitre3>Effets de PHOSPHOSORB sur d'autres médicaments </p>
+<p class=AmmCorpsTexte>Le calcium a la capacité de former des complexes insolubles avec de nombreuses substances anioniques, y compris par exemple les médicaments. Il peut être nécessaire d'en tenir compte en cas d’observation d’un effet médicamenteux atténué ou renforcé.</p>
+<p class=AmmCorpsTexte>L'utilisation conjointe de médicaments contenant du calcium avec des antibiotiques (tels que les tétracyclines, certaines céphalosporines comme la cefpodoxime et la céfuroxime, certaines quinolones comme la ciprofloxacine ou la norfloxacine), les bisphosphonates, les fluorures, le kétoconazole, les préparations à base d’estramustine et les anticholinergiques peut réduire l'absorption intestinale de ces substances. Par ailleurs, l'absorption intestinale du zinc et du fer peut être réduite. </p>
+<p class=AmmCorpsTexte>Des quantités accrues de sels de calcium dans le tractus gastro-intestinal peuvent réduire l'absorption d'acides urso- et chénodésoxycholiques administrés à des fins thérapeutiques, suite à une précipitation sous forme de savon de calcium.</p>
+<p class=AmmCorpsTexte>Le traitement concomitant par inhibiteurs du facteur inductible par l'hypoxie et de la prolyl hydroxylase (HIF-PHI) et par chélateurs de phosphate est fréquent dans la prise en charge de l'anémie chez les patients présentant une insuffisance rénale chronique. Des interactions entre les HIF-PHI et les chélateurs de phosphate contenant du calcium ont été observées. Ces interactions peuvent être atténuées par une administration différée.</p>
+<p class=AmmCorpsTexte>Les sels de calcium, seuls ou en association avec de l'hydroxyde d'aluminium, peuvent entraîner une diminution de l'absorption de la lévothyroxine.</p>
+<p class=AmmCorpsTexte>Afin d’éviter une augmentation du calcium sérique au-dessus des taux normaux, il convient de prendre en compte la quantité de calcium administrée avec PHOSPHOSORB en cas de traitement concomitant avec des antiacides et/ou des compléments de calcium.</p>
+<p class=AmmCorpsTexte>Le calcium augmente l'effet des glucosides digitaliques (digoxine), qui peut aboutir à une intoxication digitalique incluant un risque d'arythmie cardiaque. Chez les patients sous digitaline PHOSPHOSORB doit être administré avec précaution, par exemple, un contrôle de l’ECG est nécessaire.</p>
+<p class=AmmCorpsTexte>L'administration d'adrénaline chez des patients présentant un taux élevé de calcium sérique peut entraîner des arythmies cardiaques sévères.</p>
+<p class=AmmCorpsTexte>Le calcium peut réduire les effets pharmacologiques des bloqueurs des canaux calciques.</p>
+<p class=AmmCorpsTexte>Le calcium est un antagoniste compétitif du magnésium. Un ajustement de la dose de PHOSPHOSORB peut être nécessaire.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte>. Il n'existe pas ou peu de données sur l'utilisation du PHOSPHOSORB chez la femme enceinte. Les études animales sont insuffisantes en ce qui concerne la toxicité pour la reproduction (voir rubrique 5.3). <a name="OLE_LINK6">PHOSPHOSORB doit être prescrit avec précaution chez </a>la femme enceinte. Pendant la grossesse, les taux de calcium sérique doivent être rigoureusement contrôlés à intervalles réguliers. </p>
+<p class=AmmAnnexeTitre3>Allaitement</p>
+<p class=AmmCorpsTexte><span style='color:black'>Le calcium est excrété dans le lait maternel. Les effets de l'acétate de calcium sur les nouveau-nés/nourrissons allaités sont inconnus. PHOSPHOSORB doit être prescrit avec précaution chez les femmes en cours d’allaitement. </span></p>
+<p class=AmmAnnexeTitre3>Fertilité</p>
+<p class=AmmCorpsTexte>Il n'y a pas de données disponibles.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929"><span lang=FR-BE>PHOSPHOSORB n’a aucun effet ou un effet négligeable sur l’aptitude à conduire des véhicules et à utiliser des machines.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmCorpsTexte>Les effets secondaires sont classés par ordre de fréquence comme suit :</p>
+<p class=AmmCorpsTexte>Très fréquent : (&#8805; 1/10)</p>
+<p class=AmmCorpsTexte>Fréquent : (&#8805; 1/100, < 1/10)</p>
+<p class=AmmCorpsTexte>Peu fréquent : (&#8805; 1/1 000, < 1/100)</p>
+<p class=AmmCorpsTexte>Rare : (&#8805; 1/10 000, < 1/1 000)</p>
+<p class=AmmCorpsTexte>Très rare : (< 1/10 000)</p>
+<p class=AmmCorpsTexte>Fréquence indéterminée (ne peut être estimée sur la base des données disponibles)</p>
+<p class=AmmAnnexeTitre4>Troubles du métabolisme et de la nutrition</p>
+<p class=AmmCorpsTexte style='margin-left:70.9pt;text-indent:-70.9pt'>Fréquent :  Légère hypercalcémie. Une légère hypercalcémie (Ca > 2,6 mmol/L) peut survenir chez environ 1 % des patients. Elle peut être asymptomatique ou s’accompagner de constipation, d'anorexie, de nausées et de vomissements.</p>
+<p class=AmmCorpsTexte style='margin-left:70.9pt;text-indent:-70.9pt'>Peu fréquent : Hypercalcémie plus sévère. Une hypercalcémie plus sévère (Ca ><b> </b>3,0 mmol/L) peut survenir chez environ 0,1% des patients et peut être associée à des troubles du rythme cardiaque, un état de confusion, de léthargie, de délire, de stupeur et de coma dans des cas très graves. Il est recommandé aux patients de consulter leur médecin traitant s’ils ressentent l’un de ces symptômes.</p>
+<p class=AmmAnnexeTitre4>Affections gastro-intestinales</p>
+<p class=AmmCorpsTexte style='margin-left:70.9pt;text-indent:-70.9pt'>Fréquent : Nausées, vomissements, sensation de satiété, éructation, constipation, diarrhées.</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte>Le surdosage peut conduire à une hypercalcémie.</p>
+<p class=AmmCorpsTexte>Un surdosage prolongé peut entraîner le développement d'une ostéopathie adynamique.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Traitement d’urgence, antidotes</p>
+<p class=AmmCorpsTexte>En cas d'hypercalcémie (concentration de calcium sérique > 2,5 mmol/L) il faut réduire le calcium du dialysat (à 1,25 mmol/L) et/ou la posologie de PHOSPHOSORB. Si la concentration de calcium sérique est supérieure à 2,75 mmol/L, l'administration de PHOSPHOSORB doit être temporairement interrompue et, le cas échéant, un chélateur du phosphate dépourvu de calcium doit être administré. Une crise d’hypercalcémie (concentration de calcium sérique > 3,5 mmol/L) exige un traitement avec un dialysat sans calcium.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : médicaments de l´hyperkaliémie et de l´hyperphosphatémie, acétate de calcium, code ATC : V03AE07</a></p>
+<p class=AmmCorpsTexteGras><u><span style='font-weight:normal'>Mécanisme d’action</span></u></p>
+<p class=AmmCorpsTexte>PHOSPHOSORB contient de l'acétate de calcium et est principalement destiné aux patients en insuffisance rénale chronique. Ces derniers ne peuvent éliminer le phosphate par les reins de manière normale ce qui conduit à une hyperphosphatémie. Lorsque le régime ou l'élimination des phosphates est insuffisant(e), il faut utiliser des chélateurs du phosphate pour réduire l'absorption de phosphate dans le tractus gastro-intestinal. L'acétate de calcium, pris pendant les repas, forme avec le phosphate contenu dans l'alimentation du phosphate de calcium peu soluble, qui est éliminé dans les selles. </p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278934">Absorption</a></p>
+<p class=AmmCorpsTexte>Bien que ce produit soit destiné à une action locale pour lier le phosphate dans les voies intestinales, la quantité de calcium impliquée dans ce processus est variable et tout calcium libre peut être absorbé dans le tractus gastro-intestinal par transport actif et diffusion passive. </p>
+<p class=AmmCorpsTexte>Le calcium est activement absorbé au niveau du duodénum et du jéjunum proximal et, dans une moindre mesure, au niveau du segment plus distal de l'intestin grêle. Après l'administration par voie orale d'acétate de calcium, environ 40 % du calcium est absorbé lorsque le patient est à jeun et environ 30 % lorsqu’il ne l’est pas. L'absorption de calcium diminue chez des patients en insuffisance rénale chronique, dans le cas de certaines maladies et lorsque le calcium se lie au phosphate. Tout calcium lié ne peut être absorbé.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Distribution</p>
+<p class=AmmCorpsTexte>Les os contiennent 99 % du total de calcium présent dans le corps ; le 1 % restant est réparti de manière égale entre les liquides intra et extracellulaires. Sur la totalité de la concentration du calcium sérique, 50 % correspondent à la forme ionisée, 5 % à des formes complexées avec des phosphates, des citrates ou avec d’autres anions. Environ 45 % du calcium sérique est lié à des protéines plasmatiques. Le calcium traverse le placenta et est excrété dans le lait maternel.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Biotransformation</p>
+<p class=AmmCorpsTexte>L'anion de l’acétate de calcium (ion acétate) est un métabolite du glucose. Lié au groupe sulfhydrile du coenzyme A, il peut être catabolisé dans le cycle du citrate et aussi dans plusieurs autres voies métaboliques. L'acétate absorbé est rapidement métabolisé en bicarbonate.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Élimination</p>
+<p class=AmmCorpsTexte>Dans des conditions physiologiques, environ 90% de l’apport quotidien en calcium est excrété dans les selles et environ 10% du calcium ingéré est éliminé dans les urines. L’élimination du calcium par voie urinaire diminue au cours de l’évolution de l’insuffisance rénale.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278935">Les études précliniques avec l'acétate de calcium sont très limitées et ne révèlent aucun risque particulier complémentaire à ceux déjà mentionnés sous d'autres rubriques du Résumé des Caractéristiques du Produit. Dans les études non cliniques, des effets n’ont été observés qu’à des expositions considérées comme suffisamment supérieures à l’exposition maximale observée chez l’être humain, n’ayant ainsi que peu de signification sur le plan de l’utilisation et du développement cliniques.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278937">Noyau</a></p>
+<p class=AmmCorpsTexte style='margin-left:7.1pt;text-indent:-7.1pt'><span lang=IT style='font-size:8.0pt'>-<span style='font:7.0pt "Times New Roman"'>  </span></span><span lang=IT>Saccharose</span></p>
+<p class=AmmCorpsTexte style='margin-left:7.1pt;text-indent:-7.1pt'><span lang=IT style='font-size:8.0pt'>-<span style='font:7.0pt "Times New Roman"'>  </span></span><span lang=IT>Gélatine (E441)</span></p>
+<p class=AmmCorpsTexte style='margin-left:7.1pt;text-indent:-7.1pt'><span lang=IT style='font-size:8.0pt'>-<span style='font:7.0pt "Times New Roman"'>  </span></span><span lang=IT>Croscarmellose sodique (E468)</span></p>
+<p class=AmmCorpsTexte style='margin-left:7.1pt;text-indent:-7.1pt'><span style='font-size:8.0pt'>-<span style='font:7.0pt "Times New Roman"'>  </span></span>Stéarate de magnésium (E470b)</p>
+<p class=AmmAnnexeTitre3>Pelliculage</p>
+<p class=AmmCorpsTexte style='margin-left:7.1pt;text-indent:-7.1pt'><span style='font-size:8.0pt'>-<span style='font:7.0pt "Times New Roman"'>  </span></span>Huile de ricin raffinée</p>
+<p class=AmmCorpsTexte style='margin-left:7.1pt;text-indent:-7.1pt'><span style='font-size:8.0pt'>-<span style='font:7.0pt "Times New Roman"'>  </span></span>Saccharine sodique (E954)</p>
+<p class=AmmCorpsTexte style='margin-left:7.1pt;text-indent:-7.1pt'><span style='font-size:8.0pt'>-<span style='font:7.0pt "Times New Roman"'>  </span></span>Hypromellose (E464)</p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">Sans objet.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte>2 ans.</p>
+<p class=AmmCorpsTexte>Durée de conservation après la première ouverture du récipient : 3 mois.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940"><span lang=FR-BE>A conserver à une température ne dépassant pas 30°C.</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Pour les conditions de conservation après la première ouverture du médicament, voir la rubrique 6.3.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte>Récipient en PEHD avec bouchon en PEBD.</p>
+<p class=AmmCorpsTexte><u>Taille des récipients</u></p>
+<p class=AmmCorpsTexte style='margin-left:7.1pt;text-indent:-7.1pt;page-break-after: avoid'><span style='font-size:8.0pt'>-<span style='font:7.0pt "Times New Roman"'>  </span></span>100 comprimés pelliculés </p>
+<p class=AmmCorpsTexte style='margin-left:7.1pt;text-indent:-7.1pt;page-break-after: avoid'><span style='font-size:8.0pt'>-<span style='font:7.0pt "Times New Roman"'>  </span></span>200 comprimés pelliculés </p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Pas d’exigences particulières.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142278943"><span lang=EN-US>FRESENIUS MEDICAL CARE NEPHROLOGICA DEUTSCHLAND GmbH</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE>ELSE-KRÖNER-STRAßE 1</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE>61352 BAD HOMBURG V.D.H.</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>ALLEMAGNE</p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 381 465 4 7 : 100 comprimés en récipient (PEHD)</p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 381 466 0 8 : 200 comprimés en récipient (PEHD)</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Médicament soumis à prescription médicale </p>
+<p class=AmmCorpsTexte>Liste II.</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_PHOSPHOSORB_660_mg,_comprimé_pelliculé_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE PHOSPHOSORB 660 mg, comprimé pelliculé ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE PHOSPHOSORB 660 mg, comprimé pelliculé ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_PHOSPHOSORB_660_mg,_comprimé_pelliculé_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE PHOSPHOSORB 660 mg, comprimé pelliculé ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE PHOSPHOSORB 660 mg, comprimé pelliculé ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_PRENDRE_PHOSPHOSORB_660_mg,_comprimé_pelliculé_?"
+                     aria-label="3. COMMENT PRENDRE PHOSPHOSORB 660 mg, comprimé pelliculé ? (Lien de redirection)">
+                    3. COMMENT PRENDRE PHOSPHOSORB 660 mg, comprimé pelliculé ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_PHOSPHOSORB_660_mg,_comprimé_pelliculé?"
+                     aria-label="5. COMMENT CONSERVER PHOSPHOSORB 660 mg, comprimé pelliculé? (Lien de redirection)">
+                    5. COMMENT CONSERVER PHOSPHOSORB 660 mg, comprimé pelliculé?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : PHOSPHOSORB 660 mg, comprimé pelliculé - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="PHOSPHOSORB 660 mg, comprimé pelliculé, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 13/06/2025</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center;page-break-after: avoid'><a name="_Toc142278999">PHOSPHOSORB 660 mg, comprimé pelliculé</a></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center;page-break-after: avoid'>Acétate de calcium</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279000"><span lang=FR-BE>Veuillez lire attentivement cette notice avant de prendre ce médicament car elle contient des informations importantes pour vous.</span></a></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin ou votre pharmacien.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt;page-break-after: avoid'>1. Qu'est-ce que PHOSPHOSORB 660 mg, comprimé pelliculé et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt;page-break-after: avoid'>2. Quelles sont les informations à connaître avant de prendre PHOSPHOSORB 660 mg, comprimé pelliculé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt;page-break-after: avoid'>3. Comment prendre PHOSPHOSORB 660 mg, comprimé pelliculé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt;page-break-after: avoid'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt;page-break-after: avoid'>5. Comment conserver PHOSPHOSORB 660 mg, comprimé pelliculé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt;page-break-after: avoid'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_PHOSPHOSORB_660_mg,_comprimé_pelliculé_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE PHOSPHOSORB 660 mg, comprimé pelliculé ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279004">Classe pharmacothérapeutique : Médicaments de l´hyperkaliémie et de l´hyperphosphatémie –  Code ATC : VO3AE07 </a></p>
+<p class=AmmCorpsTexte>PHOSPHOSORB contient de l'acétate de calcium comme substance active. Il appartient au groupe des chélateurs du phosphate et permet de réduire l’apport alimentaire de phosphate.</p>
+<p class=AmmCorpsTexte>PHOSPHOSORB est utilisé pour le traitement :</p>
+<p class=AmmListePuces1 style='text-align:justify;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>D’une <b>concentration de phosphate anormalement élevée dans le sang</b>, chez des patients adultes en insuffisance rénale chronique sous dialyse (hémodialyse, dialyse péritonéale).</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_PHOSPHOSORB_660_mg,_comprimé_pelliculé_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE PHOSPHOSORB 660 mg, comprimé pelliculé ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">Ne prenez jamais PHOSPHOSORB 660 mg, comprimé pelliculé :</a></p>
+<p class=AmmListePuces1 style='text-align:justify;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si le <b>taux de phosphate </b>dans votre sang est<b> trop faible</b></p>
+<p class=AmmListePuces1 style='text-align:justify;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si le <b>taux de calcium</b> dans votre sang est<b> trop élevé</b></p>
+<p class=AmmListePuces1 style='text-align:justify;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes <b>allergique</b> à <b>l'acétate de calcium</b> ou à l’un des autres composants contenus dans ce médicament, mentionnés dans la rubrique 6.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt;page-break-after:avoid'>Avertissements et précautions</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Adressez-vous à votre médecin ou pharmacien avant de prendre PHOSPHOSORB.</span></p>
+<p class=AmmListePuces1 style='text-align:justify;page-break-after:avoid'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>si vous souffrez de maladies associées à des taux de calcium dans votre sang élevés, telles que certaines tumeurs (par exemple cancers du poumon, cancer du sein) ou certaines affections pulmonaires (sarcoïdoses).</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt;page-break-after: avoid'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>si vous avez des calculs rénaux ou avez des antécédents de calculs rénaux.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>La prudence est recommandée :</span></p>
+<p class=AmmListePuces1 style='text-align:justify;page-break-after:avoid'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>si vous prenez PHOSPHOSORB pendant une longue période, car des dépôts de calcium peuvent se former dans les tissus et entraîner un durcissement des tissus, en particulier en cas de prise simultanée de préparations à base de vitamine D et de certains diurétiques (comprimés favorisant l'élimination de l'eau), tels que l'hydrochlorothiazide ;</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>si vous souffrez de constipation.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>PHOSPHOSORB doit toujours être utilisé sous surveillance médicale stricte, le médecin traitant doit, en particulier, vérifier vos taux de calcium et de phosphate pendant tout le traitement.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Consultez la liste des symptômes possibles correspondant à un taux de calcium élevé dans votre sang tels qu'énumérés à la rubrique 4. Informez votre docteur si vous remarquez l'apparition de l'un de ces symptômes. Il pourrait être nécessaire d'ajuster votre dose quotidienne.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Avant de commencer votre traitement au PHOSPHOSORB, on vous prescrira un régime diététique auquel il faudra vous conformer.</span></p>
+<p class=AmmCorpsTexteGras>Enfants </p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et PHOSPHOSORB 660 mg, comprimé pelliculé</p>
+<p class=AmmCorpsTexte>Vous ne devez pas prendre les médicaments par voie orale mentionnés dans cette notice 1-2 heures avant et après la prise de PHOSPHOSORB.</p>
+<p class=AmmCorpsTexte><b>Informez votre médecin ou pharmacien</b> si vous prenez, avez récemment pris ou pourriez prendre tout <b>autre médicament</b>.</p>
+<p class=AmmListePuces1 style='margin-left:14.2pt;text-align:justify; text-indent:-14.2pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>       </span></span>Prise d’<b>antiacides</b> (utilisés pour soulager les brûlures d'estomac) ou d’<b>autres suppléments calciques</b> </p>
+<p class=AmmCorpsTexte style='margin-left:14.2pt;text-indent:-14.2pt'> Un tel apport doit être pris en compte pour fixer la dose de PHOSPHOSORB, car un apport trop important de calcium peut conduire au dépôt de sels de calcium dans certains tissus tels que les tissus musculaires, les tissus conjonctifs ou les tissus des vaisseaux sanguins.</p>
+<p class=AmmListePuces1 style='margin-left:14.2pt;text-align:justify; text-indent:-14.2pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>       </span></span><b>Traitement à l’adrénaline</b> (épinéphrine) </p>
+<p class=AmmCorpsTexte style='margin-left:14.2pt;text-indent:-14.2pt'> Des troubles graves du cœur peuvent survenir lorsque les patients ont trop de calcium dans leur sang et qu’ils reçoivent de l'adrénaline (épinéphrine). L'adrénaline est utilisée, par exemple, dans les traitements d’urgence lors d’un arrêt cardiaque, lors de réactions d'hypersensibilité graves, lors de crises d'asthme ou comme un adjuvant à une anesthésie locale.</p>
+<p class=AmmListePuces1 style='margin-left:14.2pt;text-align:justify; text-indent:-14.2pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>       </span></span><b>Traitement sous digitaline </b>(glycosides cardiaques, digoxine) </p>
+<p class=AmmCorpsTexte style='margin-left:14.2pt;text-indent:-14.2pt'> PHOSPHOSORB augmente le risque d’accumulation de digitaline (empoisonnement). Si vous devez suivre un traitement sous digitalique, votre médecin traitant contrôlera votre ECG.</p>
+<p class=AmmListePuces1 style='margin-left:14.2pt;text-align:justify; text-indent:-14.2pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>       </span></span>L’absorption des médicaments suivants peut être réduite lors d’un traitement avec PHOSPHOSORB :</p>
+<p class=AmmListePuces2 style='margin-left:14.2pt;text-align:justify; text-indent:-14.2pt;page-break-after:auto'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>   </span></span><b>certains antibiotiques</b> (médicaments anti-bactériens), tels que la tétracycline, la ciprofloxacine, la norfloxacine, le cefpodoxime ou le cefuroxime </p>
+<p class=AmmListePuces2 style='margin-left:21.3pt;text-align:justify; text-indent:-21.3pt;page-break-after:auto'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>   </span></span><b>le kétoconazole</b>, un médicament pour traiter les mycoses </p>
+<p class=AmmListePuces2 style='margin-left:21.3pt;text-align:justify; text-indent:-21.3pt;page-break-after:auto'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>   </span></span><b>l’estramustine</b>, un médicament pour traiter le cancer de la prostate </p>
+<p class=AmmListePuces2 style='margin-left:21.3pt;text-align:justify; text-indent:-21.3pt;page-break-after:auto'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>   </span></span><b>les préparations orales à base de zinc et de fer</b> </p>
+<p class=AmmListePuces2 style='margin-left:21.3pt;text-align:justify; text-indent:-21.3pt;page-break-after:auto'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>   </span></span><b>les acides urso- et chénodésoxycholiques</b>, médicaments contre les calculs biliaires </p>
+<p class=AmmListePuces2 style='margin-left:21.3pt;text-align:justify; text-indent:-21.3pt;page-break-after:auto'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>   </span></span><b>les bisphosphonates</b>, tels que l’alendronate et le risedronate </p>
+<p class=AmmListePuces2 style='margin-left:21.3pt;text-align:justify; text-indent:-21.3pt;page-break-after:auto'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>   </span></span><b>les fluorures</b>, qui sont des médicaments utilisés dans le traitement de l’ostéoporose </p>
+<p class=AmmListePuces2 style='margin-left:14.2pt;text-align:justify; text-indent:-14.2pt;page-break-after:auto'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>   </span></span><b>les anticholinergiques</b>, tels que l’atropine et la scopolamine, des médicaments ayant un effet inhibiteur sur une partie spécifique du système nerveux </p>
+<p class=AmmListePuces2 style='margin-left:14.2pt;text-align:justify; text-indent:-14.2pt'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>   </span></span><span class=AmmCorpsTexteGrasCar>la lévothyroxine</span>, un médicament utilisé dans les troubles de la fonction thyroïdienne</p>
+<p class=AmmListePuces2 style='margin-left:14.2pt;text-align:justify; text-indent:-14.2pt'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>   </span></span><span class=AmmCorpsTexteGrasCar>les inhibiteurs du facteur inductible par l'hypoxie et de la prolyl hydroxylase (HIF-PHI)</span>, les médicaments pour le traitement de l'anémie, tels que le vadadustat, le roxadustat et le molidustat.</p>
+<p class=AmmListePuces1 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-align:justify;text-indent: -14.2pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>       </span></span>Prise de médicaments pouvant conduire à un risque accru de taux trop élevé de calcium dans le sang (voir rubrique 4 pour les symptômes)</p>
+<p class=AmmListePuces2 style='margin-left:14.2pt;text-align:justify; text-indent:-14.2pt;page-break-after:auto'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>   </span></span><b>certains médicaments diurétiques</b>, tels que le bendrofluméthiazide et autres (diurétiques thiazidiques) </p>
+<p class=AmmListePuces2 style='margin-left:14.2pt;text-align:justify; text-indent:-14.2pt;page-break-after:auto'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>   </span></span><b>œstrogènes (hormones sexuelles féminines</b>, œstradiol) </p>
+<p class=AmmListePuces2 style='margin-left:14.2pt;text-align:justify; text-indent:-14.2pt;page-break-after:auto'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>   </span></span><b>préparations à base de vitamine D</b> </p>
+<p class=AmmListePuces2 style='margin-left:14.2pt;text-align:justify; text-indent:-14.2pt;page-break-after:auto'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>   </span></span><b>préparations à base de vitamine A.</b></p>
+<p class=AmmListePuces1 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-align:justify;text-indent: -14.2pt;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>       </span></span>Prise de médicaments dont l'effet peut être diminué, par exemple </p>
+<p class=AmmListePuces2 style='margin-left:14.2pt;text-indent:-14.2pt'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>   </span></span>certains médicaments contre l’hypertension et les troubles du rythme cardiaque tels que <b>le vérapamil et d'autres antagonistes calciques</b>.</p>
+<p class=AmmListePuces1 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:17.85pt;margin-bottom:.0001pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Prise de <b>compléments de magnésium</b>. Un ajustement de la dose de <span lang=FR-BE>PHOSPHOSORB </span>peut être nécessaire.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>PHOSPHOSORB 660 mg, comprimé pelliculé avec des aliments et boissons</p>
+<p class=AmmCorpsTexte>Les comprimés doivent toujours être pris au moment d’un repas pour assurer une chélation optimale du phosphate et minimiser la quantité de calcium absorbée (voir également la rubrique « 3. Comment prendre PHOSPHOSORB 660 mg, comprimé pelliculé ? »).</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279012">Grossesse et allaitement</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous êtes enceinte ou que vous allaitez, si vous pensez être enceinte ou planifiez une grossesse, demandez conseil à votre médecin</span><span lang=FR-BE> </span><span lang=FR-BE>ou pharmacien</span><span lang=FR-BE> </span><span lang=FR-BE>avant de prendre ce médicament.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Il n’existe pas de données concernant l'utilisation de PHOSPHOSORB chez la femme enceinte. La prise de PHOSPHOSORB pendant la grossesse doit se faire avec précaution ; </span><span class=AmmCorpsTexteGrasCar>votre médecin traitant doit prendre en considération</span><span lang=FR-BE> le rapport bénéfice/risque avant de vous en prescrire. Si ce produit vous est prescrit pendant votre grossesse, votre médecin devra vérifier votre taux de calcium sérique tout au long du traitement.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Le calcium passe dans le lait maternel Votre médecin </span>doit réaliser une évaluation des bénéfices et des risques s’il souhaite prescrire <span lang=FR-BE>PHOSPHOSORB pendant l’allaitement</span>.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Demandez conseil à votre médecin ou à votre pharmacien avant de prendre tout médicament.</span></p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>Aucune précaution spécifique n'est nécessaire. </p>
+<p class=AmmCorpsTexteGras>PHOSPHOSORB 660 mg, comprimé pelliculé contient du saccharose</p>
+<p class=AmmCorpsTexte>Si votre médecin vous a informé(e) d’une intolérance à certains sucres, contactez-le avant de prendre ce médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_PRENDRE_PHOSPHOSORB_660_mg,_comprimé_pelliculé_?'>3. COMMENT PRENDRE PHOSPHOSORB 660 mg, comprimé pelliculé ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279021">Posologie et durée du traitement</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><b>Adultes et patients âgés</b></p>
+<p class=AmmCorpsTexte style='margin-left:17.85pt'>Respectez toujours la posologie indiquée par votre médecin pour votre traitement au PHOSPHOSORB . Vérifiez auprès de votre médecin en cas de doute.</p>
+<p class=AmmCorpsTexteGras style='margin-left:17.85pt'>Dose initiale : 2 comprimés 3 fois par jour.</p>
+<p class=AmmCorpsTexte style='margin-left:17.85pt'>La dose sera augmentée progressivement. En général, <span class=AmmCorpsTexteGrasCar>3 à 4 comprimés 3 fois par</span><span class=AmmCorpsTexteGrasCar><span style='font-weight:normal'> </span></span><span class=AmmCorpsTexteGrasCar>jour</span><span class=AmmCorpsTexteGrasCar><span style='font-weight:normal'> sont nécessaires.</span></span></p>
+<p class=AmmCorpsTexte style='margin-left:17.85pt'>La dose peut être augmentée ou diminuée, selon l'apport alimentaire en phosphate. En cas de dialyse, la dose doit être ajustée selon les taux d'élimination du phosphate au cours de ce traitement.</p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><b>Enfants et adolescents (de moins de 18 ans)</b></p>
+<p class=AmmCorpsTexte style='margin-left:17.85pt;page-break-after:avoid'>La sécurité et l'efficacité de PHOSPHOSORB chez les enfants et adolescents n'ont pas été établies. Par conséquent, l'administration de PHOSPHOSORB n'est pas recommandée chez les enfants et adolescents âgés de moins de 18 ans.</p>
+<p class=AmmCorpsTexteGras>Mode d'administration</p>
+<p class=AmmCorpsTexte>Pour obtenir un effet maximal de fixation du phosphate, les comprimés doivent toujours être <span class=AmmCorpsTexteGrasCar>pris au cours d’un repas</span>. Avalez les comprimés entiers avec de l'eau. Ne pas les croquer.</p>
+<p class=AmmCorpsTexte>Si vous avez des difficultés à avaler les comprimés en raison de leur taille, coupez-les en deux le long de la barre de cassure juste avant de les prendre et avalez les deux moitiés l'une après l'autre. La barre de cassure permet seulement de faciliter la prise du comprimé ; elle ne le divise pas en doses égales.</p>
+<p class=AmmCorpsTexteGras>Si vous avez pris plus de PHOSPHOSORB 660 mg, comprimé pelliculé que vous n’auriez dû</p>
+<p class=AmmCorpsTexte>Si vous avez dépassé la dose de PHOSPHOSORB prescrite, <span class=AmmCorpsTexteGrasCar>veuillez contacter votre médecin ou votre pharmacien immédiatement.</span></p>
+<p class=AmmCorpsTexte>Le surdosage de PHOSPHOSORB peut conduire à une concentration de calcium anormalement élevée dans votre sang. Les symptômes associés sont indiqués sous la rubrique « 4. Quels sont les effets indésirables éventuels ? ».</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez de prendre PHOSPHOSORB 660 mg, comprimé pelliculé</p>
+<p class=AmmCorpsTexte>Si vous manquez une dose, vous devez poursuivre le traitement avec la dose suivante. <b>Ne</b> prenez <b>pas</b> de double dose de PHOSPHOSORB pour compenser la dose que vous avez oublié de prendre.</p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez de prendre PHOSPHOSORB 660 mg, comprimé pelliculé </p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Respectez la prescription de votre médecin pour votre traitement au PHOSPHOSORB. Si vous interrompez votre traitement au PHOSPHOSORB, alors qu'il vous est prescrit, la concentration de phosphate dans votre sang peut augmenter de manière anormale. De graves troubles tels que des maladies osseuses et une calcification, par exemple de vos vaisseaux sanguins, peuvent alors survenir.</p>
+<p class=AmmCorpsTexte>Si vous avez d’autres questions sur l’utilisation de ce médicament, demandez plus d’informations à votre médecin, à votre pharmacien.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</a></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Les effets indésirables suivants ont été observés :</p>
+<p class=AmmCorpsTexte>Fréquents (peuvent affecter jusqu’à 1 personne sur 10):</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>troubles gastro-intestinaux tels que</p>
+<p class=AmmListePuces2 style='margin-left:35.45pt'><span style='font-family: "Courier New"'>-<span style='font:7.0pt "Times New Roman"'>    </span></span>nausées</p>
+<p class=AmmListePuces2 style='margin-left:35.45pt'><span style='font-family: "Courier New"'>-<span style='font:7.0pt "Times New Roman"'>    </span></span>vomissements</p>
+<p class=AmmListePuces2 style='margin-left:35.45pt'><span style='font-family: "Courier New"'>-<span style='font:7.0pt "Times New Roman"'>    </span></span>sensation de satiété</p>
+<p class=AmmListePuces2 style='margin-left:35.45pt'><span style='font-family: "Courier New"'>-<span style='font:7.0pt "Times New Roman"'>    </span></span>éructation</p>
+<p class=AmmListePuces2 style='margin-left:35.45pt'><span style='font-family: "Courier New"'>-<span style='font:7.0pt "Times New Roman"'>    </span></span>constipation</p>
+<p class=AmmListePuces2 style='margin-left:35.45pt'><span style='font-family: "Courier New"'>-<span style='font:7.0pt "Times New Roman"'>    </span></span>diarrhées</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>taux de calcium trop élevé dans votre sang pouvant conduire aux symptômes suivants </p>
+<p class=AmmListePuces2 style='margin-left:35.45pt'><span style='font-family: "Courier New"'>-<span style='font:7.0pt "Times New Roman"'>    </span></span>constipation</p>
+<p class=AmmListePuces2 style='margin-left:35.45pt'><span style='font-family: "Courier New"'>-<span style='font:7.0pt "Times New Roman"'>    </span></span>perte d'appétit</p>
+<p class=AmmListePuces2 style='margin-left:35.45pt'><span style='font-family: "Courier New"'>-<span style='font:7.0pt "Times New Roman"'>    </span></span>nausées</p>
+<p class=AmmListePuces2 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:35.45pt;text-indent:-17.85pt'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>    </span></span>vomissements.</p>
+<p class=AmmCorpsTexte>Peu fréquents (peuvent affecter jusqu’à 1 personne sur 100):</p>
+<p class=AmmCorpsTexte>Consultez votre médecin si vous ressentez l'un des symptômes suivants : </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>taux de calcium bien trop élevé dans votre sang conduisant aux symptômes suivants </p>
+<p class=AmmListePuces2 style='margin-left:35.7pt;text-indent:-17.85pt; page-break-after:auto'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>   </span></span>troubles du rythme cardiaque</p>
+<p class=AmmListePuces2 style='margin-left:35.7pt;text-indent:-17.85pt; page-break-after:auto'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>   </span></span>confusion</p>
+<p class=AmmListePuces2 style='margin-left:35.7pt;text-indent:-17.85pt; page-break-after:auto'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>   </span></span>léthargie (faiblesse)</p>
+<p class=AmmListePuces2 style='margin-left:35.7pt;text-indent:-17.85pt; page-break-after:auto'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>   </span></span>délire</p>
+<p class=AmmListePuces2 style='margin-left:35.7pt;text-indent:-17.85pt; page-break-after:auto'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>   </span></span>perte partielle ou totale de conscience (stupeur)</p>
+<p class=AmmListePuces2 style='margin-left:35.7pt;text-indent:-17.85pt; page-break-after:auto'><span style='font-family:"Courier New"'>-<span style='font:7.0pt "Times New Roman"'>   </span></span>coma, dans des cas très graves.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt;page-break-after:avoid'>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_PHOSPHOSORB_660_mg,_comprimé_pelliculé?'>5. COMMENT CONSERVER PHOSPHOSORB 660 mg, comprimé pelliculé?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026"></a><a name="_Toc142279024">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas ce médicament après la date de péremption indiquée sur l´emballage après "EXP. La date de péremption fait référence au dernier jour de ce mois.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>A conserver à une température ne dépassant pas 30°C. Durée de conservation après la première ouverture du récipient : 3 mois.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si les comprimés changent de couleur ou présentent d’autres signes de détérioration, demandez l’avis de votre pharmacien.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout ou avec les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient PHOSPHOSORB 660 mg, comprimé pelliculé</a></p>
+<p class=AmmListePuces1 style='margin-left:14.2pt;text-indent:-14.2pt; page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>       </span></span><b>La substance active est acétate de calcium.</b></p>
+<p class=AmmCorpsTexte style='margin-left:14.2pt;text-indent:-14.2pt; page-break-after:avoid'> Chaque comprimé pelliculé contient : 660 mg d’acétate de calcium, équivalent à 167 mg de calcium.</p>
+<p class=AmmListePuces1 style='margin-left:14.2pt;text-indent:-14.2pt; page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>       </span></span>Les autres composants sont : saccharose, gélatine (E441), croscarmellose sodique (E468), stéarate de magnésium (E470b), huile de ricin raffinée, saccharine sodique (E954), hypromellose (E464).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que PHOSPHOSORB 660 mg, comprimé pelliculé et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>PHOSPHOSORB est un comprimé pelliculé, blanc à jaunâtre, de forme oblongue avec une barre de cassure. </p>
+<p class=AmmCorpsTexte>Récipient en polyéthylène contenant 100 ou 200 comprimés pelliculés. </p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279031"><span lang=EN-US>FRESENIUS MEDICAL CARE NEPHROLOGICA DEUTSCHLAND GmbH </span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE>ELSE-KRÖNER-STRAßE 1</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE>61352 BAD HOMBURG V.D.H.</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>ALLEMAGNE</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; line-height:115%'><b>VIFOR FRANCE</b></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; line-height:115%'>100-101 TERRASSE BOIELDIEU TOUR FRANKLIN LA DEFENSE 8</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; line-height:115%'><span lang=EN-GB>92042 PARIS LE DEFENSE CEDEX</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279033"><span lang=EN-GB>FRESENIUS MEDICAL CARE DEUTSCHLAND GmbH</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=EN-GB>ELSE-KRÖNER-STRAßE 1</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=EN-US>61352 BAD HOMBURG V.D.H.</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>ALLEMAGNE</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexteGras>Ce médicament est autorisé dans les Etats membres de l'Espace Economique Européen sous les noms suivants : Conformément à la réglementation en vigueur. </p>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

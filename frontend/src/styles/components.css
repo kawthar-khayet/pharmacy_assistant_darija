@@ -4,29 +4,191 @@
 
 /* =============================================================== accueil */
 
-.accueil-hero {
-  padding: 46px 0 34px;
-  text-align: center;
+/* Bandeau marine : c'est la seule grande surface sombre du contenu. Il porte
+   la promesse et le champ de question, pour que l'action principale soit
+   evidente des l'arrivee. */
+.hero {
+  position: relative;
+  /* clip et non hidden : le halo deborde a droite, et un conteneur « hidden »
+     reste defilable -- l'autofocus du champ le decalait alors vers la droite */
+  overflow: hidden;
+  overflow: clip;
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+  gap: 32px;
+  padding: 40px 40px 36px;
+  border-radius: var(--r-xl);
+  background: linear-gradient(135deg, var(--marine) 0%, var(--marine-2) 60%, var(--marine-3) 100%);
+  color: #fff;
+  box-shadow: var(--ombre-3);
+  isolation: isolate;
 }
 
-.hero-salut {
-  font-size: 2.35rem;
+/* halo bleu ciel en haut a droite, et trame de points qui s'y fond */
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  right: -160px;
+  top: -220px;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(92, 200, 240, .28) 0%, rgba(92, 200, 240, 0) 65%);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, .09) 1px, transparent 1.4px);
+  background-size: 20px 20px;
+  -webkit-mask-image: linear-gradient(90deg, transparent 30%, #000 100%);
+  mask-image: linear-gradient(90deg, transparent 30%, #000 100%);
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 12px 5px 10px;
+  border-radius: 999px;
+  background: rgba(92, 200, 240, .14);
+  border: 1px solid rgba(92, 200, 240, .3);
+  color: var(--ciel);
+  font-size: .78rem;
   font-weight: 700;
-  letter-spacing: -.01em;
+  letter-spacing: .02em;
 }
 
-.hero-question {
-  margin-top: 6px;
-  font-size: 1.62rem;
-  font-weight: 600;
-  color: var(--encre);
+.hero-titre {
+  margin-top: 16px;
+  font-size: 2.35rem;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -.035em;
+  color: #fff;
 }
 
-.hero-sous {
-  margin: 14px auto 0;
-  max-width: 44ch;
+.hero-titre span { color: var(--ciel); }
+
+.hero-ar {
+  margin-top: 10px;
+  font-size: 1.08rem;
+  color: #b8cbe0;
+}
+
+.hero-champ { margin-top: 24px; }
+
+.hero .champ { border-color: transparent; box-shadow: 0 10px 30px -10px rgba(0, 0, 0, .45); }
+.hero .champ:focus-within { box-shadow: 0 0 0 4px rgba(92, 200, 240, .35); }
+.hero .champ-aide { color: #9fb4cc; text-align: left; }
+
+.puces.puces-sombre { justify-content: flex-start; margin-top: 16px; }
+
+.puces-sombre .puce {
+  background: rgba(255, 255, 255, .07);
+  border-color: rgba(255, 255, 255, .14);
+  color: #e3edf8;
+  box-shadow: none;
+}
+
+.puces-sombre .puce svg { color: var(--ciel); }
+
+.puces-sombre .puce:hover:not(:disabled) {
+  background: rgba(255, 255, 255, .13);
+  border-color: rgba(92, 200, 240, .5);
+  box-shadow: none;
+}
+
+.hero-cote {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-content: center;
+}
+
+.tuile {
+  padding: 16px;
+  border-radius: var(--r);
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .1);
+  backdrop-filter: blur(6px);
+}
+
+.tuile-icone {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(92, 200, 240, .16);
+  color: var(--ciel);
+}
+
+.tuile-titre {
+  margin-top: 12px;
+  font-size: .9rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.tuile-texte {
+  margin-top: 2px;
+  font-size: .78rem;
+  color: #9fb4cc;
+}
+
+/* tuile mise en avant : le bleu franc attire l'oeil sur le remboursement */
+.tuile-vive {
+  background: var(--bleu);
+  border-color: var(--bleu);
+}
+
+.tuile-vive .tuile-icone { background: rgba(255, 255, 255, .18); color: #fff; }
+.tuile-vive .tuile-texte { color: #d9e8fa; }
+
+/* ------------------------------------------------------- etapes */
+
+.etapes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  counter-reset: etape;
+}
+
+.etape {
+  position: relative;
+  padding: 20px 20px 20px 64px;
+  background: var(--carte);
+  border: 1px solid var(--trait);
+  border-radius: var(--r);
+}
+
+.etape::before {
+  counter-increment: etape;
+  content: counter(etape);
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--bleu-voile);
+  color: var(--bleu-vif);
+  font-size: .85rem;
+  font-weight: 800;
+}
+
+.etape h3 { font-size: .95rem; color: var(--marine); }
+
+.etape p {
+  margin-top: 4px;
+  font-size: .85rem;
   color: var(--encre-douce);
-  font-size: 1rem;
 }
 
 /* ------------------------------------------------------- champ principal */
@@ -35,22 +197,23 @@
   display: flex;
   align-items: flex-end;
   gap: 8px;
-  padding: 9px 9px 9px 16px;
+  padding: 8px 8px 8px 16px;
   background: var(--carte);
   border: 1px solid var(--trait-fort);
-  border-radius: var(--r-lg);
+  border-radius: var(--r);
   box-shadow: var(--ombre-2);
   transition: border-color var(--transition), box-shadow var(--transition);
 }
 
 .champ:focus-within {
-  border-color: var(--rose);
-  box-shadow: var(--ombre-3), 0 0 0 4px var(--terre-voile);
+  border-color: var(--bleu);
+  box-shadow: var(--ombre-2), 0 0 0 4px var(--bleu-voile);
 }
 
 .champ-loupe {
   flex: none;
-  margin-bottom: 9px;
+  display: grid;
+  margin-bottom: 11px;
   color: var(--encre-pale);
 }
 
@@ -64,6 +227,7 @@
   padding: 9px 0;
   max-height: 168px;
   line-height: 1.55;
+  color: var(--encre);
 }
 
 .champ textarea::placeholder { color: var(--encre-pale); }
@@ -81,29 +245,29 @@
   display: grid;
   place-items: center;
   border: 1px solid var(--trait);
-  border-radius: 50%;
-  background: var(--carte);
+  border-radius: var(--r-sm);
+  background: var(--fond);
   color: var(--encre-douce);
   transition: background var(--transition), color var(--transition),
               border-color var(--transition), transform var(--transition);
 }
 
 .rond:hover:not(:disabled) {
-  background: var(--sable);
-  color: var(--encre);
-  border-color: var(--trait-fort);
+  background: var(--bleu-voile);
+  color: var(--bleu-vif);
+  border-color: var(--bleu-trait);
 }
 
 .rond-actif {
-  background: var(--terre-voile);
-  border-color: var(--terre-trait);
-  color: var(--terre-vive);
+  background: var(--danger-voile);
+  border-color: #f3c6c3;
+  color: var(--danger);
   animation: souffle 1.5s ease-in-out infinite;
 }
 
 @keyframes souffle {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(192, 94, 69, .28); }
-  50%      { box-shadow: 0 0 0 7px rgba(192, 94, 69, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(194, 65, 59, .3); }
+  50%      { box-shadow: 0 0 0 7px rgba(194, 65, 59, 0); }
 }
 
 .rond-attente { opacity: 1 !important; cursor: progress; }
@@ -112,27 +276,27 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border: 2px solid var(--terre-trait);
-  border-top-color: var(--terre);
+  border: 2px solid var(--bleu-trait);
+  border-top-color: var(--bleu);
   animation: tourne .8s linear infinite;
 }
 
 @keyframes tourne { to { transform: rotate(360deg); } }
 
 .rond-envoi {
-  background: var(--terre);
-  border-color: var(--terre);
+  background: var(--bleu);
+  border-color: var(--bleu);
   color: #fff;
 }
 
 .rond-envoi:hover:not(:disabled) {
-  background: var(--terre-vive);
-  border-color: var(--terre-vive);
+  background: var(--bleu-vif);
+  border-color: var(--bleu-vif);
   color: #fff;
-  transform: scale(1.06);
+  transform: translateY(-1px);
 }
 
-.rond-envoi:active:not(:disabled) { transform: scale(.94); }
+.rond-envoi:active:not(:disabled) { transform: scale(.95); }
 
 .rond:disabled {
   opacity: .4;
@@ -153,29 +317,32 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 9px;
-  margin-top: 22px;
+  gap: 8px;
+  margin-top: 20px;
 }
 
 .puce {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 9px 16px;
+  padding: 8px 14px;
   background: var(--carte);
   border: 1px solid var(--trait);
   border-radius: 999px;
-  font-size: .87rem;
+  font-size: .86rem;
+  font-weight: 500;
   color: var(--encre);
   box-shadow: var(--ombre-1);
-  transition: border-color var(--transition), transform var(--transition),
-              box-shadow var(--transition);
+  transition: border-color var(--transition), background var(--transition),
+              box-shadow var(--transition), color var(--transition);
 }
 
+.puce svg { flex: none; color: var(--bleu); }
+
 .puce:hover:not(:disabled) {
-  border-color: var(--rose);
-  transform: translateY(-2px);
-  box-shadow: var(--ombre-2);
+  border-color: var(--bleu-trait);
+  background: var(--bleu-voile);
+  color: var(--bleu-vif);
 }
 
 .puce:disabled { opacity: .5; cursor: default; }
@@ -183,24 +350,38 @@
 /* ---------------------------------------------------------- cartes action */
 
 .section-titre {
-  margin: 52px 0 18px;
-  font-size: 1.14rem;
-  font-weight: 700;
+  margin: 44px 0 16px;
+  font-size: 1.15rem;
+  font-weight: 750;
+  color: var(--marine);
 }
+
+.section-tete {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 44px 0 16px;
+}
+
+.section-tete .section-titre { margin: 0; }
+
+.section-tete p { font-size: .88rem; color: var(--encre-douce); }
 
 .grille-actions {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;
 }
 
 .carte-action {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-align: left;
-  padding: 22px 20px;
+  padding: 22px 20px 20px;
   background: var(--carte);
   border: 1px solid var(--trait);
-  border-radius: var(--r);
+  border-radius: var(--r-lg);
   box-shadow: var(--ombre-1);
   transition: transform var(--transition), box-shadow var(--transition),
               border-color var(--transition);
@@ -209,21 +390,24 @@
 .carte-action:hover {
   transform: translateY(-3px);
   box-shadow: var(--ombre-3);
-  border-color: var(--terre-trait);
+  border-color: var(--bleu-trait);
 }
 
 .carte-action-icone {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   display: grid;
   place-items: center;
-  border-radius: 13px;
-  background: var(--terre-voile);
-  font-size: 1.22rem;
-  margin-bottom: 14px;
+  border-radius: 12px;
+  background: var(--bleu-voile);
+  color: var(--bleu);
+  margin-bottom: 16px;
+  transition: background var(--transition), color var(--transition);
 }
 
-.carte-action h3 { font-size: 1rem; }
+.carte-action:hover .carte-action-icone { background: var(--bleu); color: #fff; }
+
+.carte-action h3 { font-size: 1.02rem; color: var(--marine); }
 
 .carte-action p {
   margin-top: 5px;
@@ -232,17 +416,18 @@
 }
 
 .carte-action-fleche {
-  margin-top: 14px;
-  font-size: .82rem;
-  font-weight: 650;
-  color: var(--terre);
+  margin-top: auto;
+  padding-top: 16px;
+  font-size: .83rem;
+  font-weight: 700;
+  color: var(--bleu);
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
 }
 
-.carte-action:hover .carte-action-fleche span { transform: translateX(3px); }
-.carte-action-fleche span { transition: transform var(--transition); }
+.carte-action-fleche svg { transition: transform var(--transition); }
+.carte-action:hover .carte-action-fleche svg { transform: translateX(3px); }
 
 /* ================================================================== chat */
 
@@ -257,23 +442,26 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 16px 32px;
+  padding: 14px 32px;
   border-bottom: 1px solid var(--trait);
-  background: rgba(253, 251, 248, .88);
+  background: rgba(255, 255, 255, .92);
   backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
   z-index: 5;
 }
 
-.chat-identite { display: flex; align-items: center; gap: 11px; }
+.chat-identite { display: flex; align-items: center; gap: 12px; }
 
-.chat-identite h2 { font-size: 1rem; }
+.chat-identite h2 { font-size: 1rem; color: var(--marine); }
 
 .chat-identite p {
   font-size: .8rem;
   color: var(--encre-douce);
 }
+
+.chat-identite .avatar { width: 38px; height: 38px; margin-top: 0; border-radius: 11px; }
+.chat-identite .avatar svg { width: 22px; height: 22px; }
 
 .chat-fil {
   flex: 1;
@@ -292,12 +480,15 @@
 
 .chat-socle {
   border-top: 1px solid var(--trait);
-  background: rgba(253, 251, 248, .92);
+  background: rgba(255, 255, 255, .92);
   backdrop-filter: blur(12px);
-  padding: 14px 28px 20px;
+  padding: 14px 28px 18px;
 }
 
 .chat-socle-inner { max-width: var(--lecture); margin: 0 auto; }
+
+.chat-socle .champ { box-shadow: var(--ombre-1); background: var(--fond); }
+.chat-socle .champ:focus-within { background: var(--carte); }
 
 /* ------------------------------------------------------------- messages */
 
@@ -317,24 +508,24 @@
 
 .avatar {
   flex: none;
-  width: 30px;
-  height: 30px;
-  margin-top: 3px;
+  width: 32px;
+  height: 32px;
+  margin-top: 2px;
   display: grid;
   place-items: center;
   border-radius: 10px;
-  background: linear-gradient(145deg, var(--terre) 0%, var(--rose) 130%);
+  background: linear-gradient(145deg, var(--bleu) 0%, var(--ciel) 120%);
   color: #fff;
 }
 
-.avatar svg { width: 16px; height: 16px; }
+.avatar svg { width: 19px; height: 19px; }
 
 .bulle {
   max-width: 88%;
   min-width: 0;
-  padding: 13px 17px;
+  padding: 12px 16px;
   border-radius: var(--r);
-  border-top-left-radius: 6px;
+  border-top-left-radius: 4px;
   background: var(--carte);
   border: 1px solid var(--trait);
   box-shadow: var(--ombre-1);
@@ -344,23 +535,35 @@
 }
 
 .tour-moi .bulle {
-  background: var(--terre-voile);
-  border-color: var(--terre-trait);
-  color: var(--encre);
+  background: var(--bleu);
+  border-color: var(--bleu);
+  color: #fff;
   border-top-left-radius: var(--r);
-  border-top-right-radius: 6px;
-  box-shadow: none;
+  border-top-right-radius: 4px;
+  box-shadow: 0 6px 16px -8px rgba(42, 123, 214, .6);
 }
 
 .tour-erreur .bulle {
-  background: #fdf2ee;
-  border-color: #f2cfc2;
-  color: #93402a;
+  background: var(--danger-voile);
+  border-color: #f3c6c3;
+  color: #8f2c27;
 }
 
-.bulle-riche { white-space: normal; padding: 15px 17px; }
+.bulle-riche { white-space: normal; padding: 15px 16px; }
 
 .bulle-lead { font-size: .95rem; }
+
+.bulle-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  margin-top: 10px;
+  font-size: .83rem;
+  color: var(--encre-pale);
+}
+
+.bulle-note svg { flex: none; margin-top: 3px; }
+.bulle-note-garde { color: var(--alerte); }
 
 /* -------------------------------------------------------- indicateur frappe */
 
@@ -370,7 +573,7 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--rose);
+  background: var(--bleu);
   animation: rebond 1.25s ease-in-out infinite;
 }
 
@@ -378,8 +581,8 @@
 .frappe span:nth-child(3) { animation-delay: .32s; }
 
 @keyframes rebond {
-  0%, 100% { opacity: .35; transform: translateY(0); }
-  50%      { opacity: 1;   transform: translateY(-4px); }
+  0%, 100% { opacity: .3; transform: translateY(0); }
+  50%      { opacity: 1;  transform: translateY(-4px); }
 }
 
 /* ---------------------------------------------------------- fiche medicament */
@@ -395,14 +598,17 @@
   border-radius: var(--r);
   overflow: hidden;
   box-shadow: var(--ombre-1);
+  color: var(--encre);
   transition: transform var(--transition), box-shadow var(--transition),
               border-color var(--transition);
 }
 
+.fiche-cliquable { cursor: pointer; }
+
 .fiche-cliquable:hover {
   transform: translateY(-2px);
   box-shadow: var(--ombre-3);
-  border-color: var(--terre-trait);
+  border-color: var(--bleu-trait);
 }
 
 .fiche-tete {
@@ -410,19 +616,18 @@
   align-items: flex-start;
   gap: 13px;
   padding: 16px 18px;
-  background: linear-gradient(180deg, var(--terre-voile) 0%, rgba(251, 237, 232, 0) 100%);
+  border-top: 3px solid var(--bleu);
 }
 
 .fiche-glyphe {
   flex: none;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   display: grid;
   place-items: center;
   border-radius: 12px;
-  background: var(--carte);
-  border: 1px solid var(--terre-trait);
-  font-size: 1.16rem;
+  background: var(--bleu-voile);
+  color: var(--bleu);
 }
 
 .fiche-etiquette {
@@ -430,13 +635,14 @@
   font-weight: 700;
   letter-spacing: .09em;
   text-transform: uppercase;
-  color: var(--terre);
+  color: var(--bleu);
 }
 
 .fiche-nom {
   font-size: 1.08rem;
-  font-weight: 700;
+  font-weight: 750;
   line-height: 1.3;
+  color: var(--marine);
   word-break: break-word;
 }
 
@@ -447,26 +653,25 @@
 }
 
 .fiche-faits {
-  /* Les traits sont dessines par les interstices de la grille sur fond colore :
-     ainsi les separateurs restent justes quel que soit le nombre de faits et le
-     nombre de lignes, ce qu'une bordure par cellule ne sait pas faire des que
-     ca passe a la ligne. */
-  margin-top: auto;
+  /* Chaque fait trace un trait a sa droite et en dessous ; ceux qui tombent
+     sur le bord de la fiche sont rognes par son overflow. Les separateurs
+     restent ainsi justes quel que soit le nombre de colonnes, et une case
+     laissee vide en fin de grille se fond dans le fond au lieu de faire tache. */
+  margin: auto 0 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
-  gap: 1px;
-  background: var(--trait);
+  background: #fafcfe;
   border-top: 1px solid var(--trait);
 }
 
 .fait {
-  padding: 12px 16px;
-  background: var(--carte);
+  padding: 11px 16px;
+  box-shadow: 1px 0 0 var(--trait), 0 1px 0 var(--trait);
 }
 
 .fait dt {
-  font-size: .7rem;
-  font-weight: 600;
+  font-size: .68rem;
+  font-weight: 650;
   letter-spacing: .05em;
   text-transform: uppercase;
   color: var(--encre-pale);
@@ -475,10 +680,10 @@
 .fait dd {
   margin: 3px 0 0;
   font-size: .93rem;
-  font-weight: 600;
+  font-weight: 650;
 }
 
-.fait-prix dd { color: var(--terre-vive); }
+.fait-prix dd { color: var(--bleu-vif); font-weight: 750; }
 
 .marqueur {
   display: inline-flex;
@@ -486,27 +691,30 @@
   gap: 5px;
   padding: 3px 9px;
   border-radius: 999px;
-  background: var(--sable);
+  background: var(--fond);
   border: 1px solid var(--trait);
   font-size: .72rem;
   font-weight: 600;
   color: var(--encre-douce);
 }
 
-.marqueur-ok { background: rgba(62, 143, 111, .1); border-color: rgba(62, 143, 111, .2); color: #2f6f56; }
+a.marqueur { transition: border-color var(--transition), color var(--transition); }
+a.marqueur:hover { border-color: var(--bleu-trait); color: var(--bleu-vif); }
+
+.marqueur-ok { background: var(--dispo-voile); border-color: rgba(18, 163, 111, .22); color: #0b7a52; }
 .marqueur-verifier {
   background: var(--alerte-voile);
-  border-color: #edd9ac;
+  border-color: #f0dcb0;
   color: #7d5a16;
   text-transform: none;
   letter-spacing: 0;
 }
 
-.marqueur-terre { background: var(--terre-voile); border-color: var(--terre-trait); color: var(--terre-vive); }
+.marqueur-bleu { background: var(--bleu-voile); border-color: var(--bleu-trait); color: var(--bleu-vif); }
 
 /* --------------------------------------------------------- detail medicament */
 
-.detail-sections { display: flex; flex-direction: column; gap: 2px; }
+.detail-sections { display: flex; flex-direction: column; }
 
 .detail-bloc {
   padding: 16px 18px;
@@ -516,13 +724,15 @@
 .detail-bloc h4 {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: .82rem;
-  font-weight: 700;
-  letter-spacing: .04em;
+  gap: 9px;
+  font-size: .8rem;
+  font-weight: 750;
+  letter-spacing: .05em;
   text-transform: uppercase;
-  color: var(--encre-douce);
+  color: var(--marine);
 }
+
+.detail-bloc h4 svg { color: var(--bleu); }
 
 .detail-bloc p {
   margin-top: 8px;
@@ -535,9 +745,23 @@
   padding: 11px 13px;
   border: 1px dashed var(--trait-fort);
   border-radius: var(--r-xs);
-  background: var(--sable);
+  background: var(--fond);
   font-size: .86rem;
   color: var(--encre-douce);
+}
+
+/* Texte de notice officielle, repris mot pour mot. Les retours a la ligne
+   portent le sens (chaque puce est une contre-indication distincte) : on les
+   conserve avec pre-line plutot que de laisser le paragraphe s'aplatir. */
+.detail-texte {
+  margin-top: 8px;
+  white-space: pre-line;
+  font-size: .88rem;
+  line-height: 1.55;
+  color: var(--encre-douce);
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: 6px;
 }
 
 .detail-variantes {
@@ -555,23 +779,24 @@
   padding: 9px 12px;
   border: 1px solid var(--trait);
   border-radius: var(--r-xs);
-  background: var(--ivoire);
+  background: #fafcfe;
   font-size: .86rem;
 }
 
-.variante-prix { font-weight: 700; color: var(--terre-vive); white-space: nowrap; }
+.variante-prix { font-weight: 750; color: var(--bleu-vif); white-space: nowrap; }
 
 /* ------------------------------------------------------------ pharmacie */
 
 .pharma {
   display: flex;
   align-items: flex-start;
-  gap: 13px;
-  padding: 15px 17px;
+  gap: 14px;
+  padding: 16px 18px;
   background: var(--carte);
   border: 1px solid var(--trait);
   border-radius: var(--r);
   box-shadow: var(--ombre-1);
+  color: var(--encre);
   transition: transform var(--transition), box-shadow var(--transition),
               border-color var(--transition);
 }
@@ -579,23 +804,25 @@
 .pharma:hover {
   transform: translateY(-2px);
   box-shadow: var(--ombre-2);
-  border-color: var(--terre-trait);
+  border-color: var(--bleu-trait);
 }
 
 .pharma-glyphe {
   flex: none;
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
   border-radius: 12px;
-  background: var(--rose-voile);
-  font-size: 1.06rem;
+  background: var(--dispo-voile);
+  color: var(--dispo);
 }
+
+.pharma-glyphe svg { width: 22px; height: 22px; }
 
 .pharma-corps { flex: 1; min-width: 0; }
 
-.pharma-nom { font-size: .98rem; font-weight: 700; }
+.pharma-nom { font-size: .98rem; font-weight: 750; color: var(--marine); }
 
 .pharma-adresse {
   margin-top: 3px;
@@ -604,7 +831,7 @@
 }
 
 .pharma-meta {
-  margin-top: 9px;
+  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
@@ -617,15 +844,15 @@
   gap: 6px;
   padding: 6px 13px;
   border-radius: 999px;
-  background: var(--terre);
+  background: var(--bleu);
   color: #fff;
-  border: 1px solid var(--terre);
+  border: 1px solid var(--bleu);
   font-size: .8rem;
   font-weight: 650;
   transition: background var(--transition), transform var(--transition);
 }
 
-.bouton-tel:hover { background: var(--terre-vive); transform: translateY(-1px); }
+.bouton-tel:hover { background: var(--bleu-vif); transform: translateY(-1px); }
 
 /* --------------------------------------------------------------- securite */
 
@@ -634,11 +861,21 @@
   gap: 12px;
   padding: 14px 16px;
   background: var(--alerte-voile);
-  border: 1px solid #edd9ac;
+  border: 1px solid #f0dcb0;
   border-radius: var(--r);
+  color: var(--encre);
 }
 
-.securite-glyphe { flex: none; font-size: 1.05rem; line-height: 1.4; }
+.securite-glyphe {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: #fdebc8;
+  color: var(--alerte);
+}
 
 .securite strong {
   display: block;
@@ -647,12 +884,13 @@
 }
 
 .securite p {
-  margin-top: 3px;
+  margin-top: 2px;
   font-size: .84rem;
   color: #8a6a2c;
 }
 
-.securite-mince { padding: 11px 14px; }
+.securite-mince { padding: 11px 13px; }
+.securite-mince .securite-glyphe { width: 26px; height: 26px; }
 .securite-mince strong { font-size: .83rem; }
 .securite-mince p { font-size: .8rem; }
 
@@ -667,20 +905,29 @@
 }
 
 .vide {
-  padding: 52px 24px;
+  padding: 48px 24px;
   text-align: center;
   border: 1px dashed var(--trait-fort);
   border-radius: var(--r-lg);
   background: var(--carte);
 }
 
-.vide-glyphe { font-size: 1.9rem; }
+.vide-glyphe {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--bleu-voile);
+  color: var(--bleu);
+}
 
-.vide h3 { margin-top: 12px; font-size: 1.02rem; }
+.vide h3 { margin-top: 14px; font-size: 1.02rem; color: var(--marine); }
 
 .vide p {
   margin: 6px auto 0;
-  max-width: 40ch;
+  max-width: 42ch;
   font-size: .89rem;
   color: var(--encre-douce);
 }
@@ -689,7 +936,7 @@
    qu'un spinner, ce qui rend l'attente moins brutale */
 .squelette {
   border-radius: var(--r);
-  background: linear-gradient(100deg, var(--sable) 30%, var(--sable-fonce) 50%, var(--sable) 70%);
+  background: linear-gradient(100deg, var(--fond-2) 30%, #f5f8fc 50%, var(--fond-2) 70%);
   background-size: 220% 100%;
   animation: balaye 1.4s ease-in-out infinite;
 }
@@ -699,7 +946,7 @@
   to   { background-position: -40% 0; }
 }
 
-.squelette-fiche { height: 132px; }
+.squelette-fiche { height: 140px; }
 .squelette-ligne { height: 15px; border-radius: 7px; }
 
 /* --------------------------------------------------------- historique */
@@ -710,36 +957,35 @@
   gap: 14px;
   width: 100%;
   text-align: left;
-  padding: 15px 17px;
+  padding: 14px 16px;
   background: var(--carte);
   border: 1px solid var(--trait);
   border-radius: var(--r);
-  transition: transform var(--transition), box-shadow var(--transition),
-              border-color var(--transition);
+  transition: box-shadow var(--transition), border-color var(--transition);
 }
 
 .histo-item:hover {
-  transform: translateX(3px);
   box-shadow: var(--ombre-2);
-  border-color: var(--terre-trait);
+  border-color: var(--bleu-trait);
 }
 
 .histo-glyphe {
   flex: none;
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   display: grid;
   place-items: center;
   border-radius: 11px;
-  background: var(--sable);
-  font-size: .98rem;
+  background: var(--bleu-voile);
+  color: var(--bleu);
 }
 
 .histo-corps { flex: 1; min-width: 0; }
 
 .histo-titre {
   font-size: .95rem;
-  font-weight: 600;
+  font-weight: 650;
+  color: var(--marine);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -753,20 +999,25 @@
 
 .histo-suppr {
   flex: none;
+  display: grid;
+  place-items: center;
   border: 0;
   background: none;
   color: var(--encre-pale);
-  font-size: 1.15rem;
-  line-height: 1;
-  padding: 4px 6px;
+  padding: 6px;
   border-radius: var(--r-xs);
   opacity: 0;
   transition: opacity var(--transition), color var(--transition),
               background var(--transition);
 }
 
-.histo-item:hover .histo-suppr { opacity: 1; }
-.histo-suppr:hover { color: var(--terre-vive); background: var(--terre-voile); }
+.histo-item:hover .histo-suppr,
+.histo-suppr:focus-visible { opacity: 1; }
+.histo-suppr:hover { color: var(--danger); background: var(--danger-voile); }
+
+@media (hover: none) {
+  .histo-suppr { opacity: 1; }
+}
 
 /* ------------------------------------------------------------ pharmacies */
 
@@ -782,22 +1033,37 @@
   top: 24px;
   border: 1px solid var(--trait);
   border-radius: var(--r-lg);
-  background: var(--sable);
+  background: var(--fond-2);
   overflow: hidden;
   min-height: 420px;
   display: flex;
   flex-direction: column;
+  box-shadow: var(--ombre-1);
 }
 
 .carte-plan-toile { flex: 1; position: relative; }
 
+.carte-plan-vide {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  text-align: center;
+  color: var(--encre-douce);
+  font-size: .88rem;
+}
+
 .carte-plan-pied {
-  padding: 13px 16px;
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
   border-top: 1px solid var(--trait);
   background: var(--carte);
-  font-size: .81rem;
+  font-size: .8rem;
   color: var(--encre-douce);
 }
+
+.carte-plan-pied svg { flex: none; margin-top: 2px; color: var(--bleu); }
 
 /* ------------------------------------------------------------- reglages */
 
@@ -812,39 +1078,143 @@
   border-radius: var(--r);
 }
 
-.reglage h4 { font-size: .95rem; }
+.reglage-corps { display: flex; gap: 14px; align-items: flex-start; }
+
+.reglage h4 { font-size: .95rem; color: var(--marine); }
 .reglage p { margin-top: 3px; font-size: .84rem; color: var(--encre-douce); }
 
 .bouton-doux {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   padding: 8px 15px;
-  border-radius: var(--r-xs);
+  border-radius: var(--r-sm);
   border: 1px solid var(--trait-fort);
-  background: var(--ivoire);
+  background: var(--carte);
   font-size: .85rem;
-  font-weight: 600;
-  transition: background var(--transition), border-color var(--transition);
+  font-weight: 650;
+  color: var(--encre);
+  transition: background var(--transition), border-color var(--transition),
+              color var(--transition);
 }
 
-.bouton-doux:hover { background: var(--sable); border-color: var(--rose); }
-.bouton-danger:hover { background: var(--terre-voile); border-color: var(--terre); color: var(--terre-vive); }
+.bouton-doux:hover { background: var(--bleu-voile); border-color: var(--bleu-trait); color: var(--bleu-vif); }
+
+.bouton-plein {
+  background: var(--bleu);
+  border-color: var(--bleu);
+  color: #fff;
+}
+
+.bouton-plein:hover { background: var(--bleu-vif); border-color: var(--bleu-vif); color: #fff; }
+
+.bouton-danger:hover { background: var(--danger-voile); border-color: #f3c6c3; color: var(--danger); }
 
 /* ------------------------------------------------------------- responsive */
+
+@media (max-width: 1080px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-cote { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
 
 @media (max-width: 960px) {
   .pharma-plan { grid-template-columns: 1fr; }
   .carte-plan { position: static; min-height: 280px; order: -1; }
+  .etapes { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 860px) {
-  .accueil-hero { padding: 26px 0 22px; }
-  .hero-salut { font-size: 1.85rem; }
-  .hero-question { font-size: 1.28rem; }
+  .hero { padding: 26px 20px 22px; border-radius: var(--r-lg); gap: 22px; }
+  .hero-titre { font-size: 1.72rem; }
+  .hero-cote { grid-template-columns: 1fr 1fr; }
+  .tuile { padding: 13px; }
 
-  .chat-tete { padding: 13px 18px; }
+  .chat-tete { padding: 12px 16px; }
   .chat-fil-inner { padding: 20px 16px 6px; }
   .chat-socle { padding: 12px 16px 16px; }
 
   .bulle { max-width: 92%; }
   .fiche-faits { grid-template-columns: repeat(2, 1fr); }
-  .section-titre { margin: 36px 0 14px; }
+  .section-titre, .section-tete { margin-top: 32px; }
+  .section-tete { flex-direction: column; align-items: flex-start; gap: 4px; }
+}
+
+/* Rubriques de notice officielle, repliees sous une reponse du chat. Le texte
+   est long et en francais : il ne doit pas concurrencer la reponse elle-meme,
+   d'ou le repli ferme par defaut et la hauteur bornee une fois ouvert. */
+.securite-repli {
+  border: 1px solid var(--trait);
+  border-radius: var(--r-xs);
+  background: var(--fond);
+}
+
+.securite-repli > summary {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 12px;
+  cursor: pointer;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--encre-douce);
+  list-style: none;
+}
+
+.securite-repli > summary::-webkit-details-marker { display: none; }
+.securite-repli > summary:hover { color: var(--encre); }
+
+.securite-repli-compte {
+  margin-inline-start: auto;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--trait);
+  font-size: .74rem;
+}
+
+.securite-rubrique {
+  padding: 4px 12px 10px;
+  border-top: 1px solid var(--trait);
+}
+
+.securite-rubrique h5 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0 0;
+  font-size: .82rem;
+  color: var(--encre);
+}
+
+.securite-repli-source {
+  padding: 9px 12px 11px;
+  border-top: 1px solid var(--trait);
+  font-size: .76rem;
+  color: var(--encre-pale);
+}
+
+/* Resume genere : visuellement distinct du texte officiel, pour qu'on ne les
+   confonde pas. Le liseré bleu le marque comme une aide a la lecture, pas
+   comme la source. */
+.securite-resume {
+  padding: 10px 12px 12px;
+  border-top: 1px solid var(--trait);
+  border-left: 3px solid var(--bleu);
+  background: var(--bleu-voile);
+}
+
+.securite-resume h5 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 6px;
+  font-size: .82rem;
+  color: var(--bleu-vif);
+}
+
+.securite-resume p { font-size: .86rem; line-height: 1.55; color: var(--encre); }
+
+.securite-resume-note {
+  margin-top: 7px;
+  font-size: .74rem !important;
+  color: var(--encre-pale) !important;
 }

@@ -49,11 +49,53 @@ export function chercherMedicaments(q, { limit = 12, signal } = {}) {
   return appeler(`/medicaments?${params}`, { signal })
 }
 
-export function chercherPharmacies({ q, ville, limit = 12, signal } = {}) {
+/** `position` ({lat, lon}) trie les resultats par distance et renseigne
+ *  `distance_km`. Seule, elle suffit : c'est la recherche « autour de moi ». */
+export function chercherPharmacies({ q, ville, position, limit = 12, signal } = {}) {
   const params = new URLSearchParams({ limit: String(limit) })
   if (q) params.set('q', q)
   if (ville) params.set('ville', ville)
+  if (position) {
+    params.set('lat', String(position.lat))
+    params.set('lon', String(position.lon))
+  }
   return appeler(`/pharmacies?${params}`, { signal })
+}
+
+/** Rubriques de securite d'une molecule (notice officielle, verbatim).
+ *  Renvoie null quand la molecule n'est pas couverte : c'est un cas normal,
+ *  pas une panne, et l'appelant affiche simplement la fiche sans ces sections. */
+export async function chercherSecurite(dci, { langue = 'fr', signal } = {}) {
+  if (!dci) return null
+  try {
+    return await appeler(`/securite?${new URLSearchParams({ dci, langue })}`, { signal })
+  } catch (err) {
+    if (err instanceof ApiError && /Aucune fiche/.test(err.message)) return null
+    throw err
+  }
+}
+
+/** Position du navigateur, en promesse. Le refus de l'utilisateur est une
+ *  reponse legitime, pas une erreur a afficher en rouge. */
+export function positionActuelle({ timeout = 10000 } = {}) {
+  return new Promise((resoudre, rejeter) => {
+    if (!navigator.geolocation) {
+      rejeter(new Error("Ton navigateur ne sait pas donner ta position."))
+      return
+    }
+    navigator.geolocation.getCurrentPosition(
+      (p) => resoudre({ lat: p.coords.latitude, lon: p.coords.longitude }),
+      (err) =>
+        rejeter(
+          new Error(
+            err.code === err.PERMISSION_DENIED
+              ? "Tu as refuse le partage de ta position."
+              : "Position indisponible pour le moment.",
+          ),
+        ),
+      { timeout, enableHighAccuracy: true },
+    )
+  })
 }
 
 /** Envoie un enregistrement a Whisper (cote API) et renvoie le texte entendu.

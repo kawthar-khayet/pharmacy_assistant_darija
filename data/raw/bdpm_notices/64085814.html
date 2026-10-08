@@ -1,0 +1,1891 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="zGZnM3cu4cc8W9zKik01ZA==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="zGZnM3cu4cc8W9zKik01ZA==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 31/08/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon"
+            aria-level="3"
+          >
+            DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                      </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 10/12/1997
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0442300">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte><a name="_Toc142279004">CORTICOIDES A USAGE SYSTEMIQUE NON ASSOCIES : code ATC : H02AB04.</a></p>
+<p class=AmmCorpsTexte>Ce médicament est un corticoïde.</p>
+<p class=AmmCorpsTexte>Il peut être utilisé en injection locale, en dermatologie, en ORL et en rhumatologie.</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament n'appartient à aucun groupe générique</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Suspension ( Composition pour 1 ml de suspension injectable )<ul role="list"><li role="listitem" style="list-style-type: none;"> > acétate de méthylprednisolone<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">40,0 mg </span></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > 1 flacon(s) en verre de 1 ml  </p><p>Code CIP : 336 978-6 ou 34009 336 978 6 0<br/>Déclaration de commercialisation : 31/08/2004<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p>Prix libre, médicament non remboursable ( <a href='/aide#que-signifie-la-notion-de-prix-libre-un-medicament-non-rembourse'>cliquez ici pour en savoir plus sur les médicaments non remboursables</a> )</div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><p>Pas de SMR disponible pour ce médicament ( <a href='/aide#le-medicament-que-je-recherche-ne-mentionne-pas-de-service-medical-rendu-(SMR)-ni-amelioration-du-service-medical-rendu-(ASMR)' aria-describedby='tooltip-smr-aide'>plus d'informations dans l'aide</a><span id='tooltip-smr-aide' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers aide</span> )</p></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div><div class='fr-col'><p>Pas d'ASMR disponible pour ce médicament (<a href='/aide#le-medicament-que-je-recherche-ne-mentionne-pas-de-service-medical-rendu-(SMR)-ni-amelioration-du-service-medical-rendu-(ASMR)' aria-describedby='tooltip-asmr-aide-2'>plus d'informations dans l'aide )</a></p><span id='tooltip-asmr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers la page aide</span></div></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : PFIZER HOLDING FRANCE</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure nationale</li><li>Code CIS : &nbsp;6 408 581 4</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 19/12/2025</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras><a name="_Toc142278913">DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon </a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition><a name="_Toc142278914">Acétate de méthylprednisolone............................................................................................ 40,0 mg</a></p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour 1 mL de suspension injectable.</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Suspension injectable.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">Ce sont celles de la corticothérapie locale, lorsque l'affection justifie une forte concentration locale. Toute prescription d'injection locale doit faire la part du danger infectieux notamment du risque de favoriser une prolifération bactérienne.</a></p>
+<p class=AmmCorpsTexte>Ce produit est indiqué dans les affections :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Dermatologiques : cicatrices chéloïdes.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>ORL : irrigation intra-sinusiennes dans les sinusites subaiguës ou chroniques justifiant un drainage.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Rhumatologiques :</p>
+<p class=AmmListePuces2 style='text-align:justify'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>injections intra-articulaires : arthrites inflammatoires, arthrose en poussée,</p>
+<p class=AmmListePuces2 style='text-align:justify'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Injections péri-articulaires : tendinites, bursites,</p>
+<p class=AmmListePuces2 style='text-align:justify'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>injections des parties molles: talalgies, syndrome du canal carpien, maladie de Dupuytren.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278918">Cette spécialité n'est pas adaptée à l'administration par voie inhalée par nébulisateur.</a></p>
+<p class=AmmCorpsTexte>Equivalence anti-inflammatoire (équipotence) pour 5 mg de prednisone: 4 mg de méthylprednisolone.</p>
+<p class=AmmAnnexeTitre3>Posologie</p>
+<p class=AmmCorpsTexte>1/10 à 2 mL par injection selon le lieu de l'injection et l'affection à traiter.</p>
+<p class=AmmCorpsTexte>Il faut éviter que l'injection ne soit trop superficielle en raison du risque d'atrophie sous-cutanée.</p>
+<p class=AmmCorpsTexte>L'injection ne sera répétée qu'en cas de réapparition ou de persistance des symptômes.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278919">Ce médicament est généralement contre-indiqué dans les situations suivantes (il n'existe toutefois aucune contre-indication absolue pour une corticothérapie d'indication vitale) :</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>tout état infectieux ou suspicion d’infection, à l'exclusion des indications spécifiées (voir rubrique 4.1),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>certaines viroses en évolution (notamment hépatites, herpes, varicelle, zona),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>états psychotiques encore non contrôlés par un traitement,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>vaccins vivants, ou vaccins vivants atténués (vaccins contre la fièvre jaune, la tuberculose, le rotavirus, la rougeole, les oreillons, la rubéole, la varicelle, le zona, la grippe) chez les patients recevant des posologies supérieures à 10 mg/j d’équivalent-prednisone (ou > 2 mg/kg/j chez l’enfant ou > 20 mg/j chez l’enfant de plus de 10 kg) pendant plus de deux semaines et pour les « bolus » de corticoïdes (à l'exception des voies inhalées et locales), et pendant les 3 mois suivant l’arrêt de la corticothérapie : risque de maladie vaccinale généralisée éventuellement mortelle,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>hypersensibilité à la substance active ou à l’un des excipients mentionnés à la rubrique 6.1,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>troubles de la coagulation, traitement anticoagulant en cours,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>en administration par voie intrathécale,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>en administration par voie péridurale,</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>en administration par voie intraveineuse.</p>
+<p class=AmmCorpsTexte>Ce médicament est généralement déconseillé en association avec l’acide acétylsalicylique aux doses anti-inflammatoires, en association avec le mifamurtide ainsi qu’en association avec un inhibiteur puissant du CYP3A4 (<a href="http://afssaps-prd.afssaps.fr/php/ecodex/rcp/R0121407.htm#Rcp_4_5_Interactions_3#Rcp_4_5_Interactions_3"><span style='color:windowtext;text-decoration:none'>voir</span></a> rubrique 4.5).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278920">Mises en garde spéciales</a></p>
+<p class=AmmCorpsTexteGras><a name="Rcp_4_4_MisesEnGarde_2"></a>Effets immunosuppresseurs/Sensibilité accrue aux infections </p>
+<p class=AmmCorpsTexte>La corticothérapie peut favoriser la survenue de diverses complications infectieuses dues notamment à des bactéries, des levures et des parasites. La survenue d'une anguillulose maligne est un risque important. Tous les sujets venant d'une zone d'endémie (régions tropicale, subtropicale, sud de l'Europe) doivent avoir un examen parasitologique des selles et un traitement éradicateur systématique avant la corticothérapie.</p>
+<p class=AmmCorpsTexte>Les signes évolutifs d'une infection peuvent être masqués par la corticothérapie. Les corticostéroïdes peuvent aussi accroître la sensibilité aux infections, exacerber les infections existantes, augmenter le risque de réactivation ou d'exacerbation des infections latentes. Surveiller le développement de l'infection et envisager l'arrêt des corticoïdes ou une réduction de la dose si nécessaire. Ne pas utiliser la voie d’administration intra-synoviale, intrabursale ou intratendineuse pour un effet local en cas d'infection aiguë.</p>
+<p class=AmmCorpsTexte>Les sujets traités par des immunosuppresseurs sont plus sensibles aux infections que les sujets sains. La varicelle et la rougeole, par exemple, peuvent avoir une évolution plus sévère, voire fatale, chez les enfants non immunisés ou chez les adultes sous corticostéroïdes.<sup> </sup></p>
+<p class=AmmCorpsTexte><span style='letter-spacing:-.15pt'>L’administration des vaccins vivants ou vivants atténués est contre-indiquée chez les patients recevant des posologies supérieures à 10 mg/j d’équivalent-prednisone (ou > 2 mg/kg/j chez l’enfant ou > 20 mg/j chez l’enfant de plus de 10 kg) pendant plus de deux semaines et pour les « bolus » de corticoïdes (à l'exception des voies inhalées et locales), et pendant les 3 mois suivant l’arrêt de la corticothérapie (voir rubriques 4.3 et 4.5). Les vaccins non vivants ou inactivés peuvent être administrés chez les patients recevant des doses immunosuppressives de corticostéroïdes. </span></p>
+<p class=AmmCorpsTexte><span style='letter-spacing:-.15pt'>Cependant, la réponse à ces vaccins peut être diminuée. Les procédures d'immunisation indiquées peuvent être menées chez les patients recevant des doses non immunosuppressives de corticostéroïdes.</span></p>
+<p class=AmmCorpsTexte>Il importe, avant la mise en route du traitement, d'écarter toute possibilité de foyer viscéral, notamment tuberculeux, et de surveiller, en cours de traitement l'apparition de pathologies infectieuses.</p>
+<p class=AmmCorpsTexte>En cas de tuberculose ancienne, un traitement prophylactique antituberculeux est nécessaire, s'il existe des séquelles radiologiques importantes et si l'on ne peut s'assurer qu'un traitement bien conduit de 6 mois par la rifampicine a été donné.</p>
+<p class=AmmCorpsTexte>L'utilisation de corticostéroïdes dans la tuberculose active doit être limitée aux cas de tuberculose fulminante ou disséminée dans lesquels les corticoïdes sont utilisés pour contrôler la maladie en association avec un régime thérapeutique antituberculeux approprié.</p>
+<p class=AmmCorpsTexte>Des cas de sarcome de Kaposi ont été rapportés chez les patients recevant une corticothérapie. L’arrêt de la corticothérapie peut entraîner une rémission clinique.</p>
+<p class=AmmCorpsTexte><span class=TableText9><span style='font-family:"Arial",sans-serif'>Le rôle des corticostéroïdes dans le choc septique est controversé, les premières études rapportant des effets bénéfiques et des effets nocifs. Plus récemment, il a été suggéré qu’un traitement complémentaire par corticostéroïdes pourrait être bénéfique aux patients présentant un choc septique établi et une insuffisance surrénalienne. Cependant, leur utilisation en routine en cas de choc septique n’est pas recommandée.</span></span><span class=MsoEndnoteReference> </span><span class=TableText9><span style='font-family:"Arial",sans-serif'>Une revue systématique a conclu que l’utilisation de corticostéroïdes à haute dose pendant une brève période n’était pas recommandée. Cependant, des méta-analyses et une autre revue suggèrent que des traitements plus longs (5&#8209;11 jours) par corticostéroïdes à faible dose pouvaient réduire la mortalité</span></span><i>, </i>en particulier chez les patients présentant un choc septique sensible aux vasoconstricteurs.</p>
+<p class=AmmCorpsTexteGras>Effets hématologiques et du système lymphatique</p>
+<p class=AmmCorpsTexte>L’acide acétylsalicylique et les anti-inflammatoires non stéroïdiens doivent être utilisés avec précaution en association avec des corticostéroïdes (voir rubrique 4.5). </p>
+<p class=AmmCorpsTexteGras>Effets sur le système immunitaire</p>
+<p class=AmmCorpsTexte>Des réactions allergiques peuvent se produire. De rares cas de réactions cutanées et de réactions anaphylactiques/anaphylactoïdes étant survenus chez des patients traités par une corticothérapie, une attention particulière sera portée avant toute administration, en particulier chez les sujets présentant un terrain atopique.</p>
+<p class=AmmCorpsTexteGras>Effets endocriniens</p>
+<p class=AmmCorpsTexte>Chez les patients sous corticothérapie soumis à un stress inhabituel, l'augmentation de la dose de corticostéroïdes à action rapide avant, pendant et après la situation stressante est indiquée.</p>
+<p class=AmmCorpsTexte>L’administration prolongée de doses pharmacologiques de corticostéroïdes peut entraîner une inhibition hypothalamo-hypophyso-surrénalienne (insuffisance corticosurrénale secondaire). L’importance et la durée de l’insuffisance corticosurrénale produite varient d’un patient à l’autre et dépendent de la dose, de la fréquence, de l’heure d’administration et de la durée du traitement par glucocorticoïdes. Cet effet peut être minimisé en administrant le traitement tous les deux jours.</p>
+<p class=AmmCorpsTexte>De plus, l’arrêt brutal des corticostéroïdes peut entraîner une insuffisance surrénale aiguë pouvant être fatale. </p>
+<p class=AmmCorpsTexte>L’insuffisance corticosurrénale secondaire d'origine médicamenteuse peut ainsi être minimisée par la réduction progressive de la posologie. Ce type d'insuffisance relative peut persister pendant des mois après l'arrêt du traitement. Par conséquent, dans toute situation de stress survenant pendant cette période, l'hormonothérapie devrait être réintroduite. </p>
+<p class=AmmCorpsTexte>Un « syndrome de sevrage » lié aux stéroïdes, visiblement sans rapport avec l’insuffisance corticosurrénale, peut également se produire après l'interruption brutale de glucocorticoïdes. Ce syndrome comprend des symptômes tels que anorexie, nausées, vomissements, léthargie, céphalées, fièvre, douleurs articulaires, desquamation, myalgie, perte de poids, et/ou une hypotension. Il semblerait que ces effets soient dus au brusque changement de la concentration de glucocorticoïdes plutôt qu’à de faibles niveaux de corticostéroïdes.</p>
+<p class=AmmCorpsTexte>Sachant que les glucocorticoïdes peuvent entraîner ou aggraver un syndrome de Cushing, l’utilisation de glucocorticoïdes doit être évitée chez les patients atteints de la maladie de Cushing.</p>
+<p class=AmmCorpsTexte>Les corticostéroïdes ont un effet majoré chez les patients atteints d'hypothyroïdie.</p>
+<p class=AmmCorpsTexte>La paralysie périodique thyrotoxique (PPT) peut survenir chez les patients présentant une hyperthyroïdie et une hypokaliémie induite par la méthylprednisolone.</p>
+<p class=AmmCorpsTexte>Une PPT doit être suspectée chez les patients traités par méthylprednisolone présentant des signes ou symptômes de faiblesse musculaire, en particulier chez les patients présentant une hyperthyroïdie.</p>
+<p class=AmmCorpsTexte>En cas de suspicion de PPT, le taux sanguin de potassium doit être immédiatement contrôlé et doit faire l’objet d’une prise en charge adéquate afin d’assurer un retour à la normale de la kaliémie.</p>
+<p class=AmmCorpsTexteGras>Métabolisme et nutrition</p>
+<p class=AmmCorpsTexte>Les corticoïdes, dont la méthylprednisolone, peuvent augmenter la glycémie, aggraver un diabète préexistant ou prédisposer à un diabète les patients qui les reçoivent à long terme. </p>
+<p class=AmmCorpsTexte>Lorsque la corticothérapie est indispensable, le diabète n’est pas une contre-indication mais le traitement peut entraîner son déséquilibre. Il convient de réévaluer sa prise en charge.</p>
+<p class=AmmCorpsTexteGras>Effets psychiatriques</p>
+<p class=AmmCorpsTexte>Des troubles psychiques peuvent apparaître lors de l’utilisation des corticostéroïdes, tels que l’euphorie, l’insomnie, les sautes d'humeur, les changements de personnalité, dépression sévère et aussi les manifestations psychotiques franches. De plus, l'instabilité émotionnelle existante ou les tendances psychotiques peuvent être aggravés par les corticostéroïdes.<b> </b></p>
+<p class=AmmCorpsTexte>Des réactions indésirables psychiatriques potentiellement sévères peuvent survenir avec les stéroïdes systémiques. Les symptômes apparaissent généralement dans les quelques jours ou semaines suivant le début du traitement. Bien qu’un traitement spécifique puisse dans certains cas être nécessaire, la plupart de ces réactions régressent après réduction de la dose ou arrêt du traitement. </p>
+<p class=AmmCorpsTexte>Des effets psychologiques ont été rapportés lors de l’arrêt des corticostéroïdes ; leur fréquence est inconnue. Les patients/soignants doivent demander un avis médical en cas d’apparition de symptômes psychologiques chez le patient, en particulier en cas de suspicion de dépression ou d’idées suicidaires. Les patients/soignants doivent être alertés de la possible survenue de troubles psychiatriques pouvant survenir pendant ou immédiatement après diminution de la dose ou l’arrêt des stéroïdes systémiques. </p>
+<p class=AmmCorpsTexteGras>Effets sur le système nerveux</p>
+<p class=AmmCorpsTexte>Les corticostéroïdes doivent être utilisés avec précaution chez les patients présentant des troubles convulsifs. <sup></sup></p>
+<p class=AmmCorpsTexte>Les corticostéroïdes doivent être utilisés avec précaution chez les patients souffrant de myasthénie grave (voir aussi le paragraphe sur la myopathie dans la rubrique « Effets musculo-squelettiques »). </p>
+<p class=AmmCorpsTexte>Des cas de lipomatose épidurale ont été signalés chez des patients sous corticostéroïdes, <span lang=X-NONE>généralement à long terme et avec des doses élevées.</span></p>
+<p class=AmmCorpsTexteGras>Effets oculaires</p>
+<p class=AmmCorpsTexte>Les corticostéroïdes doivent être utilisés avec prudence chez les patients souffrant d'herpès oculaire en raison de la possible perforation cornéenne. </p>
+<p class=AmmCorpsTexte>La corticothérapie a été associée à une choriorétinopathie séreuse centrale susceptible d’entraîner un décollement de la rétine.</p>
+<p class=AmmCorpsTexte>L’utilisation prolongée des corticoïdes peut causer des cataractes sous-capsulaires postérieures et des cataractes nucléaires (en particulier chez l’enfant), une exophtalmie ou une augmentation de la pression intra-oculaire, pouvant entraîner un glaucome avec une possible atteinte des nerfs optiques. La survenue d’infections oculaires fongiques et virales secondaires peut aussi être majorée chez les patients sous glucocorticoïdes.</p>
+<p class=AmmCorpsTexteGras>Troubles visuels</p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Des troubles visuels peuvent apparaître lors d’une corticothérapie par voie systémique ou locale. En cas de vision floue ou d’apparition de tout autre symptôme visuel apparaissant au cours d’une corticothérapie, un examen ophtalmologique est requis à la recherche notamment d’une cataracte, d’un glaucome, ou d’une lésion plus rare telle qu’une choriorétinopathie séreuse centrale, décrits avec l’administration de corticostéro&#970;des par voie systémique ou locale.</span></p>
+<p class=AmmCorpsTexte><b>Effets cardiaques</b></p>
+<p class=AmmCorpsTexte>Les effets indésirables des glucocorticoïdes sur le système cardiovasculaire, tels que la dyslipidémie et l’hypertension, peuvent prédisposer les patients traités, présentant des facteurs de risque cardiovasculaire, à d’autres effets cardiovasculaires en cas de traitements prolongés et d’utilisation de doses élevées. </p>
+<p class=AmmCorpsTexte>En conséquence, les corticostéroïdes doivent être utilisés avec précaution chez ces patients, une attention doit être accordée à la modification des risques et une surveillance cardiaque supplémentaire doit être prévue, si nécessaire.</p>
+<p class=AmmCorpsTexte><a name="_Ref249760891">En cas d'insuffisance cardiaque congestive, les corticostéroïdes systémiques doivent être utilisés avec précaution, et seulement si cela est strictement nécessaire.</a></p>
+<p class=AmmCorpsTexteGras>Effets vasculaires</p>
+<p class=AmmCorpsTexte><span class=hps><span style='color:#222222'>Des thromboses</span></span><span style='color:#222222'>, y compris <span class=hps>des cas de maladie thromboembolique veineuse,</span> <span class=hps>ont été</span> <span class=hps>rapportées avec</span> <span class=hps>les corticostéroïdes</span>. <span class=hps>En conséquence, les</span> <span class=hps>corticostéroïdes doivent être utilisés avec</span> <span class=hps>prudence chez les patients</span> <span class=hps>qui ont ou qui</span> <span class=hps>peuvent être</span> <span class=hps>prédisposés à</span> des troubles <span class=hps>thromboemboliques.</span></span></p>
+<p class=AmmCorpsTexte><a name="_Ref246928402">En cas d’hypertension, les corticostéroïdes doivent être utilisés avec précaution.</a></p>
+<p class=AmmCorpsTexte><b>Effets gastro-intestinaux</b></p>
+<p class=AmmCorpsTexte>De fortes doses de corticostéroïdes peuvent provoquer une pancréatite aiguë.</p>
+<p class=AmmCorpsTexte>Il n’y a pas de consensus sur la responsabilité des corticostéroïdes dans l’ulcère peptique observé pendant le traitement. Toutefois, un traitement par glucocorticoïdes peut masquer les symptômes de l’ulcère peptique de sorte qu’une perforation ou une hémorragie peut survenir sans douleur significative. </p>
+<p class=AmmCorpsTexte>La corticothérapie peut masquer une péritonite ou d'autres signes ou symptômes associés à des troubles gastro-intestinaux tels qu’une perforation, une obstruction ou une pancréatite.</p>
+<p class=AmmCorpsTexte>Le risque de développer des ulcères gastro-intestinaux augmente en cas d’association avec des anti-inflammatoires non stéroïdiens.</p>
+<p class=AmmCorpsTexte>En cas d’ulcère gastrique ou duodénal, la corticothérapie n’est pas contre-indiquée si un traitement anti-ulcéreux est associé.</p>
+<p class=AmmCorpsTexte>En cas d'antécédents ulcéreux, la corticothérapie peut être prescrite, avec une surveillance clinique et au besoin après fibroscopie.</p>
+<p class=AmmCorpsTexte>L’emploi de corticostéroïdes nécessite une surveillance particulièrement adaptée, chez les sujets présentant une colite ulcéreuse notamment en cas de risque de perforation, abcès ou autres infections pyogènes, diverticulites, anastomoses intestinales récentes, ulcère gastro-duodénal évolutif ou latent. </p>
+<p class=AmmCorpsTexteGras>Effets hépatobiliaires</p>
+<p class=AmmCorpsTexte>L’emploi de corticostéroïdes nécessite une surveillance particulièrement rapprochée en cas d’insuffisance hépatique.</p>
+<p class=AmmCorpsTexte>Des lésions hépatiques d'origine médicamenteuse incluant des hépatites aiguës ou l’augmentation des enzymes hépatiques peuvent être une conséquence de l'administration de méthylprednisolone par voie intraveineuse en traitement intermittent cyclique (en général à une dose initiale &#8805; 1 g/jour). De rares cas d'hépatotoxicité ont été rapportés. Le délai d'apparition peut être de plusieurs semaines ou plus. Dans la majorité des études de cas, la résolution des effets indésirables a été observée après arrêt du traitement. Une surveillance adéquate est par conséquent requise.</p>
+<p class=AmmCorpsTexteGras>Effets musculo-squelettiques</p>
+<p class=AmmCorpsTexte>Une myopathie aiguë a été rapportée lors de l’utilisation de doses élevées de corticostéroïdes, le plus souvent chez des patients présentant des troubles de la transmission neuromusculaire (par exemple myasthénie grave) ou chez des patients recevant un traitement concomitant par des anticholinergiques tels que les inhibiteurs neuromusculaires (par exemple pancuronium). Cette myopathie aiguë est généralisée, peut toucher les muscles oculaires et respiratoires et peut entraîner une quadriparésie. On peut observer une augmentation de la créatine kinase. L’amélioration clinique ou le rétablissement, après arrêt des corticostéroïdes peut nécessiter plusieurs semaines à plusieurs années. </p>
+<p class=AmmCorpsTexte>L'ostéoporose est un effet fréquent, mais rarement reconnu comme effet indésirable associé à une utilisation à long terme de fortes doses de glucocorticoïdes.</p>
+<p class=AmmCorpsTexte>Les corticoïdes oraux ou injectables peuvent favoriser l'apparition de tendinopathie, voire de rupture tendineuse (exceptionnelle). Ce risque est augmenté lors de la co-prescription avec des fluoroquinolones et chez les patients dialysés avec hyperparathyroïdisme secondaire ou ayant subi une transplantation rénale.</p>
+<p class=AmmCorpsTexteGras>Affections du rein et des voies urinaires</p>
+<p class=AmmCorpsTexte><span class=TableText9><span style='font-family:"Arial",sans-serif'>La prudence est requise chez les patients atteints de sclérodermie systémique, car une augmentation de l’incidence de la crise rénale sclérodermique a été observée avec les corticostéroïdes, y compris la méthylprednisolone. La pression sanguine et la fonction rénale (créatinine S) doivent dès lors être vérifiées régulièrement. En cas de suspicion de crise rénale, la pression sanguine doit être minutieusement contrôlée. </span></span></p>
+<p class=AmmCorpsTexte><span class=TableText9><span style='font-family:"Arial",sans-serif'>Les corticostéroïdes doivent être utilisés avec précaution chez les patients atteints d’insuffisance rénale.</span></span></p>
+<p class=AmmCorpsTexteGras>Investigations</p>
+<p class=AmmCorpsTexte>Des doses moyennes à fortes d'hydrocortisone ou de cortisone peuvent provoquer une élévation de la pression artérielle, une rétention hydrosodée et une excrétion accrue de potassium. </p>
+<p class=AmmCorpsTexte>Ces effets sont moins susceptibles de se produire avec les dérivés synthétiques, sauf s’ils sont utilisés à fortes doses. Un régime hyposodé et une supplémentation potassique peuvent être nécessaires. </p>
+<p class=AmmCorpsTexte>Tous les corticostéroïdes augmentent l’excrétion du calcium.</p>
+<p class=AmmCorpsTexteGras>Lésions, intoxications et complications liées aux procédures</p>
+<p class=AmmCorpsTexte>Les corticostéroïdes par voie orale ne sont pas indiqués dans le traitement des traumatismes crâniens, et ne doivent donc pas être utilisés dans ces cas. Une étude multicentrique, a montré une augmentation de la mortalité à deux semaines et à six mois après un traumatisme crânien chez les patients recevant de l'hémisuccinate de méthylprednisolone, comparé au groupe placebo. Une relation de causalité avec le traitement par l’hémisuccinate de méthylprednisolone n'a pas été établie.</p>
+<p class=AmmCorpsTexteGras>Utilisation chez les enfants</p>
+<p class=AmmCorpsTexte>La croissance et le développement de nourrissons et d’enfants sous corticothérapie prolongée doivent être attentivement surveillés.<sup> </sup>La croissance peut être stoppée chez les enfants sous glucocorticothérapie prolongée, à doses quotidiennes fractionnées. L’emploi d’un tel traitement doit être limité aux cas les plus sévères. </p>
+<p class=AmmCorpsTexte>Les nourrissons et enfants sous corticothérapie prolongée sont exposés à un risque particulier d’hypertension intracrânienne.<sup> </sup></p>
+<p class=AmmCorpsTexte>De fortes doses de corticostéroïdes peuvent provoquer une pancréatite chez l’enfant.</p>
+<p class=AmmCorpsTexteGras>Autres</p>
+<p class=AmmCorpsTexte>Les complications liées au traitement par glucocorticoïdes dépendent de la dose et la durée du traitement. De ce fait, une évaluation bénéfice/risque doit se faire au cas par cas, tant sur la dose et la durée du traitement que sur l’utilisation de la thérapie quotidienne ou intermittente.</p>
+<p class=AmmCorpsTexte>La dose la plus faible possible de corticostéroïdes devra être utilisée pour contrôler l’état du patient sous traitement et lorsque la diminution de la dose est possible, elle doit être progressive.</p>
+<p class=AmmCorpsTexte>L’acide acétylsalicylique (aspirine) et les anti-inflammatoires non stéroïdiens doivent être utilisés avec prudence en association avec des corticostéroïdes.</p>
+<p class=AmmCorpsTexte>L'utilisation concomitante d'anticoagulants oraux et de méthylprednisolone peut augmenter le risque de saignement. Des effets diminués des anticoagulants oraux ont également été rapportés. Pour les patients traités par antivitamines K, une surveillance plus fréquente du temps de prothrombine (INR) est recommandée, notamment lors de l'initiation du traitement ou des ajustements posologiques de méthylprednisolone (voir rubrique 4.5).</p>
+<p class=AmmCorpsTexte>Il est prévu que l’administration concomitante d’inhibiteurs de CYP3A, y compris des produits contenant du cobicistat, augmente le risque d’effets secondaires systémiques. L’association doit être évitée, sauf si les bénéfices sont supérieurs au risque accru d’effets secondaires systémiques des corticostéroïdes ; dans ce cas les patients doivent être surveillés en vue de détecter les éventuels effets secondaires systémiques des corticostéroïdes (voir rubrique 4.5).</p>
+<p class=AmmCorpsTexte>Une crise de phéochromocytome, pouvant être fatale, a été rapportée après administration des corticostéroïdes par voie systémique. Les corticostéroïdes ne doivent être administrés aux patients présentant un phéochromocytome suspecté ou avéré qu’après une évaluation appropriée du rapport bénéfice/risque.</p>
+<p class=AmmCorpsTexte>Au cours de l’expérience après commercialisation, des cas de syndrome de lyse tumorale (SLT) ont été rapportés chez des patients atteints de tumeurs malignes, notamment des tumeurs malignes hématologiques et des tumeurs solides, après l'utilisation de corticostéroïdes systémiques seuls ou en association avec d’autres agents chimiothérapeutiques. Les patients présentant un risque élevé de SLT, comme les patients dont les tumeurs présentent un taux de prolifération élevé, une charge tumorale élevée et une grande sensibilité aux agents cytotoxiques, doivent être étroitement surveillés et des précautions appropriées doivent être prises.</p>
+<p class=AmmCorpsTexte>L'attention des sportifs est attirée sur le fait que cette spécialité contient de la méthylprednisolone ; ce principe actif est inscrit sur la liste des substances dopantes.</p>
+<p class=AmmCorpsTexteGras>Excipients</p>
+<p class=AmmCorpsTexte><a name="_Hlk47632040">Ce médicament contient moins de 1 mmol (23 mg) de sodium par flacon de 1 mL, c’est-à-dire qu’il est essentiellement « sans sodium</a> ».</p>
+<p class=AmmAnnexeTitre3>Précautions d'emploi</p>
+<p class=AmmCorpsTexte>Un traitement par voie orale sera institué en relais dès que possible.</p>
+<p class=AmmCorpsTexte>Des thromboses, y compris des thromboembolies veineuses, ont été rapportées avec la prise de corticostéroïdes. En conséquence, les corticostéroïdes doivent être utilisés avec précaution chez les patients qui présentent des troubles thromboemboliques ou qui y sont prédisposés. </p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278928"></a><a name="_Toc142278926"></a><a name="_Toc142278925"></a><a name="_Toc142278921">Les risques d'interactions des glucocorticoïdes avec d'autres médicaments sont exceptionnels par voie injectable locale dans les circonstances usuelles d'emploi. Ces risques seraient à considérer en cas d'injections multiples (plusieurs localisations) ou répétées à court terme.</a></p>
+<p class=AmmAnnexeTitre3>HYPOKALIÉMIANTS</p>
+<p class=AmmCorpsTexte>L'hypokaliémie est un facteur favorisant l'apparition de troubles du rythme cardiaque (torsades de pointes, notamment) et augmentant la toxicité de certains médicaments, par exemple la digoxine. De ce fait, les médicaments qui peuvent entraîner une hypokaliémie sont impliqués dans un grand nombre d'interactions. Il s'agit des diurétiques hypokaliémiants, seuls ou associés, des laxatifs stimulants, des glucocorticoïdes, du tétracosactide et de l'amphotéricine B (voie IV).</p>
+<p class=AmmAnnexeTitre3>METABOLISME PAR CYP3A4</p>
+<p class=AmmCorpsTexte>La méthylprednisolone est un substrat des enzymes du cytochrome P450 (CYP) et est principalement métabolisée par l’enzyme CYP3A4. CYP3A4 est l’enzyme dominante de la sous-famille la plus abondante du CYP dans le foie des sujets adultes. Elle catalyse la 6&#946;-hydroxylation des stéroïdes, l’étape essentielle du métabolisme de phase I des corticoïdes endogènes ou de synthèse. </p>
+<p class=AmmCorpsTexte>De nombreux autres composés sont également des substrats de CYP3A4, dont certains (ainsi que d’autres médicaments) modifient le métabolisme des glucocorticoïdes par induction ou inhibition de cette enzyme.</p>
+<p class=AmmCorpsTexte><b>Inhibiteurs de CYP3A4 : </b>[<span style='letter-spacing:-.15pt'>A</span>ntibiotiques (isoniazide), antiémétiques (aprépitant, fosaprépitant), antifongiques (itraconazole, kétoconazole), antiviraux (inhibiteurs de la protéase du VIH : indinavir, ritonavir), agents de potentialisation pharmacocinétique (cobicistat) utilisés dans le traitement du VIH, antagonistes calciques (diltiazem), contraceptifs oraux (éthinylestradiol, northindrone), jus de pamplemousse, immunosuppresseurs (ciclosporine), antibiotiques macrolides (clarithromycine, érythromycine, troléandomycine)]</p>
+<p class=AmmCorpsTexte>Les médicaments qui inhibent l’activité de CYP3A4 diminuent généralement la clairance hépatique et augmentent la concentration plasmatique des médicaments substrats de cette enzyme telle la méthylprednisolone. En cas de traitement concomitant avec un inhibiteur de CYP3A4, il est nécessaire d'adapter la dose de méthylprednisolone afin d’éviter des manifestations de toxicité des corticoïdes. </p>
+<p class=AmmCorpsTexte><b>Inducteurs de CYP3A4 </b>: [Antibiotiques, antituberculeux (rifampicine), anticonvulsivants (carbamazépine, phénobarbital, et phénytoïne)] </p>
+<p class=AmmCorpsTexte>Les médicaments qui induisent l’activité de CYP3A4 augmentent généralement la clairance hépatique et diminuent la concentration plasmatique des médicaments substrats de cette enzyme. En cas d’administration concomitante, une augmentation de la dose de méthylprednisolone peut être nécessaire pour l’obtention du résultat souhaité.</p>
+<p class=AmmCorpsTexte><b>Substrats de CYP3A4 : </b>[Anticonvulsivants (carbamazépine), antiémétiques (aprépitant, fosaprépitant),<span style='font-size:11.0pt;font-family:"Arial Narrow",sans-serif'> </span>antifongiques (itraconazole, kétoconazole), antiviraux (inhibiteurs de la protéase du VIH : indinavir, ritonavir), antagonistes calciques (diltiazem), contraceptifs oraux (éthinylestradiol, noréthindrone), immunosuppresseurs (ciclosporine, cyclophosphamide, tacrolimus),<span style='font-size:11.0pt; font-family:"Arial Narrow",sans-serif'> </span>antibiotiques macrolides (clarithromycine, érythromycine)]. </p>
+<p class=AmmCorpsTexte>En présence d’un autre substrat de CYP3A4, la clairance hépatique de la méthylprednisolone peut être altérée, ce qui nécessite une adaptation correspondante de la dose. Une administration conjointe pourrait accroître la probabilité d’effets indésirables associés à l’un ou l’autre médicament administré seul. </p>
+<p class=AmmAnnexeTitre3>Associations contre-indiquées</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278922">+ Vaccins vivants atténués </a><a name="_Hlk14076989">(vaccins contre la fièvre jaune, la tuberculose, le rotavirus, la rougeole, les oreillons, la rubéole, la varicelle, le zona, la grippe)</a></p>
+<p class=AmmCorpsTexte>Chez les patients recevant des posologies supérieures à 10 mg/j d’équivalent-prednisone (ou > 2 mg/kg/j chez l’enfant ou > 20 mg/j chez l’enfant de plus de 10 kg) pendant plus de deux semaines et pour les « bolus » de corticoïdes (à l'exception des voies inhalées et locales), et pendant les 3 mois suivant l’arrêt de la corticothérapie : risque de maladie vaccinale généralisée éventuellement mortelle.</p>
+<p class=AmmAnnexeTitre3>Associations déconseillées</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278923">+ Acide acétylsalicylique aux doses anti-inflammatoires </a>&#8805; 1 g par prise et /ou &#8805; 3 g par jour</p>
+<p class=AmmCorpsTexte>Majoration du risque hémorragique.</p>
+<p class=AmmCorpsTexte>Par ailleurs, la méthylprednisolone peut augmenter la clairance de l’acide acétylsalicylique administré à fortes doses ce qui peut provoquer une baisse des niveaux sériques de salicylate. L’arrêt du traitement par la méthylprednisolone peut entraîner une augmentation des concentrations sériques de salicylate et conduire à un risque accru de toxicité aux salicylates.</p>
+<p class=AmmCorpsTexteGras>+ Inhibiteurs puissants du CYP3A4</p>
+<p class=AmmCorpsTexte>En cas d’utilisation prolongée par voie orale ou inhalée : augmentation des concentrations plasmatiques du corticoïde par diminution de son métabolisme hépatique par l’inhibiteur, avec risque d’apparition d’un syndrome cushingoïde voire d’une insuffisance surrénalienne.</p>
+<p class=AmmCorpsTexte>Préférer un corticoïde non métabolisé.</p>
+<p class=AmmCorpsTexteGras>+ Mifamurtide </p>
+<p class=AmmCorpsTexte>Risque de moindre efficacité du mifamurtide.</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278924">Associations </a>faisant l'objet de précautions d’emploi</p>
+<p class=AmmCorpsTexteGras>+ Médicaments susceptibles de donner des torsades de pointe </p>
+<p class=AmmCorpsTexte>Risque majoré de troubles du rythme ventriculaire, notamment de torsades de pointe.</p>
+<p class=AmmCorpsTexte>Corriger toute hypokaliémie avant d’administrer le produit et réaliser une surveillance clinique, électrolytique et électrocardiographique.</p>
+<p class=AmmCorpsTexteGras>+ Anticoagulants oraux tels que acénocoumarol, apixaban, dabigatran, fluindione, phenindione, rivaroxaban, warfarine</p>
+<p class=AmmCorpsTexte>Glucocorticoïdes (voies générale et rectale) : impact éventuel de la corticothérapie sur le métabolisme de l’antivitamine K et sur celui des facteurs de la coagulation.</p>
+<p class=AmmCorpsTexte>Des cas de majoration et aussi de diminution de l’effet de l’anticoagulant ont été rapportés lorsqu’il est administré en concomitance avec les corticostéroïdes.</p>
+<p class=AmmCorpsTexte>Risque hémorragique propre à la corticothérapie (muqueuse digestive, fragilité vasculaire) à fortes doses ou en traitement prolongé supérieur à 10 jours.</p>
+<p class=AmmCorpsTexte>Lorsque l'association est justifiée, renforcer la surveillance : le cas échéant, avec les antivitamines K, contrôle biologique au 8<sup>ème</sup> jour, puis tous les 15 jours pendant la corticothérapie et après son arrêt.</p>
+<p class=AmmCorpsTexteGras><span lang=EN-US>+ Antivitamines K (acénocoumarol, fluindione, warfarine)</span></p>
+<p class=AmmCorpsTexte>Pour des doses de 0,5 à 1 g de méthylprednisolone administrées en bolus : augmentation de l'effet de l'antivitamine K et du risque hémorragique.</p>
+<p class=AmmCorpsTexte>Contrôle de l'INR 2 à 4 jours après le bolus de méthylprednisolone ou en présence de tous signes hémorragiques.</p>
+<p class=AmmCorpsTexteGras>+ Autres hypokaliémiants : diurétiques hypokaliémiants (seuls ou associés), laxatifs stimulants, amphotéricine B (voie IV))</p>
+<p class=AmmCorpsTexte>Risque majoré d'hypokaliémie.</p>
+<p class=AmmCorpsTexte>Surveillance de la kaliémie avec si besoin correction.</p>
+<p class=AmmCorpsTexteGras>+ Digitaliques (Digoxine)</p>
+<p class=AmmCorpsTexte>Hypokaliémie favorisant les effets toxiques des digitaliques.</p>
+<p class=AmmCorpsTexte>Corriger auparavant toute hypokaliémie et réaliser une surveillance clinique, électrolytique et électrocardiographique.</p>
+<p class=AmmCorpsTexteGras>+ Anticonvulsivants inducteurs enzymatiques (carbamazépine, phénobarbital, phénytoïne, primidone, fosphénytoine) </p>
+<p class=AmmCorpsTexte>Diminution des concentrations plasmatiques et de l'efficacité des corticoïdes par augmentation de leur métabolisme hépatique par l’inducteur : les conséquences sont particulièrement importantes chez les addisoniens traités par l’hydrocortisone et en cas de transplantation.</p>
+<p class=AmmCorpsTexte>Surveillance clinique et biologique ; adaptation de la posologie des corticoïdes pendant le traitement par l’inducteur et après son arrêt. </p>
+<p class=AmmCorpsTexteGras>+ Inducteurs enzymatiques </p>
+<p class=AmmCorpsTexte>Diminution des concentrations plasmatiques et de l'efficacité des corticoïdes par augmentation de leur métabolisme hépatique par l’inducteur : les conséquences sont particulièrement importantes chez les addisoniens traités par l’hydrocortisone et en cas de transplantation.</p>
+<p class=AmmCorpsTexte>Surveillance clinique et biologique ; adaptation de la posologie des corticoïdes pendant le traitement par l’inducteur et après son arrêt. </p>
+<p class=AmmCorpsTexteGras>+ Antidiabétiques</p>
+<p class=AmmCorpsTexte>Elévation de la glycémie avec parfois cétose (diminution de la tolérance aux glucides par les corticoïdes).</p>
+<p class=AmmCorpsTexte>Prévenir le patient et renforcer l'autosurveillance sanguine et urinaire, surtout en début de traitement.</p>
+<p class=AmmCorpsTexte>Adapter éventuellement la posologie de l'antidiabétique pendant le traitement par les corticoïdes et après son arrêt.</p>
+<p class=AmmCorpsTexte><b>+ Isoniazide</b> (décrit pour la prednisolone)</p>
+<p class=AmmCorpsTexte>Diminution des concentrations plasmatiques de l'isoniazide. Mécanisme invoqué : augmentation du métabolisme hépatique de l'isoniazide, potentiellement par acétylation, diminution de celui des glucocorticoïdes et effet potentiel sur la clairance de l’isoniazide.</p>
+<p class=AmmCorpsTexte>Surveillance clinique et biologique.</p>
+<p class=AmmCorpsTexte><b>+ Topiques gastro-intestinaux, antiacides et adsorbants </b>(décrit pour la prednisone, la dexaméthasone)</p>
+<p class=AmmCorpsTexte>Diminution de l’absorption digestive des glucocorticoïdes.</p>
+<p class=AmmCorpsTexte>Prendre les topiques gastro-intestinaux et antiacides à distance des glucocorticoïdes (plus de 2 heures si possible).</p>
+<p class=AmmCorpsTexteGras>+ Cobimétinib </p>
+<p class=AmmCorpsTexte>Augmentation du risque hémorragique. </p>
+<p class=AmmCorpsTexte>Surveillance clinique.</p>
+<p class=AmmAnnexeTitre3>Associations à prendre en compte</p>
+<p class=AmmCorpsTexte><b>+ Acide acétylsalicylique aux doses antalgiques ou antipyrétiques </b><b>&#8805; 500 mg par prise et /ou </b><b>< 3 g par jour</b></p>
+<p class=AmmCorpsTexte>Majoration du risque hémorragique.</p>
+<p class=AmmCorpsTexteGras>+ Anti-inflammatoires non stéroïdiens</p>
+<p class=AmmCorpsTexte>Augmentation du risque d’ulcération et d’hémorragie gastro-intestinale.</p>
+<p class=AmmCorpsTexte><b>+ Antihypertenseurs</b></p>
+<p class=AmmCorpsTexte>Diminution de l'effet antihypertenseur (rétention hydrosodée des corticoïdes).</p>
+<p class=AmmCorpsTexteGras>+ Fluoroquinolones</p>
+<p class=AmmCorpsTexte>Possible majoration du risque de tendinopathie, voire de rupture tendineuse (exceptionnelle), particulièrement chez les patients recevant une corticothérapie prolongée.</p>
+<p class=AmmCorpsTexteGras>+ Interféron alpha</p>
+<p class=AmmCorpsTexte>Risque d'inhibition de l'action de l'interféron.</p>
+<p class=AmmCorpsTexteGras>+ Curares non dépolarisants </p>
+<p class=AmmCorpsTexte>Avec les glucocorticoïdes par voie IV : risque de myopathie sévère, réversible après un délai éventuellement long (plusieurs mois) (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexte>L’antagonisme des effets bloquants neuromusculaires du pancuronium et du vécuronium a été signalé chez les patients sous corticostéroïdes. Cette interaction peut être attendue avec tous les inhibiteurs neuromusculaires compétitifs.</p>
+<p class=AmmCorpsTexte><b><span style='color:black'>+ Inhibiteurs de l’aromatase (aminoglutéthimide)</span></b></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;page-break-after:avoid'>L’inhibition de la fonction surrénalienne induite par l’aminoglutéthimide peut exacerber les changements endocriniens causés par un traitement prolongé par glucocorticoïdes.</p>
+<p class=AmmCorpsTexteGras>+ Ciclosporine </p>
+<p class=AmmCorpsTexte>Avec la méthylprednisolone administrée par voie IV : augmentation possible des concentrations sanguines de ciclosporine et de la créatininémie. </p>
+<p class=AmmCorpsTexte>Mécanisme invoqué : diminution de l'élimination hépatique de la ciclosporine.</p>
+<p class=AmmCorpsTexte>Il est donc possible que les effets indésirables liés à ces deux médicaments administrés séparément surviennent plus probablement lors d’une administration simultanée.</p>
+<p class=AmmCorpsTexte>Des convulsions ont été rapportées suite à l’administration concomitante de méthylprednisolone et de ciclosporine.</p>
+<p class=AmmCorpsTexteGras>+ Anticholinestérasiques</p>
+<p class=AmmCorpsTexte>Les stéroïdes peuvent réduire les effets des anticholinestérasiques sur la myasthénie grave.</p>
+<p class=AmmCorpsTexteGras>+ Antiviraux (inhibiteurs de la protéase du VIH)</p>
+<p class=AmmCorpsTexte>Les corticostéroïdes peuvent avoir un effet inducteur sur le métabolisme des inhibiteurs de la protéase du VIH et réduire ainsi leur concentration plasmatique.</p>
+<p class=AmmCorpsTexteGras>+ Héparines </p>
+<p class=AmmCorpsTexte>Augmentation du risque hémorragique.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmCorpsTexte>Le risque des corticoïdes par voie systémique est à considérer en cas d’injections multiples (plusieurs localisations) ou répétées à court terme.</p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte><a name="_Toc142278927">Chez l'animal, l'expérimentation met en évidence un effet tératogène variable selon les espèces. Cependant, les corticostéroïdes ne semblent pas causer d’anomalies congénitales lorsqu'ils sont administrés aux femmes enceintes.</a></p>
+<p class=AmmCorpsTexte>Etant donné qu’aucune étude de reproduction humaine adéquate n’a été réalisée avec l'acétate de méthylprednisolone, ce médicament ne sera utilisé pendant la grossesse qu'après une évaluation approfondie du rapport bénéfice/risque pour la mère et le fœtus.</p>
+<p class=AmmCorpsTexte>Dans l'espèce humaine, il existe un passage transplacentaire. Cependant, les études épidémiologiques n'ont décelé aucun risque malformatif lié à la prise de corticoïdes lors du premier trimestre. Une étude rétrospective a observé une incidence accrue de faibles poids à la naissance chez des nourrissons nés de mères traitées par corticostéroïdes. Chez l'Homme, le risque de faible poids de naissance semble être dose-dépendant et peut être minimisé par l'administration de doses plus faibles de corticostéroïdes.</p>
+<p class=AmmCorpsTexte>Les enfants nés de mères ayant reçu des doses importantes de corticostéroïdes pendant la grossesse doivent être soigneusement observés et évalués pour des signes d’insuffisance surrénale, bien que l'insuffisance surrénale néonatale semble être rare chez les nourrissons qui ont été exposés <i>in utero</i> aux corticostéroïdes. </p>
+<p class=AmmCorpsTexte>Des cas de cataractes ont été observés chez des nourrissons nés de mères sous corticothérapie prolongée pendant la grossesse.</p>
+<p class=AmmCorpsTexte>Il n'y a aucun effet connu des corticostéroïdes sur le travail et l’accouchement.</p>
+<p class=AmmAnnexeTitre3>Allaitement</p>
+<p class=AmmCorpsTexte>Les corticostéroïdes passent dans le lait maternel et peuvent inhiber la croissance et perturber la production endogène de glucocorticoïdes chez le nourrisson allaité. </p>
+<p class=AmmCorpsTexte>Ce médicament ne devra être utilisé pendant l'allaitement qu'après une évaluation approfondie du rapport bénéfice/risque pour la mère et le nourrisson.</p>
+<p class=AmmCorpsTexte>En cas de traitement à doses importantes et de façon chronique, l'allaitement est déconseillé.</p>
+<p class=AmmAnnexeTitre3>Fertilité</p>
+<p class=AmmCorpsTexte>Une altération de la fertilité a été mise en évidence lors de l’administration de corticostéroïdes dans les études menées chez l’animal (voir rubrique 5.3). </p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929">Les effets des corticostéroïdes sur l’aptitude à conduire ou à utiliser des machines n’ont pas été systématiquement évalués. Des effets indésirables tels que des étourdissements, vertiges, troubles visuels et fatigue sont possibles après un traitement aux corticostéroïdes. Si ces symptômes apparaissent, les patients ne doivent pas conduire ni utiliser des machines.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmCorpsTexte>Les réactions indésirables suivantes ont été signalées lors de l’administration contre-indiquée par voie intrathécale/péridurale : arachnoïdite, trouble gastro-intestinal fonctionnel/dysfonctionnement de la vessie, maux de tête, méningite, paraparésie/paraplégie, crise convulsive, troubles sensoriels. </p>
+<div align=center>
+<div class='fr-table--lg fr-table'><table>
+<thead>
+<tr style='height:1.0cm'>
+<td width=225 style='width:168.45pt;border:solid windowtext 1.0pt;
+background:#BFBFBF;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Classes de systèmes d’organes</span></b></p>
+</td>
+<td width=463 style='width:347.25pt;border:solid windowtext 1.0pt;
+border-left:none;background:#BFBFBF;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Effets indésirables</span></b></p>
+</td>
+</tr>
+</thead>
+<tr style='height:1.0cm'>
+<td width=225 style='width:168.45pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Infections et infestations</span></b></p>
+</td>
+<td width=463 style='width:347.25pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'>Infection opportuniste, infection, péritonite</span><sup><span style='font-size:12.0pt'>#</span></sup><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>, infection au site d’injection</span></p>
+</td>
+</tr>
+<tr style='height:1.0cm'>
+<td width=225 style='width:168.45pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Affections hématologiques et du système lymphatique</span></b></p>
+</td>
+<td width=463 style='width:347.25pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'>Leucocytose</span></p>
+</td>
+</tr>
+<tr style='height:38.65pt'>
+<td width=225 style='width:168.45pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:38.65pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Affections du système immunitaire</span></b></p>
+</td>
+<td width=463 style='width:347.25pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:38.65pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'>Hypersensibilité, réactions anaphylactiques, réaction anaphylactoïde</span></p>
+</td>
+</tr>
+<tr style='height:30.75pt'>
+<td width=225 style='width:168.45pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:30.75pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Affections endocriniennes</span></b></p>
+</td>
+<td width=463 style='width:347.25pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:30.75pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'>Cushingoïde, inhibition de l'axe hypothalamo-pituito-surrénal, syndrome de sevrage des stéroïdes </span></p>
+</td>
+</tr>
+<tr style='height:73.8pt'>
+<td width=225 style='width:168.45pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:73.8pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Troubles du métabolisme et de la nutrition</span></b></p>
+</td>
+<td width=463 style='width:347.25pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:73.8pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'>Acidose métabolique, rétention hydrosodée, alcalose hypokaliémique, dyslipidémie, troubles de la tolérance au glucose, augmentation des besoins en insuline (ou en hypoglycémiants oraux chez les diabétiques), lipomatose, augmentation de l'appétit (pouvant entraîner une prise de poids) </span></p>
+</td>
+</tr>
+<tr style='height:84.1pt'>
+<td width=225 style='width:168.45pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:84.1pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Affections psychiatriques</span></b></p>
+</td>
+<td width=463 style='width:347.25pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:84.1pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'>Troubles affectifs (incluant humeur dépressive, humeur euphorique, labilité, dépendance aux drogues, idées suicidaires), troubles psychotiques (incluant manie, illusion, hallucination et schizophrénie), troubles mentaux, changement de personnalité, état confusionnel, anxiété, sautes d'humeur, comportement anormal, insomnie, irritabilité</span></p>
+</td>
+</tr>
+<tr style='height:49.85pt'>
+<td width=225 style='width:168.45pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:49.85pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Affections du système nerveux</span></b></p>
+</td>
+<td width=463 style='width:347.25pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:49.85pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'>Lipomatose épidurale, augmentation de la pression intracrânienne (avec œdème papillaire [hypertension intracrânienne bénigne]), crise convulsive, amnésie, troubles cognitifs, étourdissements, maux de tête</span></p>
+</td>
+</tr>
+<tr style='height:22.7pt'>
+<td width=225 style='width:168.45pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Affections oculaires</span></b></p>
+</td>
+<td width=463 style='width:347.25pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'>Choriorétinopathie, cécité, cataracte, glaucome, exophtalmie, </span><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:#222222'>vision floue (voir rubrique 4.4)</span></p>
+</td>
+</tr>
+<tr style='height:1.0cm'>
+<td width=225 style='width:168.45pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Affections de l'oreille et du labyrinthe</span></b></p>
+</td>
+<td width=463 style='width:347.25pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'>Vertige</span></p>
+</td>
+</tr>
+<tr style='height:26.5pt'>
+<td width=225 style='width:168.45pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:26.5pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Affections cardiaques</span></b></p>
+</td>
+<td width=463 style='width:347.25pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:26.5pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'>Insuffisance cardiaque congestive (chez les patients à risque)</span></p>
+</td>
+</tr>
+<tr style='height:1.0cm'>
+<td width=225 style='width:168.45pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Affections vasculaires</span></b></p>
+</td>
+<td width=463 style='width:347.25pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'>Thrombose, hypertension, hypotension, bouffées congestives</span></p>
+</td>
+</tr>
+<tr style='height:31.95pt'>
+<td width=225 style='width:168.45pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:31.95pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Affections respiratoires, thoraciques et médiastinales</span></b></p>
+</td>
+<td width=463 style='width:347.25pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:31.95pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'>Embolie pulmonaire, hoquets</span></p>
+</td>
+</tr>
+<tr style='height:50.65pt'>
+<td width=225 style='width:168.45pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:50.65pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Affections gastro-intestinales</span></b></p>
+</td>
+<td width=463 style='width:347.25pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:50.65pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'>Ulcère gastroduodénal (éventuellement avec perforation et hémorragie), perforation intestinale, hémorragie digestive, pancréatite, œsophagite ulcéreuse, œsophagite, distension abdominale, douleur abdominale, diarrhée, dyspepsie, nausées</span></p>
+</td>
+</tr>
+<tr style='height:48.1pt'>
+<td width=225 style='width:168.45pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:48.1pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Affections de la peau et du tissu sous-cutané</span></b></p>
+</td>
+<td width=463 style='width:347.25pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:48.1pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'>Œdème de Quincke, hirsutisme, pétéchies, ecchymoses, atrophie cutanée érythème, hyperhidrose, vergetures, rash, prurit, urticaire, acné, hyperpigmentation cutanée, hypopigmentation cutanée, panniculite (fréquence indéterminée)<sup>&#945;</sup></span></p>
+</td>
+</tr>
+<tr style='height:63.8pt'>
+<td width=225 style='width:168.45pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:63.8pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Affections musculo-squelettiques et systémiques</span></b></p>
+</td>
+<td width=463 style='width:347.25pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:63.8pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'>Faiblesse musculaire, myalgie, myopathie, atrophie musculaire, ostéoporose, ostéonécrose, fracture pathologique, arthropathie neuropathique, arthralgie, retard de croissance, poussées douloureuses post-injection (suite à des injections intra-articulaires, périarticulaires et dans la gaine tendineuse) *</span></p>
+</td>
+</tr>
+<tr style='height:27.65pt'>
+<td width=225 style='width:168.45pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:27.65pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Affections des organes de reproduction et du sein</span></b></p>
+</td>
+<td width=463 style='width:347.25pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:27.65pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'>Irrégularités menstruelles</span></p>
+</td>
+</tr>
+<tr style='height:28.1pt'>
+<td width=225 style='width:168.45pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:28.1pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Troubles généraux et anomalies au site d'administration</span></b></p>
+</td>
+<td width=463 style='width:347.25pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:28.1pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'>Abcès stérile, retard de cicatrisation, œdème périphérique, fatigue, malaise, réaction au site d’injection </span></p>
+</td>
+</tr>
+<tr style='height:78.05pt'>
+<td width=225 style='width:168.45pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:78.05pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Investigations</span></b></p>
+</td>
+<td width=463 style='width:347.25pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:78.05pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'>Augmentation de la pression intraoculaire, diminution de la tolérance glucidique, diminution du potassium sanguin, augmentation de la calciurie, augmentation de l’alanine aminotransférase, augmentation de l’aspartate aminotransférase, augmentation des phosphatases alcalines dans le sang, augmentation de l'uricémie, suppression des réactions aux tests cutanés*</span></p>
+</td>
+</tr>
+<tr style='height:42.65pt'>
+<td width=225 style='width:168.45pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:42.65pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Lésions, intoxications et complications liées aux procédures</span></b></p>
+</td>
+<td width=463 style='width:347.25pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:42.65pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'>Fracture vertébrale par compression, rupture tendineuse </span></p>
+</td>
+</tr>
+</table></div>
+</div>
+<p class=AmmCorpsTexte> De rares cas de cécité associés à la thérapie intralésionnelle autour du visage et de la tête.</p>
+<p class=AmmCorpsTexte>* N’est pas un terme MedDRA.</p>
+<p class=AmmCorpsTexte># La péritonite peut être le principal signe ou symptôme d'un trouble gastro-intestinal tel qu’une perforation, une obstruction ou une pancréatite (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexte><sup>&#945;</sup> Quelques cas de panniculite ont été rapportés après une réduction de dose ou l'arrêt du traitement, en particulier après un traitement prolongé à forte dose. La panniculite est plus fréquente chez les patients pédiatriques que chez les adultes, et la plupart des cas guérissent spontanément.</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<u><span style='color:blue'> https://signalement.social-sante.gouv.fr/</span></u>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278931">Il n’y a pas de syndrome clinique de surdosage aigu par la méthylprednisolone. Les cas rapportés de toxicité aiguë et/ou de décès par surdosage de corticostéroïdes sont rares. En cas de surdosage, aucun antidote spécifique n’est disponible ; le traitement est symptomatique et de soutien. La méthylprednisolone est dialysable.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : CORTICOIDES A USAGE SYSTEMIQUE NON ASSOCIES, code ATC : H02AB04</a><span style='font-size: 8.0pt'>.</span></p>
+<p class=AmmCorpsTexte>Les glucocorticoïdes physiologiques (cortisone et hydrocortisone) sont des hormones métaboliques essentielles. Les corticoïdes synthétiques, incluant la dexaméthasone sont utilisés principalement pour leur effet anti-inflammatoire. À forte dose, ils diminuent la réponse immunitaire. Leur effet métabolique et de rétention sodée est moindre que celui de l'hydrocortisone.</p>
+<p class=AmmCorpsTexte>La méthylprednisolone est un puissant anti-inflammatoire stéroïdien. Sa puissance anti-inflammatoire est supérieure à celle de la prednisolone et elle entraîne moins de rétention hydrosodée que cette dernière. </p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278934">Absorption</a></p>
+<p class=AmmCorpsTexte>Une étude interne sur huit volontaires a établi la pharmacocinétique d’une dose unique intramusculaire de 40 mg de DEPO-MEDROL. La moyenne des concentrations plasmatiques individuelles maximales a été de 14,8 ± 8,6 ng/mL, la moyenne des durées individuelles au pic de concentration a été de 7,25 ± 1,04 heures, et la moyenne de l’aire sous la courbe (ASC) a été de 1 354,2 ± 424,1 ng/mL x h (jour 1-21).</p>
+<p class=AmmAnnexeTitre3>Distribution</p>
+<p class=AmmCorpsTexte>La méthylprednisolone est largement distribuée dans les tissus, traverse la barrière hémato-encéphalique, et est secrétée dans le lait maternel. Son volume apparent de distribution est d’environ 1,4 l/kg. La liaison protéinique de la méthylprednisolone chez l’Homme est d’environ 77 %.</p>
+<p class=AmmAnnexeTitre3>Biotransformation</p>
+<p class=AmmCorpsTexte>Chez l’Homme, la méthylprednisolone est métabolisée dans le foie en métabolites inactifs dont les principaux sont 20&#945;-hydroxyméthylprednisolone et 20&#946;-hydroxyméthylprednisolone. La métabolisation dans le foie intervient principalement via le CYP3A4 (voir rubrique 4.5). </p>
+<p class=AmmCorpsTexte>La méthylprednisolone, comme de nombreux substrats du CYP3A4, peut aussi être un substrat pour la glycoprotéine P protéique transporteur ABC (<i>ATP-binding cassette</i>), influençant la distribution tissulaire et les interactions avec d’autres médicaments. </p>
+<p class=AmmAnnexeTitre3>Élimination</p>
+<p class=AmmAnnexeTitre3><span style='font-weight:normal;text-decoration:none'>La demi-vie moyenne d’élimination </span><span lang=X-NONE style='font-weight: normal;text-decoration:none'>de</span><span style='font-weight:normal; text-decoration:none'> l</span><span lang=X-NONE style='font-weight:normal; text-decoration:none'>a</span><span style='font-weight:normal;text-decoration: none'> méthylprednisolone </span><span lang=X-NONE style='font-weight:normal; text-decoration:none'>est</span><span style='font-weight:normal;text-decoration: none'> de 1,8 à 5,2 heures. Sa clairance totale est d’environ 5 à 6 mL/min/kg.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278935">Sur la base d’études conventionnelles de pharmacologie de sécurité, la toxicité à doses répétées n’a révélé aucun risque attendu. Les toxicités observées dans les études de doses répétées sont celles attendues lors d’une exposition continue à des stéroïdes surrénaux exogènes.</a></p>
+<p class=AmmAnnexeTitre3>Potentiel carcinogène  </p>
+<p class=AmmCorpsTexte>La cancérogénicité de la méthylprednisolone n'a pas été évaluée convenablement à travers des études chez les rongeurs. Des résultats variables ont été obtenus avec d'autres glucocorticoïdes testés pour leur potentiel carcinogène chez les souris et les rats. Cependant, les données publiées indiquent que plusieurs glucocorticoïdes apparentés, dont le budésonide, la prednisolone et l'acétonide de triamcinolone peuvent augmenter l'incidence des adénomes et des carcinomes hépatocellulaires après administration orale dans l'eau potable des rats mâles. Ces effets tumorigènes ont été observés à des doses qui étaient plus faibles que les doses cliniques habituelles sur une base mg/m<sup>2</sup>.</p>
+<p class=AmmAnnexeTitre3>Potentiel mutagène  </p>
+<p class=AmmCorpsTexte><span style='color:black'>La génotoxicité de la méthylprednisolone n'a pas été évaluée convenablement. Cependant, le sulfonate de méthylprednisolone, qui possède une structure similaire à la méthylprednisolone, n'a pas été mutagène avec ou sans activation métabolique chez <i>Salmonella Typhimurium</i> à des doses de 250 à 2 000 µg / plaque, ou via le test de mutation génique sur des cellules de mammifères utilisant des cellules ovariennes de hamster chinois à des doses de 2 000 à 10 000 µg / mL. Le suleptanate de méthylprednisolone n'a pas induit la synthèse d'ADN non programmée dans les hépatocytes primaires de rat à des doses de 5 à 1 000 µg / mL. En outre, une revue des données publiées indique que la prednisolone farnésylée, qui possède une structure similaire à la méthylprednisolone, n'a pas été mutagène avec ou sans activation métabolique chez des souches <i>Salmonella Typhimurium et d'Escherichia Coli</i> à des doses de 312 à 5 000 µg / plaque. Dans une lignée de cellules fibroblastiques de hamster chinois, la prednisolone farnésylée a entraîné une légère augmentation de l'incidence des aberrations chromosomiques structurelles avec activation métabolique à la plus forte concentration testée 1 500 µg / mL.</span></p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Toxicité sur la reproduction  </p>
+<p class=AmmCorpsTexte>Une réduction de la fertilité a été mise en évidence lors de l’administration de corticostéroïdes chez le rat. Des doses de corticostérone de 0, 10 et 25 mg/kg/jour ont été administrées à des rats mâles par injection sous-cutanée une fois par jour pendant 6 semaines et ces rats mâles ont été accouplés à des femelles non traitées. La forte dose a été réduite à 20 mg/kg/jour après le 15<sup>ème</sup> jour. Une diminution du bouchon copulatoire a été observée, ce qui peut avoir été secondaire à une diminution du poids des organes accessoires. Le nombre d’implantations et de fœtus viables ont été réduits. Le caractère tératogène des corticostéroïdes a été démontré chez de nombreuses espèces lorsqu’ils étaient administrés à doses équivalentes à celles données à l’Homme. Les études de reproduction menées chez l’animal ont montré que les glucocorticoïdes tels que la méthylprednisolone augmentaient l’incidence des malformations (fente palatine, malformations squelettiques), de la létalité embryo-fœtale (par exemple, augmentation des résorptions), et un retard de croissance intra-utérine.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937">Macrogol 3350, chlorure de sodium, chlorure de miripirium, acide chlorhydrique ou hydroxyde de sodium, eau pour préparations injectables.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">En l’absence d’études de compatibilité, ce médicament ne doit pas être mélangé avec d’autres médicaments.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278939">5 ans.</a></p>
+<p class=AmmCorpsTexte>Après ouverture : le produit doit être utilisé immédiatement.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940">À conserver à une température inférieure à 30 °C et à l'abri de la lumière.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Pour les conditions de conservation du médicament après première ouverture, voir la rubrique 6.3.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278942"></a><a name="_Toc142278941">Flacon de 1 mL en verre incolore de type I, fermé par un bouchon en caoutchouc chlorobutyl.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte>Agiter avant emploi.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Tout médicament non utilisé ou déchet doit être éliminé conformément à la réglementation en vigueur.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmTitulaireNom style='text-align:justify;page-break-after:avoid'><a name="_Toc142278943">PFIZER HOLDING FRANCE</a></p>
+<p class=ammtitulaireadresse0 style='text-align:justify;page-break-after:avoid'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>23-25, AVENUE DU DOCTEUR LANNELONGUE</span></p>
+<p class=AmmTitulaireAdresse style='text-align:justify;page-break-after:avoid'>75014 Paris</p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><a name="_Toc142278944"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 302 935 2 2 : 1 mL en flacon (verre incolore) + 1 seringue stérile de 2 mL (polypropylène) + 2 aiguilles stériles.</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 336 978 6 0 : 1 mL en flacon (verre incolore).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 553 153 5 3 : 1 mL en flacon (verre incolore), boîte de 25.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I </p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_DEPO-MEDROL_40_mg/1_mL,_suspension_injectable_en_flacon_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_DEPO-MEDROL_40_mg/1_mL,_suspension_injectable_en_flacon_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_UTILISER_DEPO-MEDROL_40_mg/1_mL,_suspension_injectable_en_flacon_?"
+                     aria-label="3. COMMENT UTILISER DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon ? (Lien de redirection)">
+                    3. COMMENT UTILISER DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_DEPO-MEDROL_40_mg/1_mL,_suspension_injectable_en_flacon_?"
+                     aria-label="5. COMMENT CONSERVER DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon ? (Lien de redirection)">
+                    5. COMMENT CONSERVER DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 19/12/2025</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmDenomination align=center style='text-align:center'><a name="_Toc142278999"><span style='font-family:"Arial",sans-serif'>DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon</span></a></p>
+<p class=AmmDenomination align=center style='text-align:center'><span style='font-family:"Arial",sans-serif'>Acétate de méthylprednisolone</span></p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279000">Veuillez lire attentivement cette notice avant d'utiliser ce médicament car elle contient des informations importantes pour vous.</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Gardez cette notice. Vous pourriez avoir besoin de la relire.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous avez d’autres questions, interrogez votre médecin, votre pharmacien ou votre infirmier\ère.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d'autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin, votre pharmacien ou votre infirmier/ère. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que <span style='text-transform:uppercase'>DEPO-MEDROL 40 </span>mg/1 mL<span style='text-transform:uppercase'>, </span>suspension injectable en flacon et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant d'utiliser <span style='text-transform: uppercase'>DEPO-MEDROL 40 </span>mg/1 mL<span style='text-transform:uppercase'>, </span>suspension injectable en flacon ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment utiliser <span style='text-transform:uppercase'>DEPO-MEDROL 40 </span>mg/1 mL<span style='text-transform:uppercase'>, </span>suspension injectable en flacon ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver <span style='text-transform:uppercase'>DEPO-MEDROL 40 </span>mg/1 mL<span style='text-transform:uppercase'>, </span>suspension injectable en flacon ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. </span>Contenu de l’emballage et autres informations.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_DEPO-MEDROL_40_mg/1_mL,_suspension_injectable_en_flacon_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279004">CORTICOIDES A USAGE SYSTEMIQUE NON ASSOCIES : code ATC : H02AB04.</a></p>
+<p class=AmmCorpsTexte>Ce médicament est un corticoïde.</p>
+<p class=AmmCorpsTexte>Il peut être utilisé en injection locale, en dermatologie, en ORL et en rhumatologie.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_DEPO-MEDROL_40_mg/1_mL,_suspension_injectable_en_flacon_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras>N’utilisez jamais DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>dans la plupart des infections,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>dans certaines maladies virales en évolution (hépatites virales, herpès, varicelle, zona),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>dans certains troubles mentaux non traités,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>vaccination par des vaccins vivants<span style='font-size:11.0pt; font-family:"Arial Narrow",sans-serif'> </span>ou vivants atténués <a name="_Hlk13837632">(vaccins contre la fièvre jaune, la tuberculose, le rotavirus, la rougeole, les oreillons, la rubéole, la varicelle, le zona, la grippe) </a>en cas de traitement par des corticoïdes à des posologies supérieures à 10 mg/j d’équivalent-prednisone (ou > 2 mg/kg/j chez l’enfant ou > 20 mg/j chez l’enfant de plus de 10 kg) pendant plus de deux semaines et pour les « bolus » de corticoïdes (à l’exception des voies inhalées et locales), et pendant les 3 mois suivant l’arrêt de la corticothérapie : risque de maladie vaccinale généralisée éventuellement mortelle,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique à l’acétate de méthylprednisolone ou à l’un des autres composants contenus dans ce médicament, mentionnés dans la rubrique 6, </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>dans les troubles de la coagulation, traitement anticoagulant en cours,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>en administration par voie intrathécale, péridurale et intraveineuse.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Ce médicament NE DOIT GENERALEMENT PAS ETRE UTILISE, sauf avis contraire de votre médecin, en association avec des médicaments pouvant donner certains troubles du rythme cardiaque (voir « Prise ou utilisation d'autres médicaments »).</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-align:justify;text-indent:0cm'><a name="_Hlk12281513">Ce médicament est généralement déconseillé en association avec l’aspirine (acide acétylsalicylique) à fortes doses, en association avec le mifamurtide, (indiqué dans le traitement du cancer des os) ainsi qu’en association avec un inhibiteur du CYP3A4 (voir « Autres médicaments et DEPO-MEDROL »).</a></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Ce médicament ne doit pas être utilisé par la voie d’administration intra-synoviale, intrabursale ou intratendineuse pour un effet local en cas d'infection aiguë.</p>
+<p class=AmmCorpsTexteGras>EN CAS DE DOUTE, IL EST INDISPENSABLE DE DEMANDER L'AVIS DE VOTRE MÉDECIN OU DE VOTRE PHARMACIEN.</p>
+<p class=AmmCorpsTexteGras>Avertissements et précautions</p>
+<p class=AmmCorpsTexte>Adressez-vous à votre médecin, pharmacien ou votre infirmier/ère avant d’utiliser DEPO-MEDROL.</p>
+<p class=AmmCorpsTexte>Ce médicament doit être pris sous stricte surveillance médicale.</p>
+<p class=AmmCorpsTexte>En l'absence de données concernant le risque de calcification, il est préférable d'éviter l'administration d'un corticoïde en intra-discal.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-align:justify;text-indent:0cm'><i><u>AVANT LE TRAITEMENT </u></i>:</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-align:justify;text-indent:0cm'>Prévenez votre médecin en cas de :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>antécédent d'allergie, </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>maladies virales en cours (hépatite virale, herpès, varicelle, zona), </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>vaccination récente, </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>ulcère digestif, maladies du côlon, intervention chirurgicale récente au niveau de l'intestin, </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>diabète, </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>hypertension artérielle, insuffisance cardiaque congestive ou facteurs de risque cardiovasculaire,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>infection (notamment antécédents de tuberculose) ou en cas de séjour dans les régions tropicales, subtropicales ou du sud de l'Europe, en raison du risque de maladie parasitaire, </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>insuffisance hépatique, </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>insuffisance rénale, </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>sclérodermie (également connue sous le nom de sclérodermie systémique, une maladie auto-immune), car le risque d’une complication grave appelée crise rénale sclérodermique peut être augmenté,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>ostéoporose, </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>myasthénie grave (maladie des muscles avec fatigue musculaire),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>troubles convulsifs,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>stress inhabituel,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>maladie de Cushing,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>hypothyroïdie,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>hyperactivité de la glande thyroïde (hyperthyroïdie),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>herpès oculaire, </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>port de prothèse,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>phéochromocytome (tumeur généralement bénigne caractérisée par une production excessive d’hormones pouvant notamment provoquer une hypertension artérielle).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Un syndrome de lyse tumorale peut apparaître lorsque des corticostéroïdes sont utilisés pendant le traitement d'un cancer. Prévenez votre médecin si vous avez un cancer et si vous présentez des symptômes du syndrome de lyse tumorale tels que des crampes musculaires, une faiblesse musculaire, de la confusion mentale, des battements de cœur irréguliers, une perte de la vision ou des troubles visuels et un essoufflement.</p>
+<p class=AmmCorpsTexte><a name="_Hlk180058268">Contactez votre médecin rapidement si vous présentez une faiblesse musculaire, des douleurs musculaires, des crampes et une raideur au cours du traitement par méthylprednisolone. Ces symptômes peuvent être liés à une affection appelée « paralysie périodique thyrotoxique », susceptible de survenir chez les patients présentant une hyperactivité de la glande thyroïde (hyperthyroïdie) traités par méthylprednisolone. Vous pourriez avoir besoin d’un traitement supplémentaire pour soulager cette affection.</a></p>
+<p class=AmmListePuces1 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-align:justify;text-indent:0cm'><i><u>PENDANT LE TRAITEMENT </u></i>:</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-align:justify;text-indent:0cm'>Prévenez votre médecin en cas d’apparition de :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>symptômes psychologiques ou psychiatriques en particulier en cas de suspicion de dépression ou d’idées suicidaires,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>manifestations cutanées (sarcome de Kaposi),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>troubles oculaires,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>troubles du rythme cardiaque,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>troubles musculaires,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>en cas d’utilisation de l’aspirine ou des anti-inflammatoires non stéroïdiens.</p>
+<p class=AmmListePuces1 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-align:justify;text-indent:0cm'>Les corticoïdes oraux ou injectables peuvent favoriser l'apparition de tendinopathie, voire de rupture tendineuse (exceptionnelle). Prévenir votre médecin en cas d'apparition de douleur tendineuse.</p>
+<p class=AmmCorpsTexte>Pendant le traitement, votre médecin pourra vous conseiller de suivre un régime, en particulier pauvre en sel et une supplémentation en potassium.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-align:justify;text-indent:0cm'>Contactez votre médecin en cas de vision floue ou d'autres troubles visuels.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-align:justify;text-indent:0cm'>Les anticoagulants oraux (médicaments pris par voie orale pour prévenir la coagulation sanguine) s’ils sont utilisés en association avec DEPO-MEDROL, peuvent augmenter le risque de saignement. Dans certains cas, leur effet peut également être réduit. Votre médecin devra surveiller régulièrement votre risque de saignement en effectuant des analyses sanguines supplémentaires pendant votre traitement par DEPO-MEDROL. Il pourra également ajuster votre dose de DEPO-MEDROL si nécessaire.</p>
+<p class=AmmCorpsTexte>Prévenir votre médecin si des douleurs ou de la fièvre apparaissent après l'injection.</p>
+<p class=AmmCorpsTexte>Les injections répétées risquent d'entraîner des symptômes d'hypercorticisme (prise de poids, gonflement, hypertension...) et de déséquilibrer un diabète, des troubles mentaux ou une hypertension artérielle sévère.</p>
+<p class=AmmCorpsTexte>L’utilisation prolongée des corticoïdes chez les enfants et les personnes âgées nécessite une surveillance particulière.</p>
+<p class=AmmCorpsTexte>Le traitement par DEPO-MEDROL peut altérer votre résistance à différentes infections, masquer certains signes d'infection, aggraver des infections existantes ou provoquer la réapparition ou l'aggravation d'anciennes infections cachées. </p>
+<p class=AmmCorpsTexte>Votre médecin vous surveillera étroitement pour détecter toute infection et envisagera d'arrêter le traitement ou d'en réduire la dose si nécessaire.</p>
+<p class=AmmListePuces1 style='margin-left:0cm;text-align:justify;text-indent: 0cm;page-break-after:avoid'><i><u>APRES LE TRAITEMENT </u></i></p>
+<p class=AmmCorpsTexte>L’arrêt brutal des corticoïdes peut entraîner des conséquences pouvant être fatales. Respectez toujours les indications de votre médecin.</p>
+<p class=AmmCorpsTexte>Eviter le contact avec les sujets atteints de varicelle ou de rougeole.</p>
+<p class=AmmCorpsTexteGras>Sportifs </p>
+<p class=AmmCorpsTexte>Cette spécialité contient un principe actif pouvant induire une réaction positive des tests pratiqués lors des contrôles antidopage.</p>
+<p class=AmmCorpsTexteGras>Enfants et adolescents</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon</p>
+<p class=AmmCorpsTexte>Veuillez avertir votre médecin si vous prenez, avez récemment pris ou pourriez prendre tout autre médicament, y compris des médicaments obtenus sans prescription, et notamment si vous prenez de l’aspirine (acide acétylsalicylique) à des doses anti-inflammatoires, des anticoagulants oraux (médicaments pris par voie orale qui préviennent la coagulation du sang) ou si vous devez vous faire vacciner. </p>
+<p class=AmmCorpsTexte>Certains médicaments peuvent augmenter les effets de DEPO-MEDROL et il est possible que votre médecin souhaite vous surveiller attentivement si vous prenez ces médicaments (y compris certains médicaments pour traiter l’infection à VIH : ritonavir, cobicistat).</p>
+<p class=AmmCorpsTexte>L’association de DEPO-MEDROL avec d’autres médicaments est déconseillée :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Mifamurtide (médicament indiqué dans le cancer des os),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Inhibiteurs puissants du CYP3A4.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon avec des aliments, boissons et de l’alcool</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279012">Grossesse, allaitement et fertilité</a></p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte>Ce médicament ne sera utilisé pendant la grossesse qu'en cas de nécessité. Si vous découvrez que vous êtes enceinte pendant le traitement, consultez votre médecin car lui seul peut juger de la nécessité de poursuivre ce traitement. </p>
+<p class=AmmAnnexeTitre3>Allaitement</p>
+<p class=AmmCorpsTexte>L'allaitement est à éviter pendant le traitement en raison du passage dans le lait maternel.</p>
+<p class=AmmCorpsTexte>Demandez conseil à votre médecin ou à votre pharmacien avant de prendre tout médicament.</p>
+<p class=AmmAnnexeTitre3><span class=Instructions><span style='color:windowtext; font-weight:normal'>Fertilité</span></span></p>
+<p class=AmmCorpsTexte>Aucune donnée ne prouve que les corticostéroïdes altèrent la fertilité.</p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>La prise de ce médicament peut entraîner des étourdissements, des vertiges, des troubles visuels et une fatigue. Evitez de conduire des véhicules ou d’utiliser des machines en cas d’apparition de ces symptômes.</p>
+<p class=AmmCorpsTexteGras>DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon contient du sodium.</p>
+<p class=AmmCorpsTexte>Ce médicament contient moins de 1 mmol (23 mg) de sodium par flacon de 1 mL, c’est-à-dire qu’il est essentiellement « sans sodium ».</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_UTILISER_DEPO-MEDROL_40_mg/1_mL,_suspension_injectable_en_flacon_?'>3. COMMENT UTILISER DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279021">Veillez à toujours utiliser ce médicament en suivant exactement les indications de votre médecin. Vérifiez auprès de votre médecin en cas de doute.</a></p>
+<p class=AmmAnnexeTitre3>Posologie</p>
+<p class=AmmCorpsTexte>Respectez toujours la posologie indiquée par votre médecin. En cas de doute, consultez votre médecin ou votre pharmacien.</p>
+<p class=AmmCorpsTexte>La dose à utiliser est déterminée par votre médecin, en fonction de votre poids et de la maladie traitée.</p>
+<p class=AmmCorpsTexte>Elle est strictement individuelle.</p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte>VOIE INJECTABLE : LOCALE.</p>
+<p class=AmmCorpsTexte>Ne pas injecter dans les tendons.</p>
+<p class=AmmAnnexeTitre3>Durée du traitement</p>
+<p class=ammcorpstexte0 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-align:justify'><span style='font-size:10.0pt; font-family:"Arial",sans-serif'>Elle est déterminée par votre médecin.</span></p>
+<p class=AmmCorpsTexteGras>Si vous avez utilisé plus de DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon que vous n’auriez dû</p>
+<p class=AmmCorpsTexte>Consultez immédiatement votre médecin ou votre pharmacien.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez de prendre DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon </p>
+<p class=AmmCorpsTexte><a name="_Toc142279020">Sans objet.</a></p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez d’utiliser DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexte>Si vous avez d’autres questions sur l’utilisation de ce médicament, demandez plus d’informations à votre médecin, à votre pharmacien ou à votre infirmier/ère.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne<span style='background:#8064A2'> </span>surviennent pas systématiquement chez tout le monde.</a></p>
+<p class=AmmCorpsTexte>Ce médicament, indispensable est le plus souvent bien toléré lorsque l'on suit les recommandations et notamment le régime (voir « <span class=AmmCorpsTexteGrasCar>Avertissements et précautions </span>»). Il peut néanmoins entraîner, selon la dose et la durée du traitement, des effets plus ou moins gênants. </p>
+<p class=AmmCorpsTexte>Les effets indésirables suivants ont été rapportés avec une fréquence indéterminée (ne peut être estimée sur la base des données disponibles) :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Infection opportuniste, infection, inflammation du péritoine, infection au site d’injection,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Augmentation des globules blancs (leucocytose),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Allergie (hypersensibilité),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Signes d’origine médicamenteuse liés à un excès de sécrétion de corticoïdes (Cushingoïde), tels que : obésité de la partie supérieure du corps ou visage bouffi, insuffisance de sécrétion des hormones de l’hypophyse (glande du cerveau), syndrome de sevrage,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Acidose métabolique, rétention hydrosodée, diminution de l’acidité du sang entraînant une baisse du taux de potassium sanguin (alcalose hypokaliémique), anomalie du bilan lipidique (taux sanguin des lipides), troubles de la tolérance au glucose, besoin croissant d'insuline ou d’hypoglycémiants oraux chez les diabétiques, lipomatose (présence de multiples lipomes, tumeurs bénignes composées de tissus graisseux), augmentation de l’appétit (pouvant entraîner une prise de poids), accumulation de tissus adipeux sur des parties localisées du corps,</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Troubles affectifs (humeur dépressive et humeur euphorique, labilité, dépendance aux drogues, idées suicidaires), troubles psychotiques (manie, illusion, hallucination, schizophrénie), troubles mentaux, changement de personnalité, état confusionnel, anxiété, sautes d’humeur, comportement anormal, insomnie, irritabilité,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Lipomatose épidurale, augmentation anormalement importante de la pression à l’intérieur du crâne (avec œdème au niveau du nerf optique), crise épileptique, amnésie, détérioration des processus mentaux de la <a href="http://www.doctissimo.fr/html/psychologie/bien_memoriser/index_bien_memoriser.htm"><span style='color:windowtext;text-decoration:none'>mémoire</span></a>, du jugement, de la compréhension, et du raisonnement (troubles cognitifs), étourdissements, maux de tête,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Maladie de la rétine et de la membrane choroïde (choriorétinopathie), rares cas de cécité associés à un traitement intralésionnel autour du visage et de la tête, cataracte (opacification du cristallin), glaucome (augmentation de la pression à l’intérieur de l’œil), exophtalmie (globe oculaire saillant), vision floue,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Vertige,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Insuffisance cardiaque congestive (chez les patients à risque),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Thrombose, coagulation sanguine augmentée, hypertension, hypotension, chaleur et rougeur de la peau (bouffées congestives),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Embolie pulmonaire, hoquets, </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ulcère digestif avec éventuellement perforation et hémorragie intestinale, hémorragie digestive, inflammation du pancréas, inflammation de l’œsophage (pouvant être accompagnée de lésions ulcéreuses), distension abdominale, douleur abdominale, diarrhée, digestion difficile, nausée, </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Brusque gonflement du visage et du cou d’origine allergique (œdème de Quincke), développement exagéré du système pileux chez la femme (hirsutisme), petites taches rouges violacées sur la peau (pétéchies), bleus sur la peau (ecchymoses), fragilisation de la peau (atrophie cutanée), rougeur de la peau (érythème), production excessive de sueur (hyperhidrose), vergetures, éruption cutanée (rash), démangeaisons (prurit), urticaire, acné, coloration moins forte ou plus forte de la peau, inflammation du tissu graisseux sous-cutané pouvant rendre la peau dure et éventuellement provoquer l'apparition de nodules ou de plaques rouges douloureuses (panniculite). Des cas de panniculite ont été rapportés après une réduction de dose ou après l'arrêt d'un traitement prolongé à forte dose et la plupart des cas guérissent spontanément,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Faiblesse musculaire, douleurs musculaires (myalgie), maladie des muscles (myopathie), diminution de la musculature (atrophie musculaire), fragilisation osseuse (ostéoporose), destruction des cellules osseuses (ostéonécrose), fracture, maladie des articulations d’origine nerveuse, douleurs articulaires, retard de croissance, une augmentation temporaire de la douleur au site d'injection (poussées douloureuses post-injection),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Règles irrégulières,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Abcès stérile, retard de cicatrisation, gonflement des membres dû à l’accumulation de liquide (œdème périphérique), fatigue, malaise, réaction au site d’injection,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Augmentation de la pression à l’intérieur de l’œil, diminution de la tolérance aux sucres, diminution de la quantité de potassium dans le sang, perte accrue de protéines par l’organisme, augmentation de la quantité de calcium dans les urines, augmentation des enzymes du foie, augmentation des taux d’acide urique dans le sang, suppression des réactions aux tests cutanés,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Fracture due à la compression de la moelle épinière, rupture du tendon,</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Lésions du foie (hépatite). </p>
+<p class=AmmAnnexeTitre3>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin, votre pharmacien ou à votre infirmier/ère. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<u><span style='color:blue'> https://signalement.social-sante.gouv.fr/</span></u></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_DEPO-MEDROL_40_mg/1_mL,_suspension_injectable_en_flacon_?'>5. COMMENT CONSERVER DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026"></a><a name="_Toc142279024">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte>N’utilisez pas ce médicament après la date de péremption indiquée sur l’emballage après {EXP}. La date de péremption fait référence au dernier jour de ce mois.</p>
+<p class=AmmCorpsTexte>Après ouverture : le produit doit être utilisé immédiatement.</p>
+<p class=ammcorpstexte0 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-align:justify'><span style='font-size:10.0pt; font-family:"Arial",sans-serif'>À conserver à une température inférieure à 30 °C et à l'abri de la lumière.</span></p>
+<p class=AmmCorpsTexte>N’utilisez pas ce médicament si vous remarquez des signes visibles de détérioration.</p>
+<p class=AmmCorpsTexte>Ne jetez aucun médicament au tout-à-l’égout ou avec les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est :</p>
+<p class=AmmComposition style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt'>Acétate de méthylprednisolone ..................................................................................... 40,0 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un flacon.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont : </p>
+<p class=AmmListePuces1 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:17.85pt;margin-bottom:.0001pt;text-indent:0cm'>Macrogol 3350, chlorure de sodium, chlorure de miripirium, acide chlorhydrique ou hydroxyde de sodium, eau pour préparations injectables.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que DEPO-MEDROL 40 mg/1 mL, suspension injectable en flacon et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>Ce médicament se présente sous forme de suspension injectable. Boîte de 1 ou 25 flacons.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmTitulaireNom style='text-align:justify'><a name="_Toc142279031">PFIZER HOLDING FRANCE</a></p>
+<p class=AmmTitulaireCpVillePays><span style='font-size:10.0pt'>23-25, AVENUE DU DOCTEUR LANNELONGUE</span></p>
+<p class=AmmTitulaireCpVillePays><span style='font-size:10.0pt'>75014 Paris</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmTitulaireNom style='text-align:justify;page-break-after:avoid'>PFIZER </p>
+<p class=AmmTitulaireCpVillePays><span style='font-size:10.0pt'>23-25, AVENUE DU DOCTEUR LANNELONGUE</span></p>
+<p class=AmmTitulaireCpVillePays><span style='font-size:10.0pt'>75014 Paris</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmTitulaireNom style='text-align:justify'><a name="_Toc142279033"><span lang=EN-US>PFIZER MANUFACTURING BELGIUM NV</span></a></p>
+<p class=AmmTitulaireCpVillePays><span lang=EN-US style='font-size:10.0pt'>RIJKSWEG 12</span></p>
+<p class=AmmTitulaireCpVillePays><span style='font-size:10.0pt'>2870 PUURS</span><span style='font-size:10.0pt'>-SINT-AMANDS</span></p>
+<p class=AmmTitulaireCpVillePays><span style='font-size:10.0pt'>BELGIQUE</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+</div>
+</BODY>
+</HTML>
+
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1185" viewBox="0 0 1800 1185" font-family="Segoe UI, Arial, sans-serif">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c0573e"/></marker><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c9a89b"/></marker></defs>
+<rect width="1800" height="1185" fill="#ffffff"/>
+<text x="30" y="48" font-size="30" fill="#2a211c" font-weight="bold" text-anchor="start">DwaTalk — architecture détaillée</text>
+<text x="30" y="72" font-size="16" fill="#6b5d53" font-weight="normal" text-anchor="start">Assistant pharmacie en darija, arabe et français · écrit ou voix</text>
+<circle cx="1330" cy="52" r="10" fill="#c0573e"/>
+<text x="1330" y="57" font-size="12" fill="#fff" font-weight="bold" text-anchor="middle">1</text>
+<text x="1348" y="57" font-size="14" fill="#6b5d53" font-weight="normal" text-anchor="start">à 4 : étapes du traitement d&#x27;une question</text>
+<line x1="1330" y1="74" x2="1370" y2="74" stroke="#c9a89b" stroke-width="2.4" stroke-dasharray="6 5"/>
+<text x="1380" y="79" font-size="14" fill="#6b5d53" font-weight="normal" text-anchor="start">consultation des référentiels</text>
+<rect x="12" y="92" width="1776" height="313" rx="14" fill="#fbf8f4" stroke="#ece2d6"/>
+<text x="30" y="118" font-size="13" fill="#9a8676" font-weight="bold" text-anchor="start">A · PRÉPARATION DES DONNÉES  (HORS LIGNE, DÉJÀ EXÉCUTÉE)</text>
+<rect x="30" y="130" width="300" height="50" rx="8" fill="#f7f1ea" stroke="#d9cbbb" stroke-width="2"/>
+<text x="46" y="151" font-size="15" fill="#2a211c" font-weight="bold" text-anchor="start">AMMPS</text>
+<text x="46" y="170" font-size="13.5" fill="#6b5d53" font-weight="normal" text-anchor="start">ammps.gov.ma · 9 903 médicaments</text>
+<path d="M330,155 L355,155" stroke="#c0573e" stroke-width="2.4" fill="none"/>
+<rect x="30" y="192" width="300" height="50" rx="8" fill="#f7f1ea" stroke="#d9cbbb" stroke-width="2"/>
+<text x="46" y="213" font-size="15" fill="#2a211c" font-weight="bold" text-anchor="start">CNOPS</text>
+<text x="46" y="232" font-size="13.5" fill="#6b5d53" font-weight="normal" text-anchor="start">Excel 2014 · 5 917 médicaments</text>
+<path d="M330,217 L355,217" stroke="#c0573e" stroke-width="2.4" fill="none"/>
+<rect x="30" y="254" width="300" height="50" rx="8" fill="#f7f1ea" stroke="#d9cbbb" stroke-width="2"/>
+<text x="46" y="275" font-size="15" fill="#2a211c" font-weight="bold" text-anchor="start">CNSS</text>
+<text x="46" y="294" font-size="13.5" fill="#6b5d53" font-weight="normal" text-anchor="start">API JSON cnss.ma · 8 991 lignes</text>
+<path d="M330,279 L355,279" stroke="#c0573e" stroke-width="2.4" fill="none"/>
+<rect x="30" y="316" width="300" height="50" rx="8" fill="#f7f1ea" stroke="#d9cbbb" stroke-width="2"/>
+<text x="46" y="337" font-size="15" fill="#2a211c" font-weight="bold" text-anchor="start">Saydalia</text>
+<text x="46" y="356" font-size="13.5" fill="#6b5d53" font-weight="normal" text-anchor="start">saydalia.ma · 2 661 établissements</text>
+<path d="M330,341 L355,341" stroke="#c0573e" stroke-width="2.4" fill="none"/>
+<path d="M355,155 L355,341" stroke="#c0573e" stroke-width="2.4" fill="none"/>
+<path d="M355,190 L390,190" fill="none" stroke="#c0573e" stroke-width="2.4" marker-end="url(#ar)"/>
+<rect x="390" y="128" width="330" height="137" rx="10" fill="#f7f1ea" stroke="#d9cbbb" stroke-width="2"/>
+<text x="408" y="162" font-size="20" fill="#2a211c" font-weight="bold" text-anchor="start">Collecte</text>
+<text x="408" y="183" font-size="13" fill="#6b5d53" font-weight="normal" text-anchor="start" font-family="Consolas, monospace">scripts/</text>
+<text x="408" y="213" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">scrape_ammps.py — 496 pages</text>
+<text x="408" y="233" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">scrape_cnss.py — API JSON, 500/requête</text>
+<text x="408" y="253" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">scrape_saydalia.py — grille ~70 villes</text>
+<path d="M555,265 L555,277" fill="none" stroke="#c0573e" stroke-width="2.4" marker-end="url(#ar)"/>
+<rect x="390" y="277" width="330" height="113" rx="10" fill="#f7f1ea" stroke="#d9cbbb" stroke-width="2"/>
+<text x="408" y="311" font-size="20" fill="#2a211c" font-weight="bold" text-anchor="start">Nettoyage &amp; fusion</text>
+<text x="408" y="341" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">clean_merge.py : textes, prix, taux</text>
+<text x="408" y="361" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">fusion sur clé nom + dosage + forme</text>
+<text x="408" y="381" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">clean_pharmacies.py : tri, dédoublonnage</text>
+<path d="M720,327 L755,327 L755,190 L790,190" fill="none" stroke="#c0573e" stroke-width="2.4" marker-end="url(#ar)"/>
+<path d="M755,327 L790,327" fill="none" stroke="#c0573e" stroke-width="2.4" marker-end="url(#ar)"/>
+<rect x="790" y="128" width="330" height="125" rx="10" fill="#f4efe8" stroke="#cdb9a6" stroke-width="2"/>
+<text x="808" y="162" font-size="20" fill="#2a211c" font-weight="bold" text-anchor="start">Médicaments</text>
+<text x="808" y="183" font-size="13" fill="#6b5d53" font-weight="normal" text-anchor="start" font-family="Consolas, monospace">data/clean/medicaments_reference.csv</text>
+<text x="808" y="212" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">19 974 lignes · nom, DCI, dosage, forme,</text>
+<text x="808" y="231" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">prix PPV, remboursement CNOPS / CNSS</text>
+<rect x="790" y="265" width="330" height="125" rx="10" fill="#f4efe8" stroke="#cdb9a6" stroke-width="2"/>
+<text x="808" y="299" font-size="20" fill="#2a211c" font-weight="bold" text-anchor="start">Pharmacies</text>
+<text x="808" y="320" font-size="13" fill="#6b5d53" font-weight="normal" text-anchor="start" font-family="Consolas, monospace">data/clean/pharmacies_reference.csv</text>
+<text x="808" y="349" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">2 652 établissements · nom, adresse,</text>
+<text x="808" y="368" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">téléphone, ville, pharmacie de garde</text>
+<rect x="1180" y="128" width="590" height="262" rx="10" fill="#ffffff" stroke="#d9cbbb" stroke-width="2"/>
+<text x="1198" y="164" font-size="20" fill="#2a211c" font-weight="bold" text-anchor="start">Évaluation &amp; qualité</text>
+<text x="1198" y="202" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">seed_dataset.jsonl : 121 phrases annotées</text>
+<text x="1198" y="231" font-size="14.5" fill="#6b5d53" font-weight="normal" text-anchor="start">fr · arabe · darija (2 graphies) · mixte</text>
+<text x="1198" y="260" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">evaluate.py : NLU sur 110 phrases de test</text>
+<text x="1198" y="289" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">compare_baseline.py : TF-IDF + rég. log.</text>
+<text x="1198" y="318" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">evaluate_*_linking.py : médic. / pharmacies</text>
+<text x="1198" y="347" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">pytest : 264 tests automatisés</text>
+<text x="1525" y="210" font-size="26" fill="#c0573e" font-weight="bold" text-anchor="start">98,2 %</text>
+<text x="1525" y="230" font-size="12.5" fill="#2a211c" font-weight="normal" text-anchor="start">intention</text>
+<text x="1525" y="247" font-size="12" fill="#6b5d53" font-weight="normal" text-anchor="start">baseline : 62,7 %</text>
+<text x="1650" y="210" font-size="26" fill="#c0573e" font-weight="bold" text-anchor="start">97,6 %</text>
+<text x="1650" y="230" font-size="12.5" fill="#2a211c" font-weight="normal" text-anchor="start">F1 entités</text>
+<text x="1650" y="247" font-size="12" fill="#6b5d53" font-weight="normal" text-anchor="start">baseline : 95,4 %</text>
+<text x="1525" y="298" font-size="26" fill="#c0573e" font-weight="bold" text-anchor="start">36/37</text>
+<text x="1525" y="318" font-size="12.5" fill="#2a211c" font-weight="normal" text-anchor="start">médicaments top-1</text>
+<text x="1525" y="335" font-size="12" fill="#6b5d53" font-weight="normal" text-anchor="start">37/37 en top-3</text>
+<text x="1650" y="298" font-size="26" fill="#c0573e" font-weight="bold" text-anchor="start">12/12</text>
+<text x="1650" y="318" font-size="12.5" fill="#2a211c" font-weight="normal" text-anchor="start">pharmacies</text>
+<line x1="1505" y1="185" x2="1505" y2="370" stroke="#ece2d6" stroke-width="2"/>
+<g transform="translate(0,33)">
+<rect x="12" y="392" width="1776" height="745" rx="14" fill="#fbf8f4" stroke="#ece2d6"/>
+<text x="30" y="418" font-size="13" fill="#9a8676" font-weight="bold" text-anchor="start">B · TRAITEMENT D&#x27;UNE QUESTION  (EN LIGNE)</text>
+<rect x="30" y="440" width="300" height="395" rx="10" fill="#fdf1ec" stroke="#c0573e" stroke-width="2"/>
+<text x="48" y="474" font-size="20" fill="#2a211c" font-weight="bold" text-anchor="start">Interface web</text>
+<text x="48" y="495" font-size="13" fill="#6b5d53" font-weight="normal" text-anchor="start" font-family="Consolas, monospace">frontend/ · React + Vite</text>
+<text x="48" y="525" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">Pages : Accueil, Assistant,</text>
+<text x="48" y="545" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">Médicaments, Pharmacies,</text>
+<text x="48" y="565" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">Historique, Paramètres</text>
+<text x="48" y="595.0" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">Modules src/lib/</text>
+<text x="48" y="615.0" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">voix.js : enregistrement micro</text>
+<text x="48" y="635.0" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">api.js : appels vers l&#x27;API</text>
+<text x="48" y="655.0" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">conversations.js : historique</text>
+<text x="48" y="675.0" font-size="15" fill="#6b5d53" font-weight="normal" text-anchor="start">  conservé dans le navigateur</text>
+<text x="48" y="705.0" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">Affichage</text>
+<text x="48" y="725.0" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">fiches médicament, prix,</text>
+<text x="48" y="745.0" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">remboursement, alternatives,</text>
+<text x="48" y="765.0" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">pharmacies, plan de la ville</text>
+<rect x="390" y="440" width="330" height="190" rx="10" fill="#fdf1ec" stroke="#c0573e" stroke-width="2"/>
+<text x="408" y="474" font-size="20" fill="#2a211c" font-weight="bold" text-anchor="start">API FastAPI</text>
+<text x="408" y="495" font-size="13" fill="#6b5d53" font-weight="normal" text-anchor="start" font-family="Consolas, monospace">api/main.py</text>
+<text x="408" y="525" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">POST /chat — texte → réponse</text>
+<text x="408" y="545" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">POST /chat/audio — audio → réponse</text>
+<text x="408" y="565" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">POST /transcription — audio → texte</text>
+<text x="408" y="585" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">GET /medicaments · GET /pharmacies</text>
+<text x="408" y="605" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">session_id : dialogue multi-tours</text>
+<path d="M330,505 L390,505" fill="none" stroke="#c0573e" stroke-width="2.4" marker-end="url(#ar)"/>
+<text x="360" y="496" font-size="13" fill="#6b5d53" font-weight="normal" text-anchor="middle">question</text>
+<path d="M555,630 L555,665" fill="none" stroke="#c0573e" stroke-width="2.4" marker-end="url(#ar)"/>
+<rect x="390" y="665" width="330" height="215" rx="10" fill="#fdf1ec" stroke="#c0573e" stroke-width="2"/>
+<circle cx="420" cy="693" r="13" fill="#c0573e"/>
+<text x="420" y="698" font-size="15" fill="#fff" font-weight="bold" text-anchor="middle">1</text>
+<text x="442" y="699" font-size="20" fill="#2a211c" font-weight="bold" text-anchor="start">Reconnaissance vocale</text>
+<text x="442" y="720" font-size="13" fill="#6b5d53" font-weight="normal" text-anchor="start" font-family="Consolas, monospace">api/parole.py</text>
+<text x="408" y="750" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">faster-whisper « small », int8, CPU</text>
+<text x="408" y="770" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">local, sans coût · ~3 s / question</text>
+<text x="408" y="790" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">amorce : noms de médicaments courants</text>
+<text x="408" y="810" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">langues reconnues : arabe, français</text>
+<text x="408" y="830" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">confiance &lt; 0,6 → avertissement</text>
+<text x="408" y="850" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">audio : 60 s max, 10 Mo max</text>
+<path d="M390,790 L330,790" fill="none" stroke="#c0573e" stroke-width="2.4" marker-end="url(#ar)"/>
+<text x="360" y="781" font-size="13" fill="#6b5d53" font-weight="normal" text-anchor="middle">texte</text>
+<text x="360" y="812" font-size="13" fill="#6b5d53" font-weight="normal" text-anchor="middle">à relire</text>
+<path d="M720,505 L790,505" fill="none" stroke="#c0573e" stroke-width="2.4" marker-end="url(#ar)"/>
+<text x="755" y="496" font-size="13" fill="#6b5d53" font-weight="normal" text-anchor="middle">texte</text>
+<rect x="790" y="440" width="330" height="205" rx="10" fill="#fdf1ec" stroke="#c0573e" stroke-width="2"/>
+<circle cx="820" cy="468" r="13" fill="#c0573e"/>
+<text x="820" y="473" font-size="15" fill="#fff" font-weight="bold" text-anchor="middle">2</text>
+<text x="842" y="474" font-size="20" fill="#2a211c" font-weight="bold" text-anchor="start">Compréhension (NLU)</text>
+<text x="842" y="495" font-size="13" fill="#6b5d53" font-weight="normal" text-anchor="start" font-family="Consolas, monospace">nlu/llm_prototype.py</text>
+<text x="808" y="525" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">LLM gpt-oss:20b · Ollama Cloud</text>
+<text x="808" y="545" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">prompt : schema.json + 11 exemples</text>
+<text x="808" y="565" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">8 intentions · 6 types d&#x27;entités</text>
+<text x="808" y="585" font-size="15" fill="#6b5d53" font-weight="normal" text-anchor="start">  MEDICAMENT, DOSAGE, FORME, QUANTITE,</text>
+<text x="808" y="605" font-size="15" fill="#6b5d53" font-weight="normal" text-anchor="start">  PHARMACIE, LOCALISATION</text>
+<text x="808" y="625" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">sortie JSON validée {intent, entities}</text>
+<path d="M955,645 L955,675" fill="none" stroke="#c0573e" stroke-width="2.4" marker-end="url(#ar)"/>
+<text x="990" y="665" font-size="13" fill="#6b5d53" font-weight="normal" text-anchor="middle">entités</text>
+<rect x="790" y="675" width="330" height="390" rx="10" fill="#fdf1ec" stroke="#c0573e" stroke-width="2"/>
+<circle cx="820" cy="703" r="13" fill="#c0573e"/>
+<text x="820" y="708" font-size="15" fill="#fff" font-weight="bold" text-anchor="middle">3</text>
+<text x="842" y="709" font-size="20" fill="#2a211c" font-weight="bold" text-anchor="start">Entity linking</text>
+<text x="808" y="735" font-size="16" fill="#2a211c" font-weight="bold" text-anchor="start">Médicaments</text>
+<text x="808" y="754" font-size="13" fill="#6b5d53" font-weight="normal" text-anchor="start" font-family="Consolas, monospace">nlu/entity_linking.py</text>
+<text x="808" y="780" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">translittération arabe → latin</text>
+<text x="808" y="800" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">3 recherches floues (RapidFuzz) :</text>
+<text x="808" y="820" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">· nom commercial</text>
+<text x="808" y="840" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">· DCI / molécule (× 0,95)</text>
+<text x="808" y="860" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">· clé phonétique (× 0,95)</text>
+<text x="808" y="880" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">filtre par dosage</text>
+<text x="808" y="900" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">confiance : auto / à confirmer /</text>
+<text x="808" y="920" font-size="14.5" fill="#6b5d53" font-weight="normal" text-anchor="start">non fiable → jamais affiché</text>
+<line x1="808" y1="948" x2="1102" y2="948" stroke="#e6c9bd" stroke-width="1.5"/>
+<text x="808" y="972" font-size="16" fill="#2a211c" font-weight="bold" text-anchor="start">Pharmacies</text>
+<text x="808" y="991" font-size="13" fill="#6b5d53" font-weight="normal" text-anchor="start" font-family="Consolas, monospace">nlu/pharmacy_linking.py</text>
+<text x="808" y="1016" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">filtre par ville ou quartier, puis nom</text>
+<text x="808" y="1036" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">homonymes sans ville → demande précision</text>
+</g>
+<path d="M1120,190 L1150,190 L1150,1043 L1122,1043" fill="none" stroke="#c9a89b" stroke-width="2.4" stroke-dasharray="6 5" marker-end="url(#ar2)"/>
+<g transform="translate(0,33)">
+<path d="M1120,294 L1150,294" stroke="#c9a89b" stroke-width="2.4" stroke-dasharray="6 5" fill="none"/>
+<path d="M1120,760 L1180,760" fill="none" stroke="#c0573e" stroke-width="2.4" marker-end="url(#ar)"/>
+<rect x="1180" y="440" width="590" height="465" rx="10" fill="#fdf1ec" stroke="#c0573e" stroke-width="2"/>
+<circle cx="1210" cy="468" r="13" fill="#c0573e"/>
+<text x="1210" y="473" font-size="15" fill="#fff" font-weight="bold" text-anchor="middle">4</text>
+<text x="1232" y="474" font-size="20" fill="#2a211c" font-weight="bold" text-anchor="start">Dialogue — réponse selon l&#x27;intention</text>
+<text x="1232" y="495" font-size="13" fill="#6b5d53" font-weight="normal" text-anchor="start" font-family="Consolas, monospace">api/main.py · chat()</text>
+<rect x="1196" y="508" width="558" height="32" rx="5" fill="#fbe6dd"/>
+<text x="1208" y="530" font-size="14" fill="#2a211c" font-weight="bold" text-anchor="start" font-family="Consolas, monospace">disponibilite_medicament</text>
+<text x="1440" y="530" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">fiche + « quelle ville ? » → pharmacies</text>
+<text x="1208" y="564" font-size="14" fill="#2a211c" font-weight="bold" text-anchor="start" font-family="Consolas, monospace">prix_remboursement</text>
+<text x="1440" y="564" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">prix PPV + taux CNOPS / CNSS</text>
+<rect x="1196" y="576" width="558" height="32" rx="5" fill="#fbe6dd"/>
+<text x="1208" y="598" font-size="14" fill="#2a211c" font-weight="bold" text-anchor="start" font-family="Consolas, monospace">alternative_moins_chere</text>
+<text x="1440" y="598" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">même DCI, dosage, forme, commercialisé</text>
+<text x="1208" y="632" font-size="14" fill="#2a211c" font-weight="bold" text-anchor="start" font-family="Consolas, monospace">info_pharmacie</text>
+<text x="1440" y="632" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">adresse, téléphone, garde</text>
+<rect x="1196" y="644" width="558" height="32" rx="5" fill="#fbe6dd"/>
+<text x="1208" y="666" font-size="14" fill="#2a211c" font-weight="bold" text-anchor="start" font-family="Consolas, monospace">posologie_information</text>
+<text x="1440" y="666" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">pas d&#x27;info fiable → notice, pharmacien</text>
+<text x="1208" y="700" font-size="14" fill="#2a211c" font-weight="bold" text-anchor="start" font-family="Consolas, monospace">conseil_medical</text>
+<text x="1440" y="700" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">orientation vers un professionnel</text>
+<rect x="1196" y="712" width="558" height="32" rx="5" fill="#fbe6dd"/>
+<text x="1208" y="734" font-size="14" fill="#2a211c" font-weight="bold" text-anchor="start" font-family="Consolas, monospace">salutation</text>
+<text x="1440" y="734" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">message d&#x27;accueil</text>
+<text x="1208" y="768" font-size="14" fill="#2a211c" font-weight="bold" text-anchor="start" font-family="Consolas, monospace">hors_sujet</text>
+<text x="1440" y="768" font-size="14.5" fill="#2a211c" font-weight="normal" text-anchor="start">recentrage sur médicaments / pharmacies</text>
+<text x="1198" y="822" font-size="15" fill="#2a211c" font-weight="bold" text-anchor="start">Garde-fous</text>
+<text x="1198" y="845" font-size="14" fill="#2a211c" font-weight="normal" text-anchor="start">· conseil médical traité en premier : aucune fiche affichée</text>
+<text x="1198" y="865" font-size="14" fill="#2a211c" font-weight="normal" text-anchor="start">· médicament inconnu → le dire, jamais une réponse inventée</text>
+<text x="1198" y="885" font-size="14" fill="#2a211c" font-weight="normal" text-anchor="start">· mémoire de session pour la question « quelle ville ? »</text>
+<path d="M1475,905 L1475,935" fill="none" stroke="#c0573e" stroke-width="2.4" marker-end="url(#ar)"/>
+<rect x="1180" y="935" width="590" height="130" rx="10" fill="#f7f1ea" stroke="#d9cbbb" stroke-width="2"/>
+<text x="1198" y="969" font-size="20" fill="#2a211c" font-weight="bold" text-anchor="start">Réponse JSON</text>
+<text x="1198" y="990" font-size="13" fill="#6b5d53" font-weight="normal" text-anchor="start" font-family="Consolas, monospace">ChatResponse</text>
+<text x="1198" y="1020" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">reply (texte) · intent · entities · session_id</text>
+<text x="1198" y="1040" font-size="15" fill="#2a211c" font-weight="normal" text-anchor="start">medicament_matches · pharmacie_matches · alternatives</text>
+<path d="M1475,1065 L1475,1100 L180,1100 L180,837" fill="none" stroke="#c0573e" stroke-width="2.4" marker-end="url(#ar)"/>
+<text x="640" y="1092" font-size="13" fill="#6b5d53" font-weight="normal" text-anchor="middle">réponse affichée dans le chat</text>
+</g>
+</svg>

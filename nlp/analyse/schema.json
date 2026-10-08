@@ -1,0 +1,132 @@
+{
+  "version": "nlp-1",
+  "description": "Vocabulaire de l'analyse DwaTalk : ce que le LLM a le droit de renvoyer. Lu par analyse/prompt.md (pour l'expliquer au modele) et par analyse/validation.py (pour refuser tout le reste).",
+
+  "langues": {
+    "fr": "francais",
+    "ary_lat": "darija en lettres latines / arabizi (wach kayn doliprane ?)",
+    "ary_ar": "darija en lettres arabes (واش كاين دوليبران ؟)",
+    "ar": "arabe standard (هل يوجد دواء دوليبران ؟)"
+  },
+
+  "situations": {
+    "urgence": "PRIORITAIRE sur tout le reste, meme si un medicament est cite : surdosage ou prise accidentelle, reaction grave, difficulte a respirer, perte de connaissance, convulsions, douleur thoracique... Remplir 'urgence_type'. Aucune demande, aucun conseil.",
+    "medical": "Symptome serieux ou inhabituel (forte fievre, sang, douleur intense, symptome qui dure), maladie, diagnostic, ou traitement sur ordonnance : on oriente vers un medecin ou un pharmacien, sans citer de medicament.",
+    "conseil_symptome": "Le patient decrit un symptome courant et benin (fievre legere, mal de tete, fatigue...) et cherche quoi prendre. Remplir 'symptomes', et 'patient' / 'grossesse' / 'duree_jours' si le message les donne. Le modele ne cite JAMAIS de medicament lui-meme.",
+    "repondre": "La question porte sur au moins une demande de la liste ci-dessous, et on a ce qu'il faut pour y repondre.",
+    "preciser": "La question porte sur une demande de la liste, mais il manque un element indispensable (quel medicament ? quelle ville ?). Remplir 'manque'.",
+    "pas_d_info": "Question de pharmacie claire, mais hors de nos donnees : STOCK (wach kayn X ?, 3andkom X ?) -- DwaTalk n'est pas une pharmacie et ne connait le stock d'aucune pharmacie --, generique / equivalent / alternative moins chere, produit non medicamenteux, livraison, commande...",
+    "incompris": "Message incomprehensible, trop vague ou ambigu, meme en tenant compte de la conversation : on demande de reformuler.",
+    "salutation": "Politesse ou small talk (salam, merci, labas), sans demande.",
+    "hors_sujet": "Sans rapport avec les medicaments, les pharmacies ou la sante."
+  },
+
+  "demandes": {
+    "prix": {
+      "description": "Prix public du medicament.",
+      "besoin": ["medicament"],
+      "outils": ["prix"]
+    },
+    "remboursement": {
+      "description": "Est-il rembourse, a quel taux et pour quel montant, selon le regime du patient (CNOPS ou CNSS : un patient n'est adherent qu'a un seul).",
+      "besoin": ["medicament", "regime"],
+      "outils": ["prix"]
+    },
+    "formes_dosages": {
+      "description": "Formes (comprime, sirop...) et dosages existants.",
+      "besoin": ["medicament"],
+      "outils": ["medicament"]
+    },
+    "posologie": {
+      "description": "Toute question de dose : comment / quand / combien en prendre, duree du traitement, dose pour un enfant ou pendant la grossesse. DwaTalk ne donne jamais de dose : la reponse est toujours de poser la question a son medecin.",
+      "besoin": [],
+      "outils": []
+    },
+    "pharmacies_lieu": {
+      "description": "Pharmacies dans une ville ou un quartier.",
+      "besoin": ["lieu"],
+      "outils": ["pharmacies"]
+    },
+    "pharmacie_garde": {
+      "description": "Pharmacie de garde / ouverte la nuit, dans un lieu.",
+      "besoin": ["lieu"],
+      "outils": ["pharmacies"]
+    },
+    "info_pharmacie": {
+      "description": "Adresse ou telephone d'une pharmacie citee par son nom.",
+      "besoin": ["pharmacie"],
+      "outils": ["pharmacies"]
+    },
+    "indications": {
+      "description": "A quoi sert le medicament (chno kaydir).",
+      "besoin": ["medicament"],
+      "outils": ["securite"],
+      "rubrique": "indications"
+    },
+    "effets_indesirables": {
+      "description": "Effets secondaires.",
+      "besoin": ["medicament"],
+      "outils": ["securite"],
+      "rubrique": "effets_indesirables"
+    },
+    "contre_indications": {
+      "description": "Qui ne doit pas le prendre.",
+      "besoin": ["medicament"],
+      "outils": ["securite"],
+      "rubrique": "contre_indications"
+    },
+    "precautions": {
+      "description": "Precautions d'emploi (conduite, alcool, maladie du foie...).",
+      "besoin": ["medicament"],
+      "outils": ["securite"],
+      "rubrique": "precautions"
+    },
+    "interactions": {
+      "description": "Peut-on le prendre avec un autre medicament.",
+      "besoin": ["medicament"],
+      "outils": ["securite"],
+      "rubrique": "interactions"
+    },
+    "grossesse_allaitement": {
+      "description": "Grossesse ou allaitement.",
+      "besoin": ["medicament"],
+      "outils": ["securite"],
+      "rubrique": "grossesse_allaitement"
+    }
+  },
+
+  "sortie": {
+    "format": {
+      "situation": "un id de 'situations'",
+      "urgence_type": "si situation = urgence : 'intoxication' (surdosage, produit avale) ou 'detresse' (respiration, conscience, reaction grave) ; sinon null",
+      "demandes": "liste d'ids de 'demandes' (vide si situation != repondre / preciser)",
+      "medicaments": "liste de {nom, dosage, forme} tels qu'ecrits par le patient ; dosage et forme a null si absents",
+      "lieu": "ville ou quartier tel qu'ecrit, sans preposition (f maarif -> maarif), ou null",
+      "pharmacie": "nom propre de la pharmacie (sidalia Ibn Sina -> Ibn Sina), ou null",
+      "manque": "si situation = preciser : liste parmi medicament, lieu, pharmacie, regime",
+      "regime": "assurance maladie du patient, s'il la nomme dans le message ou plus haut dans la conversation : 'cnops', 'cnss', 'aucun' (pas de couverture) ; sinon 'inconnu'",
+      "symptomes": "si situation = conseil_symptome : ids de la liste de symptomes fournie dans le prompt ; un symptome absent de la liste -> 'autre'",
+      "patient": "qui prendrait le medicament : 'adulte', 'enfant', 'bebe' ou 'inconnu' si le message ne le dit pas",
+      "grossesse": "'oui', 'non' ou 'inconnu' si le message ne le dit pas",
+      "duree_jours": "depuis combien de jours dure le symptome (nombre), ou null",
+      "langue": "un code de 'langues' : celle du dernier message du patient",
+      "comprise": "resume tres court, en francais, de ce que le patient demande"
+    },
+    "exemple": {
+      "situation": "repondre",
+      "urgence_type": null,
+      "demandes": ["prix", "remboursement"],
+      "medicaments": [{"nom": "dolipran", "dosage": "1g", "forme": null}],
+      "lieu": null,
+      "pharmacie": null,
+      "manque": [],
+      "symptomes": [],
+      "patient": "inconnu",
+      "grossesse": "inconnu",
+      "duree_jours": null,
+      "regime": "cnss",
+      "langue": "ary_lat",
+      "comprise": "Prix et remboursement CNSS du Doliprane 1 g"
+    }
+  }
+}

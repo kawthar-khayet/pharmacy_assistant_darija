@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import Header from '../components/Header'
+import Icon from '../components/Icon'
 import { dateLisible } from '../lib/conversations'
 import { useConversations } from '../lib/conversationsContexte'
 
@@ -23,20 +24,23 @@ export default function History() {
         sousTitre="Tes discussions precedentes avec DwaTalk."
         aside={
           <button
-            className="bouton-doux"
+            className="bouton-doux bouton-plein"
             onClick={() => {
               demarrer()
               naviguer('/assistant')
             }}
           >
-            + Nouvelle discussion
+            <Icon nom="plus" taille={15} epaisseur={2.2} />
+            Nouvelle discussion
           </button>
         }
       />
 
       {entamees.length === 0 ? (
         <div className="vide">
-          <div className="vide-glyphe" aria-hidden="true">🕘</div>
+          <div className="vide-glyphe">
+            <Icon nom="historique" taille={24} />
+          </div>
           <h3>Pas encore de discussion</h3>
           <p>
             Pose ta premiere question a DwaTalk : elle apparaitra ici pour que tu
@@ -47,7 +51,9 @@ export default function History() {
         <div className="liste">
           {entamees.map((c) => (
             <div key={c.id} className="histo-item">
-              <span className="histo-glyphe" aria-hidden="true">💬</span>
+              <span className="histo-glyphe">
+                <Icon nom="message" />
+              </span>
 
               <button
                 className="histo-corps"
@@ -64,7 +70,7 @@ export default function History() {
                 aria-label={`Supprimer la discussion ${c.titre}`}
                 title="Supprimer"
               >
-                ×
+                <Icon nom="croix" taille={16} />
               </button>
             </div>
           ))}

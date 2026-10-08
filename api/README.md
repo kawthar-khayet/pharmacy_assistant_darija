@@ -1,11 +1,11 @@
 # API — DwaTalk (Challenge #1)
 
-Relie les briques du projet en un seul service :
+Expose le moteur `nlp/` et les recherches des pages de l'interface.
 
 ```
 audio ─► Whisper (parole.py) ─┐
-                              ├─► NLU (LLM few-shot) ─► entity linking ─► reponse JSON + texte
-texte ────────────────────────┘                          medicaments / pharmacies
+                              ├─► nlp/moteur.py ─► reponse courte + fiches pharmacies + notice
+texte ────────────────────────┘
 ```
 
 ## Lancer
@@ -14,74 +14,76 @@ texte ────────────────────────�
 py -m uvicorn api.main:app --reload --port 8000
 ```
 
-Necessite un `.env` a la racine avec `OLLAMA_API_KEY=...` : chaque `/chat` fait un appel LLM. Documentation interactive : http://localhost:8000/docs
+Necessite un `.env` a la racine avec `GEMINI_API_KEY=...` (voir le README principal) : chaque `/chat` fait **un** appel LLM. Documentation interactive : http://localhost:8000/docs
 
 ## Endpoints
 
 | Methode | Chemin | Role |
 |---|---|---|
 | GET | `/health` | Le service repond |
-| GET | `/schema` | Taxonomie intents / entites (`nlu/schema.json`) |
-| POST | `/chat` | Question texte → interpretation structuree + reponse |
+| GET | `/schema` | Vocabulaire de l'analyse (`nlp/analyse/schema.json`) |
+| POST | `/chat` | Question texte → reponse |
 | POST | `/transcription` | Audio → texte (Whisper, local) |
 | POST | `/chat/audio` | Audio → transcription → meme traitement que `/chat` |
 | GET | `/medicaments?q=` | Recherche de medicaments (nom ou molecule, fautes tolerees) |
-| GET | `/pharmacies?ville=&q=` | Recherche de pharmacies par lieu et/ou nom |
+| GET | `/pharmacies?ville=&q=&lat=&lon=` | Pharmacies par lieu, par nom, ou autour d'un point |
+| GET | `/securite?dci=&langue=` | Notice officielle d'une molecule, avec un resume |
 
 ### `POST /chat`
 
 ```json
-{"text": "wach kayn doliprane 1g? bghit juj boites", "session_id": null}
+{"text": "fin kayna pharmacie f m3arif ?", "session_id": null}
 ```
 
-Reponse :
+Reponse (extrait) :
 
 ```json
 {
   "session_id": "3f0c…",
-  "input": "wach kayn doliprane 1g? bghit juj boites",
-  "reply": "DOLIPRANE (1 G, comprime effervescent) -- 13.7 DH, rembourse a 70% (CNOPS et CNSS)\nDans quelle ville ou quel quartier es-tu … ?",
-  "intent": "disponibilite_medicament",
-  "entities": [
-    {"type": "MEDICAMENT", "value": "doliprane"},
-    {"type": "DOSAGE", "value": "1g"},
-    {"type": "QUANTITE", "value": "juj"},
-    {"type": "FORME", "value": "boites"}
-  ],
-  "medicament_matches": [{"nom_candidat": "DOLIPRANE", "score": 100.0, "confidence": "auto", "variantes": ["…"]}],
-  "pharmacie_matches": [],
+  "input": "fin kayna pharmacie f m3arif ?",
+  "reply": "Pharmacies l9rab l Maârif (Casablanca) :\n- Pharmacie Cité Plateau — 24 Bis, avenue Stendhal Casablanca — Tel 0522 25 05 71 — 100 m\n…",
+  "reply_court": "Pharmacies l9rab l Maârif (Casablanca) :",
+  "langue": "ary_lat",
+  "situation": "repondre",
+  "demandes": ["pharmacies_lieu"],
+  "pharmacie_matches": [{"nom": "Pharmacie Cité Plateau", "distance_km": 0.1, "telephone": "0522 25 05 71", "garde": null, "…": "…"}],
+  "medicament_matches": [],
+  "securite": null,
+  "awaiting_localisation": false,
+  "attend": [],
+  "urgence": null,
   "validation_errors": [],
-  "awaiting_localisation": true
+  "analyse": {"situation": "repondre", "demandes": ["pharmacies_lieu"], "lieu": "maarif", "…": "…"},
+  "fournisseur": "gemini"
 }
 ```
 
-- **Multi-tours** : quand la demande porte sur un medicament sans lieu, `awaiting_localisation` vaut `true`. Le message suivant, envoye avec le meme `session_id`, est lu comme la ville ou le quartier.
-- **Paliers de confiance appliques** : un candidat `non_fiable` n'est jamais utilise. Si rien de fiable ne correspond, la reponse dit « Je ne trouve pas … » au lieu de proposer un medicament au hasard. Un candidat `a_confirmer` est presente comme une hypothese (« Tu parles peut-etre de … »).
-- **Remboursement** : CNOPS et CNSS publient chacun son taux, et le regime est toujours nomme. Un taux de 0 s'affiche « non rembourse ».
-- **Question de sante** (`conseil_medical`) : orientation vers un pharmacien ou un medecin, avec les numeros d'urgence (SAMU 141, Protection civile 15, Centre antipoison 0801 000 180). Aucune fiche de medicament n'est affichee, meme si un medicament est cite : elle passerait pour une recommandation.
-- **Equivalents moins chers** (`alternative_moins_chere`) : champ `alternatives` = `{"reference": {...}, "equivalents": [...]}`, meme composition / dosage / voie d'administration, du moins cher au plus cher. `null` si le medicament n'a pas de composition fiable dans la base.
-- **Hors sujet** (`hors_sujet`) : la reponse presente ce que DwaTalk sait faire. Si un medicament a quand meme ete reconnu (« chno kaydir doliprane ? »), sa fiche est donnee avec une reserve.
-- **Pharmacie de garde** : toute reponse qui en parle rappelle que les gardes changent chaque jour et qu'il faut appeler pour confirmer (l'annuaire est un instantane).
-- **Intention inconnue** renvoyee par le modele (ou ancienne : `autre`, `commande_reservation`) : rabattue sur son equivalent v2, ou sur `hors_sujet`.
-- `400` si le texte est vide ; `500` si le LLM est indisponible, avec un message explicite (les surcharges passageres d'Ollama sont retentees 3 fois).
+- `reply` : la reponse complete, dans la langue du patient (`langue` : `fr`, `ary_lat`, `ary_ar`, `ar`). `reply_court` : la meme sans la liste des pharmacies, que l'interface affiche en fiches (`pharmacie_matches`).
+- `situation` : `repondre`, `preciser` (il manque quelque chose : `attend` dit quoi — `medicament`, `regime`, `lieu`, `pharmacie`), `conseil_symptome`, `urgence`, `medical`, `pas_d_info`, `incompris`, `salutation`, `hors_sujet`, ou `indisponible` quand aucun LLM n'a repondu (la reponse le dit et rappelle les numeros d'urgence, statut HTTP 200).
+- `securite` : seulement pour une question sur la notice ; le texte complet des **seules** rubriques demandees.
+- `medicament_matches` reste vide : le chat ne montre plus la fiche complete du medicament, seulement ce qui est demande.
+- **Conversation** : envoyer le meme `session_id`. L'API garde l'historique transmis au LLM (pour completer « f maarif » apres « f ina 7ay ? »), le regime d'assurance et la derniere ville reconnue.
+- `validation_errors` : corrections faites sur la reponse du LLM (valeur inventee, besoin manquant…), utiles pendant les tests.
+- `400` si le texte est vide.
+
+### `GET /pharmacies`
+
+`ville` (ville ou quartier, en darija, arabe ou francais) et/ou `q` (nom) filtrent. `lat`/`lon` (position du navigateur) trient du plus proche au plus loin et ajoutent `distance_km` ; seuls, ils suffisent (« autour de moi »). `note` explique un lieu ambigu ou inconnu.
+
+Chaque resultat porte `latitude`, `longitude`, `precision_gps` (`exacte`, `rue`, `quartier`, `ville`) et `garde` (les horaires quand la pharmacie est ouverte 24h/24 ou la nuit). Seule `exacte` designe l'officine elle-meme : l'interface n'affiche une distance que dans ce cas.
+
+### `GET /securite`
+
+Texte de la notice officielle francaise (BDPM), **mot pour mot** : il decrit la molecule, pas la boite vendue au Maroc. Seule coupe : le paragraphe de declaration a la pharmacovigilance **francaise**. `langue` ajoute un resume (trois phrases au plus, produit par le LLM a partir du seul texte officiel, mis en cache dans `data/clean/securite_resumes.json`). `404` quand la molecule n'est pas couverte (221 le sont).
 
 ### `POST /transcription` et `POST /chat/audio`
 
-Formulaire `multipart/form-data` :
+Formulaire `multipart/form-data` : `fichier` (webm/opus, ogg, mp4, wav…, 60 s et 10 Mo maximum), `langue` (`ar` ou `fr`, facultatif), `session_id` (`/chat/audio`). `/transcription` renvoie `{"texte", "langue", "confiance_langue", "duree_audio", "avertissement"}`. Un audio vide, illisible ou trop long donne une `422`.
 
-| Champ | Obligatoire | Description |
-|---|---|---|
-| `fichier` | oui | Enregistrement (webm/opus, ogg, mp4, wav…), 60 s et 10 Mo maximum |
-| `langue` | non | `ar` ou `fr` pour forcer la langue ; detection automatique sinon |
-| `session_id` | non (`/chat/audio`) | Pour continuer une conversation |
-
-`/transcription` renvoie `{"texte", "langue", "confiance_langue", "duree_audio"}`. `/chat/audio` renvoie la reponse de `/chat` augmentee d'un champ `transcription`. Un audio vide, illisible ou trop long donne une `422` avec la raison.
-
-Le front utilise `/transcription` et non `/chat/audio` : l'utilisateur relit ce que Whisper a entendu avant d'envoyer, ce qui compte en darija.
+Le front utilise `/transcription` : l'utilisateur relit ce que Whisper a entendu avant d'envoyer, ce qui compte en darija.
 
 ## Limites
 
-- Une seule entite `MEDICAMENT` et une seule `PHARMACIE` sont liees par message (les premieres trouvees).
-- Etat de conversation en memoire : il disparait au redemarrage et ne se partage pas entre plusieurs processus. Un vrai deploiement le mettrait dans Redis ou une base.
-- Pas d'authentification ni de limitation de debit (hors perimetre du prototype). Les origines autorisees sont listees explicitement (`FRONTEND_ORIGINS`).
+- Etat de conversation en memoire (1 000 sessions au plus) : il disparait au redemarrage et ne se partage pas entre plusieurs processus.
+- Pas d'authentification ni de limitation de debit (prototype). Les origines autorisees sont listees (`FRONTEND_ORIGINS`).
 - Whisper tourne sur CPU : ~3 s par question, et le premier appel charge le modele.
