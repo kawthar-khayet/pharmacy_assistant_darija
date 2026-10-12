@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Assistant from './pages/Assistant'
 import Medicines from './pages/Medicines'
 import Pharmacies from './pages/Pharmacies'
+import Garde from './pages/Garde'
 import History from './pages/History'
 import Settings from './pages/Settings'
 
@@ -27,6 +28,7 @@ export default function App() {
             <Route path="/assistant" element={<Assistant />} />
             <Route path="/medicaments" element={<Medicines />} />
             <Route path="/pharmacies" element={<Pharmacies />} />
+            <Route path="/garde" element={<Garde />} />
             <Route path="/historique" element={<History />} />
             <Route path="/parametres" element={<Settings />} />
             <Route path="*" element={<Home />} />

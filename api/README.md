@@ -26,6 +26,7 @@ Necessite un `.env` a la racine avec `GEMINI_API_KEY=...` (voir le README princi
 | POST | `/chat/audio` | Audio → transcription → meme traitement que `/chat` |
 | GET | `/medicaments?q=` | Recherche de medicaments (nom ou molecule, fautes tolerees) |
 | GET | `/pharmacies?ville=&q=&lat=&lon=` | Pharmacies par lieu, par nom, ou autour d'un point |
+| GET | `/pharmacies/garde?ville=&lat=&lon=` | Pharmacies de garde du jour dans une ville (source : Telecontact) ; `connu: false` si le tour de garde n'est pas disponible |
 | GET | `/securite?dci=&langue=` | Notice officielle d'une molecule, avec un resume |
 
 ### `POST /chat`
@@ -53,7 +54,8 @@ Reponse (extrait) :
 
 - `reply` : la reponse redigee par le LLM a partir des fiches trouvees, dans la langue du patient (`langue` : `fr`, `ary_lat`, `ary_ar`, `ar`).
 - `situation` : `repondre`, `urgence` (phrase fixe avec les numeros, sans redaction du LLM), ou `indisponible` quand aucun LLM n'a repondu (la reponse le dit et rappelle les numeros d'urgence, statut HTTP 200).
-- `pharmacie_matches` : les pharmacies trouvees, que l'interface affiche en fiches.
+- `pharmacie_matches` : les pharmacies trouvees, que l'interface affiche en fiches. `pharmacie_de_garde` vaut `{date, type, source}` (`type` : `jour`, `nuit` ou `24h`) quand l'officine est de garde aujourd'hui, `null` sinon.
+- `fournisseur` vaut `cache` quand la reponse a ete resservie sans appel LLM.
 - `requete` : ce que le premier appel LLM a compris (ce qu'on a cherche) ; `sources` : les fiches de nos donnees donnees au second appel. Utiles pendant les tests.
 - **Conversation** : envoyer le meme `session_id`. L'API garde les derniers messages (transmis au LLM, pour completer « f maarif » apres « f ina 7ay ? » ou retenir le regime d'assurance) et la derniere ville reconnue.
 - `400` si le texte est vide ; `503` si l'index du RAG n'est pas construit.

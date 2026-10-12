@@ -4,7 +4,8 @@ qu'on lui donne pour repondre.
 Trois recherches, selon la Requete (ecrite par comprendre.py) :
   par les noms    medicaments cites -> leur fiche, et la notice de leur molecule ;
   par la distance pharmacies d'un lieu, de garde, ou citees par leur nom
-                  (outils/pharmacies.py : memes regles qu'avant) ;
+                  (outils/pharmacies.py). La garde du jour vient de Telecontact
+                  (outils/garde.py) ; a defaut, des horaires 24h/24 ou nuit ;
   par le sens     toujours : les symptomes de la liste blanche les plus proches
                   de la question, dans ChromaDB, pour qu'aucune partie du message
                   ne reste sans reponse ("3ndi sda3, fin kayna pharmacie f maarif ?").
@@ -20,8 +21,10 @@ from functools import lru_cache
 
 from rapidfuzz import fuzz, process
 
-from nlp.linking.lieux import resoudre_lieu
+from nlp.linking.lieux import Lieu, resoudre_lieu
 from nlp.linking.medicaments import normalize, transliterate
+from nlp.linking.pharmacies import distance_km
+from nlp.outils.garde import garde_du_jour
 from nlp.outils.pharmacies import info_pharmacie, pharmacie_garde, pharmacies_lieu
 from nlp.outils.resolution import matcher
 from nlp.outils.securite import SEPARATEURS
@@ -37,6 +40,9 @@ MAX_CONSEILS = 3        # symptomes de la liste blanche trouves par le sens
 SEUIL_MOLECULE = 90
 # "PP" (AMMPS) et "PRINCEPS" (CNOPS) : la marque d'origine d'une molecule.
 PRINCEPS = {"PP", "PRINCEPS"}
+
+MAX_GARDE = 5           # pharmacies de garde citees : les plus proches du quartier
+GARDES = {"jour": "de jour", "nuit": "de nuit", "24h": "24h/24"}
 
 TOUR_DE_GARDE = ("Le tour de garde du jour n'est pas dans nos données. Les pharmacies "
                  "ci-dessous sont ouvertes 24h/24 ou la nuit d'après leurs horaires.")
@@ -169,7 +175,9 @@ def _fiche_pharmacie(p: dict) -> dict:
         texte.append(f"Téléphone : {tel}")
     if p.get("horaires"):
         texte.append(f"Horaires : {p['horaires']}")
-    if p.get("ouverture"):
+    if p.get("garde_du_jour"):
+        texte.append(f"De garde le {p['garde_du_jour']} : {GARDES[p['ouverture']]}")
+    elif p.get("ouverture"):
         texte.append(f"Ouverture : {OUVERTURES[p['ouverture']]}")
     if p.get("distance_km") is not None:
         texte.append(f"Distance du lieu demandé : {p['distance_km']} km")
@@ -206,6 +214,46 @@ def _note_pharmacies(res: dict) -> dict | None:
     return None
 
 
+def _garde(lieu: Lieu | None) -> dict | None:
+    """Les pharmacies de garde aujourd'hui dans la ville du lieu, les plus
+    proches du quartier d'abord ; None si on ne connait pas le tour de garde
+    (lieu a preciser, ville non couverte, site injoignable)."""
+    if lieu is None or lieu.statut not in ("quartier", "ville"):
+        return None
+    garde = garde_du_jour(lieu.ville)
+    if not garde:
+        return None
+    pres_de = (lieu.latitude, lieu.longitude) if lieu.statut == "quartier" else None
+    pharmacies = []
+    for p in garde["pharmacies"]:
+        situee = p["latitude"] is not None and p["longitude"] is not None
+        pharmacies.append({
+            "nom": p["nom"], "nom_ar": None, "adresse": p["adresse"], "telephone": p["telephone"],
+            "horaires": None, "ville": lieu.ville, "quartier": p["quartier"],
+            "latitude": p["latitude"], "longitude": p["longitude"],
+            "precision_gps": "exacte" if situee else None,
+            "distance_km": round(distance_km(*pres_de, p["latitude"], p["longitude"]), 1)
+                           if pres_de and situee else None,
+            "ouverture": p["ouverture"], "garde_du_jour": garde["date"], "source": garde["source"],
+        })
+    base = {"ville": lieu.ville, "date": garde["date"], "source": garde["source"]}
+    if pres_de:
+        pharmacies.sort(key=lambda p: (p["distance_km"] is None, p["distance_km"] or 0.0))
+    elif len(pharmacies) > MAX_GARDE:
+        # grande ville sans quartier : une liste de 40 officines n'aide personne
+        return base | {"statut": "garde_preciser_quartier", "nb_pharmacies": len(pharmacies)}
+    return base | {"statut": "garde_du_jour", "pharmacies": pharmacies[:MAX_GARDE]}
+
+
+def _note_garde(res: dict) -> dict:
+    if res["statut"] == "garde_preciser_quartier":
+        return _note(f"{res['ville']} compte {res['nb_pharmacies']} pharmacies de garde le {res['date']} : "
+                     "demander au patient son quartier pour lui donner les plus proches.")
+    return _note(f"Pharmacies de garde à {res['ville']} le {res['date']}, d'après {res['source']}. "
+                 "Pour chacune, dire si elle est de garde de jour, de nuit ou 24h/24. "
+                 f"Dire que la liste vient de {res['source']} et conseiller d'appeler avant de se déplacer.")
+
+
 def _pharmacies(requete: Requete, ville_connue: str | None, trouve: Trouve) -> None:
     # sans lieu dans le message, la ville deja dite dans la conversation sert de lieu
     cite = requete.lieu or ville_connue
@@ -217,12 +265,15 @@ def _pharmacies(requete: Requete, ville_connue: str | None, trouve: Trouve) -> N
     if requete.pharmacie:
         resultats.append(info_pharmacie(requete.pharmacie, lieu if requete.lieu else None, ville_connue))
     if requete.garde:
-        resultats.append(pharmacie_garde(lieu))
+        # le tour de garde du jour si on le connait, sinon les horaires 24h/24 ou nuit
+        resultats.append(_garde(lieu) or pharmacie_garde(lieu))
     elif requete.pharmacies and not requete.pharmacie:
         resultats.append(pharmacies_lieu(lieu))
 
     for res in resultats:
-        if (note := _note_pharmacies(res)):
+        if res["statut"].startswith("garde_"):
+            trouve.fiches.append(_note_garde(res))
+        elif (note := _note_pharmacies(res)):
             trouve.fiches.append(note)
         if res.get("tour_de_garde_connu") is False and res.get("pharmacies"):
             trouve.fiches.append(_note(TOUR_DE_GARDE))

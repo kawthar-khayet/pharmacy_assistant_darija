@@ -93,12 +93,28 @@ PPGN_MAP = {
 }
 
 
+_BARE_FRACTION = re.compile(r"0[.,]\d+")
+
+
+def fraction_to_percent(dosage):
+    """AMMPS writes a percentage strength as a bare fraction ("0.05" for a 5 %
+    cream, "0.009" for 0.9 % saline) where CNOPS and CNSS write "5 %". Left as
+    is, the same tube is described twice ("0.05" and "5 %") and never joins.
+    Only unit-less values below 1 are touched: all 565 of them are creams, gels,
+    eye drops and solutions, i.e. concentrations.
+    """
+    if isinstance(dosage, str) and _BARE_FRACTION.fullmatch(dosage):
+        return f"{round(float(dosage.replace(',', '.')) * 100, 6):g} %"
+    return dosage
+
+
 def clean_ammps(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
     text_cols = ["nom", "dosage", "forme", "substance_active", "classe_therapeutique",
                  "epi_laboratoire", "presentation"]
     for c in text_cols:
         df[c] = df[c].apply(lambda x: norm_text(x) if pd.notna(x) else pd.NA)
+    df["dosage"] = df["dosage"].apply(fraction_to_percent)
 
     df["statut_commercialisation"] = df["statut_commercialisation"].apply(clean_statut)
     df["statut_amm"] = df["statut_amm"].str.strip()

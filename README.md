@@ -23,7 +23,7 @@ texte ─────────────────────┘    (mot
 | Notice (à quoi il sert, effets indésirables, contre-indications, précautions, interactions, grossesse) | la partie demandée de la notice officielle (BDPM), expliquée simplement dans la langue du patient |
 | Posologie (comment / combien en prendre) | **toujours** : « pose la question à ton médecin » — DwaTalk ne donne jamais de dose |
 | Pharmacies d'un quartier | les 5 plus proches, avec la distance |
-| Pharmacie de garde | celles ouvertes 24h/24 ou la nuit dans la ville, en disant que le tour de garde du jour n'est pas connu |
+| Pharmacie de garde | les pharmacies de garde **du jour** (lues sur Telecontact à la demande, gardées pour la journée), les plus proches du quartier, avec leur type de garde (jour, nuit, 24h/24) ; si la ville n'est pas couverte ou le site injoignable : celles ouvertes 24h/24 ou la nuit, en disant que le tour de garde n'est pas connu |
 | Une pharmacie par son nom | adresse et téléphone ; si le nom existe dans plusieurs villes, le bot demande laquelle |
 | Symptôme courant et bénin | la molécule à demander au pharmacien (liste blanche `data/clean/conseil_symptomes.csv`), sans marque ; enfant, bébé, grossesse, symptôme qui dure → un professionnel |
 | Urgence (surdosage, détresse) | numéros d'urgence seulement : SAMU 141, Protection civile 15, Centre antipoison 0801 000 180 — phrase fixe, détectée par mots-clés même si le LLM est en panne |
@@ -59,9 +59,10 @@ Clé gratuite sur https://aistudio.google.com/apikey. Options, toutes facultativ
 | `GROQ_API_KEY`, `OLLAMA_API_KEY` | — | fournisseurs de secours supplémentaires (ignorés sans clé) |
 | `LLM_ORDRE` | `gemini,gemini_secours,groq,ollama` | ordre d'essai des fournisseurs |
 | `GEMINI_MODEL_RESUME` | `gemini-3.1-flash-lite` | résumés des notices de la page Médicaments (pré-calculés, voir `scripts/precalculer_resumes.py`) |
+| `CACHE_REPONSES` | `1` | `0` coupe le cache des réponses (voir plus bas) |
 | `EMBEDDINGS_MODEL` | `intfloat/multilingual-e5-small` | modèle d'embeddings local (changer impose de relancer `nlp.rag.index`) |
 
-⚠️ Le palier gratuit de Gemini est limité (une vingtaine de requêtes par jour et par modèle) : chaque message envoyé au bot en consomme **deux**. Quand aucun fournisseur ne répond, le bot le dit poliment et rappelle les numéros d'urgence.
+⚠️ Le palier gratuit de Gemini est limité (une vingtaine de requêtes par jour et par modèle) : chaque message envoyé au bot en consomme **deux**. Pour l'économiser, la réponse à une question qui ouvre une conversation est retenue 24 h et resservie sans appel LLM à qui repose exactement la même (jamais une urgence ni une question de garde) ; ce cache se vide dès que les prompts ou l'index changent. Quand aucun fournisseur ne répond, le bot le dit poliment et rappelle les numéros d'urgence.
 
 La première question posée **à la voix** télécharge le modèle Whisper « small » (~460 Mo, une seule fois). Les suivantes prennent ~3 s sur CPU.
 
@@ -111,7 +112,8 @@ nlp/                    le moteur
                          recherche.py (noms, distance, sens), repondre.md (regles du 2e appel)
   analyse/urgence.py     filet urgence par mots-cles, avant tout appel LLM
   linking/               medicaments, lieux (villes et quartiers), pharmacies, translitteration
-  outils/                pharmacies (lieu, garde, nom) ; prix et notices pour les fiches
+  outils/                pharmacies (lieu, nom), garde.py (tour de garde du jour, Telecontact) ;
+                         prix et notices pour les fiches
   reponse/               detection de la langue ; phrases fixes (urgence, service en panne)
   preparation/           scripts lances une fois : fusion des pharmacies, quartiers
 api/                    service FastAPI (main.py), voix (parole.py), resumes des notices, client terminal
@@ -126,7 +128,8 @@ tests/                  tests automatises (pytest)
 ## Limites connues
 
 - **Darija à la voix** : Whisper n'a pas de modèle de darija. Le texte transcrit est rendu au champ de saisie pour être relu avant envoi ; la graphie arabe qui en résulte est ensuite rapprochée des bases par translittération et clé phonétique.
-- **Pas de stock, pas de tour de garde** : DwaTalk ne sait ni ce qui est en rayon, ni quelle pharmacie est de garde aujourd'hui. Il le dit.
+- **Pas de stock** : DwaTalk ne sait pas ce qui est en rayon. Il le dit.
+- **Tour de garde** : il vient de Telecontact, pour les villes que ce site couvre (une soixantaine). La première question de la journée sur une grande ville attend la lecture du site (jusqu'à ~30 s). Le bot cite la source et conseille d'appeler avant de se déplacer.
 - **Le LLM rédige** : il a pour consigne de ne répondre qu'avec les fiches et de recopier les chiffres tels quels, mais une reformulation fautive reste possible. `sources` (dans la réponse de `/chat`) liste les fiches qui lui ont été données.
 - **Notice** : elle vient de la base française (BDPM) et décrit la molécule, pas la boîte vendue au Maroc ; 221 molécules sont couvertes.
 - **Conseil symptômes** : la liste `conseil_symptomes.csv` doit être relue par un pharmacien avant tout usage réel.

@@ -208,3 +208,112 @@ def test_llm_indisponible_reste_poli_et_donne_les_urgences(index, monkeypatch):
     assert r.situation == "indisponible"
     assert "Reessaie" in r.texte and "141" in r.texte
     assert session.historique == []      # un message sans reponse n'entre pas dans la conversation
+
+
+# -------------------------------------------------------------------- cache
+
+def test_meme_premiere_question_resservie_sans_llm(llm):
+    appels = llm(reponse="13.10 DH", medicaments=["doliprane"])
+    premiere = repondre("Ch7al taman doliprane ?", Session())
+    assert len(appels) == 2
+    seconde = repondre("  ch7al  taman doliprane", Session())      # majuscules, espaces, "?"
+    assert len(appels) == 2                                         # aucun nouvel appel
+    assert seconde.texte == premiere.texte == "13.10 DH"
+    assert seconde.fournisseur == "cache" and seconde.sources == premiere.sources
+
+
+def test_question_en_cours_de_conversation_jamais_resservie(llm):
+    appels = llm(reponse="13.10 DH", medicaments=["doliprane"])
+    repondre("ch7al taman doliprane", Session())
+    session = Session()
+    repondre("salam", session)
+    avant = len(appels)
+    repondre("ch7al taman doliprane", session)       # meme texte, mais pas en debut de conversation
+    assert len(appels) == avant + 2
+
+
+def test_garde_et_urgence_jamais_retenues(llm):
+    appels = llm(lieu="tanger", pharmacies=True, garde=True)
+    repondre("pharmacie de garde f tanger", Session())
+    repondre("pharmacie de garde f tanger", Session())
+    assert len(appels) == 4
+    appels.clear()
+    llm(urgence="detresse")
+    repondre("mon pere ne va pas bien du tout", Session())
+    repondre("mon pere ne va pas bien du tout", Session())
+    assert len(appels) == 2
+
+
+def test_la_reponse_resservie_entre_dans_la_conversation(llm):
+    llm(reponse="Hahoma.", lieu="maarif casa", pharmacies=True)
+    repondre("pharmacie f maarif casa", Session())
+    session = Session()
+    r = repondre("pharmacie f maarif casa", session)
+    assert r.fournisseur == "cache" and len(r.pharmacies) == 5
+    assert session.ville == "Casablanca" and len(session.historique) == 2
+
+
+def test_le_cache_se_vide_quand_un_prompt_change(llm, monkeypatch):
+    import nlp.moteur
+
+    appels = llm(medicaments=["doliprane"])
+    repondre("ch7al taman doliprane", Session())
+    monkeypatch.setattr(nlp.moteur._Cache, "_version_actuelle", staticmethod(lambda: ("autre",)))
+    repondre("ch7al taman doliprane", Session())
+    assert len(appels) == 4
+
+
+# ---------------------------------------------------------- garde du jour
+
+GARDE_TANGER = {"ville": "Tanger", "date": "2026-10-12", "source": "Telecontact", "pharmacies": [
+    {"nom": f"Pharmacie {i}", "adresse": f"{i} rue de Fès", "ville": "Tanger", "quartier": "Centre",
+     "telephone": "05 39 00 00 00", "latitude": 35.77 + i / 1000, "longitude": -5.80,
+     "ouverture": "nuit" if i % 2 else "jour"}
+    for i in range(1, 9)]}
+
+
+def test_garde_du_jour_remplace_les_horaires(index, monkeypatch):
+    import nlp.rag.recherche as recherche
+
+    monkeypatch.setattr(recherche, "garde_du_jour", lambda ville: GARDE_TANGER if ville == "Tanger" else None)
+    trouve = chercher(Requete("Pharmacie de garde ?", lieu="tanger", pharmacies=True, garde=True))
+    # grande liste sans quartier : on demande le quartier, sans dire "tour de garde inconnu"
+    notes = textes(trouve, "note")
+    assert "8 pharmacies de garde le 2026-10-12" in notes[0] and "quartier" in notes[0]
+    assert not any("n'est pas dans nos données" in n for n in notes)
+    assert trouve.pharmacies == []
+
+
+def test_garde_du_jour_les_plus_proches_du_quartier(index, monkeypatch):
+    import nlp.rag.recherche as recherche
+    from nlp.linking.lieux import Lieu
+
+    monkeypatch.setattr(recherche, "garde_du_jour", lambda ville: GARDE_TANGER)
+    monkeypatch.setattr(recherche, "resoudre_lieu", lambda cite, ville_connue=None: Lieu(
+        cite, "quartier", nom="Centre", ville="Tanger", latitude=35.771, longitude=-5.80))
+    trouve = chercher(Requete("Pharmacie de garde ?", lieu="centre tanger", pharmacies=True, garde=True))
+    assert [p["nom"] for p in trouve.pharmacies][:2] == ["Pharmacie 1", "Pharmacie 2"]
+    assert len(trouve.pharmacies) == 5 and trouve.pharmacies[0]["garde_du_jour"] == "2026-10-12"
+    assert "d'après Telecontact" in textes(trouve, "note")[0]
+    assert "De garde le 2026-10-12 : de nuit" in textes(trouve, "pharmacie")[0]
+
+
+def test_lecture_d_une_page_telecontact():
+    from bs4 import BeautifulSoup
+
+    from nlp.outils.garde import _date, _pharmacies, _quartiers
+
+    page = BeautifulSoup("""
+      <script type="application/ld+json">{"@type": "DataFeedItem", "dateModified": "2026-10-12"}</script>
+      <script type="application/ld+json">{"@type": "ItemList", "itemListElement": [
+        {"@type": "ListItem", "item": {"@type": "Pharmacy", "name": "Pharmacie Addoha",
+          "address": {"streetAddress": "  avenue  Stendahl ", "addressLocality": "Casablanca"},
+          "telephone": "05 22 25 96 69", "geo": {"latitude": "33.57", "longitude": "-7.63"}}},
+        {"@type": "ListItem", "name": "Pharmacie de garde Maarif Casablanca",
+          "url": "https://www.telecontact.ma/pharmacie-de-garde-zone/casablanca/maarif.html"}]}</script>
+    """, "html.parser")
+    assert _date(page) == "2026-10-12"
+    assert _pharmacies(page) == [{"nom": "Pharmacie Addoha", "adresse": "avenue Stendahl",
+                                  "ville": "Casablanca", "telephone": "05 22 25 96 69",
+                                  "latitude": 33.57, "longitude": -7.63}]
+    assert _quartiers(page) == [("Maarif Casablanca", "casablanca", "maarif")]

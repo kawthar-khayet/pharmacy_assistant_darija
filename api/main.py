@@ -9,6 +9,7 @@ reponse avec ces fiches seulement (voir nlp/moteur.py).
     POST /transcription  voix -> texte, pour remplir le champ de saisie
     GET  /medicaments    recherche pour la page Medicaments
     GET  /pharmacies     recherche pour la page Pharmacies
+    GET  /pharmacies/garde   pharmacies de garde du jour dans une ville
     GET  /securite       notice officielle d'une molecule
 
 Lancer :  py -m uvicorn api.main:app --reload --port 8000
@@ -28,6 +29,7 @@ from api.parole import ErreurAudio, transcrire
 from nlp.linking.lieux import charger_pharmacies, resoudre_lieu
 from nlp.linking.pharmacies import chercher_pharmacie, distance_km, fiche
 from nlp.moteur import IndexAbsent, Session, repondre
+from nlp.outils.garde import garde_du_jour
 from nlp.outils.pharmacies import plus_proches, type_ouverture
 from nlp.outils.resolution import matcher
 from nlp.reponse.langues import LANGUE_PAR_DEFAUT
@@ -106,9 +108,13 @@ def telephone_txt(tel) -> str | None:
 
 def pour_carte(p: dict) -> dict:
     """Une fiche pharmacie telle que l'interface l'affiche : `garde` porte les
-    horaires quand la pharmacie est ouverte 24h/24 ou la nuit."""
+    horaires quand la pharmacie est ouverte 24h/24 ou la nuit ; `pharmacie_de_garde`
+    dit si elle est de garde aujourd'hui (tour de garde du jour) et comment."""
     carte = dict(p)
     carte["garde"] = p.get("horaires") if type_ouverture(p.get("horaires")) else None
+    carte["pharmacie_de_garde"] = (
+        {"date": p["garde_du_jour"], "type": p.get("ouverture"), "source": p.get("source")}
+        if p.get("garde_du_jour") else None)
     carte["telephone"] = telephone_txt(p.get("telephone"))
     return carte
 
@@ -285,6 +291,34 @@ def pharmacies(
 
     fiches = _trier(fiches, position)
     return {"resultats": [pour_carte(f) for f in fiches[:limit]], "note": note}
+
+
+@app.get("/pharmacies/garde")
+def pharmacies_de_garde(ville: str, lat: float | None = None, lon: float | None = None):
+    """Pharmacies de garde aujourd'hui dans une ville (source : Telecontact).
+
+    `lat`/`lon` trient de la plus proche a la plus loin. `connu` est faux quand
+    le tour de garde de cette ville n'est pas disponible. La premiere demande
+    de la journee pour une ville lit le site (jusqu'a ~30 s pour une grande
+    ville) ; les suivantes sont immediates.
+    """
+    lieu = resoudre_lieu(ville.strip())
+    if lieu.statut not in ("quartier", "ville"):
+        return {"ville": None, "connu": False, "resultats": [],
+                "note": f"Lieu « {ville} » non reconnu."}
+    garde = garde_du_jour(lieu.ville)
+    if not garde:
+        return {"ville": lieu.ville, "connu": False, "resultats": [],
+                "note": f"Le tour de garde de {lieu.ville} n'est pas disponible aujourd'hui."}
+    position = (lat, lon) if lat is not None and lon is not None else None
+    if position is None and lieu.statut == "quartier":
+        position = (lieu.latitude, lieu.longitude)
+    fiches = [{**p, "ville": lieu.ville, "horaires": None, "nom_ar": None, "distance_km": None,
+               "precision_gps": "exacte" if p["latitude"] is not None else None,
+               "garde_du_jour": garde["date"], "source": garde["source"]}
+              for p in garde["pharmacies"]]
+    return {"ville": lieu.ville, "connu": True, "date": garde["date"], "source": garde["source"],
+            "resultats": [pour_carte(f) for f in _trier(fiches, position)], "note": None}
 
 
 @app.get("/securite")

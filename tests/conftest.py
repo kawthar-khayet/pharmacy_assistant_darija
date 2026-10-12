@@ -52,6 +52,9 @@ def pas_de_vrai_llm(monkeypatch):
     monkeypatch.setattr(nlp.rag.comprendre, "appeler_llm", refuser)
     monkeypatch.setattr(nlp.rag.index, "modele", refuser_modele)
     monkeypatch.setattr(nlp.rag.recherche, "vecteur_question", lambda question: VECTEUR)
+    # ni reponse retenue d'un test a l'autre, ni lecture du site des gardes
+    nlp.moteur.cache.vider()
+    monkeypatch.setattr(nlp.rag.recherche, "garde_du_jour", lambda ville: None)
 
 
 @pytest.fixture(scope="session")

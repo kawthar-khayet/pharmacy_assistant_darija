@@ -14,8 +14,12 @@ import { LANGUE_PAR_DEFAUT, t } from '../lib/langues'
  *
  * Les horaires restent absents de la source : pas de « ouvert maintenant ».
  * Le champ `garde` existe en revanche vraiment, et c'est l'information la plus
- * utile de nuit.
+ * utile de nuit ; `pharmacie_de_garde` dit en plus si l'officine est de garde
+ * aujourd'hui (tour de garde du jour).
  */
+// Tour de garde du jour (champ `pharmacie_de_garde` de l'API).
+const TYPE_DE_GARDE = { jour: 'de jour', nuit: 'de nuit', '24h': '24h/24' }
+
 const LIBELLE_PRECISION = {
   rue: 'position approchee (la voie)',
   quartier: 'position approchee (le quartier)',
@@ -25,7 +29,8 @@ const LIBELLE_PRECISION = {
 export default function PharmacyCard({ pharmacie, langue = LANGUE_PAR_DEFAUT }) {
   const nom = pharmacie.nom ?? 'Pharmacie'
   const tel = pharmacie.telephone
-  const garde = pharmacie.garde
+  // de garde aujourd'hui (tour de garde), ou a defaut ouverte 24h/24 ou la nuit (horaires)
+  const garde = TYPE_DE_GARDE[pharmacie.pharmacie_de_garde?.type] ?? pharmacie.garde
   const exacte = pharmacie.precision_gps === 'exacte'
   const distance = exacte && typeof pharmacie.distance_km === 'number' ? pharmacie.distance_km : null
   const approximative = pharmacie.precision_gps && !exacte

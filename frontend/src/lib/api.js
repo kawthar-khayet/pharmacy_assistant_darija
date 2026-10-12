@@ -62,6 +62,17 @@ export function chercherPharmacies({ q, ville, position, limit = 12, signal } = 
   return appeler(`/pharmacies?${params}`, { signal })
 }
 
+/** Pharmacies de garde du jour dans une ville. `connu` est faux quand le tour
+ *  de garde de cette ville n'est pas disponible ; `position` trie par distance. */
+export function chercherPharmaciesDeGarde(ville, { position, signal } = {}) {
+  const params = new URLSearchParams({ ville })
+  if (position) {
+    params.set('lat', String(position.lat))
+    params.set('lon', String(position.lon))
+  }
+  return appeler(`/pharmacies/garde?${params}`, { signal })
+}
+
 /** Rubriques de securite d'une molecule (notice officielle, verbatim).
  *  Renvoie null quand la molecule n'est pas couverte : c'est un cas normal,
  *  pas une panne, et l'appelant affiche simplement la fiche sans ces sections. */

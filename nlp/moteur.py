@@ -9,15 +9,22 @@
 
 La conversation (Session) garde l'historique envoye au LLM et la derniere
 ville connue : le patient ne les redit pas a chaque message.
+
+Cache : la reponse a une question qui OUVRE une conversation est retenue 24 h
+et resservie sans appel LLM a qui repose exactement la meme (voir _Cache).
 """
 import logging
-from dataclasses import asdict, dataclass, field
+import os
+import re
+import time
+from collections import OrderedDict
+from dataclasses import asdict, dataclass, field, replace
 from pathlib import Path
 
 from nlp.analyse.urgence import detecter_urgence
 from nlp.llm import LLMIndisponible, appeler_llm
 from nlp.rag.comprendre import comprendre, conversation
-from nlp.rag.index import collection
+from nlp.rag.index import INDEX_PATH, collection
 from nlp.rag.recherche import chercher
 from nlp.reponse.langues import detecter_langue
 from nlp.reponse.phrases import t
@@ -41,6 +48,12 @@ NOMS_LANGUES = {
 }
 
 
+# Cache des reponses : CACHE_REPONSES=0 dans le .env le coupe.
+CACHE_ACTIF = os.environ.get("CACHE_REPONSES", "1") != "0"
+CACHE_DUREE = 24 * 3600     # secondes
+CACHE_MAX = 500             # questions retenues ; les plus anciennes sortent
+
+
 class IndexAbsent(RuntimeError):
     """L'index du RAG n'a pas ete construit sur cette machine."""
 
@@ -61,6 +74,65 @@ class Reponse:
     requete: dict | None = None     # ce que le LLM a compris, pour les tests et le debogage
     sources: list[str] = field(default_factory=list)       # ids des fiches donnees au LLM
     fournisseur: str | None = None
+
+
+class _Cache:
+    """Reponses aux questions frequentes, pour ne pas payer deux appels LLM a
+    chaque « ch7al taman doliprane ? ».
+
+    Prudent : seulement le premier message d'une conversation (la reponse a
+    « w taman dyalo ? » depend de ce qui precede), ecrit pareil aux majuscules,
+    espaces et ponctuation finale pres. Jamais une urgence, jamais une question
+    de garde (elle change chaque jour), jamais une panne du LLM.
+
+    Le cache se vide des que les prompts ou l'index changent : une reponse
+    redigee avec d'anciennes regles ou d'anciens prix ne doit pas ressortir.
+    """
+
+    def __init__(self):
+        self._reponses: "OrderedDict[str, tuple[float, Reponse, str | None]]" = OrderedDict()
+        self._version = None
+
+    @staticmethod
+    def _cle(message: str) -> str:
+        return re.sub(r"\s+", " ", message.lower()).strip(" ?!.؟")
+
+    @staticmethod
+    def _version_actuelle() -> tuple:
+        fichiers = (PROMPT_PATH, PROMPT_PATH.with_name("comprendre.md"), INDEX_PATH / "chroma.sqlite3")
+        return tuple(f.stat().st_mtime if f.exists() else 0 for f in fichiers)
+
+    def _verifier_version(self) -> None:
+        version = self._version_actuelle()
+        if version != self._version:
+            self._reponses.clear()
+            self._version = version
+
+    def lire(self, message: str) -> tuple[Reponse, str | None] | None:
+        """(reponse, ville reconnue) si la question est connue et encore fraiche."""
+        self._verifier_version()
+        cle = self._cle(message)
+        trouvee = self._reponses.get(cle)
+        if trouvee is None:
+            return None
+        expire, reponse, ville = trouvee
+        if expire < time.time():
+            del self._reponses[cle]
+            return None
+        self._reponses.move_to_end(cle)
+        return reponse, ville
+
+    def ecrire(self, message: str, reponse: Reponse, ville: str | None) -> None:
+        self._verifier_version()
+        self._reponses[self._cle(message)] = (time.time() + CACHE_DUREE, reponse, ville)
+        while len(self._reponses) > CACHE_MAX:
+            self._reponses.popitem(last=False)
+
+    def vider(self) -> None:
+        self._reponses.clear()
+
+
+cache = _Cache()
 
 
 def _memoriser(session: Session, message: str, reponse: Reponse) -> Reponse:
@@ -104,6 +176,12 @@ def repondre(message: str, session: Session) -> Reponse:
     if collection().count() == 0:
         raise IndexAbsent("index du RAG vide : lance  py -m nlp.rag.fiches  puis  py -m nlp.rag.index")
 
+    # Question deja posee en debut de conversation : meme reponse, sans LLM.
+    debut = CACHE_ACTIF and not session.historique and session.ville is None
+    if debut and (connue := cache.lire(message)):
+        reponse, session.ville = connue
+        return _memoriser(session, message, replace(reponse, fournisseur="cache"))
+
     # 2. Premier appel LLM : que faut-il chercher ?
     try:
         compris = comprendre(message, session.historique)
@@ -127,10 +205,13 @@ def repondre(message: str, session: Session) -> Reponse:
     except LLMIndisponible as e:
         return _indisponible(langue, e)
 
-    return _memoriser(session, message, Reponse(
+    reponse = Reponse(
         rep.texte, langue, "repondre", pharmacies=trouve.pharmacies,
         sources=[f["id"] for f in trouve.fiches if f["type"] != "note"],
-        requete=commun["requete"], fournisseur=rep.fournisseur))
+        requete=commun["requete"], fournisseur=rep.fournisseur)
+    if debut and not compris.requete.garde:
+        cache.ecrire(message, reponse, trouve.ville)
+    return _memoriser(session, message, reponse)
 
 
-__all__ = ["IndexAbsent", "Reponse", "Session", "repondre"]
+__all__ = ["IndexAbsent", "Reponse", "Session", "cache", "repondre"]

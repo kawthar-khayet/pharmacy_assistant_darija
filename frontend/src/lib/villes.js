@@ -69,6 +69,12 @@ export function urlItineraireVers(lat, lon) {
   return `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`
 }
 
+/** Les pharmacies autour d'un point, dans Google Maps : le plan integre
+ *  (un cadre OpenStreetMap) ne sait pas ouvrir une autre carte au clic. */
+export function urlGoogleMaps(lat, lon) {
+  return `https://www.google.com/maps/search/pharmacie/@${lat},${lon},15z`
+}
+
 /** Plan centre sur un point, avec un marqueur pose dessus. */
 export function urlPlanPoint(lat, lon, rayon = 0.004) {
   const bbox = [lon - rayon, lat - rayon * 0.62, lon + rayon, lat + rayon * 0.62]

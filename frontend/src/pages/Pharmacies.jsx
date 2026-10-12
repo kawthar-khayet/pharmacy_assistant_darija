@@ -5,7 +5,7 @@ import SearchBar from '../components/SearchBar'
 import PharmacyCard from '../components/PharmacyCard'
 import LoadingState from '../components/LoadingState'
 import { ApiError, chercherPharmacies, positionActuelle } from '../lib/api'
-import { coordonneesVille, urlPlan, urlPlanPoint } from '../lib/villes'
+import { coordonneesVille, urlGoogleMaps, urlPlan, urlPlanPoint } from '../lib/villes'
 
 const VILLES_COURANTES = ['Casablanca', 'Rabat', 'Marrakech', 'Tanger', 'Agadir', 'Fes']
 
@@ -22,13 +22,23 @@ function Plan({ lieu, position, resultats }) {
     <div className="carte-plan">
       <div className="carte-plan-toile filigrane">
         {coords ? (
-          <iframe
-            title={centreSurOfficine ? 'Plan autour de la position' : `Plan de ${lieu}`}
-            src={centreSurOfficine ? urlPlanPoint(coords[0], coords[1]) : urlPlan(coords)}
-            style={{ width: '100%', height: '100%', border: 0, display: 'block' }}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+          <>
+            <iframe
+              title={centreSurOfficine ? 'Plan autour de la position' : `Plan de ${lieu}`}
+              src={centreSurOfficine ? urlPlanPoint(coords[0], coords[1]) : urlPlan(coords)}
+              style={{ width: '100%', height: '100%', border: 0, display: 'block' }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+            <a
+              className="carte-plan-lien"
+              href={urlGoogleMaps(coords[0], coords[1])}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <Icon nom="itineraire" taille={14} /> Ouvrir dans Google Maps
+            </a>
+          </>
         ) : (
           <div className="carte-plan-vide">
             <div>
