@@ -1,5 +1,5 @@
-"""Scenarios de bout en bout sur l'API : analyse simulee, tout le reste reel
-(bases de data/clean, outils, redaction)."""
+"""Scenarios de bout en bout sur l'API : LLM simule, tout le reste reel (bases
+de data/clean, fiches, recherche). Les scenarios du chat sont dans test_rag.py."""
 import json
 import re
 
@@ -27,221 +27,27 @@ def test_health(client):
     assert client.get("/health").json() == {"status": "ok"}
 
 
-def test_schema_expose_le_vocabulaire_de_l_analyse(client):
-    schema = client.get("/schema").json()
-    assert {"prix", "remboursement", "pharmacies_lieu", "posologie"} <= set(schema["demandes"])
-    assert "urgence" in schema["situations"]
-    # la posologie n'a besoin de rien : la reponse est toujours "demande a ton medecin"
-    assert schema["demandes"]["posologie"]["besoin"] == []
-
-
 def test_texte_vide_refuse(client):
     assert client.post("/chat", json={"text": "   "}).status_code == 400
 
 
-# ------------------------------------------------------------- medicaments
+# -------------------------------------------------------------------- chat
 
-def test_prix_seul_ne_parle_pas_de_remboursement(client, analyse):
-    analyse(demandes=["prix"], medicaments=[{"nom": "doliprane", "dosage": "1g"}])
-    d = poser(client, "prix du doliprane 1g")
-    assert "13,10 DH" in d["reply"]
-    assert "rembours" not in d["reply"].lower()
-    assert d["medicament_matches"] == []          # plus de fiche complete dans le chat
-
-
-def test_prix_sans_dosage_donne_le_prix_par_dosage(client, analyse):
-    analyse(demandes=["prix"], medicaments=[{"nom": "doliprane"}])
-    reply = poser(client, "prix du doliprane")["reply"]
-    assert "selon le dosage" in reply
-    assert "- 1 g : 13,10 DH a 13,70 DH" in reply
+def test_chat_renvoie_la_reponse_du_llm_et_ses_sources(client, llm):
+    llm(reponse="Doliprane 1 g : 13.10 DH", medicaments=["doliprane"], question="Prix de Doliprane 1 g ?")
+    d = poser(client, "ch7al taman doliprane 1g")
+    assert d["reply"] == "Doliprane 1 g : 13.10 DH"
+    assert d["langue"] == "ary_lat" and d["situation"] == "repondre"
+    assert "med:DOLIPRANE" in d["sources"]
+    assert d["requete"]["medicaments"] == ["doliprane"]
 
 
-@pytest.mark.parametrize("dosage", ["1000", "1000mg", "1000g"])
-def test_prix_dosage_ecrit_en_mg(client, analyse, dosage):
-    """La base ecrit "1 G" : 1000 mg doit donner les memes prix, sans redemander."""
-    analyse(demandes=["prix"], medicaments=[{"nom": "doliprane", "dosage": dosage}])
-    reply = poser(client, f"chhal taman doliprane {dosage}")["reply"]
-    assert "13,10 DH" in reply and "13,70 DH" in reply
-    assert "selon le dosage" not in reply
+def test_chat_pharmacies_en_fiches(client, llm):
+    llm(lieu="maarif casa", pharmacies=True)
+    d = poser(client, "fin kayna pharmacie f maarif casa")
+    assert len(d["pharmacie_matches"]) == 5
+    assert all(p["distance_km"] is not None for p in d["pharmacie_matches"])
 
-
-def test_prix_dosage_trouve_liste_toutes_ses_formes(client, analyse):
-    """Doliprane 500 mg a 4 formes : on les liste au lieu de redemander le dosage."""
-    analyse(demandes=["prix"], medicaments=[{"nom": "doliprane", "dosage": "500mg"}])
-    reply = poser(client, "prix du doliprane 500")["reply"]
-    assert "9,60 DH" in reply and "14,80 DH" in reply
-    assert "selon le dosage" not in reply
-
-
-def test_prix_dosage_absent_le_dit_et_liste_les_dosages(client, analyse):
-    analyse(demandes=["prix"], medicaments=[{"nom": "doliprane", "dosage": "2g"}])
-    reply = poser(client, "prix du doliprane 2g")["reply"]
-    assert "Je ne trouve pas Doliprane en 2g" in reply
-    assert "- 1 g : 13,10 DH a 13,70 DH" in reply
-
-
-def test_remboursement_demande_le_regime_puis_le_retient(client, analyse):
-    analyse(situation="preciser", demandes=["remboursement"], medicaments=[{"nom": "augmentin", "dosage": "1g"}])
-    d = poser(client, "augmentin 1g kayt3awed ?")
-    assert "CNOPS" in d["reply"] and "CNSS" in d["reply"]
-    assert d["attend"] == ["regime"]
-
-    analyse(demandes=["remboursement"], medicaments=[{"nom": "augmentin", "dosage": "1g"}], regime="cnss")
-    d = poser(client, "cnss", d["session_id"])
-    assert "Remboursement CNSS" in d["reply"] and "70 %" in d["reply"]
-
-    # le patient ne redit pas son regime : la conversation s'en souvient
-    analyse(situation="preciser", demandes=["remboursement"], medicaments=[{"nom": "smecta"}])
-    d = poser(client, "w smecta ?", d["session_id"])
-    assert "Remboursement CNSS de Smecta" in d["reply"]
-    assert d["attend"] == []
-
-
-def test_sans_assurance_on_paie_le_prix_public(client, analyse):
-    analyse(demandes=["remboursement"], medicaments=[{"nom": "doliprane"}], regime="aucun")
-    assert "prix public" in poser(client, "ma3ndich tamin, doliprane kayt3awed?")["reply"]
-
-
-def test_formes_et_dosages(client, analyse):
-    analyse(demandes=["formes_dosages"], medicaments=[{"nom": "doliprane", "forme": "sirop"}])
-    reply = poser(client, "doliprane sirop kayn ?")["reply"]
-    assert "Je ne trouve pas Doliprane en sirop" in reply
-    assert "suppositoire" in reply
-
-
-def test_medicament_introuvable_n_invente_rien(client, analyse):
-    analyse(demandes=["prix"], medicaments=[{"nom": "qwertyzol"}])
-    reply = poser(client, "prix qwertyzol")["reply"]
-    assert "Je ne trouve pas « qwertyzol »" in reply
-    assert "DH" not in reply
-
-
-def test_medicament_non_nomme_le_bot_demande_lequel(client, analyse):
-    analyse(situation="preciser", demandes=["prix"], langue="ary_lat")
-    d = poser(client, "chhal taman had dwa ?")
-    assert d["attend"] == ["medicament"]
-    assert "ina dwa" in d["reply"]
-
-
-# ----------------------------------------------------------------- posologie
-
-def test_posologie_renvoie_toujours_au_medecin(client, analyse):
-    analyse(demandes=["posologie"], medicaments=[{"nom": "amoxil", "dosage": "1g"}])
-    reply = poser(client, "comment prendre amoxil 1g ?")["reply"]
-    assert "pose la question a ton medecin" in reply
-    assert not re.search(r"\d+\s*(fois|comprim|mg|g\b)", reply)
-
-
-def test_posologie_ne_bloque_pas_les_autres_demandes(client, analyse):
-    analyse(demandes=["prix", "posologie"], medicaments=[{"nom": "doliprane", "dosage": "1g"}])
-    reply = poser(client, "taman doliprane w kifach nakhdo ?")["reply"]
-    assert "DH" in reply and "medecin" in reply
-
-
-# ------------------------------------------------------------------- notice
-
-def test_effets_indesirables_seulement_la_rubrique_demandee(client, analyse):
-    analyse(demandes=["effets_indesirables"], medicaments=[{"nom": "doliprane"}])
-    d = poser(client, "effets secondaires du doliprane ?")
-    assert "Effets indesirables de Doliprane" in d["reply"]
-    assert list(d["securite"]["rubriques"]) == ["effets_indesirables"]
-    assert "signalement.social-sante" not in d["reply"]
-
-
-def test_molecule_sans_notice_renvoie_au_pharmacien(client, analyse):
-    analyse(demandes=["indications"], medicaments=[{"nom": "smecta"}])
-    d = poser(client, "chno kaydir smecta ?")
-    assert "pharmacien" in d["reply"]
-    assert d["securite"] is None
-
-
-# ---------------------------------------------------------------- pharmacies
-
-def test_pharmacies_les_plus_proches_d_un_quartier(client, analyse):
-    analyse(demandes=["pharmacies_lieu"], lieu="f m3arif", langue="ary_lat")
-    d = poser(client, "fin kayna pharmacie f m3arif ?")
-    cartes = d["pharmacie_matches"]
-    assert len(cartes) == 5
-    assert all(c["ville"] == "Casablanca" for c in cartes)
-    distances = [c["distance_km"] for c in cartes]
-    assert distances == sorted(distances) and distances[0] < 1
-    # la version courte laisse la liste aux fiches
-    assert cartes[0]["nom"] in d["reply"] and cartes[0]["nom"] not in d["reply_court"]
-    assert not any(n.startswith(("Para", "Drogu")) for n in (c["nom"] for c in cartes))
-
-
-def test_grande_ville_sans_quartier_demande_le_quartier(client, analyse):
-    analyse(demandes=["pharmacies_lieu"], lieu="casa")
-    d = poser(client, "pharmacie a casa")
-    assert "quel quartier" in d["reply"]
-    assert d["pharmacie_matches"] == [] and d["awaiting_localisation"] is True
-
-
-def test_quartier_homonyme_demande_la_ville_puis_se_souvient(client, analyse):
-    analyse(demandes=["pharmacies_lieu"], lieu="agdal")
-    d = poser(client, "pharmacie agdal")
-    assert "Rabat" in d["reply"] and "laquelle" in d["reply"]
-
-    analyse(demandes=["pharmacies_lieu"], lieu="rabat")
-    d = poser(client, "rabat", d["session_id"])          # ville retenue par la session
-    analyse(demandes=["pharmacies_lieu"], lieu="agdal")
-    d = poser(client, "f agdal", d["session_id"])
-    assert d["pharmacie_matches"] and d["pharmacie_matches"][0]["ville"] == "Rabat"
-
-
-def test_garde_avoue_ne_pas_connaitre_le_tour_de_garde(client, analyse):
-    analyse(demandes=["pharmacie_garde"], lieu="casa")
-    d = poser(client, "pharmacie de garde casa")
-    assert "tour de garde" in d["reply"]
-    assert "141" not in d["reply"]          # le 141 est le SAMU, pas un service de garde
-    assert d["pharmacie_matches"] and all(c["garde"] for c in d["pharmacie_matches"])
-
-
-def test_pharmacie_homonyme_demande_la_ville(client, analyse):
-    analyse(demandes=["info_pharmacie"], pharmacie="ibn sina")
-    d = poser(client, "fin kayna pharmacie ibn sina ?")
-    assert "plusieurs villes" in d["reply"]
-    assert d["pharmacie_matches"] == []
-
-
-def test_pharmacie_avec_sa_ville_repond_directement(client, analyse):
-    analyse(demandes=["info_pharmacie"], pharmacie="ibn sina", lieu="rabat")
-    d = poser(client, "pharmacie ibn sina a rabat")
-    assert d["pharmacie_matches"][0]["nom"] == "Pharmacie Ibn Sina"
-    assert d["pharmacie_matches"][0]["ville"] == "Rabat"
-
-
-def test_lieu_inconnu_ne_renvoie_pas_une_liste_au_hasard(client, analyse):
-    analyse(demandes=["pharmacies_lieu"], lieu="zzzqqqville")
-    d = poser(client, "pharmacie a zzzqqqville")
-    assert d["pharmacie_matches"] == []
-    assert "Je ne connais pas" in d["reply"]
-
-
-# ------------------------------------------------------------ conseil symptome
-
-def test_conseil_cite_la_molecule_jamais_une_marque(client, analyse):
-    analyse(situation="conseil_symptome", symptomes=["fievre_legere"], patient="adulte")
-    reply = poser(client, "j'ai un peu de fievre")["reply"]
-    assert "paracetamol" in reply and "3 jours" in reply
-    assert "DOLIPRANE" not in reply.upper()
-
-
-@pytest.mark.parametrize("champs", [{"patient": "enfant"}, {"patient": "bebe"}, {"grossesse": "oui"}])
-def test_conseil_enfant_bebe_grossesse_vers_un_professionnel(client, analyse, champs):
-    analyse(situation="conseil_symptome", symptomes=["fievre_legere"], **champs)
-    reply = poser(client, "fievre")["reply"]
-    assert "paracetamol" not in reply
-    assert "pharmacien" in reply or "medecin" in reply
-
-
-def test_conseil_symptome_qui_dure_vers_le_medecin(client, analyse):
-    analyse(situation="conseil_symptome", symptomes=["mal_de_tete"], duree_jours=10)
-    reply = poser(client, "mal de tete depuis 10 jours")["reply"]
-    assert "medecin" in reply and "paracetamol" not in reply
-
-
-# ------------------------------------------------------------------ urgences
 
 def test_urgence_detectee_sans_appeler_le_llm(client):
     """Le filet de mots-cles repond seul : le garde-fou de conftest ferait
@@ -251,60 +57,16 @@ def test_urgence_detectee_sans_appeler_le_llm(client):
     assert "0801 000 180" in d["reply"]
 
 
-def test_urgence_reconnue_par_le_llm(client, analyse):
-    analyse(situation="urgence", urgence_type="detresse", demandes=["prix"])
-    d = poser(client, "mon pere a du mal, il ne va pas bien du tout")
-    assert d["urgence"] == "detresse" and "141" in d["reply"]
-    assert "DH" not in d["reply"]
-
-
-def test_llm_indisponible_reste_poli_et_donne_les_urgences(client, monkeypatch):
+def test_index_absent_renvoie_503(client, monkeypatch):
     import nlp.moteur
-    from nlp.llm import LLMIndisponible
 
-    def panne(*a, **k):
-        raise LLMIndisponible("gemini : quota ; groq : pas de cle")
+    class Vide:
+        def count(self):
+            return 0
 
-    monkeypatch.setattr(nlp.moteur, "analyser", panne)
-    d = poser(client, "prix doliprane")
-    assert d["situation"] == "indisponible"
-    assert "Reessaie" in d["reply"] and "141" in d["reply"]
-
-
-# -------------------------------------------------------- situations simples
-
-@pytest.mark.parametrize("situation, extrait", [
-    ("salutation", "Bonjour"),
-    ("hors_sujet", "assistant pharmacie"),
-    ("pas_d_info", "Je ne suis pas une pharmacie"),
-    ("incompris", "reformuler"),
-    ("medical", "medecin"),
-])
-def test_situations_sans_demande(client, analyse, situation, extrait):
-    analyse(situation=situation)
-    assert extrait in poser(client, "message")["reply"]
-
-
-def test_reponse_dans_la_langue_de_la_question(client, analyse):
-    analyse(demandes=["prix"], medicaments=[{"nom": "دوليبران", "dosage": "1g"}], langue="ary_ar")
-    d = poser(client, "شحال تمن دوليبران 1g ؟")
-    assert d["langue"] == "ary_ar"
-    assert "درهم" in d["reply"]
-
-
-def test_l_historique_est_transmis_a_l_analyse(client, analyse):
-    appels = analyse(situation="salutation", langue="ary_lat")
-    d = poser(client, "salam")
-    poser(client, "f maarif", d["session_id"])
-    assert appels[1]["historique"][0] == {"role": "user", "contenu": "salam"}
-    assert appels[1]["historique"][1]["role"] == "assistant"
-
-
-def test_une_analyse_invalide_est_corrigee_et_signalee(client, analyse):
-    analyse(situation="repondre", demandes=["disponibilite"], medicaments=[{"nom": "doliprane"}])
-    d = poser(client, "wach kayn doliprane")
-    assert d["situation"] == "pas_d_info"
-    assert any("disponibilite" in c for c in d["validation_errors"])
+    monkeypatch.setattr(nlp.moteur, "collection", lambda: Vide())
+    r = client.post("/chat", json={"text": "prix doliprane"})
+    assert r.status_code == 503 and "nlp.rag.index" in r.json()["detail"]
 
 
 # --------------------------------------------------------- pages de l'interface
@@ -424,14 +186,14 @@ def test_audio_inexploitable_renvoie_422(client, api, monkeypatch):
     assert "rien entendu" in r.json()["detail"]
 
 
-def test_chat_audio_enchaine_transcription_et_reponse(client, api, analyse, monkeypatch, audio_fr):
+def test_chat_audio_enchaine_transcription_et_reponse(client, api, llm, monkeypatch, audio_fr):
     from api.parole import Transcription
 
     monkeypatch.setattr(
         api, "transcrire",
         lambda contenu, langue=None: Transcription("chhal taman doliprane 1g", "fr", 0.9, 2.0),
     )
-    analyse(demandes=["prix"], medicaments=[{"nom": "doliprane", "dosage": "1g"}], langue="ary_lat")
+    llm(reponse="Doliprane 1 g : 13.10 DH", medicaments=["doliprane"])
     d = client.post("/chat/audio", files={"fichier": ("q.wav", audio_fr, "audio/wav")}).json()
     assert d["transcription"]["texte"] == "chhal taman doliprane 1g"
     assert d["input"] == "chhal taman doliprane 1g"

@@ -4,7 +4,7 @@ Expose le moteur `nlp/` et les recherches des pages de l'interface.
 
 ```
 audio ─► Whisper (parole.py) ─┐
-                              ├─► nlp/moteur.py ─► reponse courte + fiches pharmacies + notice
+                              ├─► nlp/moteur.py (RAG) ─► reponse du LLM + fiches pharmacies
 texte ────────────────────────┘
 ```
 
@@ -14,14 +14,13 @@ texte ────────────────────────�
 py -m uvicorn api.main:app --reload --port 8000
 ```
 
-Necessite un `.env` a la racine avec `GEMINI_API_KEY=...` (voir le README principal) : chaque `/chat` fait **un** appel LLM. Documentation interactive : http://localhost:8000/docs
+Necessite un `.env` a la racine avec `GEMINI_API_KEY=...` (voir le README principal) : chaque `/chat` fait **deux** appels LLM (comprendre, rediger). L'index du RAG doit etre construit (`py -m nlp.rag.fiches` puis `py -m nlp.rag.index`), sinon `/chat` repond `503`. Documentation interactive : http://localhost:8000/docs
 
 ## Endpoints
 
 | Methode | Chemin | Role |
 |---|---|---|
 | GET | `/health` | Le service repond |
-| GET | `/schema` | Vocabulaire de l'analyse (`nlp/analyse/schema.json`) |
 | POST | `/chat` | Question texte → reponse |
 | POST | `/transcription` | Audio → texte (Whisper, local) |
 | POST | `/chat/audio` | Audio → transcription → meme traitement que `/chat` |
@@ -41,30 +40,23 @@ Reponse (extrait) :
 {
   "session_id": "3f0c…",
   "input": "fin kayna pharmacie f m3arif ?",
-  "reply": "Pharmacies l9rab l Maârif (Casablanca) :\n- Pharmacie Cité Plateau — 24 Bis, avenue Stendhal Casablanca — Tel 0522 25 05 71 — 100 m\n…",
-  "reply_court": "Pharmacies l9rab l Maârif (Casablanca) :",
+  "reply": "Hahoma l-pharmaciyat l9rab l Maârif (Casablanca) :\n- Pharmacie Cité Plateau, 24 Bis avenue Stendhal, 0522250571, 0.1 km\n…",
   "langue": "ary_lat",
   "situation": "repondre",
-  "demandes": ["pharmacies_lieu"],
   "pharmacie_matches": [{"nom": "Pharmacie Cité Plateau", "distance_km": 0.1, "telephone": "0522 25 05 71", "garde": null, "…": "…"}],
-  "medicament_matches": [],
-  "securite": null,
-  "awaiting_localisation": false,
-  "attend": [],
   "urgence": null,
-  "validation_errors": [],
-  "analyse": {"situation": "repondre", "demandes": ["pharmacies_lieu"], "lieu": "maarif", "…": "…"},
+  "requete": {"question": "Où trouver une pharmacie à Maârif ?", "medicaments": [], "lieu": "m3arif", "pharmacie": null, "pharmacies": true, "garde": false},
+  "sources": ["pharma:Pharmacie Cité Plateau:Casablanca:24 Bis, avenue Stendhal Casablanca", "…"],
   "fournisseur": "gemini"
 }
 ```
 
-- `reply` : la reponse complete, dans la langue du patient (`langue` : `fr`, `ary_lat`, `ary_ar`, `ar`). `reply_court` : la meme sans la liste des pharmacies, que l'interface affiche en fiches (`pharmacie_matches`).
-- `situation` : `repondre`, `preciser` (il manque quelque chose : `attend` dit quoi — `medicament`, `regime`, `lieu`, `pharmacie`), `conseil_symptome`, `urgence`, `medical`, `pas_d_info`, `incompris`, `salutation`, `hors_sujet`, ou `indisponible` quand aucun LLM n'a repondu (la reponse le dit et rappelle les numeros d'urgence, statut HTTP 200).
-- `securite` : seulement pour une question sur la notice ; le texte complet des **seules** rubriques demandees.
-- `medicament_matches` reste vide : le chat ne montre plus la fiche complete du medicament, seulement ce qui est demande.
-- **Conversation** : envoyer le meme `session_id`. L'API garde l'historique transmis au LLM (pour completer « f maarif » apres « f ina 7ay ? »), le regime d'assurance et la derniere ville reconnue.
-- `validation_errors` : corrections faites sur la reponse du LLM (valeur inventee, besoin manquant…), utiles pendant les tests.
-- `400` si le texte est vide.
+- `reply` : la reponse redigee par le LLM a partir des fiches trouvees, dans la langue du patient (`langue` : `fr`, `ary_lat`, `ary_ar`, `ar`).
+- `situation` : `repondre`, `urgence` (phrase fixe avec les numeros, sans redaction du LLM), ou `indisponible` quand aucun LLM n'a repondu (la reponse le dit et rappelle les numeros d'urgence, statut HTTP 200).
+- `pharmacie_matches` : les pharmacies trouvees, que l'interface affiche en fiches.
+- `requete` : ce que le premier appel LLM a compris (ce qu'on a cherche) ; `sources` : les fiches de nos donnees donnees au second appel. Utiles pendant les tests.
+- **Conversation** : envoyer le meme `session_id`. L'API garde les derniers messages (transmis au LLM, pour completer « f maarif » apres « f ina 7ay ? » ou retenir le regime d'assurance) et la derniere ville reconnue.
+- `400` si le texte est vide ; `503` si l'index du RAG n'est pas construit.
 
 ### `GET /pharmacies`
 

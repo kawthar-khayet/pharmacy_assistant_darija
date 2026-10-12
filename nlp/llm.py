@@ -1,9 +1,10 @@
-"""Appel LLM unique du moteur : Gemini, puis Groq, puis Ollama Cloud en secours.
+"""Appels LLM du moteur : Gemini, puis Groq, puis Ollama Cloud en secours.
 
 C'est le seul fichier qui parle a un LLM. On lui donne des consignes (le prompt
-systeme) et la conversation ; il renvoie le JSON du premier fournisseur qui
-repond correctement, et le nom de ce fournisseur (utile pendant les tests pour
-savoir qui a repondu). L'ordre et les cles se reglent dans le .env (config.py).
+systeme) et la conversation ; il renvoie la reponse du premier fournisseur qui
+repond correctement -- un JSON pour la comprehension, du texte pour la reponse
+au patient -- et le nom de ce fournisseur (utile pendant les tests pour savoir
+qui a repondu). L'ordre et les cles se reglent dans le .env (config.py).
 """
 import json
 import logging
@@ -35,9 +36,10 @@ class _ErreurDefinitive(Exception):
 
 @dataclass
 class ReponseLLM:
-    donnees: dict       # le JSON renvoye par le modele, deja decode
+    donnees: dict       # le JSON renvoye par le modele, deja decode ({} en mode texte)
     fournisseur: str    # "gemini", "gemini_secours", "groq" ou "ollama"
     modele: str
+    texte: str = ""     # la reponse en mode texte (en_json=False)
 
 
 def _poster(url: str, entetes: dict, corps: dict) -> dict:
@@ -60,7 +62,10 @@ def _messages_openai(systeme: str, messages: list[dict]) -> list[dict]:
     ]
 
 
-def _gemini(conf: dict, systeme: str, messages: list[dict]) -> str:
+def _gemini(conf: dict, systeme: str, messages: list[dict], en_json: bool) -> str:
+    generation = {"temperature": 0}
+    if en_json:
+        generation["response_mime_type"] = "application/json"
     corps = {
         "system_instruction": {"parts": [{"text": systeme}]},
         # Gemini appelle "model" ce que les autres appellent "assistant"
@@ -69,7 +74,7 @@ def _gemini(conf: dict, systeme: str, messages: list[dict]) -> str:
              "parts": [{"text": m["contenu"]}]}
             for m in messages
         ],
-        "generationConfig": {"temperature": 0, "response_mime_type": "application/json"},
+        "generationConfig": generation,
     }
     rep = _poster(f"{conf['url']}/models/{conf['modele']}:generateContent",
                   {"x-goog-api-key": conf["cle"]}, corps)
@@ -82,14 +87,15 @@ def _gemini(conf: dict, systeme: str, messages: list[dict]) -> str:
     return "".join(p.get("text", "") for p in parties if not p.get("thought"))
 
 
-def _groq(conf: dict, systeme: str, messages: list[dict]) -> str:
+def _groq(conf: dict, systeme: str, messages: list[dict], en_json: bool) -> str:
     corps = {
         "model": conf["modele"],
         "messages": _messages_openai(systeme, messages),
         "temperature": 0,
-        # mode JSON : Groq exige que le mot "JSON" figure dans le prompt systeme
-        "response_format": {"type": "json_object"},
     }
+    if en_json:
+        # mode JSON : Groq exige que le mot "JSON" figure dans le prompt systeme
+        corps["response_format"] = {"type": "json_object"}
     rep = _poster(f"{conf['url']}/chat/completions",
                   {"Authorization": f"Bearer {conf['cle']}"}, corps)
     try:
@@ -98,14 +104,15 @@ def _groq(conf: dict, systeme: str, messages: list[dict]) -> str:
         raise _ErreurDefinitive(f"reponse vide : {json.dumps(rep)[:300]}")
 
 
-def _ollama(conf: dict, systeme: str, messages: list[dict]) -> str:
+def _ollama(conf: dict, systeme: str, messages: list[dict], en_json: bool) -> str:
     corps = {
         "model": conf["modele"],
         "messages": _messages_openai(systeme, messages),
         "stream": False,
-        "format": "json",
         "options": {"temperature": 0},
     }
+    if en_json:
+        corps["format"] = "json"
     rep = _poster(f"{conf['url']}/chat",
                   {"Authorization": f"Bearer {conf['cle']}"}, corps)
     try:
@@ -138,11 +145,12 @@ def _extraire_json(texte: str) -> dict:
     return donnees
 
 
-def appeler_llm(systeme: str, messages: list[dict]) -> ReponseLLM:
+def appeler_llm(systeme: str, messages: list[dict], en_json: bool = True) -> ReponseLLM:
     """Envoie la conversation au premier fournisseur disponible.
 
     `messages` : [{"role": "user" | "assistant", "contenu": "..."}, ...],
     du plus ancien au plus recent ; le dernier est la question du patient.
+    `en_json=False` : la reponse est du texte libre, rendu dans `.texte`.
     Leve LLMIndisponible si aucun fournisseur n'a pu repondre.
     """
     erreurs = []
@@ -158,8 +166,12 @@ def appeler_llm(systeme: str, messages: list[dict]) -> ReponseLLM:
         derniere = ""
         for tentative in range(LLM_TENTATIVES):
             try:
-                texte = _APPELS[nom](conf, systeme, messages)
-                return ReponseLLM(_extraire_json(texte), nom, conf["modele"])
+                texte = _APPELS[nom](conf, systeme, messages, en_json)
+                if en_json:
+                    return ReponseLLM(_extraire_json(texte), nom, conf["modele"])
+                if not texte.strip():
+                    raise _ErreurDefinitive("reponse vide")
+                return ReponseLLM({}, nom, conf["modele"], texte.strip())
             except _ErreurPassagere as e:
                 derniere = f"{nom} : {e}"
                 if tentative < LLM_TENTATIVES - 1:

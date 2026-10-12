@@ -1,20 +1,14 @@
-"""Outil prix : prix public et remboursement (CNOPS / CNSS) d'un medicament.
+"""Prix public et remboursement (CNOPS / CNSS) des presentations d'un medicament.
 
-Renvoie le prix et le remboursement des deux regimes ; c'est le composeur qui
-n'affiche que ce que le patient a demande, et seulement pour SON regime (un
-patient n'est adherent qu'a un seul).
+Sert a ecrire les fiches du RAG (nlp/rag/fiches.py) : chaque presentation
+porte son prix et le remboursement des deux regimes.
 """
 import re
 
 import pandas as pd
 
-from nlp.linking.medicaments import STATUTS_EN_OFFICINE, dose_mg, filtrer_dosage, normalize
-from nlp.outils.resolution import MedicamentResolu, matcher
+from nlp.linking.medicaments import normalize
 
-# Au-dela, une liste de prix est illisible dans un chat : on donne un prix par
-# dosage (le plus bas et le plus haut des formes) au lieu de chaque forme.
-MAX_PRESENTATIONS = 3
-MAX_DOSAGES = 6
 REGIMES = ("cnops", "cnss")
 
 
@@ -27,30 +21,6 @@ def _forme_de_base(forme) -> str:
     """"COMPRIME EFFERVESCENT SECABLE" et "COMPRIME EFFERVESCENT" : meme produit
     pour le patient, seule la barre de secabilite change."""
     return re.sub(r"\s*\bSECABLES?\b", "", normalize(forme or "")).strip()
-
-
-def lignes_du_produit(resolu: MedicamentResolu, filtrer_forme: bool = True) -> pd.DataFrame:
-    """Toutes les lignes du produit (le matcher n'en garde que 5), filtrees par
-    le dosage et la forme donnes par le patient quand il y en a.
-
-    `filtrer_forme=False` : pour lister les formes, on garde toutes celles du
-    dosage demande (medicament.py dit ensuite si la forme demandee existe)."""
-    df = matcher().df
-    lignes = df[df["nom_norm"] == normalize(resolu.nom)]
-    if resolu.cite.dosage:
-        filtrees = filtrer_dosage(lignes, resolu.cite.dosage)
-        if len(filtrees):
-            lignes = filtrees
-    if resolu.cite.forme and filtrer_forme:
-        cle = normalize(resolu.cite.forme)
-        filtrees = lignes[lignes["forme"].fillna("").apply(normalize).str.contains(re.escape(cle))]
-        if len(filtrees):
-            lignes = filtrees
-    # Retire ou suspendu : plus de prix utile. Une ligne sans statut vient des
-    # listes CNOPS / CNSS actuelles et reste valable.
-    en_officine = (lignes["statut_commercialisation"].isna()
-                   | lignes["statut_commercialisation"].isin(STATUTS_EN_OFFICINE))
-    return lignes[en_officine]
 
 
 def _remboursement(groupe: pd.DataFrame, voisins: pd.DataFrame, regime: str) -> dict | None:
@@ -116,54 +86,3 @@ def _fusionner_sources(presentations: list[dict]) -> list[dict]:
                 avec_prix[0][regime] = avec_taux[0][regime]
             presentations.remove(avec_taux[0])
     return presentations
-
-
-def _taux_commun(presentations: list[dict], regime: str) -> float | None:
-    """Le taux du regime s'il est le meme pour toutes les presentations (cas le
-    plus frequent) : on peut alors le dire en une fois, sans lister."""
-    taux = {p[regime]["taux"] if p[regime] else None for p in presentations}
-    return taux.pop() if len(taux) == 1 else None
-
-
-def _prix_par_dosage(presentations: list[dict]) -> list[dict]:
-    """Prix le plus bas et le plus haut de chaque dosage, du plus faible au plus fort."""
-    par_dosage: dict = {}
-    for p in presentations:
-        if p["ppv"] is not None:
-            par_dosage.setdefault(p["dosage"], []).append(p["ppv"])
-    ordre = sorted(par_dosage.items(), key=lambda kv: dose_mg(kv[0]) or float("inf"))
-    return [{"dosage": d, "prix_min": min(v), "prix_max": max(v)} for d, v in ordre]
-
-
-def prix(resolu: MedicamentResolu) -> dict:
-    """Prix et remboursement (CNOPS et CNSS) d'un medicament resolu.
-
-    statut : "trouve" | "a_confirmer" | "introuvable" | "plus_commercialise".
-    Sans dosage connu et avec plus de MAX_PRESENTATIONS presentations,
-    `presentations` est vide : seuls le prix par dosage et les taux communs
-    sont donnes. `dosage_absent` : le dosage cite tel quel s'il n'est pas en vente.
-    """
-    if resolu.statut == "introuvable":
-        return {"statut": "introuvable", "cite": resolu.cite.nom}
-
-    lignes = lignes_du_produit(resolu)
-    trouvees = presentations(lignes)
-    if not trouvees:
-        return {"statut": "plus_commercialise", "nom": resolu.nom}
-
-    # dosage cite mais pas en vente : lignes_du_produit a garde tous les dosages
-    dosage_absent = bool(resolu.cite.dosage) and filtrer_dosage(lignes, resolu.cite.dosage).empty
-    # dosage trouve : quelques formes au plus, on les liste toutes
-    trop = len(trouvees) > MAX_PRESENTATIONS and (not resolu.cite.dosage or dosage_absent)
-    par_dosage = _prix_par_dosage(trouvees)
-    return {
-        "statut": resolu.statut,
-        "nom": resolu.nom,
-        "autres": resolu.autres,
-        "presentations": [] if trop else trouvees,
-        "trop_de_presentations": trop,
-        "dosage_absent": resolu.cite.dosage if dosage_absent else None,
-        "par_dosage": par_dosage[:MAX_DOSAGES],
-        "dosages_coupes": len(par_dosage) > MAX_DOSAGES,
-        "taux_commun": {regime: _taux_commun(trouvees, regime) for regime in REGIMES},
-    }

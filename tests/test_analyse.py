@@ -1,90 +1,13 @@
-"""Analyse : prompt, validation de la reponse du LLM, filet urgence, chaine de fournisseurs."""
+"""Filet urgence (mots-cles, sans LLM) et chaine de fournisseurs LLM."""
 import json
 
 import pytest
 
 import nlp.llm
-from nlp.analyse.analyseur import charger_schema, construire_prompt
 from nlp.analyse.urgence import detecter_urgence
-from nlp.analyse.validation import valider
 from nlp.llm import LLMIndisponible
 # importe avant que le garde-fou de conftest ne le remplace
 from nlp.llm import appeler_llm as vrai_appeler_llm
-
-
-# ------------------------------------------------------------------- prompt
-
-def test_le_prompt_n_a_plus_de_repere_a_remplacer():
-    prompt = construire_prompt()
-    assert "{{" not in prompt
-    for demande in charger_schema()["demandes"]:
-        assert f"- {demande} :" in prompt
-
-
-def test_le_prompt_liste_les_symptomes_de_la_liste_blanche():
-    assert "fievre_legere" in construire_prompt()
-
-
-def test_la_posologie_n_a_besoin_de_rien():
-    assert "posologie" in construire_prompt()
-    assert charger_schema()["demandes"]["posologie"]["besoin"] == []
-
-
-# --------------------------------------------------------------- validation
-
-def test_une_analyse_correcte_passe_sans_correction():
-    a = valider({"situation": "repondre", "demandes": ["prix"],
-                 "medicaments": [{"nom": "dolipran", "dosage": "1g", "forme": None}],
-                 "langue": "ary_lat"}, "chhal taman dolipran 1g")
-    assert (a.situation, a.demandes, a.corrections) == ("repondre", ["prix"], [])
-    assert a.medicaments[0].nom == "dolipran"
-
-
-def test_situation_inventee_ramenee_a_pas_d_info():
-    a = valider({"situation": "commande", "langue": "fr"}, "x")
-    assert a.situation == "pas_d_info" and a.corrections
-
-
-def test_demande_supprimee_retiree():
-    """disponibilite et alternatives n'existent plus : DwaTalk ne connait aucun stock."""
-    a = valider({"situation": "repondre", "demandes": ["disponibilite", "prix"],
-                 "medicaments": ["doliprane"], "langue": "fr"}, "x")
-    assert a.demandes == ["prix"]
-    assert a.medicaments[0].nom == "doliprane"     # ["doliprane"] accepte comme [{"nom": ...}]
-
-
-def test_besoin_manquant_passe_en_preciser():
-    a = valider({"situation": "repondre", "demandes": ["remboursement"],
-                 "medicaments": [{"nom": "smecta"}], "langue": "fr"}, "x")
-    assert a.situation == "preciser" and a.manque == ["regime"]
-
-
-def test_preciser_sans_rien_qui_manque_repasse_en_repondre():
-    a = valider({"situation": "preciser", "demandes": ["posologie"], "langue": "fr"}, "x")
-    assert a.situation == "repondre"
-
-
-def test_pas_de_demande_pendant_une_urgence():
-    a = valider({"situation": "urgence", "urgence_type": "bizarre", "demandes": ["prix"],
-                 "langue": "fr"}, "x")
-    assert a.demandes == [] and a.urgence_type == "detresse"
-
-
-def test_symptome_inconnu_devient_autre():
-    a = valider({"situation": "conseil_symptome", "symptomes": ["fievre_legere", "lepre"],
-                 "langue": "fr"}, "x")
-    assert a.symptomes == ["fievre_legere", "autre"]
-
-
-@pytest.mark.parametrize("message, langue", [("واش كاين", "ary_ar"), ("bonjour", "fr")])
-def test_langue_inconnue_devinee_par_la_graphie(message, langue):
-    assert valider({"situation": "salutation", "langue": "klingon"}, message).langue == langue
-
-
-def test_valeurs_hors_liste_ramenees_a_inconnu():
-    a = valider({"situation": "salutation", "langue": "fr", "patient": "vieux",
-                 "grossesse": "peut-etre", "regime": "AMO", "duree_jours": "abc"}, "x")
-    assert (a.patient, a.grossesse, a.regime, a.duree_jours) == ("inconnu", "inconnu", "inconnu", None)
 
 
 # ------------------------------------------------------------ filet urgence
@@ -131,11 +54,11 @@ def groq_seul(monkeypatch):
 
 
 def test_reessaie_apres_une_surcharge_passagere(monkeypatch, groq_seul):
-    reponses = iter([FausseReponse(503), FausseReponse(200, json.dumps({"situation": "salutation"}))])
+    reponses = iter([FausseReponse(503), FausseReponse(200, json.dumps({"lieu": "maarif"}))])
     appels = []
     monkeypatch.setattr(nlp.llm.requests, "post", lambda *a, **k: appels.append(1) or next(reponses))
     r = vrai_appeler_llm("prompt JSON", [{"role": "user", "contenu": "salam"}])
-    assert r.donnees["situation"] == "salutation" and r.fournisseur == "groq"
+    assert r.donnees["lieu"] == "maarif" and r.fournisseur == "groq"
     assert len(appels) == 2
 
 
@@ -155,11 +78,27 @@ def test_passe_au_fournisseur_suivant(monkeypatch):
         "groq": {"cle": "cle", "modele": "m", "url": "http://x"},
     })
     monkeypatch.setattr(nlp.llm.requests, "post",
-                        lambda *a, **k: FausseReponse(200, '{"situation": "hors_sujet"}'))
+                        lambda *a, **k: FausseReponse(200, '{"lieu": "rabat"}'))
     assert vrai_appeler_llm("JSON", [{"role": "user", "contenu": "?"}]).fournisseur == "groq"
 
 
 def test_extrait_le_json_meme_entoure_de_texte(monkeypatch, groq_seul):
-    bavard = 'Voici : {"situation": "hors_sujet"} Bonne journee !'
+    bavard = 'Voici : {"lieu": "rabat"} Bonne journee !'
     monkeypatch.setattr(nlp.llm.requests, "post", lambda *a, **k: FausseReponse(200, bavard))
-    assert vrai_appeler_llm("JSON", [{"role": "user", "contenu": "?"}]).donnees["situation"] == "hors_sujet"
+    assert vrai_appeler_llm("JSON", [{"role": "user", "contenu": "?"}]).donnees["lieu"] == "rabat"
+
+
+def test_mode_texte_rend_la_reponse_telle_quelle(monkeypatch, groq_seul):
+    """Le second appel (reponse au patient) n'est pas du JSON."""
+    corps = []
+    monkeypatch.setattr(nlp.llm.requests, "post",
+                        lambda url, headers, json, timeout: corps.append(json) or FausseReponse(200, " Salam ! "))
+    r = vrai_appeler_llm("consignes", [{"role": "user", "contenu": "salam"}], en_json=False)
+    assert r.texte == "Salam !" and r.donnees == {}
+    assert "response_format" not in corps[0]
+
+
+def test_reponse_texte_vide_passe_pour_une_panne(monkeypatch, groq_seul):
+    monkeypatch.setattr(nlp.llm.requests, "post", lambda *a, **k: FausseReponse(200, "  "))
+    with pytest.raises(LLMIndisponible):
+        vrai_appeler_llm("consignes", [{"role": "user", "contenu": "salam"}], en_json=False)

@@ -305,12 +305,15 @@ def famille_forme(forme) -> str:
     return "autre:" + cle
 
 
-# Seuls ces produits peuvent etre proposes au patient : un produit
-# "Non Commercialise", "Retire" ou "Suspendu" du marche, vendu a l'export ou
-# seulement sur appel d'offres hospitalier enverrait le patient chercher en
-# officine un medicament introuvable. Une ligne sans statut vient de la liste
-# CNSS actuelle des medicaments remboursables : elle est consideree disponible.
-STATUTS_EN_OFFICINE = {"Commercialisé"}
+# Seuls ces produits peuvent etre proposes au patient : un produit "Retire" ou
+# "Suspendu" du marche, vendu a l'export ou seulement sur appel d'offres
+# hospitalier enverrait le patient chercher en officine un medicament
+# introuvable. "Non Commercialise" est garde : le registre AMMPS donne ce
+# statut a des produits bien vendus en pharmacie (Panadol 500 mg), on ne peut
+# pas s'y fier pour dire qu'un medicament n'existe plus. Une ligne sans statut
+# vient des listes CNOPS / CNSS des medicaments remboursables : elle est
+# consideree disponible.
+STATUTS_EN_OFFICINE = {"Commercialisé", "Non Commercialisé"}
 
 
 def main():

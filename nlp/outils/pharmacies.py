@@ -1,13 +1,12 @@
 """Outil pharmacies : pharmacies d'un lieu, de garde, ou citees par leur nom.
 
-Trois demandes de l'analyse :
   pharmacies_lieu -> les 5 plus proches du quartier cite ;
   pharmacie_garde -> les ouvertes 24h/24 ou la nuit, dans la ville du lieu ;
   info_pharmacie  -> adresse et telephone d'une pharmacie citee par son nom.
 
-Comme prix.py, on renvoie des donnees avec un statut ; c'est le composeur qui
-redige. DwaTalk ne connait aucun tour de garde, seulement les pharmacies dont
-les horaires disent 24h/24 ou nuit : le composeur doit le dire au patient.
+On renvoie des donnees avec un statut ; nlp/rag/recherche.py en fait des fiches
+et des notes pour le LLM. DwaTalk ne connait aucun tour de garde, seulement les
+pharmacies dont les horaires disent 24h/24 ou nuit : la note le dit au LLM.
 """
 import re
 

@@ -212,6 +212,9 @@ def cnss_metadata_by_key(cnss: pd.DataFrame) -> pd.DataFrame:
     box size it does not belong to, so it is only carried when the key has a
     single unambiguous value, and left empty otherwise. The full per-presentation
     detail always remains in medicaments_cnss.csv.
+
+    `ppv` and `ph` follow the same rule: they only serve as a fallback price
+    for rows AMMPS gives no price for (see build_reference).
     """
     grouped = cnss.groupby("join_key")
 
@@ -223,13 +226,15 @@ def cnss_metadata_by_key(cnss: pd.DataFrame) -> pd.DataFrame:
     br_nunique = grouped["ppv_br"].nunique()
     br_value = grouped["ppv_br"].max()
     meta["prix_base_remboursement_cnss"] = br_value.where(br_nunique == 1)
+    for c in ["ppv", "ph"]:
+        meta[f"{c}_cnss"] = grouped[c].max().where(grouped[c].nunique() == 1)
 
     return meta.reset_index()
 
 
 def build_reference(ammps: pd.DataFrame, cnops: pd.DataFrame, cnss: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
     merged = ammps.merge(
-        cnops[["join_key", "CODE", "PRIX_BR", "TAUX_REMBOURSEMENT", "PRINCEPS_GENERIQUE", "DCI1"]],
+        cnops[["join_key", "CODE", "PPV", "PH", "PRIX_BR", "TAUX_REMBOURSEMENT", "PRINCEPS_GENERIQUE", "DCI1"]],
         on="join_key", how="outer", suffixes=("", "_cnops"), indicator=True,
     )
 
@@ -288,6 +293,14 @@ def build_reference(ammps: pd.DataFrame, cnops: pd.DataFrame, cnss: pd.DataFrame
 
     matched_cnss = result["code_cnss"].notna()
     result.loc[matched_cnss, "source"] = result.loc[matched_cnss, "source"] + "+cnss"
+
+    # Prix public : celui de l'AMMPS (registre national) ; a defaut celui de la
+    # CNSS (liste actuelle), puis celui de la CNOPS (liste 2014). Sans ce repli,
+    # les lignes absentes de l'AMMPS n'avaient aucun prix alors que les listes
+    # de remboursement en donnent un.
+    for c, c_cnops in [("ppv", "PPV"), ("ph", "PH")]:
+        result[c] = result[c].fillna(result[f"{c}_cnss"]).fillna(pd.Series(merged[c_cnops].values, index=result.index))
+        result = result.drop(columns=[f"{c}_cnss"])
 
     # --- CNSS, step 2: append the products CNSS has and the others don't.
     # Every presentation is kept here (unlike the collapsed lookup above), since

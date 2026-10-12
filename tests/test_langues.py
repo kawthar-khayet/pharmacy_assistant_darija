@@ -42,12 +42,8 @@ def test_chaque_phrase_existe_dans_les_quatre_langues():
 
 
 def test_memes_parametres_dans_toutes_les_langues():
-    """Une traduction qui oublie {nom} ou {ville} perdrait une information.
-    Exception voulue : les signes d'alerte de la liste conseil sont ecrits en
-    francais, les autres langues ont une phrase d'alerte generale."""
+    """Une traduction qui oublie un parametre perdrait une information."""
     for cle, variantes in TEXTES.items():
-        if cle == "conseil_alerte":
-            continue
         attendus = set(re.findall(r"{(\w+)}", variantes["fr"]))
         for langue in LANGUES:
             assert set(re.findall(r"{(\w+)}", variantes[langue])) == attendus, (cle, langue)
@@ -62,12 +58,6 @@ def test_les_numeros_d_urgence_sont_dans_toutes_les_langues(cle, numeros):
     for langue in LANGUES:
         for numero in numeros:
             assert numero in TEXTES[cle][langue], (cle, langue, numero)
-
-
-def test_posologie_renvoie_au_medecin_dans_toutes_les_langues():
-    mots = {"fr": "medecin", "ary_lat": "tbib", "ary_ar": "الطبيب", "ar": "طبيب"}
-    for langue, mot in mots.items():
-        assert mot in t(langue, "posologie")
 
 
 def test_phrase_absente_retombe_sur_le_francais(monkeypatch):

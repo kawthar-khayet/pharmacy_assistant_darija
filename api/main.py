@@ -1,8 +1,8 @@
 """API de DwaTalk, l'assistant pharmacie (Challenge #1).
 
-Le travail est fait par nlp/ : un seul appel LLM par message pour comprendre
-la question, puis le code cherche dans data/ et redige une reponse courte,
-seulement sur ce qui est demande (voir nlp/moteur.py).
+Le travail est fait par nlp/ (RAG) : le LLM comprend la question, le code
+cherche les fiches qui y repondent dans nos donnees, et le LLM redige la
+reponse avec ces fiches seulement (voir nlp/moteur.py).
 
     POST /chat           une question -> une reponse
     POST /chat/audio     voix -> Whisper (local) -> /chat
@@ -10,11 +10,11 @@ seulement sur ce qui est demande (voir nlp/moteur.py).
     GET  /medicaments    recherche pour la page Medicaments
     GET  /pharmacies     recherche pour la page Pharmacies
     GET  /securite       notice officielle d'une molecule
-    GET  /schema         ce que l'analyse a le droit de renvoyer
 
 Lancer :  py -m uvicorn api.main:app --reload --port 8000
 Docs :    http://localhost:8000/docs
 """
+import re
 import uuid
 from collections import OrderedDict
 
@@ -25,18 +25,16 @@ from starlette.concurrency import run_in_threadpool
 
 from api import donnees, resume
 from api.parole import ErreurAudio, transcrire
-from nlp.analyse.analyseur import charger_schema
 from nlp.linking.lieux import charger_pharmacies, resoudre_lieu
 from nlp.linking.pharmacies import chercher_pharmacie, distance_km, fiche
-from nlp.moteur import Session, repondre
+from nlp.moteur import IndexAbsent, Session, repondre
 from nlp.outils.pharmacies import plus_proches, type_ouverture
 from nlp.outils.resolution import matcher
-from nlp.reponse.composeur import telephone_txt
 from nlp.reponse.langues import LANGUE_PAR_DEFAUT
 
 app = FastAPI(
     title="DwaTalk API",
-    description="Assistant pharmacie en darija, arabe et francais : analyse (1 appel LLM) + bases marocaines",
+    description="Assistant pharmacie en darija, arabe et francais : RAG sur les bases marocaines",
     version="1.0.0",
 )
 
@@ -54,7 +52,7 @@ app.add_middleware(
     allow_headers=["Content-Type"],
 )
 
-# Conversations en memoire : session_id -> Session (historique, regime, ville).
+# Conversations en memoire : session_id -> Session (historique, ville).
 # Suffisant pour un serveur de demo a un seul processus ; les plus anciennes
 # sont oubliees au-dela de SESSIONS_MAX.
 SESSIONS: "OrderedDict[str, Session]" = OrderedDict()
@@ -79,22 +77,12 @@ class ChatResponse(BaseModel):
     session_id: str
     input: str
     reply: str
-    # la meme reponse sans les listes de pharmacies, que l'interface affiche en fiches
-    reply_court: str = ""
     langue: str = LANGUE_PAR_DEFAUT
-    situation: str | None = None
-    intent: str | None = None            # = situation, pour les anciens clients
-    demandes: list[str] = []
-    pharmacie_matches: list[dict] = []
-    # plus de fiche medicament dans le chat : la reponse ne dit que ce qui est demande
-    medicament_matches: list[dict] = []
-    # texte complet des rubriques de notice demandees, replie sous la reponse
-    securite: dict | None = None
-    awaiting_localisation: bool = False
-    attend: list[str] = []               # ce que le bot vient de demander au patient
+    situation: str | None = None         # "repondre" | "urgence" | "indisponible"
+    pharmacie_matches: list[dict] = []   # les pharmacies trouvees, affichees en fiches
     urgence: str | None = None
-    validation_errors: list[str] = []    # corrections faites sur l'analyse du LLM
-    analyse: dict | None = None
+    requete: dict | None = None          # ce que le LLM a compris de la question
+    sources: list[str] = []              # fiches de nos donnees donnees au LLM
     fournisseur: str | None = None
 
 
@@ -102,12 +90,25 @@ class ChatAudioResponse(ChatResponse):
     transcription: TranscriptionResponse
 
 
+def telephone_txt(tel) -> str | None:
+    """"539813017" -> "0539 81 30 17" ; un numero illisible est rendu tel quel."""
+    if not tel:
+        return None
+    chiffres = re.sub(r"\D", "", str(tel))
+    if chiffres.startswith("212"):
+        chiffres = "0" + chiffres[3:]
+    elif len(chiffres) == 9 and chiffres[0] in "5678":
+        chiffres = "0" + chiffres
+    if len(chiffres) == 10 and chiffres.startswith("0"):
+        return f"{chiffres[:4]} {chiffres[4:6]} {chiffres[6:8]} {chiffres[8:]}"
+    return str(tel)
+
+
 def pour_carte(p: dict) -> dict:
     """Une fiche pharmacie telle que l'interface l'affiche : `garde` porte les
     horaires quand la pharmacie est ouverte 24h/24 ou la nuit."""
     carte = dict(p)
     carte["garde"] = p.get("horaires") if type_ouverture(p.get("horaires")) else None
-    # "539813017" -> "0539 81 30 17", comme dans la reponse du bot
     carte["telephone"] = telephone_txt(p.get("telephone"))
     return carte
 
@@ -133,23 +134,20 @@ def chat(req: ChatRequest):
     if not text:
         raise HTTPException(status_code=400, detail="Le champ 'text' est vide.")
     session_id = req.session_id or str(uuid.uuid4())
-    r = repondre(text, _session(session_id))
+    try:
+        r = repondre(text, _session(session_id))
+    except IndexAbsent as e:
+        raise HTTPException(status_code=503, detail=str(e))
     return ChatResponse(
         session_id=session_id,
         input=text,
         reply=r.texte,
-        reply_court=r.texte_court,
         langue=r.langue,
         situation=r.situation,
-        intent=r.situation,
-        demandes=r.demandes,
         pharmacie_matches=[pour_carte(p) for p in r.pharmacies],
-        securite=r.securite,
-        awaiting_localisation=bool({"lieu", "lieu_precis"} & set(r.attend)),
-        attend=r.attend,
         urgence=r.urgence,
-        validation_errors=r.corrections,
-        analyse=r.analyse,
+        requete=r.requete,
+        sources=r.sources,
         fournisseur=r.fournisseur,
     )
 
@@ -304,9 +302,3 @@ def securite(dci: str, langue: str = LANGUE_PAR_DEFAUT):
     trouve["resume"] = resume.resumer(trouve, langue)
     trouve["resume_langue"] = langue if trouve["resume"] else None
     return trouve
-
-
-@app.get("/schema")
-def schema():
-    """Le vocabulaire de l'analyse : situations, demandes, langues."""
-    return charger_schema()
