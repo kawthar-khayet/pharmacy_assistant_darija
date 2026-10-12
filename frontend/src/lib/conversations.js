@@ -4,17 +4,19 @@
 // endpoint d'historique, donc rien n'est stocke cote serveur. L'historique est
 // par consequent propre a cet appareil et disparait si le cache est vide.
 
+import { estArabe } from './langues'
+
 const CLE = 'dwatalk:conversations'
 
 export const ACCUEIL_BOT = {
   role: 'bot',
-  text: 'Salam ! Sawwelni 3la shi dwa wla shi saydaliya. Ktebli b darija, b l3arbiya wla b lfrancais.',
+  text: 'السلام عليكم ! سولني على أي دواء، الثمن، التعويض ولا صيدلية قريبة منك.',
 }
 
 export function nouvelleConversation() {
   return {
     id: crypto.randomUUID(),
-    titre: 'Nouvelle discussion',
+    titre: 'محادثة جديدة',
     majLe: Date.now(),
     tours: [ACCUEIL_BOT],
     sessionId: null,
@@ -22,8 +24,6 @@ export function nouvelleConversation() {
   }
 }
 
-/** localStorage peut lever (navigation privee, stockage bloque ou plein) : on
- *  ne laisse jamais ca casser le rendu, quitte a repartir d'un historique vide. */
 export function lireToutes() {
   try {
     const brut = localStorage.getItem(CLE)
@@ -38,30 +38,33 @@ export function ecrireToutes(conversations) {
   try {
     localStorage.setItem(CLE, JSON.stringify(conversations))
   } catch {
-    // quota atteint ou stockage bloque : la conversation en cours reste
-    // utilisable en memoire, seule la persistance est perdue
+    // quota atteint ou stockage bloque
   }
 }
 
-/** Titre tire du premier message reellement ecrit par l'utilisateur, pour que
- *  l'historique soit lisible sans avoir a ouvrir chaque discussion. */
 export function titrer(tours) {
   const premier = tours.find((t) => t.role === 'moi')
-  if (!premier) return 'Nouvelle discussion'
+  if (!premier) return 'محادثة جديدة'
   const texte = premier.text.trim().replace(/\s+/g, ' ')
   return texte.length > 48 ? `${texte.slice(0, 48)}…` : texte
 }
 
-export function dateLisible(horodatage) {
+export function dateLisible(horodatage, langue = 'ary_ar') {
   const date = new Date(horodatage)
   const maintenant = new Date()
-  const heure = date.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })
+  const arabe = estArabe(langue)
+  const locale = arabe ? 'ar-MA' : 'fr-FR'
+  const heure = date.toLocaleTimeString(locale, { hour: '2-digit', minute: '2-digit' })
 
-  if (date.toDateString() === maintenant.toDateString()) return `Aujourd'hui · ${heure}`
+  if (date.toDateString() === maintenant.toDateString()) {
+    return arabe ? `اليوم · ${heure}` : `Aujourd'hui · ${heure}`
+  }
 
   const hier = new Date(maintenant)
   hier.setDate(hier.getDate() - 1)
-  if (date.toDateString() === hier.toDateString()) return `Hier · ${heure}`
+  if (date.toDateString() === hier.toDateString()) {
+    return arabe ? `البارح · ${heure}` : `Hier · ${heure}`
+  }
 
-  return `${date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long' })} · ${heure}`
+  return `${date.toLocaleDateString(locale, { day: 'numeric', month: 'long' })} · ${heure}`
 }

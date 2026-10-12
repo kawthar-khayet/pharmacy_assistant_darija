@@ -1,27 +1,22 @@
+import { useState } from 'react'
 import { Signe } from './Logo'
+import Icon from './Icon'
 import MedicineCard from './MedicineCard'
 import PharmacyCard from './PharmacyCard'
 import SafetyNotice from './SafetyNotice'
 import SafetySections from './SafetySections'
-import { LANGUE_PAR_DEFAUT, estArabe } from '../lib/langues'
+import { LANGUE_PAR_DEFAUT, estArabe, t } from '../lib/langues'
 
 /**
- * Un tour de conversation.
- *
- * Le texte de l'API (`reply`) est la reponse : il ne dit que ce qui a ete
- * demande, dans la langue du patient. S'y ajoutent :
- *  - les fiches des pharmacies trouvees, a la place de leur liste en texte
- *    (`reply_court` est la reponse sans cette liste) ;
- *  - le texte complet des rubriques de notice demandees, replie.
- * Les conversations enregistrees avec l'ancienne API peuvent encore porter une
- * fiche medicament (`medicament_matches`) : elle reste affichee.
+ * Un tour de conversation optimise pour le dialogue en Darija.
+ * Permet la copie rapide du texte, la mise en forme riche et le respect du sens RTL/LTR.
  */
 export default function ChatMessage({ tour }) {
+  const [copie, setCopie] = useState(false)
   const moi = tour.role === 'moi'
   const erreur = tour.role === 'erreur'
   const meta = moi || erreur ? null : tour.meta
   const langue = meta?.langue ?? LANGUE_PAR_DEFAUT
-  // l'arabe se lit de droite a gauche : fiches et libelles suivent
   const dir = estArabe(langue) ? 'rtl' : undefined
 
   const pharmacies = meta?.pharmacie_matches ?? []
@@ -30,6 +25,16 @@ export default function ChatMessage({ tour }) {
   const riche = pharmacies.length > 0 || medicaments.length > 0 || Boolean(securite?.rubriques)
   const texte = pharmacies.length > 0 && meta?.reply_court ? meta.reply_court : tour.text
   const urgence = Boolean(meta?.urgence)
+
+  async function copierTexte() {
+    try {
+      await navigator.clipboard.writeText(texte)
+      setCopie(true)
+      setTimeout(() => setCopie(false), 2000)
+    } catch {
+      // echec presse-papier
+    }
+  }
 
   return (
     <div className={`tour ${moi ? 'tour-moi' : ''} ${erreur || urgence ? 'tour-erreur' : ''}`}>
@@ -72,6 +77,21 @@ export default function ChatMessage({ tour }) {
           </>
         ) : (
           <div dir="auto">{texte}</div>
+        )}
+
+        {!moi && !erreur && (
+          <div className="bulle-pied">
+            <button
+              type="button"
+              className="btn-copier-bulle"
+              onClick={copierTexte}
+              title={copie ? t(langue, 'chat_copie_fait') : t(langue, 'chat_copier')}
+              aria-label={copie ? t(langue, 'chat_copie_fait') : t(langue, 'chat_copier')}
+            >
+              <Icon nom={copie ? 'valide' : 'liste'} taille={13} />
+              <span>{copie ? t(langue, 'chat_copie_fait') : t(langue, 'chat_copier')}</span>
+            </button>
+          </div>
         )}
       </div>
     </div>

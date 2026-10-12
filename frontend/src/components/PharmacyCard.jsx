@@ -1,50 +1,53 @@
 import Icon from './Icon'
 import { casseTitre } from '../lib/medicament'
 import { urlItineraire, urlItineraireVers } from '../lib/villes'
-import { LANGUE_PAR_DEFAUT, t } from '../lib/langues'
+import { t } from '../lib/langues'
+import { useLanguage } from '../lib/languageContexte'
 
-/**
- * Fiche pharmacie.
- *
- * La distance n'est affichee que si la position vient de l'officine
- * elle-meme (`precision_gps === 'exacte'`). Les autres positions situent la
- * voie, le quartier ou le centre-ville : annoncer « a 300 m » a partir d'un
- * centre-ville serait une mesure inventee. Pour celles-la on nomme ce qu'on
- * sait -- le secteur -- sans chiffre.
- *
- * Les horaires restent absents de la source : pas de « ouvert maintenant ».
- * Le champ `garde` existe en revanche vraiment, et c'est l'information la plus
- * utile de nuit ; `pharmacie_de_garde` dit en plus si l'officine est de garde
- * aujourd'hui (tour de garde du jour).
- */
-// Tour de garde du jour (champ `pharmacie_de_garde` de l'API).
-const TYPE_DE_GARDE = { jour: 'de jour', nuit: 'de nuit', '24h': '24h/24' }
-
-const LIBELLE_PRECISION = {
-  rue: 'position approchee (la voie)',
-  quartier: 'position approchee (le quartier)',
-  ville: 'position approchee (la ville)',
+const TYPE_DE_GARDE = {
+  jour: 'garde_jour',
+  nuit: 'garde_nuit',
+  '24h': 'garde_24h',
 }
 
-export default function PharmacyCard({ pharmacie, langue = LANGUE_PAR_DEFAUT }) {
+const LIBELLE_PRECISION = {
+  rue: 'موقع تقريبي (الشارع)',
+  quartier: 'موقع تقريبي (الحي)',
+  ville: 'موقع تقريبي (المدينة)',
+}
+
+export default function PharmacyCard({ pharmacie, langue }) {
+  const { langue: langueContexte } = useLanguage()
+  const codeLangue = langue ?? langueContexte
+
   const nom = pharmacie.nom ?? 'Pharmacie'
   const tel = pharmacie.telephone
-  // de garde aujourd'hui (tour de garde), ou a defaut ouverte 24h/24 ou la nuit (horaires)
-  const garde = TYPE_DE_GARDE[pharmacie.pharmacie_de_garde?.type] ?? pharmacie.garde
+  const typeGardeCle = TYPE_DE_GARDE[pharmacie.pharmacie_de_garde?.type]
+  const gardeLibelle = typeGardeCle ? t(codeLangue, typeGardeCle) : pharmacie.garde
   const exacte = pharmacie.precision_gps === 'exacte'
   const distance = exacte && typeof pharmacie.distance_km === 'number' ? pharmacie.distance_km : null
   const approximative = pharmacie.precision_gps && !exacte
 
   return (
     <article className="pharma">
-      <span className="pharma-glyphe">
-        <Icon nom="plus" epaisseur={2.6} />
+      <span className="pharma-glyphe" aria-hidden="true">
+        <Icon nom="lieu" taille={18} epaisseur={2.4} />
       </span>
 
       <div className="pharma-corps">
-        <h3 className="pharma-nom">{nom}</h3>
+        <div className="pharma-entete-ligne">
+          <h3 className="pharma-nom" dir="auto">{nom}</h3>
+          {gardeLibelle && (
+            <span className="badge-garde-actif">
+              <span className="point-lumineux" aria-hidden="true" />
+              <Icon nom="lune" taille={12} />
+              {t(codeLangue, 'de_garde')} · {casseTitre(gardeLibelle)}
+            </span>
+          )}
+        </div>
+
         {pharmacie.adresse && (
-          <p className="pharma-adresse">
+          <p className="pharma-adresse" dir="auto">
             {pharmacie.adresse}
             {pharmacie.ville && !pharmacie.adresse.includes(pharmacie.ville)
               ? ` — ${pharmacie.ville}`
@@ -56,7 +59,7 @@ export default function PharmacyCard({ pharmacie, langue = LANGUE_PAR_DEFAUT }) 
           {distance !== null && (
             <span className="marqueur marqueur-bleu">
               <Icon nom="cible" taille={12} />{' '}
-              {distance < 1 ? `${Math.round(distance * 1000)} m` : `${distance.toFixed(1)} km`}
+              {distance < 1 ? `${Math.round(distance * 1000)} م` : `${distance.toFixed(1)} كلم`}
             </span>
           )}
           {approximative && (
@@ -64,27 +67,27 @@ export default function PharmacyCard({ pharmacie, langue = LANGUE_PAR_DEFAUT }) 
               <Icon nom="question" taille={12} /> {LIBELLE_PRECISION[pharmacie.precision_gps]}
             </span>
           )}
-          {garde ? (
-            <span className="marqueur marqueur-ok">
-              <Icon nom="lune" taille={12} /> {t(langue, 'de_garde')} · {casseTitre(garde)}
-            </span>
-          ) : (
-            <span className="marqueur">{t(langue, 'horaires_inconnus')}</span>
+          {!gardeLibelle && (
+            <span className="marqueur">{t(codeLangue, 'horaires_inconnus')}</span>
           )}
-          {pharmacie.ville && <span className="marqueur">
+          {pharmacie.ville && (
+            <span className="marqueur">
               <Icon nom="lieu" taille={12} /> {pharmacie.ville}
-            </span>}
+            </span>
+          )}
+        </div>
 
+        <div className="pharma-actions-rapides">
           {tel && (
-            <a className="bouton-tel" href={`tel:${String(tel).replace(/\s/g, '')}`}>
-              <Icon nom="telephone" taille={13} />
-              {tel}
+            <a className="bouton-action-pharma bouton-tel" href={`tel:${String(tel).replace(/\s/g, '')}`}>
+              <Icon nom="telephone" taille={14} />
+              <span>{t(codeLangue, 'appeler')} ({tel})</span>
             </a>
           )}
 
           {(pharmacie.adresse || exacte) && (
             <a
-              className="marqueur"
+              className="bouton-action-pharma bouton-itineraire"
               href={
                 exacte
                   ? urlItineraireVers(pharmacie.latitude, pharmacie.longitude)
@@ -93,7 +96,8 @@ export default function PharmacyCard({ pharmacie, langue = LANGUE_PAR_DEFAUT }) 
               target="_blank"
               rel="noreferrer noopener"
             >
-              <Icon nom="itineraire" taille={12} /> {t(langue, 'itineraire')}
+              <Icon nom="itineraire" taille={14} />
+              <span>{t(codeLangue, 'itineraire')}</span>
             </a>
           )}
         </div>

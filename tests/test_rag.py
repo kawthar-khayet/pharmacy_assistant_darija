@@ -33,11 +33,27 @@ def test_notice_coupee_en_morceaux_titres(fiches):
         assert len(m["texte"]) < 2500
 
 
-def test_fiche_conseil_cite_la_molecule_jamais_une_marque(fiches):
-    fievre = next(f for f in fiches if f["id"] == "conseil:fievre_legere")
-    assert "Molécule à demander au pharmacien : PARACETAMOL" in fievre["texte"]
-    assert "DOLIPRANE" not in fievre["texte"]
-    assert "Enfant, bébé ou femme enceinte" in fievre["texte"]
+def test_fiche_conseil_cite_des_noms_commerciaux_pour_adulte_et_enfant(fiches):
+    fievre = next(f for f in fiches if f["id"] == "conseil:fievre_legere")["texte"]
+    adulte, enfant = fievre.split("Médicaments à proposer pour un ENFANT")
+    assert "DOLIPRANE (paracetamol)" in adulte and "grossesse : oui" in adulte
+    # pour l'enfant : la presentation et son poids, lus dans la notice
+    assert "DOLIPRANE" in enfant and "kg" in enfant and "(enfant," in enfant
+    assert "Signes d'alerte" in fievre
+
+
+def test_fiche_conseil_sans_medicament_pour_enfant_le_dit(fiches):
+    rhume = next(f for f in fiches if f["id"] == "conseil:rhume")["texte"]
+    assert "Pour un ENFANT : aucun médicament dans nos données" in rhume
+    assert "prix absent de nos données" in rhume          # sprays hors de la base marocaine
+    # les comprimes a la pseudoephedrine sont dans la proposition, jamais dans une fiche
+    assert not any(nom in rhume for nom in ("DOLIRHUME", "RHUMAGRIP", "ACTIFED", "HUMEX RHUME"))
+
+
+def test_aucune_fiche_conseil_ne_cite_un_medicament_a_verifier(fiches):
+    conseils = " ".join(f["texte"] for f in fiches if f["type"] == "conseil")
+    for interdit in ("FORTRANS", "AKINDEX", "DRILL TOUX SECHE", "A VERIFIER", "A RETIRER"):
+        assert interdit not in conseils, interdit
 
 
 def test_ids_uniques(fiches):
@@ -94,9 +110,27 @@ def test_molecule_donne_ses_marques_les_plus_connues_et_sa_notice(index):
     assert textes(trouve, "notice")
 
 
-def test_question_sans_medicament_cherche_par_le_sens(index):
-    trouve = chercher(Requete("J'ai mal à la tête, que puis-je prendre ?"))
-    assert trouve.fiches and trouve.pharmacies == []
+def test_symptome_reconnu_par_le_llm_donne_sa_fiche(index):
+    trouve = chercher(Requete("J'ai mal à la tête, que puis-je prendre ?", symptomes=["mal_de_tete"]))
+    assert [f["id"] for f in trouve.fiches] == ["conseil:mal_de_tete"] and trouve.pharmacies == []
+
+
+def test_sans_symptome_reconnu_aucune_fiche_conseil(index):
+    # eczema : hors de la liste blanche, le bot n'a rien a proposer
+    assert chercher(Requete("J'ai de l'eczéma, que mettre ?")).fiches == []
+
+
+def test_symptome_invente_par_le_llm_ignore():
+    r = en_requete({"symptomes": ["mal_de_tete", "eczema", "mal_de_tete", 3]}, "x")
+    assert r.symptomes == ["mal_de_tete"]
+
+
+def test_le_prompt_de_comprehension_liste_les_symptomes():
+    from nlp.rag.comprendre import construire_prompt
+
+    prompt = construire_prompt()
+    assert "{{SYMPTOMES}}" not in prompt
+    assert "- mal_de_tete :" in prompt and "- toux_seche :" in prompt
 
 
 def test_pharmacies_les_plus_proches_d_un_quartier(index):
@@ -106,7 +140,8 @@ def test_pharmacies_les_plus_proches_d_un_quartier(index):
 
 
 def test_pharmacie_et_symptome_dans_le_meme_message(index):
-    trouve = chercher(Requete("J'ai mal à la tête. Pharmacie à Maârif ?", lieu="maarif casa", pharmacies=True))
+    trouve = chercher(Requete("J'ai mal à la tête. Pharmacie à Maârif ?", lieu="maarif casa", pharmacies=True,
+                              symptomes=["mal_de_tete"]))
     assert textes(trouve, "pharmacie") and textes(trouve, "conseil")
 
 

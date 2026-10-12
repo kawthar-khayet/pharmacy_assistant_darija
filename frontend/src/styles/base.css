@@ -1,62 +1,78 @@
 /* ===========================================================================
    DwaTalk — socle : jetons de design, remise a zero, typographie.
-   Palette health-tech : bleu marine (structure), bleu franc (action),
-   bleu ciel (accent vivant), sur un fond gris-bleu tres clair.
-   Le marine porte la navigation et les en-tetes forts ; le bleu franc est
-   reserve a ce qui se clique.
+   Palette Teal & Midnight : bleu nuit pour la structure, sarcelle pour
+   l'action, surfaces blanches et gris tres clair, ambre en accent rare.
    =========================================================================== */
 
 :root {
   /* --- surfaces --- */
   --fond:        #f4f7fb;
-  --fond-2:      #eaf0f7;
+  --fond-2:      #e9eef5;
   --carte:       #ffffff;
 
-  /* --- structure --- */
-  --marine:      #0f2a4a;
-  --marine-2:    #163a63;
-  --marine-3:    #21497a;
+  /* --- structure sante & confiance --- */
+  --marine:      #0d1b2a;
+  --marine-2:    #15273b;
+  --marine-3:    #24405c;
 
-  /* --- action --- */
-  --bleu:        #2a7bd6;
-  --bleu-vif:    #1d64b8;
-  --bleu-voile:  #eaf2fd;
-  --bleu-trait:  #cfe0f5;
+  /* --- accent sante & pharmacie --- */
+  --sante:       #0f9d91;
+  --sante-fonce: #0b7f76;
+  --sante-vif:   #4fd1c5;
+  --sante-voile: #e8f6f3;
+  --sante-trait: #c5e8e2;
 
-  /* --- accent --- */
-  --ciel:        #5cc8f0;
-  --ciel-voile:  #e5f6fd;
+  /* --- action & interaction : meme sarcelle que l'accent, pour qu'il n'y
+     ait qu'une seule couleur d'action dans toute l'interface --- */
+  --bleu:        #0f9d91;
+  --bleu-vif:    #0b7f76;
+  --bleu-voile:  #e8f6f3;
+  --bleu-trait:  #c5e8e2;
 
-  /* --- texte --- */
-  --encre:       #0f2233;
-  --encre-douce: #52647a;
-  --encre-pale:  #8a9bb0;
+  /* --- accent lumiere --- */
+  --ciel:        #38bdf8;
+  --ciel-voile:  #e0f2fe;
 
-  /* --- utilitaires --- */
-  --trait:       #e2e9f2;
-  --trait-fort:  #d0dbe8;
-  --dispo:       #12a36f;
-  --dispo-voile: #e3f6ee;
-  --alerte:      #b7791f;
-  --alerte-voile:#fff7e8;
-  --danger:      #c2413b;
-  --danger-voile:#fdeeed;
+  /* --- accent decoratif, a utiliser rarement --- */
+  --ambre:       #e7a65a;
+  --ambre-voile: #fdf6ec;
+  --ambre-encre: #6b4a1c;
 
-  /* --- rayons --- */
-  --r-xs: 8px;
+  /* --- typographie & texte --- */
+  --encre:       #0d1b2a;
+  --encre-douce: #526176;
+  --encre-pale:  #8a97a8;
+
+  /* --- etats & utilitaires --- */
+  --trait:       #dce4ec;
+  --trait-fort:  #c3cfdb;
+  --dispo:       #10b981;
+  --dispo-voile: #ecfdf5;
+  --alerte:      #d97706;
+  --alerte-voile:#fffbeb;
+  --danger:      #ef4444;
+  --danger-voile:#fef2f2;
+
+  /* --- rayons doux --- */
+  --r-xs: 6px;
   --r-sm: 10px;
   --r:    14px;
-  --r-lg: 18px;
-  --r-xl: 24px;
+  --r-lg: 20px;
+  --r-xl: 26px;
 
-  /* --- elevations : froides et nettes --- */
-  --ombre-1: 0 1px 2px rgba(15, 42, 74, .05);
-  --ombre-2: 0 1px 3px rgba(15, 42, 74, .06), 0 8px 20px -8px rgba(15, 42, 74, .12);
-  --ombre-3: 0 2px 6px rgba(15, 42, 74, .06), 0 20px 44px -18px rgba(15, 42, 74, .22);
+  /* --- ombres diffuses & elevation moderne --- */
+  --ombre-1: 0 1px 3px rgba(11, 25, 44, .04), 0 1px 2px rgba(11, 25, 44, .03);
+  --ombre-2: 0 4px 14px -2px rgba(11, 25, 44, .07), 0 2px 6px -1px rgba(11, 25, 44, .04);
+  --ombre-3: 0 12px 30px -4px rgba(11, 25, 44, .12), 0 4px 10px -2px rgba(11, 25, 44, .06);
+  --ombre-lumineuse: 0 0 20px rgba(13, 148, 136, .25);
 
   /* --- rythme --- */
-  --flanc: 252px;
-  --lecture: 780px;
+  --flanc: 260px;
+  --lecture: 820px;
+  --large: 1180px;
+
+  /* --- titres : Fraunces pour le latin, Noto Naskh Arabic pour l'arabe --- */
+  --police-titre: 'Fraunces', 'Noto Naskh Arabic', Georgia, serif;
 
   --transition: 180ms cubic-bezier(.4, 0, .2, 1);
 }
@@ -69,21 +85,24 @@ body {
   margin: 0;
   background: var(--fond);
   color: var(--encre);
-  /* Plus Jakarta Sans porte le latin ; le navigateur bascule glyphe par glyphe
-     sur IBM Plex Sans Arabic des qu'il rencontre de l'arabe, ce qui evite de
-     melanger deux dessins sur une meme ligne de darija en graphie latine. */
-  font-family: 'Plus Jakarta Sans', 'IBM Plex Sans Arabic', system-ui, -apple-system, sans-serif;
+  /* IBM Plex Sans Arabic d abord pour assurer un rendu parfait de la Darija,
+     avec repli fluide sur Plus Jakarta Sans pour le latin */
+  font-family: 'IBM Plex Sans Arabic', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   font-size: 15.5px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
+[dir="rtl"] body {
+  font-feature-settings: "cv01", "ss01";
+}
+
 h1, h2, h3, h4 {
   margin: 0;
   font-weight: 700;
   letter-spacing: -.02em;
-  line-height: 1.25;
+  line-height: 1.3;
 }
 
 p { margin: 0; }
@@ -94,58 +113,7 @@ button { cursor: pointer; }
 a { color: inherit; text-decoration: none; }
 
 :focus-visible {
-  outline: 2px solid var(--bleu);
+  outline: 2px solid var(--sante);
   outline-offset: 2px;
   border-radius: 6px;
-}
-
-/* L'arabe a des jambages plus hauts : un interlignage un peu plus genereux
-   evite que les diacritiques ne touchent la ligne du dessus. */
-:lang(ar), [dir='rtl'] {
-  line-height: 1.85;
-}
-
-.ar {
-  font-family: 'IBM Plex Sans Arabic', 'Plus Jakarta Sans', sans-serif;
-  line-height: 1.85;
-}
-
-.invisible {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-/* Trame de points : texture de fond discrete, facon papier millimetre
-   medical. S'efface vers le bas pour ne pas concurrencer le contenu. */
-.filigrane {
-  position: relative;
-  isolation: isolate;
-}
-
-.filigrane::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-image: radial-gradient(circle, rgba(42, 123, 214, .16) 1px, transparent 1.4px);
-  background-size: 18px 18px;
-  -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 85%);
-  mask-image: linear-gradient(180deg, #000 0%, transparent 85%);
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: .01ms !important;
-    scroll-behavior: auto !important;
-  }
 }

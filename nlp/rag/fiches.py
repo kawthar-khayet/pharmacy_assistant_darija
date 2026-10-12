@@ -6,7 +6,8 @@ un texte court et complet sur UN sujet :
   medicament  un nom de medicament : presentations, prix, remboursement
   notice      une rubrique de la notice d'une molecule (coupee si elle est longue)
   pharmacie   une pharmacie : adresse, telephone, horaires
-  conseil     un symptome benin de la liste blanche
+  conseil     un symptome benin de la liste blanche, avec les medicaments
+              (noms commerciaux) a proposer a un adulte et a un enfant
 
 `meta` porte ce qui sert a chercher autrement que par le sens : nom du
 medicament, molecule, ville, position GPS.
@@ -22,7 +23,6 @@ import pandas as pd
 
 from nlp.config import DATA_CLEAN, RACINE
 from nlp.linking.medicaments import STATUTS_EN_OFFICINE, dose_mg
-from nlp.outils.conseil import commercialisee
 from nlp.outils.pharmacies import type_ouverture
 from nlp.outils.prix import REGIMES, presentations
 from nlp.outils.resolution import matcher
@@ -31,6 +31,9 @@ from nlp.outils.securite import RUBRIQUES, SECURITE_PATH, nettoyer
 FICHES_PATH = RACINE / "data" / "rag" / "fiches.jsonl"
 PHARMACIES_PATH = DATA_CLEAN / "pharmacies_fusion.csv"
 SYMPTOMES_PATH = DATA_CLEAN / "conseil_symptomes.csv"
+CONSEIL_MEDICAMENTS_PATH = DATA_CLEAN / "conseil_medicaments.csv"
+# presentations pour enfant citees par medicament dans une fiche conseil
+MAX_PRESENTATIONS_ENFANT = 6
 
 # Le modele d'embeddings ne lit que le debut d'un long texte (512 tokens) :
 # une rubrique de notice est coupee en morceaux de cette taille (caracteres).
@@ -209,23 +212,58 @@ def fiches_pharmacies() -> list[dict]:
 
 # --- conseil symptomes ------------------------------------------------------
 
+def _medicament_conseil(m: dict, enfant: bool) -> str:
+    """Une ligne de la fiche : le nom commercial, puis ce que le LLM a le droit d'en dire."""
+    details = []
+    if enfant and _texte(m["age_enfant"]):
+        # les presentations faites pour l'enfant d'abord ; une marque en a parfois quinze
+        presentations = sorted(m["age_enfant"].split(" | "), key=lambda p: "(enfant" not in p)
+        details.append("présentations : " + " ; ".join(presentations[:MAX_PRESENTATIONS_ENFANT]))
+    if (prix := _texte(m["prix_min_dh"])):
+        maxi = _texte(m["prix_max_dh"])
+        details.append(f"prix public {prix} DH" if maxi in (None, prix) else f"prix public de {prix} à {maxi} DH")
+    else:
+        details.append("prix absent de nos données")
+    if not enfant:
+        details.append(f"grossesse : {m['grossesse']}")
+        details.append(f"allaitement : {m['allaitement']}")
+    if (remarque := _texte(m["remarque"])):
+        details.append(remarque)
+    return f"- {m['medicament']} ({str(m['molecule']).split(' | ')[0].lower()}) : " + " ; ".join(details)
+
+
 def fiches_conseil() -> list[dict]:
-    """Une fiche par symptome de la liste blanche (un symptome peut avoir
-    plusieurs molecules : une ligne du CSV par molecule)."""
+    """Une fiche par symptome de la liste blanche, avec les medicaments (noms
+    commerciaux vendus au Maroc) a proposer a un adulte et a un enfant.
+
+    conseil_symptomes.csv   le symptome, sa duree maximale, ses signes d'alerte ;
+    conseil_medicaments.csv ses medicaments : liste ANSM des medicaments en acces
+                            direct croisee avec la base marocaine, age lu dans
+                            les notices BDPM (voir data/README.md).
+    """
     if not SYMPTOMES_PATH.exists():
         return []
-    df = pd.read_csv(SYMPTOMES_PATH, encoding="utf-8-sig")
+    symptomes = pd.read_csv(SYMPTOMES_PATH, encoding="utf-8-sig")
+    medicaments = (pd.read_csv(CONSEIL_MEDICAMENTS_PATH, encoding="utf-8-sig", dtype=str).fillna("")
+                   if CONSEIL_MEDICAMENTS_PATH.exists() else pd.DataFrame(columns=["symptome"]))
     fiches = []
-    for id_, lignes in df.groupby("id", sort=False):
-        ref = lignes.iloc[0]
-        # "CETIRIZINE (DICHLORHYDRATE)|CETIRIZINE" : plusieurs ecritures de la
-        # meme molecule, on affiche la premiere. Seulement si elle est en vente.
-        molecules = [d.split("|")[0].strip() for d in lignes["dci"].dropna().astype(str)
-                     if d.strip() and commercialisee(d)]
+    for ref in symptomes.to_dict("records"):
+        les_siens = medicaments[medicaments["symptome"] == ref["id"]].to_dict("records")
+        adulte = [m for m in les_siens if m["pour_adulte"] == "oui"]
+        enfant = [m for m in les_siens if m["pour_enfant"] == "oui"]
 
         texte = [f"Symptôme : {ref['description']}"]
-        if molecules:
-            texte.append("Molécule à demander au pharmacien : " + " ou ".join(molecules))
+        if adulte:
+            texte.append("Médicaments à proposer à un ADULTE (noms commerciaux vendus au Maroc) :")
+            texte += [_medicament_conseil(m, enfant=False) for m in adulte]
+        else:
+            texte.append("Pour un adulte : aucun médicament dans nos données, orienter vers le pharmacien.")
+        if enfant:
+            texte.append("Médicaments à proposer pour un ENFANT, en respectant l'âge ou le poids indiqué :")
+            texte += [_medicament_conseil(m, enfant=True) for m in enfant]
+        else:
+            texte.append("Pour un ENFANT : aucun médicament dans nos données, orienter vers le pharmacien "
+                         "ou le médecin.")
         if pd.notna(ref["duree_max_jours"]):
             texte.append(f"Si le symptôme dure plus de {int(ref['duree_max_jours'])} jours : "
                          "consulter un médecin")
@@ -235,9 +273,7 @@ def fiches_conseil() -> list[dict]:
             texte.append(f"À qui s'adresser : {orientation.lower()}")
         if (remarque := _texte(ref["remarque"])):
             texte.append(f"Remarque : {remarque}")
-        texte.append("Enfant, bébé ou femme enceinte : ne citer aucune molécule, "
-                     "orienter vers un médecin ou un pharmacien.")
-        fiches.append(_fiche(f"conseil:{id_}", "conseil", "\n".join(texte), symptome=str(id_)))
+        fiches.append(_fiche(f"conseil:{ref['id']}", "conseil", "\n".join(texte), symptome=str(ref["id"])))
     return fiches
 
 

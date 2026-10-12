@@ -1,6 +1,7 @@
 import Icon from './Icon'
 import { versModele } from '../lib/medicament'
-import { LANGUE_PAR_DEFAUT, t } from '../lib/langues'
+import { t } from '../lib/langues'
+import { useLanguage } from '../lib/languageContexte'
 
 function Fait({ libelle, valeur, classe = '' }) {
   if (!valeur) return null
@@ -13,44 +14,51 @@ function Fait({ libelle, valeur, classe = '' }) {
 }
 
 /**
- * Fiche compacte d'un medicament : le meme composant sert dans la reponse de
- * l'assistant et dans les resultats de la page Medicaments, pour qu'un produit
- * se presente partout de la meme facon.
- *
- * Les donnees viennent en un seul bloc de texte cote API ; les eclater en faits
- * separes rend la reponse balayable d'un coup d'oeil au lieu d'un paragraphe.
+ * Fiche moderne d'un medicament aux standards UI/UX de sante :
+ * met en valeur le prix en Dirhams (DH), le taux de remboursement CNSS/CNOPS
+ * et la forme galenique de facon scanable d'un coup d'oeil.
  */
-export default function MedicineCard({ resultat, onOuvrir, langue = LANGUE_PAR_DEFAUT }) {
+export default function MedicineCard({ resultat, onOuvrir, langue }) {
+  const { langue: langueContexte } = useLanguage()
+  const codeLangue = langue ?? langueContexte
+
   const m = versModele(resultat)
+  const estRemboursable = m.remboursement && !m.remboursement.nul
   const remboursement = m.remboursement
-    ? m.remboursement.nul ? t(langue, 'non_rembourse') : m.remboursement.texte
+    ? m.remboursement.nul ? t(codeLangue, 'non_rembourse') : m.remboursement.texte
     : null
   const cliquable = Boolean(onOuvrir)
 
   const contenu = (
     <>
       <div className="fiche-tete">
-        <span className="fiche-glyphe">
+        <span className="fiche-glyphe" aria-hidden="true">
           <Icon nom="pilule" taille={20} />
         </span>
-        <div style={{ minWidth: 0 }}>
+        <div style={{ minWidth: 0, flex: 1 }}>
           <div className="fiche-etiquette">
-            {t(langue, 'medicament')}
+            <span>{t(codeLangue, 'medicament')}</span>
             {m.confiance === 'a_confirmer' && (
-              <span className="marqueur marqueur-verifier" style={{ marginLeft: 8 }}>
-                {t(langue, 'nom_approchant')}
+              <span className="marqueur marqueur-verifier">
+                {t(codeLangue, 'nom_approchant')}
+              </span>
+            )}
+            {estRemboursable && (
+              <span className="marqueur marqueur-ok">
+                <Icon nom="valide" taille={12} />
+                {t(codeLangue, 'remboursable')}
               </span>
             )}
           </div>
-          <div className="fiche-nom">{m.nom}</div>
-          {m.dci && <div className="fiche-dci">{m.dci}</div>}
+          <div className="fiche-nom" dir="auto">{m.nom}</div>
+          {m.dci && <div className="fiche-dci" dir="auto">{m.dci}</div>}
         </div>
       </div>
 
       <dl className="fiche-faits">
-        <Fait libelle={t(langue, 'prix_indicatif')} valeur={m.prix} classe="fait-prix" />
-        <Fait libelle={t(langue, 'forme')} valeur={[m.dosage, m.forme].filter(Boolean).join(' — ')} />
-        <Fait libelle={t(langue, 'remboursement')} valeur={remboursement} />
+        <Fait libelle={t(codeLangue, 'prix_indicatif')} valeur={m.prix} classe="fait-prix" />
+        <Fait libelle={t(codeLangue, 'forme')} valeur={[m.dosage, m.forme].filter(Boolean).join(' — ')} />
+        <Fait libelle={t(codeLangue, 'remboursement')} valeur={remboursement} classe={estRemboursable ? 'fait-rembourse' : ''} />
       </dl>
     </>
   )

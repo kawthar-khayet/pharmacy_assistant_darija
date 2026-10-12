@@ -6,21 +6,17 @@ import SuggestionCard from '../components/SuggestionCard'
 import { IndicateurFrappe } from '../components/LoadingState'
 import { Signe } from '../components/Logo'
 import { Disponible } from '../components/Header'
+import EmergencyBanner from '../components/EmergencyBanner'
+import LanguageSelector from '../components/LanguageSelector'
 import { ApiError, envoyerMessage } from '../lib/api'
 import { titrer } from '../lib/conversations'
 import { LANGUE_PAR_DEFAUT, t } from '../lib/langues'
 import { useConversations } from '../lib/conversationsContexte'
-
-const PISTES = [
-  { icone: 'monnaie', texte: 'Chhal taman doliprane 1g?' },
-  { icone: 'pilule', texte: 'Chno kaydir augmentin?' },
-  { icone: 'lieu', texte: 'Fin kayna sidalia f Maarif?' },
-  { icone: 'lune', texte: 'Pharmacie de garde f Casa?' },
-  { icone: 'monnaie', texte: 'شحال تمن دوليبران؟' },
-]
+import { useLanguage } from '../lib/languageContexte'
 
 export default function Assistant() {
   const { courante, majConversation, demarrer } = useConversations()
+  const { t: trad, estArabe, langue } = useLanguage()
   const [saisie, setSaisie] = useState('')
   const [enCours, setEnCours] = useState(false)
 
@@ -28,11 +24,17 @@ export default function Assistant() {
   const location = useLocation()
   const naviguer = useNavigate()
   const { tours, attendLieu } = courante
-  // langue de la derniere reponse du bot : l'invite "ta ville ?" doit parler
-  // la meme langue que la question qui l'a declenchee
-  const langueQuestion = [...tours].reverse().find((x) => x.meta)?.meta.langue ?? LANGUE_PAR_DEFAUT
 
-  // colle le fil en bas a chaque nouveau tour
+  const langueQuestion = [...tours].reverse().find((x) => x.meta)?.meta.langue ?? langue ?? LANGUE_PAR_DEFAUT
+
+  const pistes = [
+    { icone: 'monnaie', texte: trad('piste_prix') },
+    { icone: 'pilule', texte: trad('piste_role') },
+    { icone: 'lieu', texte: trad('piste_lieu') },
+    { icone: 'lune', texte: trad('piste_garde') },
+    { icone: 'bouclier', texte: trad('piste_remboursement') },
+  ]
+
   useEffect(() => {
     const fil = filRef.current
     if (fil) fil.scrollTop = fil.scrollHeight
@@ -42,10 +44,6 @@ export default function Assistant() {
     setSaisie('')
   }, [courante.id])
 
-  // Question posee depuis l'accueil : on ouvre une discussion neuve et on
-  // l'envoie une seule fois. Le garde par ref est indispensable -- React
-  // rejoue les effets en StrictMode, ce qui creerait sinon deux discussions
-  // et deux appels au modele pour une seule question.
   const questionEntrante = location.state?.question
   const dejaEnvoyee = useRef(null)
   useEffect(() => {
@@ -81,7 +79,7 @@ export default function Assistant() {
           ...avecMoi,
           {
             role: 'erreur',
-            text: err instanceof ApiError ? err.message : "Une erreur inattendue s'est produite.",
+            text: err instanceof ApiError ? err.message : 'Une erreur inattendue est survenue.',
           },
         ],
         titre: titrer(avecMoi),
@@ -94,18 +92,24 @@ export default function Assistant() {
   const debut = tours.length === 1
 
   return (
-    <div className="chat">
+    <div className="chat" dir={estArabe ? 'rtl' : 'ltr'}>
       <header className="chat-tete">
         <div className="chat-identite">
           <span className="avatar" aria-hidden="true">
             <Signe />
           </span>
           <div>
-            <h2>DwaTalk</h2>
-            <p>Assistant pharmacie</p>
+            <h2>{trad('chat_titre')}</h2>
+            <p>{trad('chat_role')}</p>
           </div>
         </div>
-        <Disponible />
+        <div className="chat-tete-actions">
+          <EmergencyBanner />
+          <div className="chat-langue-mobile">
+            <LanguageSelector compact />
+          </div>
+          <Disponible />
+        </div>
       </header>
 
       <div className="chat-fil" ref={filRef}>
@@ -126,8 +130,8 @@ export default function Assistant() {
           )}
 
           {debut && !enCours && (
-            <div className="puces" style={{ justifyContent: 'flex-start', paddingLeft: 41 }}>
-              {PISTES.map((p) => (
+            <div className="puces" style={{ justifyContent: 'flex-start', paddingRight: estArabe ? 41 : 0, paddingLeft: estArabe ? 0 : 41 }}>
+              {pistes.map((p) => (
                 <SuggestionCard
                   key={p.texte}
                   icone={p.icone}
@@ -148,11 +152,11 @@ export default function Assistant() {
             onChange={setSaisie}
             onValider={(texte) => envoyer(texte)}
             enCours={enCours}
-            placeholder={attendLieu ? t(langueQuestion, 'saisie_lieu') : 'Ktebli soualek…'}
+            placeholder={attendLieu ? t(langueQuestion, 'saisie_lieu') : trad('chat_placeholder_normal')}
             aide={
               attendLieu
                 ? t(langueQuestion, 'aide_lieu')
-                : "DwaTalk peut se tromper. Verifie aupres d'un pharmacien."
+                : trad('chat_disclaimer')
             }
           />
         </div>

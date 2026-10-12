@@ -6,13 +6,18 @@ import PharmacyCard from '../components/PharmacyCard'
 import LoadingState from '../components/LoadingState'
 import { ApiError, chercherPharmacies, positionActuelle } from '../lib/api'
 import { coordonneesVille, urlGoogleMaps, urlPlan, urlPlanPoint } from '../lib/villes'
+import { useLanguage } from '../lib/languageContexte'
 
-const VILLES_COURANTES = ['Casablanca', 'Rabat', 'Marrakech', 'Tanger', 'Agadir', 'Fes']
+const VILLES_COURANTES = [
+  { fr: 'Casablanca', ar: 'الدار البيضاء' },
+  { fr: 'Rabat', ar: 'الرباط' },
+  { fr: 'Marrakech', ar: 'مراكش' },
+  { fr: 'Tanger', ar: 'طنجة' },
+  { fr: 'Agadir', ar: 'أكادير' },
+  { fr: 'Fes', ar: 'فاس' },
+]
 
-function Plan({ lieu, position, resultats }) {
-  // Une officine dont la position est exacte peut porter un marqueur. Faute de
-  // quoi on se rabat sur le centre de la ville, et le pied de carte dit que
-  // c'est un reperage de secteur, pas une adresse.
+function Plan({ lieu, position, resultats, t, estArabe }) {
   const exactes = (resultats ?? []).filter((p) => p.precision_gps === 'exacte')
   const point = position ?? (exactes.length ? { lat: exactes[0].latitude, lon: exactes[0].longitude } : null)
   const coords = point ? [point.lat, point.lon] : coordonneesVille(lieu)
@@ -24,7 +29,7 @@ function Plan({ lieu, position, resultats }) {
         {coords ? (
           <>
             <iframe
-              title={centreSurOfficine ? 'Plan autour de la position' : `Plan de ${lieu}`}
+              title={centreSurOfficine ? 'Plan' : `Plan de ${lieu}`}
               src={centreSurOfficine ? urlPlanPoint(coords[0], coords[1]) : urlPlan(coords)}
               style={{ width: '100%', height: '100%', border: 0, display: 'block' }}
               loading="lazy"
@@ -36,7 +41,7 @@ function Plan({ lieu, position, resultats }) {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <Icon nom="itineraire" taille={14} /> Ouvrir dans Google Maps
+              <Icon nom="itineraire" taille={14} /> {t('pharma_itineraire')}
             </a>
           </>
         ) : (
@@ -47,8 +52,8 @@ function Plan({ lieu, position, resultats }) {
               </div>
               <p style={{ marginTop: 10 }}>
                 {lieu
-                  ? `Je ne sais pas encore situer « ${lieu} » sur le plan.`
-                  : 'Indique une ville ou partage ta position pour afficher le plan.'}
+                  ? (estArabe ? `كنقلبو على موقع « ${lieu} » فالخريطة...` : `Recherche de « ${lieu} » sur le plan…`)
+                  : (estArabe ? 'كتب مدينتك ولا فعل GPS باش تطلع الخريطة.' : 'Indique une ville ou partage ta position pour afficher le plan.')}
               </p>
             </div>
           </div>
@@ -58,8 +63,12 @@ function Plan({ lieu, position, resultats }) {
         <Icon nom="question" taille={14} />
         <span>
           {exactes.length > 0
-            ? `${exactes.length} pharmacie${exactes.length > 1 ? 's' : ''} sur ${(resultats ?? []).length} ${exactes.length > 1 ? 'ont' : 'a'} une position exacte. Les autres ne sont situees qu'au quartier ou a la ville.`
-            : "Le plan situe le secteur. Les positions exactes ne sont pas connues pour ces pharmacies — utilise le bouton d'itineraire sur chaque fiche."}
+            ? (estArabe
+                ? `${exactes.length} صيدلية من أصل ${(resultats ?? []).length} عندها موقع GPS مضبوط. الباقي محدد بالحي ولا بالمدينة.`
+                : `${exactes.length} pharmacie(s) sur ${(resultats ?? []).length} ont une position exacte. Les autres sont situées au quartier.`)
+            : (estArabe
+                ? 'الخريطة كتحدد المنطقة العامة. للموقع المضبوط استخدم زر الطريق لكل صيدلية.'
+                : 'Le plan situe le secteur. Utilise le bouton d’itinéraire pour chaque officine.')}
         </span>
       </p>
     </div>
@@ -67,6 +76,7 @@ function Plan({ lieu, position, resultats }) {
 }
 
 export default function Pharmacies() {
+  const { t, estArabe } = useLanguage()
   const [requete, setRequete] = useState('')
   const [lieu, setLieu] = useState('')
   const [resultats, setResultats] = useState(null)
@@ -92,8 +102,6 @@ export default function Pharmacies() {
     setLieu(q)
     setPosition(null)
     try {
-      // L'API accepte un nom et/ou un lieu. Une saisie libre est d'abord
-      // tentee comme lieu, ce qui est le cas d'usage courant ("Maarif").
       const data = await chercherPharmacies({ ville: q, limit: 12, signal: controleur.signal })
       if (data.resultats.length === 0) {
         const parNom = await chercherPharmacies({ q, limit: 12, signal: controleur.signal })
@@ -113,8 +121,6 @@ export default function Pharmacies() {
   }
 
   async function localiser() {
-    // L'annuaire a maintenant des coordonnees : la position du navigateur sert
-    // vraiment a trier par distance, ce qui n'etait pas le cas avant.
     setLocalisationEnCours(true)
     setErreur(null)
     try {
@@ -133,41 +139,44 @@ export default function Pharmacies() {
   }
 
   return (
-    <div className="page">
+    <div className="page" dir={estArabe ? 'rtl' : 'ltr'}>
       <Header
-        titre="Pharmacies"
-        surtitre="Annuaire"
+        titre={t('pharma_titre')}
+        surtitre={t('pharma_surtitre')}
         icone="lieu"
-        sousTitre="Trouve une pharmacie par ville ou par quartier, et vois celles de garde."
+        sousTitre={t('pharma_soustitre')}
       />
 
       <SearchBar
         valeur={requete}
         onChange={setRequete}
         onValider={chercher}
-        placeholder="Ta ville ou ton quartier — Maarif, Agdal, Gueliz…"
-        aide="Tu peux aussi chercher une pharmacie par son nom."
+        placeholder={t('pharma_placeholder')}
+        aide={t('pharma_aide')}
         enCours={enCours}
       />
 
       <div className="puces" style={{ justifyContent: 'flex-start' }}>
         <button className="puce" onClick={localiser} disabled={localisationEnCours}>
           <Icon nom="cible" taille={15} />
-          {localisationEnCours ? 'Localisation…' : 'Autour de moi'}
+          {localisationEnCours ? t('pharma_localisant') : t('pharma_autour_moi')}
         </button>
-        {VILLES_COURANTES.map((v) => (
-          <button
-            key={v}
-            className="puce"
-            onClick={() => {
-              setRequete(v)
-              chercher(v)
-            }}
-          >
-            <Icon nom="lieu" taille={15} />
-            {v}
-          </button>
-        ))}
+        {VILLES_COURANTES.map((v) => {
+          const nomVille = estArabe ? v.ar : v.fr
+          return (
+            <button
+              key={v.fr}
+              className="puce"
+              onClick={() => {
+                setRequete(nomVille)
+                chercher(nomVille)
+              }}
+            >
+              <Icon nom="lieu" taille={15} />
+              {nomVille}
+            </button>
+          )
+        })}
       </div>
 
       <div className="pharma-plan" style={{ marginTop: 30 }}>
@@ -179,7 +188,7 @@ export default function Pharmacies() {
               <div className="vide-glyphe">
                 <Icon nom="debranche" taille={24} />
               </div>
-              <h3>Recherche indisponible</h3>
+              <h3>{estArabe ? 'البحث غير متوفر حاليا' : 'Recherche indisponible'}</h3>
               <p>{erreur}</p>
             </div>
           )}
@@ -189,11 +198,8 @@ export default function Pharmacies() {
               <div className="vide-glyphe">
                 <Icon nom="lieu" taille={24} />
               </div>
-              <h3>Ou es-tu ?</h3>
-              <p>
-                Indique ta ville ou ton quartier pour voir les pharmacies
-                repertoriees autour de toi.
-              </p>
+              <h3>{t('pharma_ou_es_tu')}</h3>
+              <p>{t('pharma_ou_es_tu_desc')}</p>
             </div>
           )}
 
@@ -202,19 +208,16 @@ export default function Pharmacies() {
               <div className="vide-glyphe">
                 <Icon nom="question" taille={24} />
               </div>
-              <h3>Aucune pharmacie trouvee</h3>
-              <p>
-                Essaie une ville plus large (« Casablanca » plutot qu’un nom de rue),
-                ou verifie l’orthographe du quartier.
-              </p>
+              <h3>{t('pharma_aucun_titre')}</h3>
+              <p>{t('pharma_aucun_desc')}</p>
             </div>
           )}
 
           {!enCours && resultats?.length > 0 && (
             <>
               <h2 className="section-titre" style={{ marginTop: 0 }}>
-                {resultats.length} pharmacie{resultats.length > 1 ? 's' : ''}{' '}
-                {position ? 'autour de toi' : `a ${lieu}`}
+                {resultats.length} {t('pharma_titre')}{' '}
+                {position ? t('pharma_autour_de_toi') : (estArabe ? `فـ ${lieu}` : `à ${lieu}`)}
               </h2>
               {note && (
                 <p
@@ -236,7 +239,7 @@ export default function Pharmacies() {
           )}
         </div>
 
-        <Plan lieu={lieu} position={position} resultats={resultats} />
+        <Plan lieu={lieu} position={position} resultats={resultats} t={t} estArabe={estArabe} />
       </div>
     </div>
   )

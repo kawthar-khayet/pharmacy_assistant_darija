@@ -153,14 +153,17 @@ def _indisponible(langue: str, erreur: Exception) -> Reponse:
     return Reponse(t(langue, "llm_indisponible"), langue, "indisponible")
 
 
-def _question_avec_fiches(message: str, question: str, fiches: list[dict]) -> str:
-    """Le dernier message tel que le LLM le recoit : la question, puis les fiches."""
+def _question_avec_fiches(message: str, question: str, fiches: list[dict], langue: str) -> str:
+    """Le dernier message tel que le LLM le recoit : la question, puis les fiches.
+    La langue est redite a la fin : apres de longues fiches en francais, le
+    modele repondait en francais a une question en darija."""
     blocs = [f"[{i}] ({f['type']})\n{f['texte'][:LONGUEUR_MAX_FICHE]}"
              for i, f in enumerate(fiches, start=1)]
     return (f"Message du patient : {message}\n"
             f"Question comprise : {question}\n\n"
             "FICHES trouvées dans nos données :\n\n"
-            + ("\n\n".join(blocs) or "(aucune fiche)"))
+            + ("\n\n".join(blocs) or "(aucune fiche)")
+            + f"\n\nRéponds en {NOMS_LANGUES[langue]}, comme le patient, et seulement à ce qu'il demande.")
 
 
 def repondre(message: str, session: Session) -> Reponse:
@@ -199,7 +202,7 @@ def repondre(message: str, session: Session) -> Reponse:
     systeme = PROMPT_PATH.read_text(encoding="utf-8").replace("{{LANGUE}}", NOMS_LANGUES[langue])
     messages = conversation(session.historique)
     messages.append({"role": "user", "contenu": _question_avec_fiches(
-        message, compris.requete.question, trouve.fiches)})
+        message, compris.requete.question, trouve.fiches, langue)})
     try:
         rep = appeler_llm(systeme, messages, en_json=False)
     except LLMIndisponible as e:

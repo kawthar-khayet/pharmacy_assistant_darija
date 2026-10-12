@@ -7,21 +7,19 @@ import MedicineDetails from '../components/MedicineDetails'
 import LoadingState from '../components/LoadingState'
 import SafetyNotice from '../components/SafetyNotice'
 import { ApiError, chercherMedicaments } from '../lib/api'
+import { useLanguage } from '../lib/languageContexte'
 
-// Medicaments courants au Maroc, verifies presents dans la base de reference.
 const COURANTS = ['Doliprane', 'Panadol', 'Efferalgan', 'Spasfon', 'Smecta', 'Amoxicilline']
 
 export default function Medicines() {
+  const { t, estArabe } = useLanguage()
   const [requete, setRequete] = useState('')
   const [resultats, setResultats] = useState(null)
   const [enCours, setEnCours] = useState(false)
   const [erreur, setErreur] = useState(null)
   const [ouvert, setOuvert] = useState(null)
 
-  // Annule la recherche precedente quand une nouvelle part : sans ca, une
-  // reponse lente peut arriver apres une plus recente et ecraser l'affichage.
   const abandonRef = useRef(null)
-
   useEffect(() => () => abandonRef.current?.abort(), [])
 
   async function chercher(texte) {
@@ -53,26 +51,26 @@ export default function Medicines() {
   }
 
   return (
-    <div className="page">
+    <div className="page" dir={estArabe ? 'rtl' : 'ltr'}>
       <Header
-        titre="Medicaments"
-        surtitre="Base de reference"
+        titre={t('med_titre')}
+        surtitre={t('med_surtitre')}
         icone="base"
-        sousTitre="Prix, forme et remboursement des medicaments autorises au Maroc."
+        sousTitre={t('med_soustitre')}
       />
 
       <SearchBar
         valeur={requete}
         onChange={setRequete}
         onValider={chercher}
-        placeholder="Rechercher un medicament…"
-        aide="Ecris le nom commercial ou la molecule. Les fautes de frappe sont tolerees."
+        placeholder={t('med_placeholder')}
+        aide={t('med_aide')}
         enCours={enCours}
       />
 
       {!resultats && !enCours && (
         <>
-          <h2 className="section-titre">Recherches frequentes</h2>
+          <h2 className="section-titre">{t('med_courants')}</h2>
           <div className="puces" style={{ justifyContent: 'flex-start' }}>
             {COURANTS.map((nom) => (
               <button key={nom} className="puce" onClick={() => lancer(nom)}>
@@ -98,7 +96,7 @@ export default function Medicines() {
           <div className="vide-glyphe">
             <Icon nom="debranche" taille={24} />
           </div>
-          <h3>Recherche indisponible</h3>
+          <h3>{estArabe ? 'خدمة البحث غير متوفرة حاليا' : 'Recherche indisponible'}</h3>
           <p>{erreur}</p>
         </div>
       )}
@@ -108,19 +106,16 @@ export default function Medicines() {
           <div className="vide-glyphe">
             <Icon nom="loupe" taille={24} />
           </div>
-          <h3>Aucun medicament trouve</h3>
-          <p>
-            Verifie l’orthographe, ou essaie la molecule plutot que le nom commercial
-            (par exemple « paracetamol » au lieu de « Doliprane »).
-          </p>
+          <h3>{t('med_aucun_titre')}</h3>
+          <p>{t('med_aucun_texte')}</p>
         </div>
       )}
 
       {!enCours && ouvert && (
         <div style={{ marginTop: 28 }}>
           <button className="bouton-doux" onClick={() => setOuvert(null)} style={{ marginBottom: 16 }}>
-            <Icon nom="retour" taille={15} />
-            Retour aux resultats
+            <Icon nom={estArabe ? 'fleche' : 'retour'} taille={15} />
+            {t('med_retour')}
           </button>
           <MedicineDetails resultat={ouvert} />
         </div>
@@ -129,7 +124,7 @@ export default function Medicines() {
       {!enCours && !ouvert && resultats?.length > 0 && (
         <>
           <h2 className="section-titre">
-            {resultats.length} resultat{resultats.length > 1 ? 's' : ''}
+            {resultats.length} {t('med_resultats_nb')}
           </h2>
           <div className="grille-fiches">
             {resultats.map((r, i) => (

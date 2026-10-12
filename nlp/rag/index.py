@@ -7,6 +7,7 @@ pas de quota.
 
 Construire l'index, une fois, puis apres chaque `py -m nlp.rag.fiches` :
     py -m nlp.rag.index
+    py -m nlp.rag.index --type conseil     # seulement les fiches conseil (quelques secondes)
 (premier lancement : telecharge le modele, ~470 Mo ; quelques minutes de calcul)
 """
 import json
@@ -85,10 +86,32 @@ def construire() -> int:
     return len(fiches)
 
 
+def remplacer(type_: str) -> int:
+    """Refait seulement les fiches d'un type (quelques secondes pour "conseil",
+    au lieu de tout recalculer) ; renvoie leur nombre. A lancer API arretee."""
+    fiches = [f for f in lire_fiches() if f["type"] == type_]
+    col = collection()
+    col.delete(where={"type": type_})
+    for debut in range(0, len(fiches), LOT):
+        lot = fiches[debut:debut + LOT]
+        textes = [f["texte"] for f in lot]
+        col.upsert(ids=[f["id"] for f in lot], documents=textes, embeddings=_vecteurs(textes, PREFIXE_FICHE),
+                   metadatas=[{"type": f["type"], **f["meta"]} for f in lot])
+    return len(fiches)
+
+
 def main():
+    import argparse
+
+    analyseur = argparse.ArgumentParser()
+    analyseur.add_argument("--type", help="ne refaire que ce type de fiches (ex. conseil)")
+    arguments = analyseur.parse_args()
     if not FICHES_PATH.exists():
         raise SystemExit("fiches.jsonl absent : lance d'abord  py -m nlp.rag.fiches")
-    print(f"{construire()} fiches indexees dans {INDEX_PATH}")
+    if arguments.type:
+        print(f"{remplacer(arguments.type)} fiches « {arguments.type} » refaites dans {INDEX_PATH}")
+    else:
+        print(f"{construire()} fiches indexees dans {INDEX_PATH}")
 
 
 if __name__ == "__main__":

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useDictee } from '../lib/voix'
+import { useLanguage } from '../lib/languageContexte'
 
 function Loupe() {
   return (
@@ -39,11 +40,8 @@ function Fleche() {
 }
 
 /**
- * Champ de saisie unique de DwaTalk : sert de barre de recherche sur les pages
- * Medicaments et Pharmacies, et de zone de message sur l'Assistant.
- *
- * C'est un textarea et non un input : les questions en darija depassent souvent
- * une ligne, et il grandit avec le texte plutot que de le faire defiler.
+ * Champ de saisie ergonomique de DwaTalk : barre de recherche et zone de dialogue.
+ * Supporte la voix en Darija (Whisper) avec retour visuel d'ondes sonores en temps reel.
  */
 export default function SearchBar({
   valeur,
@@ -56,6 +54,7 @@ export default function SearchBar({
   autoFocus = false,
 }) {
   const champRef = useRef(null)
+  const { t, estArabe } = useLanguage()
 
   const { etat, erreur, avertissement, basculer, disponible } = useDictee({
     onTexte: (texte) => {
@@ -78,15 +77,17 @@ export default function SearchBar({
   }, [autoFocus])
 
   function surTouche(e) {
-    // Entree valide, Maj+Entree passe a la ligne : convention attendue ici.
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault()
       onValider(valeur)
     }
   }
 
+  const libellePlaceholder = placeholder ?? t('hero_placeholder')
+  const libelleAide = aide ?? t('hero_aide')
+
   return (
-    <div>
+    <div className={`champ-conteneur ${ecoute ? 'champ-en-ecoute' : ''}`} dir={estArabe ? 'rtl' : 'ltr'}>
       <div className="champ">
         <span className="champ-loupe">
           <Loupe />
@@ -97,11 +98,20 @@ export default function SearchBar({
           rows={1}
           dir="auto"
           value={valeur}
-          placeholder={placeholder}
-          aria-label={placeholder}
+          placeholder={libellePlaceholder}
+          aria-label={libellePlaceholder}
           onChange={(e) => onChange(e.target.value)}
           onKeyDown={surTouche}
         />
+
+        {ecoute && (
+          <div className="onde-vocale" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+        )}
 
         <div className="champ-actions">
           {avecVoix && disponible && (
@@ -113,17 +123,17 @@ export default function SearchBar({
               aria-pressed={ecoute}
               aria-label={
                 transcription
-                  ? 'Transcription en cours'
+                  ? t('transcription_en_cours')
                   : ecoute
-                    ? "Arreter l'enregistrement"
-                    : 'Poser ta question a voix haute'
+                    ? t('micro_arreter')
+                    : t('micro_demarrer')
               }
               title={
                 transcription
-                  ? 'Transcription en cours…'
+                  ? t('transcription_en_cours')
                   : ecoute
-                    ? "Arreter l'enregistrement"
-                    : 'Poser ta question a voix haute'
+                    ? t('micro_arreter')
+                    : t('micro_demarrer')
               }
             >
               {transcription ? <span className="mini-roue" aria-hidden="true" /> : <Micro />}
@@ -134,23 +144,21 @@ export default function SearchBar({
             className="rond rond-envoi"
             onClick={() => onValider(valeur)}
             disabled={enCours || !valeur.trim()}
-            aria-label="Envoyer"
+            aria-label={t('envoyer')}
           >
             <Fleche />
           </button>
         </div>
       </div>
 
-      {(erreur || avertissement || aide || ecoute || transcription) && (
-        <p className="champ-aide" role={erreur || avertissement ? 'alert' : 'status'}>
+      {(erreur || avertissement || libelleAide || ecoute || transcription) && (
+        <p className="champ-aide" role={erreur || avertissement ? 'alert' : 'status'} dir="auto">
           {erreur ||
             (ecoute
-              ? "J'ecoute… appuie a nouveau sur le micro quand tu as fini."
+              ? t('ecoute_en_cours')
               : transcription
-                ? 'Transcription en cours…'
-                : // l'avertissement prime sur l'aide : il porte sur le texte
-                  // qui vient d'etre insere dans le champ
-                  avertissement || aide)}
+                ? t('transcription_en_cours')
+                : avertissement || libelleAide)}
         </p>
       )}
     </div>

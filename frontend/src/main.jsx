@@ -4,13 +4,16 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 import { ConversationsProvider } from './lib/ConversationsContext'
+import { LanguageProvider } from './lib/LanguageContext'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <ConversationsProvider>
-        <App />
-      </ConversationsProvider>
+      <LanguageProvider>
+        <ConversationsProvider>
+          <App />
+        </ConversationsProvider>
+      </LanguageProvider>
     </BrowserRouter>
   </StrictMode>,
 )

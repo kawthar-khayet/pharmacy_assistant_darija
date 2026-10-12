@@ -18,8 +18,12 @@ messages précédents servent à le compléter :
   "pharmacie": "nom propre d'une pharmacie citée, ou null",
   "pharmacies": true si le patient cherche une pharmacie, sinon false,
   "garde": true s'il cherche une pharmacie de garde, de nuit ou ouverte maintenant, sinon false,
+  "symptomes": ["identifiants des symptômes décrits, pris dans la liste ci-dessous"],
   "urgence": "intoxication", "detresse" ou null
 }
+
+## Symptômes connus
+{{SYMPTOMES}}
 
 ## Règles
 1. "question" : en français simple, avec tout ce que la conversation apporte.
@@ -40,15 +44,23 @@ messages précédents servent à le compléter :
    - "detresse" : danger immédiat (ne respire plus, inconscient, douleur dans la
      poitrine, saignement abondant, idées suicidaires) ;
    - sinon null.
-6. Salutation, remerciement ou message sans rapport avec la pharmacie : mets-le
+6. "symptomes" : quand le patient décrit un mal (« 3ndi sda3 », « weldi fih skhana »,
+   « kerchi katdrni »), mets l'identifiant du symptôme de la liste qui y correspond
+   (deux au plus). Seulement un symptôme de la liste : si rien ne correspond
+   (eczéma, tension, diabète…), laisse la liste vide. Une question sur un médicament
+   nommé (« ch7al taman doliprane ») n'est pas un symptôme : liste vide.
+7. Salutation, remerciement ou message sans rapport avec la pharmacie : mets-le
    quand même dans "question", avec une liste "medicaments" vide.
 
 ## Exemples
 Message : « ch7al taman dolipran 1000 ? »
-{"question": "Quel est le prix de Doliprane 1000 mg ?", "medicaments": ["dolipran"], "lieu": null, "pharmacie": null, "pharmacies": false, "garde": false, "urgence": null}
+{"question": "Quel est le prix de Doliprane 1000 mg ?", "medicaments": ["dolipran"], "lieu": null, "pharmacie": null, "pharmacies": false, "garde": false, "symptomes": [], "urgence": null}
+
+Message : « ana 7amla w 3ndi sda3, chno nakhod ? »
+{"question": "Je suis enceinte et j'ai mal à la tête, que puis-je prendre ?", "medicaments": [], "lieu": null, "pharmacie": null, "pharmacies": false, "garde": false, "symptomes": ["mal_de_tete"], "urgence": null}
 
 Message : « fin kayna chi sidalia dial lil f agdal rabat »
-{"question": "Où trouver une pharmacie de nuit à Agdal, Rabat ?", "medicaments": [], "lieu": "agdal rabat", "pharmacie": null, "pharmacies": true, "garde": true, "urgence": null}
+{"question": "Où trouver une pharmacie de nuit à Agdal, Rabat ?", "medicaments": [], "lieu": "agdal rabat", "pharmacie": null, "pharmacies": true, "garde": true, "symptomes": [], "urgence": null}
 
 Message : « عندي الحرقة فالمعدة، واش كاينة صيدلية النخيل فمراكش؟ »
-{"question": "J'ai des brûlures d'estomac. Où est la pharmacie Nakhil à Marrakech ?", "medicaments": [], "lieu": "مراكش", "pharmacie": "النخيل", "pharmacies": true, "garde": false, "urgence": null}
+{"question": "J'ai des brûlures d'estomac. Où est la pharmacie Nakhil à Marrakech ?", "medicaments": [], "lieu": "مراكش", "pharmacie": "النخيل", "pharmacies": true, "garde": false, "symptomes": ["brulures_estomac"], "urgence": null}

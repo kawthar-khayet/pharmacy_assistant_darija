@@ -1,5 +1,5 @@
 import { Route, Routes, useLocation } from 'react-router-dom'
-import Sidebar from './components/Sidebar'
+import TopBar from './components/TopBar'
 import BottomNavigation from './components/BottomNavigation'
 import Home from './pages/Home'
 import Assistant from './pages/Assistant'
@@ -8,17 +8,19 @@ import Pharmacies from './pages/Pharmacies'
 import Garde from './pages/Garde'
 import History from './pages/History'
 import Settings from './pages/Settings'
+import { useLanguage } from './lib/languageContexte'
 
 export default function App() {
   const location = useLocation()
+  const { estArabe } = useLanguage()
 
   // L'Assistant gere son propre defilement (fil + socle fixes), les autres
   // pages defilent normalement : la classe distingue les deux comportements.
   const plein = location.pathname.startsWith('/assistant')
 
   return (
-    <div className="coquille">
-      <Sidebar />
+    <div className="coquille" dir={estArabe ? 'rtl' : 'ltr'}>
+      <TopBar />
 
       <main className="zone" style={plein ? { overflow: 'hidden' } : undefined}>
         {/* la cle sur la route rejoue l'apparition a chaque changement de page */}

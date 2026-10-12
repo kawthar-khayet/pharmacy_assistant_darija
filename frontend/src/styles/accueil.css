@@ -1,0 +1,720 @@
+/* ===========================================================================
+   DwaTalk — barre du haut, boutons et page d'accueil.
+   Chaque section de l'accueil a sa propre mise en page ; elles partagent
+   seulement la largeur (.acc-in), les titres (.acc-titre) et les boutons.
+   =========================================================================== */
+
+/* ------------------------------------------------------------ barre du haut */
+
+.barre-haut {
+  flex: none;
+  position: relative;
+  z-index: 40;
+  background: var(--marine);
+  color: #b9c6d6;
+}
+
+.barre-haut-in {
+  max-width: var(--large);
+  margin: 0 auto;
+  height: 64px;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.barre-haut-marque { display: inline-flex; }
+
+.barre-haut-liens {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-inline-start: auto;
+}
+
+.lien-haut {
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  color: #b9c6d6;
+  font-size: .93rem;
+  font-weight: 550;
+  transition: color var(--transition), background var(--transition);
+}
+
+.lien-haut:hover { color: #fff; background: rgba(255, 255, 255, .07); }
+.lien-haut-actif { color: #fff; }
+
+.barre-haut-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icone-haut {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #b9c6d6;
+  transition: color var(--transition), background var(--transition);
+}
+
+.icone-haut:hover { color: #fff; background: rgba(255, 255, 255, .07); }
+.icone-haut-actif { color: var(--sante-vif); }
+
+/* --- menu de langue --- */
+
+.menu-langue { position: relative; }
+
+.menu-langue-bouton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border: 1px solid rgba(255, 255, 255, .28);
+  border-radius: 999px;
+  background: none;
+  color: #fff;
+  font-size: .9rem;
+  font-weight: 600;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.menu-langue-bouton:hover { border-color: rgba(255, 255, 255, .55); background: rgba(255, 255, 255, .06); }
+
+.menu-langue-liste {
+  position: absolute;
+  top: calc(100% + 8px);
+  inset-inline-end: 0;
+  min-width: 168px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: var(--carte);
+  border: 1px solid var(--trait);
+  border-radius: var(--r);
+  box-shadow: var(--ombre-3);
+}
+
+.menu-langue-liste button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 12px;
+  border: 0;
+  border-radius: var(--r-sm);
+  background: none;
+  color: var(--encre);
+  font-size: .92rem;
+  font-weight: 550;
+  text-align: start;
+}
+
+.menu-langue-liste button:hover { background: var(--fond); }
+.menu-langue-liste .menu-langue-actif { color: var(--sante-fonce); font-weight: 700; }
+
+/* ------------------------------------------------------------------ boutons */
+
+.btn-plein,
+.btn-contour {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 24px;
+  border-radius: 999px;
+  font-size: .98rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  transition: background var(--transition), border-color var(--transition),
+              color var(--transition), transform var(--transition);
+}
+
+.btn-plein {
+  border: 1px solid var(--sante);
+  background: var(--sante);
+  color: #fff;
+}
+
+.btn-plein:hover { background: var(--sante-fonce); border-color: var(--sante-fonce); transform: translateY(-1px); }
+
+.btn-contour {
+  border: 1px solid var(--trait-fort);
+  background: var(--carte);
+  color: var(--encre);
+}
+
+.btn-contour:hover { border-color: var(--encre); }
+
+.btn-contour-clair {
+  border-color: rgba(255, 255, 255, .3);
+  background: none;
+  color: #fff;
+}
+
+.btn-contour-clair:hover { border-color: #fff; }
+
+.btn-compact { padding: 9px 18px; font-size: .9rem; }
+
+[dir="rtl"] .acc-fleche { transform: scaleX(-1); }
+
+/* ------------------------------------------------------------------ accueil */
+
+.accueil {
+  background: var(--carte);
+  color: var(--encre-douce);
+}
+
+.acc-in {
+  max-width: var(--large);
+  margin: 0 auto;
+  padding-inline: 32px;
+}
+
+.acc-etroit { max-width: 720px; }
+
+.acc-section { padding-block: 96px; }
+.acc-fond { background: var(--fond); }
+
+.acc-titre {
+  font-family: var(--police-titre);
+  font-weight: 500;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  color: var(--encre);
+}
+
+.acc-titre em { font-style: normal; color: var(--sante); }
+
+.acc-titre-xl { font-size: clamp(2.5rem, 5.2vw, 4.4rem); line-height: 1.06; }
+
+/* l'ecriture arabe a besoin de plus de hauteur de ligne et pas d'approche serree */
+[dir="rtl"] .acc-titre { line-height: 1.5; letter-spacing: 0; font-weight: 600; }
+[dir="rtl"] .acc-titre-xl { line-height: 1.4; }
+
+.acc-centre { text-align: center; }
+
+.acc-texte {
+  margin-top: 14px;
+  max-width: 34rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.acc-icone { color: var(--sante); margin-bottom: 14px; }
+
+.acc-boutons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* --- presentation --- */
+
+.acc-hero { padding-block: 104px 96px; }
+
+.acc-hero-grille {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 72px;
+  align-items: center;
+}
+
+.acc-surtitre {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  font-size: .9rem;
+  font-weight: 650;
+  color: var(--sante-fonce);
+}
+
+.acc-surtitre::before {
+  content: '';
+  width: 28px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--ambre);
+}
+
+.acc-chapeau {
+  margin-top: 22px;
+  max-width: 36rem;
+  font-size: 1.13rem;
+  line-height: 1.75;
+}
+
+.acc-chapeau + .acc-chapeau { margin-top: 14px; }
+
+.acc-hero .acc-boutons { margin-top: 36px; }
+
+.acc-apercu-chat {
+  margin: 0;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: var(--r-xl);
+  background: var(--fond);
+}
+
+.acc-apercu-tete {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  font-size: .9rem;
+  color: var(--encre);
+}
+
+.acc-pastille {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--sante);
+}
+
+.acc-apercu-note {
+  margin-inline-start: auto;
+  font-size: .76rem;
+  color: var(--encre-pale);
+}
+
+.acc-bulle {
+  max-width: 84%;
+  padding: 11px 15px;
+  border-radius: 18px;
+  font-size: .95rem;
+  line-height: 1.5;
+}
+
+.acc-bulle-moi {
+  align-self: flex-end;
+  background: var(--marine);
+  color: #fff;
+  border-end-end-radius: 6px;
+}
+
+.acc-bulle-decalee { max-width: 70%; }
+
+.acc-bulle-bot {
+  align-self: flex-start;
+  min-width: 68%;
+  background: var(--carte);
+  border: 1px solid var(--trait);
+  border-end-start-radius: 6px;
+}
+
+.acc-bulle-bot strong { color: var(--encre); font-weight: 650; }
+
+.acc-ligne {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 9px;
+  padding-top: 9px;
+  border-top: 1px solid var(--trait);
+  font-size: .86rem;
+}
+
+.acc-trait {
+  display: inline-block;
+  height: 8px;
+  border-radius: 8px;
+  background: var(--trait);
+}
+
+.acc-etiquette {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--sante-voile);
+  color: var(--sante-fonce);
+  font-size: .8rem;
+  font-weight: 650;
+}
+
+/* --- volumes --- */
+
+.acc-volumes { background: var(--fond); }
+
+.acc-volumes-in {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px 44px;
+  padding-block: 26px;
+}
+
+.acc-volume { font-size: .95rem; }
+
+.acc-volume strong {
+  margin-inline-end: 6px;
+  font-family: var(--police-titre);
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--encre);
+}
+
+.acc-volumes-note {
+  margin-inline-start: auto;
+  font-size: .82rem;
+  color: var(--encre-pale);
+}
+
+/* --- essai --- */
+
+.acc-essai { text-align: center; }
+.acc-essai .acc-texte { margin-inline: auto; }
+.acc-essai-champ { margin-top: 30px; text-align: start; }
+
+.acc-essai .champ {
+  padding: 10px 12px 10px 18px;
+  border-radius: var(--r-lg);
+  box-shadow: 0 0 0 6px var(--fond);
+}
+
+.acc-essai .champ:focus-within { box-shadow: 0 0 0 6px var(--sante-voile); }
+
+/* --- services : mosaique asymetrique --- */
+
+.acc-services { padding-top: 0; }
+
+.acc-mosaique {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr;
+  gap: 16px;
+}
+
+.acc-case {
+  padding: 26px;
+  border: 1px solid var(--trait);
+  border-radius: var(--r-lg);
+  background: var(--carte);
+}
+
+.acc-case h3 {
+  font-size: 1.08rem;
+  color: var(--encre);
+}
+
+.acc-case p { margin-top: 6px; font-size: .95rem; }
+
+.acc-case-grande {
+  grid-row: span 2;
+  border-color: transparent;
+  background: var(--sante-voile);
+}
+
+.acc-case-grande h3 {
+  font-family: var(--police-titre);
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.acc-case-large {
+  grid-column: span 2;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.acc-case-large .acc-icone { flex: none; margin: 2px 0 0; }
+
+.acc-case-nuit {
+  border-color: transparent;
+  background: var(--marine);
+  color: #b9c6d6;
+}
+
+.acc-case-nuit h3 { color: #fff; font-size: 1.15rem; line-height: 1.6; }
+
+.acc-fiche-mini {
+  margin-top: 26px;
+  padding: 6px 18px 16px;
+  border-radius: var(--r);
+  background: var(--carte);
+}
+
+.acc-fiche-mini .acc-ligne:first-child { border-top: 0; }
+
+/* --- medicaments --- */
+
+.acc-duo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: 72px;
+  align-items: center;
+}
+
+.acc-duo .btn-plein { margin-top: 30px; }
+
+.acc-fiche {
+  margin: 0;
+  padding: 24px;
+  border: 1px solid var(--trait);
+  border-radius: var(--r-lg);
+  background: var(--carte);
+  box-shadow: var(--ombre-3);
+}
+
+.acc-fiche-recherche {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  padding: 11px 14px;
+  border: 1px solid var(--trait);
+  border-radius: var(--r-sm);
+  color: var(--encre-pale);
+  font-size: .92rem;
+}
+
+.acc-fiche-tete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.acc-fiche-tete strong { font-size: 1.15rem; color: var(--encre); }
+
+.acc-badge {
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: var(--sante-voile);
+  color: var(--sante-fonce);
+  font-size: .78rem;
+  font-weight: 650;
+}
+
+.acc-fiche-details { margin-top: 4px; font-size: .88rem; }
+
+.acc-fiche-faits {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.acc-fiche-faits div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px;
+  border-radius: var(--r-sm);
+  background: var(--fond);
+  font-size: .82rem;
+}
+
+.acc-fiche-faits .acc-trait { background: var(--trait-fort); }
+
+/* --- pharmacies : pleine largeur bleu nuit --- */
+
+.acc-nuit {
+  background: var(--marine);
+  color: #b9c6d6;
+}
+
+.acc-nuit .acc-titre { color: #fff; }
+.acc-nuit .acc-titre em { color: var(--sante-vif); }
+
+.acc-nuit-tete {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 44px;
+}
+
+.acc-nuit-tete .acc-boutons { flex: none; }
+
+.acc-nuit-grille {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 16px;
+}
+
+.acc-carte {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  border-radius: var(--r-lg);
+  background: var(--marine-2);
+}
+
+.acc-carte path {
+  fill: none;
+  stroke: var(--marine-3);
+  stroke-width: 7;
+  stroke-linecap: round;
+}
+
+.acc-carte circle { fill: var(--sante); stroke: var(--marine-2); stroke-width: 4; }
+.acc-carte .acc-carte-garde { fill: var(--ambre); }
+
+.acc-resultats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.acc-resultat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  padding: 20px 22px;
+  border-radius: var(--r-lg);
+  background: var(--marine-2);
+  font-size: .88rem;
+}
+
+.acc-resultat strong { color: #fff; font-size: 1rem; font-weight: 650; }
+.acc-resultat em { font-style: normal; font-weight: 500; color: var(--ambre); }
+
+/* --- sources et limites --- */
+
+.acc-trio {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px;
+  margin-top: 56px;
+}
+
+.acc-trio h3 { font-size: 1.08rem; color: var(--encre); }
+.acc-trio p { margin-top: 8px; font-size: .96rem; line-height: 1.7; }
+
+.acc-limite {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 52px;
+  padding: 18px 22px;
+  border-radius: var(--r);
+  background: var(--ambre-voile);
+  color: var(--ambre-encre);
+  font-size: .96rem;
+}
+
+.acc-limite svg { flex: none; margin-top: 3px; }
+
+/* --- appel final --- */
+
+.acc-final {
+  max-width: calc(var(--large) - 64px);
+  margin-bottom: 96px;
+  padding: 84px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 36px;
+  background: var(--sante-voile);
+}
+
+.acc-final .acc-texte { margin-bottom: 30px; }
+
+/* --- pied de page --- */
+
+.acc-pied {
+  padding-block: 60px 28px;
+  background: var(--marine);
+  color: #8fa0b5;
+  font-size: .9rem;
+}
+
+.acc-pied-grille {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.acc-pied-grille > * {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.acc-pied-grille p { max-width: 18rem; margin-top: 6px; line-height: 1.6; }
+
+.acc-pied h4 {
+  margin-bottom: 4px;
+  font-size: .9rem;
+  font-weight: 650;
+  letter-spacing: 0;
+  color: #fff;
+}
+
+.acc-pied a { transition: color var(--transition); }
+.acc-pied a:hover { color: #fff; }
+
+.acc-pied-note {
+  margin-top: 44px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  font-size: .8rem;
+}
+
+/* --------------------------------------------------------------- responsive */
+
+@media (max-width: 1024px) {
+  .acc-hero-grille, .acc-duo { gap: 44px; }
+  .acc-section { padding-block: 76px; }
+  .acc-hero { padding-block: 72px; }
+  .acc-trio { gap: 32px; }
+}
+
+@media (max-width: 860px) {
+  .barre-haut-in { height: 56px; padding: 0 16px; gap: 12px; }
+  .barre-haut-liens, .icone-haut { display: none; }
+  .barre-haut-actions { margin-inline-start: auto; }
+  .barre-haut .marque-signe { width: 32px; height: 32px; }
+
+  .acc-in { padding-inline: 20px; }
+  .acc-section { padding-block: 60px; }
+  .acc-hero { padding-block: 48px 56px; }
+
+  .acc-hero-grille, .acc-duo, .acc-nuit-grille { grid-template-columns: 1fr; }
+  .acc-chapeau { font-size: 1.03rem; }
+
+  .acc-volumes-in { gap: 6px 28px; }
+  .acc-volumes-note { margin-inline-start: 0; width: 100%; }
+
+  .acc-mosaique { grid-template-columns: 1fr 1fr; }
+  .acc-case-grande, .acc-case-large { grid-column: span 2; grid-row: auto; }
+
+  .acc-nuit-tete { flex-direction: column; align-items: flex-start; margin-bottom: 30px; }
+  .acc-carte { min-height: 170px; }
+
+  .acc-trio { grid-template-columns: 1fr; gap: 28px; margin-top: 36px; }
+
+  .acc-final { margin-inline: 20px; margin-bottom: 60px; padding: 52px 22px; border-radius: 26px; }
+
+  .acc-pied-grille { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .acc-pied-grille > :first-child { grid-column: span 2; }
+}
+
+@media (max-width: 480px) {
+  .barre-haut .marque-mot { display: none; }
+  .acc-hero .acc-boutons > *, .acc-nuit-tete .acc-boutons > * { flex: 1 1 100%; }
+  .acc-nuit-tete .acc-boutons { width: 100%; }
+  .acc-mosaique { grid-template-columns: 1fr; }
+  .acc-case-grande, .acc-case-large { grid-column: auto; }
+  .acc-fiche-faits { grid-template-columns: 1fr; }
+}

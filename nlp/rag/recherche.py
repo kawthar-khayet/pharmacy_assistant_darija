@@ -6,12 +6,10 @@ Trois recherches, selon la Requete (ecrite par comprendre.py) :
   par la distance pharmacies d'un lieu, de garde, ou citees par leur nom
                   (outils/pharmacies.py). La garde du jour vient de Telecontact
                   (outils/garde.py) ; a defaut, des horaires 24h/24 ou nuit ;
-  par le sens     toujours : les symptomes de la liste blanche les plus proches
-                  de la question, dans ChromaDB, pour qu'aucune partie du message
-                  ne reste sans reponse ("3ndi sda3, fin kayna pharmacie f maarif ?").
-                  Seulement les symptomes : sans medicament nomme, la recherche
-                  par le sens ramenait des notices sans rapport (la morphine pour
-                  un mal de tete), que le LLM aurait pu prendre pour un conseil.
+  par le symptome le LLM a reconnu un symptome de la liste blanche : sa fiche
+                  conseil, avec les medicaments pour adulte et pour enfant ;
+  par le sens     les morceaux de notice d'un medicament cite les plus proches
+                  de la question, dans ChromaDB.
 
 Quand une recherche ne donne rien, ou qu'il faut une precision du patient,
 une fiche de type "note" le dit au LLM : il n'a pas a deviner.
@@ -35,7 +33,7 @@ MAX_MEDICAMENTS = 3     # par message : au-dela, la reponse devient illisible
 MAX_MARQUES = 3         # marques montrees pour une molecule ou un nom incertain
 MAX_FICHES_MOLECULE = 6 # une marque a parfois plusieurs fiches ("GLUCOPHAGE 500", "GLUCOPHAGE 850")
 MAX_NOTICES = 4         # morceaux de notice par molecule
-MAX_CONSEILS = 3        # symptomes de la liste blanche trouves par le sens
+MAX_CONSEILS = 2        # symptomes traites par message
 # Ressemblance minimale (0-100) entre le nom cite et une molecule de la base.
 SEUIL_MOLECULE = 90
 # "PP" (AMMPS) et "PRINCEPS" (CNOPS) : la marque d'origine d'une molecule.
@@ -57,6 +55,7 @@ class Requete:
     pharmacie: str | None = None                    # pharmacie citee par son nom
     pharmacies: bool = False                        # il cherche une pharmacie
     garde: bool = False                             # ... de garde, de nuit
+    symptomes: list[str] = field(default_factory=list)     # identifiants de la liste blanche
 
 
 @dataclass
@@ -295,7 +294,11 @@ def chercher(requete: Requete, ville_connue: str | None = None) -> Trouve:
     for nom in requete.medicaments[:MAX_MEDICAMENTS]:
         trouve.fiches += _medicament(nom, vecteur)
 
-    trouve.fiches += _par_sens(vecteur, {"type": "conseil"}, MAX_CONSEILS)
+    # Les symptomes sont choisis par le LLM dans la liste blanche : avec 36
+    # fiches proches les unes des autres, la recherche par le sens se trompait
+    # ("enceinte et mal de tete" ramenait les regles douloureuses).
+    if requete.symptomes:
+        trouve.fiches += _par_ids([f"conseil:{s}" for s in requete.symptomes[:MAX_CONSEILS]])
 
     vues, uniques = set(), []
     for f in trouve.fiches:
