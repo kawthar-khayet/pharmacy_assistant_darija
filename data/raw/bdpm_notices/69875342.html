@@ -1,0 +1,1878 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="i3d7BqogzSDfIFbKAJV58g==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="i3d7BqogzSDfIFbKAJV58g==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 29/09/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé"
+            aria-level="3"
+          >
+            DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-bon-usage" class="fr-tabs__tab  fr-tabs__tab--icon-left" tabindex="-1" role="tab"
+                            aria-selected="false" aria-controls="tabpanel-bon-usage-panel">Bon usage
+                    </button>
+                  </li>
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                          <p id="tag-generique" class="fr-tag" aria-controls="fr-modal-tag-generique" data-fr-opened="false">
+              <span class="fr-icon-capsule-fill">
+              </span>&nbsp;générique
+          </p>
+              </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 22/02/2023
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0440591">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte><a name="_Toc142279003">Classe pharmacothérapeutique : Progestatifs - code ATC : G03DB08</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279004">DIENOGEST LABORATOIRES MAJORELLE </a>est indiqué dans le traitement de l’endométriose (symptômes douloureux dus à la présence de muqueuse utérine en position anormale). </p>
+<p class=AmmCorpsTexte>Ce médicament contient une hormone progestative appelée diénogest.</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament appartient au(x) groupe(s) générique(s) suivants : <br/><ul role="list"><li role='listitem'><a href='/medicament/affiche/groupe-generique/69875342/1610' aria-describedby='tooltip-medicament-generique-0'>DIENOGEST 2 mg - VISANNE 2 mg, comprimé</a><span id='tooltip-medicament-generique-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Ouvrir la page de détail sur ce groupe générique</span></li></ul></p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Comprimé ( Composition pour un comprimé )<ul role="list"><li role="listitem" style="list-style-type: none;"> > diénogest<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">2 mg </span></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > plaquette(s) PVC PVDC aluminium de 28 (2 x 14) comprimé(s)  </p><p>Code CIP : 34009 302 704 8 6<br/>Déclaration d'arrêt de commercialisation : 01/09/2025<br/>Cette présentation n'est pas <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 11,74 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 12,76 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :65 %</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span><br/><p> > plaquette(s) PVC PVDC aluminium de 84 (6 x 14) comprimé(s)  </p><p>Code CIP : 34009 302 704 9 3<br/>Déclaration de commercialisation : 04/10/2023<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 33,25 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-1-0'>Honoraire de dispensation</a> : 2,76 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 36,01 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :65%</li></ul></span></div><span id='tooltip-info-cnam-1-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><div class='fr-grid-row'><div class='fr-col'><p>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence. </p></div></div><div class='fr-grid-row'><div class='fr-col'><p>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprès de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-smr-aide-2'>plus d'informations dans l'aide</a>). Les avis et synthèses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-smr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection à la page d'aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'SMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur du SMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3445461'>Avis du 07/06/2023</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 07/06/2023 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Inscription (CT)</td><td class='text-align-center'>Le service médical rendu par DIENOGEST (diénogest) est important dans le traitement de l’endométriose. ;</td></tr></tbody></table></div></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence.</p></div></div><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprés de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-asmr-aide-3'>plus d'informations dans l'aide</a>). Les avis et synthéses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-asmr-aide-3' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers la page aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'ASMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur de l'ASMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td class="text-align-center">V (Inexistant)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3445461'>Avis du 07/06/2023</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 07/06/2023 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Inscription (CT)</td><td class="text-align-center">Cette spécialité est un générique qui n’apporte pas d’amélioration du service médical rendu (ASMR V) par rapport aux présentations déjà inscrites.</td></tr></tbody></table></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : LABORATOIRES MAJORELLE</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure de reconnaissance mutuelle</li><li>Code CIS : &nbsp;6 987 534 2</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 21/11/2025</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras>DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé</p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Diénogest............................................................................................................................... 2 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un comprimé</p>
+<p class=AmmCorpsTexte><u>Excipient à effet notoire</u> : Chaque comprimé contient 62,8 mg de lactose monohydraté.</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Comprimé</a></p>
+<p class=AmmCorpsTexte>Comprimé blanc à blanc cassé, rond, à faces plates, à bords biseautés, portant l'inscription "NC" sur une face et "22" sur l'autre face.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">Traitement de l’endométriose.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278918">Mode d’administration</a></p>
+<p class=AmmCorpsTexte>Voie orale.</p>
+<p class=AmmAnnexeTitre3>Posologie</p>
+<p class=AmmCorpsTexte>La posologie de DIENOGEST LABORATOIRES MAJORELLE est de 1 comprimé par jour, sans interruption, à prendre de préférence à heure fixe chaque jour, avec une boisson si nécessaire. Les comprimés peuvent être pris au cours ou en dehors des repas.</p>
+<p class=AmmCorpsTexte>Les comprimés doivent être pris en continu, indépendamment des saignements vaginaux. Lorsqu’une boîte est terminée, la suivante doit être entamée directement, sans interruption.</p>
+<p class=AmmCorpsTexte><a name="_Hlk126654778">La sécurité et l'efficacité du diénogest n’ont pas été étudiées sur une durée de traitement supérieure à 15 mois chez des patientes atteintes d’endométriose.</a></p>
+<p class=AmmCorpsTexte>Le traitement peut être instauré n’importe quel jour du cycle menstruel.</p>
+<p class=AmmCorpsTexte>Tout traitement contraceptif hormonal doit être interrompu avant l’instauration du traitement par ce produit. Si une contraception est nécessaire, des méthodes contraceptives non hormonales (par exemple, une méthode barrière comme le préservatif) doivent être utilisées.</p>
+<p class=AmmAnnexeTitre4>En cas d’oubli :</p>
+<p class=AmmCorpsTexte>L’oubli de comprimés, les vomissements et/ou les diarrhées (survenant dans les 3 à 4 heures après la prise du comprimé) peuvent réduire l’efficacité de DIENOGEST LABORATOIRES MAJORELLE. Si un ou plusieurs comprimés ont été oubliés, la patiente doit prendre un seul comprimé dès qu’elle s’en aperçoit puis poursuivre le traitement le jour suivant à l’heure habituelle. De même, tout comprimé non absorbé en raison de vomissements ou d’une diarrhée doit être remplacé par un autre comprimé.</p>
+<p class=AmmAnnexeTitre3>Populations particulières</p>
+<p class=AmmAnnexeTitre4>Population pédiatrique</p>
+<p class=AmmCorpsTexte>DIENOGEST LABORATOIRES MAJORELLE n’est pas indiqué chez l’enfant avant la puberté.</p>
+<p class=AmmCorpsTexte>La sécurité et l'efficacité du diénogest ont été étudiées dans un essai clinique non contrôlé pendant 12 mois chez 111 adolescentes (de 12 à <18 ans) présentant une endométriose cliniquement suspectée ou confirmée (voir rubriques 4.4 et 5.1).</p>
+<p class=AmmAnnexeTitre4>Sujets âgés</p>
+<p class=AmmCorpsTexte>Ce médicament n’a pas d’indication chez les personnes âgées.</p>
+<p class=AmmAnnexeTitre4>Patientes atteintes d’insuffisance hépatique :</p>
+<p class=AmmCorpsTexte><span class=ammcorpstextecar0>Ce médicament est contre&#8209;indiqué</span> chez les patientes ayant ou ayant eu une affection hépatique sévère (voir rubrique 4.3).</p>
+<p class=AmmAnnexeTitre4>Patientes atteintes d’insuffisance rénale :</p>
+<p class=AmmCorpsTexte>Aucune donnée n’indique qu’un ajustement posologique soit nécessaire en cas d’insuffisance rénale.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278919">Ne pas utiliser DIENOGEST LABORATOIRES MAJORELLE si une femme présente l’une des pathologies décrites ci-dessous. Cette liste est issue en partie de l’information disponible sur les autres préparations à base de progestatif seul.</a></p>
+<p class=AmmCorpsTexte>En cas de survenue de l’une de ces pathologies lors de l’utilisation de DIENOGEST LABORATOIRES MAJORELLE, interrompre immédiatement le traitement.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Thromboembolie veineuse en cours</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Affection artérielle et cardiovasculaire, actuelle ou antérieure (p. ex., infarctus du myocarde, accident vasculaire cérébral (AVC), cardiopathie ischémique)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Diabète sucré avec atteinte vasculaire</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Présence ou antécédents d’affection hépatique sévère, en l’absence de normalisation des tests fonctionnels hépatiques</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Présence ou antécédents de tumeurs hépatiques (bénignes ou malignes)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Tumeurs malignes hormono-dépendantes connues ou suspectées</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Saignement vaginal d’origine inconnue</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypersensibilité à la substance active ou à l’un des excipients mentionnés à la rubrique 6.1.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278920">DIENOGEST LABORATOIRES MAJORELLE étant une préparation exclusivement progestative, on peut présumer que les mises en garde spéciales et précautions d’emploi des autres préparations exclusivement progestatives sont également valables lors de l’utilisation de DIENOGEST LABORATOIRES MAJORELLE, bien que toutes les mises en garde et précautions suivantes ne soient pas basées sur des observations effectuées lors des études cliniques portant sur le dienogest.</a></p>
+<p class=AmmCorpsTexte>Si l’une des affections/l’un des facteurs de risque mentionnés ci<span style='font-family:"Cambria Math",serif'>&#8209;</span>dessous est présent ou s’aggrave, une analyse individuelle du rapport bénéfice/risque doit être réalisée avant de commencer ou de poursuivre le traitement par DIENOGEST LABORATOIRES MAJORELLE.</p>
+<p class=AmmAnnexeTitre4>Saignements utérins graves</p>
+<p class=AmmCorpsTexte>L’utilisation de DIENOGEST LABORATOIRES MAJORELLE peut aggraver les saignements utérins, par exemple chez les femmes atteintes d’adénomyose utérine ou de fibromyome utérin. Les saignements, lorsqu’ils sont abondants et ininterrompus, peuvent entraîner une anémie (parfois sévère). En cas d’anémie, l’arrêt du traitement par DIENOGEST LABORATOIRES MAJORELLE doit être envisagé.</p>
+<p class=AmmAnnexeTitre4>Perturbations du cycle menstruel</p>
+<p class=AmmCorpsTexte>La plupart des patientes traitées par DIENOGEST LABORATOIRES MAJORELLE connaissent des perturbations de leur cycle menstruel (voir rubrique 4.8).</p>
+<p class=AmmAnnexeTitre4>Troubles circulatoires</p>
+<p class=AmmCorpsTexte>Les études épidémiologiques n’ont mis en évidence que peu d’éléments corroborant une association entre les préparations exclusivement progestatives et l’augmentation du risque d’infarctus du myocarde ou de thromboembolie cérébrale. Le risque d’accident cardiovasculaire et cérébral semble plutôt lié à l’âge, à l’hypertension et au tabagisme. Chez les femmes hypertendues, les préparations exclusivement progestatives peuvent augmenter légèrement le risque d’AVC.</p>
+<p class=AmmCorpsTexte>Certaines études indiquent une légère augmentation, mais non statistiquement significative, du risque de thromboembolie veineuse (thrombose veineuse profonde, embolie pulmonaire) associée à l’utilisation des préparations exclusivement progestatives. Les facteurs de risque généralement reconnus de la thromboembolie veineuse (TEV) sont notamment les antécédents personnels ou familiaux (TEV chez la fratrie ou chez un parent à un âge relativement précoce), l’âge, l’obésité, une immobilisation prolongée, les interventions chirurgicales lourdes ou les traumatismes majeurs. En cas d’immobilisation prolongée, il est conseillé de suspendre l’utilisation de DIENOGEST LABORATOIRES MAJORELLE (au moins quatre semaines à l’avance en cas d’opération programmée) et de ne reprendre le traitement que deux semaines après la récupération complète de la mobilité.</p>
+<p class=AmmCorpsTexte>L’augmentation du risque thromboembolique lors du post-partum doit être prise en compte.</p>
+<p class=AmmCorpsTexte>Le traitement doit être interrompu en cas d’apparition de symptômes ou en cas de suspicion d’un accident thrombotique artériel ou veineux.</p>
+<p class=AmmAnnexeTitre4>Tumeurs</p>
+<p class=AmmCorpsTexte>Une méta<span style='font-family:"Cambria Math",serif'>&#8209;</span>analyse portant sur 54 études épidémiologiques a conclu qu’il existe une légère augmentation du risque relatif (RR = 1,24) de cancer du sein chez les femmes utilisant des contraceptifs oraux, principalement des estroprogestatifs. Cette majoration du risque disparaît progressivement au cours des 10 ans qui suivent l’arrêt des contraceptifs oraux combinés (COC). Le cancer du sein étant rare chez la femme de moins de 40 ans, le nombre plus élevé de cancers du sein diagnostiqués chez les utilisatrices actuelles et récentes de COC reste faible par rapport au risque global de cancer du sein. Le risque de cancer du sein chez les utilisatrices de préparations exclusivement progestatives pourrait être d’amplitude similaire à celui associé aux pilules estroprogestatives. Cependant, dans le cas des préparations exclusivement progestatives, les données portent sur une population d’utilisatrices beaucoup plus réduite et sont donc moins concluantes que celles concernant les COC. Ces études ne permettent pas d’établir une relation de causalité. L’augmentation du risque observée peut s’expliquer par un diagnostic plus précoce du cancer du sein chez les utilisatrices de contraceptifs oraux, par les effets biologiques de ces pilules ou par l’association des deux. Chez les utilisatrices de contraceptifs oraux, les cancers du sein ont tendance à être diagnostiqués à un stade clinique moins avancé que ceux diagnostiqués chez les femmes n’ayant jamais utilisé de pilule contraceptive.</p>
+<p class=AmmCorpsTexte>Dans de rares cas, des tumeurs hépatiques bénignes et, plus rarement encore, des tumeurs hépatiques malignes ont été rapportées chez des utilisatrices de substances hormonales telles que le diénogest. Dans des cas isolés, ces tumeurs ont entraîné des hémorragies intra<span style='font-family:"Cambria Math",serif'>&#8209;</span>abdominales mettant en jeu le pronostic vital. L’éventualité d’une tumeur hépatique doit être envisagée lors du diagnostic différentiel si une douleur sévère dans la partie supérieure de l’abdomen, une augmentation du volume hépatique ou des signes d'hémorragie intra<span style='font-family:"Cambria Math",serif'>&#8209;</span>abdominale sont observés chez une utilisatrice de DIENOGEST LABORATOIRES MAJORELLE.</p>
+<p class=AmmAnnexeTitre4>Ostéoporose</p>
+<p class=AmmCorpsTexte><i>Modifications de la Densité Minérale Osseuse (DMO)</i></p>
+<p class=AmmCorpsTexte>L'utilisation de diénogest chez les adolescentes (de 12 à <18 ans) sur une période de traitement de 12 mois a été associée à une diminution de la Densité Minérale Osseuse (DMO) du rachis lombaire (L2-L4). La variation relative moyenne de la DMO entre la valeur de base à l’initiation du traitement et la fin du traitement était de -1,2%, avec des variations comprises entre -6% et 5% (IC 95% : -1,70% et -0,78%, n = 103). Dans un sous-groupe présentant une diminution de la DMO, une mesure répétée 6 mois après la fin du traitement a montré une tendance au rétablissement (variation moyenne par rapport à la valeur de base à l’initiation du traitement : -2,3% à la fin du traitement et -0,6% 6 mois après la fin du traitement avec des variations comprises entre -9% et 6% (IC 95%: -1,20% et 0,06% (n = 60))).</p>
+<p class=AmmCorpsTexte>Une diminution de la DMO est particulièrement préoccupante pendant l'adolescence et au début de l'âge adulte, s’agissant d’une période critique de la croissance osseuse. On ignore si une diminution de la DMO dans cette population réduit le pic de masse osseuse et augmente le risque de fracture dans la vie future (voir rubriques 4.2 et 5.1).</p>
+<p class=AmmCorpsTexte>Chez les patientes présentant un risque accru d’ostéoporose, le rapport bénéfice/risque doit être soigneusement évalué avant d’instaurer le traitement par DIENOGEST LABORATOIRES MAJORELLE car celui-ci entraîne une diminution modérée des taux d’estrogènes endogènes (voir rubrique 5.1).</p>
+<p class=AmmCorpsTexte>Un apport adéquat en calcium et en vitamine D, issu de l’alimentation ou de compléments alimentaires, est important pour la santé des os chez les femmes de tous âges.</p>
+<p class=AmmAnnexeTitre4>Autres pathologies</p>
+<p class=AmmCorpsTexte>Les patientes ayant des antécédents de dépression doivent être étroitement surveillées et le traitement doit être interrompu en cas de réapparition d’une dépression grave.</p>
+<p class=AmmCorpsTexte>Le diénogest ne semble généralement pas avoir d’incidence sur la pression artérielle des femmes normotendues. Cependant, si une hypertension durable et cliniquement significative survient lors de l’utilisation de DIENOGEST LABORATOIRES MAJORELLE, il est conseillé d’interrompre le traitement par DIENOGEST LABORATOIRES MAJORELLE et de traiter l’hypertension.</p>
+<p class=AmmCorpsTexte>L’arrêt du traitement par DIENOGEST LABORATOIRES MAJORELLE est également requis en cas de réapparition d’un ictère cholestatique et/ou d’un prurit survenu initialement lors de la grossesse ou de l’utilisation antérieure de stéroïdes sexuels.</p>
+<p class=AmmCorpsTexte>Le diénogest peut avoir un léger effet sur l’insulinorésistance périphérique et la tolérance au glucose. Les femmes diabétiques, en particulier celles ayant des antécédents de diabète gestationnel, doivent faire l’objet d’une surveillance étroite pendant le traitement par DIENOGEST LABORATOIRES MAJORELLE.</p>
+<p class=AmmCorpsTexte>L’apparition occasionnelle de chloasma est possible, en particulier chez les femmes ayant des antécédents de chloasma gravidique. Les femmes présentant une tendance au chloasma doivent éviter de s’exposer au soleil ou aux ultraviolets pendant la prise de DIENOGEST LABORATOIRES MAJORELLE.</p>
+<p class=AmmCorpsTexte>Le risque de grossesse extra<span style='font-family: "Cambria Math",serif'>&#8209;</span>utérine est plus important chez les utilisatrices de préparations exclusivement progestatives que chez les utilisatrices de pilules estroprogestatives. Par conséquent, en cas d’antécédents de grossesse extra<span style='font-family:"Cambria Math",serif'>&#8209;</span>utérine ou de dysfonctionnement des trompes, la décision d’utiliser DIENOGEST LABORATOIRES MAJORELLE ne doit être prise qu’après évaluation attentive du rapport bénéfice/risque.</p>
+<p class=AmmCorpsTexte>Des follicules ovariens persistants (souvent appelés « kystes ovariens fonctionnels ») peuvent apparaître pendant l’utilisation de DIENOGEST LABORATOIRES MAJORELLE. Ces follicules sont le plus souvent asymptomatiques, mais certains peuvent être accompagnés de douleurs pelviennes.</p>
+<p class=AmmAnnexeTitre4>Excipients</p>
+<p class=AmmCorpsTexte>DIENOGEST LABORATOIRES MAJORELLE contient du lactose monohydraté. Les patients présentant une intolérance au galactose, un déficit total en lactase ou un syndrome de malabsorption du glucose et du galactose (maladies héréditaires rares) ne doivent pas prendre ce médicament.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><a name="_Toc142278921"><span class=gras><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span></span><span class=gras><b>Effets des autres médicaments sur DIENOGEST LABORATOIRES MAJORELLE</b></span></a></p>
+<p class=AmmCorpsTexte>Les progestatifs, dont le diénogest, sont métabolisés principalement par le cytochrome P450 3A4 (CYP3A4) localisé dans la muqueuse intestinale ainsi que dans le foie. Les inducteurs ou inhibiteurs du CYP3A4 peuvent donc altérer le métabolisme des progestatifs.</p>
+<p class=AmmCorpsTexte>L’augmentation de la clairance des hormones sexuelles due à l’induction enzymatique peut réduire l’effet thérapeutique de DIENOGEST LABORATOIRES MAJORELLE et entraîner des effets indésirables, comme des perturbations du profil des saignements utérins.</p>
+<p class=AmmCorpsTexte>La réduction de la clairance des hormones sexuelles due à l’inhibition enzymatique peut augmenter l’exposition à DIENOGEST LABORATOIRES MAJORELLE et entraîner des effets indésirables.</p>
+<p class=AmmAnnexeTitre4>Substances augmentant la clairance des hormones sexuelles (diminution de l’efficacité par induction enzymatique), par exemple : phénytoïne, barbituriques, primidone, carbamazépine, rifampicine et, éventuellement, oxcarbazépine, topiramate, felbamate, griséofulvine et produits contenant du millepertuis (Hypericum perforatum).</p>
+<p class=AmmCorpsTexte>Une induction enzymatique peut déjà être observée après quelques jours de traitement. L’induction enzymatique maximale est généralement observée au bout de quelques semaines. Après l’arrêt du traitement, l’induction enzymatique peut se prolonger pendant 4 semaines environ.</p>
+<p class=AmmCorpsTexte>Les effets de la rifampicine, un inducteur du CYP 3A4, ont été étudiés chez des femmes ménopausées saines. L’administration concomitante de rifampicine a engendré des réductions significatives des concentrations à l’état d’équilibre et de l’exposition systémique au diénogest et à l’estradiol. Les expositions systémiques au diénogest et à l’estradiol à l’état d’équilibre, telles que mesurées par l’ASC<sub>(0</sub><sub><span style='font-family:"Cambria Math",serif'>&#8209;</span>24 h)</sub>, ont été réduites respectivement de 83 % et 44 %.</p>
+<p class=AmmAnnexeTitre4>Substances ayant des effets variables sur la clairance des hormones sexuelles</p>
+<p class=AmmCorpsTexte>Lorsqu’elles sont co-administrées avec les hormones sexuelles, de nombreuses associations d’inhibiteurs de la protéase du VIH et d’inhibiteurs non nucléosidiques de la transcriptase inverse, y compris les associations avec les inhibiteurs du VHC, peuvent augmenter ou diminuer les concentrations plasmatiques du progestatif. L'effet net de ces modifications peut être cliniquement significatif dans certains cas.</p>
+<p class=AmmAnnexeTitre4>Substances diminuant la clairance des hormones sexuelles (inhibiteurs enzymatiques)</p>
+<p class=AmmCorpsTexte>Le diénogest est un substrat du cytochrome P450 (CYP) 3A4.</p>
+<p class=AmmCorpsTexte>La pertinence clinique d’interactions potentielles avec des inhibiteurs enzymatiques n’est pas connue.</p>
+<p class=AmmCorpsTexte>L’administration concomitante d’inhibiteurs puissants du CYP3A4 peut augmenter les concentrations plasmatiques du diénogest.</p>
+<p class=AmmCorpsTexte>L’administration concomitante de kétoconazole, un inhibiteur puissant du CYP3A4, a entrainé une augmentation de l’ASC<sub>(0</sub><sub><span style='font-family:"Cambria Math",serif'>&#8209;</span>24 h) </sub>d’un facteur 2,9 à l’état d’équilibre pour le diénogest. L’administration concomitante d’érythromycine, un inhibiteur modéré du CYP3A4, a entrainé une augmentation de l’ASC<sub>(0</sub><sub><span style='font-family:"Cambria Math",serif'>&#8209;</span>24 h)</sub> d’un facteur 1,6 à l’état d’équilibre pour le diénogest.</p>
+<p class=AmmAnnexeTitre4><span class=souligne>Effets de DIENOGEST LABORATOIRES MAJORELLE sur les autres médicaments</span></p>
+<p class=AmmCorpsTexte>Sur la base des études d’inhibition <span class=italique><i>in vitro</i></span>, une interaction cliniquement pertinente du diénogest avec le métabolisme cytochrome P450-dépendant des autres médicaments est improbable.</p>
+<p class=AmmAnnexeTitre4><span class=souligne>Interactions avec les aliments</span></p>
+<p class=AmmCorpsTexte>L’absorption d’un repas standard à forte teneur lipidique n’a pas modifié la biodisponibilité de comprimés de diénogest.</p>
+<p class=AmmAnnexeTitre4><span class=souligne>Examens biologiques</span></p>
+<p class=AmmCorpsTexte>L’utilisation de progestatifs peut influencer les résultats de certains examens biologiques, notamment les paramètres biochimiques d’évaluation de la fonction hépatique, thyroïdienne, surrénale ou rénale, les concentrations plasmatiques des protéines (de transport) (par exemple : la <span class=italique><i>corticosteroid-binding globulin</i></span><i> </i>[CBG] et les fractions lipidiques/lipoprotéiniques), les paramètres du métabolisme glucidique et les paramètres de coagulation et de fibrinolyse. Les modifications demeurent généralement dans les limites de la normale.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte>Les données sur l’utilisation du diénogest chez la femme enceinte sont limitées.</p>
+<p class=AmmCorpsTexte>Les études effectuées chez l’animal n’ont mis en évidence aucune toxicité directe ou indirecte sur les fonctions de la reproduction (voir rubrique 5.3).</p>
+<p class=AmmCorpsTexte>DIENOGEST LABORATOIRES MAJORELLE ne doit pas être administré chez la femme enceinte car il n’est pas nécessaire de traiter l’endométriose pendant la grossesse.</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278927">Allaitement</a></p>
+<p class=AmmCorpsTexte>DIENOGEST LABORATOIRES MAJORELLE n’est pas recommandé pendant l’allaitement.</p>
+<p class=AmmCorpsTexte>On ne sait pas si le diénogest est excrété dans le lait maternel. Les données chez l’animal ont montré une excrétion du diénogest dans le lait maternel de la rate.</p>
+<p class=AmmCorpsTexte>La décision d’interrompre l’allaitement ou de s’abstenir du traitement par diénogest doit être prise en prenant en compte le bénéfice de l’allaitement pour l’enfant au regard du bénéfice du traitement pour la patiente.</p>
+<p class=AmmAnnexeTitre3>Fertilité</p>
+<p class=AmmCorpsTexte>D’après les données disponibles, l’ovulation est inhibée chez la majorité des patientes pendant le traitement par diénogest. Ce médicament n’est toutefois pas un contraceptif.</p>
+<p class=AmmCorpsTexte>Si une contraception est nécessaire, une méthode non hormonale devra être utilisée (voir rubrique 4.2).</p>
+<p class=AmmCorpsTexte>D’après les données disponibles, le cycle menstruel revient à la normale dans les 2 mois suivant l’arrêt du traitement par diénogest.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929"><span lang=FR-BE>DIENOGEST LABORATOIRES MAJORELLE n’a aucun effet ou un effet négligeable sur l’aptitude à conduire des véhicules et à utiliser des machines.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmCorpsTexte>La présentation des effets indésirables est basée sur le dictionnaire MedDRA.</p>
+<p class=AmmCorpsTexte>Le terme MedDRA le plus approprié est utilisé pour décrire une certaine réaction ainsi que ses synonymes et conditions associés.</p>
+<p class=AmmCorpsTexte>Les effets indésirables sont plus fréquents au cours des premiers mois de traitement par diénogest et s’atténuent lors de la poursuite du traitement. Des perturbations du cycle menstruel telles que des spottings, des saignements irréguliers ou des aménorrhées peuvent être observées. Les effets indésirables suivants ont été rapportés chez des utilisatrices de comprimés de diénogest.</p>
+<p class=AmmCorpsTexte>Les effets indésirables les plus fréquemment rapportés sous traitement par diénogest sont les céphalées (9,0 %), les gênes mammaires (5,4 %), les humeurs dépressives (5,1 %) et l’acné (5,1 %).</p>
+<p class=AmmCorpsTexte>En outre, la majorité des patientes traitées par comprimés de diénogest ont connu des perturbations de leur cycle menstruel. Les profils de saignements ont été évalués de façon systématique en utilisant les carnets-patientes et ont été analysés sur la base de périodes de référence de 90 jours (méthode de l’OMS). Au cours des 90 premiers jours de traitement par comprimés de diénogest, les profils de saignements suivants ont été observés (n = 290 ; 100 %) : aménorrhée (1,7 %), saignements peu fréquents (27,2 %), saignements fréquents (13,4 %), saignements irréguliers (35,2 %), menstruations prolongées (38,3 %), menstruations normales, c’est-à-dire aucune des catégories précédentes (19,7 %). Au cours de la quatrième période de référence, les profils de saignements suivants ont été observés (n = 149 ; 100 %) : aménorrhée (28,2 %), saignements peu fréquents (24,2 %), saignements fréquents (2,7 %), saignements irréguliers (21,5 %), menstruations prolongées (4,0 %), menstruations normales, c’est-à-dire aucune des catégories précédentes (22,8 %). Les perturbations du cycle menstruel n’ont été qu’occasionnellement rapportées comme événements indésirables par les patientes (voir le tableau des effets indésirables).</p>
+<p class=AmmCorpsTexte>Le tableau ci<span style='font-family:"Cambria Math",serif'>&#8209;</span>dessous décrit par fréquence les effets indésirables (EI) signalés avec les comprimés de diénogest selon la classification système-organe MedDRA. Au sein de chaque groupe de fréquence, les effets indésirables sont présentés suivant un ordre décroissant de fréquence. Les fréquences sont définies comme suit : fréquent (&#8805; 1/100 à < 1/10) et peu fréquent (&#8805; 1/1 000 à < 1/100). Les fréquences indiquées sont basées sur les données groupées de quatre essais cliniques portant sur un total de 332 patientes (100 %).</p>
+<p class=AmmCorpsTexteGras>Tableau 1 : Effets indésirables, essais cliniques de phase III, n = 332</p>
+<div align=center>
+<div class='fr-table--lg fr-table'><table>
+<thead>
+<tr style='page-break-inside:avoid'>
+<td style='border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:left'><b>Classe de systèmes d’organes (MedDRA)</b></p>
+</td>
+<td style='border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:center'><b>Fréquent</b></p>
+</td>
+<td style='border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:center'><b>Peu fréquent</b></p>
+</td>
+</tr>
+</thead>
+<tr style='page-break-inside:avoid'>
+<td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:left'><b>Affections hématologiques et du système lymphatique</b></p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'> </p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>anémie</p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:left'><b>Troubles du métabolisme et de la nutrition</b></p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>prise de poids</p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>perte de poids,</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>augmentation de l’appétit</p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:left'><b>Affections psychiatriques</b></p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>humeur dépressive,</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>troubles du sommeil,</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>nervosité,</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>perte de la libido,</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>altération de l’humeur</p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>anxiété,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>dépression,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>changements d’humeur</span></p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:left'><b><span style='color:black'>Affections du système nerveux</span></b></p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>céphalées,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>migraine</span></p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>déséquilibre du système nerveux autonome,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>troubles de l’attention</span></p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:left'><b><span style='color:black'>Affections oculaires</span></b></p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>sécheresse oculaire</span></p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:left'><b><span style='color:black'>Affections de l’oreille et du labyrinthe</span></b></p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>acouphènes</span></p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:left'><b><span style='color:black'>Affections cardiaques</span></b></p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>troubles non spécifiques du système circulatoire,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>palpitations</span></p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:left'><b><span style='color:black'>Affections vasculaires</span></b></p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>hypotension</span></p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:left'><b><span style='color:black'>Affections respiratoires, thoraciques et médiastinales</span></b></p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>dyspnée</span></p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:left'><b><span style='color:black'>Affections gastro&#8209;intestinales</span></b></p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>nausées,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>douleurs abdominales</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>flatulences,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>distension abdominale,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>vomissements</span></p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>diarrhée,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>constipation,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>gêne abdominale,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>inflammation gastro&#8209;intestinale,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>gingivite</span></p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:left'><b><span style='color:black'>Affections de la peau et du tissu sous&#8209;cutané</span></b></p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>acné,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>alopécie</span></p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>peau sèche,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>hyperhidrose,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>prurit,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>hirsutisme,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>onychoclasie,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>pellicules,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>dermatite,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>croissance anormale des poils / cheveux,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>réaction de photosensibilité,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>troubles de la pigmentation</span></p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:left'><b><span style='color:black'>Affections musculo&#8209;squelettiques et du tissu conjonctif</span></b></p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>douleurs dorsales</span></p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>douleurs osseuses,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>spasmes musculaires,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>douleurs dans les extrémités,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>lourdeurs dans les extrémités</span></p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:left'><b><span style='color:black'>Affections du rein et des voies urinaires</span></b></p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>infection urinaire</span></p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:left'><b><span style='color:black'>Affections des organes de reproduction et du sein</span></b></p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>gêne mammaire,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>kyste ovarien,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>bouffées de chaleur,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>saignements utérins / vaginaux incluant spottings</span></p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>candidose vaginale,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>sécheresse vulvo&#8209;vaginale,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>pertes génitales,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>douleurs pelviennes,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>vulvo&#8209;vaginite atrophique,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>masse mammaire,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>maladie fibrokystique du sein,</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>induration mammaire</span></p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:left'><b><span style='color:black'>Troubles généraux et anomalies au site d’administration</span></b></p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>troubles asthéniques</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>irritabilité</span></p>
+</td>
+<td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>œdème</span></p>
+</td>
+</tr>
+</table></div>
+</div>
+<p class=AmmAnnexeTitre3><span class=souligne><i><span style='font-weight:normal'>Diminution de la Densité Minérale Osseuse</span></i></span></p>
+<p class=AmmCorpsTexte>Dans un essai clinique non contrôlé chez 111 adolescentes (de 12 à <18 ans) traitées par comprimés de 2 mg de diénogest, une mesure de la DMO a été effectuée chez 103 d’entre elles. Environ 72% des participantes de l’étude ont présenté une diminution de la DMO du rachis lombaire (L2-L4) après 12 mois de traitement (voir rubrique 4.4).</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte>Les études de toxicité aiguë réalisées avec le diénogest n’ont pas mis en évidence de risque d’effets indésirables aigus en cas d’absorption accidentelle d’un multiple de la dose thérapeutique quotidienne. Il n’existe aucun antidote spécifique. Absorbé quotidiennement à la dose de 20 à 30 mg (10 à 15 fois la dose contenue dans DIENOGEST LABORATOIRES MAJORELLE) pendant 24 semaines, le diénogest a été très bien toléré.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : Progestatifs, code ATC : G03DB08</a><span style='font-size:8.0pt'>.</span></p>
+<p class=AmmAnnexeTitre3>Mécanisme d’action</p>
+<p class=AmmCorpsTexte>Le diénogest est un dérivé de la nortestostérone dépourvu d’activité androgénique mais exerçant plutôt une activité anti<span style='font-family:"Cambria Math",serif'>&#8209;</span>androgénique correspondant à environ un tiers de l’activité de l’acétate de cyprotérone. Le diénogest se lie au récepteur de la progestérone présent dans l’utérus humain avec 10 % seulement de l’affinité relative de la progestérone. Malgré sa faible affinité pour le récepteur de la progestérone, le diénogest exerce un puissant effet progestatif <i>in vivo</i>. Le diénogest ne présente aucune activité androgénique, minéralocorticoïde ou glucocorticoïde significative <i>in vivo</i>.</p>
+<p class=AmmCorpsTexte>Le diénogest agit sur l’endométriose en réduisant la production endogène d’estradiol et en inhibant ainsi les effets trophiques de l’estradiol sur l’endomètre tant eutopique qu’ectopique. Administré en continu, le diénogest génère un environnement endocrinien hypo<span style='font-family: "Cambria Math",serif'>&#8209;</span>estrogénique et hyperprogestogénique, entraînant une décidualisation initiale du tissu de l’endomètre, suivie d’une atrophie des lésions liées à l’endométriose.</p>
+<p class=AmmAnnexeTitre3>Données sur l’efficacité et la sécurité</p>
+<p class=AmmCorpsTexte>La supériorité des comprimés de 2 mg de diénogest par rapport au placebo a été démontrée lors d’une étude réalisée sur 3 mois et portant sur 198 patientes présentant une endométriose. Les douleurs pelviennes associées à l’endométriose ont été mesurées à l’aide d’une échelle visuelle analogique (0<span style='font-family:"Cambria Math",serif'>&#8209;</span>100 mm). Après 3 mois de traitement par 2 mg de diénogest, une différence statistiquement significative par rapport au placebo (&#916; = 12,3 mm ; IC à 95 % : 6,4<span style='font-family:"Cambria Math",serif'>&#8209;</span>18,1 ; p < 0,0001) et une diminution cliniquement significative de la douleur par rapport au niveau initial (réduction moyenne = 27,4 mm ± 22,9) ont été démontrées.</p>
+<p class=AmmCorpsTexte>Après 3 mois de traitement, une réduction de 50 % ou plus des douleurs pelviennes associées à l’endométriose, sans augmentation notable des antalgiques pris en concomitance, a été obtenue chez 37,3 % des patientes sous 2 mg de diénogest (placebo : 19,8 %) ; une réduction de 75 % ou plus des douleurs pelviennes associées à l'endométriose, sans augmentation notable des antalgiques pris en concomitance, a été obtenue chez 18,6 % des patientes sous diénogest (placebo : 7,3 %).</p>
+<p class=AmmCorpsTexte>La phase de prolongation en ouvert de cette étude contrôlée contre placebo a mis en évidence une amélioration continue des douleurs pelviennes associées à l’endométriose sur une durée de traitement allant jusqu’à 15 mois.</p>
+<p class=AmmCorpsTexte>Les résultats de l’étude contrôlée contre placebo ont été confirmés par ceux obtenus à l’issue d’une étude contrôlée de 6 mois contre un agoniste de la GnRH ayant porté sur 252 patientes présentant une endométriose.</p>
+<p class=AmmCorpsTexte>Trois études, portant sur un total de 252 patientes ayant reçu une dose quotidienne de 2 mg de diénogest, ont montré une réduction substantielle des lésions liées à l’endométriose au bout de 6 mois de traitement.</p>
+<p class=AmmCorpsTexte>Lors d’une petite étude (n = 8 par bras posologique), il a été montré qu’une dose quotidienne de 1 mg de diénogest engendrait un état anovulatoire au bout d’un mois de traitement. L’efficacité contraceptive des comprimés de 2 mg de diénogest n’a pas été évaluée dans de plus vastes études.</p>
+<p class=AmmCorpsTexte>Les taux d’estrogènes endogènes sont modérément diminués pendant le traitement par diénogest.</p>
+<p class=AmmCorpsTexte>Aucune donnée à long terme concernant la densité minérale osseuse (DMO) et les risques de fractures chez les utilisatrices de comprimés de 2 mg de diénogest n’est disponible à ce jour. La DMO a été évaluée chez 21 patientes adultes avant le traitement et au bout de 6 mois de traitement par comprimés de 2 mg de diénogest et aucune réduction de la DMO moyenne n’a été constatée. Chez 29 patientes traitées par l’acétate de leuproréline, une réduction moyenne de 4,04 % ± 4,84 % a été notée au bout de la même durée (&#916; entre les groupes = 4,29 % ; IC à 95 % : 1,93<span style='font-family:"Cambria Math",serif'>&#8209;</span>6,66 ; p < 0,0003).</p>
+<p class=AmmCorpsTexte>Aucune modification significative des valeurs moyennes des paramètres biologiques standard (notamment les paramètres hématologiques et biochimiques sanguins, les enzymes hépatiques, les lipides et l’HbA1C) n’a été observée lors du traitement par comprimés de 2 mg de diénogest pendant une durée allant jusqu’à 15 mois (n = 168).</p>
+<p class=AmmAnnexeTitre4>Population pédiatrique</p>
+<p class=AmmCorpsTexte>La sécurité des comprimés de 2 mg de diénogest en termes de DMO a été étudiée dans un essai clinique non contrôlé pendant 12 mois chez 111 adolescentes (de 12 à <18 ans) présentant une endométriose cliniquement suspectée ou confirmée. La variation relative moyenne de la DMO du rachis lombaire (L2-L4) par rapport à la valeur de base à l’initiation du traitement était de -1,2% chez les 103 patientes chez qui une mesure de la DMO a été effectuée. Dans un sous-groupe de patientes présentant une diminution de la DMO, une mesure de suivi de la DMO a été effectuée 6 mois après l’arrêt du traitement et a montré une augmentation de la DMO jusqu’à -0,6%.</p>
+<p class=AmmAnnexeTitre4>Sécurité à long terme</p>
+<p class=AmmCorpsTexte>Une étude observationnelle post-autorisation de surveillance active sur le long terme a été menée afin d’étudier l'incidence de la première survenue ou de l'aggravation d’une dépression cliniquement pertinente et de la survenue d’une anémie. Au total, 27 840 femmes débutant pour la première fois un traitement hormonal de l’endométriose ont été incluses dans l'étude et suivies sur une période pouvant aller jusqu’à 7 ans.</p>
+<p class=AmmCorpsTexte>Au total, 3 023 femmes ont débuté le traitement avec une dose de 2 mg de diénogest et 3 371 patientes ont débuté le traitement avec d'autres médicaments indiqués dans l'endométriose. En comparant les patientes sous diénogest à celles prenant d’autres médicaments indiqués dans l’endométriose, le hazard ratio global ajusté relatif à l’apparition de nouveaux cas d'anémie était de 1,1 (IC à 95 % : 0,4 - 2,6). En comparant le diénogest aux autres médicaments indiqués dans l’endométriose, le hazard ratio ajusté pour le risque de dépression était de 1,8 (IC à 95 % : 0,3 - 9,4). Une légère augmentation du risque de dépression chez les patientes sous diénogest par rapport aux utilisatrices d'autres médicaments indiqués dans le traitement de l'endométriose n'a pas pu être exclue.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278934">Absorption</a></p>
+<p class=AmmCorpsTexte>Administré par voie orale, le diénogest est absorbé rapidement et presque totalement. Les pics de concentration sérique de 47 ng/ml sont atteints 1,5 heures environ après une ingestion unique. La biodisponibilité de la substance est d’environ 91 %. Les caractéristiques pharmacocinétiques du diénogest sont proportionnelles à la dose sur une plage de 1 à 8 mg.</p>
+<p class=AmmAnnexeTitre3>Distribution</p>
+<p class=AmmCorpsTexte>Le diénogest se lie à l’albumine sérique mais ne se lie pas à la SHBG (globuline fixant les hormones sexuelles) ou à la CBG (globuline fixant les corticostéroïdes). Le diénogest est présent sous forme de stéroïde libre à hauteur de 10 % de la concentration sérique totale et 90 % est lié de façon non spécifique à l’albumine.</p>
+<p class=AmmCorpsTexte>Le volume de distribution apparent (V<sub>d</sub>/F) du diénogest est de 40 litres.</p>
+<p class=AmmAnnexeTitre3>Biotransformation</p>
+<p class=AmmCorpsTexte>Le diénogest est complètement métabolisé par les voies de métabolisation connues des stéroïdes, avec formation de métabolites essentiellement inactifs d’un point de vue endocrinologique. D’après les études <i>in vitro</i> et <i>in vivo</i>, le CYP3A4 est la principale enzyme intervenant dans le métabolisme du diénogest. Les métabolites sont excrétés très rapidement, si bien que le diénogest est majoritairement présent sous sa forme inchangée dans le plasma.</p>
+<p class=AmmCorpsTexte>La clairance métabolique sérique (Cl/F) est de 64 ml/min.</p>
+<p class=AmmAnnexeTitre3>Élimination</p>
+<p class=AmmCorpsTexte>Les concentrations sériques du diénogest diminuent en deux phases. La phase d’élimination finale est caractérisée par une demi<span style='font-family:"Cambria Math",serif'>&#8209;</span>vie d’environ 9<span style='font-family:"Cambria Math",serif'>&#8209;</span>10 heures. Le diénogest est excrété sous forme de métabolites selon un ratio urinaire/fécal de 3:1 environ après administration orale de 0,1 mg/kg. La demi-vie d’excrétion urinaire des métabolites est de 14 heures. Après administration orale, environ 86 % de la dose administrée est éliminée dans les 6 jours, la majeure partie étant excrétée dans les premières 24 h, principalement dans l’urine.</p>
+<p class=AmmAnnexeTitre3>Conditions à l’état d’équilibre</p>
+<p class=AmmCorpsTexte>Les caractéristiques pharmacocinétiques du diénogest ne sont pas influencées par les taux de SHBG. Suite à une ingestion quotidienne, les concentrations sériques du diénogest augmentent d’un facteur 1,24 environ et atteignent les conditions d’équilibre au bout de 4 jours de traitement. Les caractéristiques pharmacocinétiques du diénogest suite à l’administration répétée de comprimés de 2 mg de diénogest peuvent être anticipées sur la base des caractéristiques pharmacocinétiques d’une simple dose.</p>
+<p class=AmmAnnexeTitre3>Propriétés pharmacocinétiques chez les populations particulières</p>
+<p class=AmmCorpsTexte>L’utilisation de diénogest n’a pas été spécifiquement étudiée chez les insuffisants rénaux.</p>
+<p class=AmmCorpsTexte>L’utilisation de diénogest n’a pas été étudiée chez les insuffisants hépatiques. </p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278935">Les données non cliniques issues des études conventionnelles de pharmacologie de sécurité, toxicologie en administration répétée, génotoxicité, cancérogénèse, et des fonctions de reproduction et de développement, n’ont pas révélé de risque particulier pour l’homme. </a>Il convient cependant de garder à l’esprit que les stéroïdes sexuels peuvent favoriser la croissance de certains tissus et de certaines tumeurs hormono-dépendants.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937">Lactose monohydraté, cellulose microcristalline, amidon de pomme de terre, crospovidone (type A), povidone (K25), talc, stéarate de magnésium.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">Sans objet.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte>3 ans</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940"><span lang=FR-BE>À conserver dans l’emballage extérieur d’origine, à l’abri de la lumière.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte>Les comprimés sont conditionnés sous plaquettes composées d'un film vert (PVC/PVDC) et d’un feuillet d'aluminium, de 14 comprimés chacune. </p>
+<p class=AmmCorpsTexte>Boîtes de 28, 84 ou 168 comprimés.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Tout médicament non utilisé ou déchet doit être éliminé conformément à la réglementation en vigueur.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142278943">LABORATOIRES MAJORELLE</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>6 RUE COPERNIC</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>75116 PARIS</p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 302 704 8 6 : 28 comprimés sous plaquettes (PVC/PVDC/Aluminium).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 302 704 9 3 : 84 comprimés sous plaquettes (PVC/PVDC/Aluminium).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 550 946 3 0 : 168 comprimés sous plaquettes (PVC/PVDC/Aluminium).</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946"></a><a name="_Toc142278945"><span style='color:#538135'>[à compléter ultérieurement par le titulaire]</span></a></p>
+<p class=AmmCorpsTexte>Date de première autorisation:{JJ mois AAAA}</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><span style='color:#538135'>[à compléter ultérieurement par le titulaire]</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>{JJ mois AAAA}</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+                              <div id="tabpanel-bon-usage-panel" class="fr-tabs__panel" role="tabpanel"
+                     aria-labelledby="tabpanel-bon-usage"
+                     tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      
+      <div class="fr-col-12 fr-col-md">
+        <div class="fr-editor">
+
+          
+          
+          
+          
+          
+                      <div class="fr-grid-row">
+              <div class="fr-col">
+                <h5 id="heading-informations-importantes" role="heading" aria-level="5">
+                  <span class="fr-icon-information-line text-color-orange" aria-hidden="true"></span> Informations
+                  importantes
+                  <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage" href="#top"
+                     id="section-glossaire__top_link" role="link"
+                     aria-describedby="tooltip-link-page-top"
+                     aria-label="Redirection vers le haut de page"></a>
+                  <span id="tooltip-link-page-top" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                      Redirection vers le haut de page
+                    </span>
+                </h5>
+                <p aria-labelledby="heading-informations-importantes">Les informations importantes disponibles pour ce médicament sont les suivantes : <br /><ul id="liste_infos_importantes" role="list"><li role='listitem'>    <a  target='_blank'    href='https://ansm.sante.fr/actualites/progestatifs-et-risque-de-meningiomes-intracraniens-le-bmj-publie-une-etude-epidemiologique-francaise'>Progestatifs et risque de méningiomes intracrâniens : le BMJ publie une étude épidémiologique française</a></li><li role='listitem'>    <a  target='_blank'    href='https://ansm.sante.fr/actualites/progestatifs-et-meningiome-pas-daugmentation-du-risque-avec-les-diu-au-levonorgestrel-mais-confirmation-du-risque-pour-3-nouvelles-substances'>Progestatifs et méningiome : pas d'augmentation du risque avec les DIU au lévonorgestrel mais confirmation du risque pour 3 nouvelles substances</a></li><li role='listitem'>    <a  target='_blank'    href='https://ansm.sante.fr/actualites/risque-de-meningiome-et-progestatifs-recommandations-generales-pour-limiter-ce-risque'>Risque de méningiome et progestatifs : recommandations générales pour limiter ce risque</a></li></ul></p>
+              </div>
+            </div>
+          
+          
+          
+                  </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_DIENOGEST_LABORATOIRES_MAJORELLE_2_mg,_comprimé_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_DIENOGEST_LABORATOIRES_MAJORELLE_2_mg,_comprimé_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_PRENDRE_DIENOGEST_LABORATOIRES_MAJORELLE_2_mg,_comprimé_?"
+                     aria-label="3. COMMENT PRENDRE DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé ? (Lien de redirection)">
+                    3. COMMENT PRENDRE DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_DIENOGEST_LABORATOIRES_MAJORELLE_2_mg,_comprimé_?"
+                     aria-label="5. COMMENT CONSERVER DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé ? (Lien de redirection)">
+                    5. COMMENT CONSERVER DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 21/11/2025</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'><a name="_Toc142278999">DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé</a></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Diénogest</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279000"><span lang=FR-BE>Veuillez lire attentivement cette notice avant de prendre ce médicament car elle contient des informations importantes pour vous.</span></a></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin, ou votre pharmacien.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin, ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant de prendre DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment prendre DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_DIENOGEST_LABORATOIRES_MAJORELLE_2_mg,_comprimé_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279003">Classe pharmacothérapeutique : Progestatifs - code ATC : G03DB08</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279004">DIENOGEST LABORATOIRES MAJORELLE </a>est indiqué dans le traitement de l’endométriose (symptômes douloureux dus à la présence de muqueuse utérine en position anormale). </p>
+<p class=AmmCorpsTexte>Ce médicament contient une hormone progestative appelée diénogest.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_DIENOGEST_LABORATOIRES_MAJORELLE_2_mg,_comprimé_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">Ne prenez jamais DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé :</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique au diénogest ou à l’un des autres composants contenus dans ce médicament, mentionnés dans la rubrique 6.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez un <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>caillot sanguin</span></span> dans vos veines (trouble thromboembolique). Ceci peut se produire par exemple dans les vaisseaux sanguins des jambes (thrombose veineuse profonde) ou des poumons (embolie pulmonaire). Reportez<span style='font-family:"Cambria Math",serif'>&#8209;</span>vous également à « DIENOGEST LABORATOIRES MAJORELLE et caillots sanguins veineux » ci-dessous.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez ou avez eu une <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>maladie artérielle sévère</span></span>, y compris une maladie cardiovasculaire, telle qu’une <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>crise cardiaque</span></span>, un <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>accident vasculaire cérébral</span></span> ou une <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>maladie du cœur</span></span> entraînant une réduction de l’afflux sanguin (angine de poitrine). Reportez<span style='font-family:"Cambria Math",serif'>&#8209;</span>vous également à « DIENOGEST LABORATOIRES MAJORELLE et caillots sanguins artériels » ci<span style='font-family:"Cambria Math",serif'>&#8209;</span>dessous.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous souffrez de <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>diabète</span></span> avec atteinte des vaisseaux sanguins.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez ou avez eu une <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>maladie sévère du foie</span></span> (et si les valeurs de votre bilan hépatique ne sont pas revenues à la normale). Les symptômes d’une maladie du foie peuvent être un jaunissement de la peau et/ou des démangeaisons sur l’ensemble du corps.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez ou avez eu une <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>tumeur bénigne ou maligne du foie</span></span>.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez ou avez déjà eu, ou s’il existe une suspicion de tumeur <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif; font-weight:normal'>maligne</span></span> hormono-dépendante comme le cancer du sein ou des organes génitaux.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous présentez des <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>saignements vaginaux</span></span> inexpliqués.</p>
+<p class=AmmCorpsTexte>Si l’un de ces problèmes survient pour la première fois lors de l’utilisation de DIENOGEST LABORATOIRES MAJORELLE, arrêtez immédiatement de prendre ce médicament et consultez votre médecin.</p>
+<p class=AmmCorpsTexteGras>Avertissements et précautions</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Adressez-vous à votre médecin ou pharmacien avant de prendre </span>DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé<span lang=FR-BE>. </span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Vous ne devez pas utiliser de contraceptifs hormonaux sous quelque forme que ce soit (comprimé, patch, système intra</span><span lang=FR-BE style='font-family:"Cambria Math",serif'>&#8209;</span><span lang=FR-BE>ut</span><span lang=FR-BE>é</span><span lang=FR-BE>rin) pendant que vous prenez DIENOGEST LABORATOIRES MAJORELLE.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>DIENOGEST LABORATOIRES MAJORELLE n’est PAS un contraceptif. Si vous ne souhaitez pas être enceinte, vous devez utiliser des préservatifs ou d’autres méthodes contraceptives non hormonales.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Dans certains cas, DIENOGEST LABORATOIRES MAJORELLE doit être pris avec précaution et votre médecin pourra décider de vous examiner régulièrement. Si vous êtes dans l’une des situations suivantes, informez</span><span lang=FR-BE style='font-family:"Cambria Math",serif'>&#8209;</span><span lang=FR-BE>en votre m</span><span lang=FR-BE>é</span><span lang=FR-BE>decin.</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=FR-BE>Si vous :</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>avez déjà eu un <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>caillot sanguin</span></span><span class=gras> </span>(thromboembolie veineuse) ou si un de vos parents proches a déjà eu un caillot sanguin à un âge relativement jeune.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>avez une personne proche dans votre famille qui a eu un <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>cancer du sein</span></span>.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>avez déjà souffert de <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>dépression</span></span>.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>avez une <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>pression artérielle élevée</span></span> ou si une augmentation de votre pression artérielle apparaît pendant que vous prenez DIENOGEST LABORATOIRES MAJORELLE.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>développez une <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>maladie du foie</span></span> pendant que vous prenez DIENOGEST LABORATOIRES MAJORELLE. Les symptômes peuvent être notamment un jaunissement de la peau ou des yeux ou des démangeaisons sur l’ensemble du corps. Si vous avez connu ce type de symptômes lors d’une grossesse antérieure, informez en également votre médecin.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>souffrez de <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>diabète</span></span> ou avez présenté un <span class=gras>diabète</span> temporaire lors d’une grossesse antérieure.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>présentez ou avez présenté un <span class=gras><b>chloasma</b></span> (taches brun doré sur la peau, en particulier sur le visage) ; si tel est le cas, évitez de trop vous exposer au soleil ou aux ultraviolets.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>souffrez de <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>douleurs dans le bas de votre abdomen</span></span> pendant que vous prenez DIENOGEST LABORATOIRES MAJORELLE.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>La probabilité d’une grossesse est réduite lorsque vous prenez DIENOGEST LABORATOIRES MAJORELLE car ce médicament peut agir sur l’ovulation.</p>
+<p class=AmmCorpsTexte>Si vous tombez enceinte pendant la prise de DIENOGEST LABORATOIRES MAJORELLE, il existe un <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>risque légèrement augmenté</span></span> que la grossesse soit extra-utérine (c’est-à-dire que l’embryon se développe à l’extérieur de l’utérus). Si vous avez déjà eu une grossesse extra-utérine ou si vos trompes de Fallope fonctionnent mal, prévenez votre médecin avant de commencer DIENOGEST LABORATOIRES MAJORELLE.</p>
+<p class=AmmCorpsTexteGras>DIENOGEST LABORATOIRES MAJORELLE et saignements utérins graves</p>
+<p class=AmmCorpsTexte>L’utilisation de DIENOGEST LABORATOIRES MAJORELLE peut aggraver les saignements utérins, par exemple chez les femmes atteintes d’adénomyose utérine (développement de la muqueuse de l’utérus (endomètre) à l’intérieur du muscle utérin), ou en cas de <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>tumeurs bénignes de l’utérus</span></span> parfois appelées fibromyomes utérins (ou léiomyomes utérins). Les saignements, lorsqu’ils sont abondants et ininterrompus, peuvent entraîner une anémie (réduction du nombre de globules rouges), parfois sévère. En cas d’anémie, vous devez discuter avec votre médecin afin de voir si vous devez arrêter de prendre DIENOGEST LABORATOIRES MAJORELLE.</p>
+<p class=AmmCorpsTexteGras>DIENOGEST LABORATOIRES MAJORELLE et modifications du cycle menstruel</p>
+<p class=AmmCorpsTexte>La plupart des femmes traitées par DIENOGEST LABORATOIRES MAJORELLE connaissent des perturbations de leur cycle menstruel (voir rubrique 4, Quels sont les effets indésirables éventuels ?).</p>
+<p class=AmmCorpsTexteGras>DIENOGEST LABORATOIRES MAJORELLE et caillots sanguins veineux</p>
+<p class=AmmCorpsTexte>Certaines études indiquent qu’il pourrait exister une légère augmentation, mais non statistiquement significative, du risque de <b>caillot sanguin dans les jambes</b> (<b>thromboembolie veineuse</b>) lors de l’utilisation de préparations contenant des progestatifs comme DIENOGEST LABORATOIRES MAJORELLE. Dans de très rares cas, les caillots sanguins peuvent engendrer des invalidités graves et permanentes, voire être mortels.</p>
+<p class=AmmCorpsTexte>Le risque de <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>caillot sanguin veineux</span></span> augmente :</p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>avec l’âge ;</p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes en surpoids ;</p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous ou un de vos parents proches a déjà présenté, à un âge relativement jeune, un caillot sanguin dans la jambe (thrombose), le poumon (embolie pulmonaire) ou un autre organe ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous devez vous faire opérer, si vous avez eu un accident grave ou si vous êtes immobilisée de façon prolongée. Il est important de prévenir votre médecin à l’avance que vous utilisez DIENOGEST LABORATOIRES MAJORELLE car il pourra être nécessaire d’interrompre le traitement. Votre médecin vous indiquera quand recommencer à prendre DIENOGEST LABORATOIRES MAJORELLE. En général, la reprise du traitement a lieu environ deux semaines après la reprise de votre activité.</p>
+<p class=AmmListePuces1> </p>
+<p class=AmmCorpsTexteGras>DIENOGEST LABORATOIRES MAJORELLE et caillots sanguins artériels</p>
+<p class=AmmCorpsTexte>Il existe peu d’éléments indiquant une association entre les préparations contenant des progestatifs comme DIENOGEST LABORATOIRES MAJORELLE et une augmentation du risque de caillot sanguin, par exemple, dans les vaisseaux du cœur (crise cardiaque) ou du cerveau (accident vasculaire cérébral). Chez les femmes atteintes d’hypertension, le risque d’accident vasculaire cérébral peut être légèrement augmenté par ces préparations.</p>
+<p class=AmmCorpsTexte>Le risque de <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>caillot sanguin artériel</span></span> augmente :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>si vous fumez. Il vous est fortement conseillé d’arrêter de fumer quand vous prenez DIENOGEST LABORATOIRES MAJORELLE, surtout si vous avez plus de 35 ans ;</span></span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes en surpoids ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si un de vos parents proches a déjà présenté, à un âge relativement jeune, une crise cardiaque ou un accident vasculaire cérébral ;</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez une pression artérielle élevée.</p>
+<p class=AmmCorpsTexte>Adressez-vous à votre médecin avant de prendre DIENOGEST LABORATOIRES MAJORELLE.</p>
+<p class=AmmCorpsTexteGras>Arrêtez de prendre DIENOGEST LABORATOIRES MAJORELLE et contactez immédiatement votre médecin si vous remarquez des signes évoquant un caillot sanguin, comme :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>douleur sévère et/ou gonflement touchant une jambe</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>douleur sévère et brutale dans la poitrine, pouvant s’étendre au bras gauche</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>essoufflement soudain</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>toux de survenue brutale sans cause évidente</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>maux de tête inhabituels, sévères, prolongés, ou aggravation de migraines</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>perte de vision partielle ou totale, ou vision double</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>difficultés ou incapacité à parler</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>vertiges ou évanouissement</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>faiblesse, sensation bizarre ou engourdissement dans une partie du corps.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>DIENOGEST LABORATOIRES MAJORELLE et cancer</p>
+<p class=AmmCorpsTexte>Les données disponibles à ce jour ne permettent pas d’établir clairement si DIENOGEST LABORATOIRES MAJORELLE augmente ou non le risque de cancer du sein. Le cancer du sein a été observé légèrement plus souvent chez les femmes prenant des hormones que chez celles n’en prenant pas, mais on ignore si ceci est dû au traitement. Il se peut, par exemple, que les tumeurs soient davantage détectées et détectées plus tôt chez les femmes prenant des hormones parce qu’elles sont examinées plus fréquemment par leur médecin. La survenue des tumeurs du sein diminue progressivement après l’arrêt du traitement hormonal. <span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>Il est important de contrôler régulièrement vos seins</span></span><span class=gras> </span>et vous devez contacter votre médecin si vous sentez une grosseur.</p>
+<p class=AmmCorpsTexte>Dans de rares cas, des tumeurs bénignes du foie et, plus rarement encore, des tumeurs malignes du foie ont été signalées chez des femmes prenant des hormones. Contactez votre médecin si vous ressentez des maux de ventre anormalement intenses.</p>
+<p class=AmmCorpsTexteGras>DIENOGEST LABORATOIRES MAJORELLE et ostéoporose</p>
+<p class=AmmAnnexeTitre4><span class=souligne>Modifications de la Densité Minérale Osseuse (DMO)</span></p>
+<p class=AmmCorpsTexte>L’utilisation de DIENOGEST LABORATOIRES MAJORELLE peut affecter la solidité des os des adolescentes (entre 12 et 18 ans). Par conséquent, si vous avez moins de 18 ans, votre médecin évaluera soigneusement les bénéfices et les risques d’un traitement par DIENOGEST LABORATOIRES MAJORELLE pour votre cas, en tenant compte de possibles facteurs de risque de perte osseuse (ostéoporose).</p>
+<p class=AmmCorpsTexte>Si vous prenez DIENOGEST LABORATOIRES MAJORELLE, un apport adéquat en calcium et en vitamine D, issu de l’alimentation ou de compléments alimentaires, améliorera la santé de vos os.</p>
+<p class=AmmCorpsTexte>Si vous présentez un risque accru d’ostéoporose (fragilisation des os due à une diminution de la densité minérale osseuse), votre médecin évaluera soigneusement les risques et bénéfices du traitement par DIENOGEST LABORATOIRES MAJORELLE car DIENOGEST LABORATOIRES MAJORELLE diminue modérément la production d’estrogène (un autre type d’hormone féminine) par votre corps.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé</p>
+<p class=AmmCorpsTexte>Indiquez toujours à votre médecin si vous prenez d’autres médicaments ou préparations à base de plantes. Indiquez également à tout autre médecin ou dentiste qui vous prescrit un autre médicament (ou au pharmacien qui vous le délivre) que vous prenez DIENOGEST LABORATOIRES MAJORELLE.</p>
+<p class=AmmCorpsTexte><span style='background:white'>Certains médicaments peuvent influer sur les taux sanguins de </span>DIENOGEST LABORATOIRES MAJORELLE<span style='background:white'> et diminuer son efficacité ou entraîner des effets indésirables, tels que :</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les médicaments utilisés pour traiter :</p>
+<p class=AmmListePuces2 style='margin-left:35.7pt;text-indent:-17.85pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>l’<span class=AmmCorpsTexteGrasCar><span style='font-family:"Arial",sans-serif'>épilepsie</span></span><span class=gras> </span>(par exemple : la phénytoïne, les barbituriques, la primidone, la carbamazépine, l’oxcarbazépine, le topiramate, le felbamate)</p>
+<p class=AmmListePuces2 style='margin-left:35.7pt;text-indent:-17.85pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>la <span class=AmmCorpsTexteGrasCar><span style='font-family: "Arial",sans-serif'>tuberculose </span></span>(par exemple : la rifampicine)</p>
+<p class=AmmListePuces2 style='margin-left:35.7pt;text-indent:-17.85pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>les <span class=AmmCorpsTexteGrasCar><span style='font-family: "Arial",sans-serif'>infections par le VIH et le virus de l’hépatite C </span></span>(aussi appelés inhibiteurs de la protéase et inhibiteurs non nucléosidiques de la transcriptase inverse, tels que le ritonavir, la névirapine et l’efavirenz)</p>
+<p class=AmmListePuces2 style='margin-left:35.7pt;text-indent:-17.85pt'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>des <span class=AmmCorpsTexteGrasCar><span style='font-family: "Arial",sans-serif'>infections par des champignons </span></span>(la griséofulvine, le kétoconazole)</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>le <span class=gras><b>millepertuis</b> </span>(une plante médicinale)</p>
+<p class=AmmCorpsTexte>Informez votre médecin ou pharmacien si vous prenez, avez récemment pris ou pourriez prendre tout autre médicament.</p>
+<p class=AmmCorpsTexteGras>DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé avec des aliments et boissons</p>
+<p class=AmmCorpsTexte>Pendant le traitement par DIENOGEST LABORATOIRES MAJORELLE, vous devez éviter de boire du jus de pamplemousse, car cela pourrait augmenter la concentration de diénogest dans votre sang. Cela pourrait augmenter le risque de survenue d’effets indésirables.</p>
+<p class=AmmCorpsTexteGras>Examens biologiques :</p>
+<p class=AmmCorpsTexte>Si vous devez effectuer des analyses sanguines, informez votre médecin ou le personnel du laboratoire que vous prenez DIENOGEST LABORATOIRES MAJORELLE, car ce médicament peut modifier les résultats de certains examens.</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279012">Grossesse, allaitement et fertilité</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne prenez pas DIENOGEST LABORATOIRES MAJORELLE si vous êtes enceinte ou si vous allaitez.</span></p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>Aucun effet sur l’aptitude à conduire des véhicules et à utiliser des machines n’a été observé chez les utilisatrices de DIENOGEST LABORATOIRES MAJORELLE.</p>
+<p class=AmmCorpsTexteGras>DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé contient du lactose</p>
+<p class=AmmCorpsTexte>Si votre médecin vous a informée d’une intolérance à certains sucres, contactez-le avant de prendre ce médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_PRENDRE_DIENOGEST_LABORATOIRES_MAJORELLE_2_mg,_comprimé_?'>3. COMMENT PRENDRE DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279021">Veillez à toujours prendre ce médicament en suivant exactement les indications de votre médecin. Vérifiez auprès de votre médecin ou pharmacien en cas de doute.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Chez l’adulte, la dose habituelle est de 1 comprimé par jour.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Les instructions suivantes s’appliquent à DIENOGEST LABORATOIRES MAJORELLE sauf indication contraire de votre médecin. Veuillez respecter ces instructions, sans quoi vous risquez de ne pas bénéficier pleinement des effets de DIENOGEST LABORATOIRES MAJORELLE.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Vous pouvez commencer le traitement par DIENOGEST LABORATOIRES MAJORELLE n’importe quel jour de votre cycle naturel.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Adultes : prenez un comprimé chaque jour, de préférence à heure fixe, avec une boisson si nécessaire. Lorsqu’une boîte est terminée, la suivante doit être entamée directement, sans interruption. Continuez également de prendre les comprimés pendant vos règles.</span></p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>La sécurité et l'efficacité de DIENOGEST LABORATOIRES MAJORELLE n’ont pas été étudiées sur une durée de traitement supérieure à 15 mois chez des patientes atteintes d’endométriose.</span></p>
+<p class=AmmCorpsTexteGras>Si vous avez pris plus de DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé que vous n’auriez dû </p>
+<p class=AmmCorpsTexte>Aucun effet nocif grave n’a été signalé suite à la prise d’un trop grand nombre de comprimés de DIENOGEST LABORATOIRES MAJORELLE en une seule fois. Si toutefois vous avez des inquiétudes, contactez votre médecin.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez de prendre DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé</p>
+<p class=AmmCorpsTexte><a name="_Toc142279020">DIENOGEST LABORATOIRES MAJORELLE sera moins efficace si vous oubliez un comprimé. Si vous avez oublié de prendre un ou plusieurs comprimé(s), prenez un seul comprimé dès que vous vous en apercevez puis continuez le traitement le jour suivant à l’heure normale.</a></p>
+<p class=AmmCorpsTexteGras>Que faire en cas de vomissement ou de diarrhées sévères ?</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Si vous avez vomi dans les 3-4 heures suivant la prise de DIENOGEST LABORATOIRES MAJORELLE ou si vous avez des diarrhées sévères, il est possible que la substance active du comprimé ne soit pas totalement absorbée par votre organisme. La situation est similaire à l’oubli d’un comprimé. En cas de vomissements ou de diarrhée dans les 3-4 heures suivant la prise de DIENOGEST LABORATOIRES MAJORELLE, vous devez prendre un autre comprimé dès que possible.</p>
+<p class=AmmCorpsTexte>Ne prenez pas de dose double pour compenser la dose que vous avez oublié de prendre.</p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>Si vous arrêtez de prendre DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé </p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Si vous arrêtez de prendre DIENOGEST LABORATOIRES MAJORELLE, vos symptômes initiaux d’endométriose peuvent réapparaître.</p>
+<p class=AmmCorpsTexte style='margin-top:12.0pt'>Si vous avez d’autres questions sur l’utilisation de ce médicament, demandez plus d’informations à votre médecin ou à votre pharmacien.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde. Ces effets sont plus fréquents pendant les premiers mois de traitement par DIENOGEST LABORATOIRES MAJORELLE et disparaissent généralement lors de la poursuite du traitement. Vous pouvez également constater des perturbations de votre cycle menstruel, telles que des petits saignements ponctuels (spottings), des règles irrégulières ou une disparition totale des règles.</a></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><span lang=FR-BE>Fréquent (survient chez 1 à 10 utilisatrices sur 100)</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>prise de poids,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>humeur dépressive, troubles du sommeil, nervosité, perte d’appétit sexuel ou altération de l’humeur,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>maux de tête ou migraine,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>nausées, douleurs abdominales, flatulences, ventre gonflé ou vomissements,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>acné ou chute de cheveux,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>mal de dos,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>gêne dans les seins, kyste ovarien ou bouffées de chaleur,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>saignements utérins/vaginaux, y compris spottings,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>faiblesse ou irritabilité.</span></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><span lang=FR-BE>Peu fréquent (survient chez 1 à 10 utilisatrices sur 1 000)</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>anémie,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>perte de poids ou augmentation de l’appétit,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>anxiété, dépression ou changements d’humeur,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>déséquilibre du système nerveux autonome (qui contrôle les fonctions inconscientes du corps, comme par exemple, la transpiration) ou trouble de l’attention,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>sécheresse des yeux,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>acouphènes,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>problèmes de circulation non spécifiques ou palpitations inhabituelles,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>pression artérielle basse,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>essoufflement,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>diarrhée, constipation, gêne abdominale, inflammation de l’estomac et des intestins (inflammation gastro<span style='font-family:"Cambria Math",serif'>&#8209;</span>intestinale), inflammation des gencives (gingivite),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>sécheresse de la peau, transpiration excessive, démangeaisons intenses sur l’ensemble du corps, développement d’une pilosité masculine (hirsutisme), ongles cassants, pellicules, dermatite, pousse anormale des cheveux/poils, réaction d’hypersensibilité à la lumière ou problèmes de pigmentation de la peau,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>douleurs dans les os, spasmes musculaires, douleurs et/ou sensation de lourdeur dans les bras et les mains ou dans les jambes et les pieds,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>infection urinaire,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>candidose vaginale, sécheresse de la région génitale, pertes vaginales, douleur pelvienne, inflammation atrophique des organes génitaux avec pertes (vulvovaginite atrophique) ou présence d’une ou plusieurs masse(s) dans les seins,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>gonflement dû à une rétention d’eau.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Effets indésirables supplémentaires chez les adolescents (entre 12 et 18 ans)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='background:white'>diminution de la densité osseuse.</span></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet:<span style='color:#353838'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a><span style='color:red'> </span></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_DIENOGEST_LABORATOIRES_MAJORELLE_2_mg,_comprimé_?'>5. COMMENT CONSERVER DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026"></a><a name="_Toc142279024">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas ce médicament après la date de péremption indiquée sur l’emballage et la plaquette après EXP. La date de péremption fait référence au dernier jour de ce mois.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>À conserver dans l’emballage extérieur d’origine, à l’abri de la lumière.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout <span style='color:black'>ou avec </span>les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est :</p>
+<p class=AmmComposition style='margin-left:18.0pt'>Diénogest.......................................................................................................................... 2 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un comprimé</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres excipients sont : </p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt'>Lactose monohydraté, cellulose microcristalline, amidon de pomme de terre, crospovidone (type A), povidone (K25), talc, stéarate de magnésium.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que DIENOGEST LABORATOIRES MAJORELLE 2 mg, comprimé et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>DIENOGEST LABORATOIRES MAJORELLE se présente sous forme de comprimé blanc à blanc cassé, rond, à faces plates, à bords biseautés, portant l'inscription "NC" sur une face et "22" sur l'autre face et d’un diamètre d’environ 7 mm.</p>
+<p class=AmmCorpsTexte>Les comprimés sont conditionnés sous plaquettes composées d'un film vert en PVC/PVDC et d’un feuillet en aluminium, de 14 comprimés chacune. </p>
+<p class=AmmCorpsTexte>Boîtes de 28, 84 ou 168 comprimés.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmTitulaireNom><a name="_Toc142279031">LABORATOIRES MAJORELLE</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>6 RUE COPERNIC</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>75116 PARIS</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmTitulaireNom>LABORATOIRES MAJORELLE</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>6 RUE COPERNIC</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>75116 PARIS</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmTitulaireNom><a name="_Toc142279033"><span lang=EN-GB>Pharmadox Healthcare Limited</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=EN-GB>KW20A KORDIN INDUSTRIAL PARK</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE>PLA 3000 PAOLA</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE>MALTE</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE> </span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE>OU</span></p>
+<p class=AmmTitulaireNom><span lang=DE> </span></p>
+<p class=AmmTitulaireNom><span lang=DE>Haupt Pharma Münster GmbH</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE>SCHLEEBRÜGGENKAMP</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=EN-GB>1548159 MÜNSTER</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=EN-GB>ALLEMAGNE</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=EN-GB> </span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=EN-GB>OU</span></p>
+<p class=AmmTitulaireNom><span lang=EN-GB> </span></p>
+<p class=AmmTitulaireNom><span lang=EN-GB>Fairmed Healthcare GmbH</span></p>
+<p class=AmmTitulaireAdresse><span lang=EN-GB>Maria-Goeppert-Straße 3</span></p>
+<p class=AmmTitulaireAdresse><span lang=EN-GB>23562 Lübeck,</span></p>
+<p class=AmmTitulaireAdresse>Germany</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexteGras>Ce médicament est autorisé dans les Etats membres de l'Espace Economique Européen sous les noms suivants : Conformément à la réglementation en vigueur. </p>
+<p class=AmmCorpsTexte>[À compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte><span style='color:#385623'>[à compléter ultérieurement par le titulaire]</span></p>
+<p class=AmmCorpsTexteGras>{mois AAAA}.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><i><span style='font-size:14.0pt;font-family:"Arial",sans-serif;color:#A6A6A6'> </span></i></p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

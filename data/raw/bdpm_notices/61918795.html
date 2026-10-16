@@ -1,0 +1,1835 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="6k0SyTLPD06ARvnDt1rrFA==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="6k0SyTLPD06ARvnDt1rrFA==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 29/09/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant BICNU, poudre et solvant pour solution pour perfusion"
+            aria-level="3"
+          >
+            BICNU, poudre et solvant pour solution pour perfusion
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament BICNU, poudre et solvant pour solution pour perfusion - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                          <p id="tag-hospitalier" class="fr-tag" aria-controls="fr-modal-tag-hospitalier" data-fr-opened="false">
+              <span class="fr-icon-hospital-fill">
+              </span>&nbsp;usage hospitalier
+          </p>
+          <span class="fr-tooltip fr-placement" id="tooltip-tag-hospitalier" role="tooltip" aria-hidden="true">Ce médicament est fourni sur ordonnance uniquement</span>
+        
+                          <p id="tag-generique" class="fr-tag" aria-controls="fr-modal-tag-generique" data-fr-opened="false">
+              <span class="fr-icon-capsule-fill">
+              </span>&nbsp;générique
+          </p>
+              </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 10/07/1981
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : BICNU, poudre et solvant pour solution pour perfusion - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0451091">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte><a name="_Toc142279004">BICNU, poudre et solvant pour solution pour perfusion est un médicament qui contient de la carmustine. La carmustine appartient à un groupe de substances anticancéreuses connues sous le nom de nitrosourées qui agissent en ralentissant la croissance des cellules cancéreuses.</a></p>
+<p class=AmmCorpsTexte>BICNU est utilisé en monothérapie ou en association thérapeutique établie avec d'autres substances anticancéreuses autorisées dans certains types de cancers, comme:</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>tumeurs cérébrales primitives ou secondaires</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>myélomes multiples</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>lymphomes hodgkiniens</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>lymphomes non hodgkiniens</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>mélanomes</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>conditionnement préalable à une greffe autologue de cellules souches hématopoïétiques (GCSH) pour le traitement des maladies hématologiques malignes (Maladie de Hodgkin’s / lymphome Non-Hodgkinien).</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament appartient au(x) groupe(s) générique(s) suivants : <br/><ul role="list"><li role='listitem'><a href='/medicament/affiche/groupe-generique/61918795/1863' aria-describedby='tooltip-medicament-generique-0'>CARMUSTINE 100 mg - BICNU, poudre et solvant pour solution pour perfusion</a><span id='tooltip-medicament-generique-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Ouvrir la page de détail sur ce groupe générique</span></li></ul></p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Poudre ( Composition pour un flacon )<ul role="list"><li role="listitem" style="list-style-type: none;"> > carmustine<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">100 mg </span></ul></li><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Solvant ( Composition  )<ul role="list"><li role="listitem" style="list-style-type: none;"> > Pas de substance active.<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique"></span></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > 1 flacon(s) poudre en verre de 100 mg - 1 flacon(s) solvant en verre de 3 mL  </p><p>Code CIP : 561 991-6 ou 34009 561 991 6 7<br/>Déclaration de commercialisation : 16/12/2000<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p>Prix libre, médicament non remboursable ( <a href='/aide#que-signifie-la-notion-de-prix-libre-un-medicament-non-rembourse'>cliquez ici pour en savoir plus sur les médicaments non remboursables</a> )</div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'>Ce médicament étant un générique, le SMR n'a pas été évalué par la commission de la transparence (CT), il est possible de se référer à la /aux spécialité(s) de référence du groupe générique auquel appartient ce médicament <a href='#heading-groupe-generique' arial-label='cliquez ici pour aller à la rubrique des groupes génériques'>(cliquez ici pour aller à la rubrique des groupes génériques)</a></p></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div><div class='fr-col'><p>Pas d'ASMR disponible pour ce médicament (<a href='/aide#le-medicament-que-je-recherche-ne-mentionne-pas-de-service-medical-rendu-(SMR)-ni-amelioration-du-service-medical-rendu-(ASMR)' aria-describedby='tooltip-asmr-aide'>plus d'informations dans l\'aide</a>)</p><span id='tooltip-asmr-aide' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers aide</span></div></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : TILLOMED PHARMA GMBH</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li><li>médicament nécessitant une surveillance particulière pendant le traitement</li><li>prescription réservée aux médecins compétents en CANCEROLOGIE</li><li>prescription réservée aux médecins compétents en maladie du sang</li><li>prescription réservée aux spécialistes et services HEMATOLOGIE</li><li>prescription réservée aux spécialistes et services ONCOLOGIE MEDICALE</li><li>réservé à l'usage HOSPITALIER</li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure nationale</li><li>Code CIS : &nbsp;6 191 879 5</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : BICNU, poudre et solvant pour solution pour perfusion - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="BICNU, poudre et solvant pour solution pour perfusion, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 17/09/2026</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras><a name="_Toc142278913">BICNU, poudre et solvant pour solution pour perfusion</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition><a name="_Toc142278914">Carmustine..................................................................................................................... 100,00 mg</a></p>
+<p class=AmmComposition align=center style='text-align:center'>Pour un flacon</p>
+<p class=AmmAnnexeTitre4>Excipient à effet notoire<span style='text-decoration: none'> :</span> </p>
+<p class=AmmCorpsTexte>Chaque ampoule de solvant contient 3 mL d’éthanol anhydre (équivalant à 2,37 g).</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte align=left style='text-align:left'><a name="_Toc142278915">Poudre et solvant pour solution pour perfusion.</a></p>
+<p class=AmmCorpsTexte>Poudre : Poudre jaune pâle avec de petites quantités de paillettes séchées ou sous forme de masse sèche rigide.</p>
+<p class=AmmCorpsTexte>Solvant : Liquide clair, incolore.</p>
+<p class=AmmCorpsTexte>Apparence de la solution : solution jaune pâle, limpide, exempte de particules visibles.</p>
+<p class=AmmCorpsTexte>Le pH et l’osmolarité de la solution pour perfusion prête à l’emploi sont :</p>
+<p class=AmmCorpsTexte>pH : 4,0 à 6,8 diluée ou non avec une solution physiologique (solution injectable de chlorure de sodium 9 mg/mL (0,9 %)) ou une solution de dextrose (glucose) à 5 %.</p>
+<p class=AmmCorpsTexte>Osmolarité : 350 à 400 mOsmol/L (si diluée dans une solution pour injection de dextrose (glucose) 50 mg/mL [5 %]) ou dans une solution pour injection de chlorure de sodium 9 mg/mL [0,9 %])</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">BICNU est utilisé seul ou en association dans le traitement des :</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>tumeurs cérébrales primitives ou secondaires,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>myélomes multiples,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>lymphomes hodgkiniens,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>lymphomes non hodgkiniens,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>mélanomes,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>conditionnement préalable à une greffe autologue de cellules souches hématopoïétiques (GCSH) pour le traitement des maladies hématologiques malignes (Maladie de Hodgkin’s/lymphome Non-Hodgkinien).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278918">Posologie</a></p>
+<p class=AmmCorpsTexte>Dans toutes les modalités d'administration en monothérapie ou en polychimiothérapie, le délai entre les cures contenant du BICNU ne devra pas être inférieur à 6 semaines. </p>
+<p class=AmmCorpsTexte>Dans la majorité des cas, BICNU est prescrit en <i>polychimiothérapie</i> à la posologie moyenne de <i>150 mg/m²</i> toutes les 6 semaines. </p>
+<p class=AmmCorpsTexte>Le produit peut être administré en monothérapie (tumeurs cérébrales primitives). </p>
+<p class=AmmCorpsTexte>La posologie chez des sujets non antérieurement traités est de 200 mg/m<sup>2</sup> par voie IV, toutes les 6 semaines. Cette dose est habituellement prescrite en une seule injection, mais elle peut être divisée en 2 injections de 100 mg/m<sup>2</sup> administrées pendant 2 jours consécutifs.</p>
+<p class=AmmCorpsTexte>En traitement de conditionnement préalable à une greffe autologue de cellules souches hématopoïétiques (Forte dose) : </p>
+<p class=AmmCorpsTexte>Avant une greffe autologue de cellules souches hématopoïétiques chez des patients souffrant des maladies hématologiques malignes, la carmustine est administrée en association avec d’autres agents chimiothérapeutiques.</p>
+<p class=AmmAnnexeTitre4>Population pédiatrique</p>
+<p class=AmmCorpsTexte>BICNU ne doit pas être utilisé chez l’enfant âgé de moins de 5 ans.</p>
+<p class=AmmCorpsTexte>Dans le cadre d’un conditionnement préalable à une greffe autologue de cellules souches hématopoïétiques (Forte dose), BICNU est contre-indiquée chez les enfants et les adolescents de moins de 18 ans (voir rubrique 4.3)</p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte>Dissoudre le contenu du flacon de BICNU à l'aide de 3 ml de solvant alcoolique stérile. Puis diluer la solution obtenue avec 27 ml d'eau stérile apyrogène. Bien agiter. Chaque millilitre de la solution reconstituée contient 3,3 mg de BICNU dans une solution aqueuse à 10 % d'éthanol et possède un pH compris entre 4,0 et 6,8. La solution, ainsi reconstituée, est claire, incolore à jaune pâle. Elle doit être à nouveau diluée dans une solution injectable de chlorure de sodium 9 mg/mL (0,9 %) ou glucosé isotonique à 5 %, pour l'administration en perfusion IV. </p>
+<p class=AmmCorpsTexte>La solution ainsi préparée ne devra être injectée que par voie IV, sous la forme d'une perfusion lente, d'une durée comprise entre 1 à 2 heures.</p>
+<p class=AmmCorpsTexte>BICNU doit être administré en perfusion intraveineuse lente (voir rubrique 4.4). </p>
+<p class=AmmCorpsTexte>Des perfusions de durée plus courte peuvent entraîner des douleurs intenses et des brûlures au site d’injection ainsi que des rougeurs intenses de la peau et une suffusion de la conjonctive survenant dans les 2 heures et durant environ 4 heures.</p>
+<p class=AmmCorpsTexte>BICNU se présente sous forme de poudre lyophilisée et ne contient pas de conservateur : il faudra donc préparer la solution extemporanément.</p>
+<p class=AmmCorpsTexte>En cas d'extravasation, l'administration sera interrompue immédiatement.</p>
+<p class=AmmCorpsTexte>Remarque : BICNU ayant un point de fusion de 30,5° C à 32° C, toute exposition à une température supérieure a pour conséquence de le liquéfier ; ceci se manifeste par la présence d'une pellicule huileuse dans le fond du flacon, signe de décomposition qui en écartera l'utilisation.</p>
+<p class=AmmCorpsTexte>Précautions à prendre avant la manipulation ou l’administration du médicament.</p>
+<p class=AmmAnnexeTitre3>Modalités de manipulation</p>
+<p class=AmmCorpsTexte>La préparation des solutions injectables de cytotoxiques doit être obligatoirement réalisée par un personnel spécialisé et entraîné ayant une connaissance des médicaments utilisés, dans des conditions assurant la protection de l'environnement et surtout la protection du personnel qui manipule. Elle nécessite un local de préparation réservé à cet usage. Il est interdit de fumer, de manger, de boire dans ce local. Les manipulateurs doivent disposer d'un ensemble de matériel approprié à la manipulation notamment blouses à manches longues, masques de protection, calot, lunettes de protection, gants à usage unique stériles, champs de protection du plan de travail, conteneurs et sacs de collecte des déchets. Les excréta et les vomissures doivent être manipulés avec précaution. Les femmes enceintes doivent être averties et éviter la manipulation des cytotoxiques. Tout contenant cassé doit être traité avec les mêmes précautions et considéré comme un déchet contaminé. L'élimination des déchets contaminés se fait par incinération dans des conteneurs rigides étiquetés à cet effet.</p>
+<p class=AmmCorpsTexte>Ces dispositions peuvent être envisagées dans le cadre du réseau de cancérologie (circulaire DGS/DH/98 N° 98/188 du 24 mars 1998) en collaboration avec toute structure adaptée et remplissant les conditions requises<a name="Contre_indications"></a>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmListePuces1 style='text-align:justify'><a name="_Toc142278919"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypersensibilité à la substance active ou à l’un des excipients mentionnés à la rubrique 6.1.</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ne pas administrer aux personnes ayant présenté une diminution du nombre de plaquettes, leucocytes ou érythrocytes lors d'une précédente chimiothérapie ou pour d'autres causes (voir rubrique 4.4).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Enfant de moins de 5 ans.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Dans le cadre d’un conditionnement préalable à une greffe autologue de cellules souches hématopoïétiques (Forte dose), BICNU est contre-indiquée chez les enfants et les adolescents de moins de 18 ans</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Grossesse et allaitement (<a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0264873.htm#Rcp_4_6_GrossAllait_5"><span style='color:windowtext;text-decoration:none'>voir rubrique 4.6</span></a>).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En association avec les vaccins vivants atténués (<a href="http://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0264873.htm#Rcp_4_5_Interactions_4"><span style='color:windowtext;text-decoration:none'>voir rubrique 4.5</span></a>).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278920">Toxicité pulmonaire : voir rubrique 4.8.</a></p>
+<p class=AmmCorpsTexte>Les injections ne seront répétées que lorsque le nombre de plaquettes et de granulocytes sera redevenu acceptable, respectivement 100 000/mm3 et 4 000/mm3 habituellement après 6 semaines. Les numérations sanguines seront effectuées fréquemment et la cure suivante ne sera pas administrée avant 6 semaines du fait de la toxicité retardée. Les doses seront ajustées en fonction de la réponse hématologique du malade aux doses précédentes. </p>
+<p class=AmmCorpsTexte>Le schéma suivant peut servir de guide pour ajuster les doses. </p>
+<div align=center>
+<div class='fr-table--lg fr-table'><table>
+<tr style='page-break-inside:avoid'>
+<td width=243 colspan=2 valign=top style='width:182.0pt;border:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Après la 1<sup>ère</sup> dose</span></b></p>
+</td>
+<td width=210 valign=top style='width:157.15pt;border-top:solid windowtext 1.0pt;
+border-left:none;border-bottom:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>% 1ère dose à administrer pour renouvellement</span></b></p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td width=105 valign=top style='width:78.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Leucocytes</span></p>
+</td>
+<td width=137 valign=top style='width:103.1pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Plaquettes</span></p>
+</td>
+<td width=210 valign=top style='width:157.15pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+</tr>
+<tr>
+<td width=105 valign=top style='width:78.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>> 4 000</span></p>
+</td>
+<td width=137 valign=top style='width:103.1pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>> 100 000</span></p>
+</td>
+<td width=210 valign=top style='width:157.15pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>100 %</span></p>
+</td>
+</tr>
+<tr>
+<td width=105 valign=top style='width:78.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>3 000 - 3 999</span></p>
+</td>
+<td width=137 valign=top style='width:103.1pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>75 000 - 99 999</span></p>
+</td>
+<td width=210 valign=top style='width:157.15pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>100 %</span></p>
+</td>
+</tr>
+<tr>
+<td width=105 valign=top style='width:78.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>2 000 - 2 999</span></p>
+</td>
+<td width=137 valign=top style='width:103.1pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>25 000 - 74 999</span></p>
+</td>
+<td width=210 valign=top style='width:157.15pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>70 %</span></p>
+</td>
+</tr>
+<tr>
+<td width=105 valign=top style='width:78.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>< 2 000</span></p>
+</td>
+<td width=137 valign=top style='width:103.1pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>< 25 000</span></p>
+</td>
+<td width=210 valign=top style='width:157.15pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>50 %</span></p>
+</td>
+</tr>
+</table></div>
+</div>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Une myélosuppression sévère, pouvant survenir en raison de l'utilisation de carmustine à forte dose ou en association avec d'autres agents cytotoxiques, peut entraîner des infections opportunistes, y compris une pneumonie. De telles infections systémiques peuvent conduire à un sepsis et avoir, par la suite, des conséquences fatales ou mortelles. En cas de myélosuppression sévère, le patient doit être surveillé pour détecter tout signe ou symptôme d'infection.</p>
+<p class=AmmCorpsTexte>Chez les patients traités par nitroso-urées, des cas de leucémies aiguës et de dysplasie de la moelle osseuse ont été rapportés. </p>
+<p class=AmmCorpsTexte>Les fonctions rénale et hépatique doivent être surveillées régulièrement.</p>
+<p class=AmmCorpsTexte>La carmustine peut entraîner des effets génotoxiques et provoquer des dégénérescences testiculaires chez plusieurs modèles animaux. Par conséquent, les hommes devant être traités par BICNU doivent être avertis du risque encouru en cas de conception d’un enfant pendant le traitement et jusqu’à 6 mois après le traitement. Une cryoconservation de leur sperme peut être envisagée avant le traitement en raison de la possibilité d’infertilité irréversible dû au traitement par BICNU.</p>
+<p class=AmmCorpsTexte>Suite à un contact cutané accidentel avec la solution reconstituée, une hyperpigmentation transitoire des zones atteintes a été rapportée. En cas de contact de la poudre lyophilisée ou de la solution avec la peau ou les muqueuses, rincer immédiatement et abondamment à l’eau.</p>
+<p class=AmmCorpsTexte>Ce médicament est déconseillé avec les vaccins vivants atténués, la phénytoïne ou la fosphénytoïne, avec la cimétidine utilisée à des doses supérieures ou égales à 800 mg/j (voir rubrique 4.5).</p>
+<p class=AmmCorpsTexte>BICNU doit être administré en injection intraveineuse lente d’une durée comprise entre 1 à 2 heures.</p>
+<p class=AmmCorpsTexte>Des réactions au site d'injection peuvent survenir durant l'administration du BICNU (voir rubrique 4.8). Compte-tenu du risque d'extravasation, il est recommandé de surveiller étroitement le site de perfusion pour rechercher des signes d'infiltration durant l'administration du produit. Il n'existe pas de traitement spécifique des réactions d'extravasation à ce jour.</p>
+<p class=AmmCorpsTexte>BICNU contient de l’éthanol (alcool)</p>
+<p class=AmmCorpsTexte>Ce médicament contient 2,4 g d’alcool (éthanol) par flacon reconstitué, ce qui correspond à 25,92 g par dose maximale (10 % vol).</p>
+<p class=AmmCorpsTexte>La quantité contenue dans la dose maximale (600 mg/m² chez un patient de 70 kg) de ce médicament équivaut à 648 ml de bière ou 259 ml de vin.</p>
+<p class=AmmCorpsTexte>L’alcool contenu dans cette préparation est susceptible d’avoir des effets chez les enfants. Ces effets peuvent inclure une somnolence et des modifications du comportement. Il peut également affecter leur capacité de concentration et leur participation aux activités physiques.</p>
+<p class=AmmCorpsTexte>La quantité d’alcool contenue dans ce médicament peut affecter votre capacité à conduire des véhicules ou à utiliser des machines, car elle peut altérer votre jugement et votre rapidité de réaction.</p>
+<p class=AmmCorpsTexte>Si vous souffrez d’épilepsie ou de problèmes hépatiques, parlez-en à votre médecin ou à votre pharmacien avant de prendre ce médicament.</p>
+<p class=AmmCorpsTexte>La quantité d’alcool contenue dans ce médicament peut modifier les effets d’autres médicaments. Informez votre médecin ou votre pharmacien si vous prenez d’autres médicaments.</p>
+<p class=AmmCorpsTexte>Si vous êtes enceinte ou si vous allaitez, parlez-en à votre médecin ou à votre pharmacien avant de prendre ce médicament.</p>
+<p class=AmmCorpsTexte>Si vous êtes dépendant à l’alcool, parlez-en à votre médecin ou à votre pharmacien avant de prendre ce médicament.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278928"></a><a name="_Toc142278926"></a><a name="_Toc142278925"></a><a name="_Toc142278921">Population pédiatrique</a></p>
+<p class=AmmCorpsTexte>Les études d’interaction n’ont été réalisées que chez l’adulte.</p>
+<p class=AmmAnnexeTitre3><a name="Rcp_4_5_Interactions_4"></a>INTERACTIONS COMMUNES A TOUS LES CYTOTOXIQUES</p>
+<p class=AmmAnnexeTitre3>Associations contre-indiquées </p>
+<p class=AmmCorpsTexteGras>+ Vaccins vivants atténués</p>
+<p class=AmmCorpsTexte>Risque de maladie vaccinale généralisée mortelle. Contre-indication pendant le traitement et pendant les 6 mois suivant l'arrêt de la chimiothérapie</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278922">Associations déconseillées</a> (voir rubrique 4.4)</p>
+<p class=AmmCorpsTexteGras>+ Phénytoïne (et, par extrapolation, fosphénytoïne)</p>
+<p class=AmmCorpsTexte>Risque de survenue de convulsions par diminution de l'absorption digestive de la seule phénytoïne par le cytotoxique, ou bien risque de majoration de la toxicité ou de perte d'efficacité du cytotoxique par augmentation de son métabolisme hépatique par la phénytoïne ou la fosphénytoïne.</p>
+<p class=AmmCorpsTexteGras>+ Olaparib</p>
+<p class=AmmCorpsTexte>Risque de majoration de l’effet myélosuppresseur du cytotoxique</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278923">Associations </a>faisant l'objet de précautions d’emploi</p>
+<p class=AmmCorpsTexteGras>+ Antivitamine K</p>
+<p class=AmmCorpsTexte>Augmentation du risque thrombotique et hémorragique au cours des affections tumorales. De surcroit, possible interaction entre les AVK et la chimiothérapie. Un contrôle plus fréquent de l'INR est nécessaire</p>
+<p class=AmmAnnexeTitre3>Associations à prendre en compte</p>
+<p class=AmmCorpsTexteGras>+ Flucytosine</p>
+<p class=AmmCorpsTexte>Risque de majoration de la toxicité hématologique</p>
+<p class=AmmCorpsTexteGras>+ Immunosuppresseurs</p>
+<p class=AmmCorpsTexte>Immunodépression excessive avec risque de syndrome lympho-prolifératif.</p>
+<p class=AmmAnnexeTitre3>INTERACTION SPECIFIQUE A LA CARMUSTINE</p>
+<p class=AmmAnnexeTitre3>Associations déconseillées</p>
+<p class=AmmCorpsTexteGras>+ Cimétidine</p>
+<p class=AmmCorpsTexte>Avec la cimétidine utilisée à des doses supérieures ou égales à 800 mg/j : <span class=AmmCorpsTexteCar><b>toxicité médullaire accrue (inhibition du métabolisme de la carmustine).</b></span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3>Femmes en âge de procréer/contraception chez les hommes et les femmes</p>
+<p class=AmmCorpsTexte>Les femmes en âge de procréer doivent utiliser une méthode de contraception efficace afin d’éviter une grossesse au cours du traitement et au moins 6 mois après le traitement.</p>
+<p class=AmmCorpsTexte>Il convient de conseiller aux patients de sexe masculin d’utiliser une méthode de contraception appropriée pendant le traitement par carmustine et pendant au moins 6 mois après le traitement.</p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte>Compte tenu des données disponibles, l'utilisation de carmustine est contre-indiquée au cours de la grossesse et chez la femme en âge de procréer n'utilisant pas de contraception efficace. La carmustine est embryotoxique chez les rats et les lapins et tératogène chez les rats à des doses équivalentes à celles utilisées dans l'espèce humaine.</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278927">Allaitement</a></p>
+<p class=AmmCorpsTexte>On ignore si la carmustine est excrétée dans le lait. En raison des potentiels effets indésirables graves pouvant survenir chez l'enfant nourri au sein, l'allaitement doit être interrompu pendant la prise de BICNU.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Fertilité</p>
+<p class=AmmCorpsTexte>La carmustine peut entraîner des effets génotoxiques et provoquer des dégénérescences testiculaires chez plusieurs modèles animaux. La carmustine peut altérer la fertilité masculine. Il convient d’informer les patients de sexe masculin du risque potentiel d’infertilité et de recourir à des conseils en matière de fertilité/planification familiale avant un traitement par carmustine.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929">Aucune étude n’a été réalisée sur les conséquences du médicament sur l’aptitude à conduire des véhicules et à utiliser des machines. Cependant, il faudra prendre en compte la possibilité que des vertiges, qui sont un effet indésirable rapporté pour ce médicament, puissent diminuer l’aptitude à conduire des véhicules et à utiliser des machines.</a></p>
+<p class=AmmCorpsTexte>Cependant, il convient de tenir compte de la possibilité que la quantité d’alcool contenue dans ces médicaments puisse altérer l’aptitude à conduire des véhicules et à utiliser des machines.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278930">Population pédiatrique</a></p>
+<p class=AmmCorpsTexte><a name="Rcp_4_8_EffetsIndesirables_6"></a>Chez les patients ayant reçu de la carmustine durant l’enfance ou l’adolescence, des cas de fibrose pulmonaire apparue extrêmement tardivement (jusqu’à 17 ans après le traitement) ont été décrits. Une étude de suivi à long terme portant sur 17 patients ayant survécu à des tumeurs cérébrales durant l’enfance a montré que huit d’entre eux ont succombé à une fibrose pulmonaire. Deux de ces huit décès sont survenus au cours des trois premières années de traitement et six d’entre eux 8 à 13 ans après le traitement. L’âge médian des patients décédés au cours du traitement était de 2,5 ans (1-12 ans), l’âge médian des survivants à long terme sous traitement était de 10 ans (5- 16 ans). Tous les patients âgés de moins de 5 ans au moment du traitement sont décédés d’une fibrose pulmonaire ; ni la dose de carmustine, ni une dose supplémentaire de vincristine ni une irradiation spinale n’ont eu d’influence sur l’issue fatale. Une fibrose pulmonaire a été diagnostiquée chez tous les survivants disponibles pour un suivi. </p>
+<p class=AmmAnnexeTitre3>Troubles hématologiques principalement :</p>
+<p class=AmmCorpsTexte>Toxicité hématologique retardée caractérisée par une thrombocytopénie et par une leucopénie survenant respectivement 4 à 5 semaines et 5 à 6 semaines après l'injection. La thrombopénie est en général plus sévère que la leucopénie. Une anémie peut également se produire mais elle est en général moins sévère. Cette toxicité est dose-dépendante et peut devenir cumulative lorsque les traitements se répètent. </p>
+<p class=AmmCorpsTexte>La survenue de leucémies aiguës ou de dysplasies médullaires a été signalée chez des malades recevant un traitement au long cours. </p>
+<p class=AmmCorpsTexte>Infections et infestations </p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Des cas d’infections opportunistes, incluant des pneumonies, ont été rapportés. Certains ont eu une évolution fatale.</p>
+<p class=AmmAnnexeTitre3>Troubles gastro-intestinaux<span style='text-decoration: none'> :</span></p>
+<p class=AmmCorpsTexte>Fréquemment observés dans les 2 heures suivant l'injection : nausées et vomissements pouvant durer 4 à 6 heures, étant dose-dépendants et nécessitant l'utilisation d'antiémétiques. </p>
+<p class=AmmCorpsTexte>L’apparition de mucites est également très fréquemment observée</p>
+<p class=AmmAnnexeTitre3>Troubles respiratoires<span style='text-decoration: none'> :</span></p>
+<p class=AmmCorpsTexte>La toxicité pulmonaire induite par la carmustine a été rapportée avec une fréquence allant jusqu’à </p>
+<p class=AmmCorpsTexte>30 %. Les manifestations précoces surviennent généralement dans les 3 ans de traitement et sont caractérisées par des infiltrats et/ou une fibrose pulmonaire ; des cas d’évolution fatale ont été rapportés. Des cas de fibrose pulmonaire retardée survenant jusque 17 ans après le traitement ont également été rapportés. </p>
+<p class=AmmCorpsTexte>Ces troubles surviennent quel que soit l’âge des patients.</p>
+<p class=AmmCorpsTexte>La toxicité pulmonaire est dose-dépendante, des doses cumulatives totales comprises entre 1200 et 1500 mg/m<sup>2</sup> étant associées à un risque accru de fibrose pulmonaire.</p>
+<p class=AmmCorpsTexte>Les facteurs de risque incluent le tabagisme, l’existence d’une pathologie respiratoire, des anomalies radiologiques préexistantes, une irradiation thoracique séquentielle ou concomitante et l’association avec d’autres facteurs entraînant des troubles pulmonaires.</p>
+<p class=AmmCorpsTexte>Les patients présentant une capacité vitale ou une capacité de diffusion du monoxyde de carbone inférieure de 70 % aux valeurs théoriques sont particulièrement à risque.</p>
+<p class=AmmCorpsTexte>Une surveillance pulmonaire particulière pourra être envisagée.</p>
+<p class=AmmCorpsTexte>La toxicité pulmonaire se manifeste également par une pneumopathie inflammatoire et une pneumopathie interstitielle au cours de l’expérience post-commercialisation.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Troubles hépatiques<span style='text-decoration:none'> :</span></p>
+<p class=AmmCorpsTexte>Lors de l'administration de fortes doses de BICNU, rares élévations transitoires des transaminases, des phosphatases alcalines et de la bilirubine.</p>
+<p class=AmmAnnexeTitre3>Troubles rénaux<span style='text-decoration:none'> :</span></p>
+<p class=AmmCorpsTexte>Altérations rénales (diminution du volume rénal, azotémie, insuffisance rénale) après des doses élevées et prolongées. Ces altérations ont aussi été notées chez les malades recevant des doses plus faibles.</p>
+<p class=AmmAnnexeTitre3>Troubles cardiovasculaires<span style='text-decoration: none'> :</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='font-size:7.0pt;font-family:"Times New Roman",serif'></span>Hypotension, tachycardie.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Egalement notés :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Brûlures sur le trajet veineux. </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Des perfusions rapides peuvent entraîner des rougeurs de la peau intenses et une suffusion de la</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>conjonctive dans les 2 heures et durant environ 4 heures. </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Aménorrhée, azoospermie. </p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Quelques cas de neurorétinite, douleur thoracique, céphalées, réactions allergiques ont été rapportés.</p>
+<p class=AmmAnnexeTitre3>Réaction au point d'injection<span style='text-decoration: none'> :</span> </p>
+<p class=AmmCorpsTexte>Une toxicité locale des tissus mous consécutive à l'extravasation de BICNU a été rapportée. L'infiltration de BICNU peut entraîner gonflement, douleur, érythème, sensation de brûlure et exceptionnellement nécrose de la peau.</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><u><span style='color:blue'>https://signalement.social-sante.gouv.fr/</span></u>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278931">Sans objet.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : anticancéreux, immunomodulateur, agent alkylant nitroso-uré, code ATC : L01AD01</a><span style='font-size:8.0pt'>.</span></p>
+<p class=AmmCorpsTexte>BICNU est un antinéoplasique cytostatique alkylant appartenant au groupe des nitroso-urées. Il agit essentiellement par alkylation de l'ADN et de l'ARN ainsi que par carbamylation des protéines.</p>
+<p class=AmmCorpsTexte>L'intérêt particulier de BICNU dans le domaine des cytostatiques est représenté notamment par sa grande solubilité dans les graisses qui favorise alors son passage à travers la barrière hémato-encéphalique.</p>
+<p class=AmmAnnexeTitre3>Mécanisme d’action</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmAnnexeTitre3>Effets pharmacodynamiques</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmAnnexeTitre3>Efficacité et sécurité clinique</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278934">Absorption</a></p>
+<p class=AmmCorpsTexte>Administré par voie IV, BICNU est rapidement métabolisé et, après 15 minutes, il n'est pas retrouvé dans le sang de produit non dégradé.</p>
+<p class=AmmCorpsTexte>Cependant après administration du produit marqué au C<sup>14</sup>, des taux prolongés de l'isotope sont retrouvés dans le plasma et les tissus.</p>
+<p class=AmmCorpsTexte>L'activité et la toxicité du produit sont vraisemblablement dues à ses métabolites.</p>
+<p class=AmmAnnexeTitre3>Distribution</p>
+<p class=AmmCorpsTexte>Du fait de sa grande solubilité dans les lipides et de son absence d'ionisation au pH physiologique, BICNU traverse la barrière méningée.</p>
+<p class=AmmAnnexeTitre3>Biotransformation</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmAnnexeTitre3>Élimination</p>
+<p class=AmmCorpsTexte>Environ 60 à 70 % de la dose totale est excrétée dans les urines après 96 heures, et environ 10 % est éliminée par voie respiratoire sous forme de CO<sup>2</sup>.</p>
+<p class=AmmCorpsTexte>Les taux de radioactivité retrouvés dans le liquide céphalo-rachidien représentent 50 % ou plus des taux plasmatiques.</p>
+<p class=AmmAnnexeTitre3>Linéarité/non-linéarité</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmAnnexeTitre3>Relations pharmacocinétique/pharmacodynamique</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278935">La carmustine s’est avérée embryotoxique et tératogène chez les rats et embryotoxique chez les lapins à des doses équivalentes à la dose humaine. La carmustine a affecté la fertilité des rats mâles à des doses supérieures à la dose humaine. La carmustine, à des doses cliniquement pertinentes, s’est avérée cancérigène chez les rats et les souris.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937">Ethanol anhydre (solvant).</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">Compatibilité / Incompatibilité avec les conteneurs</a></p>
+<p class=AmmCorpsTexte>La solution intraveineuse est instable dans un récipient en chlorure de polyvinyle. La solution de carmustine ne peut être administrée qu'à partir de bouteilles en verre ou de récipients en polypropylène.</p>
+<p class=AmmCorpsTexte>Le médicament doit être utilisé conformément aux instructions de la rubrique 6.6, et non mélangé avec d'autres médicaments pharmaceutiques.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278939">Flacon avant ouverture :</a></p>
+<p class=AmmCorpsTexte>3 ans.</p>
+<p class=AmmCorpsTexte>Après dilution :</p>
+<p class=AmmCorpsTexte>La solution reconstituée, diluée avec 500 ml supplémentaires de chlorure de sodium pour injection ou 5% de glucose pour injection, dans des récipients en verre ou en polypropylène, donne une solution qui doit être utilisée dans les 4 heures à température ambiante et doit être protégée contre la lumière. Ces solutions sont également stables pendant 24 heures au réfrigérateur (2-8ºC) et 6 heures supplémentaires à température ambiante, à l'abri de la lumière.</p>
+<p class=AmmCorpsTexte>D'un point de vue microbiologique, la solution reconstituée doit être utilisée immédiatement</p>
+<p class=AmmCorpsTexte>Si la solution n’est pas utilisée immédiatement, les durées et conditions de conservation avant utilisation relèvent de la responsabilité de l'utilisateur. </p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940">A conserver dans l'emballage extérieur, à l'abri de la lumière et au réfrigérateur (entre +2° C et +8° C).</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte>100 mg de poudre en flacon (verre) + 3,0 mL de solvant en flacon (verre) ; boîte de 1.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte>Reconstitution et dilution pour chaque flacon de poudre et solvant pour solution pour perfusion</p>
+<p class=AmmCorpsTexte>Dissoudre la carmustine (poudre de 100 mg) avec 3 ml du solvant alcoolique stérile réfrigéré fourni dans le conditionnement primaire (flacon en verre brun). La carmustine doit être complètement dissoute dans l’éthanol avant l’ajout de l’eau stérile pour préparations injectables. La dissolution de la poudre peut prendre jusqu’à 2 minutes. Ajouter ensuite de manière aseptique 27 ml d’eau stérile pour préparations injectables à la solution alcoolique. La solution mère de 30 ml doit être soigneusement mélangée.</p>
+<p class=AmmCorpsTexte>Chaque ml de la solution mère reconstituée contiendra 3,3 mg de carmustine dans 10 % d’éthanol et aura un pH compris entre 4,0 et 6,8.</p>
+<p class=AmmCorpsTexte>La reconstitution, telle que recommandée, donne une solution jaunâtre.</p>
+<p class=AmmCorpsTexte>La solution mère de 30 ml doit être diluée immédiatement en ajoutant les 30 ml de solution mère à 500 ml soit de solution injectable de chlorure de sodium à 9 mg/ml (0,9 %), soit de solution injectable de glucose à 5 %. La solution diluée de 530 ml (c’est-à-dire la solution prête à l’emploi) doit être mélangée pendant au moins 10 secondes avant l’administration. La solution obtenue contient une concentration finale d’environ 0,2 mg/ml de carmustine et doit être conservée à l’abri de la lumière. L’administration de la perfusion doit être effectuée à l’aide d’un dispositif de perfusion sans PVC.</p>
+<p class=AmmCorpsTexte>Examiner les flacons reconstitués afin de vérifier l’absence de formation de cristaux avant utilisation. Si des cristaux sont observés, ils peuvent être redissous en réchauffant le flacon à température ambiante avec agitation. Les flacons reconstitués doivent être inspectés visuellement afin de vérifier l’absence de particules et de décoloration avant administration.</p>
+<p class=AmmCorpsTexte>La solution prête à l’emploi doit être administrée sur une durée de 1 à 2 heures, à l’abri de la lumière. L’administration doit être terminée dans les 3 heures suivant la reconstitution/dilution du médicament.</p>
+<p class=AmmCorpsTexte>La perfusion de carmustine en moins d’une heure peut provoquer des douleurs intenses et une sensation de brûlure au site d’injection (voir rubrique 4.2).</p>
+<p class=AmmCorpsTexte>Les recommandations relatives à la manipulation et à l’élimination sécurisées des agents antinéoplasiques doivent être respectées.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Tout médicament non utilisé ou déchet doit être éliminé conformément à la réglementation en vigueur.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142278943"><span lang=DE>TILLOMED PHARMA GMBH</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE>MITTELSTRAßE 5 / 5A</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE>12529 SCHÖNEFELD</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>ALLEMAGNE </p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='letter-spacing:.1pt'>34</span>0<span style='letter-spacing:.05pt'>0</span>9<span style='letter-spacing:-.35pt'> </span><span style='letter-spacing:.1pt'>5</span>61<span style='letter-spacing:-.1pt'> </span>9<span style='letter-spacing:-.05pt'>9</span>1<span style='letter-spacing:-.05pt'> </span>6<span style='letter-spacing:-.1pt'> </span><span style='letter-spacing:.1pt'>7 </span>:<span style='letter-spacing:-.1pt'> </span><span style='letter-spacing:-.05pt'>1</span>00<span style='letter-spacing:-.1pt'> </span>mg<span style='letter-spacing:-.1pt'> </span>de<span style='letter-spacing:-.05pt'> </span>p<span style='letter-spacing:-.05pt'>o</span><span style='letter-spacing:.1pt'>u</span>dre<span style='letter-spacing:-.3pt'> </span><span style='letter-spacing:.1pt'>e</span>n f<span style='letter-spacing:-.05pt'>l</span>a<span style='letter-spacing:.05pt'>c</span>on<span style='letter-spacing:-.2pt'> </span><span style='letter-spacing:-.1pt'>(</span><span style='letter-spacing:.05pt'>v</span><span style='letter-spacing:.1pt'>e</span><span style='letter-spacing:.05pt'>r</span><span style='letter-spacing:-.1pt'>r</span><span style='letter-spacing:.1pt'>e</span>)<span style='letter-spacing:-.4pt'> </span>+ 3 mL<span style='letter-spacing:-.15pt'> </span>de<span style='letter-spacing:-.05pt'> s</span><span style='letter-spacing: .1pt'>o</span><span style='letter-spacing:-.15pt'>l</span><span style='letter-spacing:.15pt'>v</span>a<span style='letter-spacing:.05pt'>n</span>t<span style='letter-spacing:-.3pt'> </span><span style='letter-spacing:-.05pt'>e</span>n<span style='letter-spacing:.3pt'> </span>f<span style='letter-spacing:-.05pt'>l</span><span style='letter-spacing:.1pt'>a</span><span style='letter-spacing:.05pt'>c</span>on<span style='letter-spacing:-.15pt'> </span><span style='letter-spacing:-.1pt'>(</span><span style='letter-spacing:.05pt'>v</span><span style='letter-spacing:.1pt'>e</span><span style='letter-spacing:.05pt'>r</span><span style='letter-spacing:-.1pt'>r</span><span style='letter-spacing:.1pt'>e</span><span style='letter-spacing:.05pt'>) </span>;<span style='letter-spacing:-.3pt'> </span><span style='letter-spacing:-.05pt'>b</span><span style='letter-spacing:.1pt'>o</span>îte<span style='letter-spacing:-.3pt'> </span><span style='letter-spacing:.1pt'>d</span>e<span style='letter-spacing:-.15pt'> </span><span style='letter-spacing:.1pt'>1</span>.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I. </p>
+<p class=AmmCorpsTexte>Médicament réservé à l’usage hospitalier.</p>
+<p class=AmmCorpsTexte>Prescription réservée aux spécialistes en oncologie ou en hématologie ou aux médecins compétents en cancérologie ou en maladies du sang. </p>
+<p class=AmmCorpsTexte>Médicament nécessitant une surveillance particulière pendant le traitement.</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_BICNU,_poudre_et_solvant_pour_solution_pour_perfusion_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE BICNU, poudre et solvant pour solution pour perfusion ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE BICNU, poudre et solvant pour solution pour perfusion ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_BICNU,_poudre_et_solvant_pour_solution_pour_perfusion_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER BICNU, poudre et solvant pour solution pour perfusion ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER BICNU, poudre et solvant pour solution pour perfusion ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_UTILISER_BICNU,_poudre_et_solvant_pour_solution_pour_perfusion_?"
+                     aria-label="3. COMMENT UTILISER BICNU, poudre et solvant pour solution pour perfusion ? (Lien de redirection)">
+                    3. COMMENT UTILISER BICNU, poudre et solvant pour solution pour perfusion ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_BICNU,_poudre_et_solvant_pour_solution_pour_perfusion_?"
+                     aria-label="5. COMMENT CONSERVER BICNU, poudre et solvant pour solution pour perfusion ? (Lien de redirection)">
+                    5. COMMENT CONSERVER BICNU, poudre et solvant pour solution pour perfusion ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : BICNU, poudre et solvant pour solution pour perfusion - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="BICNU, poudre et solvant pour solution pour perfusion, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 17/09/2026</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'><a name="_Toc142278999"><span style='text-transform:uppercase'>BiCNU</span>, poudre et solvant pour solution pour perfusion</a></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Carmustine</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279000"><span lang=FR-BE>Veuillez lire attentivement cette notice avant d’utiliser ce médicament car elle contient des informations importantes pour vous.</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin, votre pharmacien ou votre infirmier/ère.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin, votre pharmacien ou votre infirmier/ère. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><a name="_Toc142279001">1. Qu'est-ce que BICNU, poudre et solvant pour solution pour perfusion et dans quels cas est-il utilisé ?</a></p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant d'utiliser BICNU, poudre et solvant pour solution pour perfusion ?</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>3. Comment utiliser BICNU, poudre et solvant pour solution pour perfusion ?</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>5. Comment conserver BICNU, poudre et solvant pour solution pour perfusion ?</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_BICNU,_poudre_et_solvant_pour_solution_pour_perfusion_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE BICNU, poudre et solvant pour solution pour perfusion ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279004">BICNU, poudre et solvant pour solution pour perfusion est un médicament qui contient de la carmustine. La carmustine appartient à un groupe de substances anticancéreuses connues sous le nom de nitrosourées qui agissent en ralentissant la croissance des cellules cancéreuses.</a></p>
+<p class=AmmCorpsTexte>BICNU est utilisé en monothérapie ou en association thérapeutique établie avec d'autres substances anticancéreuses autorisées dans certains types de cancers, comme:</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>tumeurs cérébrales primitives ou secondaires</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>myélomes multiples</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>lymphomes hodgkiniens</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>lymphomes non hodgkiniens</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>mélanomes</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>conditionnement préalable à une greffe autologue de cellules souches hématopoïétiques (GCSH) pour le traitement des maladies hématologiques malignes (Maladie de Hodgkin’s / lymphome Non-Hodgkinien).</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_BICNU,_poudre_et_solvant_pour_solution_pour_perfusion_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER BICNU, poudre et solvant pour solution pour perfusion ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">N’utilisez jamais BICNU, poudre et solvant pour solution pour perfusion :</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique (hypersensible) à la substance active ou à l’un des autres composants contenus dans ce médicament, mentionnés dans la rubrique 6.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez connu des épisodes de diminution des cellules sanguines : globules rouges, globules blancs, plaquettes, lors d’un traitement antérieur ou pour d’autres raisons.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes enceinte, ou pensez l’être, ou si vous allaitez.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez reçu et allez recevoir un vaccin vivant atténué (voir rubrique « Autres médicaments et BICNU, poudre et solvant pour solution pour perfusion »).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>chez les enfants de moins de 5 ans</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>chez les enfants et les adolescents de moins de 18 ans dans le cadre d’un conditionnement préalable à une greffe autologue de cellules souches hématopoïétiques (Forte dose), BICNU est contre-indiquée </p>
+<p class=AmmCorpsTexteGras>En cas de doute, il est indispensable de demander l’avis de votre médecin ou de votre pharmacien.</p>
+<p class=AmmCorpsTexteGras>Avertissements et précautions</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Le traitement doit être réalisé d’après les résultats des examens sanguins.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ce médicament est déconseillé en association avec les vaccins vivants atténués (sauf le vaccin contre la fièvre jaune </span>(voir rubrique « Autres médicaments et BICNU, poudre et solvant pour solution pour perfusion ») (rougeole, rubéole, oreillons, poliomyélite, tuberculose, varicelle), la phénytoïne ou la fosphénytoïne (médicaments utilisés dans le traitement de l’épilepsie), la cimétidine utilisée à des doses supérieures ou égales à 800 mg/j (voir rubrique «Prise ou utilisation d’autres médicaments »).</p>
+<p class=AmmCorpsTexte><span style='color:black'>L'effet indésirable majeur de ce médicament étant la suppression retardée de la moelle osseuse, votre médecin surveillera la numération de la formule sanguine de façon hebdomadaire pendant au moins 6 semaines après l'administration d'une dose. À la dose recommandée, les cures de Carmustine ne doivent pas être données plus fréquemment que toutes les 6 semaines. Le dosage sera confirmé avec la numération de la formule sanguine. La baisse au niveau de la numération de la formule sanguine augmente le risque de certaines infections. Si vous remarquez des symptômes semblables à ceux de l'infection, contactez immédiatement votre médecin.</span></p>
+<p class=AmmCorpsTexte>Ce médicament ne doit pas être utilisé en injection intraveineuse rapide.</p>
+<p class=AmmCorpsTexte>Des réactions au site d'injection liées au passage de BICNU hors des vaisseaux peuvent survenir durant l'administration de BICNU (voir rubrique 4).</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Adressez-vous à votre médecin, pharmacien ou votre infirmier/ère avant d’utiliser BICNU. </span></p>
+<p class=AmmCorpsTexteGras>Enfants </p>
+<p class=AmmCorpsTexte>N’utilisez jamais BICNU, poudre et solvant pour solution pour perfusion chez l’enfant de moins de 5 ans.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et BICNU, poudre et solvant pour solution pour perfusion</p>
+<p class=AmmCorpsTexte>Ce médicament NE DOIT PAS ETRE UTILISE en association avec le vaccin contre la fièvre jaune (<a href="http://agence-prd.ansm.sante.fr/php/ecodex/notice/N0264873.htm#Ann3b_ContreIndic_8"><span style='color:windowtext;text-decoration:none'>voir rubrique "Ce médicament NE DOIT PAS ETRE UTILISE dans les cas suivants"</span></a>).</p>
+<p class=AmmCorpsTexte>Ce médicament est DECONSEILLE en association avec les vaccins vivants atténués (sauf le vaccin contre la fièvre jaune, <a href="http://agence-prd.ansm.sante.fr/php/ecodex/notice/N0264873.htm#Ann3b_ContreIndic_8"><span style='color:windowtext;text-decoration:none'>voir rubrique "Ce médicament NE DOIT PAS ETRE UTILISE dans les cas suivants"</span></a>) (rougeole, rubéole, oreillons, poliomyélite, tuberculose, varicelle), la phénytoïne ou la fosphénytoïne (médicaments utilisés dans le traitement de l'épilepsie), la cimétidine (médicament anti-ulcéreux et anti-reflux gastro-œsophagien) (<a href="http://agence-prd.ansm.sante.fr/php/ecodex/notice/N0264873.htm#Ann3b_MisesEnGarde_9"><span style='color:windowtext;text-decoration:none'>voir rubrique "Mises en garde spéciales"</span></a>). </p>
+<p class=AmmCorpsTexte>Informez votre médecin ou pharmacien si vous prenez, avez récemment pris ou pourriez prendre tout autre médicament.</p>
+<p class=AmmCorpsTexteGras>BICNU, poudre et solvant pour solution pour perfusion avec des aliments, boissons et de l’alcool</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279012">Grossesse, allaitement et fertilité</a></p>
+<p class=AmmCorpsTexte>Ce médicament est contre-indiqué dans ces cas.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous êtes enceinte ou que vous allaitez, si vous pensez être enceinte ou planifiez une grossesse, demandez conseil à votre médecin</span><span lang=FR-BE> </span><span lang=FR-BE>ou pharmacien avant de prendre ce médicament.</span></p>
+<p class=AmmAnnexeTitre4><span lang=FR-BE>Grossesse</span></p>
+<p class=AmmCorpsTexte>Ce médicament est contre-indiqué pendant la grossesse parce qu’il peut être nocif pour votre enfant à naître.</p>
+<p class=AmmCorpsTexte>Les femmes en âge d’avoir des enfants doivent utiliser une méthode de contraception efficace pour éviter toute grossesse au cours du traitement par ce médicament et pendant six mois au moins après la fin du traitement. Si vous découvrez que vous êtes enceinte pendant le traitement par ce médicament, informez immédiatement votre médecin.</p>
+<p class=AmmCorpsTexte>Les patients de sexe masculin doivent utiliser une contraception appropriée pendant le traitement par ce médicament pendant au moins 6 mois après la fin du traitement afin d’éviter que leur partenaire ne contracte une grossesse.</p>
+<p class=AmmAnnexeTitre4>Allaitement</p>
+<p class=AmmCorpsTexte>Vous ne devez pas allaiter pendant le traitement par ce médicament. On ne sait pas si la substance active de BICNU passe dans le lait maternel. </p>
+<p class=AmmAnnexeTitre4>Fertilité</p>
+<p class=AmmCorpsTexte>La carmustine peut provoquer une infertilité chez les hommes (nombre faible ou absence de spermatozoïdes). Cela peut affecter votre capacité à concevoir un enfant. Demandez conseil à votre médecin au sujet de la conservation du sperme avant de commencer votre traitement par BICNU.</p>
+<p class=AmmCorpsTexteGras>Sportifs </p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>Les effets de ce médicament sur votre aptitude à conduire des véhicules et à utiliser des machines ne sont pas connus. Vous devez demander conseil à votre médecin avant de conduire un véhicule ou de manipuler des outils ou des machines car les vertiges sont un effet indésirable rapporté avec ce médicament, pouvant diminuer votre aptitude à conduire des véhicules ou à utiliser des machines.</p>
+<p class=AmmCorpsTexte>Cependant, il convient de tenir compte de la possibilité que la quantité d’alcool contenue dans ces médicaments puisse altérer l’aptitude à conduire des véhicules et à utiliser des machines.</p>
+<p class=AmmCorpsTexte>Ce médicament ne peut être utilisé que sur l’avis de votre médecin. Pendant la prise de ce médicament, votre médecin peut prendre des dispositions pour vous faire subir des examens complémentaires.</p>
+<p class=AmmCorpsTexte>BICNU contient de l’éthanol (alcool)</p>
+<p class=AmmCorpsTexte>Ce médicament contient 2,4 g d’alcool (éthanol) par flacon reconstitué, ce qui correspond à 25,92 g par dose maximale (10 % vol).</p>
+<p class=AmmCorpsTexte>La quantité contenue dans la dose maximale (600 mg/m² chez un patient de 70 kg) de ce médicament équivaut à 648 ml de bière ou 259 ml de vin.</p>
+<p class=AmmCorpsTexte>L’alcool contenu dans cette préparation est susceptible d’avoir des effets chez les enfants. Ces effets peuvent inclure une somnolence et des modifications du comportement. Il peut également affecter leur capacité de concentration et leur participation aux activités physiques.</p>
+<p class=AmmCorpsTexte>La quantité d’alcool contenue dans ce médicament peut affecter votre aptitude à conduire des véhicules ou à utiliser des machines, car elle peut altérer votre jugement et votre rapidité de réaction.</p>
+<p class=AmmCorpsTexte>Si vous souffrez d’épilepsie ou de problèmes hépatiques, parlez-en à votre médecin ou à votre pharmacien avant de prendre ce médicament.</p>
+<p class=AmmCorpsTexte>La quantité d’alcool contenue dans ce médicament peut modifier les effets d’autres médicaments. Parlez-en à votre médecin ou à votre pharmacien si vous prenez d’autres médicaments.</p>
+<p class=AmmCorpsTexte>Si vous êtes enceinte ou si vous allaitez, parlez-en à votre médecin ou à votre pharmacien avant de prendre ce médicament.</p>
+<p class=AmmCorpsTexte>Si vous êtes dépendant à l’alcool, parlez-en à votre médecin ou à votre pharmacien avant de prendre ce médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_UTILISER_BICNU,_poudre_et_solvant_pour_solution_pour_perfusion_?'>3. COMMENT UTILISER BICNU, poudre et solvant pour solution pour perfusion ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279021">Veillez à toujours utiliser ce médicament en suivant exactement les indications de votre médecin ou pharmacien. Vérifiez auprès de votre médecin ou pharmacien en cas de doute.</a></p>
+<p class=AmmAnnexeTitre3>Posologie</p>
+<p class=AmmCorpsTexte>BICNU poudre et solvant pour solution pour perfusion vous sera toujours administré par un professionnel de la santé expérimenté dans l'utilisation des médicaments anticancéreux.</p>
+<p class=AmmAnnexeTitre4>Adultes</p>
+<p class=AmmCorpsTexte>La posologie est basée sur votre état de santé, votre surface corporelle et votre réponse au traitement. Il est généralement administré au moins toutes les 6 semaines. La dose recommandée de BICNU poudre et solvant pour solution pour perfusion en monothérapie chez les patients non préalablement traités est de 150 à 200 mg / m<sup>2</sup> par voie intraveineuse toutes les 6 semaines. Celui-ci peut être administré en dose unique ou divisé en perfusions quotidiennes telles que 75 à 100 mg / m2 sur deux jours successifs. La posologie dépendra également de l'administration de BICNU poudre et solvant pour solution pour perfusion avec d'autres médicaments anticancéreux.</p>
+<p class=AmmCorpsTexte>Les doses seront ajustées en fonction de votre réponse au traitement.</p>
+<p class=AmmCorpsTexte>La dose recommandée de BICNU administrée en association avec d’autres agents chimiothérapeutiques avant une greffe de cellules souches hématopoïétiques est de 300 à 600 mg/m<sup>2</sup> par voie intraveineuse.</p>
+<p class=AmmCorpsTexte>Votre hémogramme sera surveillé fréquemment pour éviter la toxicité dans votre moelle osseuse et la dose ajustée si nécessaire.</p>
+<p class=AmmAnnexeTitre3>Mode et voie d’administration</p>
+<p class=AmmCorpsTexte>Perfusion intraveineuse dans du sérum salé isotonique.</p>
+<p class=AmmCorpsTexte>BICNU doit être administré en perfusion intraveineuse lente.</p>
+<p class=AmmAnnexeTitre4>A l’attention du personnel soignant<span style='text-decoration:none'> :</span></p>
+<p class=AmmCorpsTexte>Comme pour tout cytotoxique, la préparation et la manipulation de ce produit nécessitent un ensemble de précautions permettant d’assurer la protection du manipulateur et de son environnement, dans les conditions de sécurité requises pour le patient. </p>
+<p class=AmmCorpsTexte>En plus des précautions usuelles pour préserver la stérilité des préparations injectables, il faut :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>mettre une blouse à manches longues et poignets serrés, afin d’éviter toute projection de solution sur la peau,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>porter également un masque chirurgical à usage unique et des lunettes enveloppantes,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>mettre des gants à usage unique en PVC, et non en latex, après lavage aseptique des mains, </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>préparer la solution sur un champ de travail,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>arrêter la perfusion, en cas d’injection hors de la veine, </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>éliminer tout matériel ayant servi à la préparation de la solution (seringues, compresses, champs, flacon) dans un conteneur réservé à cet effet,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>détruire les déchets toxiques,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>manipuler les excréta et vomissures avec précaution.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Les femmes enceintes doivent éviter la manipulation des cytotoxiques.</p>
+<p class=AmmCorpsTexte>En cas de contact de la poudre ou de la solution avec la peau ou les muqueuses, des sensations de brûlure et des taches marron peuvent apparaître ; rincer à l’eau immédiatement et abondamment.</p>
+<p class=AmmAnnexeTitre3>Fréquence d’administration</p>
+<p class=AmmCorpsTexte>Le délai entre les cures contenant du BICNU ne devra pas être inférieur à 6 semaines.</p>
+<p class=AmmAnnexeTitre3>Durée du traitement </p>
+<p class=AmmCorpsTexte>Une à deux perfusions toutes les 6 semaines.</p>
+<p class=AmmCorpsTexte>Dans le cadre d’un conditionnement préalable à une greffe autologue de cellules souches hématopoïétiques (Forte dose) et selon le protocole de conditionnement choisit par votre médecin, BICNU est administré en une dose unique ou sur 3 jours consécutifs.</p>
+<p class=AmmCorpsTexteGras>Utilisation chez les enfants</p>
+<p class=AmmCorpsTexte>Ce médicament est contre-indiqué chez les enfants de moins de 5 ans.</p>
+<p class=AmmCorpsTexteGras>Si vous avez utilisé plus de BICNU, poudre et solvant pour solution pour perfusion que vous n’auriez dû :</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez d’utiliser BICNU, poudre et solvant pour solution pour perfusion :</p>
+<p class=AmmCorpsTexte><a name="_Toc142279020">Sans objet.</a></p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez d’utiliser BICNU, poudre et solvant pour solution pour perfusion :</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexte>Si vous avez d’autres questions sur l’utilisation de ce médicament, demandez plus d’informations à votre médecin, à votre pharmacien ou à votre infirmier/ère.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tous les patients.</a></p>
+<p class=AmmCorpsTexteGras>Avertissez immédiatement votre médecin ou votre infirmier/ère :</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous présentez subitement une respiration sifflante, des difficultés à respirer, un gonflement des paupières, du visage ou des lèvres, une éruption cutanée ou des démangeaisons (en particulier si cela affecte tout votre corps), et si vous sentez que vous allez vous évanouir. Ces symptômes peuvent être des signes de réaction allergique grave.</span></p>
+<p class=AmmCorpsTexteGras>Autres effets indésirables :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Myélosuppression tardive (diminution du nombre de cellules sanguines dans la moelle osseuse), ce qui peut accroître la probabilité d’infections en cas de diminution du nombre de globules blancs;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>infections opportunistes, y compris des pneumonies (des cas d’évolution fatale ont été rapportés) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>nausées, vomissements améliorés par un traitement antiémétique ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>apparition de mucites fréquemment observée</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Troubles respiratoires (troubles pulmonaires) avec des difficultés à respirer.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ce médicament peut provoquer des lésions pulmonaires (avec une issue fatale possible). Des lésions pulmonaires peuvent survenir plusieurs années après le traitement. Informez immédiatement votre médecin si vous ressentez l’un des symptômes suivants: difficulté respiratoire, toux persistante, douleurs à la poitrine, faiblesse/fatigue persistante ; </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>modifications rénales et hépatiques lors de l’utilisation de fortes doses ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>troubles cardio-vasculaires : hypotension, augmentation de la fréquence cardiaque ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>rougeur de la peau lors de perfusion rapide ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>troubles des règles, diminution du sperme ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>troubles visuels ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>douleurs dans la poitrine ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>maux de tête ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>réactions allergiques ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Réaction au point d'injection : passage du produit hors des vaisseaux pouvant entraîner gonflement, douleur, érythème, sensation de brûlure et exceptionnellement, nécrose de la peau.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin, votre pharmacien ou à votre infirmier/ère. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><u><span style='color:blue'>https://signalement.social-sante.gouv.fr/</span></u></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_BICNU,_poudre_et_solvant_pour_solution_pour_perfusion_?'>5. COMMENT CONSERVER BICNU, poudre et solvant pour solution pour perfusion ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026"></a><a name="_Toc142279024">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas ce médicament après la date de péremption indiquée sur l’emballage. La date de péremption fait référence au dernier jour de ce mois.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Après dilution</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>La solution reconstituée, diluée avec 500 ml supplémentaires de chlorure de sodium pour injection ou 5% de glucose pour injection, dans des récipients en verre ou en polypropylène, donne une solution qui doit être utilisée dans les 4 heures à température ambiante et doit être protégée contre la lumière. Ces solutions sont également stables pendant 24 heures au réfrigérateur (2-8ºC) et 6 heures supplémentaires à température ambiante, à l'abri de la lumière.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas ce médicament si vous remarquez des signes visibles de détérioration. </span>Toute exposition à une température supérieure à 30°C entraîne une liquéfaction du médicament. Ceci se manifeste par la présence d'une pellicule huileuse dans le fond du flacon.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout <span style='color:black'>ou avec </span>les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout <span style='color:black'>ou avec </span>les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient BICNU, poudre et solvant pour solution pour perfusion</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est :</p>
+<p class=AmmComposition>Carmustine...................................................................................................................... 100,00 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un flacon</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Flacon de solvant : éthanol anhydre</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que BICNU, poudre et solvant pour solution pour perfusion et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>Poudre et solvant pour solution pour perfusion. Boîte de 1 flacon de poudre et 1 flacon de solvant.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279031"></a><a name="_Toc142279025"><span lang=DE>TILLOMED PHARMA GMBH</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE>MITTELSTRAßE 5 / 5A</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE>12529 SCHÖNEFELD</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>ALLEMAGNE </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279032">MEDIPHA SANTE, </a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>LES FJORDS - IMMEUBLE OSLO, </p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>19 AVENUE DE NORVÈGE, </p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>91140 VILLEBON-SUR-YVETTE</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279033">SGS PHARMA MAGYARORSZAG KFT., </a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>DERKOVITS GYULA UTCA 53, </span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>BUDAPEST XIX, 1193, </span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><b><span style='text-transform:uppercase'>HONGRIE</span></b><b><span style='font-family: "Arial Gras",serif;text-transform:uppercase'> </span></b></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><span style='text-transform: uppercase'>ou</span></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>Tillomed Malta Limited</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>Malta Life Sciences Park, </span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>LS2.01.06 Industrial Estate, </span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>San Gwann, SGN 3000, Malte</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+<p class=AmmAnnexeTitre3>Informations destinées aux professionnels de santé :</p>
+<p class=AmmCorpsTexte>Ces informations constituent une brève description de la préparation et/ou de la manipulation, des incompatibilités, de la posologie du médicament, du surdosage ou des mesures de surveillance et des examens de laboratoire, fondée sur le RCP actuellement en vigueur.</p>
+<p class=AmmCorpsTexte>La forme pharmaceutique lyophilisée ne contient pas de conservateur et n’est pas destinée à être utilisée comme flacon multidose. Ce médicament est destiné à un usage unique uniquement. Il doit être manipulé avec précaution et tout contact du médicament avec la peau doit être évité. La reconstitution et les dilutions ultérieures doivent être réalisées dans des conditions aseptiques.</p>
+<p class=AmmCorpsTexte>En respectant les conditions de conservation recommandées, il est possible d’éviter toute décomposition du flacon non ouvert jusqu’à la date de péremption indiquée sur l’emballage.</p>
+<p class=AmmCorpsTexte>La conservation de la carmustine à une température de 27°C ou plus peut entraîner la liquéfaction de la substance, la carmustine ayant un point de fusion bas (environ 30,5°C à 32,0°C). Un signe de décomposition est l’apparition d’un film huileux au fond du flacon. Ce médicament ne doit plus être utilisé dans ce cas. Si vous n’êtes pas certain que le produit a été correctement conservé au froid, vous devez immédiatement inspecter chaque flacon dans la boîte. Pour vérification, tenir le flacon sous une lumière vive.</p>
+<p class=AmmCorpsTexte>La reconstitution et la dilution de chaque flacon de poudre pour concentré pour solution pour perfusion doivent être réalisées comme suit :</p>
+<p class=AmmCorpsTexte>Dissoudre la carmustine (poudre de 100 mg) avec 3 ml du solvant alcoolique stérile réfrigéré fourni dans le conditionnement primaire (flacon en verre brun). La carmustine doit être complètement dissoute dans l’éthanol avant l’ajout de l’eau stérile pour préparations injectables. La dissolution de la poudre peut prendre jusqu’à 2 minutes. Ajouter ensuite de manière aseptique 27 ml d’eau stérile pour préparations injectables à la solution alcoolique. La solution mère de 30 ml doit être soigneusement mélangée.</p>
+<p class=AmmCorpsTexte>Chaque ml de la solution reconstituée contiendra 3,3 mg de carmustine dans 10 % d’éthanol et aura un pH compris entre 4,0 et 6,8.</p>
+<p class=AmmCorpsTexte>La reconstitution, telle que recommandée, donne une solution jaunâtre.</p>
+<p class=AmmCorpsTexte>Reconstitution et dilution pour chaque flacon de poudre et solvant pour solution pour perfusion</p>
+<p class=AmmCorpsTexte>Dissoudre la carmustine (poudre de 100 mg) avec 3 ml du solvant alcoolique stérile réfrigéré fourni dans le conditionnement primaire (flacon en verre brun). La carmustine doit être complètement dissoute dans l’éthanol avant l’ajout de l’eau stérile pour préparations injectables. La dissolution de la poudre peut prendre jusqu’à 2 minutes. Ajouter ensuite de manière aseptique 27 ml d’eau stérile pour préparations injectables à la solution alcoolique. La solution mère de 30 ml doit être soigneusement mélangée.</p>
+<p class=AmmCorpsTexte>Chaque ml de la solution mère reconstituée contiendra 3,3 mg de carmustine dans 10 % d’éthanol et aura un pH compris entre 4,0 et 6,8. La reconstitution, telle que recommandée, donne une solution jaunâtre, limpide et exempte de particules visibles.</p>
+<p class=AmmCorpsTexte>La solution mère de 30 ml doit être diluée immédiatement en ajoutant les 30 ml de solution mère à 500 ml de solution injectable de chlorure de sodium à 9 mg/ml (0,9 %) ou à 500 ml de solution injectable de dextrose (glucose) à 50 mg/ml (5 %). La solution diluée de 530 ml (c’est-à-dire la solution prête à l’emploi) doit être mélangée pendant au moins 10 secondes avant l’administration. La solution obtenue contient une concentration finale d’environ 0,2 mg/ml de carmustine et doit être conservée à l’abri de la lumière. L’administration de la perfusion doit être effectuée à l’aide d’un dispositif de perfusion sans PVC.</p>
+<p class=AmmCorpsTexte>Examiner les flacons reconstitués afin de vérifier l’absence de formation de cristaux avant utilisation. Si des cristaux sont observés, ils peuvent être redissous en réchauffant le flacon à température ambiante avec agitation. Les flacons reconstitués doivent être inspectés visuellement afin de vérifier l’absence de particules et de décoloration avant administration.</p>
+<p class=AmmCorpsTexteGras>Mode d’administration</p>
+<p class=AmmCorpsTexteGras>Pour usage intraveineux après reconstitution et dilution.</p>
+<p class=AmmCorpsTexte>La solution reconstituée et diluée doit être administrée immédiatement sous forme de perfusion intraveineuse lente sur une durée de 1 à 2 heures, à l’abri de la lumière. La durée de perfusion ne doit pas être inférieure à une heure, faute de quoi une sensation de brûlure et des douleurs au site d’injection peuvent survenir. La zone d’injection doit être surveillée pendant l’administration. L’administration doit être terminée dans les 3 heures suivant la reconstitution/dilution du médicament.</p>
+<p class=AmmCorpsTexte>Les recommandations relatives à la manipulation et à l’élimination sécurisées des agents antinéoplasiques doivent être respectées.</p>
+<p class=AmmCorpsTexte>Posologie et examens biologiques</p>
+<p class=AmmCorpsTexteGras>Doses initiales</p>
+<p class=AmmCorpsTexte>La posologie recommandée de carmustine en monothérapie chez les patients non préalablement traités est de 150 à 200 mg/m² par voie intraveineuse toutes les 6 semaines. Cette posologie peut être administrée en dose unique ou fractionnée en perfusions quotidiennes (par exemple 75 à 100 mg/m² pendant deux jours consécutifs). Lorsque la carmustine est utilisée en association avec d’autres médicaments myélosuppresseurs ou chez des patients dont la réserve médullaire est diminuée, les doses doivent être adaptées en fonction du profil hématologique du patient.</p>
+<p class=AmmCorpsTexteGras>Surveillance et doses ultérieures</p>
+<p class=AmmCorpsTexte>Un nouveau cycle de carmustine ne doit pas être administré tant que les éléments figurés du sang n’ont pas retrouvé des valeurs acceptables (plaquettes > 100 000/mm³, leucocytes > 4 000/mm³), ce qui survient généralement au bout de six semaines. Les numérations sanguines doivent être surveillées fréquemment et les cycles suivants ne doivent pas être administrés avant six semaines en raison de la toxicité hématologique retardée.</p>
+<p class=AmmCorpsTexte>Les doses ultérieures doivent être ajustées en fonction de la réponse hématologique du patient à la dose précédente. Le tableau suivant peut servir de guide pour l’ajustement posologique :</p>
+<p class=AmmCorpsTexte>Nadir après la dose précédente - Pourcentage de la dose précédente à administrer<br> Leucocytes / mm³ - Plaquettes / mm³</p>
+<div align=center>
+<div class='fr-table--lg fr-table'><table>
+<tr style='page-break-inside:avoid'>
+<td width=243 colspan=2 valign=top style='width:182.0pt;border:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Après la 1<sup>ère</sup> dose</span></b></p>
+</td>
+<td width=210 valign=top style='width:157.15pt;border-top:solid windowtext 1.0pt;
+border-left:none;border-bottom:none;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>% 1ère dose à administrer pour renouvellement</span></b></p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td width=105 valign=top style='width:78.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Leucocytes</span></p>
+</td>
+<td width=137 valign=top style='width:103.1pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size: 10.0pt;font-family:"Arial",sans-serif;color:black'>Plaquettes</span></p>
+</td>
+<td width=210 valign=top style='width:157.15pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+</tr>
+<tr>
+<td width=105 valign=top style='width:78.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>> 4 000</span></p>
+</td>
+<td width=137 valign=top style='width:103.1pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>> 100 000</span></p>
+</td>
+<td width=210 valign=top style='width:157.15pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>100 %</span></p>
+</td>
+</tr>
+<tr>
+<td width=105 valign=top style='width:78.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>3 000 - 3 999</span></p>
+</td>
+<td width=137 valign=top style='width:103.1pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>75 000 - 99 999</span></p>
+</td>
+<td width=210 valign=top style='width:157.15pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>100 %</span></p>
+</td>
+</tr>
+<tr>
+<td width=105 valign=top style='width:78.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>2 000 - 2 999</span></p>
+</td>
+<td width=137 valign=top style='width:103.1pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>25 000 - 74 999</span></p>
+</td>
+<td width=210 valign=top style='width:157.15pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>70 %</span></p>
+</td>
+</tr>
+<tr>
+<td width=105 valign=top style='width:78.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>< 2 000</span></p>
+</td>
+<td width=137 valign=top style='width:103.1pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>< 25 000</span></p>
+</td>
+<td width=210 valign=top style='width:157.15pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>50 %</span></p>
+</td>
+</tr>
+</table></div>
+</div>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Si le nadir des leucocytes et des plaquettes ne se situe pas sur la même ligne (par exemple leucocytes > 4 000 et plaquettes < 25 000), il convient d’appliquer la valeur correspondant au pourcentage le plus faible (par ex. plaquettes < 25 000 &#8594; maximum 50 % de la dose précédente).</p>
+<p class=AmmCorpsTexte>Traitement de conditionnement avant greffe autologue de cellules souches hématopoïétiques (SCT)</p>
+<p class=AmmCorpsTexte>Dans le cadre d’un conditionnement préalable à une greffe autologue de cellules souches hématopoïétiques, la carmustine est administrée en association avec d’autres agents chimiothérapeutiques à des doses pouvant aller de 300 à 600 mg/m² par voie intraveineuse.</p>
+<p class=AmmCorpsTexteGras>Populations particulières</p>
+<p class=AmmCorpsTexteGras>Insuffisance rénale</p>
+<p class=AmmCorpsTexte>Chez les patients présentant une insuffisance rénale, la dose de carmustine doit être réduite en fonction du débit de filtration glomérulaire.</p>
+<p class=AmmCorpsTexteGras>Personnes âgées</p>
+<p class=AmmCorpsTexte>Chez les patients âgés, la sélection de la dose doit être prudente, en commençant habituellement par la limite inférieure de la fourchette posologique, en raison d’une probabilité plus élevée de diminution des fonctions hépatique, rénale ou cardiaque et de comorbidités. La fonction rénale doit être surveillée et la dose ajustée si nécessaire.</p>
+<p class=AmmCorpsTexteGras>Enfants et adolescents</p>
+<p class=AmmCorpsTexte>BICNU ne doit pas être utilisé chez l’enfant âgé de moins de 5 ans. Dans le cadre d’un conditionnement préalable à une greffe autologue de cellules souches hématopoïétiques (forte dose), BICNU est contre-indiquée chez les enfants et les adolescents de moins de 18 ans.</p>
+<p class=AmmCorpsTexteGras>Compatibilité / incompatibilité avec les récipients</p>
+<p class=AmmCorpsTexte>La solution pour perfusion est instable dans les récipients en polychlorure de vinyle (PVC). La solution de carmustine ne doit être administrée qu’à partir de flacons en verre ou de récipients en polypropylène.</p>
+<p class=AmmCorpsTexteGras>Mélanges incompatibles</p>
+<p class=AmmCorpsTexte>Ce médicament ne doit pas être mélangé avec d’autres médicaments, à l’exception de ceux mentionnés dans le RCP.</p>
+<p class=AmmCorpsTexteGras>Durée de conservation et précautions de stockage</p>
+<p class=AmmCorpsTexte>Flacon avant ouverture : 3 ans (conserver au réfrigérateur entre +2 °C et +8 °C, à l’abri de la lumière, dans l’emballage extérieur).</p>
+<p class=AmmCorpsTexte>Après dilution : la solution reconstituée, diluée avec 500 ml supplémentaires de chlorure de sodium pour injection ou de glucose 5 % pour injection, dans des récipients en verre ou en polypropylène, doit être utilisée dans les 4 heures à température ambiante et protégée de la lumière. Ces solutions sont également stables pendant 24 heures au réfrigérateur (2– 8 °C) puis 6 heures supplémentaires à température ambiante, à l’abri de la lumière. D’un point de vue microbiologique, la solution reconstituée doit être utilisée immédiatement ; si elle n’est pas utilisée immédiatement, les durées et conditions de conservation avant utilisation relèvent de la responsabilité de l’utilisateur.</p>
+<p class=AmmCorpsTexteGras>Précautions particulières d’élimination et de manipulation</p>
+<p class=AmmCorpsTexte>La préparation des solutions injectables de cytotoxiques doit être réalisée par un personnel spécialisé et entraîné, dans des conditions assurant la protection de l’environnement et du personnel (local réservé, interdiction de fumer/manger/boire, équipement de protection individuelle approprié : blouses à manches longues, masques, calot, lunettes de protection, gants à usage unique stériles, champs de protection, conteneurs et sacs pour déchets). Les excréta et vomissures doivent être manipulés avec précaution. Les femmes enceintes doivent éviter la manipulation des cytotoxiques. Tout contenant cassé doit être traité comme un déchet contaminé et éliminé par incinération dans des conteneurs rigides étiquetés à cet effet.</p>
+<p class=AmmCorpsTexteGras>Remarques sur la stabilité thermique</p>
+<p class=AmmCorpsTexte>La conservation de la carmustine à une température &#8805; 27 °C peut entraîner la liquéfaction de la substance en raison de son point de fusion bas (&#8776; 30,5 °C à 32,0 °C). Un signe de décomposition est l’apparition d’un film huileux au fond du flacon ; dans ce cas, le médicament ne doit plus être utilisé. Si l’on doute de l’adéquation du maintien au froid, inspecter immédiatement chaque flacon à la lumière vive.</p>
+<p class=AmmCorpsTexteGras>BICNU contient de l’éthanol (alcool)</p>
+<p class=AmmCorpsTexte>Ce médicament contient 2,4 g d’alcool (éthanol) par flacon reconstitué, ce qui correspond à 25,92 g par dose maximale (10 % vol). La quantité contenue dans la dose maximale (600 mg/m² chez un patient de 70 kg) équivaut à 648 ml de bière ou 259 ml de vin. L’alcool contenu dans cette préparation est susceptible d’avoir des effets chez les enfants (somnolence, modifications du comportement, diminution de la concentration et de la participation aux activités physiques). La quantité d’alcool contenue dans ce médicament peut également altérer l’aptitude à conduire des véhicules et à utiliser des machines. Si vous souffrez d’épilepsie ou de problèmes hépatiques, ou si vous prenez d’autres médicaments, parlez-en à votre médecin ou à votre pharmacien avant de prendre ce médicament. Si vous êtes enceinte, allaitez ou êtes dépendant à l’alcool, consultez votre médecin ou votre pharmacien avant utilisation.</p>
+<p class=AmmCorpsTexte>Les recommandations relatives à la déclaration des effets indésirables suspectés et à la pharmacovigilance doivent être respectées.</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

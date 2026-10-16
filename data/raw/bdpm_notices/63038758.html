@@ -1,0 +1,1727 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="StbaHY2z1XJ19CwNz9lelA==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="StbaHY2z1XJ19CwNz9lelA==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 29/09/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade"
+            aria-level="3"
+          >
+            CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                          <p id="tag-generique" class="fr-tag" aria-controls="fr-modal-tag-generique" data-fr-opened="false">
+              <span class="fr-icon-capsule-fill">
+              </span>&nbsp;générique
+          </p>
+              </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 22/01/2018
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0428316">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Classe pharmacothérapeutique : Anti-psoriasiques. Autres anti-psoriasiques pour usage topique, Calcipotriol, associations, code ATC : D05AX52 </span></p>
+<p class=AmmCorpsTexte>CALCIPOTRIOL/BETAMETHASONE SANDOZ pommade est utilisée sur la peau pour traiter le psoriasis en plaques (psoriasis vulgaire) chez les adultes. Le psoriasis est dû à une production trop rapide des cellules de votre peau. Ceci entraîne rougeur, desquamation et épaississement de la peau.</p>
+<p class=AmmCorpsTexte>CALCIPOTRIOL/BETAMETHASONE SANDOZ pommade contient du calcipotriol et de la bétaméthasone. </p>
+<p class=AmmCorpsTexte>Le calcipotriol aide à ramener la vitesse de croissance des cellules de la peau à la normale et la bétaméthasone agit en réduisant l'inflammation.</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament appartient au(x) groupe(s) générique(s) suivants : <br/><ul role="list"><li role='listitem'><a href='/medicament/affiche/groupe-generique/63038758/1488' aria-describedby='tooltip-medicament-generique-0'>CALCIPOTRIOL MONOHYDRATE équivalant à CALCIPOTRIOL 50 microgrammes/g + DIPROPRIONATE DE BETAMETHASONE équivalant à 0,5 mg/g - DAIVOBET 50 microgrammes/0,5 mg/g, pommade</a><span id='tooltip-medicament-generique-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Ouvrir la page de détail sur ce groupe générique</span></li></ul></p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Pommade ( Composition pour 1 g de pommade )<ul role="list"><li role="listitem" style="list-style-type: none;">calcipotriol<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span><span class="italique">50 microgrammes </span><ul role="list" style="list-style-type: none;"><li class="sousFormeDe" role="listitem"><i class="fa fa-plus-square" aria-hidden="true"></i> sous forme de : calcipotriol monohydraté</li></ul></li></ul><li role="listitem" style="list-style-type: none;">bétaméthasone<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span><span class="italique">0,500 mg </span><ul role="list" style="list-style-type: none;"><li class="sousFormeDe" role="listitem"><i class="fa fa-plus-square" aria-hidden="true"></i> sous forme de : dipropionate de bétaméthasone</li></ul></li></ul></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > 1 tube(s) aluminium époxy-phénols de 60 g  </p><p>Code CIP : 34009 301 336 2 0<br/>Déclaration de commercialisation : 02/01/2019<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 14,85 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 15,87 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :65%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'>Ce médicament étant un générique, le SMR n'a pas été évalué par la commission de la transparence (CT), il est possible de se référer à la /aux spécialité(s) de référence du groupe générique auquel appartient ce médicament <a href='#heading-groupe-generique' arial-label='cliquez ici pour aller à la rubrique des groupes génériques'>(cliquez ici pour aller à la rubrique des groupes génériques)</a></p></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div><div class='fr-col'><p>Ce médicament étant un générique, l'ASMR n'a pas été évalué par la commission de la transparence (CT), il est possible de se référer à la /aux spécialité(s) de référence du groupe générique auquel appartient ce médicament <a href='#heading-groupe-generique' arial-label='cliquez ici pour aller à la rubrique des groupes génériques'>(cliquez ici pour aller à la rubrique des groupes génériques)</a></p></div></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : SANDOZ</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure décentralisée</li><li>Code CIS : &nbsp;6 303 875 8</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 02/01/2025</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras><a name="_Toc142278913"><span lang=IT>CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade</span></a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Un gramme de pommade contient 50 microgrammes de calcipotriol (sous forme de monohydrate) et 0,5 mg de bétaméthasone (sous forme de dipropionate).</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Pommade.</a></p>
+<p class=AmmCorpsTexte>Blanc cassé.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">Traitement topique du psoriasis en plaques (psoriasis vulgaire), relevant d’un traitement topique chez les adultes.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278918">Posologie</a></p>
+<p class=AmmCorpsTexte>CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade doit être appliquée une fois par jour sur les lésions. </p>
+<p class=AmmCorpsTexte>La durée de traitement recommandée est de 4 semaines. Il existe des données sur l’utilisation de cures répétées de CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade jusqu'à 52 semaines. S'il est nécessaire de continuer ou reprendre le traitement au bout de 4 semaines, le traitement devra être poursuivi après avis médical et sous surveillance médicale régulière. </p>
+<p class=AmmCorpsTexte>Lors de l’utilisation de produits contenant du calcipotriol, la dose maximale journalière ne doit pas dépasser 15 g. La surface corporelle traitée par des produits contenant du calcipotriol ne doit pas dépasser 30 % (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexte><i><u>Populations particulières</u></i></p>
+<p class=AmmCorpsTexte><i><u>Insuffisance rénale et hépatique</u></i></p>
+<p class=AmmCorpsTexte>La sécurité et l’efficacité de CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/ 0,5 mg/g, pommade chez des patients avec une insuffisance rénale sévère ou des troubles hépatiques sévères n’ont pas été évaluées.</p>
+<p class=AmmAnnexeTitre4>Population pédiatrique</p>
+<p class=AmmCorpsTexte>La sécurité et l’efficacité de CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/ 0,5 mg/g, pommade chez les enfants âgés de moins de 18 ans n’ont pas été établies.</p>
+<p class=AmmCorpsTexte>Les données actuellement disponibles chez les enfants âgés de 12 à 17 ans sont décrites aux rubriques 4.8, 5.1 et 5.2 mais aucune recommandation sur la posologie ne peut être donnée.</p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade doit être appliquée sur les lésions. Pour avoir un effet optimal, il n’est pas recommandé de prendre de douche ou de bain immédiatement après l’application de CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278919">Hypersensibilité aux substances actives ou à l’un des excipients mentionnés à la rubrique 6.1.</a></p>
+<p class=AmmCorpsTexte>CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade est contre-indiquée en cas de psoriasis érythrodermique, exfoliant et pustuleux. </p>
+<p class=AmmCorpsTexte>En raison de la présence de calcipotriol, CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade est contre-indiquée chez les patients ayant des antécédents de troubles du métabolisme calcique (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexte>En raison de la présence de corticoïdes, CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade est contre-indiquée dans les cas suivants : lésions de la peau d’origine virale (par exemple herpès ou varicelle), infections cutanées d’origine fongique ou bactérienne, infections parasitaires, atteinte cutanée en relation avec une tuberculose ou dermatite péri-orale, atrophie de la peau, vergetures, fragilité du réseau veineux cutané, ichtyose, acné vulgaire, acné rosacée, rosacée, ulcères et plaies (voir rubrique 4.4).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278920"><u>Effet sur le système endocrinien</u></a></p>
+<p class=AmmCorpsTexte>CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade contient un corticoïde du groupe fort de classe III et l’utilisation simultanée d'autres corticoïdes doit être évitée. </p>
+<p class=AmmCorpsTexte>Les effets indésirables observés avec un traitement systémique par corticoïdes, comme le freinage de l’axe hypothalamo-hypophysaire ou l’effet sur le contrôle métabolique du diabète sucré, peuvent également se produire lors d’un traitement topique par corticoïde en raison de l’absorption systémique. </p>
+<p class=AmmCorpsTexte>L’application sous pansement occlusif doit être évitée car elle augmente l'absorption systémique des corticoïdes. L’application sur de larges surfaces de peau lésée, sur des muqueuses ou dans les plis cutanés doit être évitée car elle augmente l’absorption systémique des corticoïdes (voir rubrique 4.8).</p>
+<p class=AmmCorpsTexte>Dans une étude sur des patients avec un psoriasis étendu à la fois du cuir chevelu et du corps, utilisant en association des doses élevées d’un gel à base de calcipotriol et de bétaméthasone (application sur le cuir chevelu) et des doses élevées d’une pommade à base de calcipotriol et de bétaméthasone (application sur le corps), 5 patients sur 32 ont présenté une diminution limite de leur cortisolémie en réponse à une stimulation de l’hormone corticotrope (ACTH) après 4 semaines de traitement (voir rubrique 5.1).</p>
+<p class=AmmCorpsTexteGras><u>Effets sur le métabolisme calcique</u></p>
+<p class=AmmCorpsTexte>En raison de la présence de calcipotriol, une hypercalcémie peut survenir si la dose maximale par jour (15 g) est dépassée. Cependant, la calcémie se normalise rapidement à l’arrêt du traitement. Le risque d’hypercalcémie est minime quand les recommandations relatives au calcipotriol sont suivies. Le traitement de plus de 30 % de la surface corporelle doit être évité (voir rubrique 4.2). </p>
+<p class=AmmCorpsTexteGras><u>Effets indésirables locaux</u></p>
+<p class=AmmCorpsTexte>CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade contient un corticoïde du groupe fort de classe III et l’utilisation simultanée d'autres corticoïdes sur la même lésion doit être évitée. La peau du visage et de la région génitale sont très sensibles aux corticoïdes. Le produit ne doit pas être utilisé sur ces zones. Le patient doit être formé à l'utilisation correcte du produit afin d’éviter l’application et le transfert accidentel sur le visage, la bouche et les yeux. Se laver les mains après chaque application afin d’éviter tout transfert accidentel sur ces zones.</p>
+<p class=AmmCorpsTexteGras><u>Infections cutanées concomitantes</u></p>
+<p class=AmmCorpsTexte>Lorsque les lésions se surinfectent, elles doivent être traitées par antibiotique. </p>
+<p class=AmmCorpsTexte>Cependant, si l’infection s’aggrave, le traitement par corticoïde doit être interrompu (voir rubrique 4.3).</p>
+<p class=AmmCorpsTexteGras><u>Arrêt du traitement</u></p>
+<p class=AmmCorpsTexte>Lors du traitement d’un psoriasis par des corticoïdes topiques, il peut y avoir un risque de psoriasis pustuleux généralisé ou de rebond à l’arrêt du traitement. Le contrôle médical doit donc se poursuivre après l’arrêt du traitement.</p>
+<p class=AmmCorpsTexteGras><u>Traitement prolongé</u></p>
+<p class=AmmCorpsTexte>Lors d’un traitement prolongé, le risque d’effets indésirables locaux ou systémiques des corticoïdes est augmenté. Le traitement doit être interrompu en cas d’effets indésirables liés à l’utilisation de corticoïdes au long-terme (voir rubrique 4.8).</p>
+<p class=AmmCorpsTexteGras><u>Utilisations non évaluées</u></p>
+<p class=AmmCorpsTexte>Aucune donnée n’est disponible concernant l’utilisation de CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade dans le psoriasis en gouttes.</p>
+<p class=AmmCorpsTexteGras><u>Traitement concomitant et exposition aux UV</u></p>
+<p class=AmmCorpsTexte>Peu de données sont disponibles concernant l’utilisation de ce produit sur le cuir chevelu. Une pommade à base de calcipotriol et de bétaméthasone pour des lésions de psoriasis du corps a été utilisée en association avec un gel à base de calcipotriol et de bétaméthasone pour des lésions de psoriasis du cuir chevelu, mais les expériences sont limitées en cas d’association d’une pommade à base de calcipotriol et de bétaméthasone avec d'autres produits topiques anti-psoriasiques appliqués sur les mêmes zones, avec d'autres produits anti-psoriasiques administrés par voie systémique ou avec la photothérapie. </p>
+<p class=AmmCorpsTexte>Lors d’un traitement par CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade, il est recommandé au médecin de conseiller aux patients de limiter ou d’éviter de s’exposer de manière excessive à la lumière naturelle ou artificielle. Le calcipotriol appliqué par voie topique doit être associé aux UV seulement si le médecin et le patient considèrent que les bénéfices potentiels sont supérieurs aux risques potentiels (voir rubrique 5.3).</p>
+<p class=AmmCorpsTexteGras><u>Troubles visuels</u></p>
+<p class=AmmCorpsTexte>Des troubles visuels ont été rapportés lors d’une corticothérapie par voie systémique ou locale. Si un patient présente des symptômes comme une vision floue ou d’autres troubles de la vision, il doit en référer à son ophtalmologue afin de rechercher les possibles causes de ces troubles, pouvant être une cataracte, un glaucome ou une lésion plus rare telle qu’une choriorétinopathie séreuse centrale (CRSC) déjà décrits après usage de corticostéroïdes par voie systémique ou locale.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278921">Aucune étude d’interaction n’a été réalisée.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte>Il n’y a pas de données pertinentes sur l’utilisation d’une pommade à base de calcipotriol et de bétaméthasone chez la femme enceinte. Les études chez l’animal avec les glucocorticoïdes ont montré une toxicité sur la reproduction (voir rubrique 5.3) mais un nombre important d’études épidémiologiques (moins de 300 grossesses) n’ont pas montré d’anomalies congénitales chez les enfants nés de mères traitées par les corticoïdes pendant la grossesse. Le risque potentiel chez l’Homme n’est pas connu de façon sûre. En conséquence, durant la grossesse, CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade ne doit être utilisée que lorsque le bénéfice potentiel justifie le risque potentiel.</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278927">Allaitement</a></p>
+<p class=AmmCorpsTexte>La bétaméthasone passe dans le lait maternel mais le risque d’observer un effet indésirable chez le nourrisson semble improbable aux doses thérapeutiques. Il n’y a pas de données disponibles sur l’excrétion de calcipotriol dans le lait maternel. La prudence s’impose en cas de prescription de CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade chez la femme qui allaite. Ne pas utiliser CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade sur les seins en cas d’allaitement.</p>
+<p class=AmmAnnexeTitre3>Fertilité</p>
+<p class=AmmCorpsTexte>Les études chez le rat après administration orale de calcipotriol ou de dipropionate de bétaméthasone n'ont démontré aucune altération de fertilité mâle et femelle (voir rubrique 5.3).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929"><span lang=FR-BE>CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade n’a aucun effet ou qu’un effet négligeable sur l’aptitude à conduire des véhicules et à utiliser des machines.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmCorpsTexte>L’estimation de la fréquence des effets indésirables est basée sur une analyse de l’ensemble des données des études cliniques incluant des études de sécurité post-autorisation et des déclarations spontanées.</p>
+<p class=AmmCorpsTexte>Les effets indésirables les plus fréquemment rapportés pendant le traitement sont des réactions cutanées comme des prurits et des exfoliations cutanées.</p>
+<p class=AmmCorpsTexte>Des psoriasis pustuleux et des hypercalcémies ont également été rapportés.</p>
+<p class=AmmCorpsTexte>Les effets indésirables sont listés par classe de système d’organes MedDRA et les effets indésirables individuels sont listés en commençant par les plus fréquemment rapportés. Dans chaque groupe de fréquence, les effets indésirables sont listés par gravité décroissante.</p>
+<p class=AmmCorpsTexte>Très fréquent &#8805; 1/10</p>
+<p class=AmmCorpsTexte>Fréquent &#8805; 1/100 et< 1/10</p>
+<p class=AmmCorpsTexte>Peu fréquent &#8805; 1/1 000 et < 1/100</p>
+<p class=AmmCorpsTexte>Rare &#8805; 1/10 000 et < 1/1 000</p>
+<p class=AmmCorpsTexte>Très rare < 1/10 000</p>
+<div class='fr-table--lg fr-table'><table>
+<tr>
+<td width=614 colspan=2 valign=top style='width:460.5pt;border:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Infections et infestations</p>
+</td>
+</tr>
+<tr>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Peu fréquent &#8805; 1/1 000 et < 1/100</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Infection cutanée*</p>
+<p class=AmmCorpsTexte>Folliculite</p>
+</td>
+</tr>
+<tr>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Rare &#8805; 1/10 000 et < 1/1 000</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Furoncle </p>
+</td>
+</tr>
+<tr>
+<td width=614 colspan=2 valign=top style='width:460.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Affections du système immunitaire</p>
+</td>
+</tr>
+<tr>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Rare &#8805; 1/10 000 et < 1/1 000</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Hypersensibilité</p>
+</td>
+</tr>
+<tr>
+<td width=614 colspan=2 valign=top style='width:460.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Troubles du métabolisme et de la nutrition</p>
+</td>
+</tr>
+<tr>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Rare &#8805; 1/10 000 et < 1/1 000</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Hypercalcémie</p>
+</td>
+</tr>
+<tr>
+<td width=614 colspan=2 valign=top style='width:460.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Affections oculaires</p>
+</td>
+</tr>
+<tr>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Fréquence indéterminée</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Vision floue (voir aussi rubrique 4.4), choriorétinopathie</p>
+</td>
+</tr>
+<tr>
+<td width=614 colspan=2 valign=top style='width:460.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Affections de la peau et du tissu sous-cutané</p>
+</td>
+</tr>
+<tr>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Fréquent &#8805; 1/100 et < 1/10</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Exfoliation cutanée</p>
+<p class=AmmCorpsTexte>Prurit</p>
+</td>
+</tr>
+<tr>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Peu fréquent &#8805; 1/1 000 et < 1/100</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Atrophie cutanée</p>
+<p class=AmmCorpsTexte>Exacerbation du psoriasis</p>
+<p class=AmmCorpsTexte>Dermatite</p>
+<p class=AmmCorpsTexte>Erythème</p>
+<p class=AmmCorpsTexte>Eruption cutanée**</p>
+<p class=AmmCorpsTexte>Purpura ou ecchymose </p>
+<p class=AmmCorpsTexte>Sensation de brûlure de la peau</p>
+<p class=AmmCorpsTexte>Irritation cutanée</p>
+</td>
+</tr>
+<tr>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Rare &#8805; 1/10 000 et < 1/1 000</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Psoriasis pustuleux</p>
+<p class=AmmCorpsTexte>Vergetures</p>
+<p class=AmmCorpsTexte>Réactions de photosensibilité</p>
+<p class=AmmCorpsTexte>Acné</p>
+<p class=AmmCorpsTexte>Sécheresse cutanée</p>
+</td>
+</tr>
+<tr>
+<td width=614 colspan=2 valign=top style='width:460.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Troubles généraux et anomalies au site d'administration</p>
+</td>
+</tr>
+<tr>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Peu fréquent &#8805; 1/1 000 et < 1/100</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Modification de la pigmentation au site d’application</p>
+<p class=AmmCorpsTexte>Douleur au niveau du site d’application***</p>
+</td>
+</tr>
+<tr>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Rare &#8805; 1/10 000 et < 1/1 000</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Effet rebond</p>
+</td>
+</tr>
+</table></div>
+<p class=AmmCorpsTexte>* Des infections cutanées dont des infections d’origine bactérienne, fongique ou virale ont été rapportées.</p>
+<p class=AmmCorpsTexte>** Différents types de réactions cutanées ont été rapportés comme des éruptions exfoliatives, papulaires et pustuleuses.</p>
+<p class=AmmCorpsTexte>*** La sensation de brûlure au site d’application est comprise parmi les douleurs ressenties au site d’application.</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Dans une étude ouverte non contrôlée, 33 adolescents âgés de 12 à 17 ans atteints de psoriasis vulgaire ont été traités avec une pommade à base de calcipotriol et de bétaméthasone pendant 4 semaines avec un maximum de 56 g par semaine. Aucun nouvel évènement indésirable n'a été observé et aucune donnée préoccupante quant à l'effet systémique du dermocorticoïde n'a été identifiée. La taille de l'étude ne permet cependant pas de tirer des conclusions quant au profil de sécurité d’une pommade à base de calcipotriol et de bétaméthasone chez les enfants et les adolescents.</p>
+<p class=AmmCorpsTexte>Dans un autre essai clinique non contrôlé portant sur 7 adolescents âgés de 12 à 17 ans, aucun effet indésirable n'a été rapporté. Voir rubrique 5.1 pour plus de détails concernant l’essai.</p>
+<p class=AmmCorpsTexte>Dans cet échantillon limité, aucune différence cliniquement pertinente n’a été observée entre les profils de sécurité d’une crème à base de calcipotriol et de bétaméthasone chez les adultes et les adolescents.</p>
+<p class=AmmCorpsTexte>Les effets indésirables suivants sont considérés en relation avec les classes pharmacologiques du calcipotriol et de la bétaméthasone, respectivement :</p>
+<p class=AmmCorpsTexteGras><u>Calcipotriol</u></p>
+<p class=AmmCorpsTexte>Les effets indésirables incluent les effets suivants : réactions au site d’application, prurit, irritation cutanée, sensation de brûlure et de picotement, sécheresse de la peau, érythème, éruptions cutanées, dermatite, eczéma, aggravation du psoriasis, photosensibilité, et réactions d’hypersensibilité incluant de très rares cas d’angiœdème et d’œdème de la face.</p>
+<p class=AmmCorpsTexte>Des effets systémiques après application topique peuvent se produire très rarement et provoquer une hypercalcémie ou une hypercalciurie (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexteGras><u>Bétaméthasone (dipropionate)</u></p>
+<p class=AmmCorpsTexte>Des réactions locales peuvent se produire après utilisation topique, surtout lors d’exposition prolongée, notamment atrophie de la peau, télangiectasies, vergetures, folliculite, hypertrichose, dermatite péri-orale, dermatite allergique de contact, dépigmentation et <i>colloïd milium</i>. </p>
+<p class=AmmCorpsTexte>Lors du traitement du psoriasis, il peut exister un risque de psoriasis pustuleux généralisé.</p>
+<p class=AmmCorpsTexte>Des effets systémiques après application topique de corticoïde sont rares chez l’adulte, cependant ils peuvent être sévères. Un freinage de l’axe hypothalamo-hypophysaire, une cataracte, des infections, un impact sur le contrôle métabolique du diabète sucré et une augmentation de la pression intraoculaire peuvent survenir, notamment après traitement prolongé. Les effets systémiques se produisent plus fréquemment lors de l’application sous occlusion (plastique, plis cutanés), lors de l’application sur de grandes surfaces et lors d’un traitement à long terme (voir rubrique 4.4).</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr</a>. </p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte>L’utilisation de doses supérieures à la dose recommandée peut entraîner une élévation du calcium sanguin qui devrait être rapidement réversible à l’arrêt du traitement. Les symptômes de l’hypercalcémie incluent une polyurie, une constipation, une faiblesse musculaire, une confusion et un coma.</p>
+<p class=AmmCorpsTexte>L’utilisation prolongée de façon excessive de corticoïde topique peut entraîner un freinage de l’axe hypothalamo-hypophysaire, se traduisant par une insuffisance surrénalienne secondaire habituellement réversible. Dans de tels cas un traitement symptomatique est indiqué.</p>
+<p class=AmmCorpsTexte>En cas de toxicité chronique le traitement par les corticoïdes doit être interrompu progressivement.</p>
+<p class=AmmCorpsTexte>Un cas de mésusage a été rapporté chez un patient traité pour un psoriasis érythrodermique étendu par 240 g par semaine d’une pommade à base de calcipotriol et de bétaméthasone (correspondant à une dose quotidienne d'environ 34 g) pendant 5 mois (dose maximale recommandée 15 g par jour) ; le patient a développé un syndrome de Cushing et un psoriasis pustuleux après un arrêt brutal du traitement.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : Anti-psoriasiques. Autres anti-psoriasiques pour usage topique, calcipotriol, associations, code ATC : D05AX52 </a></p>
+<p class=AmmCorpsTexte>Le calcipotriol est un analogue de la vitamine D. Les données <i>in vitro</i> suggèrent que le calcipotriol induit la différenciation et inhibe la prolifération des kératinocytes. C’est le mécanisme proposé pour expliquer ses effets dans le psoriasis.</p>
+<p class=AmmCorpsTexte>Comme les autres corticostéroïdes topiques, le dipropionate de bétaméthasone a des propriétés anti-inflammatoires, anti-prurigineuses, vasoconstrictrices, et immunosuppressives, sans action curative démontrée. Un traitement sous occlusion pourra augmenter l’effet en raison d’une pénétration plus importante dans la couche cornée. L’incidence des effets indésirables sera donc augmentée. Le mécanisme d’action de l’activité anti-inflammatoire des corticoïdes topiques n’est pas complètement établi.</p>
+<p class=AmmCorpsTexte>Une étude de phase III multicentrique, randomisée, en double aveugle, en groupes parallèles a été réalisée pour étudier l'efficacité, la sécurité et la tolérance d’un générique d'une pommade à base de calcipotriol et de bétaméthasone par rapport à la spécialité de référence et à un placebo dans le cadre du traitement de patients adultes ayant un psoriasis en plaques chronique. Un nombre total de 444 patients a commencé le traitement en double aveugle. Les patients ont été randomisés pour recevoir soit un générique d’une pommade à base de calcipotriol et de bétaméthasone (produit testé), soit la spécialité de référence, soit une autre formulation de pommade (placebo) dans un rapport de 4: 4: 1. Le médicament de l'étude a été utilisé par le patient lui-même une fois par jour pendant 4 semaines.</p>
+<p class=AmmCorpsTexte>Le critère principal d'évaluation a été défini comme le pourcentage moyen de l’évolution du score de PASI (Psoriasis Area and Severity Index) entre le début du traitement et à la fin des 4 semaines de traitement. L'analyse des résultats entre les patients traités par le produit testé par rapport à ceux traités par le produit de référence a montré que le produit testé était équivalent au produit de référence.</p>
+<p class=AmmCorpsTexte>L'analyse des résultats entre les patients traités par le produit testé par rapport à ceux traités par le placebo a montré que le produit testé était plus efficace que le placebo.</p>
+<p class=AmmCorpsTexte>Les résultats obtenus sur les critères secondaires ont confirmé les résultats obtenus pour le critère principal d'évaluation. Après 4 semaines de traitement, le produit testé était significativement plus efficace que le placebo selon les critères d'évaluation secondaires.</p>
+<p class=AmmCorpsTexte>La tolérance locale a été évaluée en comparant le type, le nombre et la sévérité des effets indésirables lésionnels/péri-lésionnelles. 12 patients ont présenté 17 effets indésirables cutanés pouvant être liés au médicament de l'étude (5 effets indésirables chez 4 patients traités avec le médicament testé, 6 effets indésirables chez 4 patients traités avec le médicament de référence et 6 effets indésirables chez 4 patients traités avec le placebo). Tous les patients présentant des effets indésirables cutanés pouvant être liés au médicament de l'étude se sont complètement rétablis. La tolérance générale du médicament testé était comparable au médicament de référence.</p>
+<p class=AmmCorpsTexte>L'évaluation des paramètres de sécurité (modification de la concentration de calcium sérique corrigée en fonction de l’albumine, modification de la quantité de cortisol excrétée dans l'urine en 24 heures, résultats de l'examen clinique et des examens de laboratoire, observation des signes vitaux) n’a soulevé aucune source d'inquiétude en matière de sécurité.</p>
+<p class=AmmCorpsTexte>L’étude a démontré l'équivalence thérapeutique entre le produit testé (CALCIPOTRIOL/ BETAMETHASONE SANDOZ) et le médicament de référence (<span style='text-transform:uppercase'>Daivobet</span>) et la supériorité du produit testé par rapport au placebo, tout en ne soulevant aucune source d'inquiétude en matière de sécurité.</p>
+<p class=AmmCorpsTexte>L'analyse de confirmation du critère principal comparant le produit testé et le traitement de référence, a montré que le produit testé est thérapeutiquement équivalent à la référence.</p>
+<p class=AmmCorpsTexte>Une étude de sécurité chez 634 patients psoriasiques a étudié les effets de cures répétées d’une pommade à base de calcipotriol et de bétaméthasone utilisée une fois par jour selon les besoins, soit seule soit en alternance avec une pommade à base de calcipotriol, jusqu’à 52 semaines en comparaison avec une pommade à base de calcipotriol utilisée seule pendant 48 semaines après un traitement initial par une pommade à base de calcipotriol et de bétaméthasone. </p>
+<p class=AmmCorpsTexte>Des effets indésirables ont été rapportés par 21,7 % des patients dans le groupe de ceux traités par une pommade à base de calcipotriol et de bétaméthasone, 29,6 % dans le groupe de ceux traités par une alternance de pommade à base de calcipotriol et de bétaméthasone et d’une pommade à base de calcipotriol et 37,9 % dans le groupe de ceux traités par une pommade à base de calcipotriol. Les effets indésirables rapportés par plus de 2 % des patients dans le groupe pommade à base de calcipotriol et de bétaméthasone sont prurit (5,8 %) et psoriasis (5,3 %). Les effets indésirables qui pourraient être liés au traitement au long terme par les corticoïdes (par exemple atrophie de la peau, folliculite, dépigmentation, furoncle et purpura) ont été rapportés par 4,8 % des patients dans le groupe pommade à base de calcipotriol et de bétaméthasone, 2,8 % dans le groupe alternance d’une pommade à base de calcipotriol et de bétaméthasone et d’une pommade à base de calcipotriol et 2,9 % dans le groupe pommade à base de calcipotriol seul.</p>
+<p class=AmmCorpsTexte>La réponse surrénalienne à l’ACTH a été déterminée en mesurant la cortisolémie chez des patients ayant à la fois un psoriasis étendu sur le cuir chevelu et sur le corps et utilisant jusqu'à 106 g par semaine d’un gel à base de calcipotriol et de bétaméthasone associé à une pommade à base de bétaméthasone. Une diminution limite du taux de cortisol, 30 minutes après l’administration d’ACTH a été observée chez 5 patients sur 32 (15,6 %) après 4 semaines de traitement et chez 2 patients sur 11 (18,2 %) qui ont prolongé le traitement jusqu'à 8 semaines. Dans tous les cas, la cortisolémie était à un niveau normal 60 minutes après l’administration d’ACTH. Aucune modification du métabolisme calcique n’a été observée chez ces patients. En ce qui concerne le freinage hypothalamo-hypophysaire, cette étude met en évidence qu’à doses très élevées le gel et la pommade contenant du calcipotriol et du bétaméthasone peuvent avoir un faible effet sur l'axe hypothalamo-hypophysaire.</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique </p>
+<p class=AmmCorpsTexte>La réponse surrénalienne à l’administration d’ACTH a été mesurée dans une étude non contrôlée de 4 semaines chez 33 adolescents âgés de 12 à 17 ans avec un psoriasis touchant le corps qui ont utilisé jusqu'à 56 g par semaine d’une pommade contenant du calcipotriol et du bétaméthasone. Aucun cas de freinage de l’axe hypothalamo-hypophysaire n'a été rapporté. Aucune hypercalcémie n'a été rapportée mais un patient a présenté une augmentation du calcium urinaire possiblement liée au traitement.</p>
+<p class=AmmCorpsTexte>Les résultats de cet essai ont également été confirmés dans un autre essai incluant7 adolescents âgés de 12 à 17 ans atteints d’un psoriasis étendu touchant 10,5 à 16 % de la surface corporelle (y compris le cuir chevelu). Le traitement consistait en une application quotidienne de crème à base de calcipotriol et de bétaméthasone sur le corps et le cuir chevelu pendant une période allant jusqu’à 8 semaines. La dose hebdomadaire moyenne jusqu’à la semaine 8 était de 27,2 g. Un freinage surrénalien n’a été observée chez aucun sujet (N=6) après 4 ou 8 semaines de traitement (un sujet avait au départ un cortisol stimulé par l’ACTH anormal et a interrompu l’essai prématurément). Il n’y a eu aucun changement du métabolisme du calcium.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278934">Les études cliniques avec une pommade marquée ont montré que l’absorption systémique du calcipotriol et de la bétaméthasone d’une pommade contenant du calcipotriol et de la bétaméthasone est inférieure à 1 % de la dose (2,5 g) lors de l’application sur peau saine (625 cm<sup>2</sup>) pendant 12 heures. L’application sur les plaques de psoriasis et sous pansement occlusif peut augmenter l’absorption de corticoïdes topiques. L'absorption par la peau lésée est approximativement de 24 %.</a></p>
+<p class=AmmCorpsTexte>Après une exposition systémique, les deux principes actifs - calcipotriol et dipropionate de bétaméthasone –  sont rapidement et largement métabolisés. La liaison aux protéines est approximativement de 64 %. La demi-vie d'élimination plasmatique après l'administration intraveineuse est de 5-6 heures. En raison de la formation d'un réservoir dans la peau, l'élimination après application cutanée est de l'ordre de quelques jours.</p>
+<p class=AmmCorpsTexte>La bétaméthasone est métabolisée principalement par le foie, mais aussi par les reins en esters de sulfate et glucuronides. La voie principale d’excrétion du calcipotriol est via les fèces (rats et cochons nains) et pour le dipropionate de bétaméthasone via les urines (rats et souris). Chez les rats, les études de distribution dans les tissus du calcipotriol et du dipropionate de bétaméthasone radiomarqués ont montré que le rein et le foie avaient, respectivement, le taux le plus élevé de radioactivité.</p>
+<p class=AmmCorpsTexte>Le calcipotriol et le dipropionate de bétaméthasone étaient sous la limite inférieure de quantification dans tous les échantillons sanguins des 34 patients traités pendant 4 ou 8 semaines par à la fois un gel contenant du calcipotriol et de la bétaméthasone et une pommade contenant du calcipotriol et de la bétaméthasone pour un psoriasis étendu du corps et du cuir chevelu. Un métabolite du calcipotriol et un métabolite du dipropionate de bétaméthasone étaient quantifiables chez certains des patients.</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Dans une étude incluant 7 adolescents (dont 6 ont fourni des données de pharmacocinétique) traités avec une crème à base de calcipotriol et de bétaméthasone, le calcipotriol et son métabolite MC1080 étaient sous la limite inférieure de quantification dans tous les échantillons de plasma à la semaine 4. Le dipropionate de bétaméthasone était sous la limite inférieure de quantification dans tous les échantillons de plasma à la semaine 4. Son métabolite, le bétaméthasone 17-propionate (B17P), était quantifiable chez 3 des 6 sujets (50 %).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278935">Les études réalisées avec les corticoïdes chez l’animal ont montré une embryotoxicité (fente palatine, malformations du squelette). Dans les études sur les fonctions de reproduction réalisées chez le rat après administration orale long-terme, un allongement du temps de gestation ainsi qu’un travail difficile et prolongé ont été observés. De plus une diminution de la survie, du poids corporel et de la prise de poids de la progéniture a été observée. Il n’y a pas eu d’altération de la fertilité. La pertinence de ces données chez l’homme n’est pas connue.</a></p>
+<p class=AmmCorpsTexte>Une étude de cancérogénicité cutanée avec le calcipotriol chez la souris n’a pas montré de risques particuliers pour l’homme.</p>
+<p class=AmmCorpsTexte>Des études de photocarcinogénicité chez des souris suggèrent que le calcipotriol pourrait augmenter l'effet inducteur de tumeurs cutanées des radiations UV. </p>
+<p class=AmmCorpsTexte>Une étude de cancérogénicité cutanée chez la souris et une étude de cancérogénicité orale chez le rat n’ont pas révélé de risque particulier du dipropionate de bétaméthasone pour l’homme.</p>
+<p class=AmmCorpsTexte>Aucune étude de photocarcinogénicité n'a été effectuée avec le dipropionate de bétaméthasone.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937">Tout-rac-&#945;-tocophérol (E307), alcool oléique, paraffine liquide légère, paraffine molle blanche.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">Sans objet.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte>2 ans.</p>
+<p class=AmmCorpsTexte><i><u>Après première ouverture</u></i> : 1 an.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940"><span lang=FR-BE>A conserver à une température ne dépassant pas 25°C. Ne pas mettre au réfrigérateur et ne pas congeler.</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Pour les conditions de conservation du médicament après première ouverture, voir la rubrique 6.3.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278942"></a><a name="_Toc142278941">Pommade contenue dans un tube en aluminium/époxy-phénols avec un bouchon à vis en polyéthylène ou polypropylène.</a></p>
+<p class=AmmCorpsTexte>Présentations :</p>
+<p class=AmmCorpsTexte>Tubes contenant 15 g, 30 g, 60 g, et 120 g de pommade.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Pas d’exigences particulières.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142278943">SANDOZ</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>49 AVENUE GEORGES POMPIDOU</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>92300 LEVALLOIS-PERRET </p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 301 336 0 6 : 1 tube (aluminium/époxy-phénols) de 15 g.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 301 336 1 3 : 1 tube (aluminium/époxy-phénols) de 30 g.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 301 336 2 0 : 1 tube (aluminium/époxy-phénols) de 60 g.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 301 336 3 7 : 1 tube (aluminium/époxy-phénols) de 120 g. </p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I.</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_CALCIPOTRIOL/BETAMETHASONE_SANDOZ_50_microgrammes/0,5_mg/g,_pommade_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_CALCIPOTRIOL/BETAMETHASONE_SANDOZ_50_microgrammes/0,5_mg/g,_pommade_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_UTILISER_CALCIPOTRIOL/BETAMETHASONE_SANDOZ_50_microgrammes/0,5_mg/g,_pommade_?"
+                     aria-label="3. COMMENT UTILISER CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade ? (Lien de redirection)">
+                    3. COMMENT UTILISER CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_CALCIPOTRIOL/BETAMETHASONE_SANDOZ_50_microgrammes/0,5_mg/g,_pommade_?"
+                     aria-label="5. COMMENT CONSERVER CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade ? (Lien de redirection)">
+                    5. COMMENT CONSERVER CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 02/01/2025</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade</p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Calcipotriol/Bétaméthasone</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Veuillez lire attentivement cette notice avant de prendre ce médicament car elle contient des informations importantes pour vous.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin, votre pharmacien ou votre infirmier/ère.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien ou votre infirmier/ère. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant d’utiliser CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span lang=IT>3. Comment utiliser CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade ?</span></p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_CALCIPOTRIOL/BETAMETHASONE_SANDOZ_50_microgrammes/0,5_mg/g,_pommade_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Classe pharmacothérapeutique : Anti-psoriasiques. Autres anti-psoriasiques pour usage topique, Calcipotriol, associations, code ATC : D05AX52 </span></p>
+<p class=AmmCorpsTexte>CALCIPOTRIOL/BETAMETHASONE SANDOZ pommade est utilisée sur la peau pour traiter le psoriasis en plaques (psoriasis vulgaire) chez les adultes. Le psoriasis est dû à une production trop rapide des cellules de votre peau. Ceci entraîne rougeur, desquamation et épaississement de la peau.</p>
+<p class=AmmCorpsTexte>CALCIPOTRIOL/BETAMETHASONE SANDOZ pommade contient du calcipotriol et de la bétaméthasone. </p>
+<p class=AmmCorpsTexte>Le calcipotriol aide à ramener la vitesse de croissance des cellules de la peau à la normale et la bétaméthasone agit en réduisant l'inflammation.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_CALCIPOTRIOL/BETAMETHASONE_SANDOZ_50_microgrammes/0,5_mg/g,_pommade_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras>N’utilisez jamais CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique au calcipotriol, à la bétaméthasone ou à l’un des autres composants contenus dans ce médicament, mentionnés dans la rubrique 6,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez des problèmes de taux de calcium dans l’organisme (demandez à votre médecin),</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez un psoriasis d'un certain type : comme le psoriasis érythrodermique, exfoliant ou pustuleux (demandez à votre médecin).</p>
+<p class=AmmCorpsTexte>Comme CALCIPOTRIOL/BETAMETHASONE SANDOZ pommade contient un corticoïde fort, ne PAS l'utiliser sur la peau atteinte de :</p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>infection causée par un virus (comme un bouton de fièvre ou la varicelle),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>infection causée par un champignon (comme le pied d'athlète ou la teigne),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>infection causée par une bactérie,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>infection causée par un parasite (comme la gale),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>tuberculose,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>dermatite péri-orale (rougeur autour de la bouche),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>amincissement de la peau, veines facilement abîmées, vergetures,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>ichtyose (peau sèche avec des sortes d’écailles),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>acné (boutons),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>rosacée (rougeur sévère soudaine ou rougeur de la peau du visage),</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>ulcères ou rupture de la barrière cutanée.</p>
+<p class=AmmCorpsTexteGras>Avertissements et précautions</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Adressez-vous à votre médecin ou votre pharmacien avant d’utiliser CALCIPOTRIOL/ BETAMETHASONE SANDOZ pommade, si :</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>vous prenez d’autres médicaments qui contiennent des corticoïdes car vous pourriez avoir des effets indésirables,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>vous avez pris ce médicament pendant une longue période et prévoyez d'arrêter le traitement (car il y a un risque que votre psoriasis ne s'aggrave ou « flambe » quand les corticoïdes sont arrêtés brutalement),</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>vous avez du diabète (diabète sucré) car les taux de sucre/glucose dans le sang peuvent être modifiés par les corticoïdes,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>votre peau s'infecte car vous pourriez avoir besoin d'arrêter le traitement,</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>vous avez un psoriasis d'un certain type appelé psoriasis en goutte.</span></p>
+<p class=AmmCorpsTexte><i><u><span lang=FR-BE>Précautions particulières</span></u></i></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>éviter de traiter plus de 30 % du corps et d'utiliser plus de 15 grammes par jour,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>éviter l'utilisation sous bandages ou pansements car cela augmente l'absorption des corticoïdes,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>éviter l'utilisation sur de larges surfaces de peau lésée ou dans les plis de la peau (aine, sous les bras, sous les seins) car cela augmente l'absorption des corticoïdes,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>éviter l'utilisation sur le visage ou les organes génitaux (sexuels) car ceux-ci sont très sensibles aux corticoïdes,</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>éviter l'exposition excessive au soleil, l'utilisation excessive de cabines solaires ou autre forme de traitement par la lumière.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Contactez votre médecin en cas de vision floue ou d’autres troubles visuels.</span></p>
+<p class=AmmCorpsTexteGras>Enfants </p>
+<p class=AmmCorpsTexte>CALCIPOTRIOL/BETAMETHASONE SANDOZ pommade n'est pas recommandée chez l'enfant âgé de moins de 18 ans.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/ 0,5 mg/g, pommade</p>
+<p class=AmmCorpsTexte>Informez votre médecin ou pharmacien si vous prenez, avez récemment pris ou pourriez prendre tout autre médicament, y compris un médicament obtenu sans ordonnance.</p>
+<p class=AmmCorpsTexteGras>Grossesse et allaitement </p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N'utilisez pas CALCIPOTRIOL/BETAMETHASONE SANDOZ pommade si vous êtes enceinte (ou pouvez tomber enceinte) ou si vous allaitez, sauf si votre médecin vous a donné son accord avant. Si votre médecin est d'accord pour que vous allaitiez, faites attention et n’appliquez pas CALCIPOTRIOL/BETAMETHASONE SANDOZ pommade sur vos seins.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous êtes enceinte ou que vous allaitez, si vous pensez être enceinte ou planifiez une grossesse, demandez conseil à votre médecin ou pharmacien avant de prendre tout médicament.</span></p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>Ce médicament ne devrait avoir aucun effet sur votre capacité à conduire ou utiliser des machines.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_UTILISER_CALCIPOTRIOL/BETAMETHASONE_SANDOZ_50_microgrammes/0,5_mg/g,_pommade_?'>3. COMMENT UTILISER CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Veillez à toujours utiliser ce médicament en suivant exactement les indications de votre médecin. Vérifiez auprès de votre médecin ou pharmacien en cas de doute.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Comment appliquer CALCIPOTRIOL/BETAMETHASONE SANDOZ pommade : Voie cutanée. </span></p>
+<p class=AmmCorpsTexteGras><u><span lang=FR-BE>Instruction pour une utilisation correcte</span></u></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Appliquez le produit uniquement sur le psoriasis et pas sur la peau qui n'a pas de psoriasis.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Retirez le bouchon et vérifiez que le tube est fermé hermétiquement avant la première utilisation de la pommade.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Pour percer l'opercule, utilisez la pointe au dos du bouchon.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Faites sortir la pommade sur un doigt propre.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Frottez délicatement pour faire pénétrer dans la peau en couvrant la surface atteinte de psoriasis jusqu'à ce que presque toute la pommade ait disparu dans la peau.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ne pas couvrir la zone traitée ni avec un bandage, ni avec un pansement serré.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Bien se laver les mains après avoir utilisé CALCIPOTRIOL/BETAMETHASONE SANDOZ pommade (sauf si vous utilisez la pommade pour traiter vos mains). Ceci évitera un transfert accidentel de pommade sur d’autres parties du corps (surtout sur le visage, le cuir chevelu, la bouche et les yeux).</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ne vous inquiétez pas si vous appliquez sans le faire exprès de la pommade sur de la peau saine autour des lésions de psoriasis, mais essuyez-la si elle se répand trop largement.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Pour un effet optimal, il est recommandé de ne pas prendre une douche ou un bain immédiatement après l'application de CALCIPOTRIOL/BETAMETHASONE SANDOZ pommade.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Après l’application de pommade, évitez le contact avec des tissus qui sont facilement tachés par la graisse (comme la soie).</span></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><u><span lang=FR-BE>Durée du traitement</span></u></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Utiliser la pommade une fois par jour. Il peut être plus pratique d'appliquer la pommade le soir.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>La période initiale de traitement est normalement de 4 semaines mais votre médecin peut vous prescrire une durée de traitement différente.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Votre médecin peut décider de répéter le traitement.</span></p>
+<p class=AmmListePuces1 style='margin-bottom:12.0pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ne pas utiliser plus de 15 grammes par jour.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous utilisez d’autres produits contenant du calcipotriol, le total de calcipotriol ne doit pas excéder 15 grammes par jour et la zone traitée ne devra pas dépasser 30 % de la surface totale du corps.</span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Que dois-je attendre de mon traitement par CALCIPOTRIOL/BETAMETHASONE SANDOZ pommade ?</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>La plupart des patients voient un net résultat après 2 semaines même si le psoriasis n’a pas complètement disparu.</span></p>
+<p class=AmmCorpsTexteGras>Si vous avez utilisé plus de CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/ 0,5 mg/g, pommade que vous n’auriez dû :</p>
+<p class=AmmCorpsTexte>Contactez votre médecin si vous avez utilisé plus de 15 g en un jour.</p>
+<p class=AmmCorpsTexte>L'utilisation trop prolongée de CALCIPOTRIOL/BETAMETHASONE SANDOZ pommade peut provoquer des anomalies du calcium sanguin qui revient généralement à la normale à l'arrêt du traitement. </p>
+<p class=AmmCorpsTexte>Votre médecin peut avoir besoin de faire faire des analyses de sang pour vérifier que l'utilisation trop importante de pommade n'a pas entraîné un trouble de votre calcium sanguin.</p>
+<p class=AmmCorpsTexte>L'utilisation trop prolongée peut aussi entraîner un fonctionnement anormal de vos glandes surrénales (elles se situent près du rein et produisent des hormones).</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez d’utiliser CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/ 0,5 mg/g, pommade :</p>
+<p class=AmmCorpsTexte>N’appliquez pas de dose double pour compenser la dose que vous avez oubliée d’appliquer.</p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez d’utiliser CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/ 0,5 mg/g, pommade :</p>
+<p class=AmmCorpsTexte>Le traitement par CALCIPOTRIOL/BETAMETHASONE SANDOZ pommade doit être arrêté en suivant les instructions du médecin. Il peut être nécessaire d'interrompre le traitement graduellement, surtout si vous l'avez pris pendant longtemps.</p>
+<p class=AmmCorpsTexte>Si vous avez d’autres questions sur l’utilisation de ce médicament, demandez plus d’informations à votre médecin ou à votre pharmacien.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte>Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</p>
+<p class=AmmCorpsTexteGras><u><span lang=FR-BE>Effets indésirables graves :</span></u></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Informez immédiatement ou le plus rapidement possible votre médecin ou votre infirmier/ère si l’un de ces effets apparait. Vous pourriez avoir à arrêter votre traitement.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Les effets indésirables graves suivants ont été rapportés pour CALCIPOTRIOL/BETAMETHASONE SANDOZ pommade :</span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Peu fréquents (pouvant affecter jusqu’à 1 personne sur 100)</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Aggravation de votre psoriasis. Si votre psoriasis s'aggrave, parlez-en à votre médecin le plus rapidement possible.</span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Rares (pouvant affecter jusqu’à 1 personne sur 1000)</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Un psoriasis pustuleux peut survenir (zone rouge avec des pustules jaunâtres généralement sur les mains ou les pieds). Si vous observez ces symptômes, arrêtez d'utiliser CALCIPOTRIOL/BETAMETHASONE SANDOZ pommade et prévenez votre médecin le plus rapidement possible.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>On sait que des effets indésirables graves sont provoqués par la bétaméthasone (un corticoïde fort), un des composants de CALCIPOTRIOL/BETAMETHASONE SANDOZ pommade. Il faut informer votre médecin le plus rapidement possible si un effet indésirable grave se produit. Ces effets indésirables arrivent le plus souvent après une utilisation prolongée, une utilisation dans les plis (par exemple l’aine, sous les bras ou sous les seins), une utilisation sous bandages et pansements ou sur de grandes surfaces de peau.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ces effets indésirables sont les suivants :</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>vos glandes surrénales peuvent cesser de fonctionner correctement. Les symptômes sont fatigue, dépression et anxiété,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>cataracte (les signes sont vision floue ou brouillée, difficulté à voir la nuit, et sensibilité à la lumière) ou augmentation de la pression dans l'œil (les signes sont douleur oculaire, œil rouge, baisse de la vision ou vision brouillée),</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>infections (car votre système immunitaire qui combat les infections peut être diminué ou affaibli),</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>psoriasis pustuleux (zone rouge avec des pustules jaunâtres généralement sur les mains ou les pieds). Si vous observez ces symptômes, arrêtez d'utiliser CALCIPOTRIOL/BETAMETHASONE SANDOZ pommade et prévenez votre médecin le plus rapidement possible,</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>impact sur le contrôle du métabolisme du diabète sucré (si vous êtes diabétique vous pouvez avoir des fluctuations de votre glycémie).</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>On sait que des effets indésirables graves sont provoqués par le calcipotriol :</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>réactions allergiques avec gonflement important du visage ou d'autres parties du corps comme les mains ou les pieds. Un gonflement de la bouche et/ou de la gorge et des difficultés à respirer peuvent survenir. Si vous avez une réaction allergique, arrêtez d'utiliser CALCIPOTRIOL/BETAMETHASONE SANDOZ pommade, </span><span class=AmmCorpsTexteGrasCar>prévenez immédiatement votre médecin ou allez aux urgences de l'hôpital le plus proche.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Le traitement avec cette pommade peut faire augmenter votre taux de calcium dans le sang ou dans les urines (en général lorsque trop de pommade a été utilisée). Les signes d'une augmentation de calcium dans le sang sont une sécrétion excessive d’urine, de la constipation, une faiblesse musculaire, des confusions et un coma. <span class=AmmCorpsTexteGrasCar>Ceci peut être grave et vous devez contacter immédiatement votre médecin. </span>Cependant, à l'arrêt du traitement, les taux redeviennent normaux.</span></p>
+<p class=AmmCorpsTexteGras><u><span lang=FR-BE>Effets indésirables moins graves :</span></u></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Les effets indésirables suivants, moins graves, ont aussi été rapportés avec CALCIPOTRIOL/ BETAMETHASONE SANDOZ pommade.</span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Effets indésirables fréquents (pouvant affecter jusqu’à 1 personne sur 10) :</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>démangeaisons,</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>exfoliation cutanée.</span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Effets indésirables peu fréquents (pouvant affecter jusqu’à 1 personne sur 100) :</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>douleur ou irritation cutanée,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>éruption cutanée avec inflammation de la peau (dermatite),</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>rougeur de la peau due à la dilatation des petits vaisseaux sanguins (érythème),</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>inflammation ou gonflement des racines des poils (folliculite),</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>changement de couleur de la peau sur les zones sur lesquelles vous avez appliqué la pommade,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>éruption cutanée,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>sensation de brûlure,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>infection de la peau,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>amincissement de la peau,</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>apparition d’une décoloration rouge ou violette de la peau (purpura ou ecchymose).</span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Effets indésirables rares (pouvant affecter jusqu’à 1 personne sur 1000) :</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>infection bactérienne ou fongique des follicules pileux (furoncle),</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>réactions allergiques,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>hypercalcémie,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>vergetures,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>sensibilité de la peau à la lumière avec comme conséquence une éruption cutanée,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>acné (boutons),</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>sécheresse de la peau,</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>effet rebond : aggravation des symptômes et du psoriasis après la fin du traitement.</span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Fréquence indéterminée (ne peut être estimée sur la base des données disponibles) :</span></p>
+<p class=AmmListePuces1 style='margin-bottom:12.0pt'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>vision floue.</p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Les effets indésirables moins graves provoqués par la bétaméthasone, en particulier en cas d’utilisation prolongée, incluent les effets suivants. Vous devez informer votre médecin ou votre infirmier/ère dès que possible si vous les observez :</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>amincissement de la peau,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>apparition de veines en surface ou de vergetures,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>changement de la pousse des poils,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>rougeur autour de la bouche (dermatite péri-orale),</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>éruption avec inflammation et gonflement (dermatite allergique de contact),</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>boutons bruns brillants remplis de gel (<i>colloïd milium</i>),</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>éclaircissement de la peau (dépigmentation),</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>inflammation ou dilatation de la racine des poils (folliculite).</span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Les effets indésirables moins graves provoqués par le calcipotriol incluent notamment les suivants :</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>sécheresse de la peau,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>sensibilité de la peau à la lumière avec comme conséquence une éruption a aussi été rapportée,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>eczéma,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>démangeaisons,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>irritation de la peau,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>sensation de brûlure et de picotement,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>rougeur de la peau due à la dilatation des petits vaisseaux sanguins (érythème),</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>éruption cutanée,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>éruption cutanée avec inflammation de la peau (dermatite),</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>aggravation d’un psoriasis.</span></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt;page-break-after:avoid'><u>Déclaration des effets secondaires</u></p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr</a></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_CALCIPOTRIOL/BETAMETHASONE_SANDOZ_50_microgrammes/0,5_mg/g,_pommade_?'>5. COMMENT CONSERVER CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte>Tenir ce médicament hors de la vue et de la portée des enfants.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas ce médicament après la date de péremption indiquée sur l’emballage et le tube après EXP. La date de péremption fait référence au dernier jour de ce mois.</span></p>
+<p class=AmmCorpsTexte><a name="_Toc142279025"><span lang=FR-BE>A conserver à une température ne dépassant pas 25°C.</span><span lang=FR-BE> </span></a><span lang=FR-BE>Ne pas mettre au réfrigérateur et ne pas congeler.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Le tube doit être jeté 1 an après la première ouverture. Ecrivez la date à laquelle vous ouvrez le tube dans l'espace prévu sur la boîte.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout ni avec les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/ 0,5 mg/g, pommade</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les substances actives sont : calcipotriol et bétaméthasone.</p>
+<p class=AmmComposition style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:18.0pt'>Un gramme de pommade contient 50 microgrammes de calcipotriol (sous forme de monohydrate) et 0,5 mg de bétaméthasone (sous forme de dipropionate).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont : </p>
+<p class=AmmComposition style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:18.0pt'>Tout-rac-&#945;-tocophérol (E307), alcool oléique, paraffine liquide légère, paraffine molle blanche.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/ 0,5 mg/g, pommade et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>CALCIPOTRIOL/BETAMETHASONE SANDOZ 50 microgrammes/0,5 mg/g, pommade est une pommade de couleur blanc cassé. La pommade est contenue dans un tube en aluminium/époxy-phénols avec un bouchon à vis en polyéthylène ou polypropylène.</p>
+<p class=AmmCorpsTexte>Présentations :</p>
+<p class=AmmCorpsTexte>Tubes contenant 15 g, 30 g, 60 g, et 120 g de pommade.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>SANDOZ</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>49 AVENUE GEORGES POMPIDOU</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>92300 LEVALLOIS-PERRET </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>SANDOZ</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>9 PLACE MARIE-JEANNE BASSOT</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>92300 LEVALLOIS-PERRET </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>LEK PHARMACEUTICALS D.D</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>VEROVSKOVA ULICA 57</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>1526 LJUBLJANA</p>
+<p class=AmmCorpsTexte>SLOVENIE</p>
+<p class=AmmCorpsTexte>Ou</p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>SALUTAS PHARMA GMBH</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE>BETRIEBSSTAETTE OSTERWEDDINGEN</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE>LANGE GOEHREN 3</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE>SUELZETAL, OT OSTERWEDDINGEN</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE>SACHSEN-ANHALT 39171</span></p>
+<p class=AmmCorpsTexte><span lang=DE>ALLEMAGNE</span></p>
+<p class=AmmCorpsTexte><span lang=DE>Ou</span></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=ES>SALUTAS PHARMA GMBH</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=ES>OTTO-VON-GUERICKE-ALLEE 1</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=IT>39179 BARLEBEN</span></p>
+<p class=AmmCorpsTexte><span lang=IT>ALLEMAGNE</span></p>
+<p class=AmmCorpsTexte><span lang=ES>OU</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><b><span lang=ES>EURODEP PHARMA</span></b></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=ES>10 RUE ANTOINE DE SAINT EXUPERY</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=ES>ZAC DU PARC DE COMPANS</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=ES>77290 MITRY MORY</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=ES>FRANCE</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexteGras>Ce médicament est autorisé dans les Etats membres de l'Espace Economique Européen sous les noms suivants : Conformément à la réglementation en vigueur.</p>
+<p class=AmmCorpsTexte>[À compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

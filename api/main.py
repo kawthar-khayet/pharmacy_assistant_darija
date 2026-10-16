@@ -15,9 +15,13 @@ reponse avec ces fiches seulement (voir nlp/moteur.py).
 Lancer :  py -m uvicorn api.main:app --reload --port 8000
 Docs :    http://localhost:8000/docs
 """
+import logging
+import os
 import re
+import threading
 import uuid
 from collections import OrderedDict
+from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
@@ -32,12 +36,42 @@ from nlp.moteur import IndexAbsent, Session, repondre
 from nlp.outils.garde import garde_du_jour
 from nlp.outils.pharmacies import plus_proches, type_ouverture
 from nlp.outils.resolution import matcher
+from nlp.rag.index import collection, vecteur_question
 from nlp.reponse.langues import LANGUE_PAR_DEFAUT
+
+# « Pret » par defaut : sans demarrage d'uvicorn (tests), il n'y a rien a attendre.
+# Au demarrage de l'API, il repasse a « pas pret » le temps de _precharger.
+PRET = threading.Event()
+PRET.set()
+
+
+def _precharger():
+    """Charge torch, e5, l'index et les tables des le demarrage, en arriere-plan.
+    Sans ca, c'est la 1re question qui attend (1 a 2 min apres un reveil sur Azure)."""
+    try:
+        vecteur_question("doliprane")   # importe torch et charge e5
+        collection().count()            # ouvre l'index ChromaDB
+        matcher()
+        charger_pharmacies()
+    except Exception:
+        # index absent, etc. : /chat le dira lui-meme, on ne bloque pas l'API
+        logging.exception("prechargement incomplet")
+    finally:
+        PRET.set()
+
+
+@asynccontextmanager
+async def demarrage(app):
+    PRET.clear()
+    threading.Thread(target=_precharger, daemon=True).start()
+    yield
+
 
 app = FastAPI(
     title="DwaTalk API",
     description="Assistant pharmacie en darija, arabe et francais : RAG sur les bases marocaines",
     version="1.0.0",
+    lifespan=demarrage,
 )
 
 # Le front de developpement tourne sur sa propre origine. Listees une par une
@@ -45,6 +79,8 @@ app = FastAPI(
 FRONTEND_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
+    # URL(s) du frontend deploye (Vercel), separees par des virgules
+    *[o.strip() for o in os.getenv("FRONTEND_ORIGINS", "").split(",") if o.strip()],
 ]
 
 app.add_middleware(
@@ -134,8 +170,20 @@ def health():
     return {"status": "ok"}
 
 
+@app.get("/pret")
+def pret():
+    """200 une fois les modeles charges : le site l'interroge pour savoir quand
+    cacher le bandeau « le serveur demarre »."""
+    if not PRET.is_set():
+        raise HTTPException(status_code=503, detail="Chargement des modeles en cours.")
+    return {"status": "pret"}
+
+
 @app.post("/chat", response_model=ChatResponse)
 def chat(req: ChatRequest):
+    # Une question arrivee pendant le chargement l'attend, au lieu de charger
+    # les modeles une 2e fois en parallele (2 Go de RAM sur Azure)
+    PRET.wait(timeout=180)
     text = req.text.strip()
     if not text:
         raise HTTPException(status_code=400, detail="Le champ 'text' est vide.")

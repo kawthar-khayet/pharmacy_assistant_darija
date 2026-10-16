@@ -1,0 +1,1798 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="QOzL618OTRvyjyDuFjvYfg==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="QOzL618OTRvyjyDuFjvYfg==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 29/09/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion"
+            aria-level="3"
+          >
+            DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                      </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 04/08/2014
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0414130">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte><a name="_Toc142279004">Classe pharmacothérapeutique </a>AUTRES AGENTS ALKYLANTS - code ATC : L01AX04</p>
+<p class=AmmCorpsTexte>Le nom complet de votre médicament est DACARBAZINE MEDAC. Dans cette notice, le nom plus court «dacarbazine » est utilisé. Il appartient à une famille de médicaments appelés « médicaments cytotoxiques », souvent désignés sous le nom de chimiothérapie. Le traitement par la dacarbazine doit être administré exclusivement par des médecins spécialisés dans le traitement du cancer (oncologues) ou des problèmes sanguins (hématologues).</p>
+<p class=AmmCorpsTexte>La dacarbazine est utilisée pour traiter un type de cancer de la peau appelé « mélanome malin métastatique ». Il s'agit d'un type de cancer de la peau qui s'est propagé à une autre partie de votre corps.</p>
+<p class=AmmCorpsTexte>La dacarbazine est également utilisée avec d'autres médicaments en cas de :</p>
+<p class=AmmListePuces1 style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Cancer d'une partie de votre système immunitaire appelée le « système lymphatique ». Ce type de cancer est souvent appelé « maladie de Hodgkin ».</span></p>
+<p class=AmmListePuces1 style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Sarcome des tissus mous chez l'adulte. Les sarcomes des tissus mous sont des tumeurs malignes qui prennent naissance dans les tissus mous de l'organisme. Les tumeurs peuvent être présentes à divers endroits, par exemple autour des nerfs, des muscles ou des vaisseaux sanguins.</span></p>
+<p class=AmmCorpsTexte>La dacarbazine contribue à empêcher vos cellules cancéreuses de croître et de se multiplier.</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament n'appartient à aucun groupe générique</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Poudre ( Composition pour un flacon )<ul role="list"><li role="listitem" style="list-style-type: none;">dacarbazine<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span><span class="italique">100 mg </span><ul role="list" style="list-style-type: none;"><li class="sousFormeDe" role="listitem"><i class="fa fa-plus-square" aria-hidden="true"></i> sous forme de : citrate de dacarbazine</li></ul></li></ul></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > 10 flacon(s) en verre brun  </p><p>Code CIP : 586 983-7 ou 34009 586 983 7 8<br/>Déclaration de commercialisation : 30/10/2014<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p>Prix libre, médicament non remboursable ( <a href='/aide#que-signifie-la-notion-de-prix-libre-un-medicament-non-rembourse'>cliquez ici pour en savoir plus sur les médicaments non remboursables</a> )</div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><div class='fr-grid-row'><div class='fr-col'><p>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence. </p></div></div><div class='fr-grid-row'><div class='fr-col'><p>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprès de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-smr-aide-2'>plus d'informations dans l'aide</a>). Les avis et synthèses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-smr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection à la page d'aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'SMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur du SMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td>Insuffisant</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2769375'>Avis du 03/05/2017</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 03/05/2017 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Réévaluation SMR et ASMR</td><td class='text-align-center'>Le service médical rendu par DACARBAZINE MEDAC dans la prise en charge du mélanome au stade avancé est insuffisant pour une prise en charge par la solidarité nationale dans les autres situations, notamment en première ligne de traitement. ;</td></tr><tr><td>Modéré</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2769375'>Avis du 03/05/2017</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 03/05/2017 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Réévaluation SMR et ASMR</td><td class='text-align-center'>Le service médical rendu par DACARBAZINE MEDAC dans la prise en charge du mélanome au stade avancé est modéré en traitement de recours après échappement des immunothérapies et/ou thérapies dites ciblées selon le statut B-RAF (cf. paragraphe 05.4 Stratégie thérapeutique), ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_1774129'>Avis du 22/10/2014</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 22/10/2014 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Inscription (CT)</td><td class='text-align-center'>Le service médical rendu par les spécialités Dacarbazine medac 100 et 500 mg reste important dans les indications de l’AMM suivantes : <br>•Maladie de Hodgkin,<br>•Sarcomes des tissus mous de l’adulte. ;</td></tr></tbody></table></div></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence.</p></div></div><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprés de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-asmr-aide-3'>plus d'informations dans l'aide</a>). Les avis et synthéses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-asmr-aide-3' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers la page aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'ASMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur de l'ASMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td class="text-align-center">V (Inexistant)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/c_2769375'>Avis du 03/05/2017</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 03/05/2017 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Réévaluation SMR et ASMR</td><td class="text-align-center">Au regard de l’évolution de la stratégie thérapeutique et en l’absence de donnée clinique en cas d’échappement des immunothérapies et/ou des thérapies dites ciblées selon le statut B-RAF, la Commission considère que la spécialité DACARBAZINE MEDAC (dacarbazine) n’apporte pas d’amélioration du service médical rendu (ASMR V) dans la prise en charge du mélanome au stade avancé.</td></tr><tr><td class="text-align-center">V (Inexistant)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/c_1774129'>Avis du 22/10/2014</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 22/10/2014 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Inscription (CT)</td><td class="text-align-center">Ces spécialités n’apportent pas d’amélioration du service médical rendu (ASMR V, inexistante) par rapport aux autres présentations déjà inscrites.</td></tr></tbody></table></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : MEDAC GESELLSCHAFT FUR KLINISCHE SPEZIALPRAPARATE MBH</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li><li>médicament nécessitant une surveillance particulière pendant le traitement</li><li>prescription hospitalière</li><li>prescription réservée aux médecins compétents en CANCEROLOGIE</li><li>prescription réservée aux spécialistes et services HEMATOLOGIE</li><li>prescription réservée aux spécialistes et services ONCOLOGIE MEDICALE</li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure nationale</li><li>Code CIS : &nbsp;6 965 672 2</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 09/01/2024</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras><a name="_Toc142278913">DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Chaque flacon contient 100 mg de dacarbazine (sous forme de citrate de dacarbazine).</p>
+<p class=AmmCorpsTexte>1 ml de de solution reconstituée contient 10 mg de dacarbazine.</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Poudre pour solution injectable ou perfusion.</a></p>
+<p class=AmmCorpsTexte>Poudre blanche ou jaune pâle.</p>
+<p class=AmmCorpsTexte>pH = 3,0 - 4,0.</p>
+<p class=AmmCorpsTexte>Osmolarité = env. 100 mOsmol/kg.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">DACARBAZINE MEDAC est indiqué pour le traitement de patients atteints de mélanome malin métastatique.</a></p>
+<p class=AmmCorpsTexte>Les autres indications de la dacarbazine dans le cadre d'une polychimiothérapie sont :</p>
+<p class=AmmListePuces1 style='margin-left:18.0pt;text-indent:-18.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Maladie de Hodgkin.</p>
+<p class=AmmListePuces1 style='margin-left:18.0pt;text-indent:-18.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Sarcomes des tissus mous de l'adulte.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmAnnexeTitre3 style='margin-top:0cm'><a name="_Toc142278918">Posologie</a></p>
+<p class=AmmCorpsTexte>L'utilisation de DACARBAZINE MEDAC doit être réservée aux médecins expérimentés en oncologie ou hématologie.</p>
+<p class=AmmCorpsTexte>L'absorption d'aliments avant l'administration de la dacarbazine doit être évitée afin de limiter la sévérité des nausées et vomissements. Les excréta et vomissures doivent être manipulés avec précaution.</p>
+<p class=AmmCorpsTexte>Les posologies suivantes pourront être utilisées. Pour plus de précisions, voir les publications scientifiques actuelles.</p>
+<p class=AmmCorpsTexte><i><u>Mélanome malin</u></i></p>
+<p class=AmmCorpsTexte>La dacarbazine peut être utilisée en monothérapie aux doses de 200 à 250 mg/m<sup>2</sup> de surface corporelle/jour en injection IV pendant 5 jours toutes les 3 semaines. La dacarbazine peut être administrée en perfusion courte de 30 minutes à 1 heure.</p>
+<p class=AmmCorpsTexte>Il est également possible d'administrer 1000 mg/m<sup>2</sup> de surface corporelle à J1 puis une fois toutes les 3 semaines en perfusion intraveineuse.</p>
+<p class=AmmCorpsTexte><i><u>Maladie de Hodgkin</u></i></p>
+<p class=AmmCorpsTexte>La dacarbazine doit être administrée en IV à la dose quotidienne de 375 mg/m<sup>2</sup> de surface corporelle tous les 15 jours en association avec la doxorubicine, la bléomycine et la vinblastine (traitement ABVD).</p>
+<p class=AmmCorpsTexte><i><u>Sarcome des tissus mous</u></i></p>
+<p class=AmmCorpsTexte>Pour les sarcomes des tissus mous de l'adulte, la dacarbazine doit être administrée en IV à des doses quotidiennes de 250 mg/m<sup>2</sup> de surface corporelle (Jours 1-5) en association avec la doxorubicine toutes les 3 semaines (traitement ADIC).</p>
+<p class=AmmCorpsTexte>Pendant le traitement par la dacarbazine, les numérations sanguines, ainsi que les fonctions hépatique et rénale, doivent faire l'objet de fréquents contrôles. Les réactions gastro intestinales sévères étant fréquentes, il est conseillé de recourir à des anti émétiques et des mesures de prise en charge symptomatique.</p>
+<p class=AmmCorpsTexte>Des troubles gastro intestinaux et hématologiques sévères étant possibles, une évaluation extrêmement minutieuse du rapport bénéfice/risque s'impose avant chaque traitement par DACARBAZINE MEDAC.</p>
+<p class=AmmCorpsTexte><i>Durée du traitement</i></p>
+<p class=AmmCorpsTexte>Le médecin traitant devra décider de la durée du traitement individuel de chaque patient en tenant compte du type et du stade de la maladie sous-jacente, de la multithérapie administrée, de la réponse à la dacarbazine et de ses effets indésirables.</p>
+<p class=AmmCorpsTexte>Dans le traitement de la maladie de Hodgkin avancée, il est habituellement recommandé d'administrer 6 cycles de multithérapie ABVD.</p>
+<p class=AmmCorpsTexte>Dans le traitement du mélanome malin métastatique et du sarcome des tissus mous avancé, la durée du traitement dépend de l'efficacité et de la tolérance observées chez chaque patient.</p>
+<p class=AmmCorpsTexte><i><u>Insuffisance rénale ou hépatique</u></i></p>
+<p class=AmmCorpsTexte>En présence d'une insuffisance rénale ou hépatique légère à modérée isolée, il n'est habituellement pas nécessaire de réduire la dose. Chez les patients atteints d'insuffisances rénale et hépatique combinées, l'élimination de la dacarbazine est plus lente. Cependant, aucune recommandation validée concernant la réduction de la dose ne peut actuellement être fournie.</p>
+<p class=AmmCorpsTexte><i><u>Personnes âgées</u></i></p>
+<p class=AmmCorpsTexte>L'expérience chez les patients âgés étant limitée, aucune instruction particulière ne peut être fournie concernant l'utilisation de la dacarbazine dans cette population.</p>
+<p class=AmmCorpsTexte><i><u>Population pédiatrique</u></i></p>
+<p class=AmmCorpsTexte>Aucune recommandation particulière ne peut être fournie concernant l'utilisation de la dacarbazine dans la population pédiatrique tant que des données supplémentaires ne sont pas disponibles.</p>
+<p class=AmmAnnexeTitre3 style='margin-top:0cm'>Mode d’administration</p>
+<p class=AmmCorpsTexte><a name="_Hlk127979755"><i>Précautions à prendre avant la manipulation ou l’administration du médicament</i></a></p>
+<p class=AmmCorpsTexte>La dacarbazine est sensible à la lumière. Toutes les solutions reconstituées doivent être convenablement protégées de la lumière, y compris pendant l'administration (kit de perfusion opaque).</p>
+<p class=AmmCorpsTexte>L'administration de l'injection doit être effectuée avec précaution afin d'éviter toute extravasation dans les tissus car celle-ci entraînerait des douleurs localisées et des dommages tissulaires. En cas d'extravasation, l'injection doit être immédiatement interrompue et le reste de la dose doit être introduit dans une autre veine.</p>
+<p class=AmmCorpsTexte><a name="_Hlk127979772">Pour les instructions concernant la préparation et la reconstitution du médicament avant administration, voir la rubrique 6.6.</a></p>
+<p class=AmmCorpsTexte><a name="_Hlk127979783"><i>Débit d’administration</i></a></p>
+<p class=AmmCorpsTexte>Les doses allant jusqu'à 200 mg/m<sup>2</sup> peuvent être administrées en injection intraveineuse lente de 30 minutes à 1 heure. Les doses supérieures (comprises entre 200 et 1000 mg/m<sup>2</sup>) doivent être administrées en perfusion intraveineuse sur 2 à 3 heures.</p>
+<p class=AmmCorpsTexte>Il est recommandé de tester d'abord la perméabilité de la veine à l'aide de 5 à 10 ml de solution isotonique pour perfusion à base de chlorure de sodium ou de glucose à 5 %. La même solution devra être utilisée après la perfusion pour purger les résidus de médicament dans la tubulure.</p>
+<p class=AmmCorpsTexte>Après reconstitution à l'aide d'eau pour préparations injectables et sans aucune dilution supplémentaire à l'aide d'une solution<a name="_Hlk127981252"> pour perfusion</a> isotonique de chlorure de sodium ou de glucose à 5 %, les préparations de DACARBAZINE MEDAC sont hypo-osmolaires (env. 100 mOsmol/kg) et doivent donc être administrées en injection intraveineuse lente de 30 minutes à 1 heure, et non par injection IV en bolus sur quelques secondes.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278919">DACARBAZINE MEDAC est contre indiqué dans les cas suivants:</a></p>
+<p class=AmmListePuces1 style='margin-left:18.0pt;text-indent:-18.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypersensibilité à la dacarbazine ou à l’un des excipients mentionnés à la rubrique 6.1.</p>
+<p class=AmmListePuces1 style='margin-left:18.0pt;text-indent:-18.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Grossesse ou allaitement.</p>
+<p class=AmmListePuces1 style='margin-left:18.0pt;text-indent:-18.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Leucopénie et/ou thrombocytopénie,</p>
+<p class=AmmListePuces1 style='margin-left:18.0pt;text-indent:-18.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Affection hépatique ou rénale sévère.</p>
+<p class=AmmListePuces1 style='margin-left:18.0pt;text-indent:-18.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En association avec le vaccin contre la fièvre jaune (<a href="http://afssaps-prd.afssaps.fr/php/ecodex/rcp/R0170781.htm#Rcp_4_5_Interactions_4"><span style='color:windowtext;text-decoration:none'>voir rubrique 4.5</span></a>).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278920">Il est recommandé que la dacarbazine soit administrée exclusivement sous la surveillance d'un médecin spécialisé en oncologie et disposant de l'infrastructure nécessaire à la surveillance régulière des effets cliniques, biochimiques et hématologiques pendant et après le traitement.</a></p>
+<p class=AmmCorpsTexte>Si les symptômes d'un dysfonctionnement hépatique ou rénal ou d'une réaction d'hypersensibilité sont observés, le traitement doit être immédiatement interrompu.</p>
+<p class=AmmCorpsTexte>Si une maladie veino-occlusive du foie survient, la poursuite du traitement par la dacarbazine est contre indiquée.</p>
+<p class=AmmCorpsTexte>Remarque: Le médecin en charge doit être conscient, pendant le traitement, de la possibilité de survenue d'une complication sévère et rare de type nécrose hépatique consécutive à une occlusion des veines intrahépatiques. Le contrôle régulier de la taille du foie, de la fonction hépatique et des numérations sanguines (en particulier les éosinophiles) revêt une importance particulière. Dans des cas spécifiques de suspicion de maladie veino-occlusive, un traitement rapide par corticostéroïdes à forte dose (par exemple, hydrocortisone 300 mg/jour), avec ou sans substances fibrinolytiques comme l'héparine ou l'activateur tissulaire du plasminogène, s'est avéré efficace (<a href="http://afssaps-prd.afssaps.fr/php/ecodex/rcp/R0170781.htm#Rcp_4_8_EffetsIndesirables_5"><span style='color:windowtext;text-decoration:none'>voir également rubrique 4.8</span></a>).</p>
+<p class=AmmCorpsTexte>Le traitement à long terme peut engendrer une toxicité cumulative pour la moelle osseuse. Le risque de myélosuppression impose une surveillance attentive des érythrocytes, leucocytes et plaquettes. L'apparition d'une toxicité hématopoïétique peut justifier l'arrêt provisoire ou définitif du traitement.</p>
+<p class=AmmCorpsTexte>L'extravasation du médicament peut entraîner des dommages tissulaires et des douleurs sévères.</p>
+<p class=AmmCorpsTexte>L'utilisation concomitante de phénytoïne doit être évitée en raison du risque d'exacerbation des convulsions résultant de la diminution de l'absorption digestive de la phénytoïne (<a href="http://afssaps-prd.afssaps.fr/php/ecodex/rcp/R0170781.htm#Rcp_4_5_Interactions_4"><span style='color:windowtext;text-decoration:none'>voir rubrique 4.5</span></a>).</p>
+<p class=AmmCorpsTexteGras><u>Effets immunosuppresseurs/sensibilité accrue aux infections</u></p>
+<p class=AmmCorpsTexte>La dacarbazine est un agent modérément immunosuppresseur. L'administration de vaccins à virus vivants (vivants atténués) chez des patients immunodéprimés par des agents chimiothérapeutiques, dont la dacarbazine, peut entraîner des infections graves voire fatales. Toute vaccination par un vaccin à virus vivant doit être évitée chez les patients recevant de la dacarbazine. Des vaccins inactivés pourront être utilisés à la place lorsqu'ils existent.</p>
+<p class=AmmCorpsTexte>Les drogues hépatotoxiques et l'alcool sont contre indiqués pendant la chimiothérapie.</p>
+<p class=AmmCorpsTexte><a name="_Hlk127979927"><b><u>Femmes en âge de procréer/contraception chez les hommes et les femmes</u></b></a></p>
+<p class=AmmCorpsTexte><a name="_Hlk143508902">En raison du potentiel génotoxique de la dacarbazine (voir rubrique 5.3), les femmes en âge de procréer doivent utiliser des mesures contraceptives efficaces pendant le traitement par DACARBAZINE MEDAC et jusqu’à 6 mois après la fin du traitement. Il est recommandé aux hommes d’utiliser des mesures contraceptives efficaces et de ne pas concevoir d’enfant pendant le traitement par DACARBAZINE MEDAC et jusqu’à 3 mois après la fin du traitement.</a></p>
+<p class=AmmCorpsTexte>Les patientes qui envisagent grossesse devront consulter un spécialiste en conseil génétique après la période d’utilisation du contraceptif (voir rubrique 4.6).</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Aucune recommandation particulière ne peut être fournie concernant l'utilisation de la dacarbazine chez l'enfant tant que des données supplémentaires ne sont pas disponibles.</p>
+<p class=AmmCorpsTexteGras><u>Manipulation de la dacarbazine</u></p>
+<p class=AmmCorpsTexte>La dacarbazine doit être manipulée conformément aux procédures standards relatives aux agents cytostatiques ayant des effets mutagènes, cancérogènes et tératogènes.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278928"></a><a name="_Toc142278926"></a><a name="_Toc142278925">L'utilisation concomitante d'un vaccin contre la fièvre jaune est contre indiquée en raison de maladie vaccinale généralisée mortelle (</a><a href="http://afssaps-prd.afssaps.fr/php/ecodex/rcp/R0170781.htm#Rcp_4_3_ContreIndic_2"><span style='color:windowtext;text-decoration:none'>voir rubrique 4.3</span></a>).</p>
+<p class=AmmCorpsTexte>En raison du risque majoré de thrombose en cas de maladie tumorale, le recours à un traitement anticoagulant est fréquent. La grande variabilité intra-individuelle de la coagulabilité au cours de ces affections à laquelle s'ajoute la possibilité d'une interaction entre les anticoagulants oraux et la chimiothérapie anticancéreuse imposent d'augmenter la fréquence des contrôles de l'INR, s'il est décidé de traiter le patient par des anticoagulants oraux.</p>
+<p class=AmmCorpsTexte>L'utilisation concomitante de phénytoïne doit être évitée en raison du risque d'exacerbation des convulsions résultant de la diminution de l'absorption digestive de la phénytoïne (<a href="http://afssaps-prd.afssaps.fr/php/ecodex/rcp/R0170781.htm#Rcp_4_4_MisesEnGarde_3"><span style='color:windowtext;text-decoration:none'>voir rubrique 4.4</span></a>).</p>
+<p class=AmmCorpsTexte>L'utilisation concomitante de vaccins à virus vivants atténués doit être évitée car il existe un risque de maladie vaccinale généralisée éventuellement mortelle. Ce risque est accru chez les sujets qui sont déjà immunodéprimés par leur maladie sous-jacente. Il est recommandé d'utiliser un vaccin inactivé lorsqu'il en existe une poliomyélite (<a href="http://afssaps-prd.afssaps.fr/php/ecodex/rcp/R0170781.htm#Rcp_4_4_MisesEnGarde_3"><span style='color:windowtext;text-decoration:none'>voir également rubrique 4.4</span></a>).</p>
+<p class=AmmCorpsTexte>L'utilisation concomitante de ciclosporine (et par extrapolation de tacrolimus) doit être envisagée avec prudence car l'utilisation de ces agents entraîne une immunosuppression excessive avec risque de lymphoprolifération.</p>
+<p class=AmmCorpsTexte>L'utilisation concomitante de fotémustine peut engendrer une toxicité pulmonaire aiguë (syndrome de détresse respiratoire de l'adulte). La fotémustine et la dacarbazine ne doivent pas être utilisées simultanément. La dacarbazine doit être administrée plus d'une semaine après l'administration de fotémustine.</p>
+<p class=AmmCorpsTexte>En cas de traitement antérieur ou concomitant ayant des effets indésirables sur la moelle osseuse (agents cytostatiques ou irradiation, en particulier), des interactions myélotoxiques sont possibles.</p>
+<p class=AmmCorpsTexte>Aucune étude n'a été menée pour déterminer un possible métabolisme phénotypique. L'hydroxylation de la substance mère formant des métabolites ayant une activité anti tumorale a été identifiée.</p>
+<p class=AmmCorpsTexte>La dacarbazine est métabolisée par le cytochrome P450 (CYP1A1, CYP1A2 et CYP2E1). Ceci doit être pris en compte en cas d'administration concomitante d'autres médicaments métabolisés par les mêmes enzymes hépatiques.</p>
+<p class=AmmCorpsTexte>La dacarbazine peut amplifier les effets du méthoxypsoralène en raison de la photosensibilisation.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3 style='margin-top:0cm'>Grossesse</p>
+<p class=AmmCorpsTexte>Le potentiel mutagène, tératogène et cancérogène de la dacarbazine a été démontré chez l'animal. Il convient donc de considérer qu'il existe un risque accru d'effets tératogènes chez l'être humain. Pour cette raison, la dacarbazine ne doit pas être utilisée pendant la grossesse et l'allaitement (<a href="http://afssaps-prd.afssaps.fr/php/ecodex/rcp/R0170781.htm#Rcp_4_3_ContreIndic_2"><span style='color:windowtext;text-decoration:none'>voir également rubriques 4.3</span></a> et <a href="http://afssaps-prd.afssaps.fr/php/ecodex/rcp/R0170781.htm#Rcp_4_4_MisesEnGarde_3"><span style='color:windowtext;text-decoration:none'>4.4</span></a>). <a name="_Hlk127979988">On ignore si la dacarbazine franchit la barrière placentaire et passe dans le lait maternel.</a></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b><u>Femmes en âge de procréer/contraception chez les hommes et les femmes</u></b></p>
+<p class=AmmCorpsTexte align=left style='text-align:left'>En raison du potentiel génotoxique de la dacarbazine (voir rubrique 5.3), les femmes en âge de procréer doivent utiliser des mesures contraceptives efficaces pendant le traitement par DACARBAZINE MEDAC et jusqu’à 6 mois après la fin du traitement. Il est recommandé aux hommes d’utiliser des mesures contraceptives efficaces et de ne pas concevoir d’enfant pendant le traitement par DACARBAZINE MEDAC et jusqu’à 3 mois après la fin du traitement.</p>
+<p class=AmmAnnexeTitre3>Allaitement</p>
+<p class=AmmCorpsTexteGras><a name="_Hlk127980015">DACARBAZINE MEDAC est contre-indiqué pendant l’allaitement (voir rubrique 4.3). </a><a name="_Hlk127980027"><u>Fertilité</u></a></p>
+<p class=AmmCorpsTexte><a name="_Hlk127980036">En raison du potentiel génotoxique de la dacarbazine, il est conseillé aux patients de demander conseil au sujet des options de préservation de la fertilité avant de commencer le traitement par la dacarbazine. Après le traitement par la dacarbazine, il est conseillé aux patientes planifiant une grossesse de consulter un spécialiste en conseil génétique.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929">La dacarbazine peut influer sur l'aptitude à conduire des véhicules ou à utiliser des machines en raison de ses effets secondaires sur le système nerveux central, ainsi que des nausées et vomissements.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmCorpsTexteGras><u>Fréquence:</u></p>
+<p class=AmmCorpsTexte>Très fréquent (&#8805; 1/10)</p>
+<p class=AmmCorpsTexte>Fréquent (&#8805; 1/100,,à < 1/10)</p>
+<p class=AmmCorpsTexte>Peu fréquent (&#8805; 1/1 000, < 1/100)</p>
+<p class=AmmCorpsTexte>Rare (&#8805; 1/10 000, < 1/1 000)</p>
+<p class=AmmCorpsTexte>Très rare (&#8805; 1/10 000)</p>
+<p class=AmmCorpsTexte>Fréquence indéterminée (ne peut être estimée sur la base des données disponibles).</p>
+<div class='fr-table--lg fr-table'><table>
+<thead>
+<tr style='height:12.0pt'>
+<td width=273 valign=top style='width:204.4pt;border:solid windowtext 1.0pt;
+border-bottom:none;padding:0cm 3.5pt 0cm 3.5pt;height:12.0pt'>
+<p class=AmmCorpsTexte>Infections et infestations</p>
+</td>
+<td width=336 valign=top style='width:251.8pt;border-top:solid windowtext 1.0pt;
+border-left:none;border-bottom:none;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt;height:12.0pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><u>Peu fréquent</u><br> Infections.</p>
+</td>
+<td width=1 style='width:.8pt;padding:0cm 0cm 0cm 0cm;height:12.0pt'>
+<p class=AmmCorpsTexte><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'> </span></p>
+</td>
+</tr>
+<tr style='height:12.0pt'>
+<td width=273 valign=top style='width:204.4pt;border:solid windowtext 1.0pt;
+border-bottom:none;padding:0cm 3.5pt 0cm 3.5pt;height:12.0pt'>
+<p class=AmmCorpsTexte>Affections hématologiques et du système lymphatique</p>
+</td>
+<td width=336 valign=top style='width:251.8pt;border-top:solid windowtext 1.0pt;
+border-left:none;border-bottom:none;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt;height:12.0pt'>
+<p class=AmmCorpsTexte><u>Fréquent</u><br> Anémie, leucopénie, thrombocytopénie, insuffisance médullaire.</p>
+</td>
+<td width=1 style='width:.8pt;padding:0cm 0cm 0cm 0cm;height:12.0pt'>
+<p class=AmmCorpsTexte><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=273 valign=top style='width:204.4pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte> </p>
+</td>
+<td width=336 valign=top style='width:251.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><u>Rare</u><br> Pancytopénie, agranulocytose.</p>
+</td>
+<td width=1 style='width:.8pt;padding:0cm 0cm 0cm 0cm'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=273 valign=top style='width:204.4pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte>Affections du système immunitaire</p>
+</td>
+<td width=336 valign=top style='width:251.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><u>Rare</u><br> Anaphylaxie, réactions d'hypersensibilité.</p>
+</td>
+<td width=1 style='width:.8pt;padding:0cm 0cm 0cm 0cm'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=273 valign=top style='width:204.4pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte>Affections psychiatriques</p>
+</td>
+<td width=336 valign=top style='width:251.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><u>Peu fréquent</u><br> Confusion.</p>
+</td>
+<td width=1 style='width:.8pt;padding:0cm 0cm 0cm 0cm'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=273 valign=top style='width:204.4pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte>Affections du système nerveux</p>
+</td>
+<td width=336 valign=top style='width:251.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><u>Rare</u><br> Céphalées, léthargie, convulsions, paresthésie faciale</p>
+</td>
+<td width=1 style='width:.8pt;padding:0cm 0cm 0cm 0cm'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=273 valign=top style='width:204.4pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte>Affections oculaires</p>
+</td>
+<td width=336 valign=top style='width:251.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><u>Peu fréquent</u><br> Vision trouble. <br> <u>Rare</u><br> Altération de la vision.</p>
+</td>
+<td width=1 style='width:.8pt;padding:0cm 0cm 0cm 0cm'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=273 valign=top style='width:204.4pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte>Affections vasculaires</p>
+</td>
+<td width=336 valign=top style='width:251.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><u>Peu fréquent</u><br> Bouffées vasomotrices faciales.</p>
+</td>
+<td width=1 style='width:.8pt;padding:0cm 0cm 0cm 0cm'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=273 valign=top style='width:204.4pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte>Affections gastro-intestinales</p>
+</td>
+<td width=336 valign=top style='width:251.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><u>Fréquent</u><br> Anorexie, nausées, vomissements. <br> <u>Rare</u><br> Diarrhées.</p>
+</td>
+<td width=1 style='width:.8pt;padding:0cm 0cm 0cm 0cm'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=273 rowspan=2 valign=top style='width:204.4pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte>Affections hépatobiliaires</p>
+</td>
+<td width=336 valign=top style='width:251.8pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><u>Peu fréquent</u></p>
+</td>
+<td width=1 style='width:.8pt;padding:0cm 0cm 0cm 0cm'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=336 valign=top style='width:251.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte>Elévation des transaminases (ASAT, ALAT), élévation de la phosphatase alcaline, élévation de la lacticodéshydrogénase (LDH). Hépatotoxicité, thrombose veineuse hépatique, nécrose hépatique, syndrôme de Budd-Chiari d'évolution potentiellement fatale.</p>
+</td>
+<td width=1 style='width:.8pt;padding:0cm 0cm 0cm 0cm'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=273 valign=top style='width:204.4pt;border-top:none;border-left:
+solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte>Affections de la peau et du tissu sous-cutané</p>
+</td>
+<td width=336 valign=top style='width:251.8pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><u>Peu fréquent</u><br> Alopécie, hyperpigmentation, photosensibilité, éruption cutanée transitoire.</p>
+</td>
+<td width=1 style='width:.8pt;padding:0cm 0cm 0cm 0cm'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=273 valign=top style='width:204.4pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte> </p>
+</td>
+<td width=336 valign=top style='width:251.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><u>Rare</u><br> Erythème, exanthème maculo-papuleux, urticaire.</p>
+</td>
+<td width=1 style='width:.8pt;padding:0cm 0cm 0cm 0cm'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=273 valign=top style='width:204.4pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte>Affections du rein et des voies urinaires</p>
+</td>
+<td width=336 valign=top style='width:251.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><u>Peu fréquent</u><br> Altération de la fonction rénale avec élévation de la créatinine sanguine et de l'urée sanguine.</p>
+</td>
+<td width=1 style='width:.8pt;padding:0cm 0cm 0cm 0cm'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=273 valign=top style='width:204.4pt;border-top:none;border-left:
+solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte>Troubles généraux et anomalies au site d'administration</p>
+</td>
+<td width=336 valign=top style='width:251.8pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><u>Peu fréquent</u><br> Symptômes pseudo-grippaux, malaise.</p>
+</td>
+<td width=1 style='width:.8pt;padding:0cm 0cm 0cm 0cm'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+</td>
+</tr>
+<tr>
+<td width=273 valign=top style='width:204.4pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte> </p>
+</td>
+<td width=336 valign=top style='width:251.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><u>Rare</u><br> Irritation au site d'injection.</p>
+</td>
+<td width=1 style='width:.8pt;padding:0cm 0cm 0cm 0cm'>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+</td>
+</tr>
+</thead>
+</table></div>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><a name="_Hlk127980183"><u>Description de certains effets indésirables particuliers</u></a></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Les troubles digestifs comme l'anorexie, les nausées et les vomissements sont fréquents et sévères. De rares cas de diarrhées ont été observés.</p>
+<p class=AmmCorpsTexte>Les modifications de la numération sanguine fréquemment observées (anémie, leucopénie, thrombocytopénie) sont fonction de la dose et différées, les nadirs n'étant souvent atteints qu'au bout de 3 à 4 semaines. De rares cas de pancytopénie et d'agranulocytose ont été décrits.</p>
+<p class=AmmCorpsTexte>Des symptômes pseudo grippaux avec épuisement, frissons, fièvre et douleurs musculaires sont occasionnellement observés pendant ou, souvent, quelques jours après l'administration de la dacarbazine. Ces troubles peuvent réapparaître lors de la perfusion suivante.</p>
+<p class=AmmCorpsTexte>Une élévation des enzymes hépatiques (transaminases (ASAT, ALAT), phosphatase alcaline, lacticodéshydrogénase (LDH), par ex.) a été observée de façon peu fréquente.</p>
+<p class=AmmCorpsTexte>Des cas peu fréquents de nécrose hépatique consécutive à une occlusion des veines intrahépatiques (maladie veino-occlusive) ont été observés suite à l'administration de dacarbazine en monothérapie ou dans le cadre d'une polychimiothérapie. Le syndrome est généralement apparu pendant le deuxième cycle de traitement. Les symptômes ont été notamment une fièvre, une éosinophilie, des douleurs abdominales, une augmentation du volume du foie, un ictère et un choc s'aggravant rapidement en quelques heures ou jours. Des évolutions fatales ayant été décrites, il est particulièrement important de contrôler fréquemment la taille du foie, la fonction hépatique et les numérations sanguines (les éosinophiles, en particulier) pendant le traitement. Dans des cas spécifiques de suspicion de maladie veino-occlusive, un traitement rapide par corticostéroïdes à forte dose (par exemple, hydrocortisone 300 mg/jour), avec ou sans agents fibrinolytiques comme l'héparine ou l'activateur tissulaire du plasminogène, s'est avéré efficace (<a href="http://afssaps-prd.afssaps.fr/php/ecodex/rcp/R0170781.htm#Rcp_4_2_PosoAdmin_1"><span style='color:windowtext;text-decoration:none'>voir également les rubriques 4.2</span></a> et <a href="http://afssaps-prd.afssaps.fr/php/ecodex/rcp/R0170781.htm#Rcp_4_4_MisesEnGarde_3"><span style='color:windowtext;text-decoration:none'>4.4</span></a>).</p>
+<p class=AmmCorpsTexte>On pense que les troubles localisés au niveau du site d'injection, comme les irritations veineuses, et certaines des réactions indésirables systémiques pourraient résulter de la formation de produits de photodégradation. Des douleurs localisées et une nécrose sont à prévoir en cas d'extravasation accidentelle.</p>
+<p class=AmmCorpsTexte>Les altérations de la fonction rénale avec élévation de la concentration sanguine des substances devant être excrétées dans les urines sont peu fréquentes.</p>
+<p class=AmmCorpsTexte>Des troubles du système nerveux central, tels que des céphalées, des troubles de la vision, un état de confusion, une léthargie et des convulsions, peuvent survenir dans de rares cas. Une paresthésie et des bouffées vasomotrices faciales peuvent se produire peu après l'injection.</p>
+<p class=AmmCorpsTexte>Des réactions cutanées allergiques de type érythème, exanthème maculo-papuleux ou urticaire sont observées dans de rares cas. Une alopécie, une hyperpigmentation et une photosensibilité cutanée peuvent survenir de façon peu fréquente. De rares cas de réactions anaphylactiques ont été décrits.</p>
+<p class=AmmAnnexeTitre3><span lang=FR-BE>Déclaration des effets indésirables suspectés</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. </span>Les professionnels de santé déclarent tout effet indésirable suspecté via <span lang=FR-BE>le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance –  Site internet : </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278931">En cas de surdosage, on peut s'attendre à une myélotoxicité sévère, pouvant aller jusqu'à l'aplasie médullaire, dont l'apparition peut prendre jusqu'à 2 semaines. Le délai avant obtention des nadirs pour les leucocytes et les thrombocytes peut atteindre 4 semaines. Même s'il n'y a que suspicion de surdosage, il est crucial d'assurer une étroite surveillance hématologique à long terme.</a></p>
+<p class=AmmCorpsTexte>Aucun antidote connu n'étant disponible, il convient de prêter une attention particulière à chaque administration afin d'éviter tout surdosage.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : </a>AUTRES AGENTS ALKYLANTS, code ATC : L01AX04</p>
+<p class=AmmCorpsTexte><a name="_Hlk127980241"><u>Mécanisme d’action</u></a></p>
+<p class=AmmCorpsTexte>La dacarbazine est un agent cytostatique. L'effet anti-néoplasique du médicament est dû à une inhibition de la croissance cellulaire indépendante du cycle cellulaire et à une inhibition de la synthèse de l'ADN. Un effet alkylant a également été démontré et la dacarbazine pourrait également influer sur d'autres mécanismes cytostatiques.</p>
+<p class=AmmCorpsTexte>On considère que la dacarbazine n'exerce aucun effet anti-néoplasique à elle seule. Cependant, elle est rapidement convertie, par N-déméthylation microsomale, en 5-amino-imidazole-4-carboxamide et un cation méthyle, responsable des effets alkylants.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278934"></a><a name="_Hlk127980259"><u>Distribution</u></a></p>
+<p class=AmmCorpsTexte>Après administration intraveineuse, la dacarbazine est rapidement distribuée depuis l'espace intravasculaire vers le tissu. Le médicament se lie aux protéines plasmatiques à hauteur de 5 %. La cinétique de la dacarbazine dans le plasma est bi-phasique: la demi-vie initiale (distribution) est de seulement 20 minutes; la demi-vie finale est de 0,5 à 3,5 heures.</p>
+<p class=AmmCorpsTexte>La dacarbazine franchit la barrière hémato encéphalique dans des proportions limitées; les concentrations observées dans le LCR représentent 14 % environ des concentrations plasmatiques.</p>
+<p class=AmmCorpsTexte><a name="_Hlk127980265"><u>Biotransformation</u></a></p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte>La dacarbazine est inactive jusqu'à sa métabolisation dans le foie par le cytochrome P450, aboutissant à la formation des molécules N-déméthylées réactives, HMMTIC et MTIC. Cette transformation est catalysée par le CYP1A1, le CYP1A2 et le CYP2E1. Le MTIC est à nouveau métabolisé pour former le 5-amino-imidazole-4-carboxamide (AIC).</p>
+<p class=AmmCorpsTexte><a name="_Hlk127980272"><u>Élimination</u></a></p>
+<p class=AmmCorpsTexte>La dacarbazine est métabolisée principalement dans le foie, par hydroxylation et par déméthylation. Environ 20 à 50 % du médicament sont excrétés sous forme inchangée par sécrétion tubulaire rénale.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278935">En raison de ses propriétés pharmacodynamiques, la dacarbazine présente des effets mutagènes, cancérogènes et tératogènes détectables par les systèmes de test expérimentaux.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937">Acide citrique anhydre.</a></p>
+<p class=AmmCorpsTexte>Mannitol.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">Il est à noter que la solution de dacarbazine est chimiquement incompatible avec l'héparine, l'hydrocortisone, la L-cystéine et le bicarbonate de sodium.</a></p>
+<p class=AmmCorpsTexte>Ce médicament ne doit pas être mélangé avec d'autres médicaments à l'exception de ceux <a href="http://afssaps-prd.afssaps.fr/php/ecodex/rcp/R0170781.htm#Rcp_6_6_UtilManipElim_8"><span style='color:windowtext;text-decoration:none'>mentionnés dans la rubrique 6.6.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte>3 ans.</p>
+<p class=AmmCorpsTexteGras><u>Durée de conservation de la solution reconstituée</u></p>
+<p class=AmmCorpsTexte>La stabilité physico-chimique de la solution reconstituée a été démontrée pendant 1 heure à 25°C, et 48 h à 2-8°C, à l'abri de la lumière.</p>
+<p class=AmmCorpsTexte>Toutefois d'un point de vue microbiologique, la solution reconstituée doit être utilisée immédiatement. En cas d’utilisation non immédiate, les durées et conditions de conservation après reconstitution et avant utilisation relèvent de la seule responsabilité de l’utilisateur et ne devraient pas dépasser 24 heures à une température comprise entre 2 et 8°C, sauf en cas de reconstitution réalisée en conditions d’asepsie dûment contrôlées et validées.</p>
+<p class=AmmCorpsTexteGras><u>Durée de conservation de la solution<a name="_Hlk127980297"> reconstituée et</a> diluée</u></p>
+<p class=AmmCorpsTexte>Il a été démontré que la solution reconstituée et diluée de Dacarbazine medac est stable pendant 24 heures à 2 –  8 °C à l'abri de la lumière dans un récipient en polyéthylène ainsi que dans des bouteilles en verre et pendant 2 heures à 25 °C dans un récipient en polyéthylène. D'un point de vue microbiologique, la solution diluée doit être utilisée immédiatement.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte>Avant reconstitution : A conserver à une température ne dépassant pas 25°C. Conserver dans l'emballage extérieur d'origine, à l'abri de la lumière.</p>
+<p class=AmmCorpsTexte>Après reconstitution : Conserver à l'abri de la lumière</p>
+<p class=AmmCorpsTexte>Pour les conditions de conservation du médicament après reconstitution/dilution, <a href="http://afssaps-prd.afssaps.fr/php/ecodex/rcp/R0170781.htm#Rcp_6_3_DureeConservation_7"><span style='color:windowtext;text-decoration:none'>voir la rubrique 6.3</span></a>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278942"></a><a name="_Toc142278941">Flacons unidose en verre brun (Type I, Ph. Eur.) fermés par des bouchons en caoutchouc.</a></p>
+<p class=AmmCorpsTexte>Boîtes de 1, 5 et 10 flacons.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexteGras><u>Recommandations pour une manipulation sûre</u></p>
+<p class=AmmCorpsTexte>La dacarbazine est un agent antinéoplasique. Avant de préparer la solution, il conviendra de consulter les directives locales concernant la manipulation des agents cytotoxiques.</p>
+<p class=AmmCorpsTexte>La dacarbazine doit être ouverte exclusivement par un personnel formé. Comme pour tout agent cytotoxique, des précautions doivent être prises pour éviter au personnel d'y être exposé. De façon générale, la manipulation des médicaments cytotoxiques doit être évitée pendant la grossesse. La solution à administrer doit être préparée dans un espace dédié à ces manipulations, en opérant au-dessus d'une surface lavable ou d'un papier absorbant jetable avec une face antérieure plastifiée.</p>
+<p class=AmmCorpsTexte>Il est recommandé de porter des lunettes de protection, des gants jetables, un masque et un tablier jetable adaptés. Les seringues et perfuseurs doivent être assemblés avec précaution afin d'éviter les fuites (l'utilisation de raccords Luer Lock est recommandée).</p>
+<p class=AmmCorpsTexte>Une fois les manipulations terminées, toutes les surfaces exposées doivent être soigneusement nettoyées et les utilisateurs doivent se laver les mains et le visage.</p>
+<p class=AmmCorpsTexte>En cas d'éclaboussure, les opérateurs doivent enfiler des gants, un masque, des lunettes de protection et un tablier jetable et essuyer la substance renversée à l'aide d'un matériau absorbant disposé dans l'espace de travail dans ce but. L'espace de travail doit ensuite être nettoyé et tous les matériaux contaminés doivent être transférés dans un sac à déchets cytotoxiques ou confinés pour être incinérés.</p>
+<p class=AmmCorpsTexteGras><u>Préparation et administration de la solution pour injection ou perfusion</u></p>
+<p class=AmmCorpsTexte>DACARBAZINE MEDAC 100 mg en poudre pour solution injectable ou perfusion doit être reconstitué à l'aide de 10 ml d'eau pour préparations injectables. Pour la préparation des solutions pour perfusion, la solution reconstituée doit être diluée dans des poches de 250 ml ou 500 ml de solution <a name="_Hlk127980342">pour perfusion</a> de glucose à 5 % ou de chlorure de sodium à 0,9 % (poche polyolefin). La solution obtenue dispose d’un pH de 3,0 –  4,0.</p>
+<p class=AmmCorpsTexte>Les solutions préparées par reconstitution ou par reconstitution et dilution doivent être limpides et dépourvues de particules visibles.</p>
+<p class=AmmCorpsTexte>Toutes les solutions préparées doivent être tenues à l'abri de la lumière; l'administration doit également être effectuée sans exposition à la lumière du soleil.</p>
+<p class=AmmCorpsTexteGras><u><span lang=FR-BE>Elimination</span></u></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Tout médicament non utilisé ou déchet doit être éliminé conformément à la réglementation en vigueur.</span></p>
+<p class=AmmCorpsTexte>A usage unique strict.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142278943"><span lang=DE style='text-transform:uppercase'>Medac Gesellschaft für klinische Spezialpräparate mbH</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>Theaterstr. 6</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>22880 Wedel</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>allemagne</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1 style='margin-left:18.0pt;text-indent:-18.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>586 981-4 ou 34009 586 981 4 9 : 100 mg de poudre en flacon (verre brun). Boîte de 1.</p>
+<p class=AmmListePuces1 style='margin-left:18.0pt;text-indent:-18.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>586 982-0 ou 34009 586 982 0 0 : 100 mg de poudre en flacon (verre brun). Boîte de 5.</p>
+<p class=AmmListePuces1 style='margin-left:18.0pt;text-indent:-18.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>586 983-7 ou 34009 586 983 7 8 : 100 mg de poudre en flacon (verre brun). Boîte de 10.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945"><span style='color:#538135'>[à compléter ultérieurement par le titulaire]</span></a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946"><span style='color:#538135'>[à compléter ultérieurement par le titulaire]</span></a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I </p>
+<p class=AmmCorpsTexte>Médicament soumis à prescription hospitalière. Prescription réservée aux spécialistes en oncologie ou en hématologie ou aux médecins compétents en cancérologie. Médicament nécessitant une surveillance particulière pendant le traitement.</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_DACARBAZINE_MEDAC_100_mg,_poudre_pour_solution_injectable_ou_perfusion_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_DACARBAZINE_MEDAC_100_mg,_poudre_pour_solution_injectable_ou_perfusion_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_UTILISER_DACARBAZINE_MEDAC_100_mg,_poudre_pour_solution_injectable_ou_perfusion_?"
+                     aria-label="3. COMMENT UTILISER DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion ? (Lien de redirection)">
+                    3. COMMENT UTILISER DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_DACARBAZINE_MEDAC_100_mg,_poudre_pour_solution_injectable_ou_perfusion_?"
+                     aria-label="5. COMMENT CONSERVER DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion ? (Lien de redirection)">
+                    5. COMMENT CONSERVER DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 09/01/2024</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'><a name="_Toc142278999">DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion</a></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Dacarbazine</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Veuillez lire attentivement cette notice avant d’utiliser ce médicament car elle contient des informations importantes pour vous.</span></p>
+<p class=AmmListePuces1 style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1 style='margin-left:18.0pt;text-align:justify; text-indent:-18.0pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin, votre pharmacien ou votre infirmier/ère.</span></p>
+<p class=AmmListePuces1 style='margin-left:18.0pt;text-align:justify; text-indent:-18.0pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin, votre pharmacien ou votre infirmier/ère. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que DACARBAZINE MEDAC et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant d'utiliser DACARBAZINE MEDAC <span style='text-transform:uppercase'>?</span></p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment utiliser DACARBAZINE MEDAC<span style='text-transform:uppercase'> ?</span></p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver DACARBAZINE MEDAC <span style='text-transform:uppercase'>?</span></p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>6. <span style='color:black'>Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_DACARBAZINE_MEDAC_100_mg,_poudre_pour_solution_injectable_ou_perfusion_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279004">Classe pharmacothérapeutique </a>AUTRES AGENTS ALKYLANTS - code ATC : L01AX04</p>
+<p class=AmmCorpsTexte>Le nom complet de votre médicament est DACARBAZINE MEDAC. Dans cette notice, le nom plus court «dacarbazine » est utilisé. Il appartient à une famille de médicaments appelés « médicaments cytotoxiques », souvent désignés sous le nom de chimiothérapie. Le traitement par la dacarbazine doit être administré exclusivement par des médecins spécialisés dans le traitement du cancer (oncologues) ou des problèmes sanguins (hématologues).</p>
+<p class=AmmCorpsTexte>La dacarbazine est utilisée pour traiter un type de cancer de la peau appelé « mélanome malin métastatique ». Il s'agit d'un type de cancer de la peau qui s'est propagé à une autre partie de votre corps.</p>
+<p class=AmmCorpsTexte>La dacarbazine est également utilisée avec d'autres médicaments en cas de :</p>
+<p class=AmmListePuces1 style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Cancer d'une partie de votre système immunitaire appelée le « système lymphatique ». Ce type de cancer est souvent appelé « maladie de Hodgkin ».</span></p>
+<p class=AmmListePuces1 style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Sarcome des tissus mous chez l'adulte. Les sarcomes des tissus mous sont des tumeurs malignes qui prennent naissance dans les tissus mous de l'organisme. Les tumeurs peuvent être présentes à divers endroits, par exemple autour des nerfs, des muscles ou des vaisseaux sanguins.</span></p>
+<p class=AmmCorpsTexte>La dacarbazine contribue à empêcher vos cellules cancéreuses de croître et de se multiplier.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_DACARBAZINE_MEDAC_100_mg,_poudre_pour_solution_injectable_ou_perfusion_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">N’utilisez jamais DACARBAZINE MEDAC</a></p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique à la dacarbazine ou à l’un des autres composants contenus dans ce médicament (mentionnés dans la rubrique 6).</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes enceinte ou vous allaitez votre enfant,</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez un faible nombre de globules blancs (leucopénie) ou un faible nombre de plaquettes (thrombocytopénie),</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes atteint d'une maladie grave de foie ou de reins,</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous recevez en association un vaccin contre la fièvre jaune.</p>
+<p class=AmmCorpsTexte>Vous ne devez pas recevoir de dacarbazine si vous êtes dans l'un des cas ci -dessus. Si vous avez un doute, parlez-en avec votre médecin, votre infirmier ou votre pharmacien avant de recevoir la dacarbazine.</p>
+<p class=AmmCorpsTexteGras>Avertissements et précautions</p>
+<p class=AmmCorpsTexteGras>Adressez-vous à votre médecin ou pharmacien avant de recevoir DACARBAZINE MEDAC</p>
+<p class=AmmCorpsTexte>Votre médecin devra s'assurer que la dacarbazine est correctement administrée afin d'éviter la détérioration des tissus et les douleurs. L'extravasation du médicament (injection de la solution dans les tissus entourant la veine) pourrait entraîner une détérioration des tissus et des douleurs sévères.</p>
+<p class=AmmCorpsTexte>Examens:</p>
+<p class=AmmCorpsTexte>Pendant votre traitement, les points suivants seront contrôlés :</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La taille de votre foie et son état de fonctionnement (grâce à des analyses de sang). Ceci vise à vérifier que les veines de votre foie ne sont pas obstruées. Si votre foie est affecté, le traitement sera arrêté.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Le nombre de globules rouges, de globules blancs et de plaquettes dans votre sang (grâce à des analyses de sang). Ceci vise à vérifier que votre moelle osseuse fonctionne correctement et joue son rôle dans la création des cellules sanguines. Si votre moelle osseuse est affectée, le traitement pourra être arrêté provisoirement ou définitivement.</p>
+<p class=AmmCorpsTexte>Il sera conseillé aux hommes traités par la dacarbazine de prendre des mesures contraceptives pendant le traitement et jusqu'à 6 mois après la fin du traitement.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et DACARBAZINE MEDAC</p>
+<p class=AmmCorpsTexte>Informez votre médecin ou pharmacien si vous prenez, avez récemment pris ou pourriez prendre tout autre médicament. </p>
+<p class=AmmCorpsTexte>Ceci inclut les médicaments obtenus sans ordonnance, y compris les plantes médicinales. Ceci est nécessaire car la dacarbazine peut avoir des effets sur le fonctionnement d'autres médicaments. Certains médicaments peuvent également avoir des effets sur le fonctionnement de la dacarbazine.</p>
+<p class=AmmCorpsTexte>En particulier, vous ne devez pas recevoir ce médicament et vous devez prévenir votre médecin, votre infirmier ou votre pharmacien si vous utilisez l'un des produits suivants:</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>la phénytoïne, utilisée pour traiter les convulsions,</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>d'autres médicaments qui pourraient endommager votre foie.</p>
+<p class=AmmCorpsTexte>Vous ne devez pas recevoir de dacarbazine si vous êtes dans l'un des cas ci-dessus. Si vous avez un doute, parlez-en avec votre médecin, votre infirmier ou votre pharmacien avant de recevoir la dacarbazine.</p>
+<p class=AmmCorpsTexte>Prévenez votre médecin, votre infirmier ou votre pharmacien si vous utilisez l'un des traitements suivants :</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Radiothérapie ou médicaments visant à réduire la croissance d'une tumeur (chimiothérapie). L'utilisation de ces traitements en même temps que la dacarbazine peut amplifier les dommages subis par votre moelle osseuse.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Autres médicaments métabolisés par un système d'enzymes du foie appelé cytochrome P450.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Méthoxypsoralène, utilisé lors de problèmes de peau comme le psoriasis et l'eczéma. Si vous recevez simultanément de la dacarbazine et du méthoxypsoralène, vous pourriez être plus sensible à la lumière du soleil (photosensibilisation).</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Fotémustine; vous ne devez pas recevoir de dacarbazine moins d'une semaine après avoir reçu de la fotémustine car ceci pourrait être nocif pour vos poumons.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ciclosporine ou tacrolimus: ces médicaments pourraient affaiblir votre système immunitaire.</p>
+<p class=AmmCorpsTexte>Si vous êtes dans l'un des cas ci-dessus (ou si vous avez un doute), parlez-en avec votre médecin, votre infirmier ou votre pharmacien avant de recevoir la dacarbazine.</p>
+<p class=AmmCorpsTexte>Votre médecin décidera si vous devez recevoir des médicaments destinés à améliorer la circulation sanguine et contrôlera la coagulation de votre sang.</p>
+<p class=AmmCorpsTexteGras>Vaccinations</p>
+<p class=AmmCorpsTexte>Les recommandations varient selon le type de vaccin:</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Fièvre jaune: vous ne devez pas recevoir de vaccin contre la fièvre jaune lorsque vous recevez la dacarbazine.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Vaccins à virus vivants: vous ne devez pas recevoir de vaccin dit « vivant » lorsque vous recevez de la dacarbazine car la dacarbazine peut affaiblir votre système immunitaire et vous pourriez attraper plus facilement des infections graves.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Vaccins à virus inactivés: vous pouvez recevoir un vaccin inactivé (virus « inactivé ») lorsque vous recevez de la dacarbazine.</p>
+<p class=AmmCorpsTexteGras>DACARBAZINE MEDAC avec des aliments et de l’alcool</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><a name="_Toc142279012"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ne mangez pas juste avant de recevoir la dacarbazine car vous risqueriez d'avoir plus de nausées ou de vomissements.</a></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ne buvez pas d'alcool pendant votre traitement.</p>
+<p class=AmmCorpsTexteGras>Grossesse, allaitement et fertilité</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><a name="_Hlk127980566"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous êtes enceinte ou que vous allaitez, si vous pensez être enceinte ou planifiez une grossesse, demandez conseil à votre médecin avant de recevoir ce médicament. Le médicament pourrait nuire à l'enfant à naître.</a></p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>N’utilisez pas de dacarbazine si vous êtes enceinte, <a name="_Hlk127980583">si vous pensez être enceinte ou planifiez une grossesse.</a><a name="_Hlk127980604"></a></p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>N’allaitez pas pendant le traitement par DACARBAZINE MEDAC.</p>
+<p class=AmmCorpsTexte><u>Femmes en âge de procréer/contraception chez les hommes et les femmes</u></p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous êtes une femme et que vous envisagez une grossesse, adressez-vous à votre médecin car il/elle pourra vous orienter vers un spécialiste avant la date prévue pour le début du traitement et après le traitement.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous êtes un homme, il vous est conseillé de demander conseil concernant la conservation du sperme avant la date prévue pour le début du traitement.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les femmes en âge de procréer doivent utiliser des mesures contraceptives efficaces pendant le traitement par la dacarbazine et jusqu’à 6 mois après la fin du traitement.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les hommes doivent utiliser des mesures contraceptives efficaces et ne pas concevoir d’enfant pendant le traitement par la dacarbazine et jusqu’à 3 mois après la fin du traitement.</p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte><a name="_Hlk127980644">Votre aptitude à conduire des véhicules ou à utiliser des machines pourrait être altérée à cause des effets indésirables sur le système nerveux central (effets sur le cerveau et les nerfs) ou en raison des nausées et vomissements. Toutefois, rien ne vous empêche de conduire ou d’utiliser des machines entre les cycles de traitement avec ce médicament, sauf si vous ressentez des vertiges ou si vous n’êtes pas sûr(e) de vous.</a></p>
+<p class=AmmCorpsTexteGras>DACARBAZINE MEDAC contient </p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_UTILISER_DACARBAZINE_MEDAC_100_mg,_poudre_pour_solution_injectable_ou_perfusion_?'>3. COMMENT UTILISER DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte>Votre médecin décidera de la durée de votre traitement. Ceci dépendra :</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>du type de cancer dont vous souffrez et de son stade,</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>du traitement que vous recevez et de la façon dont vous y répondez,</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>de l'apparition ou non d'effets indésirables.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Quelle quantité recevrez-vous ?</p>
+<p class=AmmCorpsTexte>La quantité de médicament que vous recevrez est définie en fonction de votre taille (votre surface corporelle en m<sup>2</sup>).</p>
+<p class=AmmCorpsTexte><i><u>Cancer de la peau qui s'est propagé (mélanome malin métastatique)</u></i></p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La dose habituelle est de 200-250 mg par m<sup>2</sup> de surface corporelle, une fois par jour.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Vous recevrez cette dose 5 jours de suite, toutes les 3 semaines. Vous ferez ensuite une pause.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Le médicament sera administré dilué en perfusion lente dans une veine sur une durée de 30 minutes à 1 heure.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Il est également possible que vous receviez une dose plus importante, de 1000 mg par m<sup>2</sup> de surface corporelle, toutes les 3 semaines. Elle vous sera alors administrée diluée en perfusion lente dans une veine sur 2 à 3 heures.</p>
+<p class=AmmCorpsTexte><i><u>Cancer du système lymphatique (maladie de Hodgkin)</u></i></p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La dose habituelle est de 375 mg par m<sup>2</sup> de surface corporelle, tous les 15 jours.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Vous recevrez également des médicaments appelés doxorubicine, bléomycine et vinblastine (cette association est appelée traitement ABVD).</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ce traitement est habituellement administré à 6 prises.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Il vous sera administré dilué en perfusion lente dans une veine sur 2 à 3 heures.</p>
+<p class=AmmCorpsTexte><i><u>Sarcome des tissus mous (cancer des tissus soutenant les structures et les organes du corps)</u></i></p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La dose habituelle est de 250 mg par m<sup>2</sup> de surface corporelle, une fois par jour.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Vous recevrez également un médicament appelé doxorubicine (cette association est appelée traitement ADIC).</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Vous recevrez ce traitement 5 jours de suite, toutes les 3 semaines. Vous ferez ensuite une pause.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Il vous sera administré dilué en perfusion lente dans une veine sur une durée de 30 minutes à 1 heure.</p>
+<p class=AmmCorpsTexte><i><u>Patients ayant des problèmes de reins ou de foie</u></i></p>
+<p class=AmmCorpsTexte>Si vos problèmes de reins ou de foie sont légers ou modérés, il n'est généralement pas nécessaire de diminuer votre dose de médicament. Si vous avez à la fois des problèmes de reins et de foie, il faudra plus de temps à votre corps pour utiliser le médicament et l'éliminer de votre organisme. Votre médecin pourra décider de diminuer votre dose de médicament.</p>
+<p class=AmmCorpsTexteGras>Personnes âgées</p>
+<p class=AmmCorpsTexte>Il n'existe pas d'instructions particulières concernant l'utilisation de la dacarbazine chez les personnes âgées.</p>
+<p class=AmmCorpsTexteGras>Utilisation chez les enfants </p>
+<p class=AmmCorpsTexte>Jusqu'à ce que nous disposions d'informations supplémentaires, aucune recommandation particulière ne peut être fournie concernant l'utilisation de la dacarbazine chez les enfants.</p>
+<p class=AmmCorpsTexteGras>Précautions à respecter pendant l’administration</p>
+<p class=AmmCorpsTexte>La dacarbazine est une substance sensible à la lumière. Le médecin ou l’infirmier/ère qui vous administre ce médicament veillera à protéger la dacarbazine de la lumière du soleil pendant son administration</p>
+<p class=AmmCorpsTexteGras>Si vous avez utilisé plus de DACARBAZINE MEDAC que vous n'auriez dû</p>
+<p class=AmmCorpsTexte>Si vous pensez avoir reçu trop de dacarbazine, prévenez immédiatement votre médecin ou votre infirmier.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si un surdosage est suspecté, le nombre de vos cellules sanguines sera contrôlé et un traitement symptomatique, tel que des transfusions, pourra être nécessaire.</p>
+<p class=AmmCorpsTexte>Un surdosage entraînerait des dommages sévères pour votre moelle osseuse (toxicité médullaire). Votre moelle osseuse pourrait cesser totalement de fonctionner (aplasie médullaire). Ces effets peuvent apparaître jusqu'à 2 semaines plus tard.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez d’utiliser DACARBAZINE MEDAC</p>
+<p class=AmmCorpsTexte><a name="_Toc142279020">Sans objet.</a></p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez d’utiliser DACARBAZINE MEDAC </p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde. Votre médecin en discutera avec vous et vous expliquera quels sont les risques et les bénéfices du traitement.</a></p>
+<p class=AmmCorpsTexte><span class=AmmCorpsTexteGrasCar>Fréquent</span> (survient chez 1 à 10 utilisateurs sur 100)</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Perte d'appétit (anorexie), nausées ou vomissements. Si une personne vous aide à nettoyer votre vomi, elle doit porter des gants car une partie du médicament pourrait traverser sa peau.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Problèmes sanguins. Ceux-ci dépendent de la dose que vous recevez et apparaissent le plus souvent au bout de 3 à 4 semaines. Vous pourriez vous sentir fatigué(e), être pâle, avoir des bleus plus facilement que d'habitude ou attraper plus d'infections que d'habitude. Des analyses de sang permettent de les mettre en évidence :</p>
+<p class=AmmListePuces2 style='text-align:justify'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>anémie (diminution des globules rouges),</p>
+<p class=AmmListePuces2 style='text-align:justify'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>leucopénie (diminution des globules blancs),</p>
+<p class=AmmListePuces2 style='text-align:justify'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>thrombocytopénie (diminution des plaquettes),</p>
+<p class=AmmListePuces2 style='text-align:justify'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>myélosuppression (diminution de la formation de toutes les cellules sanguines dans la moelle osseuse).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><span class=AmmCorpsTexteGrasCar>Peu fréquent</span> (survient chez 1 à 10 utilisateurs sur 1 000)</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-indent:-17.85pt; page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Symptômes pseudo-grippaux tels que fatigue, frissons, fièvre ou douleurs musculaires. Ceux-ci sont plus fréquents pendant les premiers jours de chaque cycle de traitement.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Fonctionnement anormal des reins ou augmentation des enzymes du foie (mis en évidence par les examens).</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Dégradation du foie (hépatotoxicité).</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Obstruction d'une veine dans le foie (également appelée syndrome de Budd-Chiari).</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Détérioration du tissu du foie (nécrose) due à l'obstruction d'une veine dans votre foie. La fièvre, les maux d'estomac, le jaunissement des yeux et de la peau (jaunisse) peuvent en être les signes. Votre médecin pourrait également détecter une augmentation de la taille de votre foie et une modification du nombre de vos cellules sanguines. Ceci se produit le plus souvent lors du deuxième cycle de traitement.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Taches sombres sur la peau (hyperpigmentation).</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Augmentation de la sensibilité de la peau à la lumière (photosensibilité).</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Chute de cheveux ou poils (alopécie).</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Sentiment de confusion.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Bouffées de chaleur au niveau du visage.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Eruption cutanée transitoire.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Vision trouble.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Infections.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><span class=AmmCorpsTexteGrasCar>Rare</span> (survient chez 1 à 10 utilisateurs sur 10 000)</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Réactions au site d'injection telles qu'une irritation de la veine.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Rougeur sur la peau (érythème), éruption avec boutons et cloques (exanthème maculo-papuleux) ou urticaire.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Réactions cutanées à l'endroit où le médicament est injecté.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Gonflement du visage, des lèvres, de la bouche et de la gorge avec difficulté à respirer (réaction anaphylactique).</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Somnolences, troubles de la vision.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Maux de tête.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Crises (convulsions).</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Sensation de fourmillement au niveau du visage.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Diarrhées. Si une personne vous aide à nettoyer votre diarrhée, elle doit porter des gants car une partie du médicament pourrait traverser sa peau.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Problèmes sanguins. Ceux-ci dépendent de la dose que vous recevez et apparaissent le plus souvent au bout de 3 à 4 semaines. Vous pourriez vous sentir fatigué(e), être pâle, avoir des bleus plus facilement que d'habitude ou attraper plus d'infections que d'habitude. Des analyses de sang permettent de les mettre en évidence.</p>
+<p class=AmmListePuces2 style='text-align:justify'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>pancytopénie (diminution de toutes les cellules sanguines),</p>
+<p class=AmmListePuces2 style='text-align:justify'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>agranulocytose (diminution marquée d'un type de globule blanc appelé « granulocyte »).</p>
+<p class=AmmCorpsTexte>Si le médicament est accidentellement injecté dans le tissu autour de la veine, vous ressentirez des douleurs et le tissu sera endommagé.</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien ou à votre infirmier/ère. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a>.</p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_DACARBAZINE_MEDAC_100_mg,_poudre_pour_solution_injectable_ou_perfusion_?'>5. COMMENT CONSERVER DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026"></a><a name="_Toc142279024">Tenir hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas ce médicament après la date de péremption indiquée </span>sur l’emballage après « EXP » <span lang=FR-BE>. La date de péremption fait référence au dernier jour de ce mois.</span></p>
+<p class=AmmCorpsTexte><span class=AmmCorpsTexteGrasCar><u>Avant reconstitution</u></span><span class=AmmCorpsTexteGrasCar> :</span> A conserver à une température ne dépassant pas 25°C. Conserver dans l'emballage extérieur d'origine, à l'abri de la lumière.</p>
+<p class=AmmCorpsTexte><span class=AmmCorpsTexteGrasCar><u>Après reconstitution</u></span><span class=AmmCorpsTexteGrasCar> :</span> La stabilité physico-chimique de la solution reconstituée a été démontrée pendant 1 heure à 25°C, et 48 h à 2-8°C à l'abri de la lumière.</p>
+<p class=AmmCorpsTexte>Toutefois d'un point de vue microbiologique, la solution reconstituée doit être utilisée immédiatement. En cas d’utilisation non immédiate, les durées et conditions de conservation après reconstitution et avant utilisation relèvent de la seule responsabilité de l’utilisateur et ne devraient pas dépasser 24 heures à une température comprise entre 2 et 8 °C, sauf en cas de reconstitution réalisée en conditions d’asepsie dûment contrôlées et validées.</p>
+<p class=AmmCorpsTexte><span class=AmmCorpsTexteGrasCar><u>Après reconstitution et dilution</u></span><span class=AmmCorpsTexteGrasCar>:</span> Il a été démontré que la solution reconstituée et diluée de Dacarbazine medac est stable pendant 24 heures à 2 –  8 °C à l'abri de la lumière dans un récipient en polyéthylène ainsi que dans des bouteilles en verre et pendant 2 heures à 25 °C dans un récipient en polyéthylène. D'un point de vue microbiologique, la solution diluée doit être utilisée immédiatement.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout <span style='color:black'>ou avec </span>les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion</a></p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est : Dacarbazine</p>
+<p class=AmmComposition>Un flacon contient 100 mg de dacarbazine (sous forme de citrate de dacarbazine).</p>
+<p class=AmmComposition>1 ml de solution reconstituée contient 10 mg de dacarbazine.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont : Acide citrique anhydre, mannitol.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que DACARBAZINE MEDAC 100 mg, poudre pour solution injectable ou perfusion et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>DACARBAZINE MEDAC est une poudre blanche ou jaune pâle contenue dans un flacon en verre brun fermé par un bouchon en caoutchouc. Disponible en boîte de 1, 5 et 10 flacons.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279031"></a><a name="OLE_LINK1"><span lang=DE style='text-transform: uppercase'>MEDAC GESELLSCHAFT FÜR KLINISCHE SPEZIALPRÄPARATE MBH</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>THEATERSTR. 6</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>22880 WEDEL </span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>ALLEMAGNE</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279032"><span style='text-transform:uppercase'>MEDAC SAS</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>1 RUE CROIX BARRET</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>69007 LYON</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279033"><span lang=DE style='text-transform:uppercase'>MEDAC GESELLSCHAFT FÜR KLINISCHE SPEZIALPRÄPARATE MBH</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>THEATERSTR. 6</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>22880 WEDEL </span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>ALLEMAGNE</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279038"><span style='color:#385623'>[à compléter ultérieurement par le titulaire]</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+<p class=AmmCorpsTexte>Les informations suivantes sont destinées exclusivement aux professionnels de santé:</p>
+<p class=AmmCorpsTexte>Il est recommandé de tester d'abord la perméabilité de la veine à l'aide de 5 à 10 ml de solution pour perfusion isotonique de chlorure de sodium ou de glucose à 5 %. La même solution sera utilisée pour purger les résidus de médicament dans la tubulure de perfusion.</p>
+<p class=AmmCorpsTexteGras>Administration de l'injection/la perfusion</p>
+<p class=AmmCorpsTexte>Après reconstitution (préparation de la solution) à l'aide d'eau pour préparations injectables et sans aucune dilution supplémentaire à l'aide d'une solution pour perfusion isotonique de chlorure de sodium ou de glucose à 5 %, les préparations de DACARBAZINE MEDAC sont hypo-osmolaires (env. 100 mOsmol/kg), ce qui signifie que la solution contient une plus faible concentration de substances dissoutes que le sang; elle doit donc être administrée en injection intraveineuse lente, et non par injection IV en bolus (injection rapide) sur quelques secondes.</p>
+<p class=AmmCorpsTexte>La dacarbazine est sensible à la lumière. Les solutions reconstituées doivent donc être tenues à l'abri de la lumière, y compris pendant la perfusion (perfuseur opaque).</p>
+<p class=AmmCorpsTexte>La solution doit être administrée avec précaution afin d'éviter toute extravasation (injection de la solution dans le tissu entourant la veine), car celle-ci pourrait entraîner des douleurs localisées et des dommages tissulaires.</p>
+<p class=AmmCorpsTexte>En cas d'extravasation, l'injection doit être immédiatement interrompue et le reste de la dose doit être administré dans une autre veine.</p>
+<p class=AmmCorpsTexteGras>Conseils pour une manipulation sans risque</p>
+<p class=AmmCorpsTexte>La dacarbazine est un agent anti-néoplasique (elle réduit le développement des cellules cancéreuses). Avant de préparer la solution, il conviendra de consulter les directives locales concernant la manipulation des agents cytotoxiques (qui détériorent les cellules). La dacarbazine doit être ouverte exclusivement par un personnel formé. Comme pour tout agent cytotoxique, des précautions doivent être prises pour éviter au personnel d'y être exposé. De façon générale, la manipulation des médicaments cytotoxiques doit être évitée pendant la grossesse. La solution à administrer doit être préparée dans un espace dédié à ces manipulations, en opérant au-dessus d'une surface lavable ou d'un papier absorbant jetable avec une face antérieure plastifiée. Il est recommandé de porter des lunettes de protection, des gants jetables, un masque et un tablier jetable adaptés. Les seringues et perfuseurs doivent être assemblés avec précaution afin d'éviter les fuites (l'utilisation de raccords Luer-Lock est recommandée). Une fois les manipulations terminées, toutes les surfaces exposées doivent être soigneusement nettoyées et les utilisateurs doivent se laver les mains et le visage. En cas d'éclaboussure, les opérateurs doivent enfiler des gants, un masque, des lunettes de protection et un tablier jetable et essuyer la substance renversée à l'aide d'un matériau absorbant disposé, à cet effet, dans l'espace de travail. L'espace de travail doit ensuite être nettoyé et tous les matériaux contaminés doivent être transférés dans un sac ou un réceptacle à déchets cytotoxiques ou tout autre conteneur étanche pour être incinérés.</p>
+<p class=AmmCorpsTexteGras>Préparation de la solution pour l'administration intraveineuse (dans une veine)</p>
+<p class=AmmCorpsTexte>La solution de DACARBAZINE MEDAC doit être préparée immédiatement avant utilisation. La dacarbazine est sensible à la lumière. Pendant le traitement, la poche/le flacon de soluté et le perfuseur doivent être tenus à l'abri de la lumière, par exemple en utilisant un perfuseur en PVC opaque. Les autres perfuseurs pourront, par exemple, être enveloppés dans une feuille d'aluminium pour les abriter de la lumière.</p>
+<p class=AmmCorpsTexteGras>Préparation et administration de la solution pour injection/perfusion</p>
+<p class=AmmCorpsTexte>DACARBAZINE MEDAC 100 mg en poudre pour solution injectable ou perfusion doit être reconstitué à l'aide de 10 ml d'eau pour préparations injectables, ce qui signifie que la poudre sera complètement dissoute. La solution ainsi obtenue contient 10 mg/ml de dacarbazine. La solution reconstituée sera diluée dans des poches de 250 ml ou 500 ml de solution pour perfusion de glucose à 5% ou de chlorure de sodium à 0,9 % et injectée en perfusion intraveineuse lente sur 30 minutes à 3 heures (introduite lentement dans une veine).</p>
+<p class=AmmCorpsTexte>DACARBAZINE MEDAC est à usage unique strict.</p>
+<p class=AmmCorpsTexte>La solution de dacarbazine est chimiquement incompatible avec l'héparine, l'hydrocortisone, la L-cystéine et le bicarbonate de sodium; ceci signifie que la solution de dacarbazine ne doit pas être mélangée avec des médicaments contenant ces substances. Ce médicament ne doit pas être mélangé avec d'autres médicaments à l'exception de ceux mentionnés plus haut.</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

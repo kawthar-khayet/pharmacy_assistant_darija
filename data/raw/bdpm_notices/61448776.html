@@ -1,0 +1,1758 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="bTr+qp3UtJvqfBpgqQ9X8A==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="bTr+qp3UtJvqfBpgqQ9X8A==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 29/09/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant COROTROPE 10 mg/10 ml, solution injectable IV"
+            aria-level="3"
+          >
+            COROTROPE 10 mg/10 ml, solution injectable IV
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament COROTROPE 10 mg/10 ml, solution injectable IV - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                          <p id="tag-hospitalier" class="fr-tag" aria-controls="fr-modal-tag-hospitalier" data-fr-opened="false">
+              <span class="fr-icon-hospital-fill">
+              </span>&nbsp;usage hospitalier
+          </p>
+          <span class="fr-tooltip fr-placement" id="tooltip-tag-hospitalier" role="tooltip" aria-hidden="true">Ce médicament est fourni sur ordonnance uniquement</span>
+        
+                          <p id="tag-generique" class="fr-tag" aria-controls="fr-modal-tag-generique" data-fr-opened="false">
+              <span class="fr-icon-capsule-fill">
+              </span>&nbsp;générique
+          </p>
+              </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 16/10/1987
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : COROTROPE 10 mg/10 ml, solution injectable IV - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0435534">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte><a name="_Toc142279003">Classe pharmacothérapeutique : STIMULANTS CARDIAQUES, code ATC : C01CE02</a></p>
+<p class=AmmCorpsTexte>(C : système cardiovasculaire)</p>
+<p class=AmmCorpsTexte><a name="_Toc142279004">COROTROPE est un stimulant cardiaque, utilisé seulement chez les patients hospitalisés dans une unité de soins intensifs :</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>chez l’adulte pour traiter l’insuffisance cardiaque aiguë congestive (quand le cœur ne peut pas pomper assez de sang du reste du corps),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>chez l’enfant pour traiter sur une courte période (jusqu’à 35 heures) l’insuffisance cardiaque congestive sévère (quand le cœur a des difficultés pour pomper le sang du corps), si d’autres médicaments n’ont pas été efficaces,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol;text-transform:uppercase'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>chez l’enfant après une opération du cœur, pour traiter sur une courte période (jusqu’à 35 heures) l’insuffisance cardiaque, c’est-à-dire quand son cœur a des difficultés pour pomper le sang de son corps.</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament appartient au(x) groupe(s) générique(s) suivants : <br/><ul role="list"><li role='listitem'><a href='/medicament/affiche/groupe-generique/61448776/1089' aria-describedby='tooltip-medicament-generique-0'>MILRINONE 10 mg/10 ml - COROTROPE 10 mg/10 ml, solution injectable IV</a><span id='tooltip-medicament-generique-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Ouvrir la page de détail sur ce groupe générique</span></li></ul></p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Solution ( Composition pour 10 ml de solution )<ul role="list"><li role="listitem" style="list-style-type: none;"> > milrinone<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">10 mg </span></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > 10 ampoule(s) en verre de 10 ml  </p><p>Code CIP : 556 022-9 ou 34009 556 022 9 3<br/>Déclaration de commercialisation : 19/01/1990<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p>Prix libre, médicament non remboursable ( <a href='/aide#que-signifie-la-notion-de-prix-libre-un-medicament-non-rembourse'>cliquez ici pour en savoir plus sur les médicaments non remboursables</a> )</div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'>Ce médicament étant un générique, le SMR n'a pas été évalué par la commission de la transparence (CT), il est possible de se référer à la /aux spécialité(s) de référence du groupe générique auquel appartient ce médicament <a href='#heading-groupe-generique' arial-label='cliquez ici pour aller à la rubrique des groupes génériques'>(cliquez ici pour aller à la rubrique des groupes génériques)</a></p></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div><div class='fr-col'><p>Pas d'ASMR disponible pour ce médicament (<a href='/aide#le-medicament-que-je-recherche-ne-mentionne-pas-de-service-medical-rendu-(SMR)-ni-amelioration-du-service-medical-rendu-(ASMR)' aria-describedby='tooltip-asmr-aide'>plus d'informations dans l\'aide</a>)</p><span id='tooltip-asmr-aide' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers aide</span></div></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : SANOFI WINTHROP INDUSTRIE</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li><li>réservé à l'usage HOSPITALIER</li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure nationale</li><li>Code CIS : &nbsp;6 144 877 6</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : COROTROPE 10 mg/10 ml, solution injectable IV - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="COROTROPE 10 mg/10 ml, solution injectable IV, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 30/06/2025</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras><a name="_Toc142278980"></a><a name="_Toc142278913">COROTROPE 10 mg/10 ml, solution injectable IV</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Milrinone................................................................................................................................ 10 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour 10 ml de solution.</p>
+<p class=AmmCorpsTexte>Excipient à effet notoire : sodium 13,225 mg par ampoule/flacon de 10 ml (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Solution injectable.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">Traitement à <u>court terme</u> de l'insuffisance cardiaque aiguë congestive.</a></p>
+<p class=AmmCorpsTexte>Dans la population pédiatrique, COROTROPE est indiqué pour le traitement à court terme (jusqu’à 35 heures) de l’insuffisance cardiaque congestive sévère ne répondant pas aux traitements au long cours conventionnels (glucosides, diurétiques, vasodilatateurs et/ou inhibiteurs de l’enzyme de conversion de l’angiotensine (IEC)), et pour le traitement à court terme (jusqu’à 35 heures) des enfants souffrant d’une insuffisance cardiaque, incluant les états de bas débit cardiaque, après une chirurgie cardiaque.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278918">Posologie</a></p>
+<p class=AmmCorpsTexte>L'utilisation de la milrinone injectable ne pourra être envisagée que chez des <u>patients hospitalisés dans une unité de soins intensifs</u> et soumis à un contrôle continu hémodynamique.</p>
+<p class=AmmCorpsTexte>La milrinone intraveineuse peut être administrée pure ou diluée dans du sérum glucosé à 5 %.</p>
+<p class=AmmCorpsTexte>La perfusion de milrinone sera établie à l'aide d'une pompe à débit constant reliée à une aiguille ou à un cathéter placé dans une veine aussi grosse que possible.</p>
+<p class=AmmCorpsTexte>Le traitement par la milrinone intraveineuse débutera d'abord par une dose de charge de 50 microgrammes/kg en 10 mn environ, suivie d'une perfusion continue de 0,375 à 0,750 microgrammes/kg/mn.</p>
+<p class=AmmCorpsTexte>La posologie sera ajustée de façon à obtenir un effet hémodynamique maximum sans toutefois dépasser une dose totale de 1,13 mg/kg/jour.</p>
+<p class=AmmCorpsTexte>La durée du traitement réalisée au cours des essais a été de 48 heures.</p>
+<p class=AmmAnnexeTitre4>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Dans les études publiées, les doses choisies pour les nourrissons et les enfants étaient :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>dose de charge intraveineuse : 50 à 75 microgrammes/kg administrée sur 30 à 60 minutes.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>perfusion continue intraveineuse : à initier sur la base de la réponse hémodynamique et la survenue possible d’effets indésirables entre 0,25 à 0,75 microgrammes/kg/min sur une période de temps allant jusqu’à 35 heures.</p>
+<p class=AmmCorpsTexte>Dans les études cliniques du syndrome de bas débit cardiaque chez les nourrissons et les enfants de moins de 6 ans après une chirurgie correctrice d’une maladie cardiaque congénitale, une dose de charge de 75 microgrammes/kg sur 60 minutes suivie par une perfusion de 0,75 microgrammes/kg/min pendant 35 heures réduisent significativement le risque de développement de syndrome de bas débit cardiaque.</p>
+<p class=AmmCorpsTexte>Les résultats des études de pharmacocinétiques (voir rubrique 5.2) ont été pris en considération.</p>
+<p class=AmmAnnexeTitre4 style='margin-top:12.0pt'>Insuffisance rénale :</p>
+<p class=AmmCorpsTexte>Du fait du manque de données, l’utilisation de COROTROPE n’est pas recommandée dans la population pédiatrique souffrant d’insuffisance rénale (voir rubrique 4.4 pour plus d’informations).</p>
+<p class=AmmAnnexeTitre4 style='margin-bottom:0cm;margin-bottom:.0001pt'>Persistance du canal artériel :</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Chez les prématurés et les enfants à terme à risque de/ou souffrant de persistance du canal artériel, il est nécessaire d’évaluer le besoin thérapeutique en fonction des risques potentiels si l’utilisation de COROTROPE est envisagée (voir rubriques 4.4, 4.8, 5.2 et 5.3).</p>
+<p class=AmmAnnexeTitre3>Ajustement posologique chez les insuffisants rénaux :</p>
+<p class=AmmCorpsTexte>Un ajustement posologique est nécessaire. L’ajustement posologique chez les insuffisants rénaux est basé sur des données obtenues avec des patients présentant une insuffisance rénale, sans insuffisance cardiaque congestive, qui montrent une augmentation significative de la demi-vie d’élimination terminale de la milrinone. La dose de charge n’est pas affectée, mais une diminution de la dose d’entretien peut être nécessaire en fonction de la sévérité de l’insuffisance rénale (fonction de la clairance de la créatinine) (voir tableau ci-dessous).</p>
+<div align=center>
+<div class='fr-table--lg fr-table'><table>
+<tr>
+<td width=296 style='width:222.3pt;border:solid windowtext 1.0pt;padding:
+0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Clairance de la créatinine (ml/min/1,73 m<sup>2</sup>)</p>
+</td>
+<td width=227 style='width:169.9pt;border:solid windowtext 1.0pt;border-left:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Débit de perfusion (microgrammes/kg/min)</p>
+</td>
+</tr>
+<tr>
+<td width=296 valign=top style='width:222.3pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>5</p>
+</td>
+<td width=227 valign=top style='width:169.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>0,20</p>
+</td>
+</tr>
+<tr>
+<td width=296 valign=top style='width:222.3pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>10</p>
+</td>
+<td width=227 valign=top style='width:169.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>0,23</p>
+</td>
+</tr>
+<tr>
+<td width=296 valign=top style='width:222.3pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>20</p>
+</td>
+<td width=227 valign=top style='width:169.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>0,28</p>
+</td>
+</tr>
+<tr>
+<td width=296 valign=top style='width:222.3pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>30</p>
+</td>
+<td width=227 valign=top style='width:169.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>0,33</p>
+</td>
+</tr>
+<tr>
+<td width=296 valign=top style='width:222.3pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>40</p>
+</td>
+<td width=227 valign=top style='width:169.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>0,38</p>
+</td>
+</tr>
+<tr>
+<td width=296 valign=top style='width:222.3pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>50</p>
+</td>
+<td width=227 valign=top style='width:169.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>0,43</p>
+</td>
+</tr>
+</table></div>
+</div>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte>Voie intraveineuse.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmListePuces1 style='text-align:justify'><a name="_Toc142278919"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypersensibilité à la milrinone ou à l'un des excipients mentionnés à la rubrique 6.1,</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>valvulopathie aortique ou pulmonaire obstructive sévère,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>cardiomyopathie hypertrophique obstructive,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>anévrisme ventriculaire,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>hypovolémie sévère non traitée auparavant,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>infarctus aigu du myocarde.</p>
+<p class=AmmListePuces1 style='text-align:justify;text-indent:0cm'><b> </b></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-align:justify;text-indent:0cm'>COROTROPE 10 mg/10 ml, solution injectable IV ne doit pas être utilisé chez les patients souffrant d’une insuffisance cardiaque due à une hyperthyroïdie, à une myocardite aigüe ou à une cardiomyopathie amyloïde, car les données thérapeutiques sont encore insuffisantes.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmAnnexeTitre3>Mises en garde</p>
+<p class=AmmCorpsTexte>Une surveillance attentive doit être maintenue pendant le traitement par la milrinone incluant le contrôle de la pression artérielle, du rythme cardiaque, de l’état clinique, de l’électrocardiogramme, de l’équilibre hydroélectrolytique et de la fonction rénale (c’est-à-dire créatinine sérique).</p>
+<p class=AmmCorpsTexte>Chez les patients avec une maladie aortique obstructive grave ou une maladie des valves pulmonaires, ou une sténose hypertrophique subaortique, la milrinone ne doit pas être utilisée à la place d’une chirurgie de secours d’une obstruction. Comme avec d’autres médicaments inotropes, vasodilatateurs, la milrinone peut aggraver l’obstruction de sortie dans ces conditions.</p>
+<p class=AmmCorpsTexte>L’utilisation d’inotrope positif tel que la milrinone en phase aiguë suivant un infarctus du myocarde peut mener à une augmentation non voulue de la consommation d’oxygène myocardiale (MVO2). Une prudence accrue est nécessaire chez les patients en phase aiguë de l’infarctus du myocarde bien que la milrinone n’augmente pas la MVO2 chez des patients avec une insuffisance cardiaque chronique.</p>
+<p class=AmmAnnexeTitre3>Précautions d'emploi</p>
+<p class=AmmCorpsTexte>L’activité vasodilatatrice de la milrinone peut provoquer une hypotension, il faut donc être prudent lorsque la milrinone est administrée à des patients souffrant d’hypotension avant le traitement. Chez les patients présentant une diminution importante de la pression artérielle pendant le traitement par la milrinone, la perfusion devra être arrêtée jusqu’au retour à la normale, puis reprise à un débit plus faible si nécessaire.</p>
+<p class=AmmCorpsTexte><u>Patients à risque élevé de troubles du rythme</u> : des arythmies supraventriculaires et ventriculaires ont été observées chez ce type de patients. Chez quelques patients, une augmentation de l’ectopie ventriculaire incluant une tachycardie ventriculaire temporaire a été rapportée. Comme le potentiel d’arythmies, déjà répandu en cas d’insuffisance cardiaque, peut être augmenté par de nombreux médicaments ou des associations de médicaments, les patients recevant de la milrinone doivent être surveillés de près pendant la perfusion.</p>
+<p class=AmmCorpsTexte><u>Patients en insuffisance cardiaque</u> : le risque d’arythmie peut être accentué par de nombreux médicaments ou associations de médicaments.</p>
+<p class=AmmCorpsTexte><u>Patients avec un flutter ou une fibrillation</u> : il y a une possibilité d’augmentation du taux de réponse ventriculaire chez les patients avec un flutter ou une fibrillation. Chez ces patients, une digitalisation antérieure ou un traitement avec d’autres agents prolongeant la conduction auriculo-ventriculaire doit être considérée puisque la milrinone produit une légère augmentation de la conduction du nœud A-V.</p>
+<p class=AmmCorpsTexte><u>Patients ayant reçu un traitement diurétique intensif antérieur suspecté d’avoir diminué significativement la pression de remplissage cardiaque ou d’avoir modifié l’équilibre hydroélectrique en particulier la kaliémie</u> : la milrinone doit être administrée avec prudence et sous contrôle continu de la pression artérielle, de la fréquence cardiaque et des symptômes cliniques. L'équilibre hydroélectrolytique et la créatininémie devront être soigneusement surveillés durant le traitement. En cas d’insuffisance rénale, une majoration de la demi-vie de la milrinone a été mise en évidence.</p>
+<p class=AmmCorpsTexte>Par suite de l'augmentation de la diurèse due à une amélioration du débit cardiaque, il pourra être nécessaire de diminuer la dose de diurétique. La perte de potassium due à une diurèse excessive peut favoriser la survenue d'arythmie chez les patients digitalisés ; il faudra donc, avant ou pendant le traitement par la milrinone injectable, corriger l'hypokaliémie par un supplément en potassium.</p>
+<p class=AmmCorpsTexte>Une diminution du taux d’hémoglobine, incluant une anémie, se produit souvent en cas d’insuffisance cardiaque. Du fait du risque de thrombocytopénie ou d’anémie sous COROTROPE, une surveillance attentive des paramètres de laboratoire correspondants est nécessaire chez les patients présentant une diminution du taux de plaquettes ou de l’hémoglobine.</p>
+<p class=AmmCorpsTexte>Il n’y a pas d’expérience d’essais contrôlés avec des perfusions de milrinone de plus de 48 heures.</p>
+<p class=AmmCorpsTexte>Des cas de réactions au point d’injection ont été rapportés au cours des traitements par la milrinone IV (voir rubrique 4.8). Par conséquent, une surveillance attentive du point d’injection devra être assurée pour éviter tout risque d’extravasation.</p>
+<p class=AmmCorpsTexte><u>Sujets âgés</u> : des études de pharmacocinétique contrôlées n’ont pas montré de changement dans la pharmacocinétique de la personne âgée.</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique :</p>
+<p class=AmmCorpsTexte>Les informations suivantes doivent être considérées en plus des mises en garde spéciales et des précautions d’emploi décrites pour les adultes :</p>
+<p class=AmmCorpsTexte>Chez les nouveau-nés, après une chirurgie à cœur ouvert pendant un traitement par COROTROPE, les paramètres suivants doivent être surveillés :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>fréquence et rythme cardiaques,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>pression artérielle systémique par l’intermédiaire d’un cathéter artériel ombilical ou d’un cathéter périphérique,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>pression veineuse centrale,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>index cardiaque,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>débit cardiaque,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>résistance vasculaire systémique,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>pression artérielle pulmonaire,</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>pression atriale.</p>
+<p class=AmmCorpsTexte>Les valeurs de laboratoires qui doivent être contrôlées sont le taux de plaquettes, le taux de potassium sérique, la fonction hépatique, et la fonction rénale. La fréquence de la surveillance est déterminée en fonction des valeurs de base. De plus, il est nécessaire d’évaluer la réponse du nouveau-né aux changements de traitement.</p>
+<p class=AmmCorpsTexte>Les données de la littérature ont montré que dans la population pédiatrique souffrant d’insuffisance rénale, il existe des troubles marqués de la clairance de la milrinone, et des effets indésirables cliniquement significatifs. Cependant, le niveau de clairance de la créatinine dans la population pédiatrique à partir duquel les doses doivent être ajustées n’est pas établi. Par conséquent l’utilisation de la milrinone n’est pas recommandée dans cette population (voir rubrique 4.2).</p>
+<p class=AmmCorpsTexte>Dans la population pédiatrique, la milrinone doit être initiée seulement si le patient est hémodynamiquement stable.</p>
+<p class=AmmCorpsTexte>Une attention particulière doit être portée chez les nouveau-nés présentant des facteurs de risque d’hémorragie intraventriculaire (c’est-à-dire chez les prématurés et les faibles poids de naissance) puisque la milrinone peut induire une thrombocytopénie. Dans les études cliniques réalisées dans la population pédiatrique, le risque de thrombocytopénie augmente significativement avec la durée de perfusion. Les données cliniques suggèrent que les thrombocytopénies induites par la milrinone sont plus fréquentes chez les enfants que chez les adultes (voir rubrique 4.8).</p>
+<p class=AmmCorpsTexte>Dans les études cliniques, la milrinone semble ralentir la fermeture du canal artériel dans la population pédiatrique. Par conséquent, chez les prématurés et les enfants à terme à risque de/ou souffrant de persistance du canal artériel, il est nécessaire d’évaluer le besoin thérapeutique en fonction des risques potentiels si l’utilisation de COROTROPE est envisagée (voir rubriques 4.4, 4.8, 5.2 et 5.3).</p>
+<p class=AmmCorpsTexte><u>Insuffisance rénale sévère</u> : Chez les patients souffrant d’insuffisance rénale sévère, une adaptation posologique est requise (voir rubrique 4.2).</p>
+<p class=AmmCorpsTexte>Compte-tenu du mode d’administration par voie IV, l’utilisation de ce médicament n’est pas déconseillée en cas d’intolérance au glucose.</p>
+<p class=AmmCorpsTexte>Excipient à effet notoire : ce médicament contient 13,225 mg de sodium par ampoule/flacon de 10 ml, ce qui équivaut à 0,66% de l’apport alimentaire quotidien maximal recommandé par l’OMS de 2 g de sodium par adulte.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278921">Aucune interaction n'a été observée avec les thérapeutiques suivantes : glycosides digitaliques, anti-arythmiques, alpha-bloquants, dérivés nitrés, diurétiques, inhibiteurs de l'enzyme de conversion, anti-coagulants, benzodiazépines, insuline, sels de potassium.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmCorpsTexte>Bien que les données obtenues après administration orale n'aient pas révélé d'effets tératogènes ou embryotoxiques chez l'animal, la milrinone ne sera utilisée au cours de la grossesse ou en période d'allaitement que si le bénéfice attendu justifie le risque potentiel encouru.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929"><span lang=FR-BE>Aucune étude sur les effets de la milrinone sur l’aptitude à conduire des véhicules et à utiliser des machines n’a été réalisée.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmCorpsTexte>Les effets indésirables ont été classés par système - organe et par fréquence selon les conventions suivantes : Très fréquemment (&#8805; 1/10) ; fréquemment (&#8805; 1/100, < 1/10) ; peu fréquemment (&#8805; 1/1 000, < 1/100) ; rarement (&#8805;1/10 000, <1/1 000) ; très rarement (<1/10 000).</p>
+<p class=AmmAnnexeTitre3>Troubles cardiovasculaires :</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>Fréquemment :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>arythmies supraventriculaires,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>arythmies ventriculaires : extrasystoles ventriculaires, tachycardies ventriculaires (soutenues ou non),</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>hypotension.</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>Peu fréquemment :</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>fibrillation ventriculaire, angine de poitrine, douleur dans la poitrine.</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>Très rarement :</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>torsades de pointes.</p>
+<p class=AmmCorpsTexte>L'incidence des arythmies supraventriculaires et ventriculaires n'a pas été reliée à la posologie ou à la concentration plasmatique de milrinone. Les arythmies menaçant le pronostic vital sont souvent associées à des facteurs de risque tels qu'une arythmie pré-existante, des anomalies métaboliques (ex : hypokaliémie), des concentrations plasmatiques anormales de digoxine ou la mise en place d'un cathéter.</p>
+<p class=AmmCorpsTexte>Les données cliniques suggèrent que les arythmies induites par la milrinone sont moins fréquentes chez les enfants que chez les adultes.</p>
+<p class=AmmAnnexeTitre3>Troubles hématologiques :</p>
+<p class=AmmCorpsTexte>Peu fréquemment : thrombocytopénie*.</p>
+<p class=AmmCorpsTexte>Fréquence inconnue : diminution des globules rouges et/ou des concentrations en hémoglobine.</p>
+<p class=AmmCorpsTexte>* Chez les nourrissons et les enfants, le risque de thrombocytopénie est significativement augmenté en fonction de la durée de perfusion. Les données cliniques suggèrent que les thrombocytopénies induites par la milrinone sont plus fréquentes chez les enfants que chez les adultes (voir rubrique 4.4).</p>
+<p class=AmmAnnexeTitre3>Troubles du système nerveux :</p>
+<p class=AmmCorpsTexte>Fréquemment : céphalées, de sévérité habituellement légère à modérée.</p>
+<p class=AmmCorpsTexte>Peu fréquemment : tremblements.</p>
+<p class=AmmAnnexeTitre3>Troubles cutanés :</p>
+<p class=AmmCorpsTexte>Très rarement : éruptions cutanées.</p>
+<p class=AmmAnnexeTitre3>Troubles généraux :</p>
+<p class=AmmCorpsTexte>Très rarement : réactions au point d'injection.</p>
+<p class=AmmAnnexeTitre3>Troubles du système immunitaire :</p>
+<p class=AmmCorpsTexte>Très rarement : choc anaphylactique.</p>
+<p class=AmmAnnexeTitre3>Troubles du métabolisme et de la nutrition :</p>
+<p class=AmmCorpsTexte>Peu fréquemment : hypokaliémie.</p>
+<p class=AmmAnnexeTitre3>Troubles respiratoires, thoraciques et médiastinaux :</p>
+<p class=AmmCorpsTexte>Très rarement : bronchospasme.</p>
+<p class=AmmAnnexeTitre3>Troubles hépatobiliaires :</p>
+<p class=AmmCorpsTexte>Peu fréquemment : anomalies des tests de la fonction hépatique.</p>
+<p class=AmmAnnexeTitre3>Affections du rein et des voies urinaires</p>
+<p class=AmmCorpsTexte>Fréquence inconnue : insuffisance rénale suite à une hypotension.</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmAnnexeTitre4>Troubles du système nerveux :</p>
+<p class=AmmCorpsTexte>Fréquence inconnue : hémorragie intraventriculaire (voir rubrique 4.4).</p>
+<p class=AmmAnnexeTitre4>Troubles congénitaux, familiaux et génétiques :</p>
+<p class=AmmCorpsTexte>Fréquence inconnue : persistance du canal artériel*** (voir rubriques 4.2, 4.4, 5.2 et 5.3).</p>
+<p class=AmmCorpsTexte>*** Les conséquences critiques de la persistance du canal artériel sont associées à la surcharge pulmonaire, qui entraîne un œdème pulmonaire et une hémorragie, et la diminution de la perfusion des organes, qui entraîne une hémorragie intraventriculaire et une entérocolite nécrosante potentiellement fatale, selon les données de la littérature.</p>
+<p class=AmmCorpsTexte>Les données de sécurité à long terme dans la population pédiatrique ne sont pas encore disponibles.</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte>De fortes doses de milrinone peuvent provoquer une hypotension et une arythmie cardiaque. Dans de telles circonstances, l'administration de la milrinone devra être interrompue jusqu'à stabilisation de l'état du patient.</p>
+<p class=AmmCorpsTexte>Il n'existe pas d'antidote connu de la milrinone. Des mesures générales d'assistance circulatoire devront être mises en place.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : STIMULANTS CARDIAQUES, code ATC : C01CE02.</a></p>
+<p class=AmmCorpsTexteGras>(C : système cardiovasculaire)</p>
+<p class=AmmCorpsTexte>La milrinone est une molécule originale associant des propriétés inotropes positives et une action vasodilatatrice directe. Sa structure et son mode d'action diffèrent de ceux des glucosides digitaliques et des catécholamines.</p>
+<p class=AmmCorpsTexte>Son mécanisme d'action n'est pas totalement élucidé ; les résultats expérimentaux montrent que la milrinone n'est pas un agoniste bêta-adrénergique et qu'elle n'inhibe pas l'activité de l'adénosine triphosphatase sodium-potassium ; elle inhibe l'AMPc phosphodiestérase et augmente le flux de calcium intracellulaire sans modifier les échanges transmembranaires Na<sup>+</sup>/Ca<sup>++</sup>.</p>
+<p class=AmmCorpsTexte>Chez les sujets atteints d'insuffisance cardiaque congestive, la milrinone améliore de façon rapide et significative le débit cardiaque, la pression capillaire pulmonaire, ainsi que les résistances vasculaires systémiques et pulmonaires sans augmentation significative de la fréquence cardiaque ou de la consommation d'oxygène par le myocarde.</p>
+<p class=AmmCorpsTexte>L'effet vasodilatateur de la milrinone, dû à son action myorelaxante directe sur le muscle lisse vasculaire, entraîne une diminution de la précharge et de la post charge.</p>
+<p class=AmmCorpsTexte>Dans ses conditions habituelles de prescription, la milrinone augmente le débit cardiaque de l'ordre de 25 à 40 % sans augmentation notable de la fréquence cardiaque ; la pression capillaire pulmonaire diminue dans les mêmes proportions et les résistances périphériques s'abaissent de 15 % à 30 %.</p>
+<p class=AmmCorpsTexte>Après administration intraveineuse de milrinone, l'effet thérapeutique apparaît en 5 à 15 min et l'amélioration des paramètres hémodynamiques se maintient tout au long de la perfusion intraveineuse continue.</p>
+<p class=AmmCorpsTexte>L'activité se maintient lorsqu'on répète les injections intraveineuses de milrinone et il n'a pas été mis en évidence de tachyphylaxie durant des périodes courtes (inférieures à 48 heures).</p>
+<p class=AmmCorpsTexte>La milrinone est efficace chez les sujets digitalisés et elle n'entraîne pas de signes de toxicité digitalique. En cas de flutter ou de fibrillation auriculaire, la milrinone pourrait parfois augmenter la fréquence ventriculaire en raison de la facilitation modérée de la conduction auriculo-ventriculaire qu'elle produit ; dans ce cas, un traitement préliminaire par la digitaline peut être envisagé.</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Une revue de la littérature a identifié des études cliniques incluant des patients traités pour un syndrome de bas débit cardiaque après une chirurgie cardiaque, un choc septique ou une hypertension pulmonaire. Les doses usuelles étaient une dose de charge de 50 à 75 microgrammes/kg administrée sur 30 à 60 minutes suivie d’une perfusion intraveineuse continue de 0,25 à 0,75 microgrammes/kg/min sur une période de temps allant jusqu’à 35 heures. Dans ces études, la milrinone a provoqué une augmentation du débit cardiaque, une diminution dans la pression de remplissage cardiaque, et une diminution dans la résistance pulmonaire systémique et pulmonaire, avec des modifications minimes au niveau de la fréquence cardiaque et la consommation d’oxygène myocardique.</p>
+<p class=AmmCorpsTexte>Les études concernant l’utilisation à long terme de milrinone ne sont pas suffisantes pour recommander une administration de la milrinone sur une période de temps de plus de 35 heures.</p>
+<p class=AmmCorpsTexte>Quelques études ont exploré l’utilisation pédiatrique de la milrinone chez des patients avec choc septique non hyperdynamique (Barton et al, 1996 ; Lindsay et al., 1998) ; l’effet de la milrinone sur l’hypertension pulmonaire post-pontage après réparation d’une tétralogie de Fallot (Chu et al., 2000) ; l’effet combiné de l’oxyde nitrique et de la milrinone sur la circulation pulmonaire après une procédure de type Fontan (Cai et al., 2008). Les résultats de ces études ne sont pas concluants. Par conséquent, l’utilisation de la milrinone dans ces indications n’est pas recommandée.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmCorpsTexte>Après administration d'un bolus intraveineux de 12,5 à 125 microgrammes/kg chez le patient en insuffisance cardiaque congestive, le volume de distribution de la milrinone est 0,38 l/kg, la demi-vie 2,3 h et la clairance 0,13 l/kg/h.</p>
+<p class=AmmCorpsTexte>Après administration d'une perfusion de 0,20 à 0,70 microgrammes/kg/min, le volume de distribution de la milrinone est d'environ 0,45 l/kg, la demi-vie d'élimination 2,4 h et la clairance 0,14 l/kg/h.</p>
+<p class=AmmCorpsTexte>70 % de la milrinone sont liés aux protéines plasmatiques.</p>
+<p class=AmmCorpsTexte>La voie principale d'élimination chez l'homme est la voie urinaire sous forme de milrinone inchangée (83 % des produits d'excrétion urinaire) et de son métabolite O-glucuronide (12 %). De très faibles quantités sont excrétées dans les fèces.</p>
+<p class=AmmCorpsTexte>L'excrétion urinaire chez le sujet normal est rapide, 60 % de la dose sont retrouvés dans les urines de 0 à 2 heures suivant l'administration et 90 % dans les urines de 0 à 8 heures. La clairance rénale de la milrinone est d'environ 0,3 l/min indiquant une sécrétion active.</p>
+<p class=AmmCorpsTexte>Insuffisance rénale : En cas d’insuffisance rénale, il y a une augmentation de la demi-vie d’élimination de la milrinone : il pourra donc être nécessaire de diminuer les doses de milrinone chez de tels sujets (voir rubrique 4.2).</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278934">Population pédiatrique</a></p>
+<p class=AmmCorpsTexte>La milrinone est éliminée plus rapidement chez l’enfant que chez l’adulte, mais les nourrissons ont une clairance significativement plus basse que les enfants, et les prématurés encore plus. Du fait de cette clairance plus rapide par rapport à l’adulte, les concentrations plasmatiques à l’équilibre de la milrinone sont plus basses chez l’enfant que chez l’adulte. Dans la population pédiatrique ayant une fonction rénale normale, les concentrations plasmatiques de la milrinone à l’équilibre après 6 à 12 heures de perfusion continue de 0,5 à 0,75 microgrammes/kg/min sont autour de 100 à 300 nanogrammes/ml.</p>
+<p class=AmmCorpsTexte>Après une perfusion intraveineuse de 0,5 à 0,75 microgrammes/kg/min chez des nouveau-nés, des nourrissons et des enfants ayant subi une chirurgie à cœur ouvert, le volume de distribution de la milrinone est de 0,35 à 0,9 litres/kg sans différence significative entre les différents groupes d’âge. Après une perfusion intraveineuse de 0,5 microgrammes/kg/min chez des prématurés pour prévenir un faible écoulement systémique après la naissance, le volume de distribution de la milrinone est d’environ 0,5 litres/kg.</p>
+<p class=AmmCorpsTexte>Plusieurs études pharmacocinétiques ont montré que, dans la population pédiatrique, l’augmentation de la clairance augmente avec l’âge. Les nourrissons ont une clairance significativement plus basse que les enfants (3,4 à 3,8 ml/kg/min versus 5,9 à 6,7 ml/kg/min). La clairance de la milrinone est d’environ 1,64 ml/kg/min chez les nouveau-nés, et est même plus basse chez les prématurés (0,64 ml/kg/min).</p>
+<p class=AmmCorpsTexte>La milrinone a une demi-vie terminale moyenne de 2 à 4 heures chez les nourrissons et les enfants et une demi-vie d’élimination terminale moyenne de 10 heures chez les prématurés.</p>
+<p class=AmmCorpsTexte>On peut en conclure que la dose optimale de milrinone dans la population pédiatrique nécessaire pour obtenir des concentrations plasmatiques au-dessus du seuil d’efficacité pharmacodynamique semble plus élevée que chez les adultes, mais qu’elle semble plus basse chez les prématurés que chez les enfants.</p>
+<p class=AmmAnnexeTitre4>Persistance du canal artériel :</p>
+<p class=AmmCorpsTexte>La milrinone a une élimination rénale et un volume de distribution restreint à l’espace extracellulaire, ce qui signifie que la surcharge en fluides et les changements hémodynamiques associés à la persistance du canal artériel peuvent avoir un effet sur la distribution et l’élimination de la milrinone (voir rubriques 4.2, 4.4, 4.8 et 5.3).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmAnnexeTitre4>Animaux juvéniles :</p>
+<p class=AmmCorpsTexte>Une étude préclinique a été réalisée pour comparer les effets vasodilatateurs des inhibiteurs de la phosphodiestérase 3 sur le canal artériel de bébés rats nés proches du terme, de fœtus de rats proches du terme et de prématurés. La dilatation post-natale du canal artériel par la milrinone a été étudiée avec 3 doses (10, 1 et 0,1 mg/kg). Les effets vasodilatateurs de la milrinone sur le canal artériel fœtal en vasoconstriction induite par l’indométacine ont été étudiés par administration simultanée de milrinone (10, 1 et 0,1 mg/kg) et d’indométacine (10 mg/kg) à la rate au jour 21 (proche du terme) et au jour 19 (pré terme). Cette étude <i>in vivo</i> a montré que la milrinone induit une dilatation dose-dépendante du canal artériel fœtal et post-natal en vasoconstriction. Les effets vasodilatateurs ont été plus importants lorsque l’injection a été faite immédiatement après la naissance plutôt qu’une heure après la naissance. De plus, l’étude a montré que le canal artériel des prématurés est plus sensible à la milrinone que le canal artériel des bébés rats à terme (voir rubriques 4.2, 4.4, 4.8 et 5.2).</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937">Acide lactique, dextrose anhydre, hydroxyde de sodium et/ou acide lactique, eau pour préparations injectables.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">En l’absence d’études de compatibilité, ce médicament ne doit pas être mélangé avec d’autres médicaments à l’exception de ceux mentionnés dans la rubrique 4.2.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278939"><u>Avant ouverture :</u></a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Pour le conditionnement en ampoule : 3 ans.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Pour le conditionnement en flacon : 3 ans.</p>
+<p class=AmmCorpsTexte><u>Après ouverture :</u> le produit doit être utilisé immédiatement.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940"><span lang=FR-BE>A conserver à température ambiante (15°C à 25°C).</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte>Ampoule (verre) de 10 ml. Boîte de 10.</p>
+<p class=AmmCorpsTexte>Flacon (verre) de 10 ml. Boîte de 1, 2, 3 ou 10.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Pas d’exigences particulières.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142278943">SANOFI WINTHROP INDUSTRIE</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>82 AVENUE RASPAIL</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>94250 GENTILLY</p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><a name="_Toc142278944"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 556 022 9 3 : 10 ml en ampoule (verre). Boîte de 10.</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 564 614 9 3 : 10 ml en flacon (verre). Boîte de 1.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 564 615 5 4 : 10 ml en flacon (verre). Boîte de 2.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 564 616 1 5 : 10 ml en flacon (verre). Boîte de 3.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol;text-transform:uppercase'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 564 617 8 3 : 10 ml en flacon (verre). Boîte de 10</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I.</p>
+<p class=AmmCorpsTexte>Médicament réservé à l’usage hospitalier.</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_COROTROPE_10_mg/10_ml,_solution_injectable_IV_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE COROTROPE 10 mg/10 ml, solution injectable IV ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE COROTROPE 10 mg/10 ml, solution injectable IV ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_COROTROPE_10_mg/10_ml,_solution_injectable_IV_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER COROTROPE 10 mg/10 ml, solution injectable IV ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER COROTROPE 10 mg/10 ml, solution injectable IV ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_UTILISER_COROTROPE_10_mg/10_ml,_solution_injectable_IV_?"
+                     aria-label="3. COMMENT UTILISER COROTROPE 10 mg/10 ml, solution injectable IV ? (Lien de redirection)">
+                    3. COMMENT UTILISER COROTROPE 10 mg/10 ml, solution injectable IV ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_COROTROPE_10_mg/10_ml,_solution_injectable_IV_?"
+                     aria-label="5. COMMENT CONSERVER COROTROPE 10 mg/10 ml, solution injectable IV ? (Lien de redirection)">
+                    5. COMMENT CONSERVER COROTROPE 10 mg/10 ml, solution injectable IV ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : COROTROPE 10 mg/10 ml, solution injectable IV - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="COROTROPE 10 mg/10 ml, solution injectable IV, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 30/06/2025</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'><a name="_Toc142278999">COROTROPE 10 mg/10 ml, solution injectable IV</a></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Milrinone</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279000"><span lang=FR-BE>Veuillez lire attentivement cette notice avant de prendre ce médicament car elle contient des informations importantes pour vous.</span></a></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin ou votre pharmacien.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que COROTROPE 10 mg/10 ml, solution injectable IV et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant d’utiliser COROTROPE 10 mg/10 ml, solution injectable IV ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment utiliser COROTROPE 10 mg/10 ml, solution injectable IV ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver COROTROPE 10 mg/10 ml, solution injectable IV ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_COROTROPE_10_mg/10_ml,_solution_injectable_IV_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE COROTROPE 10 mg/10 ml, solution injectable IV ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279003">Classe pharmacothérapeutique : STIMULANTS CARDIAQUES, code ATC : C01CE02</a></p>
+<p class=AmmCorpsTexte>(C : système cardiovasculaire)</p>
+<p class=AmmCorpsTexte><a name="_Toc142279004">COROTROPE est un stimulant cardiaque, utilisé seulement chez les patients hospitalisés dans une unité de soins intensifs :</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>chez l’adulte pour traiter l’insuffisance cardiaque aiguë congestive (quand le cœur ne peut pas pomper assez de sang du reste du corps),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>chez l’enfant pour traiter sur une courte période (jusqu’à 35 heures) l’insuffisance cardiaque congestive sévère (quand le cœur a des difficultés pour pomper le sang du corps), si d’autres médicaments n’ont pas été efficaces,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol;text-transform:uppercase'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>chez l’enfant après une opération du cœur, pour traiter sur une courte période (jusqu’à 35 heures) l’insuffisance cardiaque, c’est-à-dire quand son cœur a des difficultés pour pomper le sang de son corps.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_COROTROPE_10_mg/10_ml,_solution_injectable_IV_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER COROTROPE 10 mg/10 ml, solution injectable IV ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">N’utilisez jamais COROTROPE 10 mg/10 ml, solution injectable IV :</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique à la milrinone ou à l’un des autres composants contenus dans ce médicament, mentionnés dans la rubrique 6,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous souffrez d’une obstruction valvulaire cardiaque sévère (valvulopathie aortique ou pulmonaire obstructive), </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si votre insuffisance cardiaque est due à un élargissement anormal des cellules du muscle cardiaque (cardiomyopathie obstructive hypertrophique), </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous souffrez d’une dilatation circonscrite de la paroi du ventricule (anévrisme ventriculaire), </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous souffrez d’un déficit hydrique sévère, non traité auparavant,</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si votre volume sanguin a diminué de façon importante (hypovolémie sévère). Cela peut engendrer des symptômes plus ou moins graves tels qu’une pâleur de la peau, notamment des lèvres, une baisse de la pression artérielle, une accélération du rythme cardiaque, ou une perte de connaissance,</p>
+<p class=AmmListePuces1 style='margin-bottom:12.0pt;text-align:justify'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez été victime d’une crise cardiaque aiguë. </p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-align:justify;text-indent:0cm'>Ne prenez pas non plus COROTROPE 10 mg/10 ml, solution injectable IV si votre insuffisance cardiaque est due à une hyperthyroïdie, une myocardite aiguë ou une certaine forme de cardiomyopathie (cardiomyopathie amyloïde), compte tenu d’une expérience thérapeutique insuffisante en la matière.</p>
+<p class=AmmCorpsTexteGras style='margin-top:12.0pt'>Avertissements et précautions</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Adressez-vous à votre médecin ou votre pharmacien avant d’utiliser </span>COROTROPE 10 mg/10 ml, solution injectable IV<span lang=FR-BE>. </span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>L’utilisation de COROTROPE n’est pas recommandée en cas d’infarctus du myocarde en phase aiguë (« crise cardiaque »).</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous souffrez d’insuffisance rénale sévère (défaillance des fonctions des reins), prévenez votre médecin.</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Il est possible que surviennent une hypotension et des troubles du rythme cardiaque (tachycardie, arythmie supraventriculaire et ventriculaire). C’est pourquoi votre médecin contrôlera tout au long du traitement votre pression artérielle, votre fréquence cardiaque et votre électrocardiogramme.</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:35.85pt;text-align:justify'><span lang=FR-BE>Il sera particulièrement vigilant :</span></p>
+<p class=AmmListePuces2 style='text-align:justify;page-break-after:auto'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span><span lang=FR-BE>Si vous présentez une diminution importante de la pression artérielle pendant le traitement. La perfusion devra être arrêtée jusqu’au retour à la normale, puis reprise à un débit plus faible si nécessaire.</span></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt'><span lang=FR-BE>Vous ne pourrez pas prendre COROTROPE si vous avez une hypotension avant de commencer ce traitement.</span></p>
+<p class=AmmListePuces2 style='text-align:justify;page-break-after:auto'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span><span lang=FR-BE>Si vous présentez un risque élevé de troubles du rythme cardiaque.</span></p>
+<p class=AmmListePuces2 style='text-align:justify;page-break-after:auto'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span><span lang=FR-BE>Si vous souffrez d’insuffisance cardiaque (défaillance des fonctions du muscle cardiaque), car le risque de trouble du rythme cardiaque peut être augmenté par l'association à d'autres médicaments.</span></p>
+<p class=AmmListePuces2 style='text-align:justify;page-break-after:auto'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span><span lang=FR-BE>Si vous présentez un trouble du rythme cardiaque (flutter ou fibrillation), un traitement préalable pourra vous être administré.</span></p>
+<p class=AmmListePuces2 style='margin-bottom:6.0pt;text-align:justify; page-break-after:auto'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span><span lang=FR-BE>Si vous avez reçu précédemment un traitement diurétique intensif (traitement qui augmente la sécrétion d’urine et qui est utilisé notamment pour traiter l’hypertension artérielle).</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Avant et pendant le traitement, votre médecin devra surveiller également :</p>
+<p class=AmmListePuces2 style='text-align:justify;page-break-after:auto'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span><span lang=FR-BE>Votre équilibre hydro-électrolytique (eau et sels minéraux de l’organisme).</span></p>
+<p class=AmmListePuces2 style='text-align:justify;page-break-after:auto'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span><span lang=FR-BE>Votre bilan sanguin.</span></p>
+<p class=AmmListePuces2 style='text-align:justify;page-break-after:auto'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span><span lang=FR-BE>Votre créatininémie (test sanguin qui permet de vérifier le bon fonctionnement des reins).</span></p>
+<p class=AmmListePuces2 style='margin-bottom:6.0pt;text-align:justify; page-break-after:auto'><span lang=FR-BE style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span><span lang=FR-BE>Le point d’injection. En effet, des cas de réactions au point d’injection ont été constatés.</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ce médicament étant administré par injection intraveineuse, il peut être utilisé si vous êtes intolérant au glucose.</p>
+<p class=AmmCorpsTexteGras>Enfants </p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Les informations suivantes doivent être aussi considérées.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Avant de faire une perfusion de COROTROPE à votre enfant, votre médecin devra vérifier de nombreux paramètres tels que le rythme cardiaque et la pression sanguine. Des tests sanguins seront aussi réalisés.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La perfusion ne commencera que si le rythme cardiaque et la pression sanguine de votre enfant sont stables.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Vous devez prévenir votre médecin si :</p>
+<p class=AmmListePuces2 style='page-break-after:auto'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Votre enfant a des problèmes rénaux,</p>
+<p class=AmmListePuces2 style='page-break-after:auto'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Votre enfant est un prématuré ou a un faible poids de naissance,</p>
+<p class=AmmListePuces2 style='page-break-after:auto'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Votre enfant a un problème cardiaque appelé « persistance du canal artériel » c’est-à-dire une communication entre 2 vaisseaux sanguins majeurs (l’aorte et l’artère pulmonaire) qui persiste alors qu’elle devrait être fermée.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><span style='font-weight: normal'>Dans ces cas, votre médecin décidera si votre enfant sera traité avec COROTROPE.</span></p>
+<p class=AmmCorpsTexteGras>Autres médicaments et COROTROPE 10 mg/10 ml, solution injectable IV</p>
+<p class=AmmCorpsTexte>Informez votre médecin ou votre pharmacien si vous prenez ou avez récemment pris ou pourriez prendre tout autre médicament.</p>
+<p class=AmmCorpsTexteGras>COROTROPE 10 mg/10 ml, solution injectable IV avec des aliments et boissons</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279012">Grossesse et allaitement </a></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE style='font-weight:normal'>Si vous êtes enceinte ou souhaitez le devenir ou si vous allaitez, signalez-le à votre médecin qui lui seul décidera si vous pouvez recevoir ou continuer à recevoir COROTROPE.</span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE style='font-weight:normal'>D’une façon générale, il convient de demander conseil à votre médecin ou à votre pharmacien avant de prendre tout médicament.</span></p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras>COROTROPE 10 mg/10 ml, solution injectable IV contient du sodium.</p>
+<p class=AmmCorpsTexte>Ce médicament contient 13,225 mg de sodium (composant principal du sel de cuisine/table) par ampoule/flacon de 10 ml. Cela équivaut à 0,66% de l’apport alimentaire quotidien maximal recommandé de sodium pour un adulte.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_UTILISER_COROTROPE_10_mg/10_ml,_solution_injectable_IV_?'>3. COMMENT UTILISER COROTROPE 10 mg/10 ml, solution injectable IV ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279021">COROTROPE ne peut être utilisé qu’en milieu hospitalier dans une unité de soins intensifs.</a></p>
+<p class=AmmCorpsTexte>Il vous sera donc administré par un professionnel de santé.</p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Posologie</span></p>
+<p class=AmmCorpsTexte>Dans tous les cas, l’ordonnance devra être strictement respectée et la posologie ne devra pas être modifiée sans avis médical.</p>
+<p class=AmmCorpsTexte><u>Utilisation chez les adultes :</u></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Le traitement débutera par une injection intraveineuse rapide et se poursuivra par une perfusion continue.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous souffrez d’une maladie des reins (insuffisance rénale), votre médecin peut être amené à diminuer les quantités administrées.</span></p>
+<p class=AmmCorpsTexte><u>Utilisation chez les enfants :</u></p>
+<p class=AmmCorpsTexte>Votre médecin devra donner à votre enfant une 1<sup>ère</sup> dose sur une période de 30 à 60 minutes.</p>
+<p class=AmmCorpsTexte>Cette dose sera alors suivie par une perfusion continue.</p>
+<p class=AmmCorpsTexte>COROTROPE peut être donné sur une période de temps allant jusqu’à 35 heures.</p>
+<p class=AmmCorpsTexte>Pendant la perfusion, votre enfant sera surveillé de près (voir aussi la rubrique « Avertissements et précautions »).</p>
+<p class=AmmCorpsTexte>Pour plus d'informations, voir la rubrique « Informations exclusivement destinées aux professionnels de santé ».</p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Mode d'administration</span></p>
+<p class=AmmCorpsTexte>COROTROPE sera administré par voie intraveineuse (injecté dans une veine).</p>
+<p class=AmmCorpsTexteGras>Si vous avez utilisé plus de COROTROPE 10 mg/10 ml, solution injectable IV que vous n’auriez dû :</p>
+<p class=AmmCorpsTexte>Consultez immédiatement votre médecin ou votre pharmacien.</p>
+<p class=AmmCorpsTexte>Pour plus d’informations, voir rubrique 7.</p>
+<p class=AmmCorpsTexte>Si vous avez d’autres questions sur l’utilisation de ce médicament, demandez plus d’informations à votre médecin ou à votre pharmacien.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez d’utiliser COROTROPE 10 mg/10 ml, solution injectable IV :</p>
+<p class=AmmCorpsTexte><a name="_Toc142279020">Sans objet.</a></p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez d’utiliser COROTROPE 10  mg/10 ml, solution injectable IV :</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</a></p>
+<p class=AmmCorpsTexteGras>Les plus fréquemment rapportés sont :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>troubles du rythme cardiaque (arythmies supraventriculaires, extrasystoles ventriculaires, tachycardie ventriculaire),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>baisse de la pression sanguine (hypotension),</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>maux de tête.</p>
+<p class=AmmCorpsTexteGras>Peu fréquemment :</p>
+<p class=AmmListePuces1 style='text-align:justify;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>baisse du taux de plaquettes dans le sang (thrombopénie),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>tremblements,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>fibrillation ventriculaire (trouble du rythme cardiaque, pouvant causer un arrêt cardiaque),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>baisse du taux de potassium dans le sang (hypokaliémie),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>anomalies des tests évaluant l'état et le fonctionnement du foie,</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>angine de poitrine, douleur dans la poitrine.</p>
+<p class=AmmCorpsTexteGras>Très rarement :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>réaction allergique grave mettant le patient en danger avec malaise brutal et baisse importante de la tension artérielle, pouvant être précédée d’une éruption de boutons, de démangeaisons, de rougeurs sur la peau, d’une difficulté à respirer, d’un gonflement du visage et/ou du cou (choc anaphylactique),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>troubles du rythme cardiaque graves (torsades de pointes),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>difficulté à respirer (bronchospasme),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>éruptions cutanées (rougeurs sur la peau...),</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>réactions au point d’injection.</p>
+<p class=AmmCorpsTexteGras>Fréquence inconnue :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>diminution des globules rouges et/ou des concentrations de l’hémoglobine.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>maladie des reins (insuffisance rénale), suite à une hypotension.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>En plus des effets indésirables observés chez les adultes, les effets suivants ont été rapportés chez les enfants (fréquence inconnue) :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>saignement dans le cerveau (hémorragie intraventriculaire),</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>problème cardiaque appelé persistance du canal artériel : communication entre 2 vaisseaux sanguins majeurs (l’aorte et l’artère pulmonaire) qui persiste alors qu’elle devrait être fermée. Ceci peut causer des excès de fluides dans les poumons, des saignements, une destruction des intestins ou d’une partie des intestins et peut être fatal.</p>
+<p class=AmmCorpsTexte>De plus, chez les enfants, comparativement aux adultes :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>la diminution du nombre de plaquettes dans le sang (thrombocytopénie) semble se produire plus souvent,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>le risque de survenue d’effets indésirables augmente en fonction du temps de perfusion de COROTROPE,</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>les troubles du rythme cardiaque semblent survenir moins souvent.</p>
+<p class=AmmCorpsTexteGras>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien ou à votre infirmier/ère. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_COROTROPE_10_mg/10_ml,_solution_injectable_IV_?'>5. COMMENT CONSERVER COROTROPE 10 mg/10 ml, solution injectable IV ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026"></a><a name="_Toc142279024">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas ce médicament après la date de péremption indiquée sur l’emballage après « EXP ». La date de péremption fait référence au dernier jour de ce mois.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>À conserver à température ambiante (15° C à 25° C).</span></p>
+<p class=AmmCorpsTexte><u><span lang=FR-BE>Après ouverture</span></u><span lang=FR-BE> : le produit doit être utilisé immédiatement.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout <span style='color:black'>ou avec </span>les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient COROTROPE 10 mg/10 ml, solution injectable IV</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est :</p>
+<p class=AmmComposition style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt'>Milrinone.......................................................................................................................... 10 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour 10 ml de solution.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont : </p>
+<p class=AmmComposition style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt'>Acide lactique, dextrose anhydre, hydroxyde de sodium et/ou acide lactique, eau pour préparations injectables.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que COROTROPE 10 mg/10 ml, solution injectable IV et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>Ce médicament se présente sous forme de solution injectable.</p>
+<p class=AmmCorpsTexte>Boîte de 10 ampoules.</p>
+<p class=AmmCorpsTexte>Boîte de 1, 2, 3 ou 10 flacons.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279031">SANOFI WINTHROP INDUSTRIE </a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>82 AVENUE RASPAIL</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>94250 GENTILLY</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><b>SANOFI WINTHROP INDUSTRIE</b></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>82 AVENUE RASPAIL</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>94250 GENTILLY</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279033">GLAXO WELLCOME PRODUCTION</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>1, <span style='text-transform:uppercase'>rue de l'Abbaye</span></p>
+<p class=AmmCorpsTexte>76960 NOTRE DAME DE BONDEVILLE</p>
+<p class=AmmCorpsTexte>ou</p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>DELPHARM DIJON</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>6, <span style='text-transform:uppercase'>boulevard de l'Europe</span></p>
+<p class=AmmCorpsTexte>21800 QUETIGNY</p>
+<p class=AmmCorpsTexte>ou</p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>SANOFI WINTHROP INDUSTRIE</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>1, R<span style='text-transform:uppercase'>ue de la Vierge</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>AMBARES ET LAGRAVE</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>33565 CARBON BLANC CEDEX</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+<p class=AmmCorpsTexteGras>INFORMATIONS EXCLUSIVEMENT DESTINÉES AUX PROFESSIONNELS DE SANTÉ</p>
+<p class=AmmCorpsTexte>L’utilisation de la milrinone injectable ne pourra être envisagée <u>que chez des patients hospitalisés dans une unité de soins intensifs</u> et soumis à un contrôle continu hémodynamique.</p>
+<p class=AmmCorpsTexteGras>Posologie</p>
+<p class=AmmCorpsTexte>Le traitement par la milrinone intraveineuse débutera d’abord par une dose de charge de 50 microgrammes/kg en 10 min environ, suivie d’une perfusion continue de 0,375 à 0,750 microgrammes/kg/min.</p>
+<p class=AmmCorpsTexte>La posologie sera ajustée de façon à obtenir un effet hémodynamique maximum sans toutefois dépasser une dose totale de 1,13 mg/kg/jour.</p>
+<p class=AmmCorpsTexte>La durée du traitement réalisée au cours des essais a été de 48 heures.</p>
+<p class=AmmCorpsTexte><u>Population pédiatrique :</u></p>
+<p class=AmmCorpsTexte>Dans les études publiées, les doses choisies pour les nourrissons et les enfants étaient :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Dose de charge intraveineuse : 50 à 75 microgrammes/kg administrée sur 30 à 60 minutes.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Perfusion continue intraveineuse : à initier sur la base de la réponse hémodynamique et la survenue possible d’effets indésirables entre 0,25 à 0,75 microgrammes/kg/min sur une période de temps allant jusqu’à 35 heures.</p>
+<p class=AmmCorpsTexte>Dans les études cliniques du syndrome de bas débit cardiaque chez les nourrissons et les enfants de moins de 6 ans après une chirurgie correctrice d’une maladie cardiaque congénitale, une dose de charge de 75 microgrammes/kg sur 60 minutes suivie par une perfusion de 0,75 microgrammes/kg/min pendant 35 heures réduisent significativement le risque de développement de syndrome de bas débit cardiaque.</p>
+<p class=AmmCorpsTexte>Les résultats des études de pharmacocinétiques (voir rubrique 5.2 du RCP) ont été pris en considération.</p>
+<p class=AmmCorpsTexte><u>Insuffisance rénale :</u></p>
+<p class=AmmCorpsTexte>Du fait du manque de données, l’utilisation de COROTROPE n’est pas recommandée dans la population pédiatrique souffrant d’insuffisance rénale (<u>voir rubrique 4.4 du RCP pour plus d’informations).</u></p>
+<p class=AmmCorpsTexte>Persistance du canal artériel :</p>
+<p class=AmmCorpsTexte>Si l’utilisation de COROTROPE est souhaitable chez les prématurés et les enfants à terme à risque de/ou souffrant de persistance du canal artériel, la nécessité du traitement doit être évaluée en fonction des risques potentiels (voir rubriques 4.4, 4.8, 5.2 et 5.3 du RCP).</p>
+<p class=AmmCorpsTexte><u>Ajustement posologique chez les insuffisants rénaux :</u></p>
+<p class=AmmCorpsTexte>Un ajustement posologique est nécessaire. L’ajustement posologique chez les insuffisants rénaux est basé sur des données obtenues avec des patients souffrant fréquemment d’insuffisance rénale mais sans insuffisance cardiaque congestive, qui montrent une augmentation significative de la demi-vie d’élimination terminale de la milrinone. La dose de charge n’est pas affectée, mais une diminution de la dose d’entretien peut être nécessaire en fonction de la sévérité de l’insuffisance rénale (fonction de la clairance de la créatinine) (voir tableau ci-dessous).</p>
+<div align=center>
+<div class='fr-table--lg fr-table'><table>
+<tr style='height:17.4pt'>
+<td width=291 valign=top style='width:218.05pt;border:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:17.4pt'>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Clairance de la créatinine (ml/min/1,73 m<sup>2</sup>)</p>
+</td>
+<td width=302 valign=top style='width:8.0cm;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:17.4pt'>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Débit de perfusion (microgrammes/kg/min)</p>
+</td>
+</tr>
+<tr style='height:9.3pt'>
+<td width=291 style='width:218.05pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:9.3pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>5</p>
+</td>
+<td width=302 style='width:8.0cm;border-top:none;border-left:none;border-bottom:
+solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+height:9.3pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>0,20</p>
+</td>
+</tr>
+<tr style='height:9.3pt'>
+<td width=291 style='width:218.05pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:9.3pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>10</p>
+</td>
+<td width=302 style='width:8.0cm;border-top:none;border-left:none;border-bottom:
+solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+height:9.3pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>0,23</p>
+</td>
+</tr>
+<tr style='height:9.3pt'>
+<td width=291 style='width:218.05pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:9.3pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>20</p>
+</td>
+<td width=302 style='width:8.0cm;border-top:none;border-left:none;border-bottom:
+solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+height:9.3pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>0,28</p>
+</td>
+</tr>
+<tr style='height:9.3pt'>
+<td width=291 style='width:218.05pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:9.3pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>30</p>
+</td>
+<td width=302 style='width:8.0cm;border-top:none;border-left:none;border-bottom:
+solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+height:9.3pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>0,33</p>
+</td>
+</tr>
+<tr style='height:9.3pt'>
+<td width=291 style='width:218.05pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:9.3pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>40</p>
+</td>
+<td width=302 style='width:8.0cm;border-top:none;border-left:none;border-bottom:
+solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+height:9.3pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>0,38</p>
+</td>
+</tr>
+<tr style='height:9.3pt'>
+<td width=291 style='width:218.05pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:9.3pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>50</p>
+</td>
+<td width=302 style='width:8.0cm;border-top:none;border-left:none;border-bottom:
+solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+height:9.3pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>0,43</p>
+</td>
+</tr>
+</table></div>
+</div>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt;page-break-after:avoid'>Mode et voie d’administration</p>
+<p class=AmmCorpsTexte>Voie intraveineuse.</p>
+<p class=AmmCorpsTexte>La milrinone intraveineuse peut être administrée pure ou diluée dans du sérum glucosé à 5 %.</p>
+<p class=AmmCorpsTexte>La perfusion de milrinone sera établie à l’aide d’une pompe à débit constant reliée à une aiguille ou à un cathéter placé dans une veine aussi grosse que possible.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><u>Pour ouvrir l’ampoule :</u></p>
+<p class=AmmCorpsTexte>Tenez fermement l’ampoule, le point coloré face à vous (schéma 1).</p>
+<p class=AmmCorpsTexte>Saisissez la tête de l’ampoule entre le pouce et l’index (le pouce sur le point coloré), puis exercez une pression vers l’arrière (schémas 2 et 3).</p>
+<div class='fr-table--lg fr-table'><table>
+<tr>
+<td width=614 valign=top style='width:460.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><img width=410 height=158 src="/images/N0435534/image003.gif" align=left hspace=12 alt="SCHE&#769;MAs"></p>
+</td>
+</tr>
+</table></div>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Si vous avez injecté plus de COROTROPE que vous n’auriez dû</p>
+<p class=AmmCorpsTexte>De fortes doses de milrinone peuvent provoquer une hypotension et une arythmie cardiaque. Dans de telles circonstances, l’administration de la milrinone devra être interrompue jusqu’à stabilisation de l’état du patient.</p>
+<p class=AmmCorpsTexte>Il n’existe pas d’antidote connu de la milrinone. Des mesures générales d’assistance circulatoire devront être mises en place, si nécessaire.</p>
+</div>
+</BODY>
+</HTML>
+
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

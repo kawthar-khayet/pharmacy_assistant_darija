@@ -1,0 +1,1574 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="lHF6LITqdc4BLVsdgXu+PQ==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="lHF6LITqdc4BLVsdgXu+PQ==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 29/09/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant THYROZOL 10 mg, comprimé pelliculé sécable"
+            aria-level="3"
+          >
+            THYROZOL 10 mg, comprimé pelliculé sécable
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament THYROZOL 10 mg, comprimé pelliculé sécable - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                      </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 23/02/2009
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : THYROZOL 10 mg, comprimé pelliculé sécable - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0402656">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte><a name="_Toc142279003">Classe pharmacothérapeutique - code ATC : H03BB02</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279004">Ce médicament contient du thiamazole. Il permet de maîtriser la surproduction d’hormones thyroïdiennes dans la glande thyroïde, indépendamment de sa cause.</a></p>
+<p class=AmmCorpsTexte>On utilise Thyrozol pour traiter la surproduction d’hormones thyroïdiennes :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous devez prendre un médicament pour traiter une glande thyroïde produisant trop d’hormones, en particulier si vous avez un goitre (gonflement en avant du cou) de petite taille ou si vous n’avez pas de goitre,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous allez être opéré de la glande thyroïde,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous allez avoir un traitement utilisant de l’iode radioactif, en particulier dans les cas graves de surproduction d’hormone thyroïdienne,</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>après un traitement par l’iode radioactif jusqu’à ce que l’iode radioactif agisse complètement.</p>
+<p class=AmmCorpsTexte>Thyrozol est aussi utilisé pour empêcher une surproduction d'hormones thyroïdiennes avant une exposition à l'iode, comme lors d’un examen utilisant un milieu de contraste contenant de l'iode :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez une légère surproduction d’hormones thyroïdiennes sans autres symptômes,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si votre glande thyroïde a des zones productrices d’hormone (adénome autonome),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez déjà eu une surproduction d’hormones thyroïdiennes.</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament n'appartient à aucun groupe générique</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Comprimé ( Composition pour un comprimé )<ul role="list"><li role="listitem" style="list-style-type: none;"> > thiamazole<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">10 mg </span></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > plaquette(s) PVC-Aluminium de 30 comprimé(s)  </p><p>Code CIP : 391 119-1 ou 34009 391 119 1 9<br/>Déclaration de commercialisation : 14/09/2009<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 3,15 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 4,17 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :65%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><div class='fr-grid-row'><div class='fr-col'><p>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence. </p></div></div><div class='fr-grid-row'><div class='fr-col'><p>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprès de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-smr-aide-2'>plus d'informations dans l'aide</a>). Les avis et synthèses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-smr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection à la page d'aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'SMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur du SMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3098056'>Avis du 12/06/2019</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 12/06/2019 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Renouvellement d'inscription (CT)</td><td class='text-align-center'>Le service médical rendu par THYROZOL reste important dans les indications de l’AMM. ;</td></tr></tbody></table></div></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence.</p></div></div><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprés de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-asmr-aide-3'>plus d'informations dans l'aide</a>). Les avis et synthéses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-asmr-aide-3' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers la page aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'ASMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur de l'ASMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td class="text-align-center">V (Inexistant)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/c_808782'>Avis du 13/05/2009</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 13/05/2009 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Inscription (CT)</td><td class="text-align-center">Ces spécialités n'apportent pas d'amélioration du service médical rendu (ASMR V) par rapport aux autres anti-thyroïdiens de synthèse disponibles.</td></tr></tbody></table></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : MERCK SANTE</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure de reconnaissance mutuelle</li><li>Code CIS : &nbsp;6 996 942 5</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : THYROZOL 10 mg, comprimé pelliculé sécable - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="THYROZOL 10 mg, comprimé pelliculé sécable, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 11/04/2023</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras>THYROZOL 10 mg, comprimé pelliculé sécable</p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Thiamazole............................................................................................................................. 10 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un comprimé pelliculé.</p>
+<p class=AmmCorpsTexte>Excipient à effet notoire : contient 195 mg de lactose par comprimé, voir rubrique 4.4.</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Comprimé pelliculé sécable.</a></p>
+<p class=AmmCorpsTexte>Comprimé pelliculé rond, biconvexe, gris orangé, avec un sillon de sécabilité de chaque côté. </p>
+<p class=AmmCorpsTexte>Le comprimé peut être divisé en doses égales.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">Traitement de l’hyperthyroïdie, notamment :</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>traitement conservateur (médical) de l’hyperthyroïdie, en particulier en l’absence de goitre ou en cas de goitre de petite taille,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>préparation à la chirurgie pour toutes les formes d’hyperthyroïdie,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>préparation du traitement à l’iode radioactif, en particulier chez les patients atteints d’hyperthyroïdie grave,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>traitement intermédiaire après un traitement à l’iode radioactif,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>traitement prophylactique pour les patients atteints d’hyperthyroïdie subclinique, d’adénomes autonomes, ou présentant des antécédents d’hyperthyroïdie et pour lesquels une exposition à l’iode est indispensable (par exemple réalisation d’un examen utilisant un milieu de contraste contenant de l’iode).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmCorpsTexte>Le thiamazole est le métabolite actif du carbimazole, mais 1 mg de thiamazole n’est pas équivalent à 1 mg de carbimazole. Il convient d’en tenir compte lorsque l’on commence un traitement par le thiamazole ou en cas de passage du carbimazole au thiamazole. Les recommandations posologiques suivantes doivent être respectées.</p>
+<p class=AmmAnnexeTitre3>Posologie</p>
+<p class=AmmAnnexeTitre4>Adultes</p>
+<p class=AmmCorpsTexte>Selon la gravité de la maladie et l’apport en iode, on commence habituellement le traitement à des doses quotidiennes de thiamazole comprises entre 10 et 40 mg. Dans de nombreux cas, l’inhibition de la production d’hormones thyroïdiennes peut habituellement être atteinte avec des doses initiales de 20 à 30 mg de thiamazole par jour. Dans des cas moins graves, la dose inhibitrice complète n’est pas toujours nécessaire et on peut donc utiliser une dose initiale plus faible. Dans les cas graves d’hyperthyroïdie, une dose initiale de 40 mg de thiamazole peut être nécessaire.</p>
+<p class=AmmCorpsTexte>La dose est ajustée au cas par cas en fonction de l’état métabolique du patient, comme l’indique l’évolution du statut des hormones thyroïdiennes.</p>
+<p class=AmmCorpsTexte>Pour le traitement d’entretien, l’une des possibilités de traitement suivantes est recommandée :</p>
+<p class=AmmCorpsTexte style='margin-left:21.3pt;text-indent:-21.3pt'>a) dose d’entretien quotidienne de 5 à 20 mg de thiamazole en combinaison avec de la lévothyroxine pour éviter l’hypothyroïdie,</p>
+<p class=AmmCorpsTexte style='margin-left:21.3pt;text-indent:-21.3pt'>b) monothérapie avec des doses quotidiennes de 2,5 à 10 mg de thiamazole.</p>
+<p class=AmmCorpsTexte>En cas d’hyperthyroïdie induite par l’iode, les doses nécessaires peuvent être plus fortes. </p>
+<p class=AmmAnnexeTitre4>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Utilisation chez les enfants et les adolescents (âgés de 3 à 17 ans)</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>La posologie initiale pour le traitement des enfants et des adolescents (âgés de 3 à 17ans) doit être adaptée en fonction du poids corporel des patients. Habituellement, le traitement est initié avec une dose quotidienne de 0,5 mg / kg, répartie en deux ou trois prises à doses égales. Pour le traitement d’entretien, la dose quotidienne peut être réduite et administrée en une seule prise, suivant la réponse du patient au traitement. Un traitement supplémentaire, par la lévothyroxine, peut être nécessaire pour éviter l’hypothyroïdie.</p>
+<p class=AmmCorpsTexte>Il convient de ne pas dépasser la dose maximale de 40 mg de thiamazole par jour.</p>
+<p class=AmmCorpsTexte>Utilisation chez les enfants (jusqu’à 2 ans) </p>
+<p class=AmmCorpsTexte>La sécurité et l’efficacité du thiamazole chez les enfants (jusqu’à 2 ans) n’ont pas encore été systématiquement établies. L’utilisation du thiamazole chez les enfants âgés (jusqu’à 2 ans) n’est donc pas recommandée.</p>
+<p class=AmmAnnexeTitre3>Traitement conservateur de l’hyperthyroïdie</p>
+<p class=AmmCorpsTexte>L’objectif de ce traitement est d’obtenir un état métabolique euthyroïdien et une rémission prolongée après un traitement de durée limitée. Selon le choix des patients traités, une rémission peut être obtenue au maximum pour 50 % des patients, après un délai d’un an. Les taux de rémission rapportés varient considérablement sans qu’on puisse expliquer complètement ce phénomène. Le type d’hyperthyroïdie (immunogénique ou non immunogénique), la durée du traitement, la dose de thiamazole ainsi que les apports alimentaires ou iatrogènes en iode sont probablement des facteurs qui ont une influence.</p>
+<p class=AmmCorpsTexte>Le traitement conservateur de l’hyperthyroïdie est administré habituellement en continu pendant 6 mois à 2 ans (un an en moyenne). Statistiquement, la probabilité de rémission augmente avec la durée du traitement. Dans les cas où la rémission de la maladie n’est pas possible et où des mesures thérapeutiques définies ne sont pas applicables ou sont refusées, le thiamazole peut être utilisé comme traitement anti-thyroïdien à long terme, à la dose la plus faible possible, sans lévothyroxine ou en association avec de faibles doses de lévothyroxine.</p>
+<p class=AmmCorpsTexte>Pour les patients présentant des goitres de grande taille avec constriction de la trachée, le traitement par le thiamazole doit être court, voire évité, car l’administration de cette substance à long terme peut entraîner une croissance du goitre. Il peut être nécessaire de surveiller particulièrement étroitement le traitement (niveau de TSH, diamètre de la trachée). Le traitement est de préférence combiné à une administration additionnelle de lévothyroxine.</p>
+<p class=AmmAnnexeTitre3>Traitement préopératoire</p>
+<p class=AmmCorpsTexte>Un traitement préalable temporaire (3 à 4 semaines ou plus, si nécessaire dans certains cas) peut aider à atteindre un état métabolique euthyroïdien, ce qui permet de réduire les risques liés à la chirurgie.</p>
+<p class=AmmCorpsTexte>La chirurgie doit être pratiquée dès que le patient est euthyroïdien. Sinon, il convient d’administrer de la lévothyroxine en supplément. Le traitement peut être arrêté la veille de l’intervention.</p>
+<p class=AmmCorpsTexte>La friabilité du tissu thyroïdien et le risque hémorragique accrus induits par le thiamazole peuvent être compensés par l’administration préopératoire supplémentaire d’iode à hautes doses pendant les dix jours précédant l’intervention (traitement par l’iode de Plummer).</p>
+<p class=AmmAnnexeTitre3>Préparation d’un traitement à l’iode radioactif</p>
+<p class=AmmCorpsTexte>L’obtention d’un métabolisme euthyroïdien avant le début d’un traitement par iode radioactif est importante, en particulier dans les cas d’hyperthyroïdie grave, car des cas de crise thyréotoxique graves post-thérapeutiques sont survenus, dans des cas individuels, après traitement par iode radioactif sans prétraitement.</p>
+<p class=AmmCorpsTexte>Remarque : les dérivés du thionamide peuvent réduire la radiosensibilité du tissu thyroïdien. En cas de traitement prévu par iode radioactif d’adénomes autonomes, il convient d’empêcher l’activation du tissu paranodulaire en administrant un prétraitement.</p>
+<p class=AmmAnnexeTitre3>Traitement anti-thyroïdien intermédiaire après un traitement à l’iode radioactif</p>
+<p class=AmmCorpsTexte>La durée et la dose du traitement doivent être ajustées pour chaque patient en fonction de la gravité du tableau clinique et du temps estimé nécessaire pour que le traitement par iode radioactif commence à être efficace (environ 4 à 6 mois).</p>
+<p class=AmmAnnexeTitre3>Traitement prophylactique de patients présentant un risque d’hyperthyroïdie résultant de l’administration de substances contenant de l’iode à des fins de diagnostic</p>
+<p class=AmmCorpsTexte>En général, des doses quotidiennes de 10 à 20 mg de thiamazole et/ou d’1 g de perchlorate sont administrées pendant environ 10 jours (par exemple pour un milieu de contraste excrété par voie rénale). La durée du traitement dépend de la durée de rétention de la substance contenant de l’iode dans l’organisme.</p>
+<p class=AmmAnnexeTitre3>Populations particulières de patients</p>
+<p class=AmmCorpsTexte><u>Patients ayant une insuffisance hépatique</u></p>
+<p class=AmmCorpsTexte>Chez les patients insuffisants hépatiques, la clairance plasmatique du thiamazole est réduite. La dose doit donc être la plus faible possible et il convient de surveiller étroitement les patients.</p>
+<p class=AmmCorpsTexte><u>Patients ayant une insuffisance rénale</u></p>
+<p class=AmmCorpsTexte>Les données disponibles concernant le comportement pharmacocinétique du thiamazole chez les patients insuffisants rénaux sont limitées ; pour ces patients, il convient d’adapter la dose au cas par cas, sous surveillance étroite. La dose doit être la plus faible possible.</p>
+<p class=AmmCorpsTexte><u>Patients âgés</u></p>
+<p class=AmmCorpsTexte>Bien qu’aucune accumulation de dose ne soit attendue chez le patient âgé, une adaptation soigneuse de la dose au cas par cas est recommandée, sous surveillance étroite.</p>
+<p class=AmmAnnexeTitre3>Administration</p>
+<p class=AmmCorpsTexte>Les comprimés doivent être avalés entiers avec une quantité suffisante de liquide.</p>
+<p class=AmmCorpsTexte>Pendant le traitement initial à forte dose de l’hyperthyroïdie, les doses quotidiennes ci-dessus peuvent être subdivisées et prises à intervalles réguliers au cours de la journée.</p>
+<p class=AmmCorpsTexte>La dose d’entretien peut être prise en une seule fois le matin, pendant ou après le petit-déjeuner.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278919">Ne pas utiliser Thyrozol dans les cas suivants :</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>hypersensibilité au thiamazole, à d’autres dérivés du thionamide ou à l’un des excipients mentionnés à la rubrique 6.1,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>troubles modérés à graves de la numération globulaire (granulocytopénie),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>cholostase préexistante, non provoquée par l’hyperthyroïdie,</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>antécédent de lésions de la moelle osseuse après traitement par le thiamazole ou le carbimazole.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>patients présentant des antécédents de pancréatite aiguë après administration de thiamazole ou de son pro médicament, le carbimazole.</p>
+<p class=AmmCorpsTexte>Un traitement associant le thiamazole et des hormones thyroïdiennes est contre-indiqué pendant la grossesse (voir rubrique 4.6).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmCorpsTexte>Ne pas utiliser Thyrozol dans les cas suivants :</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>antécédents de réactions d’hypersensibilité modérées (p.ex. éruptions allergiques, prurit).</p>
+<p class=AmmCorpsTexte>Utiliser le thiamazole exclusivement à court terme et en surveillant étroitement le patient dans les cas suivants :</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>goitres de grande taille avec constriction de la trachée en raison du risque de croissance du goitre</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-indent:0cm'><u>Vascularites</u></p>
+<p class=AmmCorpsTexte>En cas d’apparition de symptômes de vascularite, le médicament doit être arrêté si nécessaire. En général, les symptômes sont réversibles après l’arrêt du traitement.</p>
+<p class=AmmCorpsTexte><u>Myélotoxicité</u></p>
+<p class=AmmCorpsTexte>Une agranulocytose a été rapportée dans environ 0,3 à 0,6 % des cas, et il convient d’attirer l’attention du patient sur les symptômes de cette pathologie (stomatite, pharyngite, fièvre) avant le début du traitement. L’agranulocytose survient habituellement pendant les premières semaines du traitement mais peut aussi se manifester quelques mois après le début du traitement et lors de sa réintroduction. Une surveillance étroite de la formule sanguine est recommandée avant et après le début du traitement, en particulier en cas de granulocytopénie légère préexistante. Si l’un de ces symptômes est observé, en particulier pendant les premières semaines du traitement, il convient d’indiquer au patient de contacter immédiatement son médecin pour pratiquer une numération globulaire. Si l’agranulocytose est confirmée, il est nécessaire d’arrêter la prise du médicament.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-indent:0cm'>D’autres événements indésirables myélotoxiques sont rares aux doses recommandées. Ils ont été rapportés fréquemment en association avec de très fortes doses de thiamazole (environ 120 mg par jour). Ces doses doivent être réservées à des indications spéciales (formes graves de la maladie, crise thyréotoxique). En cas d’apparition d’une toxicité sur la moelle osseuse pendant le traitement par le thiamazole, il convient d’arrêter de prendre le traitement et, si nécessaire, d’utiliser un médicament anti-thyroïdien appartenant à un autre groupe de substances.<u>Pancréatite aiguë</u></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-indent:0cm'>Des cas de pancréatite aiguë survenus chez des patients recevant du thiamazole ou son promédicament, le carbimazole, ont été rapportés lors de l’utilisation après commercialisation. En cas de pancréatite aiguë, le traitement par thiamazole doit être interrompu immédiatement. Le thiamazole ne doit pas être administré à des patients présentant des antécédents de pancréatite aiguë après administration de thiamazole ou de son promédicament, le carbimazole. Une nouvelle exposition peut entraîner une récidive de la pancréatite aiguë, le délai d’apparition est alors réduit.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-indent:0cm'><u>Femmes en âge de procréer et grossesse</u></p>
+<p class=AmmCorpsTexte>Les femmes en âge de procréer doivent utiliser une contraception efficace pendant le traitement. L’utilisation de thiamazole chez les femmes enceintes doit être évaluée au cas par cas en fonction du rapport bénéfice/risque. En cas d’utilisation de thiamazole pendant la grossesse, il convient d’administrer la dose efficace la plus faible sans administration additionnelle d’hormones thyroïdiennes. Une surveillance maternelle, fœtale et néonatale étroite doit être mise en place (voir rubrique 4.6).</p>
+<p class=AmmCorpsTexte><u>Contrôle de l’hyperthyroïdisme</u></p>
+<p class=AmmCorpsTexte>Une dose excessive peut entraîner une hypothyroïdie subclinique ou clinique et la croissance du goitre, en raison de l’augmentation de la TSH. C’est pourquoi la dose de thiamazole doit être réduite dès obtention d’un état métabolique euthyroïdien et il convient, si nécessaire, d’administrer en plus de la lévothyroxine. Il n’est pas utile d’arrêter complètement la prise de thiamazole et de continuer le traitement par la lévothyroxine seule.</p>
+<p class=AmmCorpsTexte>La croissance d’un goitre pendant un traitement par le thiamazole, malgré l’inhibition de la TSH, résulte de la maladie sous-jacente et ne peut être empêchée par un traitement supplémentaire par la lévothyroxine.</p>
+<p class=AmmCorpsTexte>L’obtention de concentrations normales de TSH est cruciale afin de minimiser le risque d’apparition ou d’aggravation d’une orbitopathie endocrinienne. Cependant, cette pathologie est souvent indépendante de l’évolution de la maladie thyroïdienne. Cette complication ne justifie pas de changer un mode de traitement adéquat et ne doit pas être considérée comme une réaction indésirable au traitement correctement mené.</p>
+<p class=AmmCorpsTexte>Une hypothyroïdie tardive peut survenir, à une fréquence faible, après un traitement anti-thyroïdien, sans exiger de mesures supplémentaires d’ablation. Il ne s’agit probablement pas d’un effet indésirable du médicament, mais plutôt de processus inflammatoires et destructeurs survenant dans le parenchyme thyroïdien en raison de la maladie sous-jacente.</p>
+<p class=AmmCorpsTexte>La diminution de la consommation d’énergie accrue par l’hyperthyroïdie peut entraîner une prise de poids (généralement souhaitée) pendant le traitement par le thiamazole. Il convient d’informer les patients que l’amélioration du tableau clinique indique une normalisation de leur consommation d’énergie. </p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-indent:0cm'><u>Excipients</u></p>
+<p class=AmmCorpsTexte>Thyrozol contient du lactose ; par conséquent, les patients présentant de rares troubles héréditaires d’intolérance au galactose, un déficit en lactase de Lapp ou une malabsorption du glucose-galactose, ne doivent pas prendre ce médicament.</p>
+<p class=AmmCorpsTexte>Ce médicament contient moins de 1 mmol de sodium (23 mg) par comprimé, c’est-à-dire qu’il est essentiellement « sans sodium ».</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278921">Une déficience en iode augmente la réponse de la thyroïde au thiamazole ; inversement, un excès d’iode limite cette réponse. Aucune autre interaction directe avec d’autres médicaments n’est connue. Il convient cependant de tenir compte du fait que le métabolisme et l’élimination d’autres médicaments peuvent être accélérés en cas d’hyperthyroïdie. Leur normalisation survient parallèlement à celle de la fonction thyroïdienne. La posologie doit être adaptée si nécessaire.</a></p>
+<p class=AmmCorpsTexte>De plus, il a été montré que la correction de l’hyperthyroïdie peut normaliser l’activité des anti-coagulants chez les patients atteints d’hyperthyroïdie.</p>
+<p class=AmmCorpsTexte>Aucune étude d’interaction n’a été réalisée chez les patients pédiatriques.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3>Femmes en âge de procréer</p>
+<p class=AmmCorpsTexte>Les femmes en âge de procréer doivent utiliser une contraception efficace pendant le traitement (voir rubrique 4.4).</p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte>Chez les femmes enceintes, l’hyperthyroïdie doit faire l’objet d’un traitement approprié afin de prévenir la survenue de graves complications maternelles et fœtales.</p>
+<p class=AmmCorpsTexte>Le thiamazole traverse le placenta.</p>
+<p class=AmmCorpsTexte>Compte tenu des données cliniques issues d’études épidémiologiques et de notifications spontanées, le thiamazole est susceptible de provoquer des malformations congénitales lorsqu’il est administré pendant la grossesse, en particulier au cours du premier trimestre de grossesse et à des doses élevées. Parmi les malformations rapportées figurent les malformations suivantes: aplasie cutanée congénitale, malformations cranio-faciales (atrésie choanale, dysmorphie faciale), omphalocèle, atrésie de l’œsophage, anomalie du canal omphalomésentérique et communication inter-ventriculaire.</p>
+<p class=AmmCorpsTexte>Le thiamazole ne doit être administré pendant la grossesse qu’après une stricte évaluation au cas par cas du rapport bénéfice/risque et seulement à la dose efficace la plus faible sans administration additionnelle d’hormones thyroïdiennes. En cas d’utilisation de thiamazole pendant la grossesse, une surveillance maternelle, fœtale et néonatale étroite doit être mise en place (voir rubrique 4.4).</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278927">Allaitement</a></p>
+<p class=AmmCorpsTexte>Le thiamazole passe dans le lait maternel, où il peut atteindre des concentrations correspondant aux concentrations sériques maternelles ; il y a donc un risque d’hypothyroïdie pour l’enfant allaité.</p>
+<p class=AmmCorpsTexte>L’allaitement est possible pendant un traitement par le thiamazole, mais les doses quotidiennes utilisées doivent être de 10 mg au maximum et elles ne doivent pas être accompagnées de l’administration d’hormones thyroïdiennes.</p>
+<p class=AmmCorpsTexte>La fonction de la glande thyroïdienne du nouveau-né doit être surveillée régulièrement. </p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929"><span lang=FR-BE>Le thiamazole n’a aucun effet sur l’aptitude à conduire des véhicules et à utiliser des machines.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmCorpsTexte>L’évaluation des effets indésirables est fondée sur les définitions suivantes de la fréquence :</p>
+<p class=AmmCorpsTexte>Très fréquents :  &#8805; 1/10</p>
+<p class=AmmCorpsTexte>Fréquents : &#8805; 1/100, < 1/10</p>
+<p class=AmmCorpsTexte>Peu fréquents : &#8805; 1/1 000, < 1/100</p>
+<p class=AmmCorpsTexte>Rares : &#8805; 1/10 000, < 1/1 000</p>
+<p class=AmmCorpsTexte>Très rares : < 1/10 000</p>
+<p class=AmmCorpsTexte>Indéterminée (ne peut être estimée sur la base des données disponibles)</p>
+<p class=AmmAnnexeTitre3>Affections du sang et du système lymphatique</p>
+<p class=AmmCorpsTexte>Peu fréquentes</p>
+<p class=AmmCorpsTexte>Une agranulocytose survient dans environ 0,3 à 0,6 % des cas. Elle peut devenir manifeste plusieurs semaines ou plusieurs mois après le début du traitement et elle exige l’arrêt du médicament. La plupart des cas sont spontanément résolutifs.</p>
+<p class=AmmCorpsTexte>Très rares</p>
+<p class=AmmCorpsTexte>Thrombocytopénie, pancytopénie, lymphadénopathie généralisée.</p>
+<p class=AmmAnnexeTitre3>Troubles endocriniens</p>
+<p class=AmmCorpsTexte>Très rares</p>
+<p class=AmmCorpsTexte>Syndrome insulinique auto-immun (avec diminution prononcée de la glycémie).</p>
+<p class=AmmAnnexeTitre3>Troubles du système nerveux</p>
+<p class=AmmCorpsTexte>Rares</p>
+<p class=AmmCorpsTexte>Des troubles du goût (dysgueusie, agueusie) surviennent rarement ; ils peuvent régresser après l’arrêt du traitement. Cependant, le retour à la normale peut nécessiter plusieurs semaines.</p>
+<p class=AmmCorpsTexte>Très rares</p>
+<p class=AmmCorpsTexte>Névrite. Polyneuropathie.</p>
+<p class=AmmAnnexeTitre3>Affections vasculaires </p>
+<p class=AmmCorpsTexte>Fréquence indéterminée</p>
+<p class=AmmCorpsTexte>Vascularites.</p>
+<p class=AmmAnnexeTitre3>Troubles digestifs</p>
+<p class=AmmCorpsTexte>Très rares</p>
+<p class=AmmCorpsTexte>Œdème aigu des glandes salivaires.</p>
+<p class=AmmCorpsTexte>Fréquence indéterminée</p>
+<p class=AmmCorpsTexte>Pancréatite aiguë</p>
+<p class=AmmAnnexeTitre3>Troubles hépatobiliaires</p>
+<p class=AmmCorpsTexte>Très rares</p>
+<p class=AmmCorpsTexte>Des cas individuels d’ictère cholostatique ou d’hépatite toxique ont été décrits. Les symptômes régressent généralement après l’arrêt du médicament. Les signes cliniquement discrets de cholostase apparaissant pendant le traitement doivent être différenciés des perturbations provoquées par l’hyperthyroïdie, comme l’élévation de la GGT (gamma glutamyle transférase) et de la phosphatase alcaline ou de son isoforme spécifique de l’os.</p>
+<p class=AmmAnnexeTitre3>Troubles cutanés et des tissus sous-cutanés</p>
+<p class=AmmCorpsTexte>Très fréquents</p>
+<p class=AmmCorpsTexte>Réactions allergiques cutanées à divers degrés (prurit, éruption, urticaire). Elles sont généralement modérées et régressent souvent au fil du traitement.</p>
+<p class=AmmCorpsTexte>Très rares</p>
+<p class=AmmCorpsTexte>Formes sévères de réactions cutanées allergiques, notamment dermatite généralisée. Alopécie. Lupus érythémateux d’origine médicamenteuse.</p>
+<p class=AmmAnnexeTitre3>Troubles musculo-squelettiques et du tissu conjonctif</p>
+<p class=AmmCorpsTexte>Fréquents</p>
+<p class=AmmCorpsTexte>Une arthralgie peut apparaître progressivement, même après plusieurs mois de traitement.</p>
+<p class=AmmAnnexeTitre3>Troubles généraux et touchant le site d’administration</p>
+<p class=AmmCorpsTexte>Rares</p>
+<p class=AmmCorpsTexte>Fièvre d’origine médicamenteuse.</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmCorpsTexte>La fréquence, le type et la sévérité des effets indésirables chez les enfants sont comparables à ceux observés chez les adultes.</p>
+<p class=AmmCorpsTexte>Des réactions sévères d’hypersensibilité cutanée ont été rapportées à la fois chez les adultes et chez les patients pédiatriques, y compris le syndrome de Stevens-Johnson (dans de très rares cas isolés, des formes sévères incluant une dermatite généralisée ont été observées).</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet : <a href="https://signalement.social-sante.gouv.fr">https://signalement.social-sante.gouv.fr</a>..</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte>Un surdosage provoque une hypothyroïdie associée à des symptômes correspondant à une diminution du métabolisme et, en raison de l’effet de rétrocontrôle, l’activation de l’antéhypophyse responsable d’une croissance du goitre. On peut éviter cela en diminuant la dose dès obtention d’un état métabolique euthyroïdien et, si nécessaire, en administrant en plus de la lévothyroxine (voir rubrique 4.2).</p>
+<p class=AmmCorpsTexte>Les conséquences nocives de l’ingestion accidentelle de fortes doses de thiamazole sont inconnues.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : Préparation anti-thyroïdienne, dérivé de l’imidazole contenant du soufre, code ATC : H03BB02</a><span style='font-size:8.0pt'>.</span></p>
+<p class=AmmCorpsTexte>Le thiamazole inhibe de manière dépendante de la dose l’incorporation d’iode dans la tyrosine et donc la nouvelle synthèse d’hormones thyroïdiennes. Cette propriété permet un traitement symptomatique de l’hyperthyroïdie, quelle qu’en soit la cause. On ne peut pas à ce jour déterminer avec précision si le thiamazole affecte aussi l’évolution naturelle de l’hyperthyroïdie immunologique (maladie de Graves), c’est-à-dire s'il inhibe le processus immunopathogène sous-jacent. La libération des hormones thyroïdiennes précédemment synthétisées n’est pas affectée. Ceci explique pourquoi la longueur de la période de latence, c’est-à-dire le temps écoulé jusqu’à la normalisation des concentrations sériques de thyroxine et de triiodothyronine et donc jusqu’à l’amélioration clinique, diffère d’un patient à un autre. L’hyperthyroïdie provoquée par la libération d’hormones après destruction de cellules thyroïdiennes, par exemple après traitement à l’iode radioactif ou en cas de thyroïdite, n’est pas affectée non plus.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmCorpsTexte>Le thiamazole est absorbé rapidement et complètement. Après administration, les concentrations sériques maximales sont atteintes en 0,4 à 1,2 heure. La liaison aux protéines est négligeable. Le thiamazole s’accumule dans la thyroïde, où il n’est métabolisé que lentement. Malgré la fluctuation des concentrations sériques, l’accumulation de thiamazole dans la thyroïde provoque un plateau de concentration, ce qui entraîne une durée d’action de près de 24 heures après administration d’une dose unique. En l’état actuel de nos connaissances, la cinétique du thiamazole est indépendante de la fonction thyroïdienne. La demi-vie d’élimination est d’environ 3 à 6 heures et elle est prolongée en cas d’insuffisance hépatique.</p>
+<p class=AmmCorpsTexte>Le thiamazole est éliminé par voie rénale et biliaire ; l’excrétion dans les fèces est légère, indiquant une circulation entéro-hépatique. 70 % de la substance est excrétée par les reins en 24 heures. Une petite quantité seulement est excrétée sous forme inchangée. Aucune expérience n’a été réalisée à ce jour sur l’activité pharmacologique des métabolites. Des données de pharmacocinétiques limitées sont disponibles pour les patients insuffisants rénaux et hépatiques (voir rubrique 4.2). Aucune donnée n’est disponible après administration de doses répétées (voir rubrique 4.2).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278935">Les études de sécurité préclinique sont limitées.</a></p>
+<p class=AmmCorpsTexte>Les données concernant la toxicité d’une dose unique montrent que le potentiel de toxicité aiguë du thiamazole est faible.</p>
+<p class=AmmCorpsTexte>Au cours d’études portant sur des doses répétées, une dépression médullaire a été observée à des niveaux de dose considérablement supérieurs aux niveaux de dose thérapeutiques. </p>
+<p class=AmmCorpsTexte>Les études de génotoxicité n’ont révélé aucun signe d’effet mutagène ni clastogène.</p>
+<p class=AmmCorpsTexte>Une étude de toxicité chronique de deux ans, menée sur des rats, n’a pas apporté d’observations pertinentes autres que des effets pharmacologiques sur la thyroïde. Une étude chronique de deux ans menée sur des souris a révélé une incidence plus forte d’hépatomes n’atteignant pas le niveau de significativité statistique lorsque le thiamazole a été administré à une concentration de 500 mg/l dans l’eau potable. La pertinence de cette dernière observation n’est pas avérée et le thiamazole n’est pas classifié en tant que carcinogène par le CIRC (centre international de recherche sur le cancer) ni selon les critères du NTP (Programme national de toxicologie).</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278937">Comprimé nu</a></p>
+<p class=AmmCorpsTexte>Silice colloïdale anhydre</p>
+<p class=AmmCorpsTexte>Stéarate de magnésium.</p>
+<p class=AmmCorpsTexte>Hypromellose</p>
+<p class=AmmCorpsTexte>Talc</p>
+<p class=AmmCorpsTexte>Poudre de cellulose</p>
+<p class=AmmCorpsTexte>Amidon de maïs</p>
+<p class=AmmCorpsTexte>Lactose monohydraté</p>
+<p class=AmmCorpsTexte>Glycolate d’amidon sodique</p>
+<p class=AmmAnnexeTitre3>Pelliculage</p>
+<p class=AmmCorpsTexte><span lang=IT>Diméticone 100</span></p>
+<p class=AmmCorpsTexte><span lang=IT>Macrogol 400</span></p>
+<p class=AmmCorpsTexte><span lang=IT>Hypromellose</span></p>
+<p class=AmmCorpsTexte><span lang=IT>Dioxyde de titane (E171) </span></p>
+<p class=AmmCorpsTexte>Oxyde de fer jaune (E 172)</p>
+<p class=AmmCorpsTexte>Oxyde de fer rouge (E 172)</p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">Sans objet.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte>4 ans.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940"><span lang=FR-BE>A conserver à une température ne dépassant pas 25°C.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte>20, 30, 50, 100 comprimés pelliculés sous plaquettes thermoformées (PVC/Aluminium).</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Pas d’exigences particulières.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Toc142278943">MERCK SANTE SAS</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>37, RUE SAINT-ROMAIN</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>69379 LYON CEDEX 08</p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 391 118 5 8 : 20 comprimés sous plaquettes thermoformées (PVC/Aluminium)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 391 119 1 9 : 30 comprimés sous plaquettes thermoformées (PVC/Aluminium)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 391 121 6 9 : 50 comprimés sous plaquettes thermoformées (PVC/Aluminium)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 391 122 2 0 : 100 comprimés sous plaquettes thermoformées (PVC/Aluminium)</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_THYROZOL_10_mg,_comprimé_pelliculé_sécable_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE THYROZOL 10 mg, comprimé pelliculé sécable ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE THYROZOL 10 mg, comprimé pelliculé sécable ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_THYROZOL_10_mg,_comprimé_pelliculé_sécable_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE THYROZOL 10 mg, comprimé pelliculé sécable ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE THYROZOL 10 mg, comprimé pelliculé sécable ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_PRENDRE_THYROZOL_10_mg,_comprimé_pelliculé_sécable_?"
+                     aria-label="3. COMMENT PRENDRE THYROZOL 10 mg, comprimé pelliculé sécable ? (Lien de redirection)">
+                    3. COMMENT PRENDRE THYROZOL 10 mg, comprimé pelliculé sécable ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_THYROZOL_10_mg,_comprimé_pelliculé_sécable_?"
+                     aria-label="5. COMMENT CONSERVER THYROZOL 10 mg, comprimé pelliculé sécable ? (Lien de redirection)">
+                    5. COMMENT CONSERVER THYROZOL 10 mg, comprimé pelliculé sécable ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : THYROZOL 10 mg, comprimé pelliculé sécable - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="THYROZOL 10 mg, comprimé pelliculé sécable, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 11/04/2023</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'><a name="_Toc142278999">THYROZOL 10 mg, comprimé pelliculé sécable</a></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Thiamazole</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279000"><span lang=FR-BE>Veuillez lire attentivement cette notice avant de prendre ce médicament car elle contient des informations importantes pour vous.</span></a></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin ou votre pharmacien.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que THYROZOL 10 mg, comprimé pelliculé sécable et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant de prendre THYROZOL 10 mg, comprimé pelliculé sécable ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment prendre THYROZOL 10 mg, comprimé pelliculé sécable ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver THYROZOL 10 mg, comprimé pelliculé sécable ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_THYROZOL_10_mg,_comprimé_pelliculé_sécable_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE THYROZOL 10 mg, comprimé pelliculé sécable ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279003">Classe pharmacothérapeutique - code ATC : H03BB02</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279004">Ce médicament contient du thiamazole. Il permet de maîtriser la surproduction d’hormones thyroïdiennes dans la glande thyroïde, indépendamment de sa cause.</a></p>
+<p class=AmmCorpsTexte>On utilise Thyrozol pour traiter la surproduction d’hormones thyroïdiennes :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous devez prendre un médicament pour traiter une glande thyroïde produisant trop d’hormones, en particulier si vous avez un goitre (gonflement en avant du cou) de petite taille ou si vous n’avez pas de goitre,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous allez être opéré de la glande thyroïde,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous allez avoir un traitement utilisant de l’iode radioactif, en particulier dans les cas graves de surproduction d’hormone thyroïdienne,</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>après un traitement par l’iode radioactif jusqu’à ce que l’iode radioactif agisse complètement.</p>
+<p class=AmmCorpsTexte>Thyrozol est aussi utilisé pour empêcher une surproduction d'hormones thyroïdiennes avant une exposition à l'iode, comme lors d’un examen utilisant un milieu de contraste contenant de l'iode :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez une légère surproduction d’hormones thyroïdiennes sans autres symptômes,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si votre glande thyroïde a des zones productrices d’hormone (adénome autonome),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez déjà eu une surproduction d’hormones thyroïdiennes.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_THYROZOL_10_mg,_comprimé_pelliculé_sécable_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE THYROZOL 10 mg, comprimé pelliculé sécable ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">Ne prenez jamais THYROZOL 10 mg, comprimé pelliculé sécable :</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique au thiamazole, à des substances similaires (dérivés du thionamide) ou à l’un des autres composants contenus dans ce médicament, mentionnés dans la rubrique 6,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si des tests biologiques montrent que vous avez une diminution du nombre de certaines cellules sanguines (granulocytopénie),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si votre écoulement biliaire est bloqué avant le début du traitement par Thyrozol,</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez un antécédent de lésions de la moelle osseuse après traitement par le thiamazole ou le carbimazole.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez présenté une inflammation du pancréas (pancréatite aiguë) après une administration antérieure de thiamazole ou de carbimazole</p>
+<p class=AmmCorpsTexteGras>Avertissements et précautions</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Adressez-vous à votre médecin ou pharmacien avant de prendre Thyrozol.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez eu des réactions allergiques légères au thiamazole dans le passé, par exemple éruptions allergiques ou démangeaisons, parlez-en à votre médecin. Votre médecin déterminera si vous pouvez prendre Thyrozol.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez un goitre important (gonflement en avant du cou) qui rend votre respiration difficile, parlez-en à votre médecin, car ce goitre risque d’augmenter pendant le traitement par Thyrozol. Votre médecin pourra décider de vous prescrire Thyrozol pour une durée limitée seulement, et il vous surveillera régulièrement pendant le traitement.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez des symptômes comme de la fièvre, de la fatigue, une perte de poids et des douleurs musculaires et articulaires, contactez immédiatement votre médecin. Ceux-ci pourraient être le signe d’une inflammation des vaisseaux sanguins (vascularites). Si cela arrivait, votre médecin pourrait décider d’arrêter le traitement si nécessaire.</span><u><span lang=FR-BE> </span></u><span lang=FR-BE>En général, ces symptômes sont réversibles après l’arrêt du traitement.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez des symptômes du type inflammation des muqueuses de la bouche, mal de gorge ou fièvre, contactez immédiatement votre médecin. Ces symptômes peuvent être provoqués par une diminution importante du nombre de certaines cellules sanguines (agranulocytose), Ils peuvent apparaître tout particulièrement pendant les premières semaines de traitement et provoquer des conséquences graves.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Veuillez informer votre médecin immédiatement si vous avez de la fièvre ou des douleurs abdominales, ces symptômes pouvant indiquer une inflammation du pancréas (pancréatite aiguë). Il pourra s’avérer nécessaire d’interrompre le traitement par Thyrozol.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Thyrozol peut être néfaste pour l’enfant à naître. Si vous êtes susceptible de tomber enceinte, vous devez utiliser une contraception fiable dès l’instauration du traitement et pendant toute la durée de celui-ci.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez une forme particulièrement sévère de surproduction d’hormone thyroïdienne, il se peut que vous deviez prendre des doses très élevées de Thyrozol (plus de 120 mg par jour). Dans ce cas, votre médecin demandera des prises de sang régulièrement, car votre moelle osseuse risque d’être affectée. Si cela arrivait, votre médecin pourrait décider d’arrêter le traitement et, si nécessaire, vous prescrire un autre médicament.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si votre goitre augmente pendant le traitement par Thyrozol, ou si votre glande thyroïde ne réagit pas suffisamment, votre médecin pourra devoir vérifier votre dose de Thyrozol. Cependant, cela peut correspondre à l’évolution naturelle de votre maladie. De même, un certain type de maladie des yeux (orbitopathie endocrinienne) peut apparaître ou s'aggraver, sans lien avec le traitement par Thyrozol.</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Il est possible que vous preniez du poids pendant le traitement par Thyrozol. C’est une réaction normale de votre corps. Thyrozol a un impact sur vos hormones thyroïdiennes, qui dirigent votre consommation d’énergie.</span></p>
+<p class=AmmCorpsTexteGras>Enfants</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et THYROZOL 10 mg, comprimé pelliculé sécable</p>
+<p class=AmmCorpsTexte>Votre consommation d’iode a un effet sur l’action de Thyrozol. Votre médecin décidera de la dose de Thyrozol selon vos apports individuels en iode et selon la fonction de votre glande thyroïde.</p>
+<p class=AmmCorpsTexte>Si vous prenez des anticoagulants (médicaments qui empêchent le sang de coaguler), parlez-en à votre médecin car la normalisation de la fonction thyroïdienne par Thyrozol peut avoir une influence sur leur effet. Cela peut aussi être vrai pour d’autres médicaments. Informez votre médecin ou pharmacien si vous prenez, avez récemment pris ou pourriez prendre tout autre médicament.</p>
+<p class=AmmCorpsTexteGras>THYROZOL 10 mg, comprimé pelliculé sécable avec des aliments et boissons</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279012">Grossesse et allaitement</a></p>
+<p class=AmmCorpsTexte>Thyrozol peut être néfaste pour l’enfant à naître.</p>
+<p class=AmmCorpsTexte>Si vous êtes susceptible de tomber enceinte, vous devez utiliser une contraception fiable dès l’instauration du traitement et pendant toute la durée de celui-ci.</p>
+<p class=AmmCorpsTexte>Si vous êtes enceinte, si vous pensez être enceinte ou si vous planifiez une grossesse, veuillez en informer immédiatement votre médecin. La poursuite de votre traitement par Thyrozol pendant votre grossesse pourrait s’avérer nécessaire si les bénéfices escomptés l’emportent sur les risques encourus par vous et votre enfant à naître.</p>
+<p class=AmmCorpsTexte>Le thiamazole, principe actif du Thyrozol, passe dans le lait maternel. Votre médecin décidera s’il est nécessaire que vous preniez du Thyrozol pendant l’allaitement. Dans ce cas, seule une faible dose allant jusqu’à 10 mg de thiamazole pourra être prise. Le fonctionnement de la glande thyroïde de votre nouveau-né doit être vérifié régulièrement par votre médecin. »</p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>Thyrozol n’a pas d’influence sur l’aptitude à conduire des véhicules et à utiliser des machines.</p>
+<p class=AmmCorpsTexteGras>Information importante concernant certains composants de THYROZOL 10 mg, comprimé pelliculé sécable</p>
+<p class=AmmCorpsTexte>Si vous avez une intolérance à certains sucres, parlez-en à votre médecin car Thyrozol contient du lactose.</p>
+<p class=AmmCorpsTexte>Ce médicament contient moins de 1 mmol de sodium (23 mg) par comprimé, c’est-à-dire qu’il est essentiellement « sans sodium ».</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_PRENDRE_THYROZOL_10_mg,_comprimé_pelliculé_sécable_?'>3. COMMENT PRENDRE THYROZOL 10 mg, comprimé pelliculé sécable ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmAnnexeTitre3><a name="_Toc142279021">Posologie</a></p>
+<p class=AmmCorpsTexte>Veillez à toujours prendre ce médicament en suivant exactement les indications de votre médecin. Vérifiez auprès de votre médecin en cas de doute.</p>
+<p class=AmmAnnexeTitre3>Dose habituelle</p>
+<p class=AmmCorpsTexte>Votre médecin déterminera votre dose selon la gravité de votre état. Les posologies suivantes sont habituellement recommandées :</p>
+<p class=AmmAnnexeTitre3>Adultes</p>
+<p class=AmmCorpsTexte>La dose initiale est de 10 –  40 mg de Thyrozol par jour (ou plus pour certains patients), jusqu’à ce que la glande thyroïde fonctionne normalement. La dose d’entretien est soit de 5 –  20 mg de Thyrozol par jour en combinaison avec des hormones thyroïdiennes, soit de 2,5 –  10 mg de Thyrozol par jour, sans hormones thyroïdiennes. *</p>
+<p class=AmmAnnexeTitre3>Utilisation chez les enfants et les adolescents (âgés de 3 à 17 ans)</p>
+<p class=AmmCorpsTexte>La dose initiale est de 0,5 mg de Thyrozol par kg de poids corporel par jour. Votre médecin décidera ensuite si une dose d’entretien plus basse suffit ou s’il convient d’y associer des hormones thyroïdiennes. *</p>
+<p class=AmmAnnexeTitre3>Utilisation chez les enfants (jusqu’à 2 ans)</p>
+<p class=AmmCorpsTexte>L’utilisation de Thyrozol n’est pas recommandée chez les enfants âgés de 2 ans et de moins de 2 ans.</p>
+<p class=AmmCorpsTexte>Si vous présentez un risque de surproduction d’hormones thyroïdiennes après un test de diagnostic utilisant un milieu de contraste contenant de l’iode, votre médecin pourra vous prescrire 10 –  20 mg de Thyrozol par jour, avec du perchlorate, pendant environ 10 jours (jusqu’à ce que le milieu de contraste contenant de l'iode soit éliminé de votre corps).</p>
+<p class=AmmCorpsTexte>* Pour des doses plus faibles, des comprimés de 5 mg sont disponibles.</p>
+<p class=AmmAnnexeTitre3>Patients ayant des problèmes hépatiques</p>
+<p class=AmmCorpsTexte>Si vous avez eu un problème de foie ou une maladie du foie, parlez-en à votre médecin. Dans ce cas, votre dose de Thyrozol devra être réduite.</p>
+<p class=AmmAnnexeTitre3>Patients ayant des problèmes rénaux</p>
+<p class=AmmCorpsTexte>Si vous avez un problème rénal ou une maladie rénale, parlez-en à votre médecin. Dans ce cas, votre dose de Thyrozol devra être réduite.</p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte>Prendre les comprimés avec un peu d’eau, par exemple un demi-verre, le matin, après le petit déjeuner. </p>
+<p class=AmmCorpsTexte>Le comprimé peut être divisé en doses égales.</p>
+<p class=AmmCorpsTexte>Si vous prenez plus d’un comprimé par jour, vous pouvez aussi les prendre en plusieurs fois, à intervalles réguliers, pendant la journée.</p>
+<p class=AmmAnnexeTitre3>Durée du traitement</p>
+<p class=AmmCorpsTexte>La durée du traitement peut varier selon la maladie contre laquelle Thyrozol est utilisé. Votre médecin vous parlera de la durée pendant laquelle vous devez prendre ce médicament. Habituellement, la durée du traitement est la suivante :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Traitement d’une surproduction d’hormone thyroïdienne (sans chirurgie) : 6 mois –  2 ans. </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Traitement avant une chirurgie de la thyroïde : 3 –  4 semaines avant l’opération.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Traitement avant un traitement à l’iode radioactif : jusqu’à ce que votre fonction thyroïdienne soit normalisée.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Traitement après un traitement à l’iode radioactif : 4 –  6 mois, jusqu'à ce que le traitement à l'iode radioactif commence à agir.</p>
+<p class=AmmCorpsTexteGras>Si vous avez pris plus de THYROZOL 10 mg, comprimé pelliculé sécable que vous n’auriez dû</p>
+<p class=AmmCorpsTexte>Si vous avez pris accidentellement plus de Thyrozol que ce qui vous est prescrit, vous n’aurez pas de problèmes. Si vous avez pris plus souvent des doses plus fortes que celles qui vous ont été prescrites, contactez votre médecin dès que vous vous en rendez compte. Dans ce dernier cas, vous pourriez avoir des symptômes tels qu’une frilosité, une fatigue, une sécheresse de la peau, une constipation, une prise de poids, un rythme cardiaque lent, une croissance du goitre. Votre médecin pourra devoir ajuster votre dose de Thyrozol ou vous donner des hormones thyroïdiennes pour éviter que votre goitre n’augmente.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez de prendre THYROZOL 10 mg, comprimé pelliculé sécable</p>
+<p class=AmmCorpsTexte>Ne prenez pas de dose double pour compenser la dose que vous avez oublié de prendre, mais prenez la dose normale le lendemain.</p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez de prendre THYROZOL 10 mg, comprimé pelliculé sécable</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexte style='margin-top:12.0pt'>Si vous avez d’autres questions sur l’utilisation de ce médicament, demandez plus d’informations à votre médecin ou à votre pharmacien.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</a></p>
+<p class=AmmCorpsTexte>Pendant votre traitement par Thyrozol, vous pourrez avoir un ou plusieurs des effets secondaires suivants, dans certains cas même après plusieurs mois de traitement :</p>
+<p class=AmmAnnexeTitre3>Très fréquents (peut toucher plus de 1 personne sur 10) :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Réactions cutanées de divers degrés (éruption, démangeaisons, boules avec démangeaisons). La plupart sont modérées et disparaissent au cours du traitement par Thyrozol.</p>
+<p class=AmmAnnexeTitre3>Fréquents (peut toucher moins de 1 personne sur 10) : </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Douleur articulaire (arthralgie).</p>
+<p class=AmmAnnexeTitre3>Peu fréquents (peut toucher moins de 1 personne sur 100) :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous avez des symptômes du type inflammation des muqueuses de la bouche, mal de gorge ou fièvre, contactez immédiatement votre médecin. Ces symptômes peuvent être des signes d’une diminution importante du nombre de certaines cellules sanguines (agranulocytose).</p>
+<p class=AmmAnnexeTitre3>Rares (peut toucher moins de 1 personne sur 1000) :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Troubles du goût ou perte du goût (dysgueusie, agueusie).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Fièvre.</p>
+<p class=AmmAnnexeTitre3>Très rares (peut toucher moins de 1 personne sur 10 000) :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Diminution du nombre de plaquettes sanguines (thrombocytopénie), diminution du nombre de toutes les cellules sanguines (pancytopénie), maladie touchant les ganglions (lymphadénopathie généralisée).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Troubles des hormones qui régulent la glycémie avec abaissement prononcé de la glycémie (syndrome insulinique auto-immun).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Inflammation ou irritation des nerfs (névrite, polyneuropathie).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Gonflement des glandes salivaires.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Dysfonctionnement du foie ou inflammation du foie (jaunisse cholostatique, hépatite toxique). Généralement, les symptômes disparaissent après l’arrêt du traitement.</p>
+<p class=AmmListePuces1 style='text-align:justify;text-indent:0cm'>Réactions allergiques cutanées graves pouvant toucher tout le corps, y compris réactions bulleuses touchant la peau (syndrome de Stevens-Johnson), perte de cheveux, maladie auto-immune inflammatoire de la peau et du tissu conjonctif (lupus érythémateux).</p>
+<p class=AmmAnnexeTitre3>Fréquence indéterminée <span style='font-weight:normal'>(ne peut être estimée sur la base des données disponibles)</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Inflammation du pancréas (pancréatique aiguë).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Inflammation des vaisseaux sanguins (vascularite).</p>
+<p class=AmmAnnexeTitre3>Enfants et adolescents</p>
+<p class=AmmCorpsTexte>Les effets indésirables chez les enfants et chez les adolescents sont comparables à ceux observés chez les adultes.</p>
+<p class=AmmCorpsTexteGras>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou à votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="http://www.ansm.sante.fr"><span style='color:windowtext;text-decoration: none'><u><span style='color:#0563C1'>https://signalement.social-sante.gouv.fr</span></u>.</span><span style='color:blue'>.</span></a></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_THYROZOL_10_mg,_comprimé_pelliculé_sécable_?'>5. COMMENT CONSERVER THYROZOL 10 mg, comprimé pelliculé sécable ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026"></a><a name="_Toc142279024">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas ce médicament après la date de péremption indiquée sur le carton après EXP. La date de péremption fait référence au dernier jour de ce mois.</span></p>
+<p class=AmmCorpsTexte><a name="_Toc142279025"><span lang=FR-BE>A conserver à une température ne dépassant pas 25 °C.</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout <span style='color:black'>ou avec </span>les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient THYROZOL 10 mg, comprimé pelliculé sécable</a></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est :</p>
+<p class=AmmComposition>Thiamazole............................................................................................................................. 10 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un comprimé pelliculé.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont : </p>
+<p class=AmmCorpsTexte><u>Comprimé nu :</u> silice colloïdale anhydre ; stéarate de magnésium ; hypromellose ; talc ; poudre de cellulose ; amidon de maïs ; lactose monohydraté ; glycolate d’amidon sodique.</p>
+<p class=AmmCorpsTexte><u>Pelliculage :</u> diméticone 100 ; macrogol 400 ; hypromellose ; dioxyde de titane (E171) ; oxyde de fer jaune (E172), oxyde de fer rouge (E172).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que THYROZOL 10 mg, comprimé pelliculé sécable et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>Les comprimés pelliculés de Thyrozol 10 mg sont gris orangé, biconvexes, ronds, avec un sillon de sécabilité de chaque côté.</p>
+<p class=AmmCorpsTexte>Les comprimés pelliculés existent en boîtes de 20, 30, 50 ou 100 comprimés.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Toc142279031">MERCK SANTE SAS</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>37, RUE SAINT-ROMAIN</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>69379 LYON CEDEX 08</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>MERCK SERONO SAS</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>37, RUE SAINT-ROMAIN</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>69379 LYON CEDEX 08</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279033">MERCK HEALTHCARE KGaA </a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>FRANKFURTER STRASSE 250,</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>64293 DARMSTADT </p>
+<p class=AmmCorpsTexte>ALLEMAGNE</p>
+<p class=AmmCorpsTexte><span lang=EN-US>OU</span></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=EN-US>P&G HEALTH AUSTRIA GMBH & CO.</span><span lang=EN-GB>OG</span></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>HOSSLGASSE 20</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>9800 SPITTAL/DRAU</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>AUTRICHE</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279038">Ce médicament est autorisé dans les Etats membres de l'Espace Economique Européen sous les noms suivants : Conformément à la réglementation en vigueur. </a></p>
+<p class=AmmCorpsTexte>[À compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class=AmmCorpsTexteGras>< {MM/AAAA}>< {mois AAAA}.></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

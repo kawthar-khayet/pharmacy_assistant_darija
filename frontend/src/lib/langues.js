@@ -187,6 +187,11 @@ const TEXTES = {
     ary_lat: 'Sifet',
     fr: 'Envoyer',
   },
+  api_demarrage: {
+    ary_ar: 'السيرفر كيتشعل، تسنى شي دقيقة… سؤالك غادي يتصيفط بوحدو',
+    ary_lat: 'Serveur kaytcha3el, tsenna chi d9i9a… so2al dyalk ghadi itsifet bou7dou',
+    fr: 'Le serveur démarre (environ 1 minute)… ta question partira automatiquement.',
+  },
 
   // --- Termes Medicaments ---
   medicament: { ary_ar: 'دواء', ary_lat: 'Dwa', fr: 'Médicament' },
@@ -266,6 +271,7 @@ const TEXTES = {
   // --- Page d'accueil (presentation du service) ---
   nav_services: { ary_ar: 'الخدمات', ary_lat: 'Khadamat', fr: 'Services' },
   nav_sources: { ary_ar: 'المصادر', ary_lat: 'Masadir', fr: 'Sources' },
+  acc_med_chercher: { ary_ar: 'قلّب', ary_lat: 'Qelleb', fr: 'Chercher' },
   nav_langue: { ary_ar: 'اللغة', ary_lat: 'L-lougha', fr: 'Langue' },
   cta_essayer: { ary_ar: 'جرّب دوا توك', ary_lat: 'Jerreb DwaTalk', fr: 'Essayer DwaTalk' },
   acc_surtitre: { ary_ar: 'مساعد الصيدلية فالمغرب', ary_lat: 'Moussa3id dyal saydaliya f l-Meghrib', fr: "L'assistant pharmacie au Maroc" },
@@ -391,8 +397,6 @@ const TEXTES = {
   param_histo_desc: { ary_ar: 'محادثة محفوظة فهاد المتصفح.', ary_lat: 'mouta7adatat f had l-appareil.', fr: 'discussion(s) conservée(s) dans ce navigateur.' },
   param_tout_effacer: { ary_ar: 'مسح جميع المحادثات', ary_lat: 'Mse7 koulchi', fr: 'Tout effacer' },
   param_effacer_confirm: { ary_ar: 'واش باغي تمسح جميع المحادثات ديالك؟ هاد العملية نهائية.', ary_lat: 'Bghiti tmse7 ga3 l-mouta7adatat? Had l-3amaliya niha2iya.', fr: 'Effacer toutes tes discussions ? Cette action est définitive.' },
-  param_api_titre: { ary_ar: 'سيرفر دوا توك', ary_lat: 'Serveur DwaTalk', fr: 'Service DwaTalk' },
-  param_api_desc: { ary_ar: 'الأجوبة كتجي مباشرة من نظام الذكاء الاصطناعي على', ary_lat: 'L-ajwiba mn l-API 3la', fr: 'Les réponses sont produites par l’API sur' },
 }
 
 /** Texte `cle` dans `langue` (darija arabe si la traduction manque). */

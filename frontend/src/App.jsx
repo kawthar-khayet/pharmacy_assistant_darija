@@ -1,5 +1,6 @@
 import { Route, Routes, useLocation } from 'react-router-dom'
 import TopBar from './components/TopBar'
+import BandeauReveil from './components/BandeauReveil'
 import BottomNavigation from './components/BottomNavigation'
 import Home from './pages/Home'
 import Assistant from './pages/Assistant'
@@ -21,6 +22,7 @@ export default function App() {
   return (
     <div className="coquille" dir={estArabe ? 'rtl' : 'ltr'}>
       <TopBar />
+      <BandeauReveil />
 
       <main className="zone" style={plein ? { overflow: 'hidden' } : undefined}>
         {/* la cle sur la route rejoue l'apparition a chaque changement de page */}

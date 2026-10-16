@@ -1,0 +1,1809 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="3oYVfAp4shqWXLy7zf+BAg==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="3oYVfAp4shqWXLy7zf+BAg==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 29/09/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant BECLOSPIN 400 microgrammes, suspension pour inhalation par nébuliseur"
+            aria-level="3"
+          >
+            BECLOSPIN 400 microgrammes, suspension pour inhalation par nébuliseur
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament BECLOSPIN 400 microgrammes, suspension pour inhalation par nébuliseur - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                          <p id="tag-generique" class="fr-tag" aria-controls="fr-modal-tag-generique" data-fr-opened="false">
+              <span class="fr-icon-capsule-fill">
+              </span>&nbsp;générique
+          </p>
+              </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 06/01/2006
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : BECLOSPIN 400 microgrammes, suspension pour inhalation par nébuliseur - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0424658">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte><a name="_Toc142279004"><span lang=FR-BE>BECLOSPIN</span><span lang=FR-BE> </span>contient la substance active appelée dipropionate de béclométasone. Il appartient à un groupe de médicaments, les corticoïdes qui exercent une action anti-inflammatoire qui permet de diminuer le gonflement et l’irritation des muqueuses des voies aériennes (nez, poumons) soulageant ainsi les problèmes respiratoires.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>BECLOSPIN</span><span lang=FR-BE> </span>est indiqué dans le traitement de l'asthme lorsque les inhalateurs pressurisés ou à poudre sèche ne peuvent être utilisés ou sont inadaptés.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>BECLOSPIN</span><span lang=FR-BE> </span>est aussi indiqué pour le traitement chez les enfants jusqu’à 5 ans qui présentes des épisodes récurrents de respiration sifflante.</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament appartient au(x) groupe(s) générique(s) suivants : <br/><ul role="list"><li role='listitem'><a href='/medicament/affiche/groupe-generique/60260910/1357' aria-describedby='tooltip-medicament-generique-0'>BECLOMETASONE (DIPROPIONATE DE) 400 microgrammes/1 mL - BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur</a><span id='tooltip-medicament-generique-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Ouvrir la page de détail sur ce groupe générique</span></li></ul></p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Suspension ( Composition pour 1 ml de suspension )<ul role="list"><li role="listitem" style="list-style-type: none;"> > dipropionate de béclométasone<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">400 microgrammes </span></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > 20 récipient(s) unidose(s) polypropylène de 1 ml  </p><p>Code CIP : 369 634-4 ou 34009 369 634 4 3<br/>Déclaration de commercialisation : 30/11/2006<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 8,90 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 9,92 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :65%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span><section class="fr-accordion">
+    <h3 class="fr-accordion__title">
+        <button class="fr-accordion__btn" aria-expanded="false" aria-controls="indicRestreintes-0">
+            Les indications ouvrant droit au remboursement par l'Assurance Maladie sont disponibles en cliquant ici
+        </button>
+    </h3>
+    <div class="fr-collapse" id="indicRestreintes-0">
+        Ce médicament peut être pris en charge ou remboursé par l'Assurance Maladie dans les cas suivants :<br><br>- Asthme persistant sévère de l¿enfant (en traitement quotidien).  ; JOURNAL OFFICIEL ; 24/11/06
+    </div>
+</section></div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><div class='fr-grid-row'><div class='fr-col'><p>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence. </p></div></div><div class='fr-grid-row'><div class='fr-col'><p>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprès de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-smr-aide-2'>plus d'informations dans l'aide</a>). Les avis et synthèses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-smr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection à la page d'aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'SMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur du SMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3179792'>Avis du 01/04/2020</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 01/04/2020 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Modification des conditions d'inscription (CT)</td><td class='text-align-center'>Le service médical rendu par BECLOSPIN est important dans l’indication de l’AMM. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2723186'>Avis du 09/11/2016</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 09/11/2016 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Renouvellement d'inscription (CT)</td><td class='text-align-center'>Le service médical rendu par BECLOSPIN reste important dans l’indication de l’AMM. ;</td></tr></tbody></table></div></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence.</p></div></div><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprés de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-asmr-aide-3'>plus d'informations dans l'aide</a>). Les avis et synthéses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-asmr-aide-3' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers la page aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'ASMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur de l'ASMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td class="text-align-center">V (Inexistant)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3179792'>Avis du 01/04/2020</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 01/04/2020 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Modification des conditions d'inscription (CT)</td><td class="text-align-center">Ces spécialités n’apportent pas d’amélioration du service médical rendu (ASMR V) dans la stratégie thérapeutique.</td></tr><tr><td class="text-align-center">V (Inexistant)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/c_400964'>Avis du 26/04/2006</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 26/04/2006 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Inscription (CT)</td><td class="text-align-center">BECLOSPIN 400 µg/1 ml et 800 µg/2 ml n’apporte pas d’amélioration du service médical rendu (niveau V) par rapport à PULMICORT 0,5 mg/2 ml et 1 mg/2 ml.</td></tr></tbody></table></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : CHIESI SAS</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure de reconnaissance mutuelle</li><li>Code CIS : &nbsp;6 026 091 0</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : BECLOSPIN 400 microgrammes, suspension pour inhalation par nébuliseur - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="BECLOSPIN 400 microgrammes, suspension pour inhalation par nébuliseur, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 12/09/2024</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras><a name="_Toc142278913">BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Dipropionate de béclométasone anhydre ............................................................. 400 microgrammes</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'><a name="_Toc142278914">Pour 1 ml.</a></p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Suspension pour inhalation par nébuliseur.</a></p>
+<p class=AmmCorpsTexte>Suspension blanchâtre</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">BECLOSPIN est indiqué :</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>en traitement continu de l’asthme chez l’adulte et l'enfant, lorsque les inhalateurs pressurisés ou à poudre sèche ne peuvent être utilisés ou sont inadaptés;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>en traitement des enfants âgés de 5 ans ou moins, ayant des épisodes récurrents de sibilances (voir rubriques 4.2 et 4.4 population pédiatrique).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278918">Posologie</a></p>
+<p class=AmmCorpsTexte>La dose initiale de dipropionate de béclométasone en nébulisation sera déterminée en fonction de la fréquence et de la sévérité des symptômes.</p>
+<p class=AmmCorpsTexte>Les doses initiales recommandées sont :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>adultes et adolescents (à partir de 12 ans) : 800 à 1 600 microgrammes deux fois par jour, soient 2 à 4 récipients unidoses à nébuliser 2 fois par jour (dose journalière totale : 1600 à 3 200 microgrammes)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>enfants (jusqu’à 11 ans) : 400 à 800 microgrammes deux fois par jour, soit 1 à 2 récipients unidoses à nébuliser 2 fois par jour (dose journalière totale : 800 à 1 600 microgrammes)</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Dans la majorité des cas, les doses quotidiennes de 3 200 microgrammes chez l’adulte et l’adolescent et de 1 600 microgrammes chez l’enfant jusqu’à l'âge de 11 ans ne doivent pas être dépassées.</p>
+<p class=AmmCorpsTexte>Dès l'amélioration du contrôle de l’asthme ou la disparition des sibilants, il convient de réduire la dose journalière jusqu'à la dose minimale efficace et d'envisager l'administration en une seule prise par jour.</p>
+<p class=AmmCorpsTexte>BECLOSPIN doit être administré quotidiennement et de façon régulière ; la durée du traitement sera fonction des symptômes.</p>
+<p class=AmmCorpsTexte>Chez les enfants présentant des épisodes récurrents de sifflements bronchiques, le traitement par BECLOSPIN devra être arrêté si aucun bénéfice clinique n’est observé dans les 2-3 mois. Sauf si le diagnostic d'asthme est confirmé, le traitement par BECLOSPIN ne doit pas être maintenu plus de 3 mois pour éviter une exposition prolongée injustifiée (voir rubrique 4.4).</p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte>Voie inhalée exclusivement.</p>
+<p class=AmmCorpsTexte>BECLOSPIN ne doit pas être injecté, ni administré par voie orale.</p>
+<p class=AmmCorpsTexte>BECLOSPIN doit être administré à l'aide d'un embout buccal ou d’un masque facial adapté relié à un nébuliseur à air comprimé (ou pneumatique) associé à un compresseur.</p>
+<p class=AmmCorpsTexte>Il convient d’informer les patients qu’ils doivent suivre attentivement les instructions du fabricant pour l’utilisation de l’appareil de nébulisation. Une mauvaise utilisation de l’appareil de nébulisation peut conduire à l'administration inadaptée du traitement.</p>
+<p class=AmmCorpsTexte>L’utilisation de nébuliseurs ultrasoniques n’est pas recommandée car ils ne sont pas adaptés pour l'administration de BECLOSPIN.</p>
+<p class=AmmCorpsTexte>Instructions concernant la préparation et la dilution du médicament : voir la rubrique 6.6.</p>
+<p class=AmmCorpsTexte>Il doit être recommandé aux patients de se rincer la bouche avec de l’eau après chaque séance de nébulisation afin de diminuer le risque de candidose oropharyngée (voir rubrique 4.4).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278919">Hypersensibilité à la substance active ou à l’un des excipients mentionnés à la rubrique 6.1.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278920">Le traitement de l'asthme s'effectue par paliers successifs en fonction de la réponse clinique et des résultats des épreuves fonctionnelles respiratoires.</a></p>
+<p class=AmmCorpsTexte>BECLOSPIN n’est pas destiné à soulager les symptômes aigus d’asthme. Dans ces situations, il faut avoir recours à un bêta-2 agoniste inhalé de courte durée d’action que chaque patient doit avoir à sa disposition en permanence en tant que traitement de secours.</p>
+<p class=AmmCorpsTexte>Une augmentation de la consommation de bronchodilatateurs pour soulager les symptômes, en particulier de bêta-2 agonistes inhalés de courte durée d’action, est le signe d'une détérioration du contrôle de l’asthme. Si le patient ressent une diminution de l'effet de son traitement de secours ou s’il a besoin d’un plus grand nombre d’inhalations que d’habitude, un avis médical est requis. La conduite thérapeutique doit être réévaluée et une augmentation du traitement anti-inflammatoire (augmentation de la dose de corticoïdes inhalés ou corticoïdes oraux en cure courte) doit être envisagée.</p>
+<p class=AmmCorpsTexte>Les exacerbations sévères d’asthme relèvent du traitement standard (c’est-à-dire augmentation de la dose de dipropionate de béclométasone inhalée et, si nécessaire, corticothérapie systémique et/ou antibiothérapie, et recours aux bêta-2 agonistes).</p>
+<p class=AmmCorpsTexte>Des effets systémiques peuvent apparaitre lors d’un traitement par corticostéroïde inhalé, particulièrement lorsque des doses élevées sont administrées au long cours. Le risque de retentissement systémique reste néanmoins moins important avec les corticoïdes inhalés qu’avec les corticoïdes oraux. Les effets systémiques possibles sont : freination de l’axe hypothalamo-hypophyso-surrenalien, retard de croissance chez les enfants et les adolescents, diminution de la densité minérale osseuse, cataracte et glaucome et, plus rarement, troubles psychologiques et comportementaux incluant : hyperactivité psychomotrice, troubles du sommeil, anxiété, dépression ou agressivité (en particulier chez les enfants). Par conséquent, il convient de surveiller l'état clinique des patients régulièrement et de toujours veiller à rechercher la posologie minimale efficace de corticoïdes inhalés permettant de maintenir le contrôle de l’asthme.</p>
+<p class=AmmCorpsTexte>A l'arrêt de la corticothérapie systémique certains patients peuvent ressentir une sensation de malaise général pendant environ 2 semaines alors même que leur fonction respiratoire est stable, voire s’améliore. Ces patients doivent être encouragés à continuer le traitement par dipropionate de béclométasone par voie inhalée sans reprendre la corticothérapie systémique, sauf si apparaissent des signes cliniques d’insuffisance surrénale.</p>
+<p class=AmmCorpsTexte>La mise en route d’un traitement par BECLOSPIN en relais d'une corticothérapie systémique prolongée ou à fortes doses doit être réalisée avec précautions car l'inhibition de la fonction cortico-surrénalienne peut persister pendant un certain temps. Dans tous les cas, le dipropionate de béclométasone sera administré sans interrompre la corticothérapie systémique. Après environ une semaine, celle-ci sera progressivement diminuée selon un rythme déterminé en fonction de la dose d’entretien de la corticothérapie systémique et sous surveillance régulière, avec éventuellement des tests de la fonction cortico-surrénalienne afin d'ajuster la dose de dipropionate de béclométasone inhalée.</p>
+<p class=AmmCorpsTexte>La prudence est requise chez les patients présentant une tuberculose pulmonaire évolutive ou latente ou d'autres types d'infections. Les patients présentant une tuberculose doivent recevoir un traitement antituberculeux lors de la mise en route du traitement par le dipropionate de béclométasone.</p>
+<p class=AmmCorpsTexte>La prudence est requise chez les patients présentant des infections virales, bactériennes ou fongiques de l’oeil, de la bouche ou des voies respiratoires. En cas d’infection bactérienne des voies respiratoires, une antibiothérapie adaptée concomitante pourra être nécessaire.</p>
+<p class=AmmCorpsTexte>La survenue de candidoses oropharyngée semble être d'autant plus fréquente que la dose est élevée et que le traitement est prolongé. Cette infection répond en général à un traitement antifungique adapté administré en application locale, sans interrompre le dipropionate de béclométasone.</p>
+<p class=AmmCorpsTexte>Il doit être recommandé aux patients de se rincer la bouche avec de l’eau immédiatement après l’inhalation pour réduire le risque de survenue de candidoses buccales.</p>
+<p class=AmmCorpsTexte>L’enrouement est réversible et disparaît à l'arrêt du traitement et/ou avec la mise au repos de la voix.</p>
+<p class=AmmCorpsTexte>Un bronchospasme paradoxal peut survenir, se manifestant par une majoration des sibilants, une dyspnée et une toux immédiatement après la prise du médicament. Le bronchospasme doit être immédiatement traité par bronchodilatateur inhalé d’action rapide. Le traitement par BECLOSPIN devra être arrêté immédiatement et la conduite thérapeutique sera ré-évaluée pour envisager, le cas échéant, un traitement alternatif.</p>
+<p class=AmmCorpsTexte>La diminution ou la suppression de la corticothérapie orale peut révéler des signes cliniques évocateurs d'un syndrome de Churg-Strauss ou une hyperéosinophie.</p>
+<p class=AmmCorpsTexte>Le remplacement d’une corticothérapie par voie systémique par un traitement inhalé peut parfois révéler l'existence d'allergies se manifestant par une rhinite allergique ou un eczéma précédemment contrôlé(e) par la corticothérapie systémique. Un traitement symptomatique incluant des antihistaminiques et/ou un traitement corticoïde par voie topique sont préconisés.</p>
+<p class=AmmCorpsTexte>L'attention des sportifs sera attirée sur le fait que cette spécialité contient un principe actif pouvant induire une réaction positive des tests pratiqués lors de contrôles antidopage.</p>
+<p class=AmmCorpsTexteGras>Troubles visuels</p>
+<p class=AmmCorpsTexte>Des troubles visuels peuvent apparaitre lors d'une corticothérapie par voie systémique ou locale. En cas de vision floue ou d'apparition de tout autre symptôme visuel apparaissant au cours d'une corticothérapie, un examen ophtalmologique est requis à la recherche notamment d'une cataracte, d'un glaucome, ou d'une lésion plus rare telle qu'une choriorétinopathie séreuse centrale, décrits avec l'administration de corticostéroïdes par voie systémique ou locale. </p>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmCorpsTexte>La décision d’instaurer un traitement inhalé par dipropionate de béclometasone chez l’enfant de moins de 5 ans présentant des épisodes récurrents de sifflements bronchiques doit tenir compte de la sévérité et de la fréquence des épisodes de sibilants. Un suivi régulier est essentiel afin de réévaluer la réponse au traitement. Si aucun bénéfice clinique n’est observé sous traitement dans les 2-3 mois, ou si le diagnostic d’asthme n’est pas confirmé, le traitement par BECLOSPIN devrait être arrêté afin d’éviter une exposition prolongée non justifiée aux corticostéroides inhalés et les risques associés de retard de croissance (voir rubrique 4.8).</p>
+<p class=AmmCorpsTexte>La croissance des enfants recevant un traitement prolongé par corticoïdes inhalés doit être régulièrement contrôlée. En cas de ralentissement de la croissance, le traitement devra être réévalué afin de réduire la dose du corticoïde inhalé. Il conviendra de soigneusement évaluer les bénéfices attendus de la corticothérapie face aux risques éventuels de ralentissement de la croissance. L'avis d'un spécialiste en pneumo-pédiatrie peut être requis.</p>
+<p class=AmmCorpsTexte>Les données concernant l'effet de la corticothérapie inhalé sur la croissance des nourrissons et les jeunes enfants de moins de 2 ans sont limitées.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278921">Interactions pharmacocinétiques</a></p>
+<p class=AmmCorpsTexte>Aucune étude pharmacocinétique spécifique d’interaction médicamenteuse n’a été conduite.</p>
+<p class=AmmCorpsTexte>Le dipropionate de béclométasone subit un métabolisme pré-systémique très rapide par des enzymes estérases, sans intervention du cytochrome P450.</p>
+<p class=AmmCorpsTexte>Le métabolisme de la béclométasone est moins dépendant du CYP3A que celui de certains autres corticostéroïdes, et les interactions sont en général peu probables ; néanmoins, en cas d’utilisation concomitante d’inhibiteurs puissants du CYP3A (p. ex. ritonavir, cobicistat), le risque d’effets systémiques ne peut pas être exclu. La prudence et une surveillance adaptée sont requises en cas de traitement concomitant. </p>
+<p class=AmmAnnexeTitre3>Interactions pharmacodynamiques</p>
+<p class=AmmCorpsTexte>L'utilisation concomitante de corticostéroïdes systémiques ou intranasale, exerce un effet inhibiteur additif sur la fonction surrénalienne.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte>Selon des données publiées, aucun effet tératogène n'a été mis en évidence chez la femme enceinte utilisant la béclométasone en inhalation. Un éventuel effet sur le développement du foetus après inhalation d'une forte dose de dipropionate de béclométasone ne peut cependant être exclu.</p>
+<p class=AmmCorpsTexte>Les études effectuées chez l’animal ont mis en évidence une toxicité sur la reproduction (voir rubrique 5.3).</p>
+<p class=AmmCorpsTexte>Les risques éventuels pour le foetus ou le nouveau-né devront être pris en considération au regard du bénéfice éventuel de l'inhalation du dipropionate de béclométasone pour la mère. Si le traitement s'avère nécessaire au cours de la grossesse, la dose efficace la plus faible de dipropionate de béclométasone devra être utilisée.</p>
+<p class=AmmCorpsTexte>Les nouveau-nés et nourrissons nés de mère ayant reçu des doses significatives de dipropionate de béclométasone pendant la grossesse devront être surveillés afin de détecter une éventuelle inhibition de la fonction surrénalienne.</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278927">Allaitement</a></p>
+<p class=AmmCorpsTexte>Comme les autres corticoïdes, il est probable que le dipropionate de béclométasone et ses métabolites soient excrétés dans le lait maternel. Néanmoins, à la dose thérapeutique de dipropionate de béclométasone, aucun effet n’est attendu chez les nouveau-nés/nourrissons allaités.</p>
+<p class=AmmCorpsTexte>Aucun effet délétère des glucocorticoïdes n’a été mis en évidence chez les nourrissons allaités. Les bénéfices de l'allaitement doivent prévaloir sur un risque théorique.</p>
+<p class=AmmCorpsTexte>Le dipropionate de béclométasone peut être utilisé pendant l’allaitement. Il est cependant préférable, en cas d'inhalation d'une forte dose de dipropionate de béclométasone, d’éviter d'allaiter dans les 4 h suivant l'administration.</p>
+<p class=AmmAnnexeTitre3>Fertilité</p>
+<p class=AmmCorpsTexte>Aucune étude spécifique n’a été menée concernant l'effet du dipropionate de béclométasone sur la fertilité humaine. Les études effectuées chez l’animal ont mis en évidence une certaine diminution de la fertilité, mais ne survenant qu'à de fortes doses.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929">BECLOSPIN n’a aucun effet ou qu’un effet négligeable sur l’aptitude à conduire des véhicules et à utiliser des machines.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmCorpsTexte><u>Résumé du profil de sécurité :</u></p>
+<p class=AmmCorpsTexte>Les effets indésirables les plus fréquents observés lors des essais cliniques avec le dipropionate de béclométasone dans le traitement de l’asthme et chez les enfants ayant des sifflements bronchiques ont été des laryngites, des pharyngites et des candidoses bucco-pharyngées.</p>
+<p class=AmmCorpsTexte>De rares cas de réactions d'hypersensibilité graves incluant un œdème des paupières, du visage, des lèvres et de la gorge (œdème de Quincke) ont été signalés.</p>
+<p class=AmmCorpsTexte>Un bronchospasme paradoxal peut apparaître suite à l’administration du produit.</p>
+<p class=AmmCorpsTexte><u>Résumé tabulé des effets indésirables :</u></p>
+<p class=AmmCorpsTexte>Les effets indésirables observés dans les essais cliniques réalisés avec la béclométasone par voie inhalée dans le traitement de l’asthme et des sifflements bronchiques de l'enfant sont listés dans le tableau ci-dessous par classe de systèmes d'organes MedDRA et fréquences : très fréquent (&#8805; 1/10) ; fréquent (&#8805; 1/100, < 1/10) ; peu fréquent (&#8805; 1/1 000, < 1/100) ; rare (&#8805; 1/10 000, < 1/1 000) ; très rare (< 1/10 000), fréquence indéterminée (ne peut être estimée sur la base des données disponibles).</p>
+<div align=center>
+<div class='fr-table--lg fr-table'><table>
+<tr>
+<td width=205 valign=top style='width:153.5pt;border:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Classe de systèmes d’organes</p>
+</td>
+<td width=233 valign=top style='width:175.05pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Effet indésirable</p>
+</td>
+<td width=129 valign=top style='width:96.8pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Fréquence</p>
+</td>
+</tr>
+<tr style='height:22.7pt'>
+<td width=205 rowspan=3 valign=top style='width:153.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'>Infections et infestations</p>
+</td>
+<td width=233 valign=top style='width:175.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'>Laryngite, pharyngite</p>
+</td>
+<td width=129 valign=top style='width:96.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'>Très fréquent</p>
+</td>
+</tr>
+<tr style='height:22.7pt'>
+<td width=233 valign=top style='width:175.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Candidose bucco-pharyngée</p>
+</td>
+<td width=129 valign=top style='width:96.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Fréquent</p>
+</td>
+</tr>
+<tr style='height:22.7pt'>
+<td width=233 valign=top style='width:175.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Herpès simplex</p>
+</td>
+<td width=129 valign=top style='width:96.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>*Rare</p>
+</td>
+</tr>
+<tr style='height:22.7pt'>
+<td width=205 valign=top style='width:153.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Troubles endocriniens</p>
+</td>
+<td width=233 valign=top style='width:175.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Inhibition de la fonction surrénalienne**</p>
+</td>
+<td width=129 valign=top style='width:96.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Très rare</p>
+</td>
+</tr>
+<tr style='height:22.7pt'>
+<td width=205 valign=top style='width:153.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Troubles du système immunitaire</p>
+</td>
+<td width=233 valign=top style='width:175.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Réactions d’hypersensibilité : angio-œdème, éruption cutanée, urticaire, prurit</p>
+</td>
+<td width=129 valign=top style='width:96.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>*Rare</p>
+</td>
+</tr>
+<tr style='height:22.7pt'>
+<td width=205 valign=top style='width:153.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Troubles psychiatriques</p>
+</td>
+<td width=233 valign=top style='width:175.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Hyperactivité psychomotrice, troubles du sommeil, anxiété, dépression, agressivité, troubles du comportement (principalement chez l’enfant)</p>
+</td>
+<td width=129 valign=top style='width:96.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Fréquence indéterminée</p>
+</td>
+</tr>
+<tr style='height:22.7pt'>
+<td width=205 rowspan=2 valign=top style='width:153.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Troubles du système nerveux</p>
+</td>
+<td width=233 valign=top style='width:175.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Céphalée</p>
+</td>
+<td width=129 valign=top style='width:96.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Peu fréquent</p>
+</td>
+</tr>
+<tr style='height:22.7pt'>
+<td width=233 valign=top style='width:175.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Tremblement</p>
+</td>
+<td width=129 valign=top style='width:96.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>*Rare</p>
+</td>
+</tr>
+<tr style='height:22.7pt'>
+<td width=205 rowspan=3 valign=top style='width:153.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Troubles respiratoires, thoraciques et médiastinaux</p>
+</td>
+<td width=233 valign=top style='width:175.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Toux</p>
+</td>
+<td width=129 valign=top style='width:96.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Fréquent</p>
+</td>
+</tr>
+<tr style='height:22.7pt'>
+<td width=233 valign=top style='width:175.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Irritation de la gorge, enrouement, dysphonie, bronchospasme paradoxal, sibilants</p>
+</td>
+<td width=129 valign=top style='width:96.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Peu fréquent</p>
+</td>
+</tr>
+<tr style='height:22.7pt'>
+<td width=233 valign=top style='width:175.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Dyspnée</p>
+</td>
+<td width=129 valign=top style='width:96.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Rare</p>
+</td>
+</tr>
+<tr style='height:22.7pt'>
+<td width=205 rowspan=2 valign=top style='width:153.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Troubles oculaires</p>
+</td>
+<td width=233 valign=top style='width:175.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Cataracte**, glaucome**</p>
+</td>
+<td width=129 valign=top style='width:96.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Très rare</p>
+</td>
+</tr>
+<tr style='height:22.7pt'>
+<td width=233 valign=top style='width:175.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+background:white;padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Vision floue (voir rubrique 4.4)</p>
+</td>
+<td width=129 valign=top style='width:96.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+background:white;padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Peu fréquent</p>
+</td>
+</tr>
+<tr style='height:22.7pt'>
+<td width=205 valign=top style='width:153.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Troubles gastro-intestinaux</p>
+</td>
+<td width=233 valign=top style='width:175.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Nausée, dyspepsie</p>
+</td>
+<td width=129 valign=top style='width:96.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Fréquent</p>
+</td>
+</tr>
+<tr style='height:30.75pt'>
+<td width=205 valign=top style='width:153.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:30.75pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Troubles musculo-squelettiques et du tissu conjonctif</p>
+</td>
+<td width=233 valign=top style='width:175.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:30.75pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Retard de croissance *(chez enfant et adolescent), baisse de la densité minérale osseuse*</p>
+</td>
+<td width=129 valign=top style='width:96.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:30.75pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Très rare</p>
+</td>
+</tr>
+<tr style='height:30.75pt'>
+<td width=205 valign=top style='width:153.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:30.75pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Troubles généraux et anomalies au site d’administration</p>
+</td>
+<td width=233 valign=top style='width:175.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:30.75pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Asthénie</p>
+</td>
+<td width=129 valign=top style='width:96.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:30.75pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>*Rare</p>
+</td>
+</tr>
+</table></div>
+</div>
+<p class=AmmCorpsTexte>* effets indésirables issus des notifications spontanées</p>
+<p class=AmmCorpsTexte>** effets systémiques des corticostéroïdes inhalés</p>
+<p class=AmmAnnexeTitre3>Description de certains effets indésirables :</p>
+<p class=AmmCorpsTexte>Les effets systémiques des corticoïdes inhalés (tels que le dipropionate de béclométasone) peuvent survenir particulièrement en cas d’administration au long cours de fortes doses. Sont rapportés inhibition surrénalienne, diminution de la densité minérale osseuse, retard de croissance chez l’enfant et l’adolescent, cataracte et glaucome (voir la rubrique 4.4 « Mises en garde spéciales et précautions d’emploi »).</p>
+<p class=AmmCorpsTexte>Les précautions visant à réduire le risque de survenue de candidose, enrouement et bronchospasme paradoxal sont décrites en rubrique 4.4.</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Un retard de croissance et des troubles du comportement sont plus fréquemment observés chez les enfants que chez les adultes, en particulier en cas d’administration de fortes doses au long cours.</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte>L’utilisation de ce médicament à des doses supérieures aux doses recommandées pendant une longue période peut entraîner une freination de l’axe hypothalamo-hypophyso-surrénalien. Dans ce cas, il est recommandé de surveiller la fonction surrénalienne. L'inhibition de la fonction surrénalienne nécessite un traitement corticoïde substitutif.</p>
+<p class=AmmCorpsTexte>Le traitement par BECLOSPIN peut être poursuivi à la dose minimale efficace permettant le contrôle des symptômes (asthme ou sibilants) (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexte>L'administration d'une forte dose de corticoïdes sur une très courte période peut entrainer une freination de l’axe hypothalamo-hypophyso-surrénalien. Dans ce cas, il n’y a pas lieu d'entreprendre un traitement spécifique d'urgence. La fonction de l’axe hypothalamo-hypophyso-surrénalien est rétablie dans la majorité des cas en 1 à 2 jours.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : Autres médicaments pour les syndromes obstructifs des voies aériennes, par inhalation ; Glucocorticoïdes, code ATC : R03 BA01</a></p>
+<p class=AmmAnnexeTitre3>Mécanisme d’action</p>
+<p class=AmmCorpsTexte>L’affinité du dipropionate de béclométasone et de son principal métabolite actif, le monopropionate de béclométasone (17-MPB), pour le récepteur aux glucocorticoïdes humain est établie. La puissance du 17-MPB est environ 30 fois supérieure à celle de la molécule mère. Par conséquent, la majorité des effets observés est liée à l’exposition systémique au 17-MPB.</p>
+<p class=AmmAnnexeTitre3>Effets pharmacodynamiques</p>
+<p class=AmmCorpsTexte>Le dipropionate de béclométasone est un glucocorticoïde ayant une activité anti-inflammatoire puissante et une activité minéralocorticoïde limitée. Après administration par voie inhalée, un effet local est obtenu au niveau des voies respiratoires basses.</p>
+<p class=AmmCorpsTexte>Les effets pharmacodynamiques systémiques du dipropionate de béclométasone et de son métabolite actif 17-MPB ont été évalués en mesurant les effets sur la fonction de l’axe hypothalamo-hypophyso-surrénalien.</p>
+<p class=AmmCorpsTexte>Les résultats obtenus chez le volontaire sain, ont montré l'absence d'effet sur l’excrétion du cortisol urinaire pendant 24 h après administration par nébulisation d'une dose unique de 1600 &#956;g de dipropionate de béclometasone, alors qu'une diminution d'environ 10% de l’excrétion du cortisol urinaire était observée après une dose unique de 3200&#956;g, sans différence significative entre les deux doses. Il n’a pas été rapporté d’effet significatif sur les taux de cortisol sérique du matin après administration par nébulisation de doses de 1 600 et 3 200 &#956;g répartis en 2 prises par jour pendant 3 semaines chez des patients asthmatiques.</p>
+<p class=AmmAnnexeTitre3>Efficacité et sécurité clinique</p>
+<p class=AmmCorpsTexte>Les études décrites ci-dessous sont issues de la littérature en tant que données s'ajoutant à l'expérience acquise par l’utilisation ancienne de la béclometasone inhalée dans le traitement de l’asthme et des sifflements bronchiques.</p>
+<p class=AmmAnnexeTitre4>Asthme :</p>
+<p class=AmmCorpsTexte>Une étude dont l'objectif était de comparer l’efficacité et la sécurité du BECLOSPIN en nébulisation par rapport à une suspension pour nébulisation de propionate de fluticasone a été menée chez 205 adultes asthmatiques (âgés de 18 à 65 ans) randomisés sur une période de 12 semaines de traitement. Les résultats présentés montrent une efficacité similaire entre les deux traitements sur le contrôle de l'asthme à la fin de l'étude en termes de fonction respiratoire, d'exacerbations d’asthme, de symptômes et de consommation de salbutamol en traitement symptomatique à la demande (Terzano et al. 2003).</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmAnnexeTitre4>Asthme :</p>
+<p class=AmmCorpsTexte>Une étude multicentrique, en double aveugle, double placebo, randomisée, en deux groupes parallèles a comparé l'efficacité du BECLOSPIN en nébulisation et du dipropionate de béclométasone administrés à l'aide d'un aérosol-doseur chez 151 patients âgés de 6 à 16 ans présentant un asthme modéré à sévère et traités pendant 4 semaines. L'amélioration entre le début et la fin de l’étude était similaire entre les deux groupes de traitements en termes de débit expiratoire de pointe matinal (critère primaire), de scores des symptômes et de consommation de salbutamol en traitement symptomatique à la demande. Les deux traitements ont été bien tolérés, de façon équivalente (Bisca et al, 2003).</p>
+<p class=AmmCorpsTexte>L'efficacité et la sécurité du BECLOSPIN dans le traitement de l'asthme persistant sévère du nourrisson et du jeune enfant âgés de 6 mois à 6 ans ont été évaluées en comparaison avec une suspension pour nébulisation de budésonide dans le cadre d'une étude ouverte multicentrique, randomisée et contrôlée sur 14 semaines. Dans cette étude, respectivement 40,4 % et 51,7 % des patients des groupes BECLOSPIN et budésonide n'ont pas présenté d'exacerbation sévère (critère primaire). Les deux traitements ont été associés à une diminution significative des sifflements bronchiques nocturnes et du nombre de jours d'utilisation des corticostéroïdes. Les deux traitements n'ont pas eu d'effet sur le cortisol urinaire, ni sur les courbes de taille et de poids. L'absence d'effet du dipropionate de béclométasone nébulisé sur le métabolisme osseux a été confirmé (Delacourt et al, 2003).</p>
+<p class=AmmAnnexeTitre4>Episodes de sifflements bronchiques :</p>
+<p class=AmmCorpsTexte>Le dipropionate de béclométasone en nébulisation a été évalué chez 276 enfants âgés de 1 à 4 ans présentant des épisodes fréquents de sibilants dans le cadre d'un essai randomisé, en double aveugle et contrôlé de 12 semaines. Une augmentation significative du pourcentage de jours sans symptômes (critère principal définit par l’absence de sifflements bronchiques, toux, dyspnée et réveil nocturne des enfants/parents sur 24 heures) a été observée dans le groupe traité par le dipropionate de béclométasone administré par nébulisations régulières associé au salbutamol en traitement symptomatique à la demande (69,6% ± 20.89 [SD]; p = 0.034) comparativement au groupe de patients recevant un placebo associé au salbutamol en traitement symptomatique à la demande (61.0 ± 24.83 [SD]). Il n'a pas été retrouvé de différence comparativement au groupe traité par dipropionate de béclométasone en nébulisation et salbutamol, tous deux administrés en traitement symptomatique à la demande (64.9 ± 24.74 [SD]). Ces résultats n'étaient pas influencés par la présence de facteurs favorisant la survenue de symptômes d'asthme. En outre, le délai de survenue de la première exacerbation d'asthme était plus long chez les enfants traités par BECLOSPIN.</p>
+<p class=AmmCorpsTexte>En termes de sécurité, il n'a pas été mis en évidence de variation dans les valeurs du cortisol salivaire matinal (Papi et al. 2009).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278934">Le dipropionate de béclométasone (DPB) est une prodrogue qui est majoritairement hydrolysée par des enzymes estérases en un métabolite actif, le 17-monopropionate de béclométasone (17-MPB).</a></p>
+<p class=AmmAnnexeTitre3>Absorption</p>
+<p class=AmmCorpsTexte>Après inhalation, le DPB est absorbé sous forme inchangée principalement au niveau du poumon. L'absorption digestive de la fraction déglutie est négligeable. Le principal métabolite actif circulant, le 17-MPB, résulte de la déposition pulmonaire et de l’absorption digestive de la fraction déglutie.</p>
+<p class=AmmCorpsTexte>La biodisponibilité du DPB administré par voie orale est négligeable, mais environ 40 % de la partie déglutie sont absorbés sous forme de 17-MPB. La biodisponibilité absolue après inhalation est respectivement d’environ 2 % et 62 % de la dose nominale pour le DPB et le 17-MPB.</p>
+<p class=AmmAnnexeTitre3>Distribution</p>
+<p class=AmmCorpsTexte>La liaison aux protéines plasmatiques est modérée. Après administration intraveineuse, la clairance plasmatique du DPB et de son métabolite actif, le 17-MPB, est importante (respectivement 150 L/h et 120 L/h), avec un faible volume de distribution à l’état d’équilibre pour le DPB (20 L) et une distribution tissulaire plus importante pour son métabolite actif (424 L).</p>
+<p class=AmmAnnexeTitre3>Biotransformation</p>
+<p class=AmmCorpsTexte>Le principal métabolite est le métabolite actif (17-MPB). Des métabolites inactifs, le 21-monopropionate de béclométasone (21-MPB) et la béclométasone (BOH), sont également formés en faible quantité mais contribuent peu à l’exposition systémique.</p>
+<p class=AmmAnnexeTitre3>Élimination</p>
+<p class=AmmCorpsTexte>Le DPB est très rapidement éliminé de la circulation systémique après métabolisation par des enzymes estérases localisées dans la plupart des tissus de l'organisme. L’excrétion rénale du DPB et de ses métabolites est négligeable ; l’excrétion fécale est la principale voie d’élimination du DPB, essentiellement sous forme de métabolites polaires. Les demi-vies d’élimination terminales sont respectivement de 0,5 h et 2,7 h pour le DPB et le 17-MPB.</p>
+<p class=AmmAnnexeTitre3>Linéarité/non-linéarité</p>
+<p class=AmmCorpsTexte>Les concentrations plasmatiques mesurées du métabolite actif 17-MPB montrent une cinétique quasi linéaire.</p>
+<p class=AmmAnnexeTitre3>Populations particulières</p>
+<p class=AmmCorpsTexte>La pharmacocinétique du DPB n’a pas été étudiée chez les patients insuffisants rénaux ou hépatiques. Cependant, le DPB est très rapidement métabolisé en métabolites polaires 21-MPB, 17-MPB et BOH par les enzymes estérases digestives, sériques, pulmonaires et hépatiques. Par conséquent, il n'est pas attendu de modification de la pharmacocinétique, ni du profil de sécurité du DPB en cas d'insuffisance hépatique. Aucune trace de DPB ou de ses métabolites n’ayant été retrouvée dans les urines, il n'est pas attendu d'augmentation de l’exposition systémique chez les patients insuffisants rénaux.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278935"><span style='font-weight:normal; text-decoration:none'>En préclinique, les effets toxiques du dipropionate de béclométasone se sont limités aux effets associés à une exacerbation des effets pharmacodynamiques connus.</span></a></p>
+<p class=AmmAnnexeTitre3><span style='font-weight:normal;text-decoration:none'>Dans les études de toxicité en doses répétées, l’administration par nébulisation du dipropionate de béclométasone chez des rats (pendant 180 jours) et chez des chiens (pendant 90 jours) n’a pas eu d'effet sur le poids corporel et les cellules sanguines ou sur la muqueuse des voies aériennes. Les fonctions hépatique et rénale sont restées dans les limites des valeurs normales.</span></p>
+<p class=AmmAnnexeTitre3><span style='font-weight:normal;text-decoration:none'>Une embryolétalité et un effet tératogène ont été retrouvés après administration de béclométasone par voie sous-cutanée ou par voie orale chez l'animal. Les études effectuées chez l’animal indiquent que l’administration de glucocorticoïdes pendant la gestation peut entraîner un retard de croissance intra-utérin, l'apparition de troubles cardiovasculaires et/ou métaboliques et/ou des troubles neurocomportementaux chez les animaux adultes.</span></p>
+<p class=AmmAnnexeTitre3><span style='font-weight:normal;text-decoration:none'>Il n'a pas été mis en évidence d'effet génotoxique du dipropionate de béclométasone.</span></p>
+<p class=AmmAnnexeTitre3><span style='font-weight:normal;text-decoration:none'>Une étude de 95 semaines chez des rats traités par inhalation n'a pas mis en évidence d'effet carcinogène.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937">Polysorbate 20, laurate de sorbitan, chlorure de sodium, eau purifiée.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">Ce médicament ne doit pas être mélangé avec d’autres médicaments à l’exception de ceux mentionnés dans la rubrique 6.6.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278939">2 ans.</a></p>
+<p class=AmmCorpsTexte>Utiliser les récipients dans les 3 mois suivant la première ouverture du sachet.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940"><span lang=FR-BE>Conserver les récipients unidoses en position verticale dans l’emballage d’origine (étui en carton) afin de les protéger de la lumière.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278942"></a><a name="_Toc142278941">Chaque récipient en polyéthylène contient 1 ml (BECLOSPIN 400 microgrammes) de suspension pour inhalation par nébuliseur.</a></p>
+<p class=AmmCorpsTexte>Les récipients sont conditionnés par 5 dans un sachet thermoscellé de PET/Al/PE (polyéthylène téréphthalate/aluminium/polyéthylène).</p>
+<p class=AmmCorpsTexte>Chaque boîte contient 4 sachets, soient 20 récipients.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Le flacon doit être utilisé conformément aux instructions suivantes :</span></p>
+<div align=center>
+<div class='fr-table--lg fr-table'><table>
+<tr>
+<td width=614 valign=top style='width:460.5pt;border:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center;line-height:12.0pt'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'><img border=0 width=518 height=123 id="Picture 1" src="/images/R0424658/image001.jpg" alt="Clenil sterile"></span></p>
+</td>
+</tr>
+</table></div>
+</div>
+<p class=AmmCorpsTexte>1. Plier le récipient vers l’arrière et vers l’avant (Figure A).</p>
+<p class=AmmCorpsTexte>2. Détacher soigneusement un nouveau récipient de la plaquette, en commençant par le haut, puis le milieu (Figure B), en laissant les autres récipients dans le sachet.</p>
+<p class=AmmCorpsTexte>3. Agiter vigoureusement et retourner de haut en bas le récipient afin d’homogénéiser la suspension. Renouveler cette opération jusqu’à ce que la totalité du contenu soit complètement dispersée et mélangée (Figure C).</p>
+<p class=AmmCorpsTexte>4. Ouvrir le récipient en tournant la partie supérieure, comme indiqué par la flèche ci-dessus (Figure D).</p>
+<p class=AmmCorpsTexte>5. Appuyer doucement sur le récipient pour en verser le contenu dans le réservoir du nébuliseur (Figure E).</p>
+<p class=AmmCorpsTexte>Le récipient doit être ouvert immédiatement avant l’administration.</p>
+<p class=AmmCorpsTexte>Le récipient de 400 microgrammes est à usage unique.</p>
+<p class=AmmCorpsTexte>BECLOSPIN peut être dilué. Dans ce cas, le contenu de récipient doit être vidé dans le réservoir du nébuliseur. La quantité requise de solution de chlorure de sodium à 9 mg/ml (0,9 %) y sera ajoutée. Après avoir refermé le réservoir du nébuliseur, agiter délicatement le nébuliseur pour mélanger le contenu.</p>
+<p class=AmmCorpsTexte>SEULE une solution de chlorure de sodium 9 mg/mL (0,9%) doit être utilisée.</p>
+<p class=AmmCorpsTexte>Suivre les instructions du fabricant pour l’utilisation, l’entretien et le nettoyage du nébuliseur.</p>
+<p class=AmmCorpsTexte>Tout médicament non utilisé ou déchet doit être éliminé conformément à la réglementation en vigueur.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142278943">CHIESI SAS</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>17 AVENUE DE L’EUROPE</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>92270 BOIS-COLOMBES</p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><a name="_Toc142278944"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 369 634 4 3 : 1 ml en récipient unidose (PE) ; boîte de 20 récipients unidoses conditionnés par plaquette de 5 récipients unidoses en sachet</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I </p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_BECLOSPIN_400_microgrammes/1_ml,_suspension_pour_inhalation_par_nébuliseur_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_BECLOSPIN_400_microgrammes/1_ml,_suspension_pour_inhalation_par_nébuliseur_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_UTILISER_BECLOSPIN_400_microgrammes/1_ml,_suspension_pour_inhalation_par_nébuliseur_?"
+                     aria-label="3. COMMENT UTILISER BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur ? (Lien de redirection)">
+                    3. COMMENT UTILISER BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_BECLOSPIN_400_microgrammes/1_ml,_suspension_pour_inhalation_par_nébuliseur_?"
+                     aria-label="5. COMMENT CONSERVER BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur ? (Lien de redirection)">
+                    5. COMMENT CONSERVER BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : BECLOSPIN 400 microgrammes, suspension pour inhalation par nébuliseur - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="BECLOSPIN 400 microgrammes, suspension pour inhalation par nébuliseur, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 12/09/2024</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'><a name="_Toc142278999">BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur</a></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Dipropionate de béclométasone</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279000"><span lang=FR-BE>Veuillez lire attentivement cette notice avant d’utiliser ce médicament car elle contient des informations importantes pour vous.</span></a></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin ou votre pharmacien.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant d'utiliser BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment utiliser BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_BECLOSPIN_400_microgrammes/1_ml,_suspension_pour_inhalation_par_nébuliseur_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279004"><span lang=FR-BE>BECLOSPIN</span><span lang=FR-BE> </span>contient la substance active appelée dipropionate de béclométasone. Il appartient à un groupe de médicaments, les corticoïdes qui exercent une action anti-inflammatoire qui permet de diminuer le gonflement et l’irritation des muqueuses des voies aériennes (nez, poumons) soulageant ainsi les problèmes respiratoires.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>BECLOSPIN</span><span lang=FR-BE> </span>est indiqué dans le traitement de l'asthme lorsque les inhalateurs pressurisés ou à poudre sèche ne peuvent être utilisés ou sont inadaptés.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>BECLOSPIN</span><span lang=FR-BE> </span>est aussi indiqué pour le traitement chez les enfants jusqu’à 5 ans qui présentes des épisodes récurrents de respiration sifflante.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_BECLOSPIN_400_microgrammes/1_ml,_suspension_pour_inhalation_par_nébuliseur_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">N’utilisez jamais BECLOSPIN 400 microgrammes/1ml suspension pour inhalation par nébuliseur :</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique aux corticoïdes ou à l’un des autres composants contenus dans ce médicament, mentionnés dans la rubrique 6.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Avertissements et précautions</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Adressez-vous à votre médecin ou pharmacie avant d’utiliser BECLOSPIN si vous êtes concernés par l’une ou l’autre des situations suivantes :</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Vous êtes, ou avez déjà été, traité(e) pour une tuberculose.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Votre asthme semble s’aggraver, votre respiration devient de plus en plus sifflante et/ou vous vous sentez plus essoufflé(e) que d’habitude, et/ou les nébulisations semblent être moins efficaces. Votre médecin pourrait alors augmenter la dose de BECLOSPIN ou vous prescrire des comprimés de corticostéroïdes, voire de totalement modifier votre traitement.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Vous présentez une infection pulmonaire. Votre médecin peut vous prescrire un traitement par antibiotiques.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez une infection des fosses nasales et des sinus, vous devez être traité(e) par des traitements adaptés, bien que cela ne représente pas une contre-indication spécifique à l’utilisation de BECLOSPIN.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En cas de vision floue ou d’autres troubles visuels.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez une augmentation des sifflements bronchiques, de votre essoufflement ou de votre toux immédiatement après la prise de BECLOSPIN, vous devez interrompre le traitement, ne pas renouveler la prise de BECLOSPIN et contacter votre médecin.</span></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><span lang=FR-BE>Immédiatement après l’inhalation, il est nécessaire de se rincer la bouche avec de l’eau pour réduire le risque d'apparition de mycose dans la bouche.</span></p>
+<p class=AmmAnnexeTitre4><span lang=FR-BE>Relais d’un traitement par comprimés de corticostéroïdes par BECLOSPIN </span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Lors du remplacement d’un traitement par comprimés de corticostéroïdes par un traitement par corticostéroïdes inhalés (BECLOSPIN), vous pouvez ressentir une sensation de malaise général, ou peuvent apparaitre une éruption cutanée, un eczéma ou des symptômes de rhinite se manifestant par un écoulement nasal et des éternuements.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Vous devez consulter votre médecin dès que possible si vous présentez ces symptômes. N’arrêtez pas le traitement par BECLOSPIN tant que votre médecin ne vous l'a pas dit.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous avez reçu un traitement à fortes doses ou pendant une période prolongée par des comprimés de corticostéroïdes, celui-ci pourra être diminué progressivement, environ une semaine après le début du traitement par BECLOSPIN. Au cours de cette période de diminution de la dose, votre médecin peut être amené à faire des contrôles sanguins.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous avez été traité(e) pendant une période prolongée avec de fortes doses de corticostéroïdes inhalés, il est possible que, dans les situations de stress, vous ayez besoin d’un traitement par corticostéroïdes supplémentaires.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ainsi, par exemple :</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>au cours d’une hospitalisation suite à un grave accident,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>avant une opération chirurgicale,</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>ou si survient une infection pulmonaire ou une autre maladie grave.</span></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><span lang=FR-BE>Votre médecin peut juger nécessaire de vous prescrire un traitement de courte durée par corticostéroïdes en comprimés ou, le cas échéant, une injection de corticostéroïdes et vous indiquera également pendant combien de temps vous devrez prendre les comprimés de corticostéroïdes et de quelle façon vous devrez diminuer les doses lorsque vous </span>serez rétabli.</p>
+<p class=AmmCorpsTexteGras>Enfants et adolescents</p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Si votre enfant a moins de 5 ans et qu’il reçoit un traitement prolongé par BECLOSPIN en raison d'épisodes récurrents de respiration sifflante, votre médecin devra mesurer régulièrement sa taille afin de détecter un possible retard de croissance et décider si le traitement doit être arrêté. </span></p>
+<p class=AmmCorpsTexteGras>Autres médicaments et BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur</p>
+<p class=AmmCorpsTexte>Veuillez avertir votre médecin si vous prenez ou avez pris récemment tout autre médicament, y compris des médicaments obtenus sans prescription. </p>
+<p class=AmmCorpsTexte>Certains médicaments peuvent augmenter les effets de BECLOSPIN et il est possible que votre médecin souhaite vous surveiller attentivement si vous prenez ces médicaments (y compris certains médicaments pour traiter l’infection à VIH : ritonavir, cobicistat). </p>
+<p class=AmmCorpsTexte>Informez vote médecin si vous prenez d’autres corticostéroides car il pourrait y avoir des interactions avec BECLOSPIN qui pourraient provoquer une aggravation des effets indésirables.</p>
+<p class=AmmCorpsTexteGras>BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur avec des aliments, boissons</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279012">Grossesse, allaitement et fertilité</a></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE style='font-weight:normal'>Si vous êtes enceinte ou que vous allaitez, si vous pensez être enceinte ou que vous envisagez une grossesse, demandez conseil à votre médecin ou pharmacien avant de prendre ce médicament.</span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE style='font-weight:normal'>Le risque de de retard de croissance et d'effets néfastes pour l'enfant à naître ne peut être exclus lors d'un traitement prolongé par des corticostéroïdes (tels que le dipropionate de béclométasone contenu dans le BECLOSPIN) pendant la grossesse. Votre médecin jugera de la nécessité d'un traitement par BECLOSPIN pour votre asthme.</span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE style='font-weight:normal'>De faibles quantités de corticostéroïdes passent dans le lait maternel. Aucun effet néfaste n'a été rapporté chez les nourrissons à ce jour. Par mesure de précaution, vous devez néanmoins éviter d'allaiter dans les 4 h suivant la nébulisation, en cas de traitement par dipropionate de béclométasone à fortes doses.</span></p>
+<p class=AmmCorpsTexteGras>Sportifs </p>
+<p class=AmmCorpsTexte>L’attention des sportifs sera attirée sur le fait que cette spécialité contient un principe actif pouvant induire une réaction positive des tests pratiqués lors de contrôles antidopage.</p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>BECLOSPIN est peu susceptible d’influer sur votre aptitude à conduire des véhicules et à utiliser des machines. Cependant, si vous ressentez des effets indésirables tels qu’un étourdissement et/ou des tremblements, votre aptitude à conduire des véhicules ou à faire fonctionner des machines pourra être modifiée.</span></p>
+<p class=AmmCorpsTexteGras>BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur contient </p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_UTILISER_BECLOSPIN_400_microgrammes/1_ml,_suspension_pour_inhalation_par_nébuliseur_?'>3. COMMENT UTILISER BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279021"><span style='font-weight: normal'>Veillez à toujours utiliser ce médicament en suivant les indications de votre médecin. En cas de doute, demandez conseil à votre médecin ou pharmacien.</span></a></p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>La dose initiale doit vous être prescrite par votre médecin en fonction de la fréquence et de la sévérité de votre maladie. La dose pourra ensuite être ajustée par votre médecin afin d'obtenir un contrôle efficace des symptômes. </span></p>
+<p class=AmmCorpsTexteGras><u><span style='font-weight:normal'>Les doses initiales recommandées sont</span></u><span style='font-weight:normal'> :</span></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='font-weight:normal'>Adultes et adolescents (à partir de 12 ans) :</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>800 à 1 600 microgrammes deux fois par jour, soient 2 à 4 récipients unidoses à nébuliser 2 fois par jour (ce qui correspond à une quantité journalière totale de 1600 à 3200 microgrammes soit 4 à 8 récipients unidoses).</p>
+<p class=AmmListePuces1 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:0cm;margin-bottom:.0001pt;text-indent:0cm'>Enfants (jusqu’à 11 ans) :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>400 à 800 microgrammes 2 fois par jour soit 1 à 2 récipients unidoses à nébuliser 2 fois par jour (ce qui correspond à une dose journalière totale de 800 à 1 600 microgrammes soit 2 à 4 récipients unidoses).</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><span style='font-weight: normal'>La dose quotidienne de 3 200 microgrammes chez l’adulte et l’adolescent et de 1 600 microgrammes chez l’enfant jusqu’à 11 ans, ne doivent pas être dépassée.</span></p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Lors du traitement de l’asthme, BECLOSPIN doit être utilisé régulièrement chaque jour. Votre médecin décidera de la durée de votre traitement.</span></p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>La durée du traitement de devrait pas dépasser 3 mois chez les enfants traités par BECLOSPIN en raison d'épisodes fréquents de respiration sifflante sauf si votre pédiatre juge qu'il est nécessaire de prolonger le traitement.</span></p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte><b>BECLOSPIN est destiné </b>à être administré par voie inhalée exclusivement.</p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Ne pas l’injecter dans une veine ou le prendre par voie orale.</span></p>
+<p class=AmmCorpsTexte><b>BECLOSPIN </b>doit être administré par inhalation à l’aide d’un appareil de nébulisation à air comprimé en suivant les indications de votre médecin.</p>
+<p class=AmmCorpsTexte><b>BECLOSPIN </b>ne doit pas être administré avec des appareils de nébulisation ultrasoniques.</p>
+<p class=AmmAnnexeTitre3>Indications d’utilisation :</p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Utiliser le récipient conformément aux instructions suivantes :</span></p>
+<div align=center>
+<div class='fr-table--lg fr-table'><table>
+<tr>
+<td width=614 valign=top style='width:460.5pt;border:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center;line-height:12.0pt'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'><img border=0 width=518 height=123 src="/images/N0424658/image003.jpg" alt="Clenil sterile"></span></p>
+</td>
+</tr>
+</table></div>
+</div>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>1. Plier le récipient vers l’arrière et vers l’avant (Figure A).</span></p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>2. Détacher soigneusement un nouveau récipient de la plaquette, en commençant par le haut, puis le milieu (Figure B), en laissant les récipients restant dans le sachet.</span></p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>3. Agiter vigoureusement et retourner de haut en bas le récipient afin d’homogénéiser la suspension. Renouveler cette opération jusqu’à ce que la totalité du contenu soit complètement dispersée et mélangée (Figure C).</span></p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>4. Ouvrir le récipient en tournant la partie supérieure, comme indiqué par la flèche ci-dessus (Figure D).</span></p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>5. Appuyer doucement sur le récipient pour en verser le contenu dans le réservoir du nébuliseur (Figure E).</span></p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Le récipient doit être ouvert immédiatement avant l’administration.</span></p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Le récipient de 400 microgrammes est destiné à un usage unique.</span></p>
+<p class=AmmAnnexeTitre3>Dilution :</p>
+<p class=AmmCorpsTexte>Votre médecin pourra juger nécessaire de diluer le contenu du récipient. Dans ce cas, le contenu du récipient doit être vidé dans le réservoir du nébuliseur. La quantité de solution de chlorure de sodium à 9 mg/ml (0,9 %) prescrite par votre médecin sera ensuite ajoutée pour diluer le produit. Refermer le réservoir du nébuliseur, puis agiter délicatement le nébuliseur pour mélanger le contenu.</p>
+<p class=AmmCorpsTexte>La dose de suspension à nébuliser peut être diluée afin d’obtenir un volume final qui correspond au nébuliseur utilisé, pour faciliter l’administration de faibles volumes ou si l’on souhaite prolonger la durée de la nébulisation.</p>
+<p class=AmmAnnexeTitre3>Pendant la nébulisation :</p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Mettre le masque ou l’embout buccal en place.</span></p>
+<p class=AmmCorpsTexte>Activer l’appareil de nébulisation.</p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Respirer normalement. La séance de nébulisation dure au maximum 10 à 15 minutes.</span></p>
+<p class=AmmAnnexeTitre3>Après la nébulisation :</p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Ne pas oublier de rincer à l’eau la bouche, les lèvres et la région du visage couverte par le masque.</span></p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Après l’inhalation, toute suspension non utilisée restant dans la cuve du nébuliseur doit être jetée.</span></p>
+<p class=AmmAnnexeTitre3>Nettoyage :</p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Suivre les instructions du fabricant pour le nettoyage du nébuliseur. Il est important que votre nébuliseur reste propre.</span></p>
+<p class=AmmCorpsTexteGras>Si vous avez utilisé plus de BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur que vous n’auriez dû</p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Informez-en votre médecin dès que possible. Votre médecin souhaitera peut-être vérifier les taux de corticostéroïdes dans votre sang et, par conséquent, pourra demander un prélèvement sanguin.</span></p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Il est important que vous utilisiez votre dose en suivant les indications de votre médecin. Vous ne devez ni augmenter ni diminuer votre dose sans demander conseil à un professionnel de santé. </span></p>
+<p class=AmmCorpsTexteGras>Si vous oubliez d’utiliser BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur</p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Si vous oubliez d’utiliser une dose, prenez-la dès que vous vous rendez compte de votre oubli. Si l’heure de votre dose suivante est proche, ne prenez pas la dose oubliée mais uniquement la dose suivante au moment prévu. Ne prenez pas de dose double pour compenser la dose que vous avez oublié de prendre.</span></p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Si vous avez d’autres questions sur l’utilisation de ce médicament, demandez plus d’informations à votre médecin ou à votre pharmacien. </span></p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez d’utiliser BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Les effets indésirables suivants ont été signalés. Informez votre médecin dès que possible si vous présentez l’un de ces effets indésirables mais n’arrêtez pas le traitement sans l’avis de votre médecin. Afin de réduire ces effets indésirables, votre médecin déterminera avec vous la dose minimale efficace de BECLOSPIN qui est adaptée à votre cas.</span></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><span class=AmmCorpsTexteCar>Effets indésirables très fréquents (pouvant toucher plus de 1 personne sur 10) :</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>mal de gorge (pharyngite, laryngite). Cet effet peut être prévenu par des gargarismes avec de l’eau immédiatement après l’inhalation.</span></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><span lang=FR-BE>Effets indésirables fréquents (pouvant toucher jusqu’à 1 personne sur 10) :</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>toux</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>nausées et douleurs à l’estomac</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>mycose (communément appelé « muguet ») dans la bouche, sur la langue et dans la gorge. Ces effets peuvent être prévenus en se rinçant la bouche ou en faisant des gargarismes avec de l’eau immédiatement après l’inhalation.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><span lang=FR-BE>Effets indésirables peu fréquents (pouvant toucher jusqu’à 1 personne sur 100) :</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>mal de tête</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>irritation de la gorge, voix enrouée</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>aggravation de l’essoufflement, de la toux et de la respiration sifflante </span>immédiatement après l’administration <span lang=FR-BE>(connue sous le nom de bronchospasme paradoxal). Si cela se produit, arrêtez le traitement et ne renouvelez pas la prise de BECLOSPIN. Ensuite, contactez immédiatement votre médecin. Celui-ci réévaluera avec vous votre traitement, et, si nécessaire, vous prescrira un autre traitement. Il est possible que vous ne puissiez plus utiliser BECLOSPIN.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>vision floue</span></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Effets indésirables rares (peuvent toucher jusqu’à 1 personne sur 1 000) :</p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>boutons de fièvre (herpès simplex), vésicules douloureuses semblables à des cloques sur vos lèvres et dans votre bouche</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>tremblements (involontaires)</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>sensation de fatigue</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>réaction allergique (gonflement des yeux, du visage, des lèvres et de la gorge entraînant une gêne respiratoire importante, des éruptions cutanées, de l’urticaire, des démangeaisons ou des rougeurs)</span></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><span lang=FR-BE>Les effets indésirables suivants peuvent également survenir, principalement chez les enfants :</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>troubles du sommeil, dépression ou anxiété, agitation, nervosité, surexcitation ou comportement irritable</span></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><span lang=FR-BE>S'il est utilisé à fortes doses pendant une période prolongée, BECLOSPIN peut modifier la production normale de corticostéroïdes dans l’organisme. Les enfants et adolescents traités par BECLOSPIN, peuvent avoir un retard de croissance, il est donc important que le médecin vérifie leur taille régulièrement. De plus, un amincissement des os et des problèmes oculaires, comprenant une opacification du cristallin (cataracte) et une augmentation de la pression dans l’oeil (glaucome) ont été signalés.</span></p>
+<p class=AmmAnnexeTitre3>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_BECLOSPIN_400_microgrammes/1_ml,_suspension_pour_inhalation_par_nébuliseur_?'>5. COMMENT CONSERVER BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte>Ne pas utiliser BECLOSPIN après la date de péremption indiquée sur la boîte, le sachet et le récipient.</p>
+<p class=AmmCorpsTexte>Conserver les récipients en position verticale dans l’emballage d’origine (étui en carton) afin de les protéger de la lumière.</p>
+<p class=AmmCorpsTexte>Après la première ouverture du sachet en aluminium, écrivez la date d’ouverture sur le sachet. N’utilisez pas les récipients après un délai de 3 mois suivant la date de la première ouverture du sachet.</p>
+<p class=AmmCorpsTexte>N’utilisez pas BECLOSPIN si l’emballage est endommagé.</p>
+<p class=AmmCorpsTexte>Ne jetez aucun médicament au tout-à-l’égout. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement. </p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est :</p>
+<p class=AmmComposition style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt'>Dipropionate de béclométasone ................................................................... 400 microgrammes</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour 1 ml.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont : le polysorbate 20, le laurate de sorbitan, le chlorure de sodium et l’eau purifiée.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>BECLOSPIN est une suspension blanchâtre pour nébuliseur.</p>
+<p class=AmmCorpsTexte>BECLOSPIN 400 microgrammes/1 ml, suspension pour inhalation par nébuliseur existe en récipient de 1 ml. Les récipients sont conditionnés par 5 dans un sachet scellé, en boîtes de 20 récipients (4 sachets).</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279031">CHIESI SAS</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>17 AVENUE DE L’EUROPE</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>92270 BOIS-COLOMBES</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>CHIESI SAS</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>17 AVENUE DE L’EUROPE</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>92270 BOIS-COLOMBES</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Toc142279033"><b>CHIESI FARMACEUTICI S.p.A. </b></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><span lang=IT>VIA S. LEONARDO 96</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><span lang=IT>43122 PARMA</span></p>
+<p class=AmmCorpsTexte><span lang=IT>ITALIE</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexteGras>Ce médicament est autorisé dans les Etats membres de l'Espace Economique Européen sous les noms suivants : Conformément à la réglementation en vigueur.</p>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279038">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 import Header from '../components/Header'
 import Icon from '../components/Icon'
 import SearchBar from '../components/SearchBar'
@@ -49,6 +50,19 @@ export default function Medicines() {
     setRequete(nom)
     chercher(nom)
   }
+
+  // Recherche saisie sur la page d'accueil : on la lance a l'arrivee, une fois.
+  const location = useLocation()
+  const naviguer = useNavigate()
+  const requeteEntrante = location.state?.requete
+  const dejaLancee = useRef(null)
+  useEffect(() => {
+    if (!requeteEntrante || dejaLancee.current === requeteEntrante) return
+    dejaLancee.current = requeteEntrante
+    naviguer('.', { replace: true, state: null })
+    lancer(requeteEntrante)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [requeteEntrante])
 
   return (
     <div className="page" dir={estArabe ? 'rtl' : 'ltr'}>

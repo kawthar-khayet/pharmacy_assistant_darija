@@ -27,6 +27,10 @@ def test_health(client):
     assert client.get("/health").json() == {"status": "ok"}
 
 
+def test_pret(client):
+    assert client.get("/pret").json() == {"status": "pret"}
+
+
 def test_texte_vide_refuse(client):
     assert client.post("/chat", json={"text": "   "}).status_code == 400
 

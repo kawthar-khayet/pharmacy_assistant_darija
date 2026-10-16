@@ -1,0 +1,1834 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="pL4/Ihmgdo+vfFkjIy9+Dw==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="pL4/Ihmgdo+vfFkjIy9+Dw==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 29/09/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant LIPPIZA 1 mg, comprimé pelliculé"
+            aria-level="3"
+          >
+            LIPPIZA 1 mg, comprimé pelliculé
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament LIPPIZA 1 mg, comprimé pelliculé - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                      </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 22/10/2010
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : LIPPIZA 1 mg, comprimé pelliculé - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0430539">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte><a name="_Toc142279003">Inhibiteurs de la HMG-CoA réductase<i> - code ATC : </i>C10AA08</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279004">LIPPIZA 1 mg, comprimé pelliculé contient une substance appelée pitavastatine. Elle appartient à un groupe de médicaments appelés « statines ».</a></p>
+<p class=AmmCorpsTexte>LIPPIZA 1 mg, comprimé pelliculé est utilisé pour diminuer les concentrations des graisses (lipides) dans votre sang et peut être pris par les enfants à partir de 6 ans ainsi que par les adultes. Une augmentation des lipides, en particulier du cholestérol, peut parfois entraîner une crise cardiaque (infarctus du myocarde) ou un accident vasculaire cérébral.</p>
+<p class=AmmCorpsTexte>LIPPIZA 1 mg, comprimé pelliculé vous a été prescrit parce que vous présentez une augmentation des lipides et que les modifications de votre régime alimentaire et de votre mode de vie (mesures hygiéno-diététiques) n’ont pas été suffisantes pour corriger cette augmentation.</p>
+<p class=AmmCorpsTexte>Vous devez poursuivre ces mesures hygiéno-diététiques (régime hypocholestérolémiant et modifications du mode de vie) pendant le traitement par LIPPIZA 1 mg, comprimé pelliculé. </p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament n'appartient à aucun groupe générique</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Comprimé ( Composition pour un comprimé )<ul role="list"><li role="listitem" style="list-style-type: none;">pitavastatine<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span><span class="italique">1 mg </span><ul role="list" style="list-style-type: none;"><li class="sousFormeDe" role="listitem"><i class="fa fa-plus-square" aria-hidden="true"></i> sous forme de : pitavastatine calcique</li></ul></li></ul></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > plaquette(s) PVC aluminium PVDC de 30 comprimé(s)  </p><p>Code CIP : 494 631-7 ou 34009 494 631 7 6<br/>Déclaration de commercialisation : 01/04/2020<br/>Cette présentation n'est pas <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p>Prix libre, médicament non remboursable ( <a href='/aide#que-signifie-la-notion-de-prix-libre-un-medicament-non-rembourse'>cliquez ici pour en savoir plus sur les médicaments non remboursables</a> )</div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><p>Pas de SMR disponible pour ce médicament ( <a href='/aide#le-medicament-que-je-recherche-ne-mentionne-pas-de-service-medical-rendu-(SMR)-ni-amelioration-du-service-medical-rendu-(ASMR)' aria-describedby='tooltip-smr-aide'>plus d'informations dans l'aide</a><span id='tooltip-smr-aide' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers aide</span> )</p></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div><div class='fr-col'><p>Pas d'ASMR disponible pour ce médicament (<a href='/aide#le-medicament-que-je-recherche-ne-mentionne-pas-de-service-medical-rendu-(SMR)-ni-amelioration-du-service-medical-rendu-(ASMR)' aria-describedby='tooltip-asmr-aide-2'>plus d'informations dans l'aide )</a></p><span id='tooltip-asmr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers la page aide</span></div></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : KOWA PHARMACEUTICAL EUROPE GMBH</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure décentralisée</li><li>Code CIS : &nbsp;6 435 883 2</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : LIPPIZA 1 mg, comprimé pelliculé - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="LIPPIZA 1 mg, comprimé pelliculé, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 20/02/2025</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras>LIPPIZA 1 mg, comprimé pelliculé</p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Pitavastatine........................................................................................................................... 1 mg</p>
+<p class=AmmCorpsTexte>Sous forme de pitavastatine calcique.</p>
+<p class=AmmCorpsTexte>Excipient à effet notoire : 63,085 mg de lactose monohydraté par comprimé.</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Comprimé pelliculé.</a></p>
+<p class=AmmCorpsTexte>Comprimés pelliculés ronds et blancs, avec « KC » gravé sur une face et « 1 » sur l’autre. </p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">Réduction du cholestérol total (CT) et du LDL-cholestérol (LDL-C) chez les adultes, adolescents et enfants âgés de 6 ans et plus présentant une hypercholestérolémie pure (type IIa, incluant les hypercholestérolémies familiales hétérozygotes) ou une dyslipidémie mixte (type IIb), lorsque la réponse au régime et autres mesures non pharmacologiques est insuffisante.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278918">Posologie</a></p>
+<p class=AmmCorpsTexte>Les patients doivent suivre un régime hypocholestérolémiant avant le traitement. Il est important que tous les patients poursuivent le régime alimentaire pendant le traitement.</p>
+<p class=AmmCorpsTexte>La dose initiale habituelle est de 1 mg en une prise par jour. La posologie doit être adaptée à intervalles de 4 semaines ou plus. Les posologies doivent être adaptées en fonction du taux de LDL cholestérol, de l’objectif thérapeutique et de la réponse individuelle du patient. La posologie maximale journalière est de 4 mg.</p>
+<p class=AmmAnnexeTitre4>Personnes âgées</p>
+<p class=AmmCorpsTexte>Aucune adaptation de la posologie n’est nécessaire chez les patients âgés de plus de 70 ans (voir rubriques 5.1 et 5.2).</p>
+<p class=AmmAnnexeTitre4>Population pédiatrique</p>
+<p class=AmmCorpsTexte><i>Enfants et adolescents âgés de 6 ans et plus :</i></p>
+<p class=AmmCorpsTexte>LIPPIZA ne doit être utilisé chez les enfants que par des médecins expérimentés dans le traitement de l’hyperlipidémie et l’évolution doit être réévaluée régulièrement.</p>
+<p class=AmmCorpsTexte>Chez les enfants et adolescents présentant une hypercholestérolémie familiale hétérozygote, la dose initiale habituelle est de 1 mg en une prise par jour. La posologie doit être adaptée à intervalles de 4 semaines ou plus. Les posologies doivent être adaptées en fonction du taux de LDL cholestérol, de l’objectif thérapeutique et de la réponse individuelle du patient. Chez les enfants âgés de 6 à 9 ans, la posologie maximale journalière est de 2 mg. Chez les enfants âgés de 10 ans et plus, la posologie maximale journalière est de 4 mg (voir rubriques 4.8, 5.1 et 5.2).</p>
+<p class=AmmCorpsTexte><i>Enfants âgés de moins de 6 ans :</i></p>
+<p class=AmmCorpsTexte>La sécurité et l’efficacité de LIPPIZA chez les enfants âgés de moins de 6 ans n’ont pas été établies. Aucune donnée n’est disponible.</p>
+<p class=AmmCorpsTexte><i><u>Patients présentant une insuffisance rénale</u></i></p>
+<p class=AmmCorpsTexte>Aucune adaptation posologique n’est nécessaire en cas d’insuffisance rénale légère ; la pitavastatine doit cependant être utilisée avec précaution dans cette population. Peu de données sont disponibles chez les patients insuffisants rénaux à la posologie de 4 mg quel que soit le stade de l’insuffisance rénale. Une posologie de 4 mg ne sera utilisée que sous étroite surveillance, après augmentation progressive de la posologie. La dose de 4 mg n’est pas recommandée en cas d’insuffisance rénale sévère (voir rubriques 4.4 et 5.2).</p>
+<p class=AmmAnnexeTitre4>Patients présentant une insuffisance hépatique légère à modérée</p>
+<p class=AmmCorpsTexte>Une posologie maximale de 2 mg par jour peut être utilisée sous surveillance étroite (voir rubriques 4.4 et 5.2). Une posologie de 4 mg n’est pas recommandée chez les patients présentant une insuffisance hépatique légère à modérée.</p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte>Voie orale. Les comprimés doivent être avalés entiers. LIPPIZA peut être pris à tout moment de la journée au cours ou en dehors des repas. Il est recommandé de prendre le traitement tous les jours à la même heure. Les statines sont généralement plus efficaces le soir en raison du rythme circadien du métabolisme des lipides.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si un enfant ou un adolescent ne peut pas avaler les comprimés, le comprimé peut si nécessaire être dispersé dans un verre d’eau et ingéré immédiatement. Pour garantir une dose exacte, un second volume d’eau doit être utilisé pour rincer le verre et avalé immédiatement. Les comprimés ne doivent pas être dispersés dans des jus de fruits acides ou du lait.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278919">La pitavastatine est contre-indiquée :</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>chez les patients ayant une hypersensibilité connue à la pitavastatine ou à l’un des excipients (voir rubrique 6.1) ou aux autres statines ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>chez les patients présentant une insuffisance hépatique sévère, une affection hépatique évolutive ou une élévation prolongée et inexpliquée des transaminases sériques (supérieure à 3 fois la limite supérieure de la normale [LSN]) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>chez les patients atteints de myopathie ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>chez les patients recevant un traitement concomitant par ciclosporine ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>pendant la grossesse, pendant l’allaitement et chez les femmes en âge de procréer ne prenant pas de mesures contraceptives efficaces.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278920">Effets musculaires</a></p>
+<p class=AmmCorpsTexte>Comme les autres inhibiteurs de la HMG-CoA réductase (statines), il existe un risque de myalgie, de myopathie et, dans de rares cas, de rhabdomyolyse. Il est demandé aux patients de signaler tout symptôme musculaire. La créatine kinase (CK) doit être dosée chez tout patient présentant une douleur musculaire, une sensibilité ou une faiblesse musculaire, notamment si elle s’accompagne de malaise ou de fièvre.</p>
+<p class=AmmCorpsTexte>Le dosage de la créatine kinase ne doit pas être effectué après un effort intense ou en présence de toute autre cause plausible d’élévation de la CK, susceptible de modifier l’interprétation des résultats. Si la concentration de la CK est élevée (> 5 x LSN), un prélèvement sera à nouveau effectué dans les 5 à 7 jours afin de confirmer les résultats.</p>
+<p class=AmmCorpsTexte>De très rares cas de myopathies nécrosantes à médiation auto-immune (IMNM) ont été signalés pendant ou après le traitement par certaines statines. La myopathie nécrosante à médiation auto-immune (IMNM) est caractérisée cliniquement par une faiblesse musculaire proximale et une élévation de la créatine kinase sérique, qui persistent malgré l’arrêt du traitement par la statine.</p>
+<p class=AmmCorpsTexte>LIPPIZA ne doit pas être administré en association avec les formulations systémiques d’acide fusidique ou dans les 7 jours suivant l’arrêt du traitement par l’acide fusidique. Chez les patients pour lesquels l’administration d’acide fusidique systémique est considérée comme essentielle, le traitement par la statine doit être arrêté pendant toute la durée du traitement par l’acide fusidique. Des cas de rhabdomyolyse ont été rapportés (dont certains d’issue fatale) chez des patients recevant l’acide fusidique et des statines en association (voir rubrique 4.5). </p>
+<p class=AmmCorpsTexte>Les patients doivent être avertis qu’ils doivent consulter un médecin immédiatement s’ils présentent des symptômes de faiblesse, douleur ou sensibilité musculaire.</p>
+<p class=AmmCorpsTexte>Le traitement par la statine peut être repris sept jours après la dernière dose d’acide fusidique. Dans des cas exceptionnels, si l’administration prolongée d’acide fusidique systémique est nécessaire, par exemple pour le traitement d’infections sévères, la nécessité de l’administration concomitante de LIPPIZA et d’acide fusidique doit être envisagée uniquement au cas par cas et sous surveillance médicale étroite.</p>
+<p class=AmmCorpsTexte><u>Avant le traitement</u></p>
+<p class=AmmCorpsTexte>Comme avec les autres statines, la pitavastatine doit être prescrite avec précaution chez les patients présentant des facteurs de prédisposition à une rhabdomyolyse. La créatine kinase doit être mesurée afin d’établir une valeur initiale de référence, dans les situations suivantes : </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>insuffisance rénale,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>hypothyroïdie,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>antécédents personnels ou familiaux de troubles musculaires héréditaires,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>antécédent de toxicité musculaire avec un fibrate ou une autre statine,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>antécédent d’affection hépatique ou consommation excessive d’alcool,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>personnes âgées (de plus de 70 ans) présentant d’autres facteurs de risque prédisposant à une rhabdomyolyse.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Dans ces situations, une surveillance clinique est recommandée ; le risque associé au traitement doit être pris en compte par rapport au bénéfice éventuel. Ne pas instaurer de traitement par pitavastatine si la concentration de la CK est > 5 x LSN.</p>
+<p class=AmmCorpsTexte><u>En cours de traitement</u></p>
+<p class=AmmCorpsTexte>Il est recommandé de demander aux patients de signaler immédiatement toute crampe, faiblesse ou douleur musculaire. La créatine kinase doit être mesurée et le traitement doit être arrêté en cas de concentration élevée (> 5 x LSN). L’arrêt du traitement doit être envisagé si les symptômes musculaires sont intenses, même en présence d’une concentration de CK <span style='font-family:Symbol'>£</span> 5 x LSN. Si les symptômes disparaissent et si la concentration de la CK redevient normale, la réintroduction de pitavastatine peut être envisagée à la dose de 1 mg sous étroite surveillance.</p>
+<p class=AmmAnnexeTitre3>Effets hépatiques </p>
+<p class=AmmCorpsTexte>Comme avec les autres statines, la pitavastatine doit être utilisée avec précaution chez les patients ayant des antécédents d’affection hépatique ou chez ceux qui consomment régulièrement des quantités excessives d’alcool. Les tests d’exploration de la fonction hépatique doivent être pratiqués avant l’instauration du traitement par pitavastatine, puis régulièrement au cours du traitement. Le traitement par pitavastatine doit être interrompu chez les patients présentant une élévation prolongée des transaminases sériques (ALAT et ASAT), avec des taux supérieurs à 3 x LSN.</p>
+<p class=AmmAnnexeTitre3>Effets rénaux </p>
+<p class=AmmCorpsTexte>La pitavastatine doit être utilisée avec précaution chez les patients présentant une insuffisance rénale modérée ou sévère. L’augmentation progressive de la posologie nécessite une surveillance étroite. La posologie de 4 mg n’est pas recommandée en cas d’insuffisance rénale sévère (voir rubrique 4.2).</p>
+<p class=AmmAnnexeTitre3>Diabète</p>
+<p class=AmmCorpsTexte>Certaines données suggèrent que les statines en tant que classe pharmacologique, augmenteraient la glycémie. Chez certains patients à risque élevé de survenue d’un diabète, les statines peuvent entraîner une hyperglycémie nécessitant l’instauration d’un traitement antidiabétique. Ce risque est néanmoins compensé par la réduction du risque vasculaire sous statines et, par conséquent, il ne doit pas être un motif d’arrêt des statines. Les patients à risque (glycémie à jeun comprise entre 5,6 et 6,9 mmol/l, IMC > 30 kg/m², augmentation du taux des triglycérides, hypertension artérielle) devront faire l’objet d’une surveillance clinique et biologique conformément aux recommandations nationales. Cependant, il n’a pas été observé de signal confirmé d’un risque de diabète avec la pitavastatine dans les études de sécurité post-autorisation ou dans les études prospectives (voir rubrique 5.1).</p>
+<p class=AmmAnnexeTitre3>Pneumopathie interstitielle</p>
+<p class=AmmCorpsTexte>Des cas exceptionnels de pneumopathie interstitielle ont été décrits avec certaines statines, notamment en cas de traitements prolongés (voir rubrique 4.8). La symptomatologie peut comporter une dyspnée, une toux non productive ainsi qu’une détérioration de l’état général (fatigue, perte de poids et fièvre).</p>
+<p class=AmmCorpsTexte>En cas de suspicion de pneumopathie interstitielle chez un patient, le traitement par statine doit être interrompu.</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Les données concernant les effets à long terme du traitement par LIPPIZA sur la croissance et la maturation sexuelle chez les enfants et adolescents âgés de 6 ans et plus sont limitées. Les adolescentes doivent être conseillées sur les méthodes contraceptives appropriées à utiliser au cours du traitement par LIPPIZA (voir rubriques 4.3 et 4.6).</p>
+<p class=AmmAnnexeTitre3>Autres effets</p>
+<p class=AmmCorpsTexte>Il est recommandé d’interrompre temporairement un traitement par pitavastatine pendant toute la durée d’un traitement par érythromycine, par d’autres macrolides ou par l’acide fusidique (voir rubrique 4.5). La pitavastatine doit être utilisée avec précaution chez les patients prenant des médicaments connus pour provoquer une myopathie (comme les fibrates ou la niacine, voir rubrique 4.5).</p>
+<p class=AmmCorpsTexte>Les comprimés contiennent du lactose. Les patients ayant un déficit héréditaire rare d’intolérance au galactose, un déficit en lactase ou un syndrome de malabsorption du glucose/galactose ne doivent pas prendre ce médicament.</p>
+<p class=AmmCorpsTexte>Dans quelques cas, il a été rapporté que les statines induisaient de novo ou aggravaient une myasthénie préexistante ou une myasthénie oculaire (voir rubrique 4.8). Lippiza doit être arrêté en cas d’aggravation des symptômes. Des récurrences ont été rapportées lorsque la même statine ou une statine différente a été (ré)administrée.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278921">La pitavastatine pénètre de façon active dans les hépatocytes humains, grâce à plusieurs systèmes de transport hépatiques (y compris le polypeptide de transport d’anions organiques OATP), susceptibles d’être impliqués dans certaines des interactions suivantes.</a></p>
+<p class=AmmAnnexeTitre3>Ciclosporine</p>
+<p class=AmmCorpsTexte>Lors de l’administration concomitante d’une dose unique de ciclosporine et de pitavastatine, les valeurs de l’ASC de la pitavastatine sont augmentées de 4,6 fois. L’effet d’une concentration maximale de ciclosporine sur la pitavastatine à concentration maximale n’est pas connu. La pitavastatine est donc contre-indiquée chez les patients recevant de la ciclosporine (voir rubrique 4.3).</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278922">Erythromycine</a></p>
+<p class=AmmCorpsTexte>L’administration concomitante d’érythromycine et de pitavastatine entraîne une augmentation de 2,8 fois de l’ASC de la pitavastatine. Il est recommandé de suspendre temporairement la pitavastatine pendant toute la durée d’un traitement par érythromycine ou par d’autres macrolides.</p>
+<p class=AmmAnnexeTitre3>Gemfibrozil et autres fibrates</p>
+<p class=AmmCorpsTexte>De rares cas de myopathie ont été décrits en cas d’utilisation de fibrates en monothérapie. Une augmentation des cas de myopathie et de rhabdomyolyse a été observée en cas d’administration concomitante de fibrates et de statines. La pitavastatine doit être administrée avec précaution en cas d’utilisation concomitante avec les fibrates (voir rubrique 4.4). Des études pharmacocinétiques ont montré que l’administration concomitante de pitavastatine et de gemfibrozil entraîne une augmentation de 1,4 fois de l’ASC de la pitavastatine ; avec le fénofibrate, l’ASC a augmenté de 1,2 fois.</p>
+<p class=AmmAnnexeTitre3>Niacine</p>
+<p class=AmmCorpsTexte>Aucune étude d’interaction entre la pitavastatine et la niacine n’a été effectuée. Des cas de myopathie et de rhabdomyolyse ont été observés en cas d’utilisation de niacine en monothérapie. Par conséquent, la pitavastatine doit être administrée avec précaution lors de l’utilisation concomitante de niacine.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Acide fusidique</p>
+<p class=AmmCorpsTexte>Le risque de myopathie, y compris de rhabdomyolyse, peut être majoré par l’administration concomitante d’acide fusidique systémique avec des statines. Le mécanisme de cette interaction (qu’il soit pharmacodynamique et/ou pharmacocinétique) n’est pas encore connu. Des cas de rhabdomyolyse (dont des cas fatals) ont été rapportés chez les patients recevant cette association. Si l’administration d’acide fusidique systémique est nécessaire, le traitement par LIPPIZA doit être arrêté pendant toute la durée du traitement par l’acide fusidique (voir rubrique 4.4).</p>
+<p class=AmmAnnexeTitre3>Glécaprévir et pibrentasvir</p>
+<p class=AmmCorpsTexte>L’administration concomitante d’inhibiteurs de la HMG-CoA réductase et de glécaprévir/pibrentasvir peut augmenter les concentrations plasmatiques de l’inhibiteur de la HMG-CoA réductase. La pitavastatine n’a pas été étudiée, mais il est probable que la même interaction se produira. La dose minimale de pitavastatine est recommandée au début du traitement par glécaprévir/pibrentasvir et une surveillance clinique des patients recevant cette association est préconisée.</p>
+<p class=AmmAnnexeTitre3>Rifampicine</p>
+<p class=AmmCorpsTexte>L’administration concomitante et simultanée a augmenté de 1,3 fois l’ASC de la pitavastatine, du fait d’un métabolisme hépatique diminué.</p>
+<p class=AmmAnnexeTitre3>Inhibiteurs de protéase et inhibiteurs non nucléosidiques de la transcriptase inverse :</p>
+<p class=AmmCorpsTexte>L’administration concomitante de lopinavir/ritonavir, de darunavir/ritonavir, d’atazanavir ou d’éfavirenz avec LIPPIZA peut entraîner des modifications mineures de l’ASC de la pitavastatine.</p>
+<p class=AmmAnnexeTitre3>Ezétimibe</p>
+<p class=AmmCorpsTexte>L’ézétimibe et ses métabolites glucuroconjugués inhibent l’absorption du cholestérol d’origine alimentaire ou biliaire. L’administration concomitante de pitavastatine n’a pas d’effet sur les concentrations plasmatiques d’ézétimibe ou de ses métabolites glucuroconjugués ; de même, l’ézétimibe n’a pas d’effet sur les concentrations plasmatiques de la pitavastatine.</p>
+<p class=AmmAnnexeTitre3>Inhibiteurs du CYP3A4</p>
+<p class=AmmCorpsTexte>Les études d’interaction avec l’itraconazole et le jus de pamplemousse, des inhibiteurs connus du CYP3A4, n’ont pas d’effet cliniquement significatif sur les concentrations plasmatiques de la pitavastatine.</p>
+<p class=AmmAnnexeTitre3>Digoxine</p>
+<p class=AmmCorpsTexte>Aucune interaction n’a été mise en évidence entre la digoxine, un substrat connu de la P-gp, et la pitavastatine. Lors de l’administration concomitante, les concentrations de pitavastatine ou de digoxine ne sont pas modifiées significativement.</p>
+<p class=AmmAnnexeTitre3>Warfarine</p>
+<p class=AmmCorpsTexte>Chez des volontaires sains, à concentration maximale, les paramètres pharmacodynamiques (INR et TP) et pharmacocinétiques de la warfarine ne sont pas modifiés par l’administration concomitante de 4 mg par jour de pitavastatine. Cependant, comme avec les autres statines, chez les patients traités par la warfarine, la surveillance du taux de prothrombine ou de l’INR est nécessaire en cas de traitement par pitavastatine.</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Les études d’interaction n’ont été réalisées que chez l’adulte. L’ampleur des interactions dans la population pédiatrique n’est pas connue.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte>La pitavastatine est contre-indiquée pendant la grossesse (voir rubrique 4.3). Les femmes en âge de procréer doivent prendre une contraception efficace pendant toute la durée d’un traitement par pitavastatine. Pendant la grossesse, le cholestérol et les autres produits de la biosynthèse du cholestérol étant essentiels au développement du fœtus, le risque éventuel d’inhibition de la HMG-CoA réductase est prépondérant par rapport au bénéfice du traitement. Les études effectuées chez l’animal ont mis en évidence une toxicité sur la reproduction mais sans risque tératogène (voir rubrique 5.3). En cas de désir de grossesse, le traitement doit être interrompu au moins un mois avant la conception. En cas de grossesse survenant pendant l’utilisation de pitavastatine, le traitement doit être interrompu immédiatement.</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278927">Allaitement</a> </p>
+<p class=AmmCorpsTexte>La pitavastatine est contre-indiquée pendant l’allaitement (voir <a href="#_4.3._Contre-indications"><span style='color: windowtext;text-decoration:none'>rubrique 4.3</span></a>). La pitavastatine est excrétée dans le lait des rates. On ne sait pas si la pitavastatine ou ses métabolites sont excrétés dans le lait maternel.</p>
+<p class=AmmAnnexeTitre3>Fertilité</p>
+<p class=AmmCorpsTexte>Il n’existe pas de données disponibles actuellement.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929"><span lang=FR-BE>En cas de traitement par pitavastatine, aucun événement indésirable ne laisse supposer une influence sur l’aptitude à conduire des véhicules et à utiliser des machines pour les patients. Des cas de vertiges et de somnolence ont cependant été décrits au cours du traitement.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmAnnexeTitre3>Résumé du profil de sécurité</p>
+<p class=AmmCorpsTexte>Dans les essais cliniques contrôlés, aux doses recommandées, moins de 4% des patients traités par pitavastatine ont arrêté l’étude pour événements indésirables. L’effet indésirable le plus fréquemment décrit avec la pitavastatine dans les essais cliniques contrôlés est la myalgie.</p>
+<p class=AmmAnnexeTitre3>Résumé des effets indésirables</p>
+<p class=AmmCorpsTexte>Aux doses recommandées, les effets indésirables et leurs fréquences, observés dans les essais cliniques contrôlés internationaux et dans le suivi des études sont mentionnés ci-dessous par système de classe d’organes. Les fréquences sont définies ainsi : très fréquent (&#8805; 1/10), fréquent (&#8805; 1/100 < 1/10), peu fréquent (&#8805; 1/1 000 < 1/100), rare (&#8805; 1/10 000 < 1/1 000), très rare (< 1/10 000) fréquence indéterminée (qui ne peut pas être estimée avec les données disponibles).</p>
+<p class=AmmAnnexeTitre3>Affections hématologiques et du système lymphatique</p>
+<p class=AmmCorpsTexte>Peu fréquent : Anémie.</p>
+<p class=AmmAnnexeTitre3>Troubles du métabolisme et de la nutrition</p>
+<p class=AmmCorpsTexte>Peu fréquent : Anorexie.</p>
+<p class=AmmAnnexeTitre3>Affections psychiatriques</p>
+<p class=AmmCorpsTexte>Peu fréquent : Insomnie.</p>
+<p class=AmmAnnexeTitre3>Affections du système nerveux</p>
+<p class=AmmCorpsTexte>Fréquent : Céphalées,</p>
+<p class=AmmCorpsTexte>Peu fréquent : Vertiges, dysgueusie, somnolence.</p>
+<p class=AmmCorpsTexte>Fréquence indéterminée : Myasthénie.</p>
+<p class=AmmAnnexeTitre3>Affections oculaires</p>
+<p class=AmmCorpsTexte>Rare : Baisse d’acuité visuelle.</p>
+<p class=AmmCorpsTexte>Fréquence indéterminée : Myasthénie oculaire.</p>
+<p class=AmmAnnexeTitre3>Affections de l’oreille et du labyrinthe</p>
+<p class=AmmCorpsTexte>Peu fréquent : Acouphènes.</p>
+<p class=AmmAnnexeTitre3>Affections gastro-intestinales</p>
+<p class=AmmCorpsTexte>Fréquent : Constipation, diarrhée, dyspepsie, nausées,</p>
+<p class=AmmCorpsTexte>Peu fréquent : Douleurs abdominales, sécheresse buccale, vomissements,</p>
+<p class=AmmCorpsTexte>Rare : Glossodynie, pancréatite aiguë.</p>
+<p class=AmmAnnexeTitre3>Affections hépatobiliaires</p>
+<p class=AmmCorpsTexte>Peu fréquent : Elévation des transaminases (ASAT, ALAT),</p>
+<p class=AmmCorpsTexte>Rare : Ictère cholestatique.</p>
+<p class=AmmAnnexeTitre3>Affections de la peau et du tissu sous-cutané</p>
+<p class=AmmCorpsTexte>Peu fréquent : Prurit, éruption cutanée,</p>
+<p class=AmmCorpsTexte>Rare : Urticaire, érythème.</p>
+<p class=AmmAnnexeTitre3>Affections musculo-squelettiques et du tissu conjonctif</p>
+<p class=AmmCorpsTexte>Fréquent : Myalgie, arthralgie,</p>
+<p class=AmmCorpsTexte>Peu fréquent : Spasmes musculaires.</p>
+<p class=AmmCorpsTexte>Fréquence indéterminée : myopathie nécrosante à médiation auto-immune (voir la rubrique 4.4). </p>
+<p class=AmmAnnexeTitre3>Affections du rein et des voies urinaires</p>
+<p class=AmmCorpsTexte>Peu fréquent : Pollakiurie.</p>
+<p class=AmmAnnexeTitre3>Troubles généraux et anomalies au site d’administration</p>
+<p class=AmmCorpsTexte>Peu fréquent : Asthénie, malaise, fatigue, œdème périphérique.</p>
+<p class=AmmCorpsTexte>Dans les essais cliniques contrôlés, une augmentation de la créatine kinase sérique supérieure à 3 fois la limite normale supérieure (LSN) a été observée chez 49 des 2 800 patients (1,8%) recevant de la pitavastatine. Dans le programme d’études cliniques, les concentrations supérieures ou égales à 10 fois la LSN associées à des symptômes musculaires étaient rares et n’ont été observées que chez un patient parmi les 2 406 traités par 4 mg de pitavastatine (0,04%).</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmCorpsTexte>La base de données de sécurité clinique inclut des données de sécurité de 142 enfants et adolescents ayant été traités par la pitavastatine, dont 87 patients dans la tranche d’âge de 6 à 11 ans et 55 patients dans la tranche d’âge de 12 à 17 ans. Au total, 91 patients ont reçu la pitavastatine pendant un an, 12 patients l’ayant reçue pendant 2,5 ans et 2 patients pendant 3 ans. Le traitement a été arrêté en raison d’événements indésirables chez moins de 3 % des patients traités par la pitavastatine. Les effets indésirables liés à la pitavastatine les plus fréquemment rapportés dans le programme clinique étaient des céphalées (4,9 %), des myalgies (2,1 %) et des douleurs abdominales (4,9 %). Sur la base des données disponibles, il est attendu que la fréquence, le type et la sévérité des effets indésirables soient comparables chez les enfants et adolescents et chez les adultes.</p>
+<p class=AmmAnnexeTitre3>Surveillance post-commercialisation</p>
+<p class=AmmCorpsTexte>Une étude prospective de surveillance post-commercialisation a été réalisée pendant 2 ans chez approximativement 20 000 patients au Japon. La grande majorité des 20 000 patients de l’étude étaient traités par 1 ou 2 mg de pitavastatine, la posologie de 4 mg n’ayant pas été utilisée dans cette étude. 10,4% des patients ont signalé des événements indésirables pour lesquels l’imputabilité de la pitavastatine ne pouvait être exclue. 7,4% des patients ont arrêté le traitement en raison d’événements indésirables. La fréquence des myalgies était de 1,08%. La majorité des événements indésirables étaient d’intensité légère. La fréquence des événements indésirables était plus élevée après 2 ans chez les patients ayant des antécédents d’allergie médicamenteuse (20,4%), d’atteinte rénale ou hépatique (13,5%). Les effets indésirables et leur fréquence, observés dans l’étude de surveillance après commercialisation (en dehors des essais cliniques contrôlés internationaux) aux doses recommandées, sont mentionnés ci-après.</p>
+<p class=AmmAnnexeTitre3>Affections hépatobiliaires</p>
+<p class=AmmCorpsTexte>Rare : Anomalie de la fonction hépatique, troubles hépatiques.</p>
+<p class=AmmAnnexeTitre3>Affections musculo-squelettiques et du tissu conjonctif</p>
+<p class=AmmCorpsTexte>Rare : Myopathie, rhabdomyolyse.</p>
+<p class=AmmCorpsTexte>Dans cette étude, deux cas de rhabdomyolyse ayant nécessité une hospitalisation (0,01% des patients) ont été décrits. </p>
+<p class=AmmCorpsTexte>Chez les patients traités par pitavastatine, à toutes les doses, des cas de notifications spontanées d’effets indésirables musculo-squelettiques, parmi lesquels des cas de myalgie et de myopathie, ont été observés. Des cas de rhabdomyolyse avec ou sans insuffisance rénale aiguë, y compris des décès, ont également été notifiés. Des rapports spontanés des évènements ci-dessous ont également été reçus (la fréquence est basée sur celle observée dans les études post AMM).</p>
+<p class=AmmAnnexeTitre3>Affections du système nerveux</p>
+<p class=AmmCorpsTexte>Peu fréquent : Hypoesthésie.</p>
+<p class=AmmAnnexeTitre3>Affections gastro intestinales.</p>
+<p class=AmmCorpsTexte style='margin-top:12.0pt'>Rare : Gêne abdominale.</p>
+<p class=AmmAnnexeTitre3>Affections de la peau et du tissu sous-cutané</p>
+<p class=AmmCorpsTexte>Fréquence indéterminée : Œdème de Quincke.</p>
+<p class=AmmAnnexeTitre3>Affections musculo-squelettiques et du tissu conjonctif</p>
+<p class=AmmCorpsTexte>Fréquence indéterminée : Syndrome lupoïde.</p>
+<p class=AmmAnnexeTitre3>Affections des organes de reproduction et du sein</p>
+<p class=AmmCorpsTexte>Rare : Gynécomastie.</p>
+<p class=AmmAnnexeTitre3>Effets de la classe des statines</p>
+<p class=AmmCorpsTexte>Les événements indésirables suivants ont été décrits avec certaines statines :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Troubles du sommeil, dont cauchemars,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Troubles de la mémoire,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Troubles de la sexualité,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Dépression,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Cas exceptionnels de pneumopathie interstitielle, notamment lors de traitements prolongés (voir rubrique 4.4),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Diabète : la fréquence dépend de la présence ou non de facteurs de risques (glycémie à jeun &#8805; 5,6 mmol/l, IMC > 30 kg/m², augmentation du taux des triglycérides, antécédents d’hypertension artérielle).</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278931">Il n’existe aucun traitement spécifique en cas de surdosage. Un traitement symptomatique ainsi que des mesures complémentaires peuvent être nécessaires. La fonction hépatique et la concentration de la CK doivent être surveillées. L’hémodialyse présente peu d’intérêt.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : Inhibiteurs de la HMG-CoA réductase, code ATC : C10A A08</a></p>
+<p class=AmmAnnexeTitre3>Mécanisme d’action</p>
+<p class=AmmCorpsTexte>La pitavastatine inhibe de façon compétitive la HMG-CoA réductase, l’enzyme régulatrice de la biosynthèse hépatique du cholestérol. Elle inhibe ainsi la synthèse du cholestérol par le foie. Il en résulte une augmentation de l’expression des récepteurs LDL dans le foie, ce qui favorise la capture des LDL-cholestérol circulant dans le sang et diminue les concentrations sanguines de cholestérol total (CT) et de LDL-cholestérol. L’inhibition prolongée de la synthèse hépatique du cholestérol réduit la sécrétion des VLDL dans le sang, ce qui diminue les concentrations plasmatiques des triglycérides (TG).</p>
+<p class=AmmAnnexeTitre3>Effets pharmacodynamiques</p>
+<p class=AmmCorpsTexte>La pitavastatine diminue les taux élevés du LDL-cholestérol, du cholestérol total et des triglycérides et augmente celui du HDL-cholestérol. Elle diminue l’Apo-B et entraîne des augmentations variables de l’Apo-A1 (voir Tableau 1). Elle diminue également le non-HDL-cholestérol, le rapport TC/HDL-cholestérol ainsi que le rapport Apo-B/Apo-A1.</p>
+<p class=AmmCorpsTexteGras>Tableau 1 : Effet dose chez les patients présentant une hypercholestérolémie pure (Variation moyenne ajustée entre la valeur initiale et celle à 12 semaines en %)</p>
+<div class='fr-table--lg fr-table'><table>
+<tr>
+<td width=78 valign=top style='width:58.6pt;border:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b><span lang=NL>Posologie</span></b></p>
+</td>
+<td width=72 valign=top style='width:54.05pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b><span lang=NL>N</span></b></p>
+</td>
+<td width=86 valign=top style='width:64.15pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b><span lang=NL>LDL- cholestérol</span></b></p>
+</td>
+<td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b><span lang=EN-GB>CT*</span></b></p>
+</td>
+<td width=86 valign=top style='width:64.15pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b><span lang=EN-GB>HDL- cholestérol</span></b></p>
+</td>
+<td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b><span lang=EN-GB>TG</span></b></p>
+</td>
+<td width=75 valign=top style='width:56.3pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b><span lang=EN-GB>Apo-B</span></b></p>
+</td>
+<td width=67 valign=top style='width:50.35pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b><span lang=EN-GB>Apo-A1</span></b></p>
+</td>
+</tr>
+<tr>
+<td width=78 valign=top style='width:58.6pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-GB>Placebo</span></p>
+</td>
+<td width=72 valign=top style='width:54.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-GB>51</span></p>
+</td>
+<td width=86 valign=top style='width:64.15pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-GB>-4,0</span></p>
+</td>
+<td width=74 valign=top style='width:55.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-GB>-1,3</span></p>
+</td>
+<td width=86 valign=top style='width:64.15pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-GB>2,5</span></p>
+</td>
+<td width=74 valign=top style='width:55.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-GB>-2,1</span></p>
+</td>
+<td width=75 valign=top style='width:56.3pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-GB>0,3</span></p>
+</td>
+<td width=67 valign=top style='width:50.35pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-GB>3,2</span></p>
+</td>
+</tr>
+<tr>
+<td width=78 valign=top style='width:58.6pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-GB>1 mg</span></p>
+</td>
+<td width=72 valign=top style='width:54.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-GB>52</span></p>
+</td>
+<td width=86 valign=top style='width:64.15pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-GB>-33,3</span></p>
+</td>
+<td width=74 valign=top style='width:55.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-GB>-22,8</span></p>
+</td>
+<td width=86 valign=top style='width:64.15pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-GB>9,4</span></p>
+</td>
+<td width=74 valign=top style='width:55.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-GB>-14,8</span></p>
+</td>
+<td width=75 valign=top style='width:56.3pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-GB>-24,1</span></p>
+</td>
+<td width=67 valign=top style='width:50.35pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-GB>8,5</span></p>
+</td>
+</tr>
+<tr>
+<td width=78 valign=top style='width:58.6pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><span lang=EN-GB>2 mg</span></p>
+</td>
+<td width=72 valign=top style='width:54.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>49</p>
+</td>
+<td width=86 valign=top style='width:64.15pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>-38,2</p>
+</td>
+<td width=74 valign=top style='width:55.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>-26,1</p>
+</td>
+<td width=86 valign=top style='width:64.15pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>9,0</p>
+</td>
+<td width=74 valign=top style='width:55.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>-17,4</p>
+</td>
+<td width=75 valign=top style='width:56.3pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>-30,4</p>
+</td>
+<td width=67 valign=top style='width:50.35pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>5,6</p>
+</td>
+</tr>
+<tr>
+<td width=78 valign=top style='width:58.6pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>4 mg</p>
+</td>
+<td width=72 valign=top style='width:54.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>50</p>
+</td>
+<td width=86 valign=top style='width:64.15pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>-46,5</p>
+</td>
+<td width=74 valign=top style='width:55.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>-32,5</p>
+</td>
+<td width=86 valign=top style='width:64.15pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>8,3</p>
+</td>
+<td width=74 valign=top style='width:55.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>-21,2</p>
+</td>
+<td width=75 valign=top style='width:56.3pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>-36,1</p>
+</td>
+<td width=67 valign=top style='width:50.35pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>4,7</p>
+</td>
+</tr>
+</table></div>
+<p class=AmmCorpsTexte><span style='font-size:9.0pt'>* non corrigé</span></p>
+<p class=AmmAnnexeTitre3>Efficacité clinique et sécurité </p>
+<p class=AmmCorpsTexte>Dans les essais cliniques contrôlés, réalisés chez 1 687 patients, atteints d’hypercholestérolémie pure ou de dyslipidémie mixte, parmi lesquels 1 239 patients étaient traités aux doses thérapeutiques (LDL-cholestérol initial moyen d’environ 4,8 mmol/l), la pitavastatine a systématiquement diminué les concentrations de LDL-cholestérol, du cholestérol total, du non-HDL-cholestérol, des TG et de l’Apo-B et augmenté les concentrations de HDL-cholestérol et de l’Apo-A1. Les rapports TC/HDL-cholestérol et Apo-B/Apo-A1 ont été diminués. Le LDL-cholestérol a été diminué de 38 à 39% sous pitavastatine 2 mg et de 44 à 45% sous pitavastatine 4 mg. La majorité des patients recevant 2 mg ont atteint l’objectif de traitement de la Société Européenne d’Athérosclérose (ou European Atherosclerosis Society (EAS)), représenté par un taux de LDL-cholestérol < 3 mmol/l.</p>
+<p class=AmmCorpsTexte>Dans un essai clinique contrôlé, réalisé chez 942 patients âgés de 65 ans et plus (434 traités par pitavastatine 1 mg, 2 mg ou 4 mg) présentant une hypercholestérolémie pure ou une dyslipidémie mixte (LDL-cholestérol initial moyen d’environ 4,2 mmol/l), les concentrations de LDL-cholestérol ont été diminuées respectivement de 31%, 39,0% et 44,3% et environ 90% des patients ont atteint l’objectif thérapeutique de l’EAS.</p>
+<p class=AmmCorpsTexte>Plus de 80% des patients recevaient des traitements concomitants, mais la fréquence des événements indésirables a été comparable dans tous les groupes de traitement. Moins de 5% des patients ont arrêté l’étude pour événements indésirables. Les résultats d’efficacité et de tolérance ont été comparables chez les patients dans les différents sous-groupes d’âge (65-69, 70-74 et &#8805; 75 ans).</p>
+<p class=AmmCorpsTexte>Dans les essais cliniques contrôlés effectués chez 761 patients (dont 507 traités par 4 mg de pitavastatine) présentant une hypercholestérolémie pure ou une dyslipidémie mixte, avec au moins 2 facteurs de risque cardiovasculaire (LDL-cholestérol initial moyen d’environ 4,1 mmol/l), ou une dyslipidémie en présence d’un diabète de type 2 (LDL-cholestérol initial moyen d’environ 3,6 mmol/l), environ 80% des patients ont atteint l’objectif recommandé de l’EAS (3 ou 2,5 mmol/l, en fonction du risque).</p>
+<p class=AmmCorpsTexte>Le LDL-cholestérol a été réduit respectivement de 44% et 41% dans les groupes de patients. Dans les études à long terme, jusqu’à 60 semaines, portant sur l’hypercholestérolémie pure et la dyslipidémie mixte, l’objectif atteint de l’EAS a été maintenu avec une diminution stable et persistante du LDL-cholestérol et les concentrations de HDL-cholestérol ont continué à augmenter.</p>
+<p class=AmmCorpsTexte>Dans une étude réalisée chez 1 346 patients ayant reçu un traitement par statine pendant 12 semaines (diminution du LDL-cholestérol : 42,3%, objectif de l’EAS atteint : 69%, augmentation du HDL-cholestérol : 5,6%), les résultats obtenus après 52 semaines complémentaires de traitement par pitavastatine à la dose de 4 mg consistaient en une diminution du LDL-cholestérol de 42,9%, un objectif de l’EAS atteint dans 74% des cas et une augmentation du HDL-cholestérol de 14,3%.</p>
+<p class=AmmCorpsTexte>Dans une extension de l’étude de surveillance de deux ans menée au Japon (LIVES 01, voir rubrique 4.8), 6 582 patients présentant une hypercholestérolémie et traités par la pitavastatine 1 mg, 2 mg ou 4 mg pendant 2 ans ont poursuivi le traitement pendant 3 années supplémentaires (durée totale de traitement de 5 ans). Pendant cette étude de 5 ans, la réduction du LDL-cholestérol (30,5 %) a été maintenue à partir du 3e mois pendant toute la durée de l’étude, les taux de HDL-cholestérol ont augmenté de 1,7 % au 3e mois à 5,7 % à 5 ans, avec les augmentations du HDL-cholestérol plus importantes chez les patients avec un taux de HDL cholestérol initial plus faible (< 40 mg/dl), par exemple des augmentations des taux sériques de 11,9 % au 3e mois à 28,9 % après 5 ans ont été observés.</p>
+<p class=AmmAnnexeTitre3>Athérosclérose</p>
+<p class=AmmCorpsTexte>L’étude JAPAN ACS a comparé les effets d’un traitement de 8 à 12 mois par pitavastatine 4 mg ou atorvastatine 20 mg sur le volume de la plaque athérome chez 251 patients bénéficiant d’une intervention coronarienne percutanée guidée par échographie intravasculaire (IVUS) pour un syndrome coronarien aigu. Cette étude a montré une réduction d’environ 17 % du volume de la plaque avec les deux traitements (-16,9 ± 13,9 % avec la pitavastatine et 18,1 ± 14,2 % avec l’atorvastatine). La non infériorité entre la pitavastatine et l’atorvastatine a été démontrée. Dans les deux cas, la régression de la plaque a été associée à un remodelage vasculaire négatif (113,0 à 105,4 mm3). Il n’a pas été constaté de corrélation significative entre la réduction du LDL cholestérol et la régression de la plaque dans cette étude, contrairement aux données observées dans les études contrôlées versus placebo.</p>
+<p class=AmmCorpsTexte><a name="_Hlk187668772"><span lang=FR-CA>À ce jour, les effets bénéfiques sur la mortalité et la morbidité n’ont été évalués que chez des patients présentant une hypercholestérolémie associée à l’infection par le VIH (voir ci&#8209;après).</span></a></p>
+<p class=AmmAnnexeTitre3>Diabète</p>
+<p class=AmmCorpsTexte>Dans une étude prospective en ouvert contrôlée menée chez 1 269 patients japonais présentant une diminution de la tolérance au glucose randomisés à un traitement par des mesures hygiéno-diététiques avec ou sans LIPPIZA 1 mg, ou 2 mg par jour, 45,7 % des patients du groupe comparateur ont développé un diabète contre 39,9 % des patients du groupe LIPPIZA sur une période de 2,8 ans ; risque relatif de 0,82 [IC à 95 % : 0,68 ; 0,99].</p>
+<p class=AmmCorpsTexte>Une méta-analyse de 4 815 patients non diabétiques inclus dans des études randomisées en double aveugle contrôlées d’une durée d’au moins 12 semaines (durée moyenne pondérée de suivi de 17,3 semaines [ET : 17,7 semaines]) a montré un effet neutre de LIPPIZA sur le risque de diabète de novo (0,98 % des patients du groupe comparateur et 0,50 % des patients traités par LIPPIZA ont développé un diabète ; risque relatif de 0,70 [IC à 95 % : 0,30 ; 1,61]) tandis que 6,5 % des patients du groupe comparateur (103/1 579) recevaient le placebo ; les autres patients étaient traités par des statines incluant l’atorvastatine, la pravastatine et la simvastatine.</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Dans une étude multicentrique randomisée en double aveugle, contrôlée versus placebo (étude NK 104 4.01EU) (n = 106 ; 48 garçons et 58 filles), des enfants et adolescents (âge &#8805; 6 ans et < 17 ans) présentant une hyperlipidémie à risque élevé (taux plasmatiques de LDL C à jeun &#8805; 160 mg/dl [4,1 mmol/l] ou LDL C &#8805; 130 mg/dl [3,4 mmol/l] avec d’autres facteurs de risque) ont reçu la pitavastatine 1 mg, 2 mg, 4 mg ou le placebo une fois par jour pendant 12 semaines. Lors de l’inclusion dans l’étude, la majorité des patients avait un diagnostic d’hypercholestérolémie familiale hétérozygote, environ 41 % des patients étaient âgés de 6 ans à moins de 10 ans et environ 20 %, 9 %, 12 % et 9 % étaient au stade de Tanner II, III, IV et V respectivement. Le taux moyen de LDL C a été réduit de respectivement 23,5 %, 30,1 % et 39,3 % avec la pitavastatine 1 mg, 2 mg et 4 mg contre 1,0 % avec le placebo.</p>
+<p class=AmmCorpsTexte>Dans une étude de sécurité et d’extension en ouvert de 52 semaines (étude NK 104 4.02EU) (n = 113 ; dont 87 patients ayant participé à l’étude contrôlée versus placebo de 12 semaines ; 55 garçons et 58 filles), des enfants et adolescents (âge &#8805; 6 ans et < 17 ans) présentant une hyperlipidémie à risque élevé ont reçu la pitavastatine pendant 52 semaines. Chez tous les patients, le traitement par la pitavastatine était débuté à la posologie de 1 mg par jour et la dose de pitavastatine pouvait être augmentée à 2 mg et 4 mg pour atteindre l’objectif thérapeutique d’un taux de LDL C optimal < 110 mg/dl (2,8 mmol/l) en fonction des valeurs du LDL C à la semaine 4 et à la semaine 8. Lors de l’inclusion dans l’étude, environ 37 % des patients étaient âgés de 6 ans à moins de 10 ans et environ 22 %, 11 %, 12 % et 13 % étaient au stade de Tanner II, III, IV et V respectivement. La dose de pitavastatine a été augmentée à 4 mg par jour chez la majorité des patients (n = 103). Le taux moyen de LDL C était réduit de 37,8 % à la fin de la semaine 52. Au total, 47 patients (42,0 %) avaient atteint l’objectif minimal recommandé par l’American Heart Association (AHA), soit un taux de LDL C < 130 mg/dl, et 23 patients (20,5 %) avaient atteint l’objectif idéal de l’AHA, soit un taux de LDL C < 110 mg/dl à la semaine 52. La réduction du taux moyen de LDL C à la fin de la semaine 52 était de 40,2 % chez les patients âgés de 6 ans à moins de 10 ans (n = 42), 36,7 % chez les patients âgés de 10 ans à moins de 16 ans (n = 61) et 34,5 % chez les patients âgés de 16 ans à moins de 17 ans (n = 9). Le sexe du patient ne semblait pas avoir d’effet sur la réponse. De plus, les taux moyens de CT et de TG avaient diminué de respectivement 29,5 % et 7,6 % à la fin de la semaine 52.</p>
+<p class=AmmCorpsTexte>Le Comité des médicaments pédiatriques de l’Agence européenne des médicaments a accordé une dérogation à l’obligation de soumettre les résultats d’études réalisées chez des enfants âgés de moins de 6 ans et dans le traitement des enfants de tout âge présentant une hypercholestérolémie familiale homozygote (voir rubrique 4.2 Population pédiatrique).</p>
+<p class=AmmAnnexeTitre3>Population infectée par le VIH </p>
+<p class=AmmCorpsTexte>L’efficacité de la pitavastatine et des autres statines sur le LDL cholestérol est réduite chez les patients présentant une hypercholestérolémie associée à l’infection par le VIH ou à son traitement par rapport aux patients présentant une hypercholestérolémie primaire ou une dyslipidémie mixte sans infection par le VIH.</p>
+<p class=AmmCorpsTexte>Dans l’étude INTREPID, 252 patients infectés par le VIH présentant une dyslipidémie (n = 126 par bras) sont entrés dans une phase de sevrage/d’introduction d’un régime alimentaire de 4 semaines et ont ensuite été randomisés pour recevoir une dose de 4 mg de pitavastatine ou de 40 mg de pravastatine une fois par jour pendant 52 semaines. Le critère principal d’efficacité était évalué à la semaine 12.</p>
+<p class=AmmCorpsTexte>Le taux sérique de LDL cholestérol à jeun a diminué de 31 % et 30 % dans le groupe de traitement par la pitavastatine et de 21 % et 20 % dans le groupe de traitement par la pravastatine pendant 12 et 52 semaines respectivement (moyenne des moindres carrés de la différence entre les traitements 9,8 %, P < 0,0001 à la semaine 12 et 8,4 %, P = 0,0007 à la semaine 52). Il a été observé une différence entre les traitements statistiquement significative dans la variation relative moyenne aux semaines 12 et 52 par rapport à l’inclusion pour les critères d’efficacité secondaires, les taux de cholestérol total (CT), de non HDL cholestérol et d’Apo B, avec une diminution plus importante dans le groupe de traitement par la pitavastatine que dans le groupe de traitement par la pravastatine pour chaque paramètre. Il n’a pas été observé de nouveaux signaux de sécurité ni d’événements indésirables avec la pitavastatine 4 mg. A la semaine 52, un échec virologique (défini comme une charge virale d’ARN VIH-1 > 200 copies/mL et une augmentation > 0,3 log par rapport à la valeur initiale) a été rapporté chez 4 patients (3,2 %) du groupe pitavastatine et 6 patients (4,8 %) du groupe pravastatine, sans différences statistiquement significatives entre les traitements.</p>
+<p class=AmmCorpsTexte><a name="_Hlk187668673">Dans l’étude REPRIEVE, 7 769 patients infectés par le VIH ayant un risque faible à modéré de maladie cardiovasculaire qui recevaient un traitement antirétroviral ont été randomisés pour recevoir la pitavastatine 4 mg ou un placebo, avec un suivi à long terme des événements indésirables cardiovasculaires majeurs. L’âge moyen des patients était de 50 ans, l’ancienneté moyenne de l’infection par le VIH était de 13 ans (taux moyen de cellules CD4 : 621/mm3) et 32 % des patients étaient de sexe féminin. L’étude a été arrêtée après une durée de traitement moyenne de 5,1 ans (intervalle : 4,4 –  5,9 ans).</a></p>
+<p class=AmmCorpsTexte>L’incidence des événements indésirables cardiovasculaires majeurs était de 4,81 pour 1 000 patient&#8209;années dans le groupe pitavastatine et de 7,32 pour 1 000 patient-années dans le groupe placebo (risque relatif de 0,65, IC à 95 % : 0,48 ; 0,90, P = 0,002). L’incidence du diabète était de 206 (5,3 %) dans le groupe pitavastatine et de 155 (4,0 %) dans le groupe placebo.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278934">Absorption</a></p>
+<p class=AmmCorpsTexte>La pitavastatine est rapidement absorbée à partir du tube digestif supérieur et les concentrations plasmatiques maximales sont obtenues dans l’heure suivant la prise orale. L’absorption n’est pas altérée par la prise d’aliments. La molécule sous forme inchangée subit un cycle entérohépatique et est bien absorbée à partir du jéjunum et de l’iléon. La biodisponibilité absolue de la pitavastatine est de 51%.</p>
+<p class=AmmAnnexeTitre3>Distribution</p>
+<p class=AmmCorpsTexte>La pitavastatine est liée aux protéines plasmatiques à plus de 99%, essentiellement à l’albumine et à l’alpha-1-glycoprotéine acide. Le volume de distribution moyen est d’environ 133 l. La pitavastatine pénètre dans les hépatocytes, son site d’action et le siège de son métabolisme grâce à un transport actif faisant intervenir plusieurs systèmes de transport hépatiques dont l’OATP1B1 et l’OATP1B3. L’ASC plasmatique est variable, avec un facteur d’environ 4 entre les valeurs les plus faibles et les plus élevées. Les études menées sur le SLCO1B1 (le gène codant pour l’OATP1B1) laissent penser que le polymorphisme de ce gène pourrait être à l’origine d’une grande partie de la variabilité de l’ASC. La pitavastatine n’est pas un substrat de la glycoprotéine p.</p>
+<p class=AmmAnnexeTitre3>Biotransformation</p>
+<p class=AmmCorpsTexte>La pitavastatine sous forme inchangée constitue la fraction prédominante de la molécule dans le plasma. Le principal métabolite est la lactone inactive qui est formée via un glucuroconjugué de la pitavastatine de type ester, grâce à l’intervention de glucuronosyltransférases UDP (UGT1A3 et 2B7).</p>
+<p class=AmmCorpsTexte>Les études in vitro, menées avec 13 isoformes humaines du cytochrome P450 (CYP), indiquent que le métabolisme de la pitavastatine par le CYP est limité ; le CYP2C9 (et dans une moindre mesure le CYP2C8) est responsable du métabolisme de la pitavastatine en métabolites mineurs.</p>
+<p class=AmmAnnexeTitre3>Élimination</p>
+<p class=AmmCorpsTexte>La pitavastatine inchangée est rapidement éliminée du foie dans la bile, mais elle subit un cycle entérohépatique, contribuant à la durée de son action. Moins de 5% de la pitavastatine sont excrétés dans l’urine. La demi-vie d’élimination plasmatique varie entre 5,7 heures (dose unique) et 8,9 heures (plateau) et la moyenne géométrique de la clairance orale apparente est de 43,4 l/h après une dose unique.</p>
+<p class=AmmAnnexeTitre3>Effet des aliments</p>
+<p class=AmmCorpsTexte>La concentration plasmatique maximale de pitavastatine a été diminuée de 43% en présence d’un repas riche en lipides, mais l’ASC est demeurée inchangée.</p>
+<p class=AmmAnnexeTitre3>Populations particulières</p>
+<p class=AmmAnnexeTitre3>Personnes âgées :</p>
+<p class=AmmCorpsTexte>Dans une étude pharmacocinétique ayant comparé des volontaires sains jeunes et âgés (<span style='font-family:Symbol'>³</span> 65 ans), l’ASC de la pitavastatine était 1,3 fois plus élevée chez les sujets âgés. Dans les essais cliniques, chez les patients âgés, aucune conséquence sur l’efficacité et la tolérance de pitavastatine n’a été observée.</p>
+<p class=AmmAnnexeTitre3>Sexe : </p>
+<p class=AmmCorpsTexte>Dans une étude pharmacocinétique ayant comparé des volontaires sains de sexe masculin et féminin, l’ASC de la pitavastatine était 1,6 fois plus élevée chez les femmes. Cela n’a pas eu de conséquence sur l’efficacité et la tolérance de pitavastatine chez les femmes dans les essais cliniques.</p>
+<p class=AmmAnnexeTitre3>Groupe ethnique :</p>
+<p class=AmmCorpsTexte>Il n’y a pas eu de différence de profil pharmacocinétique de la pitavastatine entre les volontaires sains japonais et caucasiens, lorsque l’âge et le poids corporel sont pris en considération.</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique :</p>
+<p class=AmmCorpsTexte>Les données pharmacocinétiques chez les enfants et adolescents sont limitées. Dans l’étude NK 104 4.01EU (voir rubrique 5.1), des prélèvements limités ont montré un effet dose dépendant sur les concentrations plasmatiques de pitavastatine à 1 heure post dose. Des données indiquaient également que les concentrations à 1 heure post dose étaient (inversement) corrélées au poids corporel et qu’elles peuvent être plus élevées chez les enfants que chez les adultes.</p>
+<p class=AmmAnnexeTitre3>Insuffisance rénale :</p>
+<p class=AmmCorpsTexte>En cas d’atteinte rénale modérée ainsi que chez les patients hémodialysés, les ASC ont été augmentées respectivement de 1,8 et 1,7 fois (voir rubrique 4.2).</p>
+<p class=AmmAnnexeTitre3>Insuffisance hépatique :</p>
+<p class=AmmCorpsTexte>Chez les patients présentant une insuffisance hépatique légère (Child-Pugh A), l’ASC était augmentée de 1,6 fois par rapport à celle des sujets sains. Chez les patients présentant une insuffisance hépatique modérée (Child-Pugh B), l’ASC était 3,9 fois plus élevée. Une diminution de la posologie est recommandée chez les patients présentant une insuffisance hépatique légère ou modérée (voir rubrique 4.2). La pitavastatine est contre-indiquée chez les patients présentant une insuffisance hépatique sévère.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278935">Les données précliniques issues des études conventionnelles de pharmacologie de sécurité, toxicologie en administration répétée génotoxicité, cancérogénèse et des fonctions de reproduction, n’ont pas révélé de risque particulier pour l’homme. Des signes de toxicité rénale ont été observés chez le singe à des expositions supérieures à celles atteintes chez l’homme adulte recevant une posologie journalière maximale de 4 mg ; l’excrétion urinaire joue cependant un rôle beaucoup plus important chez le singe par rapport aux autres espèces animales. Les études in vitro avec des microsomes hépatiques montrent qu’un métabolite spécifique pourrait être impliqué chez le singe. Il est peu probable que les effets rénaux observés chez le singe aient une pertinence clinique pour l’homme ; cependant, le risque d’effets indésirables rénaux ne peut être totalement exclu. La pitavastatine n’a eu aucun effet sur la fertilité ou la reproduction ; aucun effet tératogène n’a été observé. Cependant, une toxicité maternelle à fortes doses a été observée. Une étude réalisée chez le rat a montré une mortalité maternelle au terme ou autour du terme, accompagnée du décès des fœtus et des nouveau-nés, à des doses de 1 mg/kg/jour (environ 4 fois plus que la plus forte dose chez l’homme, sur la base de l’ASC). Aucune étude n’a été menée chez les animaux juvéniles.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937">Lactose monohydraté, hydroxypropylcellulose faiblement substituée, hypromellose (E464), aluminométasilicate de magnésium, stéarate de magnésium.</a></p>
+<p class=AmmAnnexeTitre3>Pelliculage : </p>
+<p class=AmmCorpsTexte>Hypromellose (E464), dioxyde de titane (E171), citrate de triéthyle (E1505), silice colloïdale anhydre.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">Sans objet.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278939">5 ans.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940"><span lang=FR-BE>A conserver à une température ne dépassant pas 25°C.</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Conserver la plaquette dans l’emballage extérieur, à l’abri de la lumière.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278942"></a><a name="_Toc142278941">Plaquettes en PVC/Aluminium/PVDC blanc, boîte de 7, 28, 30, 90 ou 100 comprimés.</a></p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte>Tout médicament non utilisé ou déchet doit être éliminé conformément aux exigences locales.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142278943"><span lang=EN-US>KOWA PHARMACEUTICAL EUROPE GMBH</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=EN-US>GÖRRESHOF 151</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=EN-US>53347 ALFTER</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>ALLEMAGNE</p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><a name="_Toc142278944"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 494 629 2 6 : 7 comprimés sous plaquettes thermoformées (PVC/Aluminium/PVDC).</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 494 630 0 8 : 28 comprimés sous plaquettes thermoformées (PVC/Aluminium/PVDC).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 494 631 7 6 : 30 comprimés sous plaquettes thermoformées (PVC/Aluminium/PVDC).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 220 316 7 5: 90 comprimés sous plaquettes thermoformées (PVC/Aluminium/PVDC).</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I </p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_LIPPIZA_1_mg,_comprimé_pelliculé_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE LIPPIZA 1 mg, comprimé pelliculé ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE LIPPIZA 1 mg, comprimé pelliculé ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_LIPPIZA_1_mg,_comprimé_pelliculé_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE LIPPIZA 1 mg, comprimé pelliculé ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE LIPPIZA 1 mg, comprimé pelliculé ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._Comment_prendre_LIPPIZA_1_mg,_comprimé_pelliculé_?"
+                     aria-label="3. Comment prendre LIPPIZA 1 mg, comprimé pelliculé ? (Lien de redirection)">
+                    3. Comment prendre LIPPIZA 1 mg, comprimé pelliculé ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_LIPPIZA_1_mg,_comprimé_pelliculé_?"
+                     aria-label="5. COMMENT CONSERVER LIPPIZA 1 mg, comprimé pelliculé ? (Lien de redirection)">
+                    5. COMMENT CONSERVER LIPPIZA 1 mg, comprimé pelliculé ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : LIPPIZA 1 mg, comprimé pelliculé - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="LIPPIZA 1 mg, comprimé pelliculé, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 20/02/2025</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'><a name="_Toc142278999">LIPPIZA 1 mg, comprim</a>é pelliculé</p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Pitavastatine</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279000"><span lang=FR-BE>Veuillez lire attentivement cette notice avant de prendre ce médicament car elle contient des informations importantes pour vous.</span></a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice, vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin ou votre pharmacien.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif même si les signes de leur maladie sont identiques aux vôtres</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Voir rubrique 4</span></p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que LIPPIZA 1 mg, comprimé pelliculé et dans quel cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant de prendre LIPPIZA 1 mg, comprimé pelliculé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span id='3._Comment_prendre_LIPPIZA_1_mg,_comprimé_pelliculé_?'>3. Comment prendre LIPPIZA 1 mg, comprimé pelliculé ?</span></p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver LIPPIZA 1 mg, comprimé pelliculé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>6. Contenu de l’emballage et autres informations </p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_LIPPIZA_1_mg,_comprimé_pelliculé_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE LIPPIZA 1 mg, comprimé pelliculé ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279003">Inhibiteurs de la HMG-CoA réductase<i> - code ATC : </i>C10AA08</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279004">LIPPIZA 1 mg, comprimé pelliculé contient une substance appelée pitavastatine. Elle appartient à un groupe de médicaments appelés « statines ».</a></p>
+<p class=AmmCorpsTexte>LIPPIZA 1 mg, comprimé pelliculé est utilisé pour diminuer les concentrations des graisses (lipides) dans votre sang et peut être pris par les enfants à partir de 6 ans ainsi que par les adultes. Une augmentation des lipides, en particulier du cholestérol, peut parfois entraîner une crise cardiaque (infarctus du myocarde) ou un accident vasculaire cérébral.</p>
+<p class=AmmCorpsTexte>LIPPIZA 1 mg, comprimé pelliculé vous a été prescrit parce que vous présentez une augmentation des lipides et que les modifications de votre régime alimentaire et de votre mode de vie (mesures hygiéno-diététiques) n’ont pas été suffisantes pour corriger cette augmentation.</p>
+<p class=AmmCorpsTexte>Vous devez poursuivre ces mesures hygiéno-diététiques (régime hypocholestérolémiant et modifications du mode de vie) pendant le traitement par LIPPIZA 1 mg, comprimé pelliculé. </p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_LIPPIZA_1_mg,_comprimé_pelliculé_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE LIPPIZA 1 mg, comprimé pelliculé ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">Ne prenez jamais LIPPIZA 1 mg, comprimé pelliculé :</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique à la pitavastatine, à une autre statine ou à l’un des autres composants contenus dans ce médicament (mentionnés dans la rubrique 6) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes enceinte ou si vous allaitez ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes une femme en âge d’être enceinte et que vous n’utilisez pas une méthode contraceptive efficace (voir « Grossesse et allaitement ») ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez actuellement des problèmes de foie ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous prenez de la ciclosporine (utilisée après une transplantation d’organe) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous souffrez de courbatures ou douleurs musculaires répétées ou inexpliquées.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>En cas de doute, demandez conseil à votre médecin ou à votre pharmacien avant de prendre LIPPIZA 1 mg, comprimé pelliculé.</p>
+<p class=AmmCorpsTexteGras>Avertissements et précautions :</p>
+<p class=AmmCorpsTexte>Adressez-vous à votre médecin ou votre pharmacien avant de prendre LIPPIZA 1 mg, comprimé pelliculé si :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>vous souffrez d’insuffisance respiratoire sévère (problèmes respiratoires graves) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>vous avez déjà eu des problèmes de reins ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>vous avez déjà eu des problèmes de foie. Les statines peuvent provoquer une atteinte du foie chez un petit nombre de patients. En général, votre médecin demandera une analyse de sang (bilan hépatique) avant et pendant le traitement par LIPPIZA 1 mg, comprimé pelliculé ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>vous avez déjà eu des problèmes de thyroïde ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>vous ou un membre de votre famille avez des antécédents d’affections musculaires ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>vous avez présenté des troubles musculaires en prenant d’autres médicaments hypocholestérolémiants (statines ou fibrates par exemple) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>vous consommez des quantités importantes d’alcool.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>.si vous prenez ou avez pris au cours des sept derniers jours un médicament appelé acide fusidique (un médicament utilisé pour traiter les infections bactériennes) par voie orale ou en injections. L’association d’acide fusidique et de LIPPIZA 1 mg, comprimé pelliculé peut provoquer des problèmes musculaires sévères (rhabdomyolyse).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez ou avez eu une myasthénie (maladie accompagnée d'une faiblesse musculaire générale, pouvant parfois toucher les muscles utilisés pour respirer) ou une myasthénie oculaire (maladie provoquant une faiblesse musculaire au niveau des yeux), car les statines peuvent parfois aggraver ces affections ou entraîner leur apparition (voir rubrique 4). </p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Si l’un de ces cas vous concerne (ou en cas de doute), demandez conseil à votre médecin ou à votre pharmacien avant de prendre LIPPIZA 1 mg, comprimé pelliculé. Prévenez également votre médecin ou votre pharmacien si vous avez une faiblesse musculaire constante. Des examens complémentaires et un traitement peuvent être nécessaires pour la diagnostiquer et la traiter.</p>
+<p class=AmmCorpsTexte>Au cours de votre traitement avec ce médicament, si vous êtes diabétique ou si vous présentez un risque de survenue d’un diabète, vous serez suivi attentivement par votre médecin. Vous pouvez débuter un diabète si vous avez un taux de sucre (glycémie) et de graisses élevés dans le sang, si vous êtes en surpoids et si vous avez une pression artérielle (tension) élevée.</p>
+<p class=AmmCorpsTexteGras>Enfants et adolescents</p>
+<p class=AmmCorpsTexte>LIPPIZA 1 mg, comprimé pelliculé ne doit pas être utilisé chez les enfants âgés de moins de 6 ans.</p>
+<p class=AmmCorpsTexte>Avant de prendre LIPPIZA 1 mg, comprimé pelliculé, les adolescentes doivent recevoir des conseils à propos de la contraception.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et LIPPIZA 1 mg, comprimé pelliculé</p>
+<p class=AmmCorpsTexte>Informez votre médecin ou pharmacien si vous prenez, avez récemment pris ou pourriez prendre tout autre médicament. Cela comprend tout médicament obtenu sans ordonnance et les médicaments à base de plantes. Lorsque certains médicaments sont pris simultanément, ils peuvent interagir et leur efficacité peut être altérée.</p>
+<p class=AmmCorpsTexte>En particulier, informez votre médecin ou votre pharmacien si vous prenez l’un des médicaments suivants :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>d’autres médicaments appelés « fibrates », tels que le gemfibrozil et le fénofibrate ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>de l’érythromycine ou de la rifampicine, des antibiotiques utilisés pour traiter les infections ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>de la warfarine ou un autre médicament utilisé pour fluidifier le sang ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>des médicaments utilisés pour traiter l’infection par le VIH appelés « inhibiteurs de protéase » (par exemple ritonavir, lopinavir, darunavir, atazanavir) et « inhibiteurs non nucléosidiques de la transcriptase inverse » (par exemple éfavirenz) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>acide nicotinique (vitamine B) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous devez prendre de l’acide fusidique par voie orale pour traiter une infection bactérienne, vous devrez arrêter ce médicament. Votre médecin vous dira à quel moment il est sûr pour vous de recommencer le traitement par LIPPIZA 1 mg, comprimé pelliculé. La prise de LIPPIZA 1 mg, comprimé pelliculé en association avec l’acide fusidique peut entraîner dans de rares cas une faiblesse, une sensibilité ou une douleur musculaire (rhabdomyolyse). Pour plus d’informations à propos de la rhabdomyolyse, voir la rubrique 4.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous prenez des médicaments contenant du glécaprévir et du pibrentasvir, utilisés pour traiter l’hépatite C. Il pourra être nécessaire que votre médecin modifie votre dose de Lippiza.</p>
+<p class=AmmCorpsTexte><a name="OLE_LINK1">Si l’un de ces cas vous concerne (ou en cas de doute), demandez conseil à votre médecin ou à votre pharmacien avant de prendre LIPPIZA 1 mg, comprimé pelliculé</a><span style='font-size:11.0pt;font-family:"Times New Roman",serif'>.</span></p>
+<p class=AmmCorpsTexteGras>LIPPIZA 1 mg, comprimé pelliculé avec des aliments et boissons</p>
+<p class=AmmCorpsTexte>LIPPIZA 1 mg, comprimé pelliculé peut être pris au cours ou en dehors des repas.</p>
+<p class=AmmCorpsTexteGras>Grossesse, allaitement et fertilité</p>
+<p class=AmmCorpsTexte>Ne prenez pas LIPPIZA 1 mg, comprimé pelliculé si vous êtes enceinte ou si vous allaitez. Si vous envisagez une grossesse, parlez-en à votre médecin.</p>
+<p class=AmmCorpsTexte>Si vous êtes une femme en âge d’être enceinte, vous devez utiliser une méthode contraceptive efficace pendant le traitement par LIPPIZA 1 mg, comprimé pelliculé.</p>
+<p class=AmmCorpsTexte>Si vous découvrez que vous êtes enceinte pendant le traitement par LIPPIZA 1 mg, comprimé pelliculé, arrêtez de prendre le médicament et consultez immédiatement un médecin.</p>
+<p class=AmmCorpsTexte>Si vous êtes enceinte ou que vous allaitez, demandez conseil à votre médecin ou pharmacien avant de prendre tout médicament.</p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>Il est peu probable que LIPPIZA 1 mg, comprimé pelliculé ait des effets sur votre aptitude à conduire des véhicules ou à utiliser des machines.</p>
+<p class=AmmCorpsTexte>Cependant, si vous ressentez des étourdissements ou une somnolence, vous ne devez pas conduire ni utiliser des machines ou des outils.</p>
+<p class=AmmCorpsTexteGras>Informations importantes concernant certains composants de LIPPIZA 1 mg, comprimé pelliculé</p>
+<p class=AmmCorpsTexteGras>LIPPIZA 1 mg, comprimé pelliculé contient du lactose.</p>
+<p class=AmmCorpsTexte>LIPPIZA 1 mg, comprimé pelliculé contient du lactose (un sucre). Si votre médecin vous a informé(e) que vous avez une intolérance à certains sucres, contactez-le avant de prendre ce médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._Comment_prendre_LIPPIZA_1_mg,_comprimé_pelliculé_?'>3. Comment prendre LIPPIZA 1 mg, comprimé pelliculé ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte>Veillez à toujours prendre ce médicament en suivant exactement les indications de votre médecin. Vérifiez auprès de votre médecin ou pharmacien en cas de doute.</p>
+<p class=AmmCorpsTexte><u>Mode d’administration</u></p>
+<p class=AmmCorpsTexte>Les comprimés doivent être avalés entiers avec un verre d’eau, au cours ou en dehors des repas. Vous pouvez les prendre à n’importe quel moment de la journée. Cependant, essayez de prendre les comprimés à la même heure chaque jour.</p>
+<p class=AmmCorpsTexte><u>Posologie</u></p>
+<p class=AmmCorpsTexte>La dose initiale habituelle est de 1 mg une fois par jour.</p>
+<p class=AmmCorpsTexte>Après quelques semaines, votre médecin décidera peut-être d’augmenter votre dose.</p>
+<p class=AmmCorpsTexte>La dose maximale chez les adultes et les enfants âgés de plus de 10 ans est de 4 mg par jour.</p>
+<p class=AmmCorpsTexte>Si vous souffrez d’une affection du foie, vous ne devez pas prendre plus de 2 mg par jour.</p>
+<p class=AmmCorpsTexteGras>Utilisation chez les enfants et les adolescents</p>
+<p class=AmmCorpsTexte>La dose maximale chez les enfants âgés de moins de 10 ans est de 2 mg par jour.</p>
+<p class=AmmCorpsTexte>Si nécessaire, les comprimés peuvent être dispersés dans un verre d’eau immédiatement avant d’être pris ; le verre doit ensuite être rincé avec un second volume d’eau qui doit être bu immédiatement à nouveau. Ne pas utiliser de jus de fruits ou de lait pour disperser les comprimés.</p>
+<p class=AmmCorpsTexte>L’utilisation de LIPPIZA 1 mg, comprimé pelliculé chez les enfants âgés de moins de 6 ans n’est pas recommandée.</p>
+<p class=AmmCorpsTexteGras>Autres informations que vous devez connaître pendant le traitement par LIPPIZA 1 mg, comprimé pelliculé</p>
+<p class=AmmCorpsTexte>Si vous êtes hospitalisé(e) ou si vous recevez un traitement pour une autre maladie, signalez au personnel médical que vous prenez LIPPIZA 1 mg, comprimé pelliculé.</p>
+<p class=AmmCorpsTexte>Votre médecin pourra demander des dosages réguliers du cholestérol.</p>
+<p class=AmmCorpsTexte>Vous ne devez pas arrêter de prendre LIPPIZA 1 mg, comprimé pelliculé sans l’avis de votre médecin. Votre taux de cholestérol pourrait augmenter.</p>
+<p class=AmmCorpsTexteGras>Si vous avez pris plus de LIPPIZA 1 mg, comprimé pelliculé que vous n’auriez dû :</p>
+<p class=AmmCorpsTexte>Vous devez immédiatement consulter un médecin ou aller à l’hôpital. Emportez la boîte du médicament.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez de prendre LIPPIZA 1 mg, comprimé pelliculé :</p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Ne vous inquiétez pas, prenez simplement la dose suivante au moment habituel. Ne prenez pas de dose double</span><span class=AmmCorpsTexteCar> </span><span style='font-weight: normal'>pour compenser la dose oubliée.</span></p>
+<p class=AmmCorpsTexte>Si vous avez d’autres questions sur l’utilisation de ce médicament, demandez plus d’informations à votre médecin ou à votre pharmacien.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</a></p>
+<p class=AmmCorpsTexteGras>Si vous présentez l’un des effets indésirables graves ci-dessous, arrêtez de prendre LIPPIZA 1 mg, comprimé pelliculé et consultez immédiatement un médecin ; un traitement médical d’urgence pourra être nécessaire :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>réaction allergique &#8209; les signes peuvent être : difficultés pour respirer, gonflement (« œdème ») du visage, des lèvres, de la langue ou de la gorge, difficultés pour avaler, démangeaisons intenses sur la peau (avec présence de lésions), </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>douleur ou faiblesse musculaire inexpliquée, en particulier si vous ne vous sentez pas bien, si vous avez de la fièvre ou si vos urines sont de couleur rouge-brun. Dans de rares cas (chez moins de 1 patient sur 1 000), LIPPIZA 1 mg, comprimé pelliculé peut provoquer des effets musculaires gênants. En l’absence de prise en charge médicale, ils peuvent s’aggraver et entraîner une dégradation anormale des muscles (rhabdomyolyse), qui peut provoquer des troubles rénaux,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>problèmes respiratoires incluant toux persistante et/ou essoufflement ou fièvre,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>affection du foie pouvant provoquer une coloration jaune de la peau et du blanc de l’œil (ictère ou jaunisse),</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>pancréatite (douleurs intenses dans l’abdomen et le dos).</p>
+<p class=AmmCorpsTexte>Les effets indésirables sont :</p>
+<p class=AmmCorpsTexteGras>Effets indésirables fréquents (affectant moins de 1 patient sur 10)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>douleurs articulaires, courbatures musculaires,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>constipation, diarrhée, indigestion, nausées (mal au cœur),</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>maux de tête.</p>
+<p class=AmmCorpsTexteGras>Effets indésirables peu fréquents (affectant moins de 1 patient sur 100)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>spasmes musculaires,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>sensation de faiblesse, d’épuisement ou de mal être,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>gonflement des chevilles, des pieds ou des doigts,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>douleurs gastriques, bouche sèche, nausées, perte d’appétit, modification du goût,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>pâleur de la peau et sensation de faiblesse ou essoufflement (anémie),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>démangeaisons ou éruption sur la peau,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>sifflements ou bourdonnements dans les oreilles,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>sensations vertigineuses ou somnolence, insomnies (autres troubles du sommeil incluant des cauchemars),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>augmentation du besoin d’uriner (fréquence mictionnelle),</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>engourdissement et diminution de la sensibilité au niveau des doigts, des orteils, des jambes et du visage.</p>
+<p class=AmmCorpsTexteGras>Effets indésirables rares (affectant moins de 1 patient sur 1 000)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>rougeur de la peau, plaques rouges qui provoquent des démangeaisons,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>baisse de la vision,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>douleur dans la langue,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>sensation désagréable ou gêne dans l’estomac,</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>augmentation du volume des seins chez les hommes (gynécomastie).</p>
+<p class=AmmCorpsTexteGras>Effets indésirables de fréquence indéterminée (fréquence que l’on ne peut pas estimer avec les données disponibles)</p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>faiblesse musculaire constante,</p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>syndrome lupoïde (avec éruption cutanée, affections des articulations et effets sur les cellules sanguines).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Myasthénie (maladie provoquant une faiblesse musculaire générale, pouvant parfois toucher les muscles utilisés pour respirer). </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Myasthénie oculaire (maladie provoquant une faiblesse des muscles oculaires). </p>
+<p class=AmmListePuces1 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:0cm;margin-bottom:.0001pt;text-indent:0cm'>Adressez-vous à votre médecin si vous présentez une faiblesse dans vos bras ou vos jambes qui s’aggrave après des périodes d’activité, une vision double ou des paupières tombantes, des difficultés à avaler ou un essoufflement.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Autres effets indésirables éventuels</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>perte de mémoire,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>troubles sexuels,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>dépression.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>diabète : vous pouvez débuter un diabète si vous avez un taux de sucre (glycémie) et de graisse élevés dans le sang, si vous êtes en surpoids et si vous avez une pression artérielle (tension) élevée. Vous serez suivi attentivement par votre médecin au cours de votre traitement avec ce médicament.</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien ou à votre infirmier/ère. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. V<span class=AmmCorpsTexteCar>o</span>us pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance –  Site internet : <a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr</a></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_LIPPIZA_1_mg,_comprimé_pelliculé_?'>5. COMMENT CONSERVER LIPPIZA 1 mg, comprimé pelliculé ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026"></a><a name="_Toc142279024">Tenir hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte>N’utilisez pas ce médicament après la date de péremption indiquée sur la plaquette et l’emballage. La date de péremption se réfère au dernier jour du mois.</p>
+<p class=AmmCorpsTexte><a name="_Toc142279025">A conserver à une température ne dépassant pas 25°C.</a></p>
+<p class=AmmCorpsTexte>Conserver la plaquette dans l’emballage extérieur, à l’abri de la lumière.</p>
+<p class=AmmCorpsTexte>Ne jetez aucun médicament au tout-à-l’égout ni avec les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient LIPPIZA 1 mg, comprimé pelliculé</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est :</p>
+<p class=AmmComposition style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt'>Pitavastatine...................................................................................................................... 1 mg</p>
+<p class=AmmListePuces1 style='text-indent:0cm'>Sous forme de pitavastatine calcique</p>
+<p class=AmmListePuces1 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.55pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont : </p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:0cm'>Lactose monohydraté, hydroxypropylcellulose faiblement substituée, hypromellose (E464), aluminométasilicate de magnésium, stéarate de magnésium, <span lang=IT>hypromellose (E464), dioxyde de titane (E171), citrate de triéthyle (E1505), silice colloïdale anhydre.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que LIPPIZA 1 mg, comprimé pelliculé et contenu de l’emballage extérieur</a></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-indent:0cm;page-break-after:avoid'>Comprimés pelliculés ronds et blancs, avec « KC » gravé sur une face et « 1 » sur l’autre.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-indent:0cm;page-break-after:avoid'>LIPPIZA 1 mg, comprimé pelliculé est présenté en boîtes de 7, 28, 30, 90 ou 100 comprimés.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-indent:0cm'>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Toc142279031">KOWA PHARMACEUTICAL EUROPE GMBH</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>GÖRRESHOF 151</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>53347 ALFTER</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>ALLEMAGNE</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279032">LABORATOIRES BOUCHARA-RECORDATI</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>TOUR HEKLA</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>52 Avenue du Général de Gaulle</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>92800 PUTEAUX </span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279033">PIERRE FABRE MÉDICAMENT PRODUCTION</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>RUE DU LYCÉE</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>45502 GIEN</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>OU</p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>RECORDATI INDUSTRIA CHIMICA E FARMACEUTICA </p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=EN-US>VIA CIVITALI 1</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=EN-US>20418 MILAN</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>ITALIE</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexteGras>Ce médicament est autorisé dans les Etats membres de l'Espace Economique Européen sous les noms suivants : Conformément à la réglementation en vigueur.</p>
+<p class=AmmCorpsTexte>[À compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte>[À compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-indent:0cm'>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

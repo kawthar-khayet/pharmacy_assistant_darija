@@ -1,0 +1,1529 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="v4CFa3CuwhcMvHGoy/AhLQ==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="v4CFa3CuwhcMvHGoy/AhLQ==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 29/09/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant IMIGRANE 50 mg, comprimé pelliculé"
+            aria-level="3"
+          >
+            IMIGRANE 50 mg, comprimé pelliculé
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament IMIGRANE 50 mg, comprimé pelliculé - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                          <p id="tag-generique" class="fr-tag" aria-controls="fr-modal-tag-generique" data-fr-opened="false">
+              <span class="fr-icon-capsule-fill">
+              </span>&nbsp;générique
+          </p>
+              </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 25/06/1998
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : IMIGRANE 50 mg, comprimé pelliculé - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0439909">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte><a name="_Toc142279003">Classe pharmacothérapeutique<b> </b>: AGONISTES SELECTIFS DES RECEPTEURS 5 HT1 - code ATC : N02CC01</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279004">Ce médicament est indiqué dans le traitement de la crise de migraine avec ou sans aura (sensation subjective passagère qui précède la crise de migraine, très variable d'un sujet à l'autre et qui touche l'audition, la vue ...).</a></p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament appartient au(x) groupe(s) générique(s) suivants : <br/><ul role="list"><li role='listitem'><a href='/medicament/affiche/groupe-generique/64676030/554' aria-describedby='tooltip-medicament-generique-0'>SUMATRIPTAN (SUCCINATE DE) équivalant à SUMATRIPTAN 50 mg - IMIGRANE 50 mg, comprimé pelliculé.</a><span id='tooltip-medicament-generique-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Ouvrir la page de détail sur ce groupe générique</span></li></ul></p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Comprimé ( Composition pour un comprimé )<ul role="list"><li role="listitem" style="list-style-type: none;">sumatriptan<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span><span class="italique">50 mg</span><ul role="list" style="list-style-type: none;"><li class="sousFormeDe" role="listitem"><i class="fa fa-plus-square" aria-hidden="true"></i> sous forme de : succinate de sumatriptan<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span><span class="italique">70 mg </span></li></ul></li></ul></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > plaquette(s) avec sécurité enfant polyamide aluminium PVC-Aluminium papier de 6 comprimé(s)  </p><p>Code CIP : 347 370-4 ou 34009 347 370 4 6<br/>Déclaration de commercialisation : 01/09/1999<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 8,14 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 9,16 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :65%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><div class='fr-grid-row'><div class='fr-col'><p>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence. </p></div></div><div class='fr-grid-row'><div class='fr-col'><p>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprès de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-smr-aide-2'>plus d'informations dans l'aide</a>). Les avis et synthèses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-smr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection à la page d'aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'SMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur du SMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_1543510'>Avis du 17/04/2013</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 17/04/2013 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Renouvellement d'inscription (CT)</td><td class='text-align-center'>Le service médical rendu par IMIGRANE reste important dans l’indication de l’AMM. ;</td></tr></tbody></table></div></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div><div class='fr-col'><p>Pas d'ASMR disponible pour ce médicament (<a href='/aide#le-medicament-que-je-recherche-ne-mentionne-pas-de-service-medical-rendu-(SMR)-ni-amelioration-du-service-medical-rendu-(ASMR)' aria-describedby='tooltip-asmr-aide'>plus d'informations dans l\'aide</a>)</p><span id='tooltip-asmr-aide' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers aide</span></div></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : Laboratoire GLAXOSMITHKLINE</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure nationale</li><li>Code CIS : &nbsp;6 467 603 0</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : IMIGRANE 50 mg, comprimé pelliculé - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="IMIGRANE 50 mg, comprimé pelliculé, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 30/10/2025</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras>IMIGRANE 50 mg, comprimé pelliculé</p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Succinate de sumatriptan..70,00 mg</p>
+<p class=AmmComposition>Quantité correspondant à sumatriptan base ..50,00 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un comprimé pelliculé.</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Comprimé pelliculé.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">Le sumatriptan est indiqué dans le traitement de la crise de migraine, avec ou sans aura.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278918">Posologie</a></p>
+<p class=AmmCorpsTexte>Le sumatriptan ne doit pas être utilisé en prophylaxie.</p>
+<p class=AmmCorpsTexte>Ne pas dépasser la dose recommandée de sumatriptan. </p>
+<p class=AmmCorpsTexte>Il est recommandé d’utiliser le sumatriptan en monothérapie dans le traitement de la crise de migraine et de ne pas le donner de façon concomitante avec de l’ergotamine ou des dérivés (y compris le méthysergide) (voir rubrique 4.3). </p>
+<p class=AmmCorpsTexte>Il est conseillé de prendre le sumatriptan aussi précocement que possible dès la survenue de la crise migraineuse. Son efficacité est identique quel que soit le stade de la crise durant lequel il est administré.</p>
+<p class=AmmCorpsTexte>Les comprimés doivent être avalés sans être croqués avec un grand verre d’eau.</p>
+<p class=AmmCorpsTexte>Les patients ayant des problèmes de déglutition peuvent dissoudre le comprimé dans un peu d’eau. Les comprimés de sumatriptan dissous dans l’eau ont un goût amer.</p>
+<p class=AmmAnnexeTitre4>Adulte</p>
+<p class=AmmCorpsTexte>La dose recommandée est de un comprimé à 50 mg à administrer par voie orale. La dose de 100 mg peut être nécessaire chez certains patients pour lesquels la dose de 50 mg aurait été inefficace.</p>
+<p class=AmmCorpsTexte>En l’absence de soulagement après la première dose, il n’est pas recommandé d’administrer une deuxième dose, au cours de la même crise. Toutefois, cette crise peut être traitée avec du paracétamol, de l’acide acétylsalicylique, ou des anti-inflammatoires non-stéroïdiens. Le sumatriptan pourra être utilisé pour les crises suivantes.</p>
+<p class=AmmCorpsTexte>Si un patient a été soulagé après la prise du premier comprimé mais que les symptômes réapparaissent, un second comprimé peut être pris à condition de respecter un intervalle d’au moins 2 heures entre les deux prises et de ne pas dépasser 300 mg par période de 24h.</p>
+<p class=AmmAnnexeTitre4>Population pédiatrique</p>
+<p class=AmmCorpsTexte>L’utilisation de sumatriptan par voie orale n’est pas recommandée chez les enfants de moins de 10 ans. Aucune donnée clinique n’est disponible pour cette tranche d’âge.</p>
+<p class=AmmCorpsTexte>L’efficacité et la sécurité d’utilisation des comprimés pelliculés de sumatriptan chez les enfants âgés de 10 à 17 ans n’ont pas été démontrées dans les essais cliniques réalisés avec cette tranche d’âge. Par conséquent, l’utilisation des comprimés pelliculés de sumatriptan n’est pas recommandée chez les enfants âgés de 10 à 17 ans (voir rubrique 5.1).</p>
+<p class=AmmAnnexeTitre4>Patient âgé (de plus de 65 ans)</p>
+<p class=AmmCorpsTexte>Il y a peu de données concernant l'utilisation du sumatriptan chez les patients de plus de 65 ans. La cinétique chez les patients âgés n’est pas significativement différente de celle de la population plus jeune. Tant que des données complémentaires ne seront pas disponibles, l'utilisation du sumatriptan chez les patients âgés de plus de 65 ans n'est pas recommandée.</p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278919">Hypersensibilité à l’un des constituants. (Se reporter aussi à la rubrique 4.4 en ce qui concerne l’utilisation chez les patients ayant une hypersensibilité connue aux sulfamides).</a></p>
+<p class=AmmCorpsTexte>Le sumatriptan ne doit pas être donné aux patients ayant des antécédents d’infarctus du myocarde ou une pathologie cardiaque ischémique, un vasospasme coronarien (angor de Printzmetal), une pathologie vasculaire périphérique ou aux patients présentant des symptômes de pathologie cardiaque ischémique ou des signes compatibles avec une pathologie cardiaque ischémique.</p>
+<p class=AmmCorpsTexte>Le sumatriptan ne doit pas être administré aux patients présentant des antécédents d’accident vasculaire cérébral (AVC) ou d’accident ischémique transitoire (AIT).</p>
+<p class=AmmCorpsTexte>Le sumatriptan ne doit pas être administré aux patients ayant une insuffisance hépatique sévère.</p>
+<p class=AmmCorpsTexte>L'utilisation du sumatriptan est contre-indiquée chez les patients ayant une hypertension modérée ou sévère.</p>
+<p class=AmmCorpsTexte>L'utilisation du sumatriptan est contre-indiquée chez les patients ayant une hypertension légère traitée non contrôlée.</p>
+<p class=AmmCorpsTexte>L’association du sumatriptan avec l’ergotamine ou les dérivés de l’ergotamine (y compris le méthysergide) ou de tout triptan/agoniste 5-HydroxyTryptamine<sub>1</sub> (5-HT<sub>1</sub>) est contre-indiquée (voir rubrique 4.5).</p>
+<p class=AmmCorpsTexte>L’association du sumatriptan avec les inhibiteurs de la monoamine oxydase (IMAO) est contre-indiquée.</p>
+<p class=AmmCorpsTexte>Le sumatriptan ne doit pas être utilisé dans les deux semaines suivant l'arrêt d'un traitement par les inhibiteurs de la monoamine oxydase.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278920">Le sumatriptan ne doit être utilisé qu'après avoir établi un diagnostic certain de migraine.</a></p>
+<p class=AmmCorpsTexte>Le sumatriptan n'est pas indiqué dans le traitement des migraines hémiplégiques, basilaires ou ophtalmoplégiques.</p>
+<p class=AmmCorpsTexte>Avant de traiter avec du sumatriptan, il est nécessaire d'exclure les pathologies neurologiques potentiellement graves (par exemple : AVC, AIT) si le patient présente des symptômes atypiques ou s’il n’a pas reçu le diagnostic approprié pour l’utilisation de sumatriptan.</p>
+<p class=AmmCorpsTexte>Après administration, la prise de sumatriptan peut être associée à des symptômes transitoires comprenant des douleurs thoraciques ou une sensation d'oppression pouvant être intense et pouvant s'étendre au niveau de la gorge (voir rubrique 4.8). Si la symptomatologie évoque une ischémie cardiaque, il ne faut pas prendre de doses supplémentaires de sumatriptan et des explorations appropriées devront être réalisées.</p>
+<p class=AmmCorpsTexte>Le sumatriptan ne doit pas être administré aux patients ayant des facteurs de risque de maladie cardiaque ischémique, y compris les gros fumeurs ou les patients utilisant des thérapies de substitution à base de nicotine, sans un bilan cardiovasculaire préalable (voir rubrique 4.3). Une attention particulière doit être portée aux femmes ménopausées et aux hommes de plus de 40 ans présentant ces facteurs de risque. Cependant, ce bilan peut ne pas identifier tous les patients qui ont une maladie cardiovasculaire et, dans de très rares cas, des évènements cardiaques graves sont survenus chez des patients sans maladie cardiovasculaire sous-jacente<span style='color:black'> (voir rubrique 4.8).</span></p>
+<p class=AmmCorpsTexte>Le sumatriptan devra être donné avec prudence chez les patients présentant une hypertension légère contrôlée. En effet, une augmentation transitoire de la pression artérielle ainsi que des résistances vasculaires périphériques ont été observées chez une petite proportion de patients (rubrique section 4.3).</p>
+<p class=AmmCorpsTexte>Après commercialisation, de rares cas de syndrome sérotoninergique (incluant une modification de l'état mental, des manifestations neurovégétatives et des troubles neuromusculaires) ont été décrits après utilisation concomitante d'un inhibiteur sélectif de la recapture de la sérotonine (ISRS) et du sumatriptan. Des cas de syndrome sérotoninergique ont également été rapportés après administration concomitante de triptans et d’inhibiteurs de la recapture de la sérotonine et de la noradrénaline (IRSN). Si l'association du sumatriptan et d'un ISRS/ IRSN est cliniquement justifiée, il est conseillé d'assurer une surveillance appropriée du patient (voir rubrique 4.5).</p>
+<p class=AmmCorpsTexte>Le sumatriptan doit être utilisé avec précaution chez les patients ayant des antécédents de convulsions ou présentant d’autres facteurs de risque susceptibles d’abaisser le seuil épileptogène, car des cas de convulsions ont été rapportés en association avec le sumatriptan (voir rubrique 4.8).</p>
+<p class=AmmCorpsTexte>Le sumatriptan doit être administré avec précaution chez les patients présentant des facteurs pouvant modifier l'absorption, le métabolisme ou l'élimination du médicament, comme par exemple chez l'insuffisant hépatique (Score de Child-Pugh grade A ou B ; voir rubrique 5.2 –  Populations spéciales de patients) ou l’insuffisant rénal (voir rubrique 5.2).</p>
+<p class=AmmCorpsTexte><span style='color:black'>Chez les patients ayant une hypersensibilité connue aux sulfamides, des réactions allergiques peuvent être observées après administration de sumatriptan. Ces réactions vont de l'allergie cutanée aux réactions anaphylactiques. La démonstration d'une allergie croisée est limitée, cependant la prudence est recommandée avant d'utiliser le sumatriptan chez ces patients.</span></p>
+<p class=AmmCorpsTexte><span style='color:black'>La fréquence des effets indésirables peut être augmentée par l’association des triptans à des préparations contenant du millepertuis (<i>Hypericum perforatum</i>).</span></p>
+<p class=AmmCorpsTexte>L'utilisation prolongée d'un traitement antalgique pour traiter les céphalées peut entraîner une aggravation de celles-ci. Dans ce cas, qu'il soit avéré ou suspecté, un avis médical est nécessaire et le traitement doit être interrompu. Le diagnostic de céphalée par abus médicamenteux (CAM) doit être suspecté chez les patients présentant des céphalées fréquentes ou quotidiennes malgré (ou à cause de) l'utilisation régulière d'un traitement antimigraineux.</p>
+<p class=AmmCorpsTexte>Ce médicament contient moins de 1 mmol de sodium (23 mg) par comprimé, c’est-à-dire qu’il est essentiellement « sans sodium ».</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278928"></a><a name="_Toc142278926"></a><a name="_Toc142278925">Il n'a pas été mis en évidence d'interaction avec le propranolol, la flunarizine, le pizotifène ou l'alcool.</a></p>
+<p class=AmmCorpsTexte>Les données concernant l'interaction du sumatriptan avec les médicaments contenant de l'ergotamine ou un autre triptan/agoniste 5-HT<sub>1</sub> sont limitées. Le risque accru de vasospasme coronarien est théoriquement possible. L'administration concomitante de ces produits est donc contre-indiquée (voir rubrique 4.3). </p>
+<p class=AmmCorpsTexte>Le délai devant s'écouler entre l'utilisation du sumatriptan et des médicaments contenant de l'ergotamine ou un autre triptan/agoniste 5-HT<sub>1 </sub>n'est pas connu. Il dépendra aussi des doses et du type de produits à base d'ergotamine ou du type de triptan/agoniste 5-HT<sub>1 </sub>utilisés. Les effets peuvent être additifs. Il est conseillé d'attendre au moins 24 heures après l'utilisation de médicaments contenant de l'ergotamine ou d’un autre triptan/agoniste 5-HT<sub>1</sub>, avant l'administration du sumatriptan. </p>
+<p class=AmmCorpsTexte>Inversement, il est conseillé d'attendre au moins 6 heures après l'utilisation du sumatriptan avant l'administration d'un médicament contenant de l'ergotamine et au moins 24 heures avant l’administration d’un autre triptan/agoniste 5-HT<sub>1</sub>.</p>
+<p class=AmmCorpsTexte>Une interaction peut se produire entre le sumatriptan et les IMAO. L'administration concomitante de ces deux produits est donc contre-indiquée (voir rubrique 4.3).</p>
+<p class=AmmCorpsTexte>Après commercialisation, de rares cas de syndrome sérotoninergique (incluant une modification de l'état mental, des manifestations neurovégétatives et des troubles neuromusculaires) ont été décrits après l’utilisation concomitante d'un inhibiteur sélectif de la recapture de la sérotonine (ISRS) et du sumatriptan. Des cas de syndrome sérotoninergique ont également été rapportés après administration concomitante de triptans et d’inhibiteurs de la recapture de la sérotonine et de la noradrénaline (IRSN).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte>Des données post-commercialisation, provenant de l’utilisation du sumatriptan au cours du premier trimestre de la grossesse chez plus de 1000 femmes, sont disponibles. Bien que ces données soient insuffisantes pour tirer des conclusions définitives, elles ne montrent pas une augmentation du risque tératogène. L’expérience de l’utilisation du sumatriptan au cours du deuxième et troisième trimestre de la grossesse est limitée.</p>
+<p class=AmmCorpsTexte>Les études chez l’animal n’indiquent pas d’effets tératogènes directs ou d’effets nuisibles sur le développement péri et post-natal. Toutefois, la viabilité embryofoetale peut être altérée chez le lapin (voir rubrique 5.3.).</p>
+<p class=AmmCorpsTexte>En conséquence, l’administration de sumatriptan ne doit être envisagée que si le bénéfice attendu pour la mère est supérieur aux risques possibles pour le fœtus.</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278927">Allaitement</a></p>
+<p class=AmmCorpsTexte>Le sumatriptan est excrété dans le lait maternel, avec des doses relatives moyennes pour le nourrisson de < 4 % après administration d'une dose unique de sumatriptan. L’exposition du nourrisson peut être minimisée en évitant l’alimentation au lait maternel dans les 12 heures suivant le traitement. Le lait collecté pendant cette période doit être éliminé.</p>
+<p class=AmmCorpsTexte>Des cas de douleur mammaire et/ou du mamelon ont été rapportés après l’utilisation du sumatriptan chez des femmes qui allaitent (voir rubrique 4.8). La douleur était généralement transitoire et disparaissait en 3 à 12 heures.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929">Aucune donnée n'est disponible. Une somnolence due à la migraine ou au traitement par le sumatriptan peut survenir. Ceci peut influer sur l'aptitude à conduire des véhicules et à utiliser des machines.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmCorpsTexte>Les effets indésirables sont classés ci-dessous par système-organe et par fréquence.</p>
+<p class=AmmCorpsTexte>La classification selon la fréquence utilise la convention suivante : très fréquents (<span style='font-family:Symbol'>³</span> 1/10), fréquents (<span style='font-family:Symbol'>³</span>1/100 à < 1/10), peu fréquents (<span style='font-family:Symbol'>³</span> 1/1 000 à < 1/100), rares (<span style='font-family:Symbol'>³</span> 1/10 000 à < 1/1 000), très rares (< 1/10 000), fréquence indéterminée (ne pouvant être estimée à partir des données disponibles). </p>
+<p class=AmmCorpsTexte>Certains des symptômes rapportés comme un effet indésirable peuvent être associés aux symptômes de la migraine.</p>
+<p class=AmmCorpsTexteGras>Affections du système immunitaire</p>
+<p class=AmmCorpsTexte><u>Fréquence indéterminée</u> : réactions d'hypersensibilité allant d’une allergie cutanée (comme l’urticaire) à une réaction anaphylactique.</p>
+<p class=AmmCorpsTexteGras>Affections du système nerveux</p>
+<p class=AmmCorpsTexte><u>Fréquents</u> : vertiges, somnolence, troubles de la sensibilité dont paresthésie et hypoesthésie.</p>
+<p class=AmmCorpsTexte><u>Fréquence indéterminée</u> : </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>crises convulsives, bien que certaines de ces convulsions soient survenues chez des patients présentant soit des antécédents de convulsions soit des conditions prédisposant aux convulsions. Quelques cas ont été rapportés chez des patients qui n’avaient pas de conditions apparentes prédisposant aux convulsions.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>tremblements, dystonie, nystagmus, scotome.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Affections oculaires</p>
+<p class=AmmCorpsTexte><u>Fréquence indéterminée</u> : troubles visuels tels que papillotements, diplopie, baisse de la vision. Perte de la vision, dont certains cas peuvent être permanents. Toutefois, des troubles visuels peuvent également survenir au cours de la crise de migraine elle-même.</p>
+<p class=AmmCorpsTexteGras>Affections cardiaques</p>
+<p class=AmmCorpsTexte><u>Fréquence indéterminée</u> : bradycardie, tachycardie, palpitations, arythmies cardiaques, signes ischémiques transitoires à l'ECG, vasospasme des artères coronaires, angor, infarctus du myocarde (voir rubriques 4.3 et 4.4).</p>
+<p class=AmmCorpsTexteGras>Affections vasculaires</p>
+<p class=AmmCorpsTexte><u>Fréquents</u> : augmentations transitoires de la pression artérielle survenant juste après le traitement, flush.</p>
+<p class=AmmCorpsTexte><u>Fréquence indéterminée</u> : hypotension et syndrome de Raynaud.</p>
+<p class=AmmCorpsTexteGras>Affections respiratoires, thoraciques et médiastinales</p>
+<p class=AmmCorpsTexte><u>Fréquent</u> : dyspnée.</p>
+<p class=AmmCorpsTexteGras>Affections gastro-intestinales</p>
+<p class=AmmCorpsTexte><u>Fréquents :</u> des nausées et vomissements sont survenus chez certains patients, sans que l'on puisse déterminer si ces symptômes sont liés au sumatriptan ou à la pathologie sous-jacente.</p>
+<p class=AmmCorpsTexte><u>Fréquence indéterminée</u> : colites ischémiques, diarrhées, dysphagie.</p>
+<p class=AmmCorpsTexteGras>Affections musculo-squelettiques et systémiques</p>
+<p class=AmmCorpsTexte><u>Fréquent</u> :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>sensation de lourdeur (habituellement transitoire, mais pouvant être intense et intéresser n'importe <b><u><span style='color:black'>quelle partie du corps, y compris la poitrine et la gorge).</span></u></b></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>myalgie.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><u>Fréquence indéterminée</u> : raideur de la nuque, arthralgie.</p>
+<p class=AmmAnnexeTitre3><span style='text-decoration:none'>Troubles généraux et anomalies au site d'administration</span></p>
+<p class=AmmCorpsTexte><u>Fréquents</u> : douleur, sensation de chaleur ou de froid, de pression ou d'oppression (ces effets sont habituellement transitoires, mais ils peuvent être intenses et intéresser n'importe quelle partie du corps, y compris la poitrine et la gorge) ; sensations de faiblesse, fatigue (ces deux effets sont le plus souvent d'intensité faible à modérée et transitoires).</p>
+<p class=AmmCorpsTexte><a name="_Hlk45449195"><u>Fréquence indéterminée</u> : douleur traumatique provoquée, douleur inflammatoire provoquée.</a></p>
+<p class=AmmCorpsTexteGras>Investigations</p>
+<p class=AmmCorpsTexte><u>Très rares</u> : des perturbations mineures des tests hépatiques ont été occasionnellement observées.</p>
+<p class=AmmCorpsTexteGras>Affections psychiatriques</p>
+<p class=AmmCorpsTexte><u>Fréquence indéterminée</u> : anxiété.</p>
+<p class=AmmCorpsTexteGras>Affections de la peau et du tissu sous-cutané</p>
+<p class=AmmCorpsTexte><u>Fréquence indéterminée</u> : hyperhidrose.</p>
+<p class=AmmCorpsTexteGras>Affections des organes de reproduction et du sein</p>
+<p class=AmmCorpsTexteGras><u><span style='font-weight:normal'>Fréquence rare</span></u><span style='font-weight:normal'> : Douleur mammaire</span></p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés</p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278931">Signes et symptômes</a></p>
+<p class=AmmCorpsTexte>Des doses uniques allant jusqu'à 400 mg par voie orale et 16 mg par voie sous-cutanée<s> </s>n'ont pas entraîné d'effets indésirables autres que ceux mentionnés. Des patients ont reçu des injections sous-cutanées à dose unique allant jusqu’à 12 mg sans entraîner d’effets indésirables significatifs.</p>
+<p class=AmmCorpsTexteGras>Traitement</p>
+<p class=AmmCorpsTexte>En cas de surdosage, le patient doit être mis sous surveillance pendant au moins 10 heures et un traitement symptomatique standard doit être administré, si nécessaire. L'effet de l'hémodialyse ou de la dialyse péritonéale sur les concentrations plasmatiques de sumatriptan n'est pas connu.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : </a>AGONISTES SELECTIFS DES RECEPTEURS 5 HT<sub>1</sub>, code ATC : N02CC01<span style='font-size:8.0pt'>.</span></p>
+<p class=AmmAnnexeTitre3><a name="_Hlk51932843">Mécanisme d’action</a></p>
+<p class=AmmCorpsTexte>Le sumatriptan est un agoniste sélectif des récepteurs vasculaires à la 5-hydroxy-tryptamine-1 (5HT1d) sans effet sur les autres sous-types de récepteurs 5HT (5HT2 à 5HT7). Les récepteurs vasculaires 5HT1d sont localisés principalement au niveau des vaisseaux sanguins crâniens et induisent une vasoconstriction.</p>
+<p class=AmmCorpsTexte>Chez l’animal, le sumatriptan est responsable d’une vasoconstriction sélective de la circulation artérielle carotidienne, mais ne modifie pas le flux sanguin cérébral. La circulation artérielle carotidienne vascularise les tissus extracrâniens et intracrâniens tels que les méninges et on pense que la dilatation et/ou la formation d’œdèmes au niveau de ces vaisseaux pourraient correspondre au mécanisme de la migraine chez l’homme. De plus, les résultats des études chez l’animal indiquent que le sumatriptan inhibe l’activité du nerf trijumeau. Ces deux actions (vasoconstriction crânienne et inhibition de l’activité du nerf trijumeau) pourraient contribuer à l’action anti-migraineuse du sumatriptan chez l’homme.</p>
+<p class=AmmAnnexeTitre3><a name="_Hlk51932852">Effets pharmacodynamiques</a></p>
+<p class=AmmCorpsTexte>La réponse clinique débute 30 minutes environ après administration orale.</p>
+<p class=AmmCorpsTexte>Le sumatriptan est également efficace dans le traitement de la crise de migraine périmenstruelle.</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Le sumatriptan a été évalué chez plus de 650 enfants et adolescents migraineux âgés de 10 à 17 ans. Ces études n’ont pas montré une différence statistiquement significative entre le placebo et le sumatriptan dans le soulagement de la douleur à deux heures quelle que soit la dose. Les effets indésirables du sumatriptan par voie orale chez les enfants et adolescents âgés de 10 à 17 ans étaient similaires à ceux rapportés dans la population adulte.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278934">Chez l’adulte, la pharmacocinétique du sumatriptan n’est pas affectée par la crise de migraine.</a></p>
+<p class=AmmAnnexeTitre3>Absorption</p>
+<p class=AmmCorpsTexte>Après administration orale, le sumatriptan est rapidement absorbé, 70% de la concentration maximale survenant en 45 minutes. Les concentrations plasmatiques maximales moyennes sont de l’ordre de 30ng/ml (16 à 60 ng/ml) après administration d’une dose de 50mg.</p>
+<p class=AmmCorpsTexte>La biodisponibilité absolue par voie orale est de 14% en moyenne.</p>
+<p class=AmmAnnexeTitre3>Distribution</p>
+<p class=AmmCorpsTexte>La liaison aux protéines plasmatiques est faible (14-21%), le volume de distribution total moyen est de 170 litres. </p>
+<p class=AmmAnnexeTitre3>Métabolisme</p>
+<p class=AmmCorpsTexte>Le principal métabolite, l’analogue acide indolacétique du sumatriptan, est principalement excrété dans les urines, où il est retrouvé sous forme d’acide libre ou de glucuroconjugué. Il n’a pas d’activité 5HT<sub>1</sub> ou 5HT<sub>2</sub> connue. Les métabolites mineurs n’ont pas été identifiés.</p>
+<p class=AmmAnnexeTitre3>Elimination</p>
+<p class=AmmCorpsTexte>La demi-vie d’élimination est d’environ deux heures. La clairance plasmatique moyenne est d’environ 1160 ml/min et la clairance plasmatique rénale moyenne est d’environ 260 ml/min. </p>
+<p class=AmmCorpsTexte>La clairance non rénale représente environ 80% de la clairance totale. <a name="_Hlk51923712">Le sumatriptan est éliminé tout d’abord par métabolisme oxydatif dû à la monoamine-oxydase A. </a></p>
+<p class=AmmAnnexeTitre3>Populations spéciales de patients</p>
+<p class=AmmAnnexeTitre4>Insuffisance hépatique</p>
+<p class=AmmCorpsTexte>Après administration par voie orale, la clairance pré-systémique est réduite chez les patients insuffisants hépatiques, provoquant une augmentation des taux plasmatiques de sumatriptan (voir rubrique 4.4).</p>
+<p class=AmmAnnexeTitre4>Patients âgés</p>
+<p class=AmmCorpsTexte>Chez les sujets de plus de 65 ans non migraineux, les paramètres pharmacocinétiques ne sont pas significativement différents.</p>
+<p class=AmmAnnexeTitre4>Patients dialysés</p>
+<p class=AmmCorpsTexte>La pharmacocinétique n’a pas été étudiée en hémodialyse ou en dialyse péritonéale.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278935">Lors d’une étude de fertilité chez le rat, une réduction du succès de l’insémination a été observée à des taux d’exposition bien supérieurs à l’exposition maximale chez l’homme. Chez le lapin, une embryolétalité sans anomalie tératogène marquée a été observée. La pertinence de ces résultats chez l’homme n’est pas connue.</a></p>
+<p class=AmmCorpsTexte>Les études réalisées chez l’animal et sur des modèles in vitro ont montré que le sumatriptan était dépourvu d’activité génotoxique et carcinogène.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937"><i><u>Comprimé nu :</u></i> hydrogénophosphate de calcium, bicarbonate de sodium, cellulose microcristalline, croscarmellose sodique, stéarate de magnésium.</a></p>
+<p class=AmmCorpsTexte><i><u>Pelliculage :</u></i> OPADRY rose YS-1-1441-G (hypromellose, triacétine, oxyde de fer rouge, dioxyde de titane).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">Sans objet.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte>3 ans.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940">A conserver à une température ne dépassant pas 30°C.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278942"></a><a name="_Toc142278941">6 comprimés sous plaquettes avec sécurité enfant (Polyamide/Aluminium/PVC-Aluminium/Papier)</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Pas d’exigences particulières.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142278943">LABORATOIRE GLAXOSMITHKLINE</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>23 RUE FRANCOIS JACOB</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>92500 RUEIL-MALMAISON</p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1 style='text-align:justify'><a name="_Toc142278944"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 347 370 4 6 : 6 comprimés sous plaquettes avec sécurité enfant (Polyamide/Aluminium/PVC-Aluminium/Papier)</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_IMIGRANE_50_mg,_comprimé_pelliculé_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE IMIGRANE 50 mg, comprimé pelliculé ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE IMIGRANE 50 mg, comprimé pelliculé ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_IMIGRANE_50_mg,_comprimé_pelliculé_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE IMIGRANE 50 mg, comprimé pelliculé ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE IMIGRANE 50 mg, comprimé pelliculé ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_PRENDRE_IMIGRANE_50_mg,_comprimé_pelliculé_?"
+                     aria-label="3. COMMENT PRENDRE IMIGRANE 50 mg, comprimé pelliculé ? (Lien de redirection)">
+                    3. COMMENT PRENDRE IMIGRANE 50 mg, comprimé pelliculé ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_IMIGRANE_50_mg,_comprimé_pelliculé_?"
+                     aria-label="5. COMMENT CONSERVER IMIGRANE 50 mg, comprimé pelliculé ? (Lien de redirection)">
+                    5. COMMENT CONSERVER IMIGRANE 50 mg, comprimé pelliculé ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : IMIGRANE 50 mg, comprimé pelliculé - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="IMIGRANE 50 mg, comprimé pelliculé, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 30/10/2025</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'><a name="_Toc142278999">IMIGRANE 50 mg, comprimé pelliculé</a></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Sumatriptan</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279000"><span lang=FR-BE>Veuillez lire attentivement cette notice avant de prendre ce médicament car elle contient des informations importantes pour vous.</span></a></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin ou votre pharmacien.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que IMIGRANE 50 mg, comprimé pelliculé et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant de prendre IMIGRANE 50 mg, comprimé pelliculé<span style='text-transform:uppercase'> ?</span></p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment prendre IMIGRANE 50 mg, comprimé pelliculé<span style='text-transform:uppercase'> ?</span></p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver IMIGRANE 50 mg, comprimé pelliculé<span style='text-transform:uppercase'> ?</span></p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_IMIGRANE_50_mg,_comprimé_pelliculé_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE IMIGRANE 50 mg, comprimé pelliculé ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279003">Classe pharmacothérapeutique<b> </b>: AGONISTES SELECTIFS DES RECEPTEURS 5 HT1 - code ATC : N02CC01</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279004">Ce médicament est indiqué dans le traitement de la crise de migraine avec ou sans aura (sensation subjective passagère qui précède la crise de migraine, très variable d'un sujet à l'autre et qui touche l'audition, la vue ...).</a></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_IMIGRANE_50_mg,_comprimé_pelliculé_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE IMIGRANE 50 mg, comprimé pelliculé ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">Ne prenez jamais IMIGRANE 50 mg, comprimé pelliculé dans les cas suivants :</a></p>
+<p class=AmmListePuces1><span style='font-size:11.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>allergie connue au sumatriptan ou à l'un des composants ;</p>
+<p class=AmmListePuces1><span style='font-size:11.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>antécédents d'infarctus du myocarde ;</p>
+<p class=AmmListePuces1><span style='font-size:11.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>certaines maladies cardiovasculaires ou antécédents de maladies cardiovasculaires tels que l'angine de poitrine (caractérisée par des douleurs violentes localisées au niveau de la poitrine et pouvant s'étendre dans le bras gauche), les troubles de la circulation périphérique (notamment au niveau des doigts et des orteils) ;</p>
+<p class=AmmListePuces1><span style='font-size:11.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>antécédents d'accident vasculaire cérébral (AVC) ou de mini AVC appelé accident ischémique transitoire (AIT) ;</p>
+<p class=AmmListePuces1><span style='font-size:11.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>hypertension artérielle modérée ou sévère et hypertension artérielle légère non contrôlée par un traitement;</p>
+<p class=AmmListePuces1><span style='font-size:11.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>maladie grave du foie ;</p>
+<p class=AmmListePuces1><span style='font-size:11.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>association à certains autres médicaments utilisés également dans le traitement de la migraine (ergotamine et dérivés de l'ergotamine, y compris le méthysergide ou les médicaments de la famille des triptans/agonistes 5-HT<sub>1</sub>) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>association aux IMAO (iproniazide, nialamide, toloxatone, moclobémide (médicaments utilisés dans le traitement de la dépression), sélégiline (médicament utilisé dans le traitement de la maladie de Parkinson). Le sumatriptan ne doit pas être utilisé dans les deux semaines suivant l'arrêt d'un traitement par IMAO.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>EN CAS DE DOUTE, IL EST INDISPENSABLE DE DEMANDER L'AVIS DE VOTRE MEDECIN OU DE VOTRE PHARMACIEN.</p>
+<p class=AmmCorpsTexteGras>Avertissements et précautions</p>
+<p class=AmmCorpsTexteGras><u>Mises en garde spéciales</u></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ce médicament n'a pas été suffisamment étudié chez les sujets de plus de 65 ans et de moins de 18 ans, c’est pourquoi il n’est pas recommandé d’utiliser ce médicament chez ces personnes.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Le diagnostic de migraine doit avoir été clairement établi par votre médecin.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ce médicament n’est pas indiqué au cours des migraines accompagnées de paralysie, de paralysie oculaire ou de migraine basilaire.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Une sensation d'oppression ou des douleurs au niveau de la poitrine, parfois intenses, pouvant s'étendre au niveau de la gorge, peuvent survenir dans les minutes suivant l'administration du médicament ; contactez alors votre médecin et ne prenez pas de dose supplémentaire de ce médicament.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La fréquence d’effets indésirables peut être augmentée par l’association avec des préparations contenant du millepertuis.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Comme avec les autres traitements de la crise de migraine, si vous prenez trop d’IMIGRANE 50 mg, comprimé pelliculé vos maux de tête peuvent s’aggraver et/ou survenir plus souvent. Si cela se produit, votre médecin pourra vous demander d’arrêter de prendre IMIGRANE 50 mg, comprimé pelliculé.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ce médicament ne doit pas être administré en cas d'allergie connue aux sulfamides (risque d'allergie croisée).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ce médicament doit être utilisé avec prudence en cas d’hypertension légère contrôlée par un traitement.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><u>Précautions d'emploi</u></p>
+<p class=AmmCorpsTexte>Prévenez votre médecin, en cas de :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>présence de facteurs de risque cardiovasculaire (femme après la ménopause, âge (homme de plus de 40 ans), tabagisme ou prise de médicaments destinés à arrêter de fumer, ...) ; </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>antécédents de crises convulsives. Ce médicament est susceptible d'augmenter le risque de survenue de convulsions ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>traitement concomitant par certains antidépresseurs notamment la fluvoxamine, la fluoxétine, la paroxétine, le citalopram, la sertraline, l’escitalopram, le milnacipran ou la venlafaxine. Si vous présentez plusieurs des symptômes suivants : diarrhée, accélération du rythme cardiaque, fièvre, sueurs, tremblements ou contractions musculaires involontaires, agitation, confusion mentale, hallucinations, prévenez immédiatement votre médecin. Ceux-ci peuvent être les signes d’une réaction appelée syndrome sérotoninergique (voir rubrique « Prise ou utilisation d'autres médicaments ») ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>maladie du rein ou du foie.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Adressez-vous à votre médecin ou pharmacien avant de prendre IMIGRANE 50 mg, comprimé pelliculé.</p>
+<p class=AmmCorpsTexteGras>Enfants</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et IMIGRANE 50 mg, comprimé pelliculé</p>
+<p class=AmmCorpsTexte>Vous ne devez pas prendre ce médicament en même temps que certains autres médicaments <span class=AmmCorpsTexteGrasCar>utilisés dans le traitement de la migraine</span> (notamment l'ergotamine et les dérivés de l'ergotamine, y compris le méthysergide ou les médicaments de la famille des triptans/agonistes 5-HT<sub>1</sub>) ; <span class=AmmCorpsTexteGrasCar>un délai de 24 heures</span> doit être respecté entre l'arrêt de ces médicaments et l'administration de sumatriptan.</p>
+<p class=AmmCorpsTexte>De même, l'ergotamine et les dérivés de l'ergotamine, y compris le méthysergide ne doivent pas être administrés dans les <span class=AmmCorpsTexteGrasCar>6 heures</span> qui suivent une administration de sumatriptan. Quant aux médicaments de la famille des triptans/agonistes 5-HT<sub>1</sub>, il faut attendre 24 heures après la prise de sumatriptan avant de les administrer. En revanche vous pouvez prendre du paracétamol, de l'acide acétylsalicylique ou des anti-inflammatoires non stéroïdiens.</p>
+<p class=AmmCorpsTexte>Vous ne devez pas prendre ce médicament en même temps que certains médicaments utilisés dans le traitement de la dépression (IMAO (iproniazide, nialamide, toloxatone, moclobémide)) ou le traitement de la maladie de Parkinson (sélégiline) ; respectez un délai de 2 semaines entre l'arrêt de l'IMAO et l'instauration du traitement par le sumatriptan.</p>
+<p class=AmmCorpsTexte>Si vous prenez ce médicament alors que vous êtes traité par un antidépresseur tel que la fluoxétine, la paroxétine, le citalopram, la sertraline, l'escitalopram, le milnacipran ou la venlafaxine, prévenez votre médecin immédiatement. Cette association peut provoquer rarement une réaction liée à un excès de sérotonine (appelé syndrome sérotoninergique) produisant les symptômes suivants : diarrhée, accélération du rythme cardiaque, fièvre, sueurs, tremblements ou contractions musculaires involontaires, agitation, confusion mentale, hallucinations.</p>
+<p class=AmmCorpsTexte>Vous devez informer votre médecin de tout médicament que vous prenez déjà ou que vous avez récemment pris, même s'il s'agit d'un médicament obtenu sans ordonnance, en particulier pour traiter la migraine, la dépression, ou l'aide à l'arrêt du tabac.</p>
+<p class=AmmCorpsTexteGras>IMIGRANE 50 mg, comprimé pelliculé avec des aliments, boissons et de l’alcool</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279012">Grossesse et allaitement</a></p>
+<p class=AmmCorpsTexte>L'utilisation de ce médicament est <span class=AmmCorpsTexteGrasCar>déconseillée</span> pendant la grossesse ou en cas d'allaitement, sauf avis contraire de votre médecin.</p>
+<p class=AmmCorpsTexte>Si vous découvrez que vous êtes enceinte pendant le traitement, consultez votre médecin : lui seul pourra adapter le traitement à votre état.</p>
+<p class=AmmCorpsTexte>Vous devez éviter d’allaiter votre enfant pendant 12 heures suite à la prise d’IMIGRANE. Le lait collecté pendant cette période doit être éliminé.</p>
+<p class=AmmCorpsTexte>Certaines femmes qui allaitent signalent de la douleur mammaire et/ou au mamelon après l’utilisation du sumatriptan. La douleur est généralement temporaire et disparaît en 3 à 12 heures.</p>
+<p class=AmmCorpsTexte>Demandez conseil à votre médecin ou à votre pharmacien avant de prendre tout médicament.</p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>Ce médicament ainsi que la migraine peuvent entraîner une somnolence. Dans ce cas, conduire un véhicule ou utiliser une machine peut être dangereux.</p>
+<p class=AmmCorpsTexteGras>IMIGRANE 50 mg, comprimé pelliculé contient du sodium</p>
+<p class=AmmCorpsTexte><b>Ce médicament contient moins de 1 mmol de sodium (23 mg) par comprimé</b>, c’est-à-dire qu’il est essentiellement « sans sodium ».</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_PRENDRE_IMIGRANE_50_mg,_comprimé_pelliculé_?'>3. COMMENT PRENDRE IMIGRANE 50 mg, comprimé pelliculé ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279021">Veillez à toujours prendre ce médicament en suivant exactement les instructions de cette notice ou les indications de votre médecin ou pharmacien. Vérifiez auprès de votre médecin ou pharmacien en cas de doute.</a></p>
+<p class=AmmCorpsTexteGras><u>Posologie</u></p>
+<p class=AmmCorpsTexteGras>Réservé à l'adulte de plus de 18 ans et de moins de 65 ans.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Traitement de la crise de migraine : <b>un</b> comprimé.</p>
+<p class=AmmListePuces1 style='text-indent:0cm'>En l'absence de soulagement, au cours d'une crise, l'administration d'un deuxième comprimé n'apporte pas de bénéfice supplémentaire.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En cas de soulagement après la première prise puis de réapparition de la douleur dans les 24 heures, un deuxième comprimé pourra être administré, à condition de respecter un intervalle d'<span class=AmmCorpsTexteGrasCar>au moins 2 heures </span>entre les 2 comprimés.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><u>Mode d’administration </u></p>
+<p class=AmmCorpsTexte>Les comprimés doivent être avalés sans être croqués avec un grand verre d'eau. Si vous avez des difficultés pour avaler, vous pouvez dissoudre le comprimé dans un peu d’eau mais le comprimé dissous a un goût amer.</p>
+<p class=AmmCorpsTexte>Il est recommandé de prendre le sumatriptan dès l'apparition des maux de tête ou des symptômes pouvant être associés à une crise de migraine comme les nausées, les vomissements ou une sensibilité gênante à la lumière (photophobie).</p>
+<p class=AmmCorpsTexte>Ne pas utiliser ce médicament à titre préventif.</p>
+<p class=AmmCorpsTexteGras>Si vous avez pris plus d’IMIGRANE 50 mg, comprimé pelliculé que vous n’auriez dû</p>
+<p class=AmmCorpsTexte>Avertir immédiatement un médecin qui prendra les dispositions nécessaires.</p>
+<p class=AmmCorpsTexte>Consultez immédiatement votre médecin ou votre pharmacien.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez de prendre IMIGRANE 50 mg, comprimé pelliculé</p>
+<p class=AmmCorpsTexte><a name="_Toc142279020">Sans objet.</a></p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez de prendre IMIGRANE 50 mg, comprimé pelliculé</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</a></p>
+<p class=AmmCorpsTexte>Ce médicament peut entraîner des effets plus ou moins gênants.</p>
+<p class=AmmCorpsTexte>Certains des symptômes indiqués ci-dessous peuvent être associés aux symptômes de la migraine.</p>
+<p class=AmmCorpsTexteGras>Réactions allergiques : demandez de l’aide immédiatement</p>
+<p class=AmmCorpsTexte>Les effets indésirables suivants peuvent survenir mais leur fréquence est inconnue :</p>
+<p class=AmmCorpsTexte>Manifestations allergiques plus ou moins sévères incluant une éruption cutanée avec ou sans démangeaison, une respiration sifflante, un gonflement des paupières, du visage ou des lèvres ou un choc.</p>
+<p class=AmmCorpsTexte>Si vous ressentez un de ces symptômes juste après avoir pris IMIGRANE</p>
+<p class=AmmCorpsTexteGras style='margin-left:36.0pt;text-indent:-18.0pt'><span style='font-family:Wingdings;font-weight:normal'>è<span style='font:7.0pt "Times New Roman"'>  </span></span>N’en prenez plus et contactez immédiatement votre médecin.</p>
+<p class=AmmCorpsTexte><i><u>Effets indésirables fréquents : </u></i></p>
+<p class=AmmCorpsTexte>(affectent jusqu’à <span class=AmmCorpsTexteGrasCar>1</span> personne sur <span class=AmmCorpsTexteGrasCar>10</span>)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Douleur, sensations de lourdeur, de pression ou d’oppression dans n’importe quelle partie du corps, notamment la poitrine ou la gorge ou sensations inhabituelles telles que engourdissements, fourmillements, diminution de la sensibilité, sensations de chaleur ou de froid. Ces effets peuvent être intenses mais sont le plus souvent transitoires.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><span class=AmmCorpsTexteGrasCar>Si ces effets persistent ou s’aggravent</span> <span class=AmmCorpsTexteCar>(en particulier la douleur à la poitrine),</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span class=AmmCorpsTexteGrasCar>Contactez immédiatement votre médecin ou l’hôpital</span><span class=AmmCorpsTexteCar>. Chez un petit nombre de patients, ces symptômes peuvent être liés à une crise cardiaque.</span></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><i><u>Autres effets indésirables fréquents :</u></i></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Nausées, vomissements qui peuvent aussi être dus à la crise de migraine.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Fatigue ou somnolence. </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Vertiges, sensation de faiblesse, bouffées de chaleur.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Augmentation transitoire de la tension artérielle après le traitement (hypertension).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Difficulté respiratoire</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Douleurs musculaires.</p>
+<p class=AmmCorpsTexte style='margin-top:12.0pt'><a name="_Hlk204011212"><i><u>Effets indésirables rares : </u></i></a></p>
+<p class=AmmCorpsTexte>(affectent jusqu’à 1 personne sur 1 000)</p>
+<p class=AmmListePuces1 style='margin-bottom:6.0pt'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Douleur mammaire.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><i><u>Effets indésirables très rares : </u></i></p>
+<p class=AmmCorpsTexte><span class=AmmCorpsTexteGrasCar><span style='font-weight: normal'>(</span></span><span class=AmmCorpsTexteCar>affectent jusqu’à</span> <span class=AmmCorpsTexteGrasCar>1</span> <span class=AmmCorpsTexteCar>personne sur</span> <span class=AmmCorpsTexteGrasCar>10 000</span><span class=AmmCorpsTexteGrasCar><span style='font-weight:normal'>)</span></span></p>
+<p class=AmmListePuces1 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:17.85pt;margin-bottom:.0001pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Perturbations mineures des enzymes du foie. Si vous faites un test sanguin pour vérifier vos fonctions hépatiques, parlez à votre médecin de la prise d’IMIGRANE.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Certains patients peuvent être affectés par d’autres effets indésirables mais leur fréquence exacte n’est pas connue :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Crises convulsives, tremblements, dystonie (contraction douloureuse des muscles), raideur de la nuque.  </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Troubles de la vision (qui peuvent aussi être dus à la crise de migraine elle-même) : papillotement, baisse de la vision, vision double, mouvements oscillatoires et quelquefois rotatoires du globe oculaire, lacune fixe dans le champ visuel, pertes de la vision qui peuvent être permanentes dans certains cas.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Problèmes cardiaques : ralentissement ou accélération du rythme des battements du cœur (bradycardie ou tachycardie), palpitations, troubles du rythme cardiaque, angine de poitrine (sensation de douleur au niveau de la poitrine), infarctus du myocarde. </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Diminution de la tension artérielle (hypotension). </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Troubles de la circulation des doigts et des orteils, souvent déclenchés par le froid (Syndrome de Raynaud). </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Lésions intestinales d’origine vasculaire (colites ischémiques). </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Diarrhée.</p>
+<p class=AmmListePuces1><a name="_Hlk45448912"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous avez eu une blessure récente ou si vous avez une inflammation (rhumatisme ou inflammation du côlon, par exemple), vous pouvez ressentir une douleur ou une aggravation de la douleur au niveau de la blessure ou de l’inflammation</a>. </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Douleurs articulaires. </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Anxiété.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Difficultés à avaler. </p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Sudation excessive.</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet:<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr</a>. </p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_IMIGRANE_50_mg,_comprimé_pelliculé_?'>5. COMMENT CONSERVER IMIGRANE 50 mg, comprimé pelliculé ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026"></a><a name="_Toc142279024">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas ce médicament après la date de péremption indiquée sur </span>la boîte<span lang=FR-BE>. La date de péremption fait référence au dernier jour de ce mois</span>.</p>
+<p class=AmmCorpsTexte>Ce médicament doit être conservé à une température ne dépassant pas 30°C.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout <span style='color:black'>ou avec </span>les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient IMIGRANE 50 mg, comprimé pelliculé</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est :</p>
+<p class=AmmComposition>Succinate de sumatriptan .........................................................................................................70,00 mg</p>
+<p class=AmmComposition>Quantité correspondant à sumatriptan base ..50,00 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un comprimé pelliculé.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont : </p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Hydrogénophosphate de calcium, bicarbonate de sodium, cellulose microcristalline, croscarmellose sodique, stéarate de magnésium, OPADRY rose YS-1-1441-G (hypromellose, triacétine, oxyde de fer rouge, dioxyde de titane).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que IMIGRANE 50 mg, comprimé pelliculé et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><a name="_Toc142279030">Ce médicament se présente sous la forme d’un comprimé pelliculé, boîte de 6 comprimés.</a></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Toc142279031">Laboratoire GlaxoSmithKline</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>23 rue Francois Jacob</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>92500 Rueil-Malmaison</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Toc142279032"><span style='text-transform: uppercase'>Laboratoire GlaxoSmithKline</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><span style='text-transform:uppercase'>23 rue Francois Jacob</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><span style='text-transform:uppercase'>92500 Rueil-Malmaison</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279033"><span lang=PT-BR style='text-transform:uppercase'>Glaxo Wellcome Production</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>Zi N°2</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>23 rue Lavoisier </span></p>
+<p class=AmmCorpsTexte><span style='text-transform:uppercase'>27000 Evreux</span></p>
+<p class=AmmCorpsTexte><span lang=PT-BR>Ou</span></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=PT-BR style='text-transform:uppercase'>Delpharm Pozna&#324; Spó&#322;ka Akcyjna</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=PT-BR style='text-transform:uppercase'>ul. Grunwaldzka 189</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=PT-BR style='text-transform:uppercase'>60-322 Pozna&#324;</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=PT-BR style='text-transform:uppercase'>Pologne</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

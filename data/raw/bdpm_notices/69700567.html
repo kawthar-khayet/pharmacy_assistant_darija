@@ -1,0 +1,1858 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="gF1wjmoEWP2tMwWHVktljA==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="gF1wjmoEWP2tMwWHVktljA==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 29/09/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant HYDREA 500 mg, gélule"
+            aria-level="3"
+          >
+            HYDREA 500 mg, gélule
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament HYDREA 500 mg, gélule - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                          <p id="tag-generique" class="fr-tag" aria-controls="fr-modal-tag-generique" data-fr-opened="false">
+              <span class="fr-icon-capsule-fill">
+              </span>&nbsp;générique
+          </p>
+              </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 08/12/1997
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : HYDREA 500 mg, gélule - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0443997">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte>Classe pharmacothérapeutique : Agents antineoplasiques. autres agents antinéoplaqiues, code ATC : L01XX05</p>
+<p class=AmmCorpsTexte>CYTOSTATIQUE actif sur l'ADN</p>
+<p class=AmmCorpsTexte>Ce médicament est préconisé dans le traitement des leucémies (cancers du sang) et de certains autres types de maladies du sang.</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament appartient au(x) groupe(s) générique(s) suivants : <br/><ul role="list"><li role='listitem'><a href='/medicament/affiche/groupe-generique/69700567/1903' aria-describedby='tooltip-medicament-generique-0'>HYDROXYCARBAMIDE 500 mg - HYDREA 500 mg, gélule</a><span id='tooltip-medicament-generique-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Ouvrir la page de détail sur ce groupe générique</span></li></ul></p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Gélule ( Composition pour une gélule )<ul role="list"><li role="listitem" style="list-style-type: none;"> > hydroxycarbamide<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">500 mg </span></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > plaquette(s) thermoformée(s) PVC polychlortrifluoroéthylène PVC-Aluminium de 20 gélule(s)  </p><p>Code CIP : 305 126-8 ou 34009 305 126 8 5<br/>Déclaration de commercialisation : 19/01/1969<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 3,64 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 4,66 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :100%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><div class='fr-grid-row'><div class='fr-col'><p>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence. </p></div></div><div class='fr-grid-row'><div class='fr-col'><p>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprès de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-smr-aide-2'>plus d'informations dans l'aide</a>). Les avis et synthèses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-smr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection à la page d'aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'SMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur du SMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2658543'>Avis du 06/07/2016</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 06/07/2016 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Renouvellement d'inscription (CT)</td><td class='text-align-center'>Le service médical rendu par HYDREA reste important dans les indications de l’AMM. ;</td></tr></tbody></table></div></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div><div class='fr-col'><p>Pas d'ASMR disponible pour ce médicament (<a href='/aide#le-medicament-que-je-recherche-ne-mentionne-pas-de-service-medical-rendu-(SMR)-ni-amelioration-du-service-medical-rendu-(ASMR)' aria-describedby='tooltip-asmr-aide'>plus d'informations dans l\'aide</a>)</p><span id='tooltip-asmr-aide' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers aide</span></div></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : CHEPLAPHARM ARZNEIMITTEL GmbH</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure nationale</li><li>Code CIS : &nbsp;6 970 056 7</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : HYDREA 500 mg, gélule - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="HYDREA 500 mg, gélule, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 04/02/2026</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras>HYDREA 500 mg, gélule</p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Hydroxycarbamide ............................................................................................................... 500mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour une gélule.</p>
+<p class=AmmCorpsTexte><i><u>Excipient à effet notoire</u></i> : Chaque gélule contient 40,1 mg de lactose (sous forme monohydratée) et 11,7 mg de sodium</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Gélule.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte>HYDREA est indiqué dans le traitement des patients atteints de</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>leucémies myéloïdes chroniques résistantes</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>polyglobulie primitive (polycythémia vera)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>thrombocytémie essentielle avec un fort risque de complications thromboemboliques</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmAnnexeTitre3>Posologie</p>
+<p class=AmmCorpsTexte>Ce médicament est administré en une prise par jour, quelle que soit l’indication.</p>
+<p class=AmmCorpsTexte>La dose administrée est basée sur le poids réel ou le poids idéal du patient, en prenant en considération le poids le plus faible.</p>
+<p class=AmmAnnexeTitre4>Leucémie myéloïde chronique résistante :</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>20 à 30 mg/kg/24 heures en une seule prise.</p>
+<p class=AmmCorpsTexte>Une période d’essai de 6 semaines est nécessaire pour déterminer l’efficacité du traitement par HYDREA. Lorsqu’il y a une réponse clinique satisfaisante, le traitement doit être poursuivi indéfiniment. Le traitement peut être interrompu si le taux de leucocytes tombe en dessous de 2500/mm<sup>3</sup> ou le nombre de plaquettes en dessous 100 000/mm<sup>3</sup>. Dans ces cas, la numération doit être refaite après 3 jours et le traitement repris lorsque la numération est revenue à la normale. Le rebond de l’hématopoïèse est généralement rapide. S’il n’a pas lieu rapidement durant le traitement combiné par irradiation et par HYDREA, l’irradiation peut être également arrêtée.</p>
+<p class=AmmAnnexeTitre4>Thrombocytémie essentielle : avec un fort risque de complications thromboemboliques :</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>15 mg/kg/24 heures en une seule prise.</p>
+<p class=AmmCorpsTexte>La dose doit être ajustée pour maintenir un contrôle satisfaisant du nombre de plaquettes. </p>
+<p class=AmmCorpsTexte>Le traitement par HYDREA devrait être continué à moins que la numération plaquettaire et/ou la numération des globules blancs ne puisse être contrôlée de façon adéquate ou s’il y a des preuves de résistance ou d’intolérance.</p>
+<p class=AmmAnnexeTitre4>Polyglobulie primitive (polycythémia vera) :</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>15 à 20 mg/kg/24 heures en une seule prise</p>
+<p class=AmmCorpsTexte>La dose doit être ajustée jusqu’à l’obtention d’un taux de plaquettes satisfaisant lors des contrôles.</p>
+<p class=AmmCorpsTexte>Pour la plupart des patients, cet objectif peut être atteint avec une dose moyenne journalière de 500 à 1000mg</p>
+<p class=AmmCorpsTexte>Le traitement par HYDREA devrait être continué à moins que la numération plaquettaire et/ou la numération des globules blancs ne puisse être contrôlée de façon adéquate ou s’il y a des preuves de résistance ou d’intolérance. Il est recommandé d’effectuer des numérations plaquettaires de contrôle toutes les 6 à 8 semaines.</p>
+<p class=AmmCorpsTexte>Il est important d'assurer, surtout en début de traitement, une diurèse abondante (voir rubrique 4.4).</p>
+<p class=AmmAnnexeTitre4>Insuffisance rénale :</p>
+<p class=AmmCorpsTexte>HYDREA étant éliminé essentiellement par voie rénale, une diminution de la posologie devra être envisagée chez les patients présentant une insuffisance rénale. Une surveillance régulière des paramètres hématologiques est conseillée (voir rubrique 4.4).</p>
+<p class=AmmAnnexeTitre4>Insuffisance hépatique :</p>
+<p class=AmmCorpsTexte>Les données disponibles sont insuffisantes pour recommander des ajustements posologiques chez les patients présentant une insuffisance hépatique. Une surveillance régulière des paramètres hématologiques est conseillée (voir rubrique 4.4).</p>
+<p class=AmmAnnexeTitre4>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Dans l'état actuel des connaissances, il n'est pas possible de recommander une posologie particulière pour l'utilisation pédiatrique de HYDREA. La sécurité et l’efficacité chez les enfants n’ont pas été établies.</p>
+<p class=AmmAnnexeTitre4>Personnes âgées</p>
+<p class=AmmCorpsTexte>Les patients âgés sont plus sensibles au traitement : leurs traitements seront initiés à la dose la plus faible (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexte>L’utilisation concomitante d’HYDREA et d’autres agents myélosuppresseurs peut nécessiter des ajustements de doses (voir rubrique 4.5).</p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte>Voie orale.</p>
+<p class=AmmCorpsTexte>Si le patient n'est pas en mesure d'avaler la gélule, le contenu de la gélule peut être dispersé dans un verre d'eau et ingéré immédiatement (voir rubrique 6.6).</p>
+<p class=AmmCorpsTexte>Il est normal que certains excipients non solubles persistent en surface.</p>
+<p class=AmmCorpsTexte>Pour les précautions à prendre concernant la manipulation du médicament, voir la rubrique 6.6</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypersensibilité à la substance active ou à l'un des excipients mentionnés à la <span class=MsoHyperlink><a href="#Liste_des_excipients">rubrique 6.1</a></span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Association avec le vaccin antiamarile (fièvre jaune) (voir rubrique 4.5)</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Grossesse et allaitement (voir rubrique 4.6).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmAnnexeTitre3><a name="Mises_garde_spéciales">Mises en garde spéciales</a></p>
+<p class=AmmCorpsTexte>Le traitement ne doit pas être instauré chez les patients ayant une fonction médullaire altérée.</p>
+<p class=AmmCorpsTexte>Du fait de l'activité myélosuppressive de l’hydroxycarbamide, une granulopénie, <a name="_Hlk495910880">une thrombopénie </a>et une anémie peuvent survenir et sont rarement apparues sans une leucopénie préexistante (la granulopénie est la première et la plus fréquente de ces manifestations) ; ceci justifie une surveillance régulière des paramètres hématologiques.</p>
+<p class=AmmCorpsTexte>La constatation d'une granulopénie inférieure à 1000/mm<sup>3</sup> ou d'une thrombopénie inférieure à 100 000/mm<sup>3</sup> indique en principe l'interruption du traitement. </p>
+<p class=AmmCorpsTexte>La récupération médullaire est rapide après l'arrêt du traitement.</p>
+<p class=AmmCorpsTexte>Des cas graves d’anémie hémolytique ont été rapportés chez des patients traités par l’hydroxycarbamide pour des maladies myéloprolifératives (voir rubrique 4.8). En cas d’anémie persistante, une surveillance des paramètres biologiques de l’hémolyse doit être instaurée. La réapparition d’une anémie hémolytique après réintroduction de l’hydroxycarbamide a également été décrite. Dans le cas d’un diagnostic confirmé d’anémie hémolytique, le traitement par l’hydroxycarbamide doit être arrêté.</p>
+<p class=AmmCorpsTexte>En cas d'anémie préexistante, il convient de la corriger avant d'initier le traitement.</p>
+<p class=AmmCorpsTexte>Le risque de dépression médullaire étant plus élevé chez les patients ayant reçu une radiothérapie ou une chimiothérapie antérieure, l'administration de l’hydroxycarbamide sera prudente chez ces patients (voir rubrique 4.5).</p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte>Une myélosuppression sévère peut entrainer la survenu de fièvre et d’infections. Les patients doivent être surveillés pour tout signe et symptôme d’infection et être traités rapidement. </p>
+<p class=AmmCorpsTexte>Anomalies érythrocytaires : il est fréquent d'observer une macrocytose en début de traitement, d'évolution spontanément résolutive. Elle n'est pas liée à un déficit en acide folique ou en vitamine B12. La macrocytose pouvant masquer l'apparition secondaire d’une défaillance en acide folique, des déterminations régulières de la folatémie sont recommandées.</p>
+<p class=AmmCorpsTexte>Les patients ayant reçu une radiothérapie antérieure peuvent présenter une exacerbation d'un érythème radique lors de l'administration de l’hydroxycarbamide.</p>
+<p class=AmmCorpsTexte>Des pancréatites fatales et non fatales ont été rapportées chez des patients infectés par le VIH au cours du traitement par l'hydroxycarbamide et la didanosine avec ou sans la stavudine. Une hépatotoxicité et une insuffisance hépatique avec issue fatale ont été rapportées lors de la surveillance post-marketing des patients infectés par le VIH au cours du traitement par l’hydroxycarbamide et d’autres médicaments antirétroviraux. Des évènements hépatiques fatals ont été rapportés le plus souvent chez des patients traités par l’association hydroxycarbamide, didanosine et stavudine. Une telle association doit être évitée. Une neuropathie périphérique, grave dans certains cas, a été signalée chez des patients infectés par le VIH ayant reçu un traitement par l’hydroxycarbamide en association avec d’autres médicaments antirétroviraux, incluant la didanosine, avec ou sans stavudine.</p>
+<p class=AmmCorpsTexte>Des lésions à type de vascularite cutanée, incluant des ulcères et une gangrène, sont survenues chez des patients présentant un syndrome myéloprolifératif lors de traitement par l’hydroxycarbamide. Ces lésions ont été le plus souvent rapportées chez des patients ayant reçu ou recevant un traitement par interféron. Du fait de leur évolution potentiellement grave chez ces patients, le traitement par l’hydroxycarbamide doit être interrompu et une alternative thérapeutique doit être envisagée si nécessaire.</p>
+<p class=AmmCorpsTexte>Des patients recevant de l’hydroxycarbamide en traitement de longue durée pour traiter un syndrome myéloprolifératif tel que la polyglobulie primitive et la thrombocytémie, ont présenté une leucémie secondaire ; il n’est pas établi si cet effet leucémogène est dû à la prise d’hydroxycarbamide ou à la maladie sous-jacente du patient. Le cancer cutané a été rapporté chez des patients recevant de l’hydroxycarbamide à long terme. Il est recommandé aux patients de protéger la peau de l’exposition du soleil. En outre, les patients doivent procéder à une inspection de leur peau pendant le traitement et après l’arrêt du traitement par l’hydroxycarbamide et faire l’objet d’un dépistage des malignités secondaires pendant les visites de routine. D'autres formes de traitement doivent être envisagées en cas de diagnostic de cancer cutané ou de dysplasie épithéliale. Dans de tels cas, la surveillance dermatologique doit se poursuivre après l'arrêt du traitement par l'hydroxycarbamide.</p>
+<p class=AmmCorpsTexte>Affections respiratoires : </p>
+<p class=AmmCorpsTexte>Des cas de maladie pulmonaires interstitielle, y compris de fibrose pulmonaire, d’infiltration pulmonaire, de pneumopathie et alvéolite/alvéolite allergique ont été rapportés chez les patients traités pour un néoplasme myéloprolifératif et peuvent être associés à une issue fatale. Les patients qui développent une pyrexie, une toux, une dyspnée ou autres symptômes respiratoires doivent faire l’objet d’une surveillance étroite, d’une investigation supplémentaire et d’un traitement. L’arrêt dans les plus brefs délais de l’administration d’hydroxycarbamide et le traitement par corticoïdes semblent être associés à la résolution des événements pulmonaires (voir rubrique 4.8).</p>
+<p class=AmmCorpsTexte>Surveillance de la diurèse : en cas de forte leucocytose, de splénomégalie notable ou d'uricémie élevée, conseiller des boissons abondantes afin d'obtenir une diurèse abondante.</p>
+<p class=AmmCorpsTexte>Ce médicament est déconseillé avec les vaccins vivants atténués, la phénytoïne et la fosphénytoïne (<span class=MsoHyperlink><a href="#Interactions_avec_autres_médicaments">voir rubrique 4.5</a></span>).</p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte>Interférence avec les systèmes de mesure de la glycémie en continu :</p>
+<p class=AmmCorpsTexte>L’hydroxycarbamide peut faussement élever les résultats des capteurs de glycémie de certains systèmes de mesure de la glycémie en continu (MGC), ce qui peut conduire à une hypoglycémie si les résultats des capteurs de glycémie sont utilisés pour déterminer le dosage de l’insuline.</p>
+<p class=AmmCorpsTexte>Si des systèmes de MGC doivent être utilisés en même temps que le traitement par l’hydroxycarbamide, il convient de consulter le prescripteur du système de MGC sur la nécessité d’envisager d’autres méthodes de mesure de la glycémie.</p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmAnnexeTitre3>Génotoxicité</p>
+<p class=AmmCorpsTexte>En raison du potentiel génotoxique de l’hydroxycarbamide, les femmes ne doivent pas débuter de grossesse et les hommes ne doivent pas concevoir pendant le traitement par hydroxycarbamide. Chez les femmes en âge de procréer, l’absence de grossesse doit être vérifiée avant l’administration d’hydroxycarbamide. Les hommes et les femmes en âge de procréer doivent être informés du risque et utiliser une contraception efficace pendant le traitement et au moins 3 mois et 6 mois respectivement après l’arrêt du traitement par hydroxycarbamide (voir rubrique 4.6).</p>
+<p class=AmmAnnexeTitre3>Fertilité</p>
+<p class=AmmCorpsTexte>La fertilité des hommes peut être affectée pendant le traitement par hydroxycarbamide. Par conséquent, les hommes traités par HYDREA doivent être informés du risque d’atteinte des gamètes et de la possibilité de conservation du sperme avant l’initiation du traitement (voir rubrique 4.6).</p>
+<p class=AmmAnnexeTitre3><a name=Précautionsdemploi>Précautions d'emploi</a></p>
+<p class=AmmCorpsTexte>Pendant le traitement, des contrôles réguliers de la numération plaquettaire, des fonctions rénale et hépatique sont nécessaires. Les données dont on dispose sur le traitement des patients présentant une altération de la fonction hépatique et/ou rénale sont limitées. Il convient donc de faire preuve de prudence chez ces patients, en particulier au début du traitement (voir rubrique 4.2).</p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte>L’hydroxycarbamide peut entraîner par lyse cellulaire massive, notamment en début de traitement, une hyperuricémie et une hyperuricosurie qu'il convient de prévenir (absorption de boisson abondante, alcalinisation des urines, prescription d'un hypo-uricémiant) et de contrôler en cours de traitement. Puisque l’hydroxycarbamide peut augmenter l’uricémie, un ajustement de la posologie de l’uricosurique peut être nécessaire.</p>
+<p class=AmmCorpsTexte>L'hydroxycarbamide étant éliminé essentiellement par voie rénale, son administration sera prudente en cas d'insuffisance rénale confirmée.</p>
+<p class=AmmCorpsTexte>De sévères perturbations gastriques telles que nausées, vomissements, anorexie provoquées par la combinaison des traitements peuvent habituellement être contrôlées par l’interruption de l’administration de l’hydroxycarbamide.</p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte>Ce médicament contient du lactose. Les patients présentant une intolérance au galactose, un déficit total en lactase ou un syndrome de malabsorption du glucose et du galactose (maladies héréditaires rares) ne doivent pas prendre ce médicament.</p>
+<p class=AmmCorpsTexte>Ce médicament contient 11,7 mg de sodium par gélule, ce qui équivaut à 0,6 % de l’apport alimentaire quotidien maximal recommandé par l’OMS de 2 g de sodium par adulte. </p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmAnnexeTitre3>Interactions communes à tous les cytotoxiques</p>
+<p class=AmmCorpsTexte>En raison de l'augmentation du risque thrombotique lors des affections tumorales, le recours à un traitement anticoagulant est fréquent. La grande variabilité de la coagulabilité au cours de ces affections, à laquelle s'ajoute l'éventualité d'une interaction entre les anticoagulants oraux et la chimiothérapie anticancéreuse, imposent, s'il est décidé de traiter le patient par anticoagulants oraux, d'augmenter la fréquence des contrôles de l'INR.</p>
+<p class=AmmAnnexeTitre3>Associations contre-indiquées</p>
+<p class=AmmCorpsTexte>(<span class=MsoHyperlink><a href="#Contre_indications">voir rubrique 4.3</a></span>)</p>
+<p class=AmmCorpsTexteGras>+ Vaccin antiamarile (fièvre jaune)</p>
+<p class=AmmCorpsTexte>Risque de maladie vaccinale généralisée mortelle.</p>
+<p class=AmmAnnexeTitre3>Associations déconseillées</p>
+<p class=AmmCorpsTexte>(<span class=MsoHyperlink><a href="#Mises_en_garde_spéciales_et_précautions">voir rubrique 4.4</a></span>)</p>
+<p class=AmmCorpsTexteGras>+ Phénytoïne (et, par extrapolation, fosphénytoïne)</p>
+<p class=AmmCorpsTexte>Risque de survenue de convulsions par diminution de l'absorption digestive de la seule phénytoïne par le cytotoxique, ou bien risque de majoration de la toxicité ou de perte d'efficacité du cytotoxique par augmentation de son métabolisme hépatique par la phénytoïne ou la fosphénytoïne.</p>
+<p class=AmmCorpsTexteGras>+ Vaccins vivants atténués, sauf antiamarile</p>
+<p class=AmmCorpsTexte>L’utilisation concomitante de HYDREA et de vaccins vivants peut potentialiser la réplication du virus vaccinant et/ou augmenter les effets indésirables du vaccin parce que les défenses naturelles de l’organisme peuvent être supprimées par HYDREA.</p>
+<p class=AmmCorpsTexte>Chez les patients traités par HYDREA, la vaccination par un vaccin vivant peut entrainer une infection sévère. La réponse des anticorps du patient aux vaccins peut être diminuée.</p>
+<p class=AmmCorpsTexte>Il y a un risque de maladie vaccinale généralisée éventuellement mortelle. Ce risque est majoré chez les sujets déjà immunodéprimés par la maladie sous-jacente.</p>
+<p class=AmmCorpsTexte>L’utilisation concomitante de vaccins vivants n’est pas recommandée.</p>
+<p class=AmmCorpsTexte>Utiliser un vaccin inactivé lorsqu'il existe (poliomyélite).</p>
+<p class=AmmAnnexeTitre3>Association à prendre en compte</p>
+<p class=AmmCorpsTexteGras>+ Immunosuppresseurs</p>
+<p class=AmmCorpsTexte>Immunodépression excessive avec risque de syndrome lymphoprolifératif.</p>
+<p class=AmmCorpsTexte>L'administration concomitante d'HYDREA et d'autres thérapeutiques myélosuppressives ou une radiothérapie peut augmenter le risque de dépression médullaire ou d'autres effets indésirables (<span class=MsoHyperlink><a href="#Mises_en_garde_spéciales_et_précautions">voir rubriques 4.4</a></span> et <span class=MsoHyperlink><a href="#Effets_indésirables">4.8</a></span>).</p>
+<p class=AmmCorpsTexte>Tenir compte de l'effet radiosensibilisant d'HYDREA en cas de radiothérapie.</p>
+<p class=AmmCorpsTexteGras>+ Autres interactions</p>
+<p class=AmmCorpsTexte>Des études ont montré qu’il y a des interférences analytiques entre l’hydroxycarbamide et les enzymes (uréase, uricase, et deshydrogénase lactique) utilisés pour le dosage de l’urée, l’acide urique et l’acide lactique, donnant des résultats faussement élevés chez les patients traités par HYDREA.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte>Il existe des données limitées sur l'utilisation d’hydroxycarbamide chez la femme enceinte. Les études effectuées chez l’animal, sur plusieurs espèces, ont mis en évidence une toxicité sur la reproduction (voir rubrique 5.3). L’hydroxycarbamide a un effet génotoxique et peut être nocif pour le fœtus lorsqu’il est administré à des femmes enceintes. Par conséquent, HYDREA est contre indiqué pendant la grossesse (voir rubrique 4.3).</p>
+<p class=AmmCorpsTexte>A l’instauration du traitement :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les patients doivent être informés du risque pour le fœtus en cas d’exposition au cours de la grossesse,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Il importe de vérifier par un test de grossesse, l’absence de grossesse avant administration d’hydroxycarbamide,</p>
+<p class=AmmListePuces1 style='margin-bottom:6.0pt;text-align:justify'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les femmes en âge de procréer doivent utiliser une méthode de contraception efficace. En raison du potentiel génotoxique, l’homme traité (ou sa partenaire) doit utiliser une contraception efficace (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexte>En cas d’exposition à l’hydroxycarbamide d’une patiente enceinte ou de la partenaire enceinte d’un patient traité au cours du traitement ou après le traitement par l’hydroxycarbamide (voir rubrique 4.4), il convient de mettre en place, une surveillance étroite comportant des examens cliniques, biologiques et <a href="http://context.reverso.net/traduction/francais-anglais/%C3%A9chographique"><span style='color:windowtext;text-decoration:none'>échographique</span></a>s dans des centres spécialisés.</p>
+<p class=AmmAnnexeTitre3>Allaitement</p>
+<p class=AmmCorpsTexte>L’hydroxycarbamide est excrété dans le lait maternel. En raison du risque d’effets indésirables graves de l’hydroxycarbamide chez le nourrisson, l’allaitement est contre-indiqué et doit donc être interrompu pendant le traitement (voir rubrique 4.3)</p>
+<p class=AmmAnnexeTitre3>Fertilité</p>
+<p class=AmmCorpsTexte>Des études montrent une fréquence accrue d’azoospermies ou d’oligozoospermies (généralement réversibles), chez les hommes traités par l’hydroxycarbamide. Par conséquent, la fertilité des hommes peut être affectée pendant le traitement. Les hommes traités par HYDREA doivent être informés du risque d’atteinte des gamètes et de la possibilité de conservation du sperme avant l’initiation du traitement. </p>
+<p class=AmmCorpsTexte>En raison du potentiel génotoxique de l’hydroxycarbamide, les femmes ne doivent pas débuter de grossesse et les hommes ne doivent pas concevoir pendant le traitement par hydroxycarbamide. Chez les femmes en âge de procréer, l’absence de grossesse doit être vérifiée avant l’administration d’hydroxycarbamide Il est conseillé aux hommes sous traitement d’utiliser des mesures contraceptives sûres pendant le traitement et pendant au moins 3 mois après le traitement. Il doit être conseillé aux femmes en âge de procréer d’utiliser une méthode de contraception efficace pendant le traitement et pendant au moins 6 mois après celui-ci (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexte> </p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Les effets sur l’aptitude à conduire des véhicules et à utiliser des machines n’ont pas été étudiés.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Cependant, HYDREA peut provoquer des étourdissements et d'autres troubles neurologiques susceptibles d'amoindrir la vigilance.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmAnnexeTitre3>Classification MedDRA des effets indésirables</p>
+<p class=AmmCorpsTexte>Les effets indésirables suivants ont été observés pendant le traitement par HYDREA :</p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>très fréquent : <u>></u> 1/10</p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>fréquent : <u>></u> 1/100 ;< 1/10</p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>peu fréquent: <u>></u> 1l1000 ;< 1/100</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>rare: <u>></u> 1/10000 ;< 1/1000</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>très rare : < 1/10000</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>fréquence indéterminée: ne peut être estimée sur la base des données disponibles</p>
+<div class='fr-table--lg fr-table'><table>
+<thead>
+<tr style='height:24.65pt'>
+<td width=234 style='width:175.5pt;border:solid windowtext 1.0pt;padding:
+0cm 5.4pt 0cm 5.4pt;height:24.65pt'>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Classe de système organes</p>
+</td>
+<td width=96 style='width:71.75pt;border:solid windowtext 1.0pt;border-left:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:24.65pt'>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Fréquence</p>
+</td>
+<td width=272 style='width:203.75pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:24.65pt'>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Dénomination MedDRA</p>
+</td>
+</tr>
+</thead>
+<tr>
+<td width=234 valign=top style='width:175.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Infections et infestations</p>
+</td>
+<td width=96 valign=top style='width:71.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Rare</p>
+</td>
+<td width=272 valign=top style='width:203.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Gangrène</p>
+</td>
+</tr>
+<tr>
+<td width=234 valign=top style='width:175.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Tumeurs bénignes, malignes et non précisées (incluant kystes et polypes)</p>
+</td>
+<td width=96 valign=top style='width:71.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Fréquent</p>
+</td>
+<td width=272 valign=top style='width:203.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Cancer cutané</p>
+</td>
+</tr>
+<tr style='height:20.25pt'>
+<td width=234 rowspan=2 valign=top style='width:175.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:20.25pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections hématologiques et du système lymphatique</p>
+</td>
+<td width=96 valign=top style='width:71.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:20.25pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Très fréquent</p>
+</td>
+<td width=272 valign=top style='width:203.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:20.25pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Insuffisance médullaire, diminution des CD4, leucopénie, thrombocytopénie, diminution des plaquettes et anémie </p>
+</td>
+</tr>
+<tr style='height:20.25pt'>
+<td width=96 valign=top style='width:71.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:20.25pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Indéterminée</p>
+</td>
+<td width=272 valign=top style='width:203.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:20.25pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Anémie hémolytique</p>
+</td>
+</tr>
+<tr>
+<td width=234 rowspan=2 valign=top style='width:175.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Troubles du métabolisme et de la nutrition</p>
+</td>
+<td width=96 valign=top style='width:71.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Très fréquent</p>
+</td>
+<td width=272 valign=top style='width:203.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Anorexie</p>
+</td>
+</tr>
+<tr>
+<td width=96 valign=top style='width:71.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Rare</p>
+</td>
+<td width=272 valign=top style='width:203.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Syndrome de lyse tumorale</p>
+</td>
+</tr>
+<tr>
+<td width=234 valign=top style='width:175.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections psychiatriques</p>
+</td>
+<td width=96 valign=top style='width:71.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Fréquent</p>
+</td>
+<td width=272 valign=top style='width:203.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Hallucination, désorientation</p>
+</td>
+</tr>
+<tr>
+<td width=234 valign=top style='width:175.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections du système nerveux</p>
+</td>
+<td width=96 valign=top style='width:71.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Fréquent</p>
+</td>
+<td width=272 valign=top style='width:203.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Convulsions, vertiges, neuropathie périphérique, somnolence, céphalées</p>
+</td>
+</tr>
+<tr>
+<td width=234 valign=top style='width:175.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections respiratoires, thoraciques et médiastinales</p>
+</td>
+<td width=96 valign=top style='width:71.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Indéterminée</p>
+</td>
+<td width=272 valign=top style='width:203.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Maladie pulmonaire interstitielle, pneumopathie, alvéolite, alvéolite allergique, toux, fibrose pulmonaire, infiltration pulmonaire, dyspnée</p>
+</td>
+</tr>
+<tr>
+<td width=234 valign=top style='width:175.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections gastro-intestinales</p>
+</td>
+<td width=96 valign=top style='width:71.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Très fréquent</p>
+</td>
+<td width=272 valign=top style='width:203.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Pancréatite, nausées, vomissement, diarrhées, stomatites, constipation, mucite, inconfort gastro-intestinal, dyspepsie, aphtes buccaux</p>
+</td>
+</tr>
+<tr>
+<td width=234 valign=top style='width:175.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections hépatobiliaires</p>
+</td>
+<td width=96 valign=top style='width:71.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Fréquent</p>
+</td>
+<td width=272 valign=top style='width:203.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Hépatotoxicité, augmentation des enzymes hépatiques, cholestase, hépatite</p>
+</td>
+</tr>
+<tr>
+<td width=234 rowspan=2 valign=top style='width:175.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections de la peau et des tissus sous cutanés</p>
+</td>
+<td width=96 valign=top style='width:71.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Très fréquent</p>
+</td>
+<td width=272 valign=top style='width:203.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Vasculites cutanées, dermatomyosites, alopécie, rash maculopapuleux, rash papulaire, exfoliation cutanée, atrophie cutanée, ulcère cutané, érythème, hyperpigmentation, atteintes des ongles</p>
+</td>
+</tr>
+<tr>
+<td width=96 valign=top style='width:71.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Indéterminée</p>
+</td>
+<td width=272 valign=top style='width:203.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Pigmentation des ongles, lupus érythémateux cutané</p>
+</td>
+</tr>
+<tr>
+<td width=234 valign=top style='width:175.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections musculo-squelettiques et systémiques</p>
+</td>
+<td width=96 valign=top style='width:71.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Indéterminée</p>
+</td>
+<td width=272 valign=top style='width:203.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Lupus érythémateux systémique</p>
+</td>
+</tr>
+<tr>
+<td width=234 valign=top style='width:175.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections des reins et du système urinaire</p>
+</td>
+<td width=96 valign=top style='width:71.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Très fréquent</p>
+</td>
+<td width=272 valign=top style='width:203.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Dysurie, augmentation de la créatininémie, de l’urémie, de l’uricémie</p>
+</td>
+</tr>
+<tr>
+<td width=234 valign=top style='width:175.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections des organes de reproduction et sein</p>
+</td>
+<td width=96 valign=top style='width:71.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Très fréquent</p>
+</td>
+<td width=272 valign=top style='width:203.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Oligospermie, azoospermie en règle générale réversibles</p>
+</td>
+</tr>
+<tr>
+<td width=234 rowspan=2 valign=top style='width:175.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Troubles généraux et anomalies au site d’administration</p>
+</td>
+<td width=96 valign=top style='width:71.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Très fréquent</p>
+</td>
+<td width=272 valign=top style='width:203.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Pyrexie, asthénie, frissons, malaise</p>
+</td>
+</tr>
+<tr>
+<td width=96 valign=top style='width:71.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Indéterminée</p>
+</td>
+<td width=272 valign=top style='width:203.75pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Fièvre médicamenteuse</p>
+</td>
+</tr>
+</table></div>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Hypersensibilité</p>
+<p class=AmmCorpsTexte>Fièvre médicamenteuse</p>
+<p class=AmmCorpsTexte>Une forte fièvre (> 39°C) non-infectieuse et nécessitant dans certains cas une hospitalisation a été rapportée, isolée ou associée à des manifestations gastro-intestinales, pulmonaires, musculosquelettiques, hépatobiliaires, dermatologiques ou cardiovasculaires. La fièvre s’est manifestée généralement dans les 6 semaines après initiation d'HYDREA et a disparu rapidement après l’arrêt de l’hydroxycarbamide. La fièvre est réapparue dans les 24 heures suivant la reprise du traitement.</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><span class=MsoHyperlink><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/.</a></span>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte>En cas de surdosage, il existe un risque de toxicité hématologique. A l'arrêt du traitement, les fonctions médullaires reprennent rapidement. Dans certains cas, des transfusions sanguines sont nécessaires.</p>
+<p class=AmmCorpsTexte>Des cas de toxicité aiguë cutanéomuqueuse ont été rapportés chez des patients recevant HYDREA à des posologies plusieurs fois supérieures aux posologies thérapeutiques. Ils comportent : douleur, érythème violacé et œdème des paumes de mains et des plantes de pieds suivis par une desquamation des mains et des pieds, sévère hyperpigmentation cutanée généralisée et stomatite.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras>Classe pharmacothérapeutique : Agents antineoplasiques. autres agents antinéoplaqiues, code ATC : L01XX05</p>
+<p class=AmmCorpsTexteGras>CYTOSTATIQUE actif sur l'ADN</p>
+<p class=AmmCorpsTexteGras>(L. Antinéoplasiques et immunomodulateurs)</p>
+<p class=AmmCorpsTexte>Le mécanisme d'action de l'hydroxycarbamide n'est pas complètement connu. Elle inhibe la synthèse de l'ADN sans altérer la synthèse de l'ARN. Son action est rapide et s'exerce essentiellement sur la moelle osseuse. Elle inhibe d'abord la granulopoïèse puis la thrombocytopoïèse et, en dernier lieu, l'érythropoïèse.</p>
+<p class=AmmCorpsTexte>Ces effets sont rapidement réversibles après l'interruption du traitement, ce qui impose dans la plupart des cas un traitement d'entretien continu à des doses déterminées par l'évolution de l'hémogramme.</p>
+<p class=AmmCorpsTexte>HYDREA exerce aussi une action radiosensibilisante.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmCorpsTexte>L'hydroxycarbamide est rapidement absorbée par la muqueuse digestive (pic sérique 2 heures après l'ingestion) et diffuse bien dans les liquides biologiques et les tissus. Les taux atteints sont proportionnels à la dose administrée.</p>
+<p class=AmmCorpsTexte>HYDREA traverse la barrière hémato-encéphalique.</p>
+<p class=AmmCorpsTexte>L'excrétion de l'hydroxycarbamide est essentiellement urinaire ; 80 % de la dose ingérée étant éliminés dans les 12 heures, il n'y a pas d'accumulation du produit.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte>Chez le rat, l'hydroxycarbamide provoque une azoospermie. Chez le chien, il a été de même constaté une azoospermie réversible à l'arrêt du traitement.</p>
+<p class=AmmCorpsTexte>L'hydroxycarbamide est génotoxique. L'effet cancérogène du produit n'a pas été étudié chez l'animal. Cependant, les données de la littérature montrent que l'hydroxycarbamide administrée aux doses de 125-250 mg/kg augmente l'incidence de tumeurs mammaires.</p>
+<p class=AmmCorpsTexte>L'hydroxycarbamide traverse la barrière placentaire et s’est révélé avoir un puissant effet tératogène et embryotoxique dans une grande variété de modèles animaux à des doses inférieures ou égale à la dose thérapeutique humaine. La tératogénicité se caractérisait par une ossification partielle des os crâniens, une absence d’orbites, une hydrocéphalie, un « bipartite sternebrae » (spina bifida), une absence de vertèbres lombaires. L’embryotoxicité se caractérisait par une diminution de la viabilité fœtale, une réduction de la taille de la portée vivante et un retard de développement.</p>
+<p class=AmmCorpsTexte>L'hydroxycarbamide administré à des rats mâles à une dose de 60 mg/kg de poids corporel par jour (environ le double de la dose maximale recommandée chez l’homme) a entrainé une atrophie testiculaire, une diminution de la spermatogenèse et une réduction significative de leur pouvoir de fécondation.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte>Hydrogénophosphate de sodium anhydre, acide citrique anhydre, lactose monohydraté, stéarate de magnésium.</p>
+<p class=AmmCorpsTexte><i><u>Composition de l'enveloppe de la gélule</u></i> : Erythrosine (E127), dioxyde de titane (E171), Oxyde de fer jaune (E172), indigotine (E132), laurilsulfate de sodium (adjuvant de fabrication), gélatine.</p>
+<p class=AmmCorpsTexte><i><u>Composition de l’encre noire Opacode S-1-277002</u></i> : gomme-laque, éthanol, oxyde de fer noir (E172), propylène glycol, hydroxyde d'ammonium.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte>3 ans</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>A conserver à une température ne dépassant pas + 25°C.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte>2 Plaquettes thermoformées (PVC/PCTFE/PVC/Aluminium). Boîte de 20 gélules.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Les cytostatiques doivent toujours être manipulés avec précaution. Il convient de respecter les bonnes pratiques de manipulation des cytostatiques. Cela inclut l’ensemble des activités de manipulation en milieu clinique, en pharmacie, dans les entrepôts et dans les contextes de soins à domicile, notamment pendant le déballage et l’inspection, le transport au sein d’un établissement, et la préparation et la manipulation d’une dose. </span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Les femmes enceintes ne doivent pas manipuler ce médicament. </span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>HYDREA doit être conservé hors de la portée des enfants et des animaux de compagnie. Les personnes ne prenant pas HYDREA ne doivent pas y être exposées. Toujours prendre des précautions pour éviter toute exposition, par exemple en portant des gants et en se lavant les mains avec de l’eau et du savon avant et après la manipulation de ce type de produit. Le contenu des gélules ne doit pas être inhalé ou ne doit pas pouvoir entrer en contact avec la peau ou les muqueuses.. Si la poudre est renversée, elle doit être immédiatement essuyée avec une serviette humide jetable qui doit être jetée comme les gélules vides dans un contenant fermé. </span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Tout médicament non utilisé ou déchet doit être éliminé conformément à la réglementation en vigueur.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE>CHEPLAPHARM ARZNEIMITTEL GMBH</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE style='text-transform:uppercase'>Ziegelhof 24</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE style='text-transform:uppercase'>17489 Greifswald</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE style='text-transform:uppercase'>ALLEMAGNE</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 305 126 8 5 : 20 gélules en plaquettes thermoformées (PVC/PCTFE/PVC/Aluminium)</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_HYDREA_500_mg,_gélule_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE HYDREA 500 mg, gélule ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE HYDREA 500 mg, gélule ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_HYDREA_500_mg,_gélule_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE HYDREA 500 mg, gélule ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE HYDREA 500 mg, gélule ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_PRENDRE_HYDREA_500_mg,_gélule_?"
+                     aria-label="3. COMMENT PRENDRE HYDREA 500 mg, gélule ? (Lien de redirection)">
+                    3. COMMENT PRENDRE HYDREA 500 mg, gélule ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_HYDREA_500_mg,_gélule_?"
+                     aria-label="5. COMMENT CONSERVER HYDREA 500 mg, gélule ? (Lien de redirection)">
+                    5. COMMENT CONSERVER HYDREA 500 mg, gélule ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : HYDREA 500 mg, gélule - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="HYDREA 500 mg, gélule, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 04/02/2026</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>HYDREA 500 mg, gélule</p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Hydroxycarbamide</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Veuillez lire attentivement cette notice avant de prendre ce médicament car elle contient des informations importantes pour vous.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin ou votre pharmacien.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci  s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span><span class=MsoHyperlink><a href="#QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENT">Voir rubrique 4</a></span>.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que HYDREA 500 mg, gélule et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant de prendre HYDREA 500 mg, gélule ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment prendre HYDREA 500 mg, gélule ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver HYDREA 500 mg, gélule ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_HYDREA_500_mg,_gélule_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE HYDREA 500 mg, gélule ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte>Classe pharmacothérapeutique : Agents antineoplasiques. autres agents antinéoplaqiues, code ATC : L01XX05</p>
+<p class=AmmCorpsTexte>CYTOSTATIQUE actif sur l'ADN</p>
+<p class=AmmCorpsTexte>Ce médicament est préconisé dans le traitement des leucémies (cancers du sang) et de certains autres types de maladies du sang.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_HYDREA_500_mg,_gélule_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE HYDREA 500 mg, gélule ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="Ne_prenez_jamais_HYDREA_500mg_gélule">Ne prenez jamais HYDREA 500 mg, gélule :</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>en association avec le vaccin contre la fièvre jaune (<span class=MsoHyperlink><span style='color:windowtext;text-decoration:none'><a href="#Autres_médicaments_et_HYDREA"><span style='color:windowtext;text-decoration: none'>voir rubrique « Autres médicaments et HYDREA 500 mg, gélule »</span></a></span></span>).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>en cas d’allergie à l’hydroxycarbamide ou à l’un des autres composants du médicament, mentionnés dans la <span class=MsoHyperlink><span style='color:windowtext;text-decoration:none'><a href="#CONTENU_EMBALLAGE_AUTRES_INFORMATIONS"><span style='color:windowtext; text-decoration:none'>rubrique 6</span></a></span></span>.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>en cas de grossesse et d’allaitement (voir rubrique « Grossesse, allaitement et fertilité »)</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>EN CAS DE DOUTE, IL EST INDISPENSABLE DE DEMANDER L'AVIS DE VOTRE MEDECIN OU <span class=AmmCorpsTexteCar>DE VOTRE PHARMACIEN.</span></p>
+<p class=AmmCorpsTexteGras>Avertissements et précautions</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Adressez-vous à votre médecin ou pharmacien avant de prendre HYDREA:</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous êtes une femme en âge d’avoir des enfants, vous devez utiliser une contraception efficace pendant le traitement et pendant 6 mois après le traitement (voir rubrique 2 « Grossesse, allaitement et fertilité »). Demandez conseil à votre médecin.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous êtes un homme en âge d’avoir des enfants, vous devez utiliser une contraception efficace pendant le traitement et pendant au moins 3 mois après le traitement. De plus, en raison d’un risque de baisse de la fertilité, votre médecin pourra vous renseigner sur la possibilité de conserver votre sperme avant traitement (voir rubrique 2 « Grossesse, allaitement et fertilité »).</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si une anémie hémolytique (affection dans laquelle les globules rouges sont détruits plus rapidement qu’ils ne sont fabriqués) est détectée lors des analyses de sang, votre médecin arrêtera le traitement par HYDREA.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous êtes diabétique et que vous utilisez un système de mesure de la glycémie en continu (MGC) pour mesurer votre taux de glucose sanguin, l’hydroxycarbamide (également connu sous le nom hydroxycarbamide) peut provoquer des résultats de mesure de la glycémie faussement élevées avec certains appareils. Cela pourrait engendrer l’administration d’une dose d’insuline plus élevée que nécessaire, entraînant une hypoglycémie (faible taux de sucre dans le sang). Adressez-vous au médecin prescripteur du système de mesure de la glycémie en continu (MGC) pour savoir si ce système peut être utilisé de manière sûre pendant que vous prenez HYDREA.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous présentez une altération de la fonction rénale.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous présentez une altération de la fonction hépatique.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous devez vous faire vacciner.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous présentez une altération de la fonction médullaire (moelle osseuse), telle que déterminée par une analyse de sang.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous êtes une personne âgée. Il peut s’avérer nécessaire de vous administrer des doses plus faibles.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez reçu une radiothérapie par le passé.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous recevez actuellement, ou avez reçu, un traitement par interféron.</span></p>
+<p class=AmmListePuces1 style='text-align:justify;text-indent:0cm'><span lang=FR-BE> </span></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt;page-break-after:avoid'><a name="Mises_en_garde_spéciales">Mises en garde spéciales</a></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;page-break-after:avoid'>Ce traitement ne peut être administré que sous surveillance médicale rigoureuse.</p>
+<p class=AmmCorpsTexte>Ce médicament nécessite un contrôle régulier de la numération formule sanguine (nombre de globules rouges, globules blancs et plaquettes dans le sang).</p>
+<p class=AmmCorpsTexte>Il est fréquent de constater une augmentation de volume des globules rouges appelée macrocytose qui n'est pas liée à un déficit en acide folique ou en vitamine B12 et qui est sans conséquence sur la santé. La macrocytose pouvant masquer l'apparition secondaire d’un déficit en acide folique, il est possible que votre médecin recommande de vérifier régulièrement votre taux d’acide folique.</p>
+<p class=AmmCorpsTexte>Pour les patients désirant des enfants, il est important de noter que ce médicament peut entraîner une diminution voire une disparition des spermatozoïdes dans le sperme.</p>
+<p class=AmmCorpsTexte>Une hépatotoxicité et une pancréatite potentiellement fatales ainsi qu'une neuropathie périphérique sévère ont été rapportées chez des patients infectés par le virus VIH ayant reçu de l'hydroxycarbamide en association avec des antirétroviraux, en particulier la didanosine et la stavudine (<span class=MsoHyperlink><span style='color:windowtext;text-decoration: none'><a href="#Autres_médicaments_et_HYDREA"><span style='color:windowtext; text-decoration:none'>voir rubrique « Autres médicaments et HYDREA 500 mg, gélule »</span></a></span></span>).</p>
+<p class=AmmCorpsTexte>En traitement de longue durée, HYDREA peut entrainer une leucémie secondaire (maladie du sang). Cependant, il n’a pas été établi si cet effet est dû au traitement ou à la maladie traitée. Un cancer de la peau a été rapporté chez des patients recevant de l’hydroxycarbamide à long terme. Vous devez protéger votre peau du soleil et inspecter régulièrement votre peau pendant le traitement et après l’arrêt du traitement par l’hydroxycarbamide. Votre médecin procédera également à une inspection de votre peau au cours des visites de suivi de routine.</p>
+<p class=AmmCorpsTexte>EN CAS DE DOUTE NE PAS HESITER A DEMANDER L'AVIS DE VOTRE MEDECIN OU DE VOTRE PHARMACIEN.</p>
+<p class=AmmCorpsTexteGras>Précautions d'emploi</p>
+<p class=AmmCorpsTexte>Il est nécessaire d'absorber, surtout au début du traitement, des boissons très abondantes pour obtenir une diurèse abondante. Il est même souhaitable que cette mesure soit prise deux ou trois jours avant le début du traitement par HYDREA.</p>
+<p class=AmmCorpsTexte>EN CAS DE DOUTE, NE PAS HÉSITER À DEMANDER L'AVIS DE VOTRE MEDECIN OU DE VOTRE PHARMACIEN.</p>
+<p class=AmmCorpsTexte>Adressez-vous à votre médecin ou pharmacien avant de prendre HYDREA.</p>
+<p class=AmmCorpsTexteGras>Enfants</p>
+<p class=AmmCorpsTexte>La sécurité d’emploi et l’efficacité n’ont pas été étudiées chez l’enfant.<a name="Autres_médicaments_et_HYDREA"></a></p>
+<p class=AmmCorpsTexteGras>Autres médicaments et HYDREA 500 mg, gélule</p>
+<p class=AmmCorpsTexte>Informez votre médecin ou votre pharmacien si vous prenez, avez récemment pris ou pourriez prendre tout autre médicament.</p>
+<p class=AmmCorpsTexte>L’effet thérapeutique de ce médicament peut être modifié s’il est pris en même temps que certains autres médicaments. En conséquence, votre médecin traitant doit connaître tous les autres médicaments que vous êtes susceptible de prendre en même temps qu’HYDREA.</p>
+<p class=AmmCorpsTexte>L’utilisation simultanée d’HYDREA et d’autres médicaments qui ont un effet sur la moelle osseuse (par exemple des cytostatiques) ou de rathiothérapie peut augmenter le risque d’apparition de certains effets indésirables.</p>
+<p class=AmmCorpsTexte>HYDREA peut augmenter la concentration d’acide urique dans le sang. La dose des médicaments utilisés contre les taux élevés d’acide urique, tels que l’allopurinol, peut donc avoir besoin d’être modifiée.</p>
+<p class=AmmCorpsTexte>L’utilisation simultanée d’HYDREA et de vaccins vivants n’est pas recommandée car cela peut augmenter les effets indésirables du vaccin et entraîner un risque accru d’infection grave dans la mesure où les mécanismes habituels de défense de l’organisme peuvent être altérés par le traitement avec HYDREA.</p>
+<p class=AmmCorpsTexte>Ce médicament ne doit pas être utilisé en association avec le vaccin contre la fièvre jaune (<span class=MsoHyperlink><span style='color:windowtext;text-decoration:none'><a href="#Ne_prenez_jamais_HYDREA_500mg_gélule"><span style='color:windowtext; text-decoration:none'>voir rubrique « Ne prenez jamais HYDREA 500 mg, gélule »</span></a></span></span>).</p>
+<p class=AmmCorpsTexte>HYDREA est également A EVITER en association avec la phénytoine et la fosphénytoine (médicaments utilisés dans le traitement de l’épilepsie), avec la didanosine (avec ou sans la stavudine) et autres antirétroviraux (médicaments utilisés dans le traitement de l'infection par le virus de l'immunodéficience humaine (VIH)) (<span class=MsoHyperlink><span style='color:windowtext;text-decoration:none'><a href="#Mises_en_garde_spéciales"><span style='color:windowtext;text-decoration: none'>voir rubrique « Mises en garde spéciales »</span></a></span></span>).</p>
+<p class=AmmCorpsTexteGras>HYDREA 500 mg, gélule avec des aliments et boissons</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras>Grossesse, allaitement et fertilité</p>
+<p class=AmmCorpsTexteGras>Contraception</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous êtes un homme ou une femme en âge d’avoir des enfants, vous devez utiliser une contraception efficace pendant le traitement et au moins 3 mois et 6 mois respectivement après l’arrêt du traitement.</span></p>
+<p class=AmmCorpsTexteGras>Grossesse</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>L'emploi de ce médicament est formellement contre-indiqué chez la femme enceinte. Avant de commencer le traitement, votre médecin vous informera des risques, s’assurera que vous n’êtes pas enceinte et que vous utilisez une contraception efficace. Si vous avez pris ce médicament alors que vous êtes enceinte, parlez-en avec vos médecins afin de mettre en place un suivi particulier de votre bébé.</span></p>
+<p class=AmmCorpsTexteGras>Allaitement</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ce médicament passe dans le lait maternel et pourrait entraîner des effets indésirables chez votre bébé. Par conséquent, vous ne devez pas allaitez si vous prenez HYDREA. Si vous allaitez, prévenez votre médecin avant de prendre HYDREA.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous êtes enceinte ou que vous allaitez, si vous pensez être enceinte ou planifiez une grossesse, demandez conseil à votre médecin ou pharmacien avant de prendre ce médicament.</span></p>
+<p class=AmmCorpsTexteGras>Fertilité</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Les patients désirant procréer doivent être avertis du risque important de diminution voire de disparition des spermatozoïdes dans le sperme et donc de baisse de la fertilité. De ce fait il peut être envisagé une conservation de votre sperme avant l’initiation du traitement par HYDREA.</span></p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>Les effets sur l’aptitude à conduire des véhicules et à utiliser des machines n’ont pas été étudiés.</p>
+<p class=AmmCorpsTexte>Cependant, HYDREA peut provoquer des étourdissements et d'autres troubles neurologiques susceptibles d'amoindrir la vigilance. </p>
+<p class=AmmCorpsTexte><b>HYDREA 500 mg, gélule contient du lactose et du sodium</b></p>
+<p class=AmmCorpsTexte>Si votre médecin vous a informé(e) d’une intolérance à certains sucres, contactez-le avant de prendre ce médicament.</p>
+<p class=AmmCorpsTexte>Ce médicament contient 11,7 mg de sodium (composant principal du sel de cuisine/table) par gélule. Cela équivaut à 0,6 % de l’apport alimentaire quotidien maximal recommandé de sodium pour un adulte.</p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte> </p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_PRENDRE_HYDREA_500_mg,_gélule_?'>3. COMMENT PRENDRE HYDREA 500 mg, gélule ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras>Posologie</p>
+<p class=AmmCorpsTexte>Veillez à toujours prendre ce médicament en suivant exactement les indications de votre médecin. Vérifiez auprès de votre médecin ou pharmacien en cas de doute</p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexteGras>Mode d’administration</p>
+<p class=AmmCorpsTexte>Voie orale.</p>
+<p class=AmmCorpsTexte>En cas de difficulté pour avaler la gélule, celle-ci peut être ouverte et son contenu mélangé à un verre d'eau qui sera absorbé immédiatement.</p>
+<p class=AmmCorpsTexte>Les gélules HYDREA doivent être manipulées avec soin. Les précautions suivantes permettent d’éviter toute exposition :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Lavez-vous les mains avec de l’eau et du savon avant et après la manipulation du produit, ou portez des gants de protection.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si la poudre présente dans la gélule se disperse, elle doit être essuyée immédiatement avec une serviette humide à usage unique qui devra être jetée avec l’enveloppe vide de la gélule dans un contenant fermé.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Lavez-vous les mains soigneusement avec de l’eau si la gélule casse ou se dissout.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>N’inhalez PAS le contenu des gélules.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les personnes qui ne prennent pas HYDREA ne doivent pas y être exposées. Conservez HYDREA loin de la portée des enfants et des animaux de compagnie.</p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexteGras>Fréquence d'administration</p>
+<p class=AmmCorpsTexte>Lors des traitements d'attaque, HYDREA est administré quotidiennement en une prise.</p>
+<p class=AmmCorpsTexteGras>Durée du traitement</p>
+<p class=AmmCorpsTexte>Se conformer à la prescription médicale.</p>
+<p class=AmmCorpsTexte>Ne pas arrêter et ne pas reprendre le traitement sans l'avis de votre médecin.</p>
+<p class=AmmCorpsTexteGras>Si vous avez pris plus de HYDREA 500 mg, gélule que vous n’auriez dû</p>
+<p class=AmmCorpsTexte>Prévenir votre médecin traitant.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez de prendre HYDREA 500 mg, gélule</p>
+<p class=AmmCorpsTexte>Prévenir votre médecin traitant.</p>
+<p class=AmmCorpsTexte>Ne prenez pas de dose double pour compenser la dose que vous avez oublié de prendre</p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez de prendre HYDREA 500 mg, gélule </p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexte>Si vous avez d’autres questions sur l’utilisation de ce médicament, demandez plus d’informations à votre médecin ou à votre pharmacien.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte>Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</p>
+<p class=AmmCorpsTexte>Contactez votre médecin immédiatement si vous présentez l’un des symptômes suivants :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Infection sévère</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Fatigue et/ou pâleur</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hématomes (bleus) ou saignements non explicables</p>
+<p class=AmmCorpsTexte>Ces symptômes peuvent être le signe d’une diminution de l’activité des organes qui produisent les composants du sang, un effet indésirable très fréquent (qui peut survenir chez plus de 1 patient sur 10).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Difficultés à respirer</p>
+<p class=AmmCorpsTexte>Des difficultés à respirer, tels qu’un essoufflement, en particulier à l’effort, une toux sèche persistante, de la fatigue ou une gêne thoracique, peuvent être le signe d’une atteinte des poumons, un effet indésirable fréquent (qui peut survenir chez un nombre de patients allant jusqu’à 1 sur 10). Si des problèmes respiratoires se produisent en raison d’une inflammation du tissu pulmonaire d’origine allergique, une fièvre peut apparaître, à une fréquence indéterminée (qui ne peut être estimée sur la base des données disponibles).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Lésions sur la peau</p>
+<p class=AmmCorpsTexte>Ces symptômes peuvent être le signe d’une inflammation au niveau des vaisseaux sanguins cutanés, un effet indésirable très fréquent (qui peut survenir chez plus de 1 patient sur 10).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Fièvre provoquée par le médicament</p>
+<p class=AmmCorpsTexte>Une forte fièvre avec ou sans symptômes au niveau du tractus gastro-intestinal, des poumons, des os et des muscles, du foie et de la vésicule biliaire, de la peau ou du cœur et des vaisseaux sanguins a été rapportée à la suite de l’utilisation du médicament. Cela peut se produire plusieurs semaines après avoir commencé à prendre le médicament (la fréquence ne peut être estimée sur la base des données disponibles).</p>
+<p class=AmmCorpsTexte>Autres effets indésirables pouvant se produire :</p>
+<p class=AmmCorpsTexteGras>Effets indésirables très fréquents (qui peuvent survenir chez plus de 1 patient sur 10)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Diminution voire disparition des spermatozoïdes dans le sperme. Ceci est, en règle générale, réversible à l'arrêt du traitement.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Nausées, vomissements, diarrhées, constipation, perte d'appétit (anorexie), inflammation du pancréas, lésions dans la bouche (stomatite; aphte) ; inflammation des muqueuses (mucite) ; gêne abdominale.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Eruption cutanée, rougeurs, tâches pigmentées, sécheresse cutanée, anomalies de la peau et des ongles. Ulcération cutanée chez les patients traités pendant plusieurs années ; ces ulcérations peuvent être douloureuses et nécessiter la prise d'antalgique. Ces ulcérations cutanées surviennent notamment chez les patients ayant reçu ou recevant de l’interféron. Chutes des cheveux (alopécie). </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Augmentation de l'acide urique, de l'urée et de la créatinine dans le sang. </p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Apparition d'une fièvre parfois forte, de frissons. Malaise. Fatigue.</p>
+<p class=AmmCorpsTexteGras>Effets indésirables fréquents (qui peuvent survenir chez 1 patients sur 10)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Cancer cutané.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Des maux de tête peuvent survenir, des sensations de vertige, une désorientation. En cas de traitement avec de fortes doses, une somnolence peut survenir. Des hallucinations peuvent également se manifester ainsi que des convulsions. Une affection nerveuse (neuropathie périphérique) peut survenir avec une sensation de fourmillement et/ou d’engourdissement dans les doigts, les orteils, autour de la bouche ou de la gorge, parfois associés à des crampes.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Elévation des enzymes hépatiques, inflammation du foie (hépatite), toxicité au foie (hépatotoxicité), atteinte du foie se traduisant par un jaunissement de la peau et du blanc des yeux, des urines plus foncées, des selles plus pâles (cholestase).</p>
+<p class=AmmCorpsTexteGras>Effets indésirables rares (qui peuvent survenir chez 1 à 10 patients sur 1000)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Syndrome de lyse tumorale (augmentation de la kaliémie, tremblements, paresthésies et faiblesse musculaire des membres inférieurs).</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Gangrène notamment chez les patients ayant reçu ou recevant de l’interféron.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Effets indésirables de fréquence indéterminée (ne peut être estimée sur la base des données disponibles)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Coloration des ongles.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Inflammation de la peau provoquant l’apparition de plaques rouges et squameuses pouvant s’accompagner de douleurs articulaires.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Extrême fatigue avec diminution du nombre de globules rouges, et difficulté à respirer (anémie hémolytique).</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><span class=MsoHyperlink><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a></span>.</p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_HYDREA_500_mg,_gélule_?'>5. COMMENT CONSERVER HYDREA 500 mg, gélule ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte>Tenir ce médicament hors de la vue et de la portée des enfants.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas ce médicament après la date de péremption indiquée sur le conditionnement secondaire.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>A conserver à une température ne dépassant pas +25°C.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout <span style='color:black'>ou avec </span>les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient HYDREA 500 mg, gélule</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est :</p>
+<p class=AmmComposition style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt'>Hydroxycarbamide.................................................................................................... 500,00 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour une gélule</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont :</p>
+<p class=AmmComposition style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt'>Hydrogénophosphate de sodium anhydre, acide citrique anhydre, lactose monohydraté, stéarate de magnésium,</p>
+<p class=AmmComposition style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt'><i><u>Composition de l’enveloppe de la gélule</u></i> : érythrosine (E127), dioxyde de titane (E171), oxyde de fer jaune (E172), indigotine (E132), laurilsulfate de sodium (adjuvant de fabrication), gélatine.</p>
+<p class=AmmComposition style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt'><i><u>Composition de l’encre noire Opacode S-1-277002</u></i> : gomme-laque, éthanol, oxyde de fer noir (E172), propylène glycol, hydroxyde d'ammonium.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que HYDREA 500 mg, gélule et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>Ce médicament se présente sous forme de gélules.</p>
+<p class=AmmCorpsTexte>Boîte de 20 gélules.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE style='text-transform:uppercase'>CHEPLAPHARM Arzneimittel GmbH</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE style='text-transform:uppercase'>Ziegelhof 24</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE style='text-transform:uppercase'>17489 Greifswald</span></p>
+<p class=AmmCorpsTexte><span lang=DE style='text-transform:uppercase'>ALLEMAGNE</span><span lang=DE> </span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>Cheplapharm France</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>68 rue Marjolin</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>92300 Levallois-Perret</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>LATINA PHARMA S.P.A.</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>VIA MURILLO 7</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>04013 SERMONETA (LT)</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>ITALIE</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>ou</p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>HAUPT PHARMA AMAREG GmbH</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>DONAUSTAUFER STRAßE 378</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>93055 REGENSBURG</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>ALLEMAGNE</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmComposition>[à compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

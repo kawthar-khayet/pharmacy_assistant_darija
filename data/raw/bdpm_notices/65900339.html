@@ -1,0 +1,1685 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="7GZyeSt2OENlO17xqt9BoQ==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="7GZyeSt2OENlO17xqt9BoQ==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 29/09/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable"
+            aria-level="3"
+          >
+            ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-bon-usage" class="fr-tabs__tab  fr-tabs__tab--icon-left" tabindex="-1" role="tab"
+                            aria-selected="false" aria-controls="tabpanel-bon-usage-panel">Bon usage
+                    </button>
+                  </li>
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                          <p id="tag-generique" class="fr-tag" aria-controls="fr-modal-tag-generique" data-fr-opened="false">
+              <span class="fr-icon-capsule-fill">
+              </span>&nbsp;générique
+          </p>
+              </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 11/09/2008
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0399365">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte><a name="_Toc142279003">Classe pharmacothérapeutique : antiandrogènes non associés - code ATC : G03HA01.</a></p>
+<p class=AmmCorpsTexte>ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable est un médicament hormonal qui s’oppose aux effets des hormones sexuelles mâles (androgènes), produites également en faible quantité par l’organisme féminin.</p>
+<p class=AmmCorpsTexte>Chez l'homme, ce médicament est préconisé :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>dans le traitement de certaines maladies de la prostate ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>pour réduire les pulsions sexuelles dans les paraphilies en association à une prise en charge psychothérapeutique. Pour cette indication vous ne devez prendre de l’acétate de cyprotérone à 100 mg que si votre médecin estime que les autres traitements sont inappropriés.</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament appartient au(x) groupe(s) générique(s) suivants : <br/><ul role="list"><li role='listitem'><a href='/medicament/affiche/groupe-generique/65900339/409' aria-describedby='tooltip-medicament-generique-0'>CYPROTERONE (ACETATE DE) 100 mg, - ANDROCUR 100 mg, comprimé sécable.</a><span id='tooltip-medicament-generique-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Ouvrir la page de détail sur ce groupe générique</span></li></ul></p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Comprimé ( Composition pour un comprimé )<ul role="list"><li role="listitem" style="list-style-type: none;"> > acétate de cyprotérone<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">100 mg </span></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > plaquette(s) PVC-Aluminium de 60 comprimé(s)  </p><p>Code CIP : 388 445-9 ou 34009 388 445 9 7<br/>Déclaration de commercialisation : 18/12/2008<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 70,44 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 71,46 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :100%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'>Ce médicament étant un générique, le SMR n'a pas été évalué par la commission de la transparence (CT), il est possible de se référer à la /aux spécialité(s) de référence du groupe générique auquel appartient ce médicament <a href='#heading-groupe-generique' arial-label='cliquez ici pour aller à la rubrique des groupes génériques'>(cliquez ici pour aller à la rubrique des groupes génériques)</a></p></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div><div class='fr-col'><p>Ce médicament étant un générique, l'ASMR n'a pas été évalué par la commission de la transparence (CT), il est possible de se référer à la /aux spécialité(s) de référence du groupe générique auquel appartient ce médicament <a href='#heading-groupe-generique' arial-label='cliquez ici pour aller à la rubrique des groupes génériques'>(cliquez ici pour aller à la rubrique des groupes génériques)</a></p></div></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : ARROW GENERIQUES</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li>délivrance ne pouvant se faire qu'après vérification de l'attestation co-signée</li><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li><li>médicament nécessitant une surveillance particulière pendant le traitement</li><li>prescription nécessitant la signature annuelle par le médecin et la patiente d'une attestation d'information</li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure nationale</li><li>Code CIS : &nbsp;6 590 033 9</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 23/01/2023</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras>ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable</p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Acétate de cyprotérone ....................................................................................................... 100 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un comprimé sécable. </p>
+<p class=AmmCorpsTexte>Excipient à effet notoire : lactose.</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Comprimé sécable. </a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmListePuces1 style='text-align:justify'><a name="_Toc142278917"></a><a name="_Toc142278908"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Traitement palliatif anti-androgénique du cancer de la prostate,</a></p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Réduction des pulsions sexuelles dans les paraphilies en association à une prise en charge psychothérapeutique.</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:17.85pt;margin-bottom:.0001pt'>Pour la réduction des pulsions sexuelles dans les paraphilies chez l’homme, l’acétate de cyprotérone à 100 mg peut être utilisé lorsque les autres traitements sont jugés inappropriés.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<div class='fr-table--lg fr-table'><table>
+<tr>
+<td width=607 valign=top style='width:455.1pt;border:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><a name="_Toc142278918">En raison du risque de méningiome, ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable doit être prescrit et dispensé sous réserve du recueil de l'attestation d'information du patient qui devra être renouvelée une fois par an (voir rubriques 4.3 et 4.4).</a></p>
+</td>
+</tr>
+</table></div>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>L’intérêt de la prescription doit être réévalué annuellement en tenant compte du rapport bénéfice/risque individuel de chaque patient et de l'évolution des symptômes. Dans la mesure où le risque de méningiome augmente en fonction de la posologie et de la durée d'utilisation, les utilisations prolongées et à fortes doses sont à proscrire.</p>
+<p class=AmmAnnexeTitre3>Posologie</p>
+<p class=AmmCorpsTexte><u>Dans le cancer de la prostate</u> : 200 à 300 mg, soit 2 à 3 comprimés par jour sans interruption.</p>
+<p class=AmmCorpsTexte>La posologie maximale est de 300 mg par jour.</p>
+<p class=AmmCorpsTexte><u>Dans la réduction des pulsions sexuelles dans les paraphilies</u> :</p>
+<p class=AmmCorpsTexte>Il est nécessaire d’associer ce traitement à une prise en charge psychothérapeutique.</p>
+<p class=AmmCorpsTexte>Le traitement sera instauré à la dose de 100 mg/jour. La dose peut être augmentée à 200 mg/jour et jusqu’à 300 mg/jour sur une courte période. La recherche de la dose minimale efficace (qui peut être de 50 mg/jour) sera effectuée dès que possible. La durée du traitement par l’acétate de cyprotérone doit être définie au cas par cas. Une fois qu’un résultat satisfaisant a été obtenu, l’effet thérapeutique doit être maintenu en utilisant la plus faible dose possible. </p>
+<p class=AmmCorpsTexte>Un changement de dose ou l’arrêt de l’acétate de cyprotérone doit se faire progressivement.</p>
+<p class=AmmAnnexeTitre4>Population pédiatrique </p>
+<p class=AmmCorpsTexte>Chez l’adolescent, une vérification de l’âge osseux est nécessaire avant une éventuelle instauration du traitement, ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable étant contre-indiqué chez l’adolescent en cours de croissance (voir rubrique 4.3).</p>
+<p class=AmmAnnexeTitre4>Sujets âgés</p>
+<p class=AmmCorpsTexte>Aucune donnée ne suggère la nécessité d’ajuster la posologie chez les patients âgés.</p>
+<p class=AmmAnnexeTitre4>Insuffisants hépatiques</p>
+<p class=AmmCorpsTexte>L’utilisation d’ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable est contre-indiquée chez les patients ayant une affection hépatique sévère (voir rubrique 4.3).</p>
+<p class=AmmAnnexeTitre4>Insuffisants rénaux</p>
+<p class=AmmCorpsTexte>Aucune donnée ne suggère la nécessité d’ajuster la posologie chez les patients ayant une insuffisance rénale.</p>
+<p class=AmmCorpsTexte>ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable n'est pas recommandé avant la fin de la puberté.</p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte>Voie orale.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmListePuces1 style='text-align:justify'><a name="_Toc142278919"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypersensibilité à la substance active ou à l’un des excipients mentionnés à la rubrique 6.1.,</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Affections hépatiques sévères, tumeurs hépatiques (sauf métastases d'un cancer de la prostate), syndrome de Dubin-Johnson, syndrome de Rotor,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Tuberculose et maladies cachectisantes (hors cancer de la prostate),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Existence ou antécédents d'accidents thrombo-emboliques,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Dépression chronique sévère,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Anémie à hématies falciformes,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Dans l’indication réduction des pulsions sexuelles dans les paraphilies, chez l’adolescent en cours de croissance,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Existence ou antécédents de méningiomes : réaliser une imagerie cérébrale par IRM en début de traitement afin d'éliminer l'existence d'un méningiome (voir rubrique 4.4).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278920">L’acétate de cyprotérone peut entraîner à fortes doses une toxicité hépatique dose-dépendante. Cette toxicité apparaît habituellement plusieurs mois après le début du traitement. Des cas d'évolution fatale ont été rapportés chez des patients traités à des doses de 100 mg et plus.</a></p>
+<p class=AmmCorpsTexte>De très rares cas de tumeurs hépatiques bénignes ou malignes pouvant conduire à des hémorragies intra-abdominales menaçant le pronostic vital ont été observés après utilisation de l’acétate de cyprotérone. En cas de plaintes sévères au niveau abdominal, d’hypertrophie du foie ou en cas de signe d’hémorragie intra-abdominale, une tumeur hépatique doit être évoquée.</p>
+<p class=AmmCorpsTexte>Un bilan biologique hépatique doit être effectué avant le démarrage du traitement. L’apparition d’une symptomatologie évoquant une possible hépatotoxicité (par exemple : nausées ou vomissements, ictère, démangeaisons intenses, urines foncées, douleurs abdominales) doit aussi conduire à effectuer un bilan biologique hépatique.</p>
+<p class=AmmCorpsTexte>Une surveillance biologique est nécessaire avant traitement et toutes les 4 à 6 semaines chez les patients atteints :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>d’affections hépatiques chroniques (voir rubrique 4.8),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>de diabète ou d’intolérance au glucose.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>La prudence s’impose en cas de diabète non équilibré.</p>
+<p class=AmmCorpsTexte>La survenue d´événements thromboemboliques a été rapportée chez des patients sous acétate de cyprotérone, sans que la responsabilité de l’acétate de cyprotérone soit établie. Les patients ayant des antécédents d´événements thrombotiques/thromboemboliques artériels ou veineux (comme une thrombose veineuse profonde, une embolie pulmonaire, un infarctus du myocarde) ou d´accidents cérébro-vasculaires ou souffrant de maladie maligne avancée ont un risque thromboembolique augmenté (voir rubrique 4.3).</p>
+<p class=AmmCorpsTexte>Dans tous les cas, il est impératif d’interrompre le traitement en cas de survenue de :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>ictère ou d’élévation des transaminases,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>troubles oculaires (perte de vision, diplopie, lésions vasculaires de la rétine),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>accidents thrombo-emboliques veineux ou artériels,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>céphalées importantes.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Des cas d’anémie ont été rapportés avec l’acétate de cyprotérone chez l’homme dans le traitement du cancer de la prostate. Une surveillance régulière de la numération érythrocytaire est nécessaire au cours du traitement.</p>
+<p class=AmmCorpsTexte>Pendant le traitement à fortes doses (&#8805; 100 mg par jour), il est conseillé de contrôler régulièrement la fonction corticosurrénale, les données précliniques suggérant une possible suppression due à l’effet « corticoïd-like » de l’acétate de cyprotérone.</p>
+<p class=AmmCorpsTexteGras><u>Méningiome</u></p>
+<p class=AmmCorpsTexte>Des cas de méningiomes (simples et multiples) ont été rapportés lors de l’utilisation d’acétate de cyprotérone principalement à des doses de 25 mg et plus. Le risque de méningiome s’accroit avec l’augmentation des doses cumulées d’acétate de cyprotérone (voir rubrique 5.1). De fortes doses cumulées peuvent être atteintes en cas d’utilisation prolongée (plusieurs années) ou sur une plus courte durée avec de fortes doses quotidiennes. <a name="_Hlk34040918"></a></p>
+<p class=AmmCorpsTexte>Les patients doivent faire l’objet d’une surveillance pour le suivi et la détection de méningiomes conformément à la pratique clinique. A savoir : réaliser une imagerie cérébrale par IRM en début de traitement afin d'éliminer l'existence d'un méningiome (voir rubrique 4.3). Si le traitement est poursuivi pendant plusieurs années, une imagerie cérébrale par IRM devra être réalisée au plus tard 5 ans après la première imagerie, puis tous les 2 ans si l'IRM à 5 ans est normale.</p>
+<p class=AmmCorpsTexte>Si un méningiome est diagnostiqué chez un patient traité par ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable le traitement par ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable et les autres médicaments contenant de la cyprotérone devront être arrêtés définitivement et un avis neurochirurgical sera requis (voir rubrique 4.3 « Contre-indications »).</p>
+<p class=AmmCorpsTexte>Certaines données montrent que le risque de méningiome pourrait diminuer après l’arrêt du traitement par la cyprotérone.<b><i><span style='font-size:9.0pt;font-family:"Verdana\,BoldItalic"'> </span></i></b></p>
+<div class='fr-table--lg fr-table'><table>
+<tr>
+<td width=614 valign=top style='width:460.5pt;border:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Le prescripteur doit s'assurer que le patient a été informé des risques de méningiome et de leurs symptômes tels que maux de tête, troubles de la vision, du langage, de la mémoire et de l’audition, nausées, vertiges, convulsions, perte de l’odorat et une faiblesse, paralysie.</p>
+<p class=AmmCorpsTexte>Le prescripteur doit s’assurer également que le patient a été informé de la surveillance nécessaire et qu'il a reconnu avoir compris cette information (attestation annuelle d'information co-signée par le prescripteur et le patient).</p>
+</td>
+</tr>
+</table></div>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Dans l’indication réduction des pulsions sexuelles dans les paraphilies :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une décision pluridisciplinaire de mise sous traitement est nécessaire associant par exemple psychiatre, psychothérapeute et endocrinologue ;</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>l’efficacité d’ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable peut être diminuée par la désinhibition liée à la prise de boissons alcoolisées.</p>
+<p class=AmmCorpsTexteGras><u>Excipient</u></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Ce médicament contient du lactose. Les patients présentant une intolérance au galactose, un déficit total en lactase ou un syndrome de malabsorption du glucose et du galactose (maladies héréditaires rares) ne doivent pas prendre ce médicament.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278922">Associations déconseillées</a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278923"><span style='font-family: Symbol'>+</span></a><span style='font-size:7.0pt'> </span>Millepertuis</p>
+<p class=AmmCorpsTexte>Diminution de l'efficacité du progestatif, par augmentation de son métabolisme hépatique par le millepertuis.</p>
+<p class=AmmCorpsTexteGras>+ Ulipristal</p>
+<p class=AmmListePuces1 style='margin-bottom:6.0pt'>Dans l'indication contraception d'urgence.</p>
+<p class=AmmCorpsTexte>Antagonisme des effets de l'ulipristal en cas de prise d'acétate de cyprotérone moins de 5 jours après la prise de la contraception d'urgence.</p>
+<p class=AmmCorpsTexteGras>+ Pérampanel</p>
+<p class=AmmCorpsTexte>Pour des doses de pérampanel <span style='font-family:Symbol'>³ </span>à 12 mg/jour, risque de diminution de l'efficacité de la cyprotérone.</p>
+<p class=AmmAnnexeTitre3>Associations faisant l'objet de précautions d’emploi</p>
+<p class=AmmCorpsTexteGras><span style='font-family:Symbol'>+</span><span style='font-size:7.0pt'> </span>Inducteurs enzymatiques (carbamazépine, fosphénytoine, phénobarbital, phénytoine, primidone, oxcarbazépine, rifabutine, rifampicine, névirapine, éfavirenz, dabrafénib et enzalutamide)</p>
+<p class=AmmCorpsTexte>Risque de diminution de l'efficacité de la cyprotérone, par augmentation de son métabolisme hépatique par l'inducteur.</p>
+<p class=AmmCorpsTexte>Surveillance clinique et adaptation éventuelle de la posologie du traitement hormonal pendant l'administration de l'anticonvulsivant inducteur et après son arrêt.</p>
+<p class=AmmCorpsTexteGras>+ Inhibiteurs de protéases boostés par ritonavir</p>
+<p class=AmmCorpsTexte>Risque de diminution de l'efficacité de la cyprotérone, par augmentation de son métabolisme hépatique par l'inducteur.</p>
+<p class=AmmCorpsTexte>Surveillance clinique et adaptation éventuelle de la posologie de la cyprotérone pendant l'administration avec l'inhibiteur de protéase et après son arrêt.</p>
+<p class=AmmCorpsTexteGras>+ Bosentan</p>
+<p class=AmmCorpsTexte>Risque de diminution de l'efficacité du progestatif par augmentation de son métabolisme hépatique.</p>
+<p class=AmmCorpsTexte>Surveillance clinique et si possible adaptation de la posologie de la cyprotérone pendant l'administration avec le bosentan et après son arrêt.</p>
+<p class=AmmAnnexeTitre3>Associations à prendre en compte</p>
+<p class=AmmCorpsTexteGras>+ Ulipristal</p>
+<p class=AmmCorpsTexte>Antagonisme réciproque des effets de l'ulipristal et du progestatif, avec risque d'inefficacité.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmCorpsTexte>Sans objet. </p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929"><span lang=FR-BE>Possibilité de sensation de fatigue pouvant altérer les facultés de concentration.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmCorpsTexte>Les effets indésirables les plus sévères associés à la prise d´acétate de cyprotérone sont une toxicité hépatique, des tumeurs hépatiques bénignes ou malignes pouvant conduire à des hémorragies intra-abdominales et des événements thrombo-emboliques (voir rubrique 4.4).</p>
+<p class=AmmCorpsTexteGras>Affection des organes de reproduction et du sein</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>inhibition de la spermatogenèse habituellement réversible à l’arrêt du traitement (pouvant entraîner une stérilité temporaire),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>gynécomastie habituellement réversible à l’arrêt du traitement,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>impuissance,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>baisse de la libido,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>modification des caractères sexuels secondaires réversible à l’arrêt du traitement (diminution de la pilosité, atrophie testiculaire, diminution de la musculature).</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Troubles du système sanguin et lymphatique </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Anémie.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Affections endocriniennes</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>variation de poids ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>comme décrit avec d’autres antiandrogènes, l’utilisation chez l’homme de l’acétate de cyprotérone peut induire une perte osseuse laquelle constitue un facteur de risque d’une éventuelle ostéoporose. De très rares cas ont été rapportés lors d’un traitement prolongé par l’acétate de cyprotérone à la posologie moyenne de 100 mg par jour. Cet effet n’a pas été observé lors d’un traitement de courte durée.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Affections psychiatriques</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>états d’agitation, humeur dépressive.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Affections respiratoires, thoraciques et médiastinales</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>dyspnée.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Affections vasculaires</p>
+<p class=AmmListePuces1 style='margin-top:6.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>aggravation d’une insuffisance veineuse des membres inférieurs,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>évènements thromboemboliques.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Affections du système nerveux</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>migraines et céphalées.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Affections hépatobiliaires</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>ictères, hépatites cytolytiques, hépatites fulminantes, insuffisance hépatique ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>des tumeurs hépatiques bénignes ont pu être observées, voire des tumeurs hépatiques malignes conduisant à des cas isolés d’hémorragie abdominale.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Troubles généraux et anomalies au site d’administration</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>fatigabilité, asthénie,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>bouffées de chaleur et sudation.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Affections de la peau et du tissu sous-cutané</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>éruption (rash).</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Affections du système immunitaire</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>réaction d’hypersensibilité.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Tumeurs bénignes, malignes et non précisées (incluant kystes et polypes)</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>méningiome (fréquence rare) : des cas de méningiomes (simples et multiples) ont été rapportés lors de l’utilisation d’acétate de cyprotérone (voir rubrique 4.4).</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="http://www.signalement-sante.gouv.fr">www.signalement-sante.gouv.fr</a>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte>Les études de toxicité aiguë n'ont pas mis en évidence de toxicité particulière de l'acétate de cyprotérone.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : antiandrogènes non associés, code ATC : G03HA01</a><span style='font-size:8.0pt'>.</span></p>
+<p class=AmmCorpsTexte>L'acétate de cyprotérone, dérivé de la 17 &#945;-hydroxyprogestérone, possède avant tout une action antiandrogène. Cet effet spécifique antiandrogénique s'exerce par inhibition compétitive de la liaison de la 5 &#945;-dihydrotestostérone à son récepteur cytosolique dans les cellules cibles.</p>
+<p class=AmmCorpsTexte>Chez l'homme, l'acétate de cyprotérone empêche l'action des androgènes sécrétés par les testicules et les corticosurrénales sur les organes cibles androgéno-dépendants tels que la prostate.</p>
+<p class=AmmCorpsTexte>L'acétate de cyprotérone a un effet inhibiteur central. Cet effet antigonadotrope entraîne une réduction de la synthèse de la testostérone par les testicules et donc de la testostéronémie.</p>
+<p class=AmmCorpsTexte>Occasionnellement, on a pu observer une légère augmentation de la prolactinémie aux fortes doses.</p>
+<p class=AmmAnnexeTitre3 style='margin-top:0cm'>Méningiome</p>
+<p class=AmmAnnexeTitre3 style='margin-top:0cm'><span class=AmmCorpsTexteCar><span style='font-weight:normal;text-decoration:none'>Sur la base des résultats d’une étude épidémiologique française de cohorte, une association, dépendante de la dose cumulée, entre l’acétate de cyprotérone et le risque de méningiome a été observée. Cette étude s’est appuyée sur les données de la Caisse Nationale de l’Assurance Maladie (CNAM) et a inclus une population de 253 777 femmes utilisatrices de comprimés de cyprotérone à 50 mg - 100 mg. L’incidence des méningiomes traités par chirurgie ou radiothérapie a été comparée entre les femmes exposées à l’acétate de cyprotérone à forte dose (dose cumulée &#8805; 3 g) et les femmes faiblement exposées à l’acétate de cyprotérone (dose cumulée < 3 g). Une relation entre la dose cumulée et le niveau de risque a été mise en évidence.</span></span></p>
+<div class='fr-table--lg fr-table'><table>
+<tr>
+<td width=209 valign=top style='width:156.85pt;border:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Dose cumulée d’acétate de cyprotérone</p>
+</td>
+<td width=210 valign=top style='width:157.25pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Taux d’incidence (en patient-années)</p>
+</td>
+<td width=208 valign=top style='width:156.0pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>HR<sub>ajusté</sub> (IC à 95%) <sup>a</sup></p>
+</td>
+</tr>
+<tr>
+<td width=209 valign=top style='width:156.85pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Faiblement exposé (< 3 g) </p>
+</td>
+<td width=210 valign=top style='width:157.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>4,5/100 000</p>
+</td>
+<td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Réf.</p>
+</td>
+</tr>
+<tr>
+<td width=209 valign=top style='width:156.85pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Exposé à &#8805;3 g</p>
+</td>
+<td width=210 valign=top style='width:157.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>23,8/100 000</p>
+</td>
+<td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>6,6 [4,0-11,1]</p>
+</td>
+</tr>
+<tr>
+<td width=209 valign=top style='width:156.85pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte> 12 à 36 g</p>
+</td>
+<td width=210 valign=top style='width:157.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>26/100 000</p>
+</td>
+<td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>6,4 [3,6-11,5]</p>
+</td>
+</tr>
+<tr>
+<td width=209 valign=top style='width:156.85pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte> 36 à 60 g</p>
+</td>
+<td width=210 valign=top style='width:157.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>54,4/100 000</p>
+</td>
+<td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>11,3 [5,8-22,2]</p>
+</td>
+</tr>
+<tr>
+<td width=209 valign=top style='width:156.85pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte> Plus de 60 g</p>
+</td>
+<td width=210 valign=top style='width:157.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>129,1/100 000</p>
+</td>
+<td width=208 valign=top style='width:156.0pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>21,7 [10,8-43,5]</p>
+</td>
+</tr>
+</table></div>
+<p class=AmmCorpsTexte><sup>a </sup>Ajusté en fonction de l'âge comme variable dépendante du temps et des œstrogènes à l'inclusion</p>
+<p class=AmmCorpsTexte>Une dose cumulée de 12 g peut correspondre, par exemple, à un an de traitement à 50 mg/jour pendant 20 jours chaque mois. </p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278934">L'acétate de cyprotérone passe dans la circulation plasmatique l’effet de premier passage hépatique est peu important. La C<sub>max</sub> est atteinte au bout de 3 à 4 heures. La demi-vie plasmatique est d'environ 4 heures. L'acétate de cyprotérone présente une certaine affinité pour le tissu adipeux, d'où il est libéré régulièrement pour rejoindre la circulation générale. Il est éliminé avec une demi-vie de 2 jours environ, après métabolisation principalement hépatique.</a></p>
+<p class=AmmCorpsTexte>L'élimination complète, pour 1/3 urinaire et 2/3 fécale, se fait à 80 % sous forme de métabolites dont le plus important est la 15 &#946;-hydroxycyprotérone.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278935">Les études de toxicité par administration répétée avec l'acétate de cyprotérone ont montré des effets atrophiques sur les glandes surrénales chez le rat et le chien similaires à ceux induits par les corticoïdes. Ces effets ont été observés à des niveaux d'exposition pertinents en clinique.</a></p>
+<p class=AmmCorpsTexte>La fertilité des rats mâles exposés à l'acétate de cyprotérone est inhibée de manière réversible. Les études réalisées chez le rat et le lapin n'ont pas mis en évidence de potentiel tératogène au cours de l'organogenèse, avant le développement des organes génitaux externes.</p>
+<p class=AmmCorpsTexte>L'administration de fortes doses d'acétate de cyprotérone durant la phase de différenciation hormonosensible des organes génitaux a cependant conduit à des signes de féminisation chez les fœtus mâles.</p>
+<p class=AmmCorpsTexte>Les tests classiques de mutagenèse <i>in vivo</i> et <i>in vitro</i> n'ont pas mis en évidence de potentiel mutagène ou génotoxique. Cependant, d'autres études ont montré que l'acétate de cyprotérone induit la formation d'adduits à l'ADN, sur des cellules hépatiques de rat et de singe (<i>ex vivo</i> et <i>in vivo</i>), ainsi que sur des hépatocytes humains. Cette formation d'adduits d'ADN a été constatée à un niveau d'exposition comparable à l'exposition thérapeutique humaine.</p>
+<p class=AmmCorpsTexte>Administré <i>in vivo</i> chez le rat femelle, l'acétate de cyprotérone provoque une augmentation de la fréquence de survenue des lésions hépatiques en foyers, potentiellement prénéoplasiques et une augmentation de la fréquence des mutations chez le rat transgénique portant un gène bactérien, cible des mutations.</p>
+<p class=AmmCorpsTexte>La signification clinique de ces résultats expérimentaux reste inconnue. Cependant, il est connu par ailleurs que les stéroïdes sexuels peuvent promouvoir la croissance de certains tissus et tumeurs hormono-dépendants.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937">Lactose monohydraté, amidon de maïs, silice colloïdale anhydre, povidone K25, stéarate de magnésium.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">Sans objet.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte>3 ans.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940"><span lang=FR-BE>Pas de précautions particulières de conservation.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte>30, 60, 90 ou 180 comprimés sous plaquettes (PVC/Aluminium).</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Pas d’exigences particulières.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142278943">ARROW GENERIQUES</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>26 AVENUE TONY GARNIER</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>69007 LYON</p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 388 444 2 9 : 30 comprimés sous plaquettes (PVC/Aluminium).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 388 445 9 7 : 60 comprimés sous plaquettes (PVC/Aluminium).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 388 446 5 8 : 90 comprimés sous plaquettes (PVC/Aluminium).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 388 447 1 9 : 180 comprimés sous plaquettes (PVC/Aluminium).</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;page-break-after:avoid'>Liste I.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;page-break-after:avoid'>Surveillance particulière pendant le traitement : la prescription nécessite la signature annuelle par le médecin et le patient d’une attestation d’information ; la délivrance ne peut se faire qu’après avoir vérifié que cette attestation a été co-signée.</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+                              <div id="tabpanel-bon-usage-panel" class="fr-tabs__panel" role="tabpanel"
+                     aria-labelledby="tabpanel-bon-usage"
+                     tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      
+      <div class="fr-col-12 fr-col-md">
+        <div class="fr-editor">
+
+          
+          
+          
+          
+          
+                      <div class="fr-grid-row">
+              <div class="fr-col">
+                <h5 id="heading-informations-importantes" role="heading" aria-level="5">
+                  <span class="fr-icon-information-line text-color-orange" aria-hidden="true"></span> Informations
+                  importantes
+                  <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage" href="#top"
+                     id="section-glossaire__top_link" role="link"
+                     aria-describedby="tooltip-link-page-top"
+                     aria-label="Redirection vers le haut de page"></a>
+                  <span id="tooltip-link-page-top" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                      Redirection vers le haut de page
+                    </span>
+                </h5>
+                <p aria-labelledby="heading-informations-importantes">Les informations importantes disponibles pour ce médicament sont les suivantes : <br /><ul id="liste_infos_importantes" role="list"><li role='listitem'>    <a  target='_blank'    href='https://ansm.sante.fr/actualites/progestatifs-et-meningiome-pas-daugmentation-du-risque-avec-les-diu-au-levonorgestrel-mais-confirmation-du-risque-pour-3-nouvelles-substances'>Progestatifs et méningiome : pas d'augmentation du risque avec les DIU au lévonorgestrel mais confirmation du risque pour 3 nouvelles substances</a></li><li role='listitem'>    <a  target='_blank'    href='https://ansm.sante.fr/actualites/androcur-acetate-de-cyproterone-les-mesures-prises-depuis-2018-ont-permis-une-nette-reduction-du-risque-de-meningiome'>Androcur (acétate de cyprotérone) : les mesures prises depuis 2018 ont permis une nette réduction du risque de méningiome</a></li></ul></p>
+              </div>
+            </div>
+          
+          
+          
+                  </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_ACETATE_DE_CYPROTERONE_ARROW_100_mg,_comprimé_sécable_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_ACETATE_DE_CYPROTERONE_ARROW_100_mg,_comprimé_sécable_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_PRENDRE_ACETATE_DE_CYPROTERONE_ARROW_100_mg,_comprimé_sécable_?"
+                     aria-label="3. COMMENT PRENDRE ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable ? (Lien de redirection)">
+                    3. COMMENT PRENDRE ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_ACETATE_DE_CYPROTERONE_ARROW_100_mg,_comprimé_sécable_?"
+                     aria-label="5. COMMENT CONSERVER ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable ? (Lien de redirection)">
+                    5. COMMENT CONSERVER ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 23/01/2023</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'><a name="_Toc142278999">ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable</a></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Acétate de cyprotérone</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><img width=627 height=104 src="/images/N0399365/image001.png" align=left hspace=12 vspace=5 alt="Zone de Texte: En raison du risque de survenue d'un méningiome, assurez-vous d'avoir lu, compris et signé l'attestation annuelle d'information qui vous est remise par votre médecin avant prescription d’ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable. Vous devez présenter cette attestation d'information au pharmacien avant toute délivrance du médicament.&#13;&#10;Demandez conseil à votre médecin ou pharmacien. &#13;&#10;"><a name="_Toc142279000"></a><span lang=FR-BE>Veuillez lire attentivement cette notice avant de prendre ce médicament car elle contient des informations importantes pour vous.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin ou votre pharmacien.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant de prendre ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment prendre ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_ACETATE_DE_CYPROTERONE_ARROW_100_mg,_comprimé_sécable_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279003">Classe pharmacothérapeutique : antiandrogènes non associés - code ATC : G03HA01.</a></p>
+<p class=AmmCorpsTexte>ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable est un médicament hormonal qui s’oppose aux effets des hormones sexuelles mâles (androgènes), produites également en faible quantité par l’organisme féminin.</p>
+<p class=AmmCorpsTexte>Chez l'homme, ce médicament est préconisé :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>dans le traitement de certaines maladies de la prostate ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>pour réduire les pulsions sexuelles dans les paraphilies en association à une prise en charge psychothérapeutique. Pour cette indication vous ne devez prendre de l’acétate de cyprotérone à 100 mg que si votre médecin estime que les autres traitements sont inappropriés.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_ACETATE_DE_CYPROTERONE_ARROW_100_mg,_comprimé_sécable_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">Ne prenez jamais ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable :</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique à l’acétate de cyprotérone ou à l’un des autres composants contenus dans ce médicament, mentionnés dans la rubrique 6 ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes atteint d’une maladie grave du foie, du syndrome de Dubin-Johnson, du syndrome de Rotor ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes atteint de tuberculose et maladies provoquant une altération importante de l’état général avec maigreur extrême (hors cancer de la prostate) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>en cas d’existence ou d’antécédents de maladies thrombo-emboliques (telles que : infarctus, embolie, formation de caillots de sang à l’intérieur des vaisseaux sanguins) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous souffrez de dépression chronique sévère ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>en cas d’anémie à hématies falciformes ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>dans l’indication réduction des pulsions sexuelles dans les paraphilies, chez l’adolescent en cours de croissance ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>en cas d’existence ou antécédent de méningiome (tumeur généralement bénigne du tissu situé entre le cerveau et le crâne). Une imagerie du cerveau par IRM en début de traitement vous est / a été prescrite pour vérifier l'absence de méningiome. Contactez votre médecin en cas de doutes.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt;page-break-after:avoid'>Avertissements et précautions</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Adressez-vous à votre médecin ou pharmacien avant de prendre ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable.</span></p>
+<p class=AmmListePuces1 style='text-align:justify;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Dans certains cas, la prise de fortes doses d’acétate de cyprotérone a été liée à des troubles hépatiques. Ces troubles hépatiques sont dépendants de la dose et se développent généralement quelques mois après le début du traitement. Des cas de décès ont été rapportés chez des patients traités à des doses de 100 mg et plus. Un bilan biologique hépatique doit être effectué avant le démarrage du traitement. Arrêtez votre traitement et consultez immédiatement votre médecin si vous présentez des symptômes de toxicité hépatique (exemple : démangeaisons sur le corps entier, jaunissement de la peau, urines foncées, douleurs abdominales, troubles digestifs).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Comme avec les autres hormones sexuelles, des tumeurs bénignes du foie ont pu être observées, voire des tumeurs malignes du foie conduisant à des cas isolés d’hémorragies abdominales. Vous devez informer votre médecin de toute douleur abdominale ne disparaissant pas dans un court délai.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Une surveillance biologique est nécessaire avant traitement et toutes les 4 à 6 semaines chez les patients atteints :</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>d’affections hépatiques chroniques,</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>de diabète ou d’intolérance au glucose.</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:17.85pt;margin-bottom:.0001pt'>La prudence s’impose en cas de diabète non équilibré.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Des cas d´évènements thromboemboliques (caillots dans les vaisseaux) ont été rapportés sous acétate de cyprotérone, sans que la responsabilité de l’acétate de cyprotérone soit établie.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Des cas d’anémie ont été rapportés avec l’acétate de cyprotérone chez l’homme. Une surveillance régulière de la numération érythrocytaire (numération de la formule sanguine) est nécessaire au cours du traitement.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Pendant les traitements à fortes doses (&#8805; 100 mg par jour), il est conseillé de contrôler régulièrement la fonction corticosurrénale.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Dans l’indication réduction des pulsions sexuelles dans les paraphilies l’efficacité d’ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable peut être diminuée par la désinhibition liée à la prise de boissons alcoolisées.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span class=AmmCorpsTexteCar><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span></span><span class=AmmCorpsTexteCar><u>Méningiomes</u></span><span class=AmmCorpsTexteCar> : </span></p>
+<p class=AmmListePuces2 style='text-align:justify;page-break-after:auto'><span class=AmmCorpsTexteCar><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span></span><span class=AmmCorpsTexteCar>L’utilisation d’acétate de cyprotérone a été associée à l’apparition d’une </span>tumeur généralement bénigne du cerveau (méningiome). <span class=AmmCorpsTexteCar>Le risque augmente en particulier en cas d’utilisation du médicament sur une durée prolongée (plusieurs années) ou à fortes doses sur une durée plus courte (25 mg par jour et plus).</span></p>
+<p class=AmmListePuces2 style='text-align:justify;page-break-after:auto'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Une imagerie du cerveau par IRM en début de traitement est / a été prescrite pour vérifier l'absence de méningiome. Si le traitement est poursuivi pendant plusieurs années, <span class=AmmCorpsTexteGrasCar>une nouvelle imagerie du cerveau IRM devra être réalisée au plus tard 5 ans après la première IRM</span>, puis <span class=AmmCorpsTexteGrasCar>tous les deux ans</span> si l'IRM à 5 ans est normale, et ce, tant que le traitement est maintenu.</p>
+<p class=AmmListePuces2 style='text-align:justify;page-break-after:auto'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span><span class=AmmCorpsTexteCar>Si vous remarquez </span>des symptômes tels que des troubles de la vision (par exemple une vision double ou floue), une perte d’audition ou un sifflement dans les oreilles, une perte d’odorat, des maux de tête qui s’aggravent au fil du temps, des pertes de mémoire, des crises convulsives, une faiblesse dans les bras ou les jambes, vous devez en informer immédiatement votre médecin.</p>
+<p class=AmmListePuces2 style='text-align:justify;page-break-after:auto'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span><span class=AmmCorpsTexteCar>Si un méningiome vous est diagnostiqué, votre médecin arrêtera votre traitement par l’acétate de cyprotérone (voir la rubrique « Ne prenez jamais </span>ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable <span class=AmmCorpsTexteCar>») et un avis neurochirurgical sera requis. </span></p>
+<p class=AmmListePuces2 style='text-align:justify;page-break-after:auto'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>L'intérêt de la prescription doit être réévalué annuellement en tenant compte du rapport bénéfice/risque individuel de chaque patient et de l'évolution des symptômes. Dans la mesure où le risque de méningiome augmente en fonction de la posologie et de la durée d'utilisation, les utilisations prolongées et à fortes doses sont à proscrire.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Arrêter le traitement et prévenez immédiatement votre médecin en cas de :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>jaunisse (au niveau des yeux et de la peau), démangeaisons sur le corps entier,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>douleur inhabituelle dans les jambes, faiblesse dans les membres,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>douleur de la poitrine, pouls irrégulier, essoufflement soudain,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>perte de connaissance, confusion, maux de tête sévères inhabituels, vertiges, troubles visuels, élocution ralentie ou perte de la parole.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Enfants et adolescents</p>
+<p class=AmmCorpsTexte>Chez l’adolescent, une vérification de l’âge osseux est nécessaire avant une éventuelle instauration du traitement, ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable étant contre-indiqué chez l’adolescent en cours de croissance (voir « Ne prenez jamais ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable »).</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable</p>
+<p class=AmmCorpsTexte>Informez votre médecin ou pharmacien si vous prenez, avez récemment pris ou pourriez prendre tout autre médicament, y compris un médicament obtenu sans ordonnance, notamment :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>les médicaments utilisés dans le traitement de l’<b>épilepsie</b> (carbamazépine, fosphénytoïne, phénobarbital, phénytoïne, primidone, oxcarbazépine, pérampanel) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>les médicaments utilisés dans le traitement de la <b>tuberculose</b> (rifampicine, rifabutine) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>les médicaments utilisés dans le traitement des <b>infections par le VIH</b> (névirapine, éfavirenz, ritonavir) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>le bosentan, utilisé dans le traitement de l’<b>hypertension artérielle pulmonaire </b>;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>ou d’autres médicaments <b>inducteurs enzymatiques</b> (dabrafénib, enzalutamide) ;</p>
+<p class=AmmListePuces1 style='text-align:justify;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>le millepertuis (<i>Hypericum perforatum</i>) ;</p>
+<p class=AmmListePuces1 style='text-align:justify;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>l’ulipristal, un médicament utilisé en <b>contraception d’urgence</b> ou pour traiter les symptômes des <b>fibromes utérins</b>.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable avec des aliments, boissons et de l’alcool</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279012">Grossesse et allaitement </a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>Possibilité de sensation de fatigue pouvant altérer les facultés de concentration.</p>
+<p class=AmmCorpsTexteGras>ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable contient du lactose. </p>
+<p class=AmmCorpsTexte>Si votre médecin vous a informé(e) d’une intolérance à certains sucres, contactez-le avant de prendre ce médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_PRENDRE_ACETATE_DE_CYPROTERONE_ARROW_100_mg,_comprimé_sécable_?'>3. COMMENT PRENDRE ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279021">Veillez à toujours prendre ce médicament en suivant exactement les indications de votre médecin. Vérifiez auprès de votre médecin ou pharmacien en cas de doute.</a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142279007">Posologie/Fréquence d'administration</a></p>
+<p class=AmmCorpsTexte>Dans tous les cas se conformer strictement à l'ordonnance de votre médecin.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Dans le traitement de certaines maladies de la prostate, la posologie est en général de 2 à 3 comprimés par jour (en 2 ou 3 prises) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Dans la réduction des pulsions sexuelles dans les paraphilies, se conformer à l’ordonnance du médecin.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>La posologie maximale est de 300 mg par jour.</p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte>Voie orale.</p>
+<p class=AmmCorpsTexte>Avalez le comprimé avec de l’eau.</p>
+<p class=AmmAnnexeTitre3>Durée du traitement</p>
+<p class=AmmCorpsTexte>Respectez la prescription de votre médecin.</p>
+<p class=AmmCorpsTexteGras>Si vous avez pris plus d’ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable que vous n’auriez dû </p>
+<p class=AmmCorpsTexte>Les études de toxicité après prise accidentelle d’une dose supérieure ou après une intoxication n’ont pas montré de toxicité particulière.</p>
+<p class=AmmCorpsTexte>Consultez immédiatement votre médecin ou votre pharmacien.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez de prendre ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable </p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Ne prenez pas de dose double pour compenser la dose que vous avez oublié de prendre.</span></p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez de prendre ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable </p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexte>Si vous avez d’autres questions sur l’utilisation de ce médicament, demandez plus d’informations à votre médecin ou à votre pharmacien.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>stérilité temporaire ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>sensibilité et augmentation du volume des seins ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>variation de poids ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>impuissance ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>baisse de la libido ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>diminution de la pilosité, atrophie testiculaire, diminution de la musculature ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>dyspnée (sensation d’essoufflement, difficultés respiratoires) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>migraines, maux de tête ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>bouffées de chaleur, sudation ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>éruption cutanée ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>toxicité hépatique : jaunisse, augmentation des enzymes du foie, hépatites parfois sévères, rares tumeurs du foie ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>très rarement : troubles et accidents thrombo-emboliques (formation de caillots sanguins dans les vaisseaux), aggravation d’une insuffisance veineuse des membres inférieurs, phlébite, embolie pulmonaire, thrombose d’une artère ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>fatigabilité, asthénie et occasionnellement états d'agitation, humeur dépressive peuvent survenir ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>très rarement : un traitement prolongé par l’acétate de cyprotérone peut induire une perte osseuse (ostéoporose) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>réaction allergique (démangeaisons, urticaire, œdème) ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>anémie ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>des cas de méningiomes (tumeur généralement bénigne du tissu entre le cerveau et le crâne) ont été rapportés en cas d’utilisation prolongée (plusieurs années) d’acétate de cyprotérone à des doses de 25 mg par jour et plus (voir rubrique « Ne prenez jamais ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable »).</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet:<span style='color:red'> </span><a href="http://www.signalement-sante.gouv.fr">www.signalement-sante.gouv.fr</a></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_ACETATE_DE_CYPROTERONE_ARROW_100_mg,_comprimé_sécable_?'>5. COMMENT CONSERVER ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026"></a><a name="_Toc142279024">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas ce médicament après la date de péremption indiquée sur l’emballage après EXP. La date de péremption fait référence au dernier jour de ce mois.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ce médicament ne nécessite pas de précautions particulières de conservation. </span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout <span style='color:black'>ou avec </span>les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est :</p>
+<p class=AmmComposition style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt'>Acétate de cyprotérone.................................................................................................. 100 mg</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un comprimé sécable. </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont : </p>
+<p class=AmmComposition style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt'>Lactose monohydraté, amidon de maïs, silice colloïdale anhydre, povidone K25, stéarate de magnésium.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que ACETATE DE CYPROTERONE ARROW 100 mg, comprimé sécable et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>Ce médicament se présente sous forme de comprimé sécable. Boîte de 30, 60, 90 ou 180 comprimés.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées. </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Toc142279031">ARROW GENERIQUES</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>26 AVENUE TONY GARNIER</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>69007 LYON</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>ARROW GENERIQUES</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>26 AVENUE TONY GARNIER</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>69007 LYON</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279033">DELPHARM LILLE S.A.S.</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>PARC D’ACTIVITES ROUBAIX EST</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>22 RUE DE TOUFFLERS CS 50070</p>
+<p class=AmmCorpsTexte>59452 LYS LEZ LANNOY</p>
+<p class=AmmCorpsTexte>OU</p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>ARROW GENERIQUES</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>26 AVENUE TONY GARNIER</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>69007 LYON</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

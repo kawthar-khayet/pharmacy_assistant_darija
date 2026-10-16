@@ -66,8 +66,8 @@ function MenuLangue() {
   )
 }
 
-/** Barre du haut. Sur l'accueil elle presente le service (Accueil, Services,
- *  Sources) ; dans l'application elle porte les rubriques. */
+/** Barre du haut : les rubriques sont les memes sur toutes les pages, accueil
+ *  compris ; le logo ramene a l'accueil. */
 export default function TopBar() {
   const { t, estArabe } = useLanguage()
   const { pathname } = useLocation()
@@ -82,53 +82,35 @@ export default function TopBar() {
         </Link>
 
         <nav className="barre-haut-liens" aria-label="Navigation principale">
-          {surAccueil ? (
-            <>
-              <button type="button" className="lien-haut lien-haut-actif" onClick={() => allerA('haut')}>
-                {t('nav_accueil')}
-              </button>
-              <button type="button" className="lien-haut" onClick={() => allerA('services')}>
-                {t('nav_services')}
-              </button>
-              <button type="button" className="lien-haut" onClick={() => allerA('sources')}>
-                {t('nav_sources')}
-              </button>
-            </>
-          ) : (
-            rubriques.map((item) => (
-              <NavLink
-                key={item.to}
-                to={item.to}
-                end={item.exact}
-                className={({ isActive }) => `lien-haut ${isActive ? 'lien-haut-actif' : ''}`}
-              >
-                {t(item.cle)}
-              </NavLink>
-            ))
-          )}
+          {rubriques.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.exact}
+              className={({ isActive }) => `lien-haut ${isActive ? 'lien-haut-actif' : ''}`}
+            >
+              {t(item.cle)}
+            </NavLink>
+          ))}
         </nav>
 
         <div className="barre-haut-actions">
-          {!surAccueil && (
-            <>
-              <NavLink
-                to="/historique"
-                className={({ isActive }) => `icone-haut ${isActive ? 'icone-haut-actif' : ''}`}
-                aria-label={t('nav_historique')}
-                title={t('nav_historique')}
-              >
-                <Icon nom="historique" />
-              </NavLink>
-              <NavLink
-                to="/parametres"
-                className={({ isActive }) => `icone-haut ${isActive ? 'icone-haut-actif' : ''}`}
-                aria-label={t('nav_parametres')}
-                title={t('nav_parametres')}
-              >
-                <Icon nom="reglages" />
-              </NavLink>
-            </>
-          )}
+          <NavLink
+            to="/historique"
+            className={({ isActive }) => `icone-haut ${isActive ? 'icone-haut-actif' : ''}`}
+            aria-label={t('nav_historique')}
+            title={t('nav_historique')}
+          >
+            <Icon nom="historique" />
+          </NavLink>
+          <NavLink
+            to="/parametres"
+            className={({ isActive }) => `icone-haut ${isActive ? 'icone-haut-actif' : ''}`}
+            aria-label={t('nav_parametres')}
+            title={t('nav_parametres')}
+          >
+            <Icon nom="reglages" />
+          </NavLink>
           <MenuLangue />
           {surAccueil && (
             <Link to="/assistant" className="btn-plein btn-compact">

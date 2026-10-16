@@ -1,0 +1,1549 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="r4XZ/HW6KJaYSTh7rcCEVQ==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="r4XZ/HW6KJaYSTh7rcCEVQ==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 29/09/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant KARDEGIC 160 mg, poudre pour solution buvable en sachet"
+            aria-level="3"
+          >
+            KARDEGIC 160 mg, poudre pour solution buvable en sachet
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament KARDEGIC 160 mg, poudre pour solution buvable en sachet - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                
+                
+                      </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 21/02/1990
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : KARDEGIC 160 mg, poudre pour solution buvable en sachet - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0449919">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexteGras>Classe pharmacothérapeutique : </p>
+<p class=AmmCorpsTexte>ANTI-THROMBOTIQUE/INHIBITEUR DE L'AGREGATION PLAQUETTAIRE, HEPARINE EXCLUE.</p>
+<p class=AmmCorpsTexte>Ce médicament contient de l’aspirine. KARDEGIC 160 mg, poudre pour solution buvable en sachet appartient à la famille des inhibiteurs de l’agrégation plaquettaire.</p>
+<p class=AmmCorpsTexte>KARDEGIC 160 mg, poudre pour solution buvable en sachet agit sur les plaquettes présentes dans le sang et permet de fluidifier le sang.</p>
+<p class=AmmCorpsTexteGras>Indications thérapeutiques :</p>
+<p class=AmmCorpsTexte>KARDEGIC 160 mg, poudre pour solution buvable en sachet est utilisé pour prévenir les récidives d’accidents vasculaires cérébraux ou cardiaques provoqués par des caillots dans les artères du cerveau ou du cœur.</p>
+<p class=AmmCorpsTexte>Votre médecin peut décider d’associer ce médicament à d’autres traitements s’il le juge nécessaire.</p>
+<p class=AmmCorpsTexte>Ce médicament est réservé à l’adulte. Vous ne devez pas débuter un traitement par KARDEGIC 160 mg, poudre pour solution buvable en sachet sans l’accord de votre médecin.</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament n'appartient à aucun groupe générique</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Poudre ( Composition pour un sachet de 327,4 mg )<ul role="list"><li role="listitem" style="list-style-type: none;">acide acétylsalicylique<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span><span class="italique">160 mg</span><ul role="list" style="list-style-type: none;"><li class="sousFormeDe" role="listitem"><i class="fa fa-plus-square" aria-hidden="true"></i> sous forme de : acétylsalicylate de DL-lysine<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span><span class="italique">288 mg </span></li></ul></li></ul></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > 30 sachet(s) papier aluminium polyéthylène de 327,4  mg  </p><p>Code CIP : 332 473-7 ou 34009 332 473 7 9<br/>Déclaration de commercialisation : 19/02/1993<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 1,62 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 2,64 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :65%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span><section class="fr-accordion">
+    <h3 class="fr-accordion__title">
+        <button class="fr-accordion__btn" aria-expanded="false" aria-controls="indicRestreintes-0">
+            Les indications ouvrant droit au remboursement par l'Assurance Maladie sont disponibles en cliquant ici
+        </button>
+    </h3>
+    <div class="fr-collapse" id="indicRestreintes-0">
+        Ce médicament peut être pris en charge ou remboursé par l'Assurance Maladie dans les cas suivants :<br><br>- Prévention, après un premier accident ischémique myocardique ou cérébral lié à l¿athérosclérose, d'une récidive. ; JOURNAL OFFICIEL ; 01/08/93
+    </div>
+</section></div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><div class='fr-grid-row'><div class='fr-col'><p>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence. </p></div></div><div class='fr-grid-row'><div class='fr-col'><p>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprès de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-smr-aide-2'>plus d'informations dans l'aide</a>). Les avis et synthèses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-smr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection à la page d'aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'SMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur du SMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td>Modéré</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3262649'>Avis du 24/03/2021</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 24/03/2021 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Modification des conditions d'inscription (CT)</td><td class='text-align-center'>Le service médical rendu par KARDEGIC (acide acétylsalicylique), poudre pour solution buvable en sachets-dose, est modéré dans la prévention des complications cardiovasculaires et cérébrovasculaires liées à l’athérosclérose chez les patients à haut risque vasculaire atteints d’une AOMI confirmée. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2742062'>Avis du 11/01/2017</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 11/01/2017 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Renouvellement d'inscription (CT)</td><td class='text-align-center'>Le service médical rendu par les spécialités KARDEGIC reste important dans les indications de l’AMM. ;</td></tr></tbody></table></div></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence.</p></div></div><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprés de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-asmr-aide-3'>plus d'informations dans l'aide</a>). Les avis et synthéses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-asmr-aide-3' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers la page aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'ASMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur de l'ASMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td class="text-align-center">V (Inexistant)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3262649'>Avis du 24/03/2021</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 24/03/2021 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Modification des conditions d'inscription (CT)</td><td class="text-align-center">Compte-tenu :<br>• De la démonstration dans une méta-analyse de la supériorité de l’acide acétylsalicylique par rapport au placebo en termes de réduction du risque d’événements vasculaires majeurs, critère combinant IDM non mortel, AVC non mortel ou décès d’origine vasculaire (OR=0,50, IC95% [0,29-0,88]), considéré comme cliniquement pertinent,<br>Mais :<br>• des faiblesses méthodologiques de cette méta-analyse au regard notamment des faibles effectifs des études incluses,<br>• Des incertitudes sur la tolérance hémorragique dans cette indication, peu documentée,<br>• De l’absence de démonstration d’un bénéfice en comparaison aux alternatives disponibles, notamment par rapport au clopidogrel,<br>la Commission de la Transparence considère que KARDEGIC (acide acétylsalicylique) n’apporte pas d’amélioration du service médical rendu (ASMR V) dans la stratégie de prise en charge de l’AOMI confirmée.</td></tr></tbody></table></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : SUBSTIPHARM</li><li>Conditions de prescription et de délivrance : Aucune</li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure nationale</li><li>Code CIS : &nbsp;6 134 844 1</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : KARDEGIC 160 mg, poudre pour solution buvable en sachet - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="KARDEGIC 160 mg, poudre pour solution buvable en sachet, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 11/08/2026</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras>KARDEGIC 160 mg, poudre pour solution buvable en sachet</p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Acétylsalicylate de DL-Lysine................................................................................................ 288 mg</p>
+<p class=AmmComposition>Quantité correspondant à acide acétylsalicylique.................................................................... 160 mg</p>
+<p class=AmmCorpsTexte style='margin-left:177.25pt;text-indent:35.45pt'>Pour un sachet.</p>
+<p class=AmmCorpsTexte>Excipient(s) à effet notoire : Lactose.</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Poudre pour solution buvable.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmAnnexeTitre2>4.1. Indications thérapeutiques </p>
+<p class=AmmCorpsTexte>Prévention des complications cardiovasculaires et cérébrovasculaires liées à l’athérosclérose chez les patients à haut risque vasculaire ayant une pathologie artérielle ischémique confirmée (cf. rubrique 5.1).</p>
+<p class=AmmCorpsTexte>Réduction de l’occlusion des greffons après pontage aorto-coronaire.</p>
+<p class=AmmCorpsTexte>Prévention des accidents vasculaires cérébraux chez les patients ayant une fibrillation auriculaire pour lesquels le traitement par antivitamine K est contre-indiqué ou non indiqué, après examen du bénéfice et du risque (cf. rubrique 5.1).</p>
+<p class=AmmAnnexeTitre2>4.2. Posologie et mode d'administration </p>
+<p class=AmmCorpsTexte>Ce médicament ne sera administré que sur prescription médicale.</p>
+<p class=AmmCorpsTexte>Réservé à l’adulte. Voie orale.</p>
+<p class=AmmCorpsTexteGras>Dans les situations d’urgence</p>
+<p class=AmmCorpsTexte><u>Dans les situations d’urgence cardiologique</u> (phase aiguë de l’infarctus du myocarde, angor instable) le traitement sera entrepris le plus rapidement possible après l’accident inaugural, à doses élevées et de préférence avec une forme d’absorption rapide (cf. 5.1).</p>
+<p class=AmmCorpsTexte>La posologie recommandée est de 200 à 330 mg le premier jour, soit 2 sachets de KARDEGIC 160 mg par jour, à débuter le plus précocement possible.</p>
+<p class=AmmCorpsTexte>Le traitement sera ensuite poursuivi à la posologie d’entretien.</p>
+<p class=AmmCorpsTexte><u>Dans les situations d’urgence neurologique</u>, dans les 48 heures suivant l’installation des signes d’infarctus cérébral, le traitement pourra être instauré à la posologie de 1 sachet par jour et de préférence avec une forme d’absorption rapide.</p>
+<p class=AmmCorpsTexteGras>En traitement chronique, en dehors des situations d’urgence</p>
+<p class=AmmCorpsTexte>La posologie recommandée en traitement chronique est de 1 sachet par jour.</p>
+<p class=AmmCorpsTexte>Verser le contenu du sachet dans un grand verre. Ajouter de l’eau. Une dissolution totale est obtenue rapidement.</p>
+<p class=AmmAnnexeTitre2>4.3. Contre-indications </p>
+<p class=AmmListePuces1 style='text-align:justify;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypersensibilité à la substance active (l’acide acétylsalicylique) ou à l’un des excipients mentionnés à la rubrique 6.1, ou aux autres anti-inflammatoires non stéroïdiens (réaction croisée).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Asthme ou antécédents d'asthme avec ou sans polypes nasaux induit par les salicylés ou les substances d'activité proche, notamment les anti-inflammatoires non stéroïdiens.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ulcère gastroduodénal en évolution, antécédent d’hémorragie gastrique ou de perforation après un traitement par l’acide acétylsalicylique ou un autre anti-inflammatoire non stéroïdien.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Toute maladie hémorragique constitutionnelle ou acquise.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Patients atteints d’une mastocytose, chez lesquels l’utilisation de l’acide acétylsalicylique peut entraîner des réactions d’hypersensibilité sévères (y compris les chocs circulatoires avec bouffées vasomotrices, hypotension, tachycardie et des vomissements).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Risque hémorragique.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Insuffisance hépatique sévère.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Insuffisance rénale sévère (Clairance de la créatinine < 30ml/min).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Insuffisance cardiaque sévère non contrôlée.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Posologies supérieures à 100 mg/jour au cours du troisième trimestre de la grossesse (voir rubrique 4.6). </p>
+<p class=AmmAnnexeTitre2>4.4. Mises en garde spéciales et précautions d'emploi </p>
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;border:none; padding:0cm'><b>Risque de mort fœtale</b></p>
+<p class=AmmCorpsTexte align=left style='text-align:left;border:none; padding:0cm'>KARDEGIC 160 mg, poudre pour solution buvable en sachet expose à un risque de mort fœtale même après une seule prise en raison de sa toxicité cardio-pulmonaire (constriction du canal artériel et de la survenue d’un oligoamnios voir rubrique 4.3).</p>
+<p class=AmmCorpsTexte align=left style='text-align:left;border:none; padding:0cm'><b>Effets chez l’enfant à naitre</b></p>
+<p class=AmmCorpsTexte align=left style='text-align:left;border:none; padding:0cm'>KARDEGIC 160 mg, poudre pour solution buvable en sachet expose également le nouveau-né à un risque d’atteinte rénale (insuffisance rénale), de fermeture prématurée du canal artériel et d’hypertension pulmonaire. (Voir rubrique 4.6).</p>
+<p class=AmmCorpsTexte align=left style='text-align:left;border:none; padding:0cm'>KARDEGIC 160 mg, poudre pour solution buvable en sachet est contre-indiqué chez la femme enceinte à partir du début du 6ème mois de grossesse (24 semaines d'aménorrhée).</p>
+<p class=AmmCorpsTexte style='border:none;padding:0cm'>En cas de grossesse planifiée ou au cours des 5 premiers mois (avant 24 semaines d'aménorrhée), KARDEGIC 160 mg, poudre pour solution buvable en sachet ne doit être prescrit qu’en cas de nécessité absolue.</p>
+</div>
+<p class=AmmCorpsTexte>En cas d’association avec d’autres médicaments, pour éviter un risque de surdosage, vérifier l’absence d’acide acétylsalicylique dans la composition des autres médicaments.</p>
+<p class=AmmCorpsTexte>Chez les patients recevant un traitement concomitant avec le nicorandil et les AINS incluant l’acide acétylsalicylique, il y a un risque augmenté de complications graves telles que la survenue d’ulcérations gastro-intestinales, de perforations et d’hémorragies. Ainsi, il convient d’être prudent si de l’acide acétylsalicylique ou des AINS sont pris en même temps que le nicorandil (voir rubrique 4.5).</p>
+<p class=AmmCorpsTexte>La surveillance du traitement doit être renforcée dans les cas suivants :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>antécédents d’ulcère gastroduodénal, d’hémorragie digestive ou de gastrite,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>insuffisance rénale légère à modérée (l’acide acétylsalicylique étant contre indiqué en cas d’insuffisance rénale sévère, voir rubrique 4.3),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>insuffisance hépatique légère à modérée (l’acide acétylsalicylique étant contre indiqué en cas d’insuffisance hépatique sévère, voir rubrique 4.3),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>asthme : la survenue de crise d’asthme, chez certains sujets, peut être liée à une allergie aux anti-inflammatoires non stéroïdiens ou à l’acide acétylsalicylique. Dans ce cas, ce médicament est contre-indiqué (voir rubrique 4.3),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>métrorragies ou ménorragies (risque d’augmentation de l’importance et de la durée des règles).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Des hémorragies gastro-intestinales ou des ulcères/perforations peuvent se produire à n’importe quel moment au cours du traitement sans qu’il y ait nécessairement des symptômes préalables ou d’antécédents. </p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;page-break-after:avoid'>Le risque relatif augmente avec la dose, chez le sujet âgé, le sujet de faible poids corporel, les sujets utilisant des AINS concomitants, y compris les inhibiteurs de la COX-2 (cyclooxygénase 2), les sujets ayant des antécédents d’ulcères gastriques notamment en cas de complications de type hémorragie ou perforation et le malade soumis à un traitement anticoagulant ou antiagrégant plaquettaire (voir rubrique 4.5). En cas d’hémorragie gastro-intestinale, interrompre immédiatement le traitement.</p>
+<p class=AmmCorpsTexte>Compte-tenu de l’effet antiagrégant plaquettaire de l’acide acétylsalicylique, apparaissant dès les très faibles doses et persistant plusieurs jours, il convient de prévenir le patient des risques hémorragiques pouvant survenir en cas de geste chirurgical même mineur (ex : extraction dentaire). La durée de l’interruption du traitement avant l’intervention doit être déterminée au cas par cas.</p>
+<p class=AmmCorpsTexte>Le traitement concomitant par la lévothyroxine et les salicylés doit être évité. Les salicylés peuvent inhiber la liaison des hormones thyroïdiennes aux protéines porteuses et ainsi produire une augmentation initiale temporaire des hormones thyroïdiennes libres, suivie d'une réduction globale du taux d'hormones thyroïdiennes totales. Par conséquent, en cas de prise concomitante de lévothyroxine et de salicylés, les taux d’hormones thyroïdiennes doivent être surveillés (voir rubrique 4.5).</p>
+<p class=AmmCorpsTexte>Chez les patients hypertendus traités par AAS, la pression artérielle doit être bien contrôlée, compte-tenu de l’augmentation du risque vasculaire cérébral hémorragique chez les patients hypertendus non contrôlés.</p>
+<p class=AmmCorpsTexte>Dans certains cas de forme grave de déficit en G6PD, des doses élevées d’acide acétylsalicylique ont pu provoquer des hémolyses. L’administration d’acide acétylsalicylique en cas de déficit en G6PD doit se faire sous contrôle médical strict.</p>
+<p class=AmmCorpsTexte>Des syndromes de Reye, pathologies très rares mais présentant un risque vital, ont été observés chez des enfants avec des signes d’infections virales (en particulier varicelle et épisodes d’allure grippale) et recevant de l’acide acétylsalicylique. KARDEGIC ne doit pas être administré aux enfants et adolescents (voir rubrique 4.2).</p>
+<p class=AmmCorpsTexte>L’utilisation de ce médicament est déconseillée en cas d’allaitement (voir rubrique 4.6).</p>
+<p class=AmmCorpsTexte>La prise concomitante d’acide acétylsalicylique à des doses antiagrégantes plaquettaires est déconseillée avec (voir rubrique 4.5) :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>l’anagrélide,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>les anticoagulants oraux, chez les patients ayant des antécédents d’ulcère gastro-duodénal,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>le clopidogrel (en dehors des indications validées pour cette association dans les syndromes coronariens aigus),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>le défibrotide,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>le nicorandil,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>la ticlopidine,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>le ticagrélor (en dehors des indications validées pour cette association dans les syndromes coronariens aigus),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>le probénécide, </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>la lévothyroxine.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>La prise d’alcool peut augmenter le risque de lésions gastro-intestinales et prolonger le temps de saignement lors d’une prise concomitante avec de l’acide acétylsalicylique. Ainsi, les patients traités avec de l’acide acétylsalicylique doivent faire preuve de prudence lors de la consommation de boissons alcoolisées jusqu’à 36 heures suivant la prise du traitement.</p>
+<p class=AmmCorpsTexte><i>Excipients à effet notoire</i></p>
+<p class=AmmCorpsTexte>Ce médicament contient du lactose. Son utilisation est déconseillée chez les patients présentant une intolérance au galactose, un déficit en lactase de Lapp ou un syndrome de malabsorption du glucose et du galactose (maladies héréditaires rares).</p>
+<p class=AmmCorpsTexte>Ce médicament contient moins de 1 mmol (23 mg) de sodium par sachet, c’est-à-dire qu’il est essentiellement « sans sodium ».</p>
+<p class=AmmAnnexeTitre2>4.5. Interactions avec d'autres médicaments et autres formes d'interactions </p>
+<p class=AmmCorpsTexte>Plusieurs substances sont impliquées dans des interactions, du fait de leurs propriétés antiagrégantes plaquettaires : l’acide acétylsalicylique, le cilostazol, la ticlopidine et le clopidogrel, le tirofiban, l'eptifibatide et l'abciximab, l’epoprostenol, l'iloprost, le trometamol, le prasugrel, le ticagrélor.</p>
+<p class=AmmCorpsTexte>L’utilisation de plusieurs antiagrégants plaquettaires majore le risque de saignement, de même que leur association à tout autre médicament augmentant les risques de saignement par effet additif (héparine et molécules apparentées, anticoagulants oraux et autres thrombolytiques ). Ces associations doivent être prises en compte en maintenant une surveillance clinique régulière.</p>
+<p class=AmmAnnexeTitre3>Associations déconseillées</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Anticoagulants oraux : Aspirine à des doses antiagrégantes et en cas d’antécédent d’ulcère gastro-duodénal : majoration du risque hémorragique. Nécessité d'un contrôle, le cas échéant, en particulier du temps de saignement.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ticlopidine : majoration du risque hémorragique par addition des activités antiagrégantes plaquettaires. Si l’association ne peut être évitée, surveillance clinique étroite.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Clopidogrel, en dehors des indications validées pour cette association dans les syndromes coronariens aigus : majoration du risque hémorragique par addition des activités antiagrégantes plaquettaires.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ticagrélor, en dehors des indications validées pour cette association dans les syndromes coronariens aigus : majoration du risque hémorragique par addition des activités antiagrégantes plaquettaires.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Probénécide : diminution de l'effet uricosurique par compétition de l'élimination de l'acide urique au niveau des tubules rénaux.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Anagrélide : majoration des événements hémorragiques.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Défibrotide : risque hémorragique accru.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Nicorandil : Majoration du risque de complications gastrointestinales sévères (ulcération, perforation, hémorragie).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Acétazolamide : Augmentation du risque de toxicité de l’acide acétylsalicylique (vomissements, tachycardie, hyperpnée, confusion mentale) ou de l’acétazolamide (fatigue, léthargie, somnolence, confusion, acidose métabolique hyperchlorémique).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Lévothyroxine : les salicylés, en particulier à des doses supérieures à 2 g/jour, peuvent inhiber la liaison des hormones thyroïdiennes aux protéines porteuses et ainsi entraîner une augmentation initiale transitoire des hormones thyroïdiennes libres, suivie d'une diminution globale des taux d'hormones thyroïdiennes totales. Par conséquent, les taux d'hormones thyroïdiennes doivent être surveillés (voir rubrique 4.4). </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Pémétrexed : en cas de fonction rénale faible à modérée (entre 45 ml/min et 80ml/min), risque de majoration de la toxicité du pémétrexed (diminution de sa clairance rénale par l'acide acétylsalicylique à doses anti-inflammatoires). Surveillance clinique étroite de la toxicité du pémétrexed.</p>
+<p class=AmmAnnexeTitre3>Associations faisant l'objet de précautions d’emploi</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Méthotrexate (aux doses > 20 mg/semaine) : Aspirine à des doses antiagrégantes : majoration de la toxicité, notamment hématologique, du méthotrexate (diminution de sa clairance rénale par l’acide acétylsalicylique). Contrôle hebdomadaire de l’hémogramme durant les premières semaines de l’association. Surveillance accrue en cas d’altération (même légère) de la fonction rénale, ainsi que chez le sujet âgé.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Cobimetinib : majoration du risque hémorragique. Surveillance clinique.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Topiques gastro-intestinaux, antiacide et adsorbants : diminution de l’absorption digestive de l’acide acétylsalicylique. Par mesure de précaution, il convient de prendre ces topiques ou antiacides à distance de tout autre médicament (plus de 2 heures, si possible).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Clopidogrel, dans les indications validées pour cette association dans les syndromes coronariens aigus : majoration du risque hémorragique par addition des activités antiagrégantes plaquettaires. Surveillance clinique.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ibrutinib : augmentation du risque hémorragique.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ticagrélor : dans les indications validées pour cette association dans les syndromes coronariens aigus : majoration du risque hémorragique par addition des activités antiagrégantes plaquettaires. Surveillance clinique.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Acide valproïque : Diminution possible de la liaison protéique de l'acide valproïque et inhibition du métabolisme de l'acide valproïque entraînant une augmentation des taux sériques d'acide valproïque total et libre. Surveillance clinique étroite des taux de valproate. </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ténofovir (fumarate de ténofovir disoproxil) : Augmentation possible du risque d'insuffisance rénale, en particulier chez les patients présentant des facteurs de risque de dysfonctionnement rénal. La fonction rénale doit être surveillée de manière adéquate.</p>
+<p class=AmmAnnexeTitre3>Associations à prendre en compte</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Anticoagulants oraux : Aspirine à des doses antiagrégantes : majoration du risque hémorragique.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Thrombolytiques : augmentation du risque hémorragique.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='color:black'>Héparines (doses curatives et/ou sujet âgé) : Aspirine à des doses antiagrégantes : augmentation du risque hémorragique (inhibition de la fonction plaquettaire et agression de la muqueuse gastroduodénale par l’acide acétylsalicylique).</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol;color:black'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='color:black'>Héparines (doses préventives) : l’utilisation conjointe de médicaments agissant à divers niveaux de l’hémostase majore le risque de saignement. Ainsi, chez le sujet de moins de 65 ans, l’association de l’héparine à doses préventives, ou de substances apparentées, à l’acide acétylsalicylique, quelle que soit la dose, doit être prise en compte en maintenant une surveillance clinique et éventuellement biologique.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Anti-inflammatoires non stéroïdiens (AINS) : Aspirine à doses antiagrégantes : majoration du risque ulcérogène et hémorragique digestif.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Médicaments mixtes adrénergiques-sérotoninergiques : majoration du risque hémorragique.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Inhibiteurs sélectifs de la recapture de la sérotonine : majoration du risque hémorragique.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Antidiabétiques (en particulier sulfonylurées) et l’insuline : Potentialisation de l’effet antidiabétique.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Glucocorticoïdes (sauf hydrocortisone en traitement substitutif) : A des doses antalgiques ou antipyrétiques d’acide acétylsalicylique (&#8805; 500 mg par prise et/ou < 3 g par jour) : majoration du risque hémorragique ; réduction des taux sanguins de salicylates pendant le traitement par corticostéroïdes et risque de surdosage en salicylates après le sevrage.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Métamizole : Réduction possible de l’effet de l’acide acétylsalicylique sur l’agrégation plaquettaire lors d’une prise concomitante. A utiliser avec prudence chez les patients prenant de faibles doses d’acide acétylsalicylique en prévention cardiovasculaire.</p>
+<p class=AmmAnnexeTitre2>4.6. Fertilité, grossesse et allaitement </p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278927"><i><span style='font-weight: normal'>Doses faibles (jusqu'à 100 mg/jour inclus)</span></i></a><i><span style='font-weight:normal'> :</span></i></p>
+<p class=AmmCorpsTexte>Les études cliniques indiquent que l'utilisation de doses allant jusqu'à 100 mg/jour pour un usage obstétrique restreint, nécessitant une surveillance spécialisée, parait sûre.</p>
+<p class=ammcorpstexte0 style='margin:0cm;margin-bottom:.0001pt;text-align: justify'><i><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>Doses supérieures à 100 mg/jour et jusqu’à 500 mg/jour :</span></i></p>
+<p class=ammcorpstexte0 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:0cm;text-align:justify'><span style='color:black'>L'expérience clinique est insuffisante concernant l'utilisation de posologies au-delà de 100 mg/jour jusqu’à 500 mg/jour. Par conséquent, les recommandations ci-dessous concernant les doses de 500 mg/jour et plus s’appliquent également à cette gamme de doses.</span></p>
+<p class=AmmCorpsTexteGras><i><span style='font-weight:normal'>Doses supérieures ou égales à 500 mg/par jour :</span></i></p>
+<div class='fr-table--lg fr-table'><table>
+<tr style='height:5.0cm'>
+<td width=615 style='width:461.1pt;border:solid windowtext 1.0pt;padding:
+0cm 5.4pt 0cm 5.4pt;height:5.0cm'>
+<p class=AmmCorpsTexte><b>A partir du début du 6<sup>ème</sup> mois de grossesse (24 semaines d'aménorrhée) :</b> toute prise de <b>KARDEGIC 160 mg, poudre pour solution buvable en sachet</b>, même ponctuelle, est <b>contre-indiquée</b>. Une prise même unique à partir de 24 semaines d’aménorrhée justifie un contrôle échographique cardiaque et rénal du fœtus et/ou du nouveau-né. </p>
+<p class=AmmCorpsTexte><b>Sauf nécessité absolue</b>, <b>KARDEGIC 160 mg, poudre pour solution buvable en sachet ne doit pas être</b> <b>prescrit</b> chez une femme qui envisage une grossesse ou au cours des 5 premiers mois de grossesse (avant 24 semaines d’aménorrhée). Le cas échéant, la dose devra être la plus faible possible et la durée du traitement la plus courte possible. Une prise prolongée est fortement déconseillée.</p>
+<p class=AmmCorpsTexte>En cas de prise à partir de la 20<sup>ème</sup> semaine d’aménorrhée, une surveillance cardiaque et rénale du fœtus pourrait s’avérer nécessaire. </p>
+<p class=AmmCorpsTexte><b>En cas de survenue d'oligoamnios, ou de constriction du canal artériel, le traitement par KARDEGIC 160 mg, poudre pour solution buvable en sachet doit être interrompu.</b></p>
+</td>
+</tr>
+</table></div>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>L’inhibition de la synthèse des prostaglandines peut influencer négativement l’évolution de la grossesse et/ou le développement embryonnaire et foetal.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt; margin-left:0cm'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>A partir de la 20<sup>ème</sup> semaine de grossesse, l’utilisation de KARDEGIC peut provoquer un oligohydramnios résultant d’un dysfonctionnement rénal du fœtus. Ce phénomène peut survenir peu de temps après le début du traitement et est généralement réversible à l’arrêt de celui-ci. En outre, des cas de constriction du canal artériel ont été signalés à la suite d’un traitement au cours du deuxième trimestre, la plupart d’entre eux ayant disparu après l’arrêt du traitement. Par conséquent, au cours des premier et deuxième trimestres de la grossesse, KARDEGIC ne doit pas être administré, sauf en cas de nécessité absolue. Si KARDEGIC est utilisé par une femme qui tente de concevoir, ou pendant le premier et le deuxième trimestre de la grossesse, la dose doit être aussi faible que possible et la durée du traitement aussi courte que possible. Une surveillance prénatale de l’oligohydramnios et de la constriction du canal artériel doit être envisagée après une exposition à KARDEGIC pendant plusieurs jours à partir de la 20<sup>ème</sup> semaine de gestation. L’administration de KARDEGIC doit être interrompue en cas d’oligohydramnios ou de constriction du canal artériel.</span></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt; margin-left:0cm'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Au cours du troisième trimestre de la grossesse, tous les inhibiteurs de la synthèse des prostaglandines peuvent exposer le fœtus à :</span></p>
+<p class=MsoListParagraphCxSpFirst style='margin-top:6.0pt;margin-right:0cm; margin-bottom:6.0pt;margin-left:14.2pt;text-indent:-14.2pt'>-<span style='font:7.0pt "Times New Roman"'>     </span>une toxicité cardio-pulmonaire (constriction/fermeture prématurée du canal artériel et hypertension pulmonaire) ;</p>
+<p class=MsoListParagraphCxSpLast style='margin-top:6.0pt;margin-right:0cm; margin-bottom:6.0pt;margin-left:14.2pt;text-indent:-14.2pt'>-<span style='font:7.0pt "Times New Roman"'>     </span>un dysfonctionnement rénal (voir ci-dessus) ;</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt; margin-left:0cm'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>La mère et le nouveau-né, en fin de grossesse, à :</span></p>
+<p class=MsoListParagraphCxSpFirst style='margin-top:6.0pt;margin-right:0cm; margin-bottom:6.0pt;margin-left:14.2pt;text-indent:-14.2pt'>-<span style='font:7.0pt "Times New Roman"'>     </span>un allongement éventuel du temps de saignement, à un effet antiagrégant plaquettaire pouvant survenir même à très faibles doses ;</p>
+<p class=MsoListParagraphCxSpLast style='margin-top:6.0pt;margin-right:0cm; margin-bottom:6.0pt;margin-left:14.2pt;text-indent:-14.2pt'>-<span style='font:7.0pt "Times New Roman"'>     </span>une inhibition des contractions utérines entraînant un travail allongé ou retardé.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Par conséquent, l’acide acétylsalicylique à des doses supérieures à 100 mg/jour est contre-indiqué pendant le troisième trimestre de la grossesse (voir rubrique 4.3). Les doses inférieures ou égales à 100 mg/jour ne peuvent être utilisées que sous surveillance obstétricale stricte.</p>
+<p class=AmmAnnexeTitre3>Allaitement</p>
+<p class=AmmCorpsTexte>L'acide acétylsalicylique passant dans le lait maternel, ce médicament est déconseillé pendant l'allaitement.</p>
+<p class=AmmAnnexeTitre3>Fertilité</p>
+<p class=AmmCorpsTexte>Comme tous les AINS, l'utilisation de ce médicament peut temporairement altérer la fertilité féminine, en agissant sur l’ovulation ; il est donc déconseillé chez les femmes souhaitant concevoir un enfant. Chez les femmes rencontrant des difficultés pour concevoir ou réalisant des tests de fertilité, l'arrêt du traitement doit être envisagé</p>
+<p class=AmmAnnexeTitre2>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines </p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Aucun effet sur l’aptitude à conduire des véhicules et à utiliser des machines n’a été observé.</span></p>
+<p class=AmmAnnexeTitre2>4.8. Effets indésirables </p>
+<p class=AmmCorpsTexte>La fréquence des effets indésirables ne peut être estimée. De ce fait, les fréquences sont référencées comme indéterminées.</p>
+<p class=AmmAnnexeTitre3>Affections hématologiques et du système lymphatique</p>
+<p class=AmmCorpsTexteGras>Effets hématologiques : </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Syndromes hémorragiques (hématome, hémorragie urogénitale, épistaxis, gingivorragies, purpura...) avec augmentation du temps de saignement. Cette action persiste 4 à 8 jours après l'arrêt de l'aspirine. Elle peut créer un risque hémorragique en cas d'intervention chirurgicale. </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Des hémorragies gastro-intestinales et intracrâniennes peuvent également survenir. Dans certains cas, le pronostic vital peut être engagé. Une hémorragie intracrânienne peut être fatale, en particulier chez les sujets âgés.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Thrombopénie, pancytopénie, bicytopénie, anémie aplasique, insuffisance médullaire, agranulocytose, neutropénie, leucopénie.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Anémie hémolytique chez les patients ayant un déficit en G6PD (voir rubrique 4.4).</p>
+<p class=AmmAnnexeTitre3>Affections du système immunitaire</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Réactions d’hypersensibilité, réactions anaphylactiques, asthme, bronchospasme, œdème de Quincke.</p>
+<p class=AmmAnnexeTitre3>Troubles du métabolisme et de la nutrition</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>L’AAS à faible dose peut réduire l’excrétion de l’acide urique, ce qui peut aboutir à une crise de goutte chez des patients prédisposés.</p>
+<p class=AmmAnnexeTitre3>Affections du système nerveux central</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Bourdonnements d’oreille qui peuvent apparaître lors des traitements à long terme avec des doses élevées et qui sont habituellement la marque d’un surdosage (voir rubrique 4.9). </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Sensation de baisse de l’acuité auditive qui constitue généralement le premier signe d’un surdosage, voir rubrique 4.9, </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Céphalées, sensation vertigineuse, qui peuvent apparaître lors des traitements à long terme avec des doses élevées. En cas de vertiges, le traitement doit être arrêté immédiatement. </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hémorragie intracrânienne pouvant être fatale, en particulier chez les sujets âgés.</p>
+<p class=AmmAnnexeTitre3>Affections cardiaques</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Syndrome de Kounis dans un contexte de réaction d’hypersensibilité à l’acide acétylsalicylique.</p>
+<p class=AmmAnnexeTitre3>Affections vasculaires</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Vascularites dont le purpura rhumatoïde de Henoch-Schönlein.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hémorragies pouvant être fatales.</p>
+<p class=AmmAnnexeTitre3>Affections respiratoires, thoraciques et médiastinales</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Œdème pulmonaire non cardiogénique possible en cas d’utilisation au long cours qui peut également apparaître dans le contexte d’une réaction d’hypersensibilité liée à l’acide acétylsalicylique.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Bronchospasme et asthme.</p>
+<p class=AmmAnnexeTitre3>Affections gastro-intestinales</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Troubles du tube digestif haut : des symptômes digestifs de type douleurs abdominales, dyspepsie, hyperacidité ont été rapportés. Des lésions telles qu’une œsophagite, une ulcération œsophagienne, une gastrite érosive, une duodénite érosive, un ulcère gastrique ou duodénal voire une perforation digestive sont décrits, pouvant être à l’origine d’un saignement. Ce saignement digestif peut provoquer une anémie aiguë ou chronique.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Des troubles du tube digestif bas de type ulcères de l’intestin grêle (jéjunum, iléon) et du gros intestin (côlon, rectum), colite et perforation intestinale ont également été décrits ; ainsi que la formation de sténoses intestinales en diaphragme à une fréquence indéterminée <sup>a</sup>.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La toxicité digestive de l’AAS est dose-dépendante et existe dès la dose 75 mg. La prise prolongée d’aspirine peut induire une gastrite, des érosions gastroduodénales ou l’extension de lésions ulcéreuses préexistantes. L’hémorragie qui peut apparaître est aggravée par l’action anti-thrombotique de l’aspirine ; le saignement peut être asymptomatique (hématémèse et méléna sont rares) ; plus fréquemment on observe une anémie chronique.</p>
+<p class=AmmListePuces1 style='text-align:justify;text-indent:0cm'>Ces réactions peuvent se produire chez les patients avec ou sans signes d'alerte ou d'antécédents gastro-intestinaux graves.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Pancréatite aiguë dans un contexte de réaction d’hypersensibilité à l’acide acétylsalicylique.</p>
+<p class=AmmAnnexeTitre3>Affections hépatobiliaires</p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Elévations des enzymes hépatiques, atteinte du foie principalement hépatocellulaire. </p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hépatite chronique.</p>
+<p class=AmmAnnexeTitre3>Affections de la peau et du tissu sous-cutané</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Urticaire, réactions cutanées. </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Erythème pigmenté fixe.</p>
+<p class=AmmAnnexeTitre3>Affections du rein et des voies urinaires</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Insuffisance rénale.</p>
+<p class=AmmAnnexeTitre3>Affections des organes reproducteurs et du sein</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hématospermie.</p>
+<p class=AmmAnnexeTitre3>Troubles généraux et anomalies au site d’administration</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Syndrome de Reye (en particulier chez les enfants et les adolescents avec des signes d’infections virales (en particulier varicelle et épisodes d’allure grippale) - voir rubrique 4.4).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Des œdèmes ont été rapportés pour des doses élevées (doses anti-inflammatoires) d’acide acétylsalicylique.</p>
+<p class=AmmAnnexeTitre3><sup>a</sup> <span style='font-weight:normal; text-decoration:none'>La formation de sténoses intestinales en diaphragme a été rapportée à la suite d’une utilisation chronique.</span></p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><span class=MsoHyperlink>https://signalement.social-sante.gouv.fr/ </span></p>
+<p class=AmmAnnexeTitre2>4.9. Surdosage </p>
+<p class=AmmCorpsTexte>Le surdosage est peu probable en raison de la faible quantité d’acide acétylsalicylique présente dans KARDEGIC. Toutefois des cas d’intoxication (surdosage accidentel) chez les très jeunes enfants ou le surdosage thérapeutique chez les sujets âgés peuvent se présenter comme décrits ci-dessous.</p>
+<p class=AmmCorpsTexteGras>Symptômes : </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Intoxication modérée : bourdonnements d'oreille, sensation de baisse de l'acuité auditive, céphalées, vertiges sont la marque d'un surdosage et peuvent être contrôlés par réduction de la posologie.</p>
+<p class=AmmListePuces1 style='margin-bottom:6.0pt;text-align:justify'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Intoxication sévère : chez l'enfant, le surdosage peut être mortel à partir de 100 mg/kg en une seule prise. Les symptômes sont : fièvre, hyperventilation, cétose, alcalose respiratoire, acidose métabolique, coma, collapsus cardiovasculaire, insuffisance respiratoire, hypoglycémie importante.</p>
+<p class=AmmCorpsTexte>Un œdème pulmonaire non cardiogénique menaçant le pronostic vital peut survenir en cas de surdosage aigu et chronique avec l’acide acétylsalicylique (voir rubrique 4.8).</p>
+<p class=AmmCorpsTexteGras>Conduite d'urgence : </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>transfert immédiat en milieu hospitalier spécialisé,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>décontamination digestive et administration de charbon activé,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>contrôle de l'équilibre acide base,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>diurèse alcaline permettant d'obtenir un pH urinaire entre 7,5 et 8, </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>possibilité d'hémodialyse dans les intoxications graves,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>traitement symptomatique.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmAnnexeTitre2>5.1. Propriétés pharmacodynamiques </p>
+<p class=AmmCorpsTexteGras>Classe pharmacothérapeutique : ANTITHROMBOTIQUE/INHIBITEUR DE L'AGREGATION PLAQUETTAIRE, HEPARINE EXCLUE (code ATC : B01AC06).</p>
+<p class=AmmCorpsTexte>L'aspirine est un inhibiteur de l'activation plaquettaire : en bloquant par acétylation la cyclo-oxygénase plaquettaire, elle inhibe la synthèse du thromboxane A2, substance activatrice physiologique libérée par les plaquettes, et qui jouerait un rôle dans les complications des lésions athéromateuses.</p>
+<p class=AmmCorpsTexte>Des doses répétées de 20 à 325-330 mg entraînent une inhibition de l'activité enzymatique de 30 à 95 %. Au-delà de 325-330 mg, l'activité inhibitrice n'augmente que très peu, et l'effet sur l'agrégation plaquettaire est à peu près identique.</p>
+<p class=AmmCorpsTexte>L’effet inhibiteur ne s’épuise pas au cours de traitements prolongés et l’activité enzymatique reprend progressivement au fur et à mesure du renouvellement des plaquettes, 24 à 48 heures après arrêt du traitement.</p>
+<p class=AmmCorpsTexte>A la posologie recommandée, l’aspirine réduit la synthèse de prostacycline endothéliale, mais la signification clinique de cette action est obscure et moins importante en pratique qu’en théorie semble-t-il.</p>
+<p class=AmmCorpsTexte>L’aspirine allonge le temps de saignement d’environ 50 à 100 % en moyenne, mais des variations individuelles peuvent être observées.</p>
+<p class=AmmCorpsTexte>Aux faibles doses, un effet antiagrégant plaquettaire de l’aspirine s’observe après un délai de 48 à 72 heures, alors qu’à plus fortes doses (300 à 330 mg) et avec une forme d’absorption rapide, l’effet antiagrégant plaquettaire apparaît plus rapidement, ce qui justifie l’utilisation de plus fortes doses et de formes à absorption rapide dans les situations d’urgence cardiologique (voir rubrique 4.2).</p>
+<p class=AmmCorpsTexte>Des données expérimentales suggèrent que l’ibuprofène peut inhiber l’effet antiagrégant plaquettaire d’une faible dose d’aspirine lorsqu’ils sont pris de façon concomitante. Une étude réalisée avec une dose unique de 400 mg d’ibuprofène pris 8 heures avant ou dans les 30 minutes après la prise de 81 mg d’aspirine à libération immédiate a montré une diminution de l’effet de l’aspirine sur la formation de la thromboxane ou l’agrégation plaquettaire. Toutefois, les limites de ces données <i>ex vivo</i> et les incertitudes quant à leur extrapolation en clinique, ne permettent pas d’émettre de conclusion formelle pour ce qui est de l’usage régulier de l’ibuprofène ; par ailleurs, en ce qui concerne l’ibuprofène utilisé de façon occasionnelle, la survenue d’un effet cliniquement pertinent apparaît peu probable (voir rubrique 4.5).</p>
+<p class=AmmCorpsTexte>Six études de prévention primaire (aspirine versus placebo) ont été effectuées chez des personnes à risque cardiovasculaire généralement faible à modéré. La méta-analyse de ces 6 études a montré une diminution significative des événements cardiovasculaires (de l’ordre de 3 pour 1000) au prix d’une tendance à l’augmentation des accidents hémorragiques graves (estimés à 2 pour 1000). Cependant, les populations des études incluses dans la méta-analyse sont trop hétérogènes pour permettre de déterminer chez quels patients l’aspirine a un rapport bénéfice risque favorable en prévention primaire. Le bénéfice éventuel du traitement par l’aspirine en prévention primaire chez les sujets à haut risque devrait donc être mis en balance avec l’augmentation du risque hémorragique, en particulier chez le sujet âgé où ce risque hémorragique est augmenté.</p>
+<p class=AmmCorpsTexte>Une étude randomisée (Etude CLIPS), en double aveugle, d’une durée de 2 ans, a comparé l’efficacité de l’aspirine (à la dose de 100 mg) associée à de fortes doses d’antioxydant (600 mg de vitamine E associée à 250 mg de vitamine C et 20 mg de béta-carotène) à un placébo chez des patients présentant une artériopathie oblitérante des membres inférieurs (AOMI) de stade I ou II. Le critère de jugement principal (critère combiné) était l’incidence des événements vasculaires fatals et non fatals (IDM, AVC, embolie pulmonaire), ainsi que les ischémies des membres inférieurs. 366 patients (185 patients dans le groupe aspirine et 181 sous placebo) ont été inclus. Les résultats montrent que l’aspirine réduit significativement le risque d’accidents vasculaires de 58 % [p=0,013 ou HR=0,42 (IC 95 % : 0,21-0,83)].</p>
+<p class=AmmCorpsTexte>La méta-analyse de l’Antithrombotic Trialists’ Collaboration de 2002 a évalué l’effet d’un traitement antiagrégant plaquettaire comparé à celui de l’absence d’un tel traitement dans 195 essais randomisés rassemblant 135 640 patients à haut risque vasculaire. Les résultats montrent sous traitement AAP une diminution significative (p < 0,0001) d’environ 22 % du risque d’événements vasculaires graves (infarctus du myocarde [IDM] non mortel, AVC non mortel ou décès d’origine vasculaire) et une diminution significative (p < 0,0001) de toutes les composantes de ce critère de jugement, dans toutes les catégories de patients concernés (antécédents d’IDM, IDM aigu, antécédents d’AVC ou d’AIT, AVC, autres patients à haut risque).</p>
+<p class=AmmCorpsTexte>Une mise à jour de la méta-analyse de l’ATC 2002, restreinte aux essais évaluant l’efficacité de l’aspirine seule a regroupé 46 études ayant inclus 87654 patients à haut risque vasculaire ayant une pathologie ischémique artérielle confirmée (maladie coronarienne, cérébrovasculaire, AOMI). Les résultats de cette méta-analyse montrent que l’aspirine apporte un bénéfice sur la survenue d’événements vasculaires (21 %, p < 0,0001), d’infarctus non mortel (40 %, p < 0,0001), d’AVC non mortel (22 %, p < 0,0001) et de mortalité toutes causes (14 %, p < 0,0001). Le risque de saignement majeur est augmenté significativement par l’aspirine de 87 % (p < 0,0001). Dans la catégorie des patients présentant une AOMI (7 études - <i>dont l’étude CLIPS</i> –  incluant 1710 patients), l’aspirine a réduit significativement le risque d’événement vasculaire de 50 % (p = 0,01) et d’AVC non mortel de 74 %. Les différences sur les autres critères de jugement n’étaient pas significatives.</p>
+<p class=AmmCorpsTexte>16 études randomisées de prévention des accidents vasculaires cérébraux par une thérapie antithrombotique ont été réalisées chez 9874 patients ayant une fibrillation auriculaire. Les résultats de cette méta-analyse ont montré que l’aspirine était moins efficace que la warfarine mais néanmoins plus efficace que le placebo (réduction des accidents cérébrovasculaires de 22 % pour l’aspirine [IC 95 % : 2 %-38 %] contre 62 % pour la warfarine [IC 95 % : 48 %-72 %]). </p>
+<p class=AmmCorpsTexte>Le traitement par aspirine est à privilégier chez les patients à faible risque thromboembolique*, pour lesquels un traitement par antivitamine K serait non indiqué, et chez les patients ayant une contre-indication aux antivitamines K ou lorsque le risque de saignement par antivitamine K paraît excessif.</p>
+<p class=AmmCorpsTexte>*Selon les recommandations internationales, sont à haut risque thromboembolique les patients ayant un ou plusieurs facteurs de risque suivants : antécédent d’accident cérébrovasculaire, antécédent d’accident ischémique transitoire ou antécédent d’embolie, sténose mitrale, prothèse valvulaire ; et à faible risque thromboembolique ceux qui ne présentent aucun facteur de risque ou qui n’ont qu’un seul facteur de risque modéré tels que l’âge &#8805; 75 ans, l’hypertension, l’insuffisance cardiaque, une fraction d’éjection &#8804; 35 % et le diabète.</p>
+<p class=AmmAnnexeTitre2>5.2. Propriétés pharmacocinétiques </p>
+<p class=AmmCorpsTexte>L’acétylsalicylate de lysine se dissociant instantanément et totalement dans l’eau, l’absorption se fait rapidement sous forme d’acide acétylsalicylique au niveau gastro-intestinal.</p>
+<p class=AmmCorpsTexte>L’acide acétylsalicylique est rapidement hydrolysé dans le plasma en acide salicylique ; le taux sanguin maximum est atteint en 30 à 40 minutes selon que le sujet est à jeun ou non.</p>
+<p class=AmmCorpsTexte>Les salicylates plasmatiques sont en grande partie liés aux protéines plasmatiques et sont transformées au niveau hépatique (conjugaison et hydroxylation) en métabolites actifs.</p>
+<p class=AmmCorpsTexte>L’ensemble des métabolites, de même que l’acide salicylique, sont éliminés par voie rénale. La clairance augmente avec le pH urinaire. Le caractère saturable de la glycuroconjugaison sur la fonction acide de l’acide salicylique, et la glycuroconjugaison sur la fonction phénol, est responsable d’une cinétique d’accumulation dont il y a lieu de tenir compte lors de traitements prolongés à posologies élevées : la demi-vie d’élimination de l’acide salicylique est dose-dépendante.</p>
+<p class=AmmAnnexeTitre2>5.3. Données de sécurité préclinique </p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmAnnexeTitre2>6.1. Liste des excipients </p>
+<p class=AmmCorpsTexte>Glycine, arôme mandarine (huile essentielle de zeste de mandarine, jus concentré d’orange, huile essentielle d’orange, lactose, maltodextrine, gomme arabique, butylhydroxyanisol), glycyrrhizate d’ammonium.</p>
+<p class=AmmAnnexeTitre2>6.2. Incompatibilités </p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmAnnexeTitre2>6.3. Durée de conservation </p>
+<p class=AmmCorpsTexte>2 ans.</p>
+<p class=AmmAnnexeTitre2>6.4. Précautions particulières de conservation </p>
+<p class=AmmCorpsTexte>A conserver à une température ne dépassant pas 25°C.</p>
+<p class=AmmCorpsTexte>Conserver les sachets dans l’emballage extérieur, à l’abri de l’humidité.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>327,4 mg en sachet-dose (Papier/Aluminium/PE), boîte de 30 ou 100.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Toutes les présentations peuvent ne pas être commercialisées.</span></p>
+<p class=AmmAnnexeTitre2>6.6. Précautions particulières d’élimination et de manipulation </p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Pas d’exigences particulières.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Tout médicament non utilisé ou déchet doit être éliminé conformément à la réglementation en vigueur.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>SUBSTIPHARM</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>24 RUE ERLANGER</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>75016 PARIS</p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 3324737 9 : 327,4 mg en sachet-dose (Papier/Aluminium/PE), boîte de 30.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 5567591 4 : 327,4 mg en sachet-dose (Papier/Aluminium/PE), boîte de 100.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Médicament non soumis à prescription médicale.</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_KARDEGIC_160_mg,_poudre_pour_solution_buvable_en_sachet_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE KARDEGIC 160 mg, poudre pour solution buvable en sachet ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE KARDEGIC 160 mg, poudre pour solution buvable en sachet ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_KARDEGIC_160_mg,_poudre_pour_solution_buvable_en_sachet_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE KARDEGIC 160 mg, poudre pour solution buvable en sachet ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE KARDEGIC 160 mg, poudre pour solution buvable en sachet ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_PRENDRE_KARDEGIC_160_mg,_poudre_pour_solution_buvable_en_sachet_?"
+                     aria-label="3. COMMENT PRENDRE KARDEGIC 160 mg, poudre pour solution buvable en sachet ? (Lien de redirection)">
+                    3. COMMENT PRENDRE KARDEGIC 160 mg, poudre pour solution buvable en sachet ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_KARDEGIC_160_mg,_poudre_pour_solution_buvable_en_sachet_?"
+                     aria-label="5. COMMENT CONSERVER KARDEGIC 160 mg, poudre pour solution buvable en sachet ? (Lien de redirection)">
+                    5. COMMENT CONSERVER KARDEGIC 160 mg, poudre pour solution buvable en sachet ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : KARDEGIC 160 mg, poudre pour solution buvable en sachet - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="KARDEGIC 160 mg, poudre pour solution buvable en sachet, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 11/08/2026</p>
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+<p class=AmmCorpsTexte align=center style='margin-top:12.0pt;margin-right:0cm; margin-bottom:6.0pt;margin-left:0cm;text-align:center;border:none;padding:0cm'><b><span style='font-family:"Arial",sans-serif'>ATTENTION</span></b></p>
+<p class=AmmCorpsTexteGras style='border:none;padding:0cm'>KARDEGIC 160 mg, poudre pour solution buvable en sachet QUI EST UN ANTI-INFLAMMATOIRE NON STEROIDIEN (AINS) PEUT ENTRAINER UNE MORT FŒTALE S’IL EST PRIS A PARTIR DU 6<sup>EME</sup> MOIS DE GROSSESSE (24 semaines d’aménorrhée) MEME APRES UNE SEULE PRISE. </p>
+<p class=AmmCorpsTexteGras style='border:none;padding:0cm'>N’utilisez pas ce médicament si vous êtes enceinte de 6 mois et plus (24 semaines d’aménorrhée et plus).</p>
+<p class=AmmCorpsTexteGras style='border:none;padding:0cm'>Avant le 6<sup>ème</sup> mois ou si vous envisagez une grossesse, vous ne devez pas prendre ce médicament, sauf en cas d’absolue nécessité déterminée par votre médecin.</p>
+</div>
+<p class=AmmNoticeTitre1><span id='Dénomination_du_médicament'>Dénomination du médicament</span> </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>KARDEGIC 160 mg, poudre pour solution buvable en sachet</p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Acétylsalicylate de DL-lysine</p>
+<p class=AmmNoticeTitre1><span id='Encadré'>Encadré</span> </p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Veuillez lire attentivement cette notice avant de prendre ce médicament car elle contient des informations importantes pour vous.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin ou votre pharmacien.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin, ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+<p class=AmmNoticeTitre1><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span> </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que KARDEGIC 160 mg, poudre pour solution buvable en sachet et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant de prendre KARDEGIC 160 mg, poudre pour solution buvable en sachet ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment prendre KARDEGIC 160 mg, poudre pour solution buvable en sachet ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver KARDEGIC 160 mg, poudre pour solution buvable en sachet ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_KARDEGIC_160_mg,_poudre_pour_solution_buvable_en_sachet_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE KARDEGIC 160 mg, poudre pour solution buvable en sachet ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras>Classe pharmacothérapeutique : </p>
+<p class=AmmCorpsTexte>ANTI-THROMBOTIQUE/INHIBITEUR DE L'AGREGATION PLAQUETTAIRE, HEPARINE EXCLUE.</p>
+<p class=AmmCorpsTexte>Ce médicament contient de l’aspirine. KARDEGIC 160 mg, poudre pour solution buvable en sachet appartient à la famille des inhibiteurs de l’agrégation plaquettaire.</p>
+<p class=AmmCorpsTexte>KARDEGIC 160 mg, poudre pour solution buvable en sachet agit sur les plaquettes présentes dans le sang et permet de fluidifier le sang.</p>
+<p class=AmmCorpsTexteGras>Indications thérapeutiques :</p>
+<p class=AmmCorpsTexte>KARDEGIC 160 mg, poudre pour solution buvable en sachet est utilisé pour prévenir les récidives d’accidents vasculaires cérébraux ou cardiaques provoqués par des caillots dans les artères du cerveau ou du cœur.</p>
+<p class=AmmCorpsTexte>Votre médecin peut décider d’associer ce médicament à d’autres traitements s’il le juge nécessaire.</p>
+<p class=AmmCorpsTexte>Ce médicament est réservé à l’adulte. Vous ne devez pas débuter un traitement par KARDEGIC 160 mg, poudre pour solution buvable en sachet sans l’accord de votre médecin.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_KARDEGIC_160_mg,_poudre_pour_solution_buvable_en_sachet_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE KARDEGIC 160 mg, poudre pour solution buvable en sachet ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+<p class=AmmCorpsTexte style='border:none;padding:0cm'><b>Ne prenez jamais KARDEGIC 160 mg, poudre pour solution buvable en sachet si vous êtes enceinte de 24 semaines d’aménorrhée et plus (6 mois et plus de grossesse) (voir paragraphe ci-dessous « Grossesse, allaitement et fertilité »).</b></p>
+<p class=AmmCorpsTexte style='border:none;padding:0cm'><b>Au cours des 5 premiers mois de grossesse, vous ne devez pas prendre KARDEGIC 160 mg, poudre pour solution buvable en sachet, sauf en cas d’absolue nécessité qui est déterminée par votre médecin.</b></p>
+<p class=AmmCorpsTexte style='border:none;padding:0cm'><b>Si vous envisagez une grossesse et que vous prenez un anti-inflammatoire non stéroïdien (AINS), parlez-en à un professionnel de la santé.</b></p>
+</div>
+<p class=AmmCorpsTexteGras>Ne prenez jamais KARDEGIC 160 mg, poudre pour solution buvable en sachet :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-size:11.0pt; font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique à la substance active (l’acétylsalicylate de DL-lysine) ou à l’un des autres composants contenus dans KARDEGIC 160 mg, poudre pour solution buvable en sachet, mentionnés dans la rubrique 6,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-size:11.0pt; font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique (hypersensible) à un médicament de la même famille que l’aspirine (les anti-inflammatoires non stéroïdiens = AINS),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes actuellement dans le troisième trimestre de grossesse, vous ne devez pas utiliser des doses supérieures à 100 mg/jour (voir rubrique « Grossesse, allaitement et fertilité »),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-size:11.0pt; font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez ou avez déjà eu de l’asthme ou des polypes nasaux associés à un asthme provoqué par la prise d’aspirine ou d’un médicament de la même famille (les AINS),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-size:11.0pt; font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez souffert ou si vous souffrez actuellement d’une lésion sur la paroi de l’estomac ou sur la première partie de l’intestin (ulcère gastro-intestinal actif, chronique ou récurrent),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-size:11.0pt; font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez déjà eu une hémorragie ou une perforation au niveau de l’estomac après avoir pris de l’aspirine ou un autre médicament de la même famille (les AINS ; médicaments utilisés pour traiter la fièvre et la douleur),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-size:11.0pt; font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous souffrez de saignements ou si votre médecin a identifié chez vous des risques de saignements,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez une maladie grave du foie, des reins ou du cœur,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes atteint d’une mastocytose (maladie des cellules impliquées dans les réactions allergiques) car il existe un risque de réactions allergiques sévères.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Avertissements et précautions</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Adressez-vous à votre médecin ou pharmacien avant de prendre KARDEGIC</span> 160 mg, poudre pour solution buvable en sachet<span lang=FR-BE>. </span></p>
+<p class=AmmCorpsTexteGras>Avant de prendre ce médicament, prévenez votre médecin :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez une maladie héréditaire des globules rouges, appelée déficit en <a name="_Hlk213016339">glucose-6-phosphate-déshydrogénase</a> (G6PD), car des doses élevées d’aspirine peuvent alors provoquer une destruction des globules rouges,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez déjà eu un ulcère de l’estomac ou du duodénum ou une inflammation de l’estomac (gastrite),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez déjà eu des saignements digestifs (vomissements de sang ou présence de sang dans les selles),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez une maladie des reins ou du foie,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez une hypertension artérielle (tension artérielle élevée),</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt;text-indent:-18.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez des règles abondantes.</p>
+<p class=AmmCorpsTexte>Des syndromes de Reye, pathologies très rares mais présentant un risque vital, ont été observés chez des enfants avec des signes d’infection virale (en particulier varicelle et épisodes d’allure grippale) et recevant de l’acide acétylsalicylique. KARDEGIC 160 mg, poudre pour solution buvable en sachet ne doit pas être administré aux enfants et aux adolescents.</p>
+<p class=AmmCorpsTexte>Pendant le traitement, des saignements ou des douleurs dans le ventre peuvent survenir. <span lang=FR-BE>Le risque de survenue de ces effets augmente avec la dose, chez les personnes âgées, chez les personnes de faible poids corporel, chez les personnes ayant déjà souffert d’ulcère de l’estomac et en cas d’association à certains médicaments (voir paragraphe « Autres médicaments et </span>KARDEGIC 160 mg, poudre pour solution buvable en sachet »<span lang=FR-BE>). Consultez immédiatement votre médecin en cas de survenue de tels effets.</span></p>
+<p class=AmmCorpsTexteGras>Si une intervention chirurgicale est prévue :</p>
+<p class=AmmCorpsTexte style='margin-bottom:4.0pt;page-break-after:avoid'>L’aspirine augmente les risques de saignements même à de très faibles doses, et ce même lorsque la dernière prise de ce médicament date de plusieurs jours.</p>
+<p class=AmmCorpsTexte>Prévenez votre médecin traitant, votre chirurgien, l’anesthésiste ou votre dentiste de la prise de ce médicament, dans le cas où une opération, même mineure, est envisagée.</p>
+<p class=AmmCorpsTexteGras>Enfants et adolescents</p>
+<p class=AmmCorpsTexte>Voir paragraphe ci-dessus « Avant de prendre ce médicament, prévenez votre médecin ».</p>
+<p class=AmmCorpsTexte>KARDEGIC ne doit pas être administré aux enfants et aux adolescents.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et KARDEGIC 160 mg, poudre pour solution buvable en sachet</p>
+<div align=center>
+<div class='fr-table--lg fr-table'><table>
+<tr>
+<td width=614 valign=top style='width:460.5pt;border:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras style='margin-top:3.0pt;margin-right:0cm; margin-bottom:12.0pt;margin-left:0cm'>Ce médicament contient de l’aspirine. D’autres médicaments en contiennent. <span style='font-weight:normal'>Vous ne devez pas prendre en même temps que KARDEGIC 160 mg, poudre pour solution buvable en sachet d’autres médicaments contenant de l’aspirine ou un médicament de la même famille</span> (les AINS comme par exemple l’ibuprofène) sans en parler à votre médecin ou à votre pharmacien. <span style='font-weight:normal'>L’association de ces médicaments</span> à KARDEGIC 160 mg, poudre pour solution buvable en sachet <span style='font-weight: normal'>pourrait entraîner un surdosage</span> et augmenter ainsi le risque d’effets indésirables, notamment les saignements. </p>
+<p class=AmmCorpsTexteGras style='margin-top:3.0pt'><span style='font-weight: normal'>Lisez attentivement les notices des autres médicaments que vous prenez</span> afin de vous assurer que ces médicaments ne contiennent pas d’aspirine et/ou d’anti-inflammatoire non stéroïdien.</p>
+</td>
+</tr>
+</table></div>
+</div>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Sauf avis contraire de votre médecin, vous ne devez pas prendre KARDEGIC 160 mg, poudre pour solution buvable en sachet en même temps que :</p>
+<p class=AmmListePuces1 style='text-align:justify;line-height:115%;page-break-after: avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>un anticoagulant oral (médicament utilisé pour fluidifier le sang) si vous avez un antécédent d’ulcère de l’estomac ou du duodénum,</p>
+<p class=AmmListePuces1 style='text-align:justify;line-height:115%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>un médicament à base de ticlopidine ou clopidogrel (médicaments utilisés pour fluidifier le sang), sauf dans certaines situations où votre médecin pourra vous prescrire conjointement de l’aspirine et du clopidogrel,</p>
+<p class=AmmListePuces1 style='text-align:justify;line-height:115%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>un médicament à base de benzbromarone ou probénécide (médicaments utilisés pour traiter la goutte),</p>
+<p class=AmmListePuces1 style='text-align:justify;line-height:115%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>un médicament à base d’anagrélide (médicament utilisé pour diminuer le nombre de plaquettes dans le sang),</p>
+<p class=AmmListePuces1 style='text-align:justify;line-height:115%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>le ticagrélor en dehors des indications validées</p>
+<p class=AmmListePuces1 style='text-align:justify;line-height:115%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>un médicament à base de défibrotide (médicament utilisé pour le traitement d’une maladie dans laquelle les vaisseaux sanguins du foie sont endommagés et obstrués par des caillots sanguins), </p>
+<p class=AmmListePuces1 style='text-align:justify;line-height:115%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>nicorandil (médicament utilisé pour traiter l’angine de poitrine) : l’association peut entraîner une augmentation du risque d’ulcère gastro-intestinal, de perforation et de saignement,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>lévothyroxine (médicament utilisé pour traiter une insuffisance de sécrétion de la glande thyroïde) : l’association peut entraîner une augmentation du taux d’hormones thyroïdiennes dans le sang. Les taux d’hormones thyroïdiennes doivent être surveillés par votre médecin,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>pémétrexed (médicament utilisé dans le traitement de certains cancers) : l’association peut entraîner une augmentation du risque de toxicité au pémétrexed. Votre médecin doit surveiller votre état clinique.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Informez votre médecin si vous prenez un médicament à base de :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>méthotrexate utilisé à des doses supérieures à 20 mg /semaine (médicament utilisé pour traiter certains cancers),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>topiques gastro-intestinaux, antiacides et adsorbants (médicaments utilisés pour traiter les douleurs digestives ou les ulcères digestifs),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>anticoagulant oral, thrombolytiques ou héparines (médicaments utilisés pour fluidifier le sang),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>anti-inflammatoires non stéroïdiens (médicaments utilisés dans le traitement de la douleur et de la fièvre),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>ticagrélor (dans les indications validées),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>cobimétinib, </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>ibrutinib,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>inhibiteurs sélectifs de la recapture de la sérotonine (médicaments utilisés pour traiter la dépression ou les troubles anxieux),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>médicaments mixtes adrénergiques-sérotoninergiques,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>acétazolamide : lors d’une prise concomitante avec l’acide acétylsalicylique, il existe un risque de vomissements, de tachycardie (rythme cardiaque rapide), d’hyperpnée (respiration rapide et profonde), de confusion mentale, de fatigue, de léthargie (somnolence extrême), de somnolence, de confusion, d’acidose métabolique hyperchlorémique (une affection caractérisée par une augmentation de la quantité d’acides dans le sang),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>acide valproïque (médicament utilisé dans le traitement de l’épilepsie) : l’association peut entraîner une augmentation de la quantité d’acide valproïque dans le sang. Votre médecin surveillera donc votre taux de valproate dans le sang,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>ténofovir (médicament utilisé dans le traitement de certaines infections causées par des virus) : l’association avec de l’acide acétylsalicylique peut augmenter le risque de problèmes rénaux (insuffisance rénale). Votre médecin vérifiera donc votre fonction rénale,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>glucocorticoïdes (à l’exception de l’hydrocortisone) utilisés dans le traitement de l’inflammation : l’association avec de l’acide acétylsalicylique à des doses utilisées pour traiter la douleur ou la fièvre peut augmenter le risque de saignement, </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>insuline et sulfonylurées (médicaments réduisant la glycémie) : l’association augmente l’effet du risque d’hypoglycémie (faible taux de sucre dans le sang),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>métamizole (médicament utilisé contre la douleur) : l’association peut réduire l’effet de l’acide acétylsalicylique sur l’agrégation des plaquettes sanguines. Votre médecin vous prescrira avec prudence du métamizole si vous prenez de faibles doses d’acide acétylsalicylique en prévention cardiovasculaire.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;line-height:115%'>Informez votre médecin ou pharmacien si vous prenez, avez récemment pris ou pourriez prendre tout autre médicament.</p>
+<p class=AmmCorpsTexteGras>KARDEGIC 160 mg, poudre pour solution buvable en sachet avec des boissons et de l’alcool</p>
+<p class=AmmCorpsTexte>La consommation d’alcool doit être évitée pendant le traitement en raison d’un risque augmenté de lésions au niveau gastro-intestinal et de modifications des tests de coagulations sanguines (allongement du temps de saignement). Ainsi, les patients traités par l’acide acétylsalicylique doivent faire preuve de prudence lors de la consommation de boissons alcoolisées jusqu’à 36 heures suivant la prise du traitement.</p>
+<p class=AmmCorpsTexteGras>Grossesse, allaitement et fertilité</p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Si vous êtes enceinte ou que vous allaitez, si vous pensez être enceinte ou planifiez une grossesse, demandez conseil à votre médecin ou pharmacien avant de prendre tout médicament.</span></p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Si vous continuez ou commencez un traitement avec KARDEGIC pendant la grossesse selon les instructions du médecin, utilisez KARDEGIC selon les conseils de votre médecin et n’utilisez pas une dose plus élevée que celle recommandée.</span></p>
+<p class=AmmAnnexeTitre3><span lang=FR-BE>Grossesse</span></p>
+<p class=AmmCorpsTexte><b>Grossesse –  dernier trimestre</b></p>
+<p class=AmmCorpsTexte>Ne prenez pas KARDEGIC à plus de 100 mg par jour si vous êtes dans les 3 derniers mois de votre grossesse, car cela pourrait nuire à votre enfant à naître ou causer des problèmes lors de l’accouchement. Cela peut provoquer des problèmes rénaux et cardiaques chez l’enfant à naître. Cela peut affecter votre tendance à saigner et celle de votre bébé et provoquer un accouchement plus tardif ou plus long que prévu.</p>
+<p class=AmmCorpsTexte>Si vous prenez KARDEGIC à faible dose (jusqu’à 100 mg par jour inclus), vous devez faire l’objet d’une surveillance obstétricale stricte selon les conseils de votre médecin.</p>
+<p class=AmmCorpsTexte><b>Grossesse –  premier et deuxième trimestre</b></p>
+<p class=AmmCorpsTexte>Vous ne devez pas prendre KARDEGIC pendant les 6 premiers mois de votre grossesse, sauf en cas d’absolue nécessité et sur les conseils de votre médecin. Si vous avez besoin d’un traitement pendant cette période ou pendant que vous essayez d’être enceinte, vous devez utiliser la dose la plus faible pendant la durée la plus courte possible. S’il est pris pendant plus de quelques jours à partir de la 20<sup>ème</sup> semaine de grossesse, KARDEGIC peut causer des problèmes rénaux chez votre enfant à naître, ce qui peut entraîner un faible niveau de liquide amniotique qui entoure le bébé (oligohydramnios) ou un rétrécissement d’un vaisseau sanguin (canal artériel) dans le cœur du bébé. Si vous avez besoin d’un traitement pendant plus de quelques jours, votre médecin peut recommander une surveillance supplémentaire.<a name=Bodyblank></a></p>
+<p class=AmmAnnexeTitre3>Allaitement</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>L’aspirine</span><span lang=FR-BE> </span>passant dans le lait maternel, ce médicament est déconseillé pendant l’allaitement.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Demandez conseil à votre médecin ou à votre pharmacien avant de prendre tout médicament.</span></p>
+<p class=AmmAnnexeTitre3>Fertilité</p>
+<p class=AmmCorpsTexte>L’aspirine, comme tous les AINS, peut altérer la fertilité des femmes et entraîner des difficultés pour devenir enceinte, de façon réversible à l’arrêt du traitement. Informez votre médecin si vous planifiez une grossesse ou si vous avez des difficultés à concevoir.</p>
+<p class=AmmCorpsTexteGras>KARDEGIC 160 mg, poudre pour solution buvable en sachet contient du sodium du lactose</p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Ce médicament contient moins de 1 mmol (23 mg) de sodium par sachet, c’est-à-dire qu’il est essentiellement « sans sodium ».</span></p>
+<p class=AmmCorpsTexte>Ce médicament contient un sucre (le lactose) qui se décompose en galactose et en glucose. Son utilisation est déconseillée chez les patients présentant une intolérance au galactose, un déficit en lactase de Lapp ou un syndrome de malabsorption du glucose et du galactose (maladies héréditaires rares).</p>
+<p class=AmmCorpsTexte>Si votre médecin vous a déjà dit que vous présentiez une intolérance à certains sucres, contactez-le avant de prendre ce médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_PRENDRE_KARDEGIC_160_mg,_poudre_pour_solution_buvable_en_sachet_?'>3. COMMENT PRENDRE KARDEGIC 160 mg, poudre pour solution buvable en sachet ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmAnnexeTitre3>Posologie</p>
+<p class=AmmCorpsTexte>Ce médicament est réservé à l’adulte.</p>
+<p class=AmmCorpsTexte>La dose habituelle est de 1 sachet par jour.</p>
+<p class=AmmCorpsTexte>Votre médecin vous indiquera combien de sachets vous devez prendre chaque jour.</p>
+<p class=AmmCorpsTexte>Respectez toujours la dose indiquée par votre médecin.</p>
+<p class=AmmCorpsTexte>En cas d’incertitude, consultez votre médecin ou votre pharmacien.</p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte>Ce médicament est à prendre par voie orale.</p>
+<p class=AmmCorpsTexte>Versez le contenu du sachet dans un grand verre. Ajoutez de l’eau. Attendez que la poudre soit dissoute avant de la boire.</p>
+<p class=AmmAnnexeTitre3>Fréquence d'administration</p>
+<p class=AmmCorpsTexte>Votre médecin vous dira à quel moment de la journée vous devez prendre ce médicament.</p>
+<p class=AmmAnnexeTitre3>Durée du traitement</p>
+<p class=AmmCorpsTexte>Votre médecin vous dira combien de temps vous devez prendre ce médicament.</p>
+<p class=AmmCorpsTexteGras>Si vous avez pris plus de KARDEGIC 160 mg, poudre pour solution buvable en sachet que vous n’auriez dû (ou en cas d’ingestion accidentelle)  </p>
+<p class=AmmCorpsTexte>Prévenez rapidement votre médecin, en particulier s’il s’agit d’un enfant.</p>
+<p class=AmmCorpsTexte>Un surdosage peut être mortel, en particulier chez l’enfant. Les principaux symptômes d’intoxication sont : des bourdonnements d’oreille, une sensation de baisse de l’audition, des maux de tête, des vertiges, voire dans les cas plus graves de la fièvre, une hypoglycémie importante (baisse du taux de sucres dans le sang), une chute rapide de la tension artérielle, une respiration accélérée et une perte de la conscience (coma).</p>
+<div align=center>
+<div class='fr-table--lg fr-table'><table>
+<tr>
+<td width=614 valign=top style='width:460.5pt;border:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Si ces signes surviennent, vous devez arrêter immédiatement le traitement et vous rendre en urgence dans un hôpital pour que vous y soyez traité.</p>
+</td>
+</tr>
+</table></div>
+</div>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Un œdème du poumon non lié à une insuffisance cardiaque (excès de fluide dans les poumons) menaçant le pronostic vital peut survenir en cas de surdosage aigu et chronique avec l’acide acétylsalicylique (voir rubrique 4). Cet œdème peut être mortel en cas de surdosage.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez de prendre KARDEGIC 160 mg, poudre pour solution buvable en sachet </p>
+<p class=AmmCorpsTexte>Ne prenez pas de dose double pour compenser la dose que vous avez oublié de prendre.</p>
+<p class=AmmCorpsTexte>Continuez votre traitement normalement et prévenez votre médecin.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte>Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</p>
+<p class=AmmCorpsTexteGras>Les effets indésirables suivants peuvent survenir :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>douleurs abdominales, difficulté pour digérer, brûlures d’estomac,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>inflammation de l’œsophage, de l’estomac, du duodénum, du côlon,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>ulcération de l’œsophage, de l’estomac, du duodénum, de l’intestin, perforation d’ulcère digestif, perforation de l’intestin,</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt'>Ces réactions peuvent être ou non associées à des saignements gastriques ou intestinaux visibles ou non (selles noires, sang dans les selles ou vomissements de sang), pouvant entraîner une anémie (diminution du nombre de globules rouges dans le sang pouvant entraîner fatigue, essoufflement, pâleur et vertiges) quelle que soit la dose d’aspirine, et chez les patients avec ou sans signes d’alerte ou d’antécédents gastro-intestinaux graves.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>rétrécissement anormal des intestins (sténoses intestinales en diaphragme) pouvant provoquer des symptômes tels qu’un gonflement de l’abdomen, une gêne abdominale et une présence de sang dans les selles, </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>inflammation aiguë du pancréas au cours d’une réaction allergique (hypersensibilité) à l’acide acétylsalicylique,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>saignements (hémorragies) pouvant engager le pronostic vital,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Saignements cérébraux, pouvant engager le pronostic vital, en particulier chez les sujets âgés,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>diminution du nombre de plaquettes dans le sang (thrombopénie),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>taux anormalement bas de certaines cellules du sang (pancytopénie, bicytopénie, anémie aplasique),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>appauvrissement de la production des cellules sanguines (insuffisance médullaire),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>taux anormalement bas de certains globules blancs pouvant entraîner des infections graves (leucopénie, neutropénie, agranulocytose),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>destruction des globules rouges dans le sang (anémie hémolytique) chez les patients ayant un déficit en l’enzyme glucose<span style='font-family: "Cambria Math",serif'>&#8208;</span>6<span style='font-family:"Cambria Math",serif'>&#8208;</span>phosphate<span style='font-family:"Cambria Math",serif'>&#8208;</span> déshydrogénase,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>syndrome de Reye (apparition de troubles de la conscience ou du comportement et de vomissements) chez un enfant présentant une maladie virale et recevant de l'aspirine (voir rubrique 2),</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>sang dans les urines, saignements par les voies génitales,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>bleus (hématomes), saignements (nez, gencives), petites taches rouges sur la peau (purpura),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>réaction allergique : boutons et/ou rougeurs sur la peau, urticaire, brusque gonflement du visage et du cou pouvant entraîner une difficulté à respirer (soit œdème de Quincke, soit symptômes comparables à une crise d’asthme), malaise brutal avec baisse importante de la pression artérielle (choc anaphylactique),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>bronchospasme (contraction musculaire bronchique) et asthme (inflammation bronchique et contraction),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>œdèmes (gonflements dus à une accumulation de liquide dans les tissus) si vous prenez des doses élevées de KARDEGIC160 mg, poudre pour solution buvable en sachet,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>œdèmes du poumon non lié à une insuffisance cardiaque en cas d’utilisation au long cours et dans le contexte d’une réaction allergique à l’aspirine,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>difficultés à respirer,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>bourdonnements d’oreilles, sensation de baisse de l’audition, maux de tête, sensations vertigineuses. Il peut alors s’agir d’un surdosage,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>augmentation des enzymes du foie, atteinte du foie (principalement des cellules du foie), maladie du foie chronique (hépatite chronique),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>diminution de l’élimination de l’acide urique, pouvant entraîner une crise de goutte (articulations gonflées et douloureuses liées à un excès d’acide urique),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>éruption cutanée en plaques rouges arrondies avec démangeaisons et sensation de brûlure, laissant des taches colorées et pouvant apparaître aux mêmes endroits en cas de reprise du médicament,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>maladie des reins (insuffisance rénale),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>hémorragie potentiellement fatale (perte importante de sang, pouvant engager le pronostic vital) et</span><span lang=FR-BE> </span>inflammation des vaisseaux sanguins pouvant être associée à des atteintes des articulations, du rein, de la peau et du tube digestif <span lang=FR-BE>(vascularite, y compris purpura de Schönlein-Henoch)</span>,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>troubles des artères du cœur avec une douleur localisée dans la poitrine qui peut irradier vers l’épaule gauche et la mâchoire d’origine allergique à l’acide acétylsalicylique (syndrome de Kounis).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>présence de sang dans le sperme (hématospermie).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><b>Si vous présentez l'un de ces symptômes, avertissez immédiatement votre médecin.</b></p>
+<p class=AmmAnnexeTitre3>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou, votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><span class=MsoHyperlink>https://signalement.social-sante.gouv.fr/</span></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_KARDEGIC_160_mg,_poudre_pour_solution_buvable_en_sachet_?'>5. COMMENT CONSERVER KARDEGIC 160 mg, poudre pour solution buvable en sachet ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte>Tenir ce médicament hors de la vue et de la portée des enfants.</p>
+<p class=AmmCorpsTexte>N’utilisez pas ce médicament après la date mentionnée sur l’emballage.</p>
+<p class=AmmCorpsTexte>A conserver à une température ne dépassant pas 25°C.</p>
+<p class=AmmCorpsTexte>Conserver les sachets dans l’emballage extérieur, à l’abri de l’humidité.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout <span style='color:black'>ou avec </span>les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient KARDEGIC 160 mg, poudre pour solution buvable en sachet </a></p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est :</p>
+<p class=AmmComposition style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;page-break-after:avoid'>Acétylsalicylate de DL-lysine........................................................................................... 288 mg</p>
+<p class=AmmComposition style='margin-left:18.0pt;page-break-after:avoid'>Quantité correspondante en acide acétylsalicylique (également appelé aspirine)................ 160 mg</p>
+<p class=AmmCorpsTexte style='margin-left:177.25pt;text-indent:35.45pt; page-break-after:avoid'>Pour un sachet.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont :</p>
+<p class=AmmComposition style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt'>Glycine, arôme mandarine, glycyrrhizate d’ammonium.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que KARDEGIC 160 mg, poudre pour solution buvable en sachet et contenu de l’emballage extérieur </a></p>
+<p class=AmmCorpsTexte>Ce médicament se présente sous forme de poudre pour solution buvable.</p>
+<p class=AmmCorpsTexte>Chaque boîte contient 30 ou 100 sachets.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class=AmmAnnexeTitre2>Titulaire de l’autorisation de mise sur le marché </p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>SUBSTIPHARM</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>24 RUE ERLANGER</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>75016 PARIS</p>
+<p class=AmmAnnexeTitre2>Exploitant de l’autorisation de mise sur le marché </p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>SUBSTIPHARM</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>24 RUE ERLANGER</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>75016 PARIS</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmTitulaireAdresse><b>Opella Healthcare International SAS</b></p>
+<p class=AmmTitulaireAdresse><span lang=FR-BE>56, route de Choisy, </span></p>
+<p class=AmmTitulaireCpVillePays><span lang=FR-BE style='font-size:10.0pt'>60200, Compiègne</span></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>ou</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:0cm;margin-bottom:.0001pt'><span lang=FR-BE>ASTREA AMILLY</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>196, RUE DU MARECHAL JUIN</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>45200 AMILLY</p>
+<p class=AmmAnnexeTitre2>Noms du médicament dans les Etats membres de l'Espace Economique Européen </p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte>[à compléter ultérieurement par le titulaire]</p>
+<p class=AmmAnnexeTitre2>Autres </p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

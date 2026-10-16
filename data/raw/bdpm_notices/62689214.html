@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="dJqdpKedCZlgmiZuvCkDcQ==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="dJqdpKedCZlgmiZuvCkDcQ==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 29/09/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant KEYTRUDA 25 mg/mL, solution à diluer pour perfusion"
+            aria-level="3"
+          >
+            KEYTRUDA 25 mg/mL, solution à diluer pour perfusion
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament KEYTRUDA 25 mg/mL, solution à diluer pour perfusion - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp-et-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-et-notice-panel">
+                      Résumé des caractéristiques du produit et Notice
+                    </button>
+                  </li>
+                
+                
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                          <p id="tag-hospitalier" class="fr-tag" aria-controls="fr-modal-tag-hospitalier" data-fr-opened="false">
+              <span class="fr-icon-hospital-fill">
+              </span>&nbsp;usage hospitalier
+          </p>
+          <span class="fr-tooltip fr-placement" id="tooltip-tag-hospitalier" role="tooltip" aria-hidden="true">Ce médicament est fourni sur ordonnance uniquement</span>
+        
+                      </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 18/08/2016
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : KEYTRUDA 25 mg/mL, solution à diluer pour perfusion - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">Vous trouverez les indications thérapeutiques de ce médicament dans le paragraphe 4.1 du RCP ou dans le paragraphe 1 de la notice. Ces documents sont disponibles <a id="lien_indication_thera" href="https://www.ema.europa.eu/fr/documents/product-information/keytruda-epar-product-information_fr.pdf" target="_blank">en cliquant ici</a></p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament n'appartient à aucun groupe générique</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Solution ( Composition pour 1 ml de solution )<ul role="list"><li role="listitem" style="list-style-type: none;"> > pembrolizumab <span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">25 mg </span></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > 1 flacon(s) en verre de 4 ml  </p><p>Code CIP : 34009 550 243 1 6<br/>Déclaration d'arrêt de commercialisation : 23/09/2025<br/>Cette présentation n'est pas <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p>Inscription sur la <a href="/glossaire/listesus.php">liste en sus</a>, pour au moins l'une de ses indications. <a href="/glossaire/Tarifresponsa.php">Tarif de responsabilité</a> publié au Journal Officiel.<br/><br/><p> > 2 flacon(s) en verre de 4 ml  </p><p>Code CIP : 34009 551 048 6 5<br/>Déclaration de commercialisation : 05/09/2025<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p>Inscription sur la <a href="/glossaire/listesus.php">liste en sus</a>, pour au moins l'une de ses indications. <a href="/glossaire/Tarifresponsa.php">Tarif de responsabilité</a> publié au Journal Officiel.<br/></div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><div class='fr-grid-row'><div class='fr-col'><p>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence. </p></div></div><div class='fr-grid-row'><div class='fr-col'><p>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprès de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-smr-aide-2'>plus d'informations dans l'aide</a>). Les avis et synthèses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-smr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection à la page d'aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'SMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur du SMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_4335940'>Avis du 08/07/2026</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 08/07/2026 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) 25 mg/ml, solution à diluer pour perfusion (voie IV), est important dans l’indication suivante : « en monothérapie en traitement néoadjuvant, poursuivi en traitement adjuvant en association à une radiothérapie avec ou sans cisplatine concomitant puis en monothérapie chez les patients adultes atteints d’un carcinome épidermoïde de la tête et du cou, à l’exception de l’hypopharynx, localement avancé résécable dont les tumeurs expriment PD-L1 avec un CPS >= 1 ». ;</td></tr><tr><td>Insuffisant</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_4335940'>Avis du 08/07/2026</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 08/07/2026 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Dans le reste du périmètre de l’AMM, le SMR est insuffisant pour justifier d’une prise en charge par la solidarité nationale. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3639631'>Avis du 16/07/2025</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 16/07/2025 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA 25 mg/ml (pembrolizumab), solution à diluer pour perfusion, est important dans l’indication de l’AMM. ;</td></tr><tr><td>Non précisé</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3603357'>Avis du 09/04/2025</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 09/04/2025 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Inscription (CT)</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) est identique aux niveaux de SMR déjà octroyés par la Commission lors de ces précédentes évaluations. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3594964'>Avis du 12/02/2025</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 12/02/2025 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) en association à la radiochimiothérapie (radiothérapie externe suivie d'une curiethérapie) est important dans l’indication : « en association à la radiochimiothérapie (radiothérapie externe suivie d'une curiethérapie), dans le traitement des patientes adultes atteintes d’un cancer du col de l'utérus localement avancé de stade III (extension à la paroi pelvienne et/ou au tiers inférieur du vagin et/ou, est cause d'hydronéphrose ou d'un rein non fonctionnel) - IVA (atteinte de la muqueuse de la vessie ou du rectum -organes pelviens adjacents-) avec ou sans  envahissement des ganglions pelviens et/ou para-aortiques, selon FIGO 2014, qui n’ont pas reçu de traitement définitif préalable. » ;</td></tr><tr><td>Modéré</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3589754'>Avis du 29/01/2025</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 29/01/2025 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) est modéré en association à une chimiothérapie à base de sels de platine en traitement néoadjuvant, puis poursuivi en monothérapie en traitement adjuvant, est indiqué dans le traitement des patients adultes atteints d’un cancer bronchique non à petites cellules résécable à haut risque de récidive. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3589926'>Avis du 18/12/2024</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 18/12/2024 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) 25 mg/mL, solution à diluer pour perfusion, est important uniquement « en association à l’enfortumab vedotin, dans le traitement de première ligne des patients adultes atteints d'un carcinome urothélial non résécable ou métastatique et éligibles à une chimiothérapie à base de sels de platine ». ;</td></tr><tr><td>Insuffisant</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3589926'>Avis du 18/12/2024</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 18/12/2024 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) 25 mg/mL, solution à diluer pour perfusion, est insuffisant pour justifier d’une prise en charge par la solidarité nationale dans les autres situations de l’AMM. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3556740'>Avis du 25/09/2024</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 25/09/2024 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) est important dans l’indication de l’AMM. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3546934'>Avis du 11/09/2024</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 11/09/2024 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Réévaluation SMR et ASMR</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) 25 mg/ml, solution à diluer pour perfusion, est important uniquement dans le traitement adjuvant des patients adultes atteints d’un carcinome rénal à cellules claires, à risque accru de récidive post néphrectomie, ou après une néphrectomie et une résection des lésions métastatiques  dans l’indication de l’AMM. ;</td></tr><tr><td>Insuffisant</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3546934'>Avis du 11/09/2024</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 11/09/2024 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Réévaluation SMR et ASMR</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) 25 mg/ml, solution à diluer pour perfusion, est insuffisant pour justifier d’une prise en charge par la solidarité nationale dans les autres situations de l’AMM. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3508492'>Avis du 27/03/2024</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 27/03/2024 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) est important dans l’indication de l’AMM. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3498750'>Avis du 28/02/2024</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 28/02/2024 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA 25 mg/ml (pembrolizumab) en association au lenvatinib est important dans le traitement de 1ère ligne du carcinome rénal au stade avancé, uniquement à cellules claires ou comportant un contingent de cellules claires. ;</td></tr><tr><td>Insuffisant</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3498750'>Avis du 28/02/2024</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 28/02/2024 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA 25 mg/ml (pembrolizumab) en association au lenvatinib est insuffisant pour justifier d’une prise en charge par la solidarité nationale dans le traitement de première ligne, au stade avancé, du carcinome rénal avec une histologie autre qu’à cellules claires compte tenu de l’absence de données robustes. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3501624'>Avis du 14/02/2024</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 14/02/2024 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) 25 mg/ml, est important en association à une chimiothérapie à base de sels de platine et de fluoro-pyrimidine, dans le traitement de première ligne des patients adultes atteints d’un adénocarcinome gastrique ou de la jonction oesogastrique, localement avancé non résécable ou métastatique, HER-2 négatif et dont les tumeurs expriment PD-L1 avec un CPS = 10. ;</td></tr><tr><td>Insuffisant</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3501624'>Avis du 14/02/2024</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 14/02/2024 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) 25 mg/ml, est insuffisant pour justifier d’une prise en charge par la solidarité nationale dans les situations autres que celles retenues pour le remboursement. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3409403'>Avis du 18/01/2023</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 18/01/2023 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) est important dans le carcinome rénal à cellules claires. ;</td></tr><tr><td>Insuffisant</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3409403'>Avis du 18/01/2023</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 18/01/2023 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) est insuffisant dans le carcinome rénal non à cellules claires (chromophobe et tubulo-papillaire). ;</td></tr><tr><td>Insuffisant</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3406115'>Avis du 04/01/2023</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 04/01/2023 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) en monothérapie est insuffisant dans l’ensemble des indications. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3396878'>Avis du 14/12/2022</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 14/12/2022 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) est important dans la nouvelle indication de l’AMM. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3395770'>Avis du 07/12/2022</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 07/12/2022 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) est important dans l'indication : KEYTRUDA en monothérapie dans le traitement adjuvant des patients adultes et des adolescents âgés de 12 ans et plus atteints d’un mélanome de stade IIB, IIC ayant eu une résection complète. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3395770'>Avis du 07/12/2022</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 07/12/2022 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) est important dans l'indication : KEYTRUDA en monothérapie dans le traitement des patients […] et des adolescents âgés de 12 ans et plus atteints d’un mélanome avancé (non résécable ou métastatique). ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3395770'>Avis du 07/12/2022</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 07/12/2022 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) est important dans l'indication : KEYTRUDA en monothérapie dans le traitement des patients […] et des adolescents âgés de 12 ans et plus atteints d’un mélanome de stade III, ayant eu une résection complète. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3374922'>Avis du 14/09/2022</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 14/09/2022 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) est important dans l’indication de l’AMM. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3338759'>Avis du 06/04/2022</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 06/04/2022 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) dans le cadre de son association à la chimiothérapie est important dans l’indication de l’AMM. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3334585'>Avis du 30/03/2022</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 30/03/2022 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA dans le cadre de son association au lenvatinib est important dans l’indication de l’AMM. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3313589'>Avis du 15/12/2021</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 15/12/2021 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab)en association à une chimiothérapie à base de sels de platine et de fluoropyrimidine est important dans le traitement de première ligne des patients adultes atteints d'un cancer de l'oesophage, ou d'un adénocarcinome de la jonction gastro-oesophagienne HER-2 négatif uniquement de type I  (classification Siewert), localement avancés non résécables ou métastatiques, dont les tumeurs expriment PD-L1 avec un CPS=10. ;</td></tr><tr><td>Insuffisant</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3313589'>Avis du 15/12/2021</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 15/12/2021 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab)en association à une chimiothérapie à base de sels de platine et de fluoropyrimidine est insuffisant pour justifier d’une prise en charge par la solidarité nationale dans le traitement de première ligne, des patients adultes atteints d'un adénocarcinome de la jonction gastro-oesophagienne HER-2 négatif, de type II ou III (classification Siewert) localement avancés non résécables ou métastatiques, dont les tumeurs expriment PD-L1 avec un CPS =10. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3289694'>Avis du 08/09/2021</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 08/09/2021 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) est important dans l’indication de l’AMM. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3272286'>Avis du 02/06/2021</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 02/06/2021 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) est important dans le traitement de première ligne des patients adultes atteints d’un cancer colorectal métastatique avec une instabilité microsatellitaire élevée (MSI-H) ou une déficience du système de réparation des mésappariements de l’ADN (dMMR) non résécables d’emblée. ;</td></tr><tr><td>Insuffisant</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3272286'>Avis du 02/06/2021</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 02/06/2021 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) est insuffisant pour justifier d’une prise en charge par la solidarité nationale dans les autres situations (patients résécables d’emblée). ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3245422'>Avis du 03/03/2021</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 03/03/2021 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Nouvel examen suite au dépôt de nouvelles données</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) dans l’indication : « KEYTRUDA (pembrolizumab) est indiqué en monothérapie dans le traitement des patients adultes atteints de cancer bronchique non à petites cellules localement avancé ou métastatique dont les tumeurs expriment PD-L1 avec un TPS = 1 %, et ayant reçu au moins une chimiothérapie antérieure. Les patients présentant des mutations tumorales d’EGFR ou d’ALK doivent également avoir reçu une thérapie ciblée avant de recevoir KEYTRUDA (pembrolizumab) » reste important dans le traitement des patients adultes atteints d'un CBNPC localement avancé ou métastatique dont les tumeurs expriment PD-L1 avec un TPS ? 1 % après une chimiothérapie antérieure, les patients avec mutations activatrices de l’EGFR devant également avoir reçu une thérapie ciblée. ;</td></tr><tr><td>Insuffisant</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3245422'>Avis du 03/03/2021</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 03/03/2021 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Nouvel examen suite au dépôt de nouvelles données</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) dans l’indication : « KEYTRUDA (pembrolizumab) est indiqué en monothérapie dans le traitement des patients adultes atteints de cancer bronchique non à petites cellules localement avancé ou métastatique dont les tumeurs expriment PD-L1 avec un TPS = 1 %, et ayant reçu au moins une chimiothérapie antérieure. Les patients présentant des mutations tumorales d’EGFR ou d’ALK doivent également avoir reçu une thérapie ciblée avant de recevoir KEYTRUDA (pembrolizumab) » est insuffisant au regard des alternatives disponibles pour justifier d’une prise en charge par la solidarité nationale dans le traitement des patients adultes atteints d'un CBNPC localement avancé ou métastatique, avec réarrangement du gène ALK, après une chimiothérapie antérieure. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3190303'>Avis du 03/06/2020</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 03/06/2020 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) est important dans le traitement de première ligne des patients adultes atteints d’un carcinome épidermoïde des voies aérodigestives supérieures métastatique ou récidivant non résécable, dont les tumeurs expriment PD-L1 avec un CPS = 1 :<br>• en monothérapie,<br>• en association à la chimiothérapie. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3184677'>Avis du 13/05/2020</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 13/05/2020 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA (pembrolizumab) en association à l’axitinib est important dans le traitement de 1ère ligne, au stade avancé, du carcinome rénal uniquement à cellules claires ou comportant un contingent de cellules claires. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3112911'>Avis du 09/10/2019</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 09/10/2019 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA est important dans l’indication en association au carboplatine et au paclitaxel ou au nab-paclitaxel, dans le traitement de première ligne des patients adultes (statut de performance ECOG de 0 ou 1) atteints de CBNPC métastatique épidermoïde. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3081878'>Avis du 26/06/2019</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 26/06/2019 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA est important dans l’extension d’indication : en monothérapie dans le traitement adjuvant des patients adultes atteints d’un mélanome de stade III avec atteinte ganglionnaire, ayant eu une résection complète. ;</td></tr><tr><td>Commentaires</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3080470'>Avis du 05/06/2019</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 05/06/2019 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication non sollicitée</td><td class='text-align-center'>La Commission prend acte du fait que le laboratoire ne demande pas l’inscription de la spécialité KEYTRUDA dans cette indication et rappelle que de ce fait cette spécialité n’est pas agréée aux collectivités dans l’indication : « en monothérapie dans le traitement des patients adultes atteints d’un carcinome épidermoïde de la tête et du cou (HNSCC) récidivant ou métastatique dont les tumeurs expriment PD-L1 avec un TPS = 50 % et en progression pendant ou après une chimiothérapie à base de sels de platine. » ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2906433'>Avis du 20/02/2019</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 20/02/2019 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA est important dans l’extension d’indication : en association à une chimiothérapie pemetrexed et sel de platine, dans le traitement de première ligne des patients adultes (statut de performance ECOG de 0 ou 1) atteints de CBNPC métastatique non-épidermoïde dont les tumeurs ne présentent pas de mutations d’EGFR ou d’ALK. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2842744'>Avis du 04/04/2018</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 04/04/2018 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA est important dans l’indication de l’AMM « en monothérapie dans le traitement des patients adultes atteints d’un lymphome de Hodgkin classique (LHc) en rechute ou réfractaire après échec d’une greffe de cellules souches (GCS) autologue et d’un traitement par brentuximab vedotin (BV), ou inéligibles à une greffe et après échec d’un traitement par BV ». ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2830777'>Avis du 21/02/2018</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 21/02/2018 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA est important dans le « traitement des patients adultes atteints d’un carcinome urothélial localement avancé ou métastatique ayant reçu une chimiothérapie antérieure à base de sels de platine ». ;</td></tr><tr><td>Non précisé</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2825867'>Avis du 10/01/2018</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 10/01/2018 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication non sollicitée</td><td class='text-align-center'>La Commission prend acte du fait que le laboratoire ne demande pas l’inscription de la spécialité KEYTRUDA dans cette indication et rappelle que de ce fait cette spécialité n’est pas agréée aux collectivités dans l’indication : « en monothérapie dans le traitement des patients adultes atteints d’un carcinome urothélial localement avancé ou métastatique inéligibles à une chimiothérapie à base de cisplatine ». ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2780761'>Avis du 05/07/2017</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 05/07/2017 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Inscription (CT)</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA 25 mg/ml, solution à diluer pour perfusion est important dans les trois indications de l’AMM concernées. ;</td></tr><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2774645'>Avis du 17/05/2017</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 17/05/2017 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Extension d'indication</td><td class='text-align-center'>Le service médical rendu par KEYTRUDA est important dans l’extension d’indication de l’AMM « en monothérapie dans le traitement de première ligne des patients adultes atteints d’un cancer bronchique non à petites cellules (CBNPC) métastatique dont les tumeurs expriment PD-L1 avec un score de proportion tumorale (TPS) =50 %, sans mutations tumorales d’EGFR ou d’ALK ». ;</td></tr></tbody></table></div></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence.</p></div></div><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprés de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-asmr-aide-3'>plus d'informations dans l'aide</a>). Les avis et synthéses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-asmr-aide-3' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers la page aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'ASMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur de l'ASMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td class="text-align-center">IV (Mineur)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_4335940'>Avis du 08/07/2026</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 08/07/2026 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">Compte tenu :<br>• de la démonstration de la supériorité de KEYTRUDA (pembrolizumab) en traitement néoadjuvant, puis en traitement adjuvant (post-chirurgie) en association à la radiothérapie avec ou sans cisplatine puis poursuivi en monothérapie, au gel de base du 25/07/2024, par rapport à la radiothérapie adjuvante seule ou associée à une chimiothérapie par cisplatine sur la survie sans événement et le taux de réponse histologique majeur dans une étude de phase III randomisée en ouvert<br>• de l’absence de bénéfice démontrée sur la survie globale (lors d’une première analyse intermédiaire) .<br>• de données de qualité de vie exploratoires<br>• du profil de tolérance marqué par une surcroît de toxicité notamment en événements indésirables graves (49,6 % versus 36,8 %) et des EI immunomédiés (49,8 % versus 10,8 %).<br>la Commission de la transparence considère que KEYTRUDA (pembrolizumab), 25 mg/ml, solution à diluer pour perfusion (voie IV), en monothérapie en traitement néoadjuvant, poursuivi en traitement adjuvant en association à une radiothérapie avec ou sans cisplatine concomitant puis en monothérapie apporte une amélioration du service médical rendu mineure (ASMR IV) par rapport à l’association radiothérapie +/- cisplatine en traitement adjuvant chez les patients atteints d’un carcinome épidermoïde de la tête et du cou, à l’exception de l’hypopharynx, localement avancé résécable dont les tumeurs expriment PD-L1 avec un CPS >= 1.</td></tr><tr><td class="text-align-center">IV (Mineur)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3639631'>Avis du 16/07/2025</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 16/07/2025 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">KEYTRUDA 25 mg/ml (pembrolizumab) en association avec le carboplatine et le paclitaxel en phase d’induction, suivi par un traitement d’entretien par KEYTRUDA 25 mg/ml (pembrolizumab) en monothérapie, apporte une amélioration du service médical rendu mineure (ASMR IV) par rapport à l’association de carboplatine et paclitaxel dans le traitement des patientes adultes atteintes d’un cancer de l’endomètre (CE) avancé nouvellement diagnostiqué ou récidivant.</td></tr><tr><td class="text-align-center">V (Inexistant)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3603357'>Avis du 09/04/2025</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 09/04/2025 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Inscription (CT)</td><td class="text-align-center">Cette spécialité est un complément de gamme qui n’apporte pas d’amélioration du service médical rendu (ASMR V) par rapport à la présentation déjà inscrite.</td></tr><tr><td class="text-align-center">III (Modéré)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3594964'>Avis du 12/02/2025</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 12/02/2025 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">Compte tenu :<br>• de la démonstration dans une étude randomisée de phase III, en double aveugle (essai KN-A18, comprenant 56,7 % de patientes aux stades III - IVA selon la classification FIGO 2014) de la supériorité du pembrolizumab par rapport à une radiochimiothérapie, pour le traitement des patientes adultes atteintes d’un cancer du col de l'utérus localement avancé (stades IB2-IIB et III - IVA selon la classification FIGO 2014), qui n’ont pas reçu de traitement définitif préalable, en termes de :<br>• survie sans progression avec un HR = 0,70 (IC95% = [0,55 . 0,89] . p = 0,002 < au seuil pré-défini de 0,0172), 21,7 % patientes ont eu une progression ou un décès dans le groupe expé-rimental versus 29,0 % patientes dans le groupe contrôle. La médiane de SSP n’a été atteinte dans aucun des deux groupes.<br>• survie globale avec un HR = 0,67 (IC95 % = [0,50 . 0,90] . p = 0,0040 < 0,01026), 14,2 % de décès dans le groupe expérimental versus 20,5 % patientes dans le groupe contrôle. La mé-diane de SG n’a été atteinte dans aucun des deux groupes.<br>et malgré :<br>• l’absence de conclusion formelle pouvant être tirée des résultats de qualité de vie .<br>• un profil de tolérance jugé acceptable par rapport à la radiochimiothérapie mais marqué par un surcroit de toxicité des EI de grade >= 3 rapportés chez 78,3 % des patients du groupe pembrolizumab et 70,0 % des patients du groupe placebo). De plus, 20,6 % des patients du groupe pembrolizumab et 14,9 % des patients du groupe placebo ont eu un EI ayant entraîné l’arrêt définitif du traitement par pembrolizumab.<br><br>La Commission considère que KEYTRUDA (pembrolizumab) 25 mg/ml, solution à diluer pour perfusion, en association à la radiochimiothérapie (radiothérapie externe suivie d'une curiethérapie) apporte une amélioration du service médical rendu modérée (ASMR III) par rapport à la radiochimiothérapie.</td></tr><tr><td class="text-align-center">IV (Mineur)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3589754'>Avis du 29/01/2025</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 29/01/2025 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">KEYTRUDA (pembrolizumab) apporte une amélioration du service médical rendu mineure (ASMR IV) par rapport à une chimiothérapie à base de sels de platine en traitement néoadjuvant.</td></tr><tr><td class="text-align-center">III (Modéré)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3589926'>Avis du 18/12/2024</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 18/12/2024 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">Compte-tenu : <br>• de la démonstration de la supériorité de KEYTRUDA (pembrolizumab) en association à l’enfortumab vedotin par rapport aux chimiothérapies à base de sels de platine (gemcitabine + cisplatine ou carboplatine), dans une étude de phase III randomisée en ouvert, en termes de survie globale (HR = 0,468 . IC95%[0,376 . 0,582]), et en survie sans progression (HR = 0,450 . IC95%[0,3777 . 0,538]) .<br>Et malgré :<br>• une absence de gain sur le temps jusqu’à la progression de la douleur .<br>• un profil de toxicité marqué notamment par la survenue fréquente d’atteintes cutanées, des neuropathies sensorielles périphériques, et des arrêts de traitement pour évènement indésirables (39,8% vs. 21,5%) .<br>• une absence de gain démontré sur la qualité de vie (critère exploratoire),<br>la Commission considère que KEYTRUDA (pembrolizumab) 25 mg/mL, solution à diluer pour perfusion, apporte une amélioration du service médical rendu modérée (ASMR III) par rapport aux chimiothérapies à base de sels de platine.</td></tr><tr><td class="text-align-center">IV (Mineur)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3556740'>Avis du 25/09/2024</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 25/09/2024 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">Prenant en compte d’une part : <br>• la démonstration d’une supériorité, dans une étude de phase III, en double aveugle, de KEYTRUDA (pembrolizumab) en association à trastuzumab et une bichimiothérapie à base de sels de platine et de fluoropyrimidine par rapport à trastuzumab associé à une bichimiothérapie seule, dans la population ITT comprenant 85% des patients avec un score CPS >= 1 en termes de : <br>• survie globale : HR = 0,80 (IC95% [0,67 . 0,94]) avec une différence de médiane de +3,2 mois .<br>• survie sans progression : HR = 0,73 (IC95% [0,61 . 0,87]) avec une différence de médiane de +1,9 mois .<br>mais d’autre part :<br>• l’absence de donnée robuste sur la qualité de vie,<br>• une quantité d’effet jugé modeste en termes de survie sans progression et de survie globale, <br>• d’un profil de tolérance notamment marqué par des effets indésirables immuno-médiés,<br><br>la Commission considère que KEYTRUDA (pembrolizumab) en association au trastuzumab et à une chimiothérapie à base de sels de platine et de fluoropyrimidine en traitement de première ligne des patients adultes atteints d’un adénocarcinome gastrique ou de la jonction ½sogastrique, localement avancé non résécable ou métastatique, HER-2 positif et dont les tumeurs expriment PD-L1 avec un CPS >= 1, apporte une amélioration du service médical rendu mineure (ASMR IV) par rapport au trastuzumab associée à une chimiothérapie à base de sel de platine et de fluoropyrimidine.</td></tr><tr><td class="text-align-center">III (Modéré)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3546934'>Avis du 11/09/2024</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 11/09/2024 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Réévaluation SMR et ASMR</td><td class="text-align-center">Compte tenu :<br>• d’une démonstration de supériorité du pembrolizumab versus placebo sur le critère de jugement principal, survie sans maladie évaluée par l’investigateur, avec un HR = 0,68 IC95% : [0,53 - 0,87], p=0,0010 .<br>• d’une démonstration de supériorité du pembrolizumab versus placebo sur le critère de jugement secondaire hiérarchisé, survie globale, avec lors de la 3ème analyse intermédiaire un HR = 0,62 IC95% : [0,44 - 0,87], p=0,0024 .<br>• d’un surcroit de toxicité dans le groupe pembrolizumab, notamment marqué par des événements indésirables de grade supérieur ou égal à 3 (32,0 % et 17,7 % dans le groupe placebo) et des événements indésirables graves (20,7 % et 11,5 %) .<br>• d’une absence de gain démontré sur la qualité de vie (critère exploratoire) .<br>la Commission considère qu’en l’état actuel du dossier, KEYTRUDA (pembrolizumab) apporte une d’amélioration du service médical rendu modérée (ASMR III) en monothérapie dans le traitement adjuvant des adultes atteints d’un carcinome rénal à cellules claires à risque accru de récidive post néphrectomie, ou après une néphrectomie et une résection des lésions métastatiques.</td></tr><tr><td class="text-align-center">IV (Mineur)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3508492'>Avis du 27/03/2024</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 27/03/2024 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">Compte-tenu : <br>• de la démonstration d’une supériorité du pembrolizumab associé à la gemcitabine et au cisplatine par rapport à l’association gemcitabine plus cisplatine seule, dans une étude randomisée, en double aveugle, en termes de survie globale (SG, critère de jugement principal), <br>• de la quantité d’effet jugée modeste mais significative, avec une différence absolue sur la médiane de SG de 1,8 mois avec un HRstratifié = 0,83 . IC95% [0,72 . 0,95],<br>• de l’absence de démonstration d’une supériorité sur la survie sans progression et sur le taux de réponse globale,<br>• de l’absence de conclusion formelle pouvant être tirée des résultats exploratoires des critères de jugement secondaires dont la qualité de vie, <br>• d’un profil de tolérance considéré acceptable, <br>• du besoin médical partiellement couvert par les alternatives disponibles et l’évolution des recommandations de la prise en charge du cancer avancé des voies biliaires, <br>la Commission considère que KEYTRUDA (pembrolizumab) 25 mg/ml, solution à diluer pour perfusion, comme IMFINZI (durvalumab), apporte une amélioration du service médical rendu mineure (ASMR IV) par rapport à la chimiothérapie par gemcitabine plus cisplatine dans le traitement de 1ère ligne du cancer des voies biliaires (CVB) localement avancé non résécable ou métastatique.</td></tr><tr><td class="text-align-center">III (Modéré)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3498750'>Avis du 28/02/2024</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 28/02/2024 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">Compte tenu : <br>• de la démonstration de la supériorité de l’association KEYTRUDA (pembrolizumab) + lenvatinib par rapport au sunitinib, considéré comme un comparateur acceptable à la date de réalisation de l’étude KEYNOTE-581 (CLEAR), sur : <br>• la survie sans progression évaluée par un comité de revue indépendant (critère de jugement principal) : 23,9 mois vs. 9,2 mois en médiane . HR=0,39 IC95% [0,32 . 0,49] . p<0,0001 <br>• la survie globale (critère de jugement secondaire hiérarchisé) : la médiane n’a été atteinte dans aucun des deux groupes . HR = 0,66 . IC95% [0,49 . 0,88] . p=0,0049, <br>malgré : <br>• un surcroît de toxicité de cette association par rapport au sunitinib en termes notamment d’événements indésirables graves (50,6% versus 33,2%), de grades = 3 (82,4% versus 71,8%) ou entrainant l’arrêt du traitement (37,4% versus 14,4%), <br>• des données de qualité de vie exploratoires, <br><br>la Commission de la Transparence considère que l’association KEYTRUDA (pembro-lizumab) + lenvatinib apporte comme l’association pembrolizumab/axitinib et l’association nivolumab/cabozantinib une amélioration du service médical rendu modérée (ASMR III) par rapport au sunitinib, dans le traitement de 1ère ligne, au stade avancé, du carcinome rénal à cellules claires ou comportant un contingent de cellules claires.</td></tr><tr><td class="text-align-center">III (Modéré)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3501624'>Avis du 14/02/2024</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 14/02/2024 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">Compte-tenu : <br>• de la démonstration d’une supériorité dans une étude de phase III, en double aveugle de KEYTRUDA (pembrolizumab) en association à une chimiothérapie à base de sels de platine et de fluoropyrimidine par rapport à la chimiothérapie seule chez les patients dont les tumeurs expriment PD-L1 avec un CPS = 10 en termes de :<br>• survie globale : HR = 0,65 (IC95% [0,53 . 0,79] . p<0,0001) .<br>• survie sans progression : HR = 0,62 (IC95% [0,51 . 0,76] . p < 0,0001)<br>et malgré : <br>• un profil de tolérance de KEYTRUDA (pembrolizumab) en association à la chimiothérapie moins favorable que la chimiothérapie seule, marqué notamment par des effets indésirables à médiation immunitaire (principalement une dysthyroïdie),<br>• l’absence de donnée robuste sur la qualité de vie, <br>la Commission de la Transparence considère que KEYTRUDA (pembrolizumab) en association à une chimiothérapie à base de fluoropyrimidine et de sels de platine, traitement de première ligne des patients adultes atteints d’un adénocarcinome gastrique ou de la jonction oesogastrique, localement avancé non résécable ou métastatique, HER-2 négatif et dont les tumeurs expriment PD-L1 avec un CPS = 10, apporte, au même titre que OPDIVO (nivolumab), une amélioration du service médical rendu modérée (ASMR III) par rapport à la chimiothérapie seule.</td></tr><tr><td class="text-align-center">IV (Mineur)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3409403'>Avis du 18/01/2023</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 18/01/2023 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">Compte tenu :<br>• d’une démonstration de supériorité du pembrolizumab versus placebo sur le critère principal, survie sans maladie évaluée par l’investigateur, avec un HR = 0,68 (IC95% : [0,53 - 0,87]), p=0,0010 .<br>• de l’absence de démonstration de supériorité du groupe pembrolizumab par rapport au groupe en termes de survie globale (p=NS) et des données immatures à ce jour .<br>• d’un surcroit de toxicité dans le groupe pembrolizumab, notamment marqué par des événements indésirables de grade supérieur ou égal à 3 (32,2% versus 17,7%) et des évènements indésirables graves (20,7% versus 11,5%) .<br>• d’une absence d’impact démontrée sur la qualité de vie (critère exploratoire) .<br>la Commission considère qu’en l’état actuel du dossier, KEYTRUDA (pembrolizumab) apporte une amélioration du service médical rendu mineure (ASMR IV) en monothérapie dans le traitement adjuvant des adultes atteints d’un carcinome rénal à cellules claires à risque accru de récidive post néphrectomie, ou après une néphrectomie et une résection des lésions métastatiques.</td></tr><tr><td class="text-align-center">IV (Mineur)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3396878'>Avis du 14/12/2022</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 14/12/2022 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">Prenant en compte une démonstration dans une étude randomisée en double aveugle :<br>• d’une supériorité du pembrolizumab sur les co- critères principaux : réponse histologique complète (64,8% dans le groupe pembrolizumab versus 51,2% dans le groupe placebo) et survie sans événement avec un HR de 0,63 (IC95% : [0,48 . 0,82]),<br>• de l’impossibilité de tirer de conclusion sur un effet sur la survie globale du fait de l’immaturité des données disponibles (critère secondaire hiérarchisé) ou sur a qualité de vie (critère explo-ratoire),<br>• de l’incidence des événements indésirables graves (EIG) plus élevée dans le groupe pembrolizumab + chimiothérapie / pembrolizumab comparée au groupe placebo + chimiothérapie / placebo (43,6% et 28,5% respectivement),<br>la Commission considère qu’en l’état actuel du dossier, KEYTRUDA (pembrolizumab) apporte une amélioration du service médical rendu mineure (ASMR IV) dans le traitement néoadjuvant puis adjuvant des patients adultes atteints d'un cancer du sein triple négatif localement avancé ou de stade précoce à haut risque de récidive.</td></tr><tr><td class="text-align-center">IV (Mineur)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3395770'>Avis du 07/12/2022</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 07/12/2022 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">KEYTRUDA (pembrolizumab) apporte une amélioration du service médical rendu mineure (ASMR IV) en monothérapie dans le traitement adjuvant des adultes et adolescents âgés de 12 ans et plus, atteints d’un mélanome de stade IIB, IIC ayant eu une résection complète.<br>KEYTRUDA (pembrolizumab) apporte chez l’adolescent au même titre que chez l’adulte une amélioration du service médical rendu mineure (ASMR IV) dans le traitement du mélanome au stade avancé (mélanome non résécable ou métastatique).</td></tr><tr><td class="text-align-center">III (Modéré)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3395770'>Avis du 07/12/2022</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 07/12/2022 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">Compte tenu :<br>• d’une prise en charge considérée comme similaire entre l’adulte et l’adolescent,<br>• de l’extrapolation aux adolescents des résultats de l’évaluation du pembrolizumab chez l’adulte aux stades III résécable et avancés (mélanome non résécable ou métastatique),<br>• des données de tolérance issues de l’étude KEYNOTE-051, <br>la Commission considère que KEYTRUDA (pembrolizumab) apporte chez l’adolescent au même titre que chez l’adulte une amélioration du service médical rendu modérée (ASMR III) dans le traitement du mélanome au stade III résécable.</td></tr><tr><td class="text-align-center">IV (Mineur)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3395770'>Avis du 07/12/2022</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 07/12/2022 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">KEYTRUDA (pembrolizumab) apporte chez l’adolescent au même titre que chez l’adulte une amélioration du service médical rendu mineure (ASMR IV) dans le traitement du mélanome au stade avancé (mélanome non résécable ou métastatique).</td></tr><tr><td class="text-align-center">III (Modéré)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3374922'>Avis du 14/09/2022</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 14/09/2022 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">Compte-tenu : <br>• de la démonstration dans une étude de phase III, randomisée, en double aveugle, de la supériorité de l’association KEYTRUDA (pembrolizumab) et chimiothérapie (sel de platine, paclitaxel ± beva-cizumab) par rapport à la chimiothérapie seule, notamment en termes de : <br>• survie sans progression (gain de 2,2 mois . HR = 0,62 . IC95% : [0,50 . 0,77])<br>• survie globale avec une médiane non atteinte dans le groupe pembrolizumab versus 16,3 mois (HR = 0,64 ([0,50 . 0,81]).<br>• Un profil de tolérance déjà connu du KEYTRUDA (pembrolizumab) avec des incidences d’EI proches entre les deux groupes de traitement .<br>Et malgré l’absence de conclusion formelle pouvant être tirée des résultats de qualité de vie,<br>KEYTRUDA, en association à une chimiothérapie, apporte une amélioration du service médi-cal rendu modérée (ASMR III) dans le traitement de première ligne des patientes adultes at-teintes d’un cancer du col de l’utérus persistant, récidivant ou métastatique, dont les tumeurs expriment PD-L1 avec un CPS = 1.</td></tr><tr><td class="text-align-center">III (Modéré)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3338759'>Avis du 06/04/2022</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 06/04/2022 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">KEYTRUDA, en association à une chimiothérapie, apporte une amélioration du service médical rendu modérée (ASMR III) par rapport à la chimiothérapie seule dans le traitement de première ligne des patients adultes atteints d’un cancer du sein triple négatif localement récurrent non résécable ou métastatique, dont les tumeurs expriment PD-L1 avec un CPS = 10.</td></tr><tr><td class="text-align-center">III (Modéré)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3334585'>Avis du 30/03/2022</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 30/03/2022 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">KEYTRUDA en association à LENVIMA (lenvatinib) apporte une amélioration du service médical rendu modérée (ASMR III) par rapport à une monochimiothérapie par doxorubicine ou docétaxel dans le traitement de deuxième ligne des patientes adultes atteintes d’un cancer de l’endomètre avancé ou récidivant, dont la maladie progresse pendant ou après un traitement antérieur à base de sels de platine et qui ne sont pas éligibles à une chirurgie curative ou à une radiothérapie.</td></tr><tr><td class="text-align-center">III (Modéré)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3313589'>Avis du 15/12/2021</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 15/12/2021 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">La Commission de la Transparence considère que KEYTRUDA (pembrolizumab) en association à une chimiothérapie à base de sels de platine et de fluoropyrimidine apporte une amélioration du service médical rendu modérée (ASMR III) par rapport à la chimiothérapie seule dans le traitement de 1ère ligne du cancer de l’oesophage ou d'un adénocarcinome de la jonction gastro-oesophagienne HER-2 négatif de type I (classification Siewert), localement avancés non résécables ou métastatiques, dont les tumeurs expriment PD-L1 avec un CPS =10.</td></tr><tr><td class="text-align-center">IV (Mineur)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3289694'>Avis du 08/09/2021</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 08/09/2021 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">Compte tenu :<br>• de la démonstration de la supériorité de KEYTRUDA (pembrolizumab) en monothérapie par rapport au brentuximab vedotin en monothérapie en termes de survie sans progression avec un gain absolu estimé de 4,9 mois et un HR=0,65 [IC95% : 0,48-0,88], considéré comme cliniquement pertinent dans une étude de phase III randomisée en ouvert ayant inclus des patients en 3ème ligne et plus .<br>et malgré :<br>• l’absence de démonstration d’un gain en survie globale (données immatures) .<br>• l’absence de conclusion formelle pouvant être tirée des résultats de qualité de vie .<br>• l’absence de données comparatives chez l’enfant de 3 ans et plus, mais pour lesquels la Commission souligne l’effort de développement pédiatrique dans cette maladie .<br>la Commission de la Transparence considère que KEYTRUDA (pembrolizumab) en monothérapie apporte une amélioration du service médical rendu mineure (ASMR IV) par rapport au brentuximab vedotin chez les enfants de 3 ans et plus et les adultes atteints d’un lymphome de Hodgkin classique en rechute ou réfractaire après échec d’une greffe de cellules souches autologue (ASCT) ou après au moins deux lignes de traitement antérieures lorsque la greffe autologue n’est pas une option de traitement.</td></tr><tr><td class="text-align-center">IV (Mineur)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3272286'>Avis du 02/06/2021</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 02/06/2021 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">Dans le périmètre du remboursement :<br><br>Compte tenu :<br>• de la démonstration de la supériorité de KEYTRUDA (pembrolizumab) en monothérapie par rapport à une chimiothérapie standard ± thérapie ciblée, en termes de survie sans progression : augmentation en moyenne de 2,9 mois [IC95% : 0,7-5,1] au cours des 24 premiers mois de suivi, dans une étude de phase III randomisée en-ouvert et,<br>• du profil de tolérance marqué par une fréquence moins importante d’événements indésirables de grades 3-5 et d’événements indésirables graves, et une fréquence plus importante d’événements indésirables d’intérêt particulier (identifiés comme risques importants dans le PGR) .<br>et malgré :<br>• l’absence de démonstration d’un gain en survie globale sur une analyse intermédiaire prévue au protocole . <br>• l’absence de conclusion formelle pouvant être tirée des résultats de qualité de vie .<br>la Commission de la Transparence considère que KEYTRUDA (pembrolizumab) en monothérapie apporte une amélioration du service médical rendu mineure (ASMR IV) par rapport à la chimiothérapie ± thérapie ciblée dans le traitement de première ligne des patients adultes atteints d’un cancer colorectal métastatique avec une instabilité microsatellitaire élevée (MSI-H) ou une déficience du système de réparation des mésappariements de l’ADN (dMMR) non résécables d’emblée.</td></tr><tr><td class="text-align-center">IV (Mineur)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3245422'>Avis du 03/03/2021</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 03/03/2021 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Nouvel examen suite au dépôt de nouvelles données</td><td class="text-align-center">Dans le périmètre du remboursement à savoir dans l’indication de l’AMM à l’exception du CBNPC avancé avec réarrangement ALK (ALK+) : <br><br>Les données disponibles ne sont pas de nature à modifier l’appréciation de la Commission, KEYTRUDA (pembrolizumab) apporte une amélioration du service médical rendu mineure (ASMR IV) par rapport au docétaxel dans le traitement du CBNPC localement avancé ou métastatique dont les tumeurs expriment PD-L1 avec un TPS = 1 % après échec d’au moins une chimiothérapie antérieure. Les patients avec mutations activatrices de l’EGFR devant également avoir reçu une thérapie ciblée avant de recevoir KEYTRUDA (pembrolizumab).</td></tr><tr><td class="text-align-center">IV (Mineur)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3190303'>Avis du 03/06/2020</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 03/06/2020 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">Compte tenu :<br>• de la démonstration de la supériorité de l’association KEYTRUDA (pembrolizumab) + chimiothérapie à base de platine et 5-FU par rapport au protocole EXTREME, considéré comme un comparateur acceptable sur la survie globale (critère de jugement principal) avec un gain absolu de 3,2 mois dans cette population (HR = 0,65 . IC 95% = [0,53 . 0,80]. p=0.00002 < seuil de 0,0026)<br>• d’un surcroit de toxicité dans le cadre de son association à la chimiothérapie notamment l’incidence des EI graves (59,8% versus 49,1%)<br>• de l’absence de démonstration d’un bénéfice sur la survie sans progression (critère de jugement principal) <br>• et de l’absence de donnée de qualité de vie à valeur démonstrative,<br>KEYTRUDA en association à la chimiothérapie à base de platine et 5-FU apporte une amélioration de service médicale rendu mineure (ASMR IV) par rapport au protocole EXTREME chez les patients dont les tumeurs expriment le PD-L1 avec un CPS = 1.</td></tr><tr><td class="text-align-center">III (Modéré)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3190303'>Avis du 03/06/2020</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 03/06/2020 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">Compte tenu :<br>• de la démonstration de la supériorité de KEYTRUDA (pembrolizumab) en monothérapie par rapport au protocole EXTREME, considéré comme un comparateur acceptable, sur la survie globale (critère de jugement principal) avec un gain absolu de 2 mois dans cette population (HR = 0,78 . IC95% = [0,64 . 0,96] . p=0,00855 < seuil de 0,0109)<br>• du profil de tolérance favorable de cette monothérapie par rapport au protocole EXTREME,<br>et malgré :<br>• l’absence de démonstration d’un bénéfice sur la survie sans progression (critère de jugement principal),<br>• l’absence de donnée de qualité de vie à valeur démonstrative, <br>KEYTRUDA en monothérapie apporte une amélioration de service médicale rendu modérée (ASMR III) par rapport au protocole EXTREME chez les patients dont les tumeurs expriment le PD-L1 avec un CPS = 1.</td></tr><tr><td class="text-align-center">III (Modéré)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3184677'>Avis du 13/05/2020</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 13/05/2020 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">Compte tenu :<br>• de la démonstration de la supériorité de l’association KEYTRUDA (pembrolizumab) à l’axitinib par rapport au sunitinib, considéré comme un comparateur acceptable, sur les deux critères de jugement principaux lors d’une analyse intermédiaire et avec un court suivi médian de 12,8 mois :<br>• la survie sans progression évaluée par un comité indépendant (15,1 mois vs 11,1 mois en médiane . HR=0,69  IC95% [0,57 . 0,84], p= 0,00014), <br>• la survie globale : HR=0,53 IC95% [0,38 . 0,74] . p=0,00005, avec néanmoins une incertitude pour le sous-groupe à pronostic favorable,<br>malgré :<br>• le surcroît de toxicité de cette association par rapport au sunitinib avec notamment une fréquence plus élevée d’événements indésirables graves (40,3% vs 31,3%), de grades = 3 (75,8% vs 70,6%) ou entrainant l’arrêt du traitement (30,5% vs 13,9%), <br>• l’absence de donnée de qualité de vie à valeur démonstrative, <br>• des incertitudes notamment sur la contribution respective de chacun des composants de l’association pembrolizumab/axitinib,<br>la Commission considère que l’association de KEYTRUDA (pembrolizumab) à l’axitinib apporte une amélioration du service médical rendu modérée (ASMR III) par rapport au sunitinib dans le traitement de 1ère ligne, au stade avancé, du carcinome rénal à cellules claires ou comportant un contingent de cellules claires.</td></tr><tr><td class="text-align-center">III (Modéré)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3112911'>Avis du 09/10/2019</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 09/10/2019 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">Compte-tenu,<br>• de la démonstration de la supériorité de l’association pembrolizumab (KEYTRUDA) plus chimiothérapie par carboplatine et paclitaxel ou nab-paclitaxel par rapport à cette même chimiothérapie administrée seule en termes de survie sans progression et de survie globale (co-critères de jugement principaux) lors d’une analyse intermédiaire prévue au protocole,<br>• du gain en survie globale important (+ 4,6 mois), observé lors d’une analyse intermédiaire à l’issue d’un suivi médian de 8,3 mois dans le groupe pembrolizumab et 7,4 mois dans le groupe placebo,<br>• de la transposabilité limitée des données de l’étude KEYNOTE-407 à la population française compte-tenu du fait que 40 % des patients aient reçu l’association nab-paclitaxel + carboplatine, non citée par les recommandations nationales,<br>• de l’absence de donnée robuste de qualité de vie,<br>KEYTRUDA, en association à une chimiothérapie par carboplatine et paclitaxel ou nab-paclitaxel, apporte une amélioration du service médical rendu modérée (ASMR III) par rapport à l’association carboplatine et paclitaxel ou nab-paclitaxel en première ligne de traitement des patients adultes (statut de performance ECOG de 0 ou 1) atteints de CBNPC métastatique épidermoïde.</td></tr><tr><td class="text-align-center">III (Modéré)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3081878'>Avis du 26/06/2019</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 26/06/2019 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">Prenant en compte :<br>• la démonstration de la supériorité de KEYTRUDA par rapport à un placebo sur la réduction du risque de récidive (médiane de survie sans récidive (critère de jugement principal) de 20,4 mois dans le groupe placebo et non atteinte dans le groupe pembrolizumab) chez les patients atteints d’un mélanome cutané de stade III, après résection complète,<br>• l’immaturité des données de survie globale pour conclure sur un avantage de KEYTRUDA par rapport au placebo sur ce critère de jugement,<br>• le profil de toxicité du pembrolizumab (EI de grades = 3 : 31% dans le groupe pembrolizumab et de 19,1% dans le groupe placebo), <br>• le besoin médical important dans ce contexte compte tenu du risque de récidive élevé en cas d’atteinte ganglionnaire même après résection complète et de la faible efficacité du comparateur historique (interféron), <br>KEYTRUDA apporte comme OPDIVO une amélioration du service médical rendu modérée (ASMR III) dans la stratégie thérapeutique.</td></tr><tr><td class="text-align-center">III (Modéré)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/c_2906433'>Avis du 20/02/2019</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 20/02/2019 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">Compte tenu :<br>• d’une démonstration d’une supériorité de l’association pembrolizumab (KEYTRUDA) plus chimiothérapie par pemetrexed et sel de platine par rapport à cette même chimiothérapie administrée seule en termes de survie sans progression ainsi qu’en survie globale, observée lors d’une analyse intermédiaire, <br>• d’un surcroît de toxicité de cette association par rapport à la chimiothérapie seule notamment des arrêts de traitement pour événements indésirables notés chez près d’un patient sur trois dans l’étude, <br>KEYTRUDA en association à une chimiothérapie par pemetrexed et sel de platine apporte une amélioration du service médical rendu modérée (ASMR III) en termes d’efficacité par rapport à la chimiothérapie par pemetrexed et sel de platine, en traitement de première ligne des patients adultes (statut de performance ECOG de 0 ou 1) atteints de CBNPC métastatique non-épidermoïde dont les tumeurs ne présentent pas de mutations d’EGFR ou d’ALK.</td></tr><tr><td class="text-align-center">V (Inexistant)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/c_2842744'>Avis du 04/04/2018</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 04/04/2018 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">Compte tenu :<br>• des données d’efficacité très limitées issues d’une phase II non comparative, multicohortes, en cours, montrant un pourcentage de réponse objective compris entre 66,7 et 75,4% avec un suivi médian de 15,9 mois,<br>• du nombre de cas de réactions du greffon contre l'hôte et de la mortalité faisant suite à l’allogreffe de cellules souches, plus élevé qu’attendu, chez des patients recevant une allogreffe après un traitement par pembrolizumab,<br>• du besoin médical important chez les patients en rechutes multiples ou réfractaires,<br>la Commission considère que KEYTRUDA n’apporte pas d’amélioration du service médical rendu (ASMR V) dans la stratégie de prise en charge des patients adultes atteints d’un lymphome de Hodgkin classique (LHc) en rechute ou réfractaire :<br>• après échec d’une greffe de cellules souches (GCS) autologue et d’un traitement par brentuximab vedotin (BV), comme OPDIVO,<br>• ou inéligibles à une greffe et après échec d’un traitement par BV.<br>La stratégie de prise en charge de ces patients repose sur les différentes chimiothérapies hors AMM pouvant être proposées à ce stade de la maladie ou sur OPDIVO (en cas d’échec de l’autogreffe et du brentuximab vedotin) ainsi que l’allogreffe (en cas d’éligibilité).</td></tr><tr><td class="text-align-center">IV (Mineur)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/c_2830777'>Avis du 21/02/2018</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 21/02/2018 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">Prenant en compte :<br>• la démonstration de la supériorité de KEYTRUDA par rapport à la chimiothérapie sur la survie globale (gain absolu de 2,9 mois), <br>• l’absence de donnée robuste de qualité de vie dans cette étude réalisée en ouvert, <br>• le risque plus élevé de décès dans les deux premiers mois de traitement par rapport à la chimiothérapie observé dans cette étude,<br>la Commission considère que KEYTRUDA apporte une amélioration du service médical rendu mineure (ASMR IV) par rapport à la chimiothérapie dans le traitement du carcinome urothélial localement avancé ou métastatique après échec d’au moins une chimiothérapie antérieure à base de sels de platine.</td></tr><tr><td class="text-align-center">V (Inexistant)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/c_2780761'>Avis du 05/07/2017</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 05/07/2017 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Inscription (CT)</td><td class="text-align-center">Cette spécialité est un complément de gamme qui n’apporte pas d’amélioration du service médical rendu (ASMR V) par rapport à KEYTRUDA 50 mg poudre pour solution à diluer pour perfusion.</td></tr><tr><td class="text-align-center">III (Modéré)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/c_2774645'>Avis du 17/05/2017</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 17/05/2017 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Extension d'indication</td><td class="text-align-center">KEYTRUDA apporte une amélioration du service médical rendu modérée (ASMR III) par rapport à la bithérapie à base de sels de platine en première ligne de traitement du cancer bronchique non à petites cellules métastatique et dont les tumeurs expriment PD-L1 avec un score de proportion tumorale (TPS) =50% et ne présentent pas de mutation tumorale d’EGFR ou d’ALK.</td></tr></tbody></table></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : MERCK SHARP & DOHME BV</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li><li>médicament nécessitant une surveillance particulière pendant le traitement</li><li>prescription réservée aux médecins compétents en CANCEROLOGIE</li><li>prescription réservée aux médecins compétents en maladie du sang</li><li>prescription réservée aux spécialistes et services HEMATOLOGIE</li><li>prescription réservée aux spécialistes et services ONCOLOGIE MEDICALE</li><li>réservé à l'usage HOSPITALIER</li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure centralisée</li><li>Code CIS : &nbsp;6 268 921 4</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+                              <div id="tabpanel-rcp-et-notice-panel" class="fr-tabs__panel" role="tabpanel"
+                     aria-labelledby="tabpanel-rcp-et-notice" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <p>
+          Ce médicament a été autorisé par la Commission Européenne : vous allez être redirigé·e vers le site de l'EMA.
+        </p>
+        <p>
+                    <a
+            href="https://www.ema.europa.eu/fr/documents/product-information/keytruda-epar-product-information_fr.pdf"
+            target="_blank">Vers le RCP et la notice </a>
+        </p>
+        <p>
+          Vous pouvez consulter l'aide (question 14) pour plus d'informations.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+
+              
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

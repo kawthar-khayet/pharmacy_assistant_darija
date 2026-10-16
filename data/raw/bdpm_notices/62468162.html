@@ -1,0 +1,1815 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="TxvPWf/XOPyaCrgKntpx5Q==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="TxvPWf/XOPyaCrgKntpx5Q==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 29/09/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant RHOPHYLAC 200 microgrammes/2 ml, solution injectable en seringue préremplie"
+            aria-level="3"
+          >
+            RHOPHYLAC 200 microgrammes/2 ml, solution injectable en seringue préremplie
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament RHOPHYLAC 200 microgrammes/2 ml, solution injectable en seringue préremplie - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                      </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 15/06/2004
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : RHOPHYLAC 200 microgrammes/2 ml, solution injectable en seringue préremplie - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0421193">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte><a name="_Toc142279004">Classe pharmacothérapeutique : Immunsérums<span style='text-transform:uppercase'> </span>et immunoglobulines, Immunoglobuline anti-D (Rh), code ATC : J06BB01.</a></p>
+<p class=AmmCorpsTexte><b><span lang=FR-CA>RHOPHYLAC</span> 200 microgrammes/ 2 ml est</b></p>
+<p class=AmmCorpsTexte><span lang=FR-CA>Ce médicament</span> est une solution injectable prête à l’emploi, en seringue préremplie. La solution contient des protéines spécifiques, isolées à partir de plasma humain. Ces protéines appartiennent à la classe des « immunoglobulines », appelées aussi anticorps. Le principe actif de <span lang=FR-CA>RHOPHYLAC</span> 200 microgrammes/2 ml est un anticorps spécifique appelé « immunoglobuline anti-D (Rh) ». Cet anticorps est dirigé contre le facteur Rhésus de type D.</p>
+<p class=AmmCorpsTexte><b>Le facteur Rhésus de type D est</b></p>
+<p class=AmmCorpsTexte>Les facteurs Rhésus sont spécifiques des globules rouges humains. Ce facteur Rhésus de type D (abréviation « Rh(D) ») est présent chez environ 85 % de la population. Ces personnes sont dites <i>Rh(D)</i> <i>positif</i>. Les personnes ne possédant pas le facteur Rhésus de type D sont dites <i>Rh(D) négatif</i>.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><b>L’immunoglobuline anti-D (Rh) est</b></p>
+<p class=AmmCorpsTexte>L’immunoglobuline anti-D (Rh) est un anticorps, actif contre le facteur Rhésus de type D et produit par le système immunitaire. Quand une personne Rh(D) négatif reçoit du sang Rh(D) positif, son système immunitaire reconnaît les globules rouges Rh(D) positif comme « étrangers » et va tenter de les détruire. </p>
+<p class=AmmCorpsTexte>Pour cela, le système immunitaire va fabriquer des anticorps spécifiques dirigés contre le facteur Rhésus de type D. Ce mécanisme initial est appelé « immunisation » et dure habituellement un certain temps (2-3 semaines). Lors de ce premier contact, les globules rouges Rh(D) positif ne sont pas détruits, et en général aucun signe ou symptôme n’apparaît. Mais si la même personne Rh(D) négatif reçoit à nouveau du sang Rh(D) positif, ses anticorps sont alors disponibles et son système immunitaire détruit les globules rouges Rh(D) positifs étrangers de façon immédiate.</p>
+<p class=AmmCorpsTexteGras>Comment <span lang=FR-CA>RHOPHYLAC</span> 200 microgrammes/ 2 ml agit</p>
+<p class=AmmCorpsTexte>Si une personne Rh(D) négatif reçoit une quantité suffisante d’immunoglobulines anti-D (Rh), l’isoimmunisation contre le facteur Rhésus de type D peut être évitée. Pour cela, le traitement par RHOPHYLAC 200 microgrammes/2 ml doit être initié avant, ou suffisamment tôt après, le premier contact avec les globules rouges Rh(D) positif. Les immunoglobulines anti-D (Rh) contenues dans ce médicament vont détruire les globules rouges étrangers Rh(D) positif immédiatement. Ainsi, le système immunitaire de la personne n’aura pas le temps nécessaire pour fabriquer ses propres anticorps.</p>
+<p class=AmmCorpsTexteGras>Dans quel cas <span lang=FR-CA>RHOPHYLAC</span> 200 microgrammes/ 2 ml est-il utilisé ?</p>
+<p class=AmmCorpsTexte><span lang=FR-CA>Ce médicament</span> est utilisé dans 2 cas distincts :</p>
+<p class=AmmCorpsTexte><u>A) Vous êtes une femme enceinte Rh(D) négatif et vous attendez un enfant Rh(D) positif</u></p>
+<p class=AmmCorpsTexte>Dans cette situation particulière, vous pouvez être immunisée par les globules rouges Rh(D) positifs de votre enfant qui passent dans votre propre circulation sanguine. Si cela arrive, le premier enfant n’est généralement pas affecté et en bonne santé. Cependant lors d’une prochaine grossesse d’un enfant Rh(D) positif, vos anticorps peuvent détruire les globules rouges Rh(D) positifs de l’enfant, entraînant des complications dans le développement de votre futur bébé, pouvant aller jusqu’à son décès.</p>
+<p class=AmmCorpsTexte><i>Pour cette raison, vous pouvez recevoir du Rhophylac 200 :</i></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous attendez ou venez juste d’accoucher d’un enfant Rh(D) positif ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si avez perdu ou vous risquez de perdre un enfant Rh(D) positif (<i>mort fœtale intra-utérine,</i> <i>fausse couche ou menace de fausse couche </i>ou<i> avortement</i>) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si votre grossesse présente des complications sévères (<i>grossesse ectopique ou une grossesse avec un ovule fécondé non viable (môle hydatiforme</i>)) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>s’il est probable que les globules rouges Rh(D) positifs de votre enfant soient passés dans votre propre circulation sanguine (<i>hémorragie transplacentaire</i> secondaire à une <i>hémorragie pré-partum</i>), par exemple, lors de saignements vaginaux durant la grossesse ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>quand votre médecin a besoin de faire des tests pour rechercher une malformation fœtale (<i>amniocentèse, biopsie de villosités choriales, cordocentèse</i>) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>quand votre médecin ou la sage-femme a besoin d’essayer de changer la position du fœtus (<i>par ex, version céphalique externe du fœtus ou toute autre manœuvre obstétricale)</i> ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez subi un accident au cours duquel l’abdomen a été touché (<i>traumatisme abdominal</i>).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:0cm;margin-bottom:.0001pt'><u>Ce médicament est également utilisé si vous êtes une femme enceinte Rh(D) négatif et quand on ne sait pas si votre enfant est Rh(D) positif.</u></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:0cm;margin-bottom:.0001pt'><u><span style='text-decoration: none'> </span></u></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:0cm;margin-bottom:.0001pt'><u>B) Vous êtes un adulte, enfant ou adolescent (0-18 ans) Rh(D) négatif, qui a reçu accidentellement du sang (transfusion) Rh(D) positif ou d’autres préparations contenant des globules rouges Rh(D) positifs comme le « concentré plaquettaire » (transfusion incompatible).</u></p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament n'appartient à aucun groupe générique</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Solution ( Composition pour 2 ml )<ul role="list"><li role="listitem" style="list-style-type: none;"> > immunoglobuline humaine anti-D <span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">200 microgrammes </span></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > 1 seringue(s) préremplie(s) en verre de 2 ml avec 1 aiguille(s)  </p><p>Code CIP : 363 970-2 ou 34009 363 970 2 6<br/>Déclaration de commercialisation : 02/06/2005<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 55,58 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 56,60 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :100%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><div class='fr-grid-row'><div class='fr-col'><p>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence. </p></div></div><div class='fr-grid-row'><div class='fr-col'><p>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprès de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-smr-aide-2'>plus d'informations dans l'aide</a>). Les avis et synthèses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-smr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection à la page d'aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'SMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur du SMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2610149'>Avis du 03/02/2016</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 03/02/2016 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Renouvellement d'inscription (CT)</td><td class='text-align-center'>Le service médical rendu par RHOPHYLAC reste important dans les indications de l’AMM. ;</td></tr></tbody></table></div></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence.</p></div></div><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprés de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-asmr-aide-3'>plus d'informations dans l'aide</a>). Les avis et synthéses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-asmr-aide-3' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers la page aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'ASMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur de l'ASMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td class="text-align-center">II (Important)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/c_400105'>Avis du 27/10/2004</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 27/10/2004 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Inscription (CT)</td><td class="text-align-center">Dans la prévention anté-natale de l'allo-immunisation, RHOPHYLAC apporte une amélioration du service médical rendu importante (niveau II) par rapport à l'absence de prise en charge.</td></tr><tr><td class="text-align-center">V (Inexistant)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/c_400105'>Avis du 27/10/2004</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 27/10/2004 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Inscription (CT)</td><td class="text-align-center">Dans ses autres indications, RHOPHYLAC n'apporte pas d’amélioration du service médical rendu (niveau V) par rapport à NATEAD.</td></tr></tbody></table></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : CSL BEHRING GmbH</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure de reconnaissance mutuelle</li><li>Code CIS : &nbsp;6 246 816 2</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : RHOPHYLAC 200 microgrammes/2 ml, solution injectable en seringue préremplie - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="RHOPHYLAC 200 microgrammes/2 ml, solution injectable en seringue préremplie, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 12/06/2024</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'><a name="_Toc142278913">RHOPHYLAC 200 microgrammes/2 ml, solution injectable en seringue préremplie</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278914">Chaque seringue préremplie contient 200 microgrammes (1000 UI) d’immunoglobuline humaine anti D*.</a></p>
+<p class=AmmCorpsTexte>Un ml contient 100 microgrammes (500 UI) d’immunoglobuline humaine anti-D.</p>
+<p class=AmmCorpsTexte>Le produit contient des protéines plasmatiques humaines à la concentration maximale de 25 mg/ml, dont 10 mg/ml correspondant à de l'albumine humaine comme agent stabilisant. 95 % au moins des autres protéines plasmatiques sont des IgG.</p>
+<p class=AmmCorpsTexte>Distribution des<s> </s>sous-classes IgG (valeurs approximatives) :</p>
+<p class=AmmCorpsTexte>IgG1 84,1 %</p>
+<p class=AmmCorpsTexte>IgG2 7,6 %</p>
+<p class=AmmCorpsTexte>IgG3 8,1 %</p>
+<p class=AmmCorpsTexte>IgG4 1,0%</p>
+<p class=AmmCorpsTexte>La teneur en Immunoglobuline A (IgA) ne dépasse pas 5 microgrammes/ml.</p>
+<p class=AmmCorpsTexte>*Fabriqué à partir du plasma de donneurs humains</p>
+<p class=AmmCorpsTexte><u>Excipient(s) à effet notoire :</u></p>
+<p class=AmmCorpsTexte>Ce médicament contient moins de 1 mmol de sodium (23 mg) par seringue, c’est-à-dire essentiellement « sans sodium ». Rhophylac ne contient pas de conservateurs.</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, <u>voir rubrique 6.1.</u></p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Solution injectable.</a></p>
+<p class=AmmCorpsTexte>La solution est limpide ou légèrement opalescente et incolore ou jaune pâle.</p>
+<p class=AmmCorpsTexte>Rhophylac a une osmolalité d’au moins 240 mOsmol/kg.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917"><u>Prévention de l’allo-immunisation fœtomaternelle Rh(D) chez les femmes Rh(D) négatif </u></a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Prophylaxie <i>antepartum</i></p>
+<p class=AmmListePuces2 style='text-align:justify'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Prophylaxie <i>antepartum</i> planifiée</p>
+<p class=AmmListePuces2 style='text-align:justify'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Prophylaxie <i>antepartum</i> suite à des complications de la grossesse incluant :</p>
+<p class=AmmListePuces2 style='text-align:justify;text-indent:0cm'>Avortement/risque d'avortement, grossesse extra-utérine ou môle hydatiforme, mort fœtale intra-utérine, hémorragie transplacentaire secondaire à une hémorragie ante-partum, amniocentèse, biopsie chorionique ou manœuvres obstétricales, telles que version par manœuvre externe, interventions invasives, cordocentèse, traumatisme abdominal brusque ou intervention thérapeutique fœtale.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Prophylaxie <i>postpartum</i></p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Accouchement d'un bébé Rh(D) positif (D, D<sup>faible</sup>, D<sup>partiel</sup>)</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Une grossesse incompatible Rh(D) est présumée si le fœtus/bébé est Rh(D) positif ou Rh(D) inconnu ou si le père est Rh(D) positif ou Rh(D) inconnu.</p>
+<p class=AmmCorpsTexte><u>Traitement des adultes, enfants et adolescents (0-18 ans) Rh(D) négatif après transfusions incompatibles de sang Rh(D) positif ou d'autres produits contenant des globules rouges, par exemple des concentrés plaquettaires.</u></p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278918">Posologie</a></p>
+<p class=AmmCorpsTexte>La dose d'immunoglobuline anti-D doit être déterminée en fonction du niveau d'exposition aux globules rouges (GR) Rh(D) positif sachant que 0,5 ml de concentré de GR Rh(D) positif ou 1 ml de sang Rh(D) positif est neutralisé par approximativement 10 microgrammes (50 UI) d'immunoglobuline anti-D.</p>
+<p class=AmmCorpsTexte>Les schémas posologiques suivants sont recommandés sur la base des études cliniques réalisées avec RHOPHYLAC. Pour les données cliniques spécifiques, voir rubrique 5.1.</p>
+<p class=AmmCorpsTexte>Il convient de respecter les doses et les schémas posologiques d'une immunoglobuline humaine anti-D par voie intramusculaire ou intraveineuse recommandés dans les autres directives officielles.</p>
+<p class=AmmCorpsTexte><u>Prévention de l’allo-immunisation fœtomaternelle Rh(D) chez les femmes Rh(D) négatif</u></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><b>Prophylaxie <i>antepartum :</i></b> la dose recommandée est une dose unique de 300 microgrammes (1500 UI), administrée par voie intraveineuse ou intramusculaire.</p>
+<p class=AmmListePuces2 style='text-align:justify'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Prophylaxie <i>antepartum </i>planifiée :</p>
+<p class=AmmListePuces2 style='text-align:justify;text-indent:0cm'>Une dose unique de 300 microgrammes à 28-30 semaines de grossesse. Si le besoin d’une prophylaxie <i>antepartum</i> est identifié au-delà de 30 semaines de grossesse, Rhophylac ne doit pas être écarté mais être administré sans attendre. </p>
+<p class=AmmListePuces2 style='text-align:justify'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Prophylaxie <i>antepartum </i>suite à des complications de la grossesse :</p>
+<p class=AmmListePuces2 style='text-align:justify;text-indent:0cm'>Une dose unique de 300 microgrammes doit être administrée dès que possible dans les 72 heures. Si plus de 72 heures se sont écoulées le produit ne doit pas être écarté mais être administré sans attendre. Si nécessaire la dose peut être répétée à des intervalles de 6-12 semaines tout au long de la grossesse.</p>
+<p class=AmmListePuces1 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:17.85pt;margin-bottom:.0001pt;text-align:justify;text-indent: -17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><b>Prophylaxie <i>postpartum :</i></b> La dose recommandée est une dose unique de 300 microgrammes (1500 UI) administrée par voie intraveineuse ou intramusculaire. En cas d’administration intraveineuse, une dose de 200 microgrammes peut être suffisante pour éviter une hémorragie fœto-maternelle importante.</p>
+<p class=AmmListePuces1 style='text-align:justify;text-indent:0cm'>Pour une utilisation <i>postpartum</i>, le produit doit être administré à la mère dès que possible dans les 72 heures qui suivent l'accouchement d’un enfant Rh positif (D, D<sup>faible</sup>, D<sup>partiel</sup>). Si le délai de 72 heures est écoulé, le produit ne doit pas être écarté mais administré sans attendre.</p>
+<p class=AmmListePuces1 style='margin-bottom:6.0pt;text-align:justify; text-indent:0cm'>La dose <i>postpartum </i>doit être également administrée même si une prophylaxie <i>antepartum</i> a été administrée et qu’une activité résiduelle de la prophylaxie <i>antepartum</i> peut être démontrée par l'analyse du sérum maternel.</p>
+<p class=AmmCorpsTexte>Si une hémorragie fœto-maternelle importante (volume de l’hémorragie > 4 ml de sang fœtal Rh(D) positif) est soupçonnée, par exemple lors d'une anémie fœtale/néonatale ou lors d'une mort fœtale intra-utérine, son intensité peut être estimée par une méthode adéquate tel que le test d'élution acide de Kleihauer-Betke qui détecte l'hémoglobine fœtale (HbF) ou par la technique de la cytométrie de flux qui identifie de manière spécifique les GRRh(D) positif. Des doses complémentaires d'immunoglobulines anti-D doivent être administrées en conséquence (10 microgrammes (50 UI) par 0,5 ml de GR fœtaux Rh(D) positifs ou par 1 ml de sang fœtal Rh(D) positif).</p>
+<p class=AmmCorpsTexte><u>Transfusions incompatibles de GR chez les patients Rh(D) négatif</u></p>
+<p class=AmmCorpsTexte>La dose recommandée est de 20 microgrammes (100 UI) d’immunoglobuline anti-D pour 2 ml de sang Rh(D) positif transfusés ou par 1 ml de concentré de GR Rh(D) positif.<span style='color:black'> La dose appropriée doit être déterminée en concertation avec un spécialiste de la transfusion sanguine. Des tests de suivi des GR Rh(D) positif doivent être réalisés toutes les 48 heures et des anti-D doivent être à nouveau administrés jusqu'à ce que tous les GR Rh(D) positif aient disparu de la circulation sanguine.</span> Une dose maximale de 3000 microgrammes <span style='color:black'>(15000 UI)</span> est suffisante si plus de 300 ml de sang Rh(D) positif ou 150 ml de concentré érythrocytaire Rh(D) positif ont été transfusés. Cependant, en raison du risque possible d’hémolyse, il est recommandé de ne pas dépasser la dose de 3000 microgrammes (15000 UI). </p>
+<p class=AmmCorpsTexte>La voie intraveineuse est recommandée pour obtenir immédiatement les niveaux plasmatiques adéquats. En cas d’injection intramusculaire, il convient d'administrer la dose élevée sur une période de plusieurs jours.</p>
+<p class=AmmCorpsTexte>Les doses recommandées pour la prévention de l'iso-immunisation Rh(D) sont résumées dans le tableau suivant<sup> </sup>:</p>
+<div class='fr-table--lg fr-table'><table>
+<tr>
+<td width=225 valign=top style='width:168.45pt;border:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=StandardRAL-GB><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Indication</span></b></p>
+</td>
+<td width=198 valign=top style='width:148.8pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=StandardRAL-GB><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Moment de l’administration</span></b></p>
+</td>
+<td width=223 valign=top style='width:166.95pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=StandardRAL-GB><b><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Dose</span></b></p>
+</td>
+</tr>
+<tr style='height:31.05pt'>
+<td width=225 valign=top style='width:168.45pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:31.05pt'>
+<p class=StandardRAL-GB><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Prophylaxie antepartum :</span></u></p>
+<p class=StandardRAL-GB><u><span style='font-size:10.0pt;font-family:"Arial",sans-serif'><span style='text-decoration:none'> </span></span></u></p>
+<p class=StandardRAL-GB><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Prophylaxie antepartum planifiée</span></p>
+<p class=StandardRAL-GB><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+<p class=StandardRAL-GB><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+<p class=StandardRAL-GB style='word-break:normal'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Prophylaxie antepartum après complications de la grossesse</span></p>
+</td>
+<td width=198 valign=top style='width:148.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:31.05pt'>
+<p class=StandardRAL-GB><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+<p class=StandardRAL-GB><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+<p class=StandardRAL-GB><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>De 28 à 30 semaines de grossesse</span></p>
+<p class=StandardRAL-GB><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+<p class=StandardRAL-GB><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Dans les 72 heures suivant la complication</span></p>
+</td>
+<td width=223 valign=top style='width:166.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:31.05pt'>
+<p class=StandardRAL-GB><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+<p class=StandardRAL-GB><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+<p class=StandardRAL-GB><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>300 microgrammes (1500 UI) en dose unique</span></p>
+<p class=StandardRAL-GB><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span></p>
+<p class=StandardRAL-GB><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>300 microgrammes (1500 UI) en dose unique<u><sup></sup></u></span></p>
+</td>
+</tr>
+<tr style='height:42.2pt'>
+<td width=225 valign=top style='width:168.45pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:42.2pt'>
+<p class=StandardRAL-GB><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Prophylaxie</span><span lang=EN-GB style='font-size:10.0pt;font-family:"Arial",sans-serif'> post-partum :</span></p>
+</td>
+<td width=198 valign=top style='width:148.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:42.2pt'>
+<p class=StandardRAL-GB><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Dans les 72 heures suivant l’accouchement</span></p>
+</td>
+<td width=223 valign=top style='width:166.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:42.2pt'>
+<p class=StandardRAL-GB><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>300 microgrammes (1500 UI) en dose unique<u><sup></sup></u></span></p>
+</td>
+</tr>
+<tr style='height:42.2pt'>
+<td width=225 valign=top style='width:168.45pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:42.2pt'>
+<p class=StandardRAL-GB><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Hémorragie fœto-maternelle importante (> 4 ml)</span></p>
+</td>
+<td width=198 valign=top style='width:148.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:42.2pt'>
+<p class=StandardRAL-GB style='word-break:normal'><span style='font-size: 10.0pt;font-family:"Arial",sans-serif'>Dans les 72 heures suivant la complication</span></p>
+</td>
+<td width=223 valign=top style='width:166.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:42.2pt'>
+<p class=StandardRAL-GB><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>300 microgrammes (1500 UI) en dose unique <b><i>plus</i> :</b></span></p>
+<p class=StandardRAL-GB style='margin-left:36.0pt;text-indent:-18.0pt'><span style='font-size:10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>10 microgrammes (50 UI) par 0,5 ml de GR fœtaux Rh(D) positifs</span></p>
+<p class=StandardRAL-GB style='margin-left:18.0pt'><span lang=EN-GB style='font-size:10.0pt;font-family:"Arial",sans-serif'>ou</span></p>
+<p class=StandardRAL-GB style='margin-left:36.0pt;text-indent:-18.0pt'><span style='font-size:10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>10 microgrammes (50 UI) par 1 ml de sang fœtal Rh(D) positif</span></p>
+</td>
+</tr>
+<tr style='height:95.1pt'>
+<td width=225 valign=top style='width:168.45pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:95.1pt'>
+<p class=StandardRAL-GB><span lang=EN-GB style='font-size:10.0pt;font-family: "Arial",sans-serif'>Transfusions incompatibles</span></p>
+</td>
+<td width=198 valign=top style='width:148.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:95.1pt'>
+<p class=StandardRAL-GB><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Dans les 72 heures suivant l'exposition</span></p>
+</td>
+<td width=223 valign=top style='width:166.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:95.1pt'>
+<p class=StandardRAL-GB style='margin-left:36.0pt;text-indent:-18.0pt'><span style='font-size:10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>10 microgrammes (50 UI) par 0,5 ml de concentré de GR transfusés Rh(D) positifs</span></p>
+<p class=StandardRAL-GB style='margin-left:18.0pt'><span lang=EN-GB style='font-size:10.0pt;font-family:"Arial",sans-serif'>ou</span></p>
+<p class=StandardRAL-GB style='margin-left:36.0pt;text-indent:-18.0pt'><span style='font-size:10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>10 microgrammes (50 UI) par 1 ml de sang transfusé Rh(D) positif</span></p>
+</td>
+</tr>
+</table></div>
+<p class=AmmCorpsTexte><sup></sup> La dose de Rhophylac peut devoir être augmentée si le patient est exposé à > 15 ml de GR fœtaux Rh(D) positifs. Dans ce cas, suivre les recommandations posologiques en cas d'hémorragie fœto-maternelle importante.</p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmAnnexeTitre4>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Comme la posologie en cas de transfusion incompatible dépend du volume de sang Rh (D) positif ou de concentré de GR transfusé Rh(D) positif, la dose recommandée chez les enfants et adolescents (0-18 ans) n'est pas considérée comme différente de celle des adultes. Toutefois, la posologie doit être déterminée en consultation avec un spécialiste de la transfusion sanguine.</p>
+<p class=AmmAnnexeTitre4 style='margin-top:6.0pt;page-break-after:avoid'>Population âgée</p>
+<p class=AmmCorpsTexte>Comme la posologie en cas de transfusion incompatible dépend du volume de sang Rh(D) positif ou de concentré de GR transfusé Rh(D) positif, la dose recommandée chez les patients âgés (&#8805; 65 ans) n’est pas considérée comme différente de celle des adultes. La posologie doit être déterminée en consultation avec un spécialiste de la transfusion sanguine.</p>
+<p class=AmmAnnexeTitre3>Mode d'administration</p>
+<p class=AmmCorpsTexte>Comme avec tous les produits sanguins, les patients doivent être surveillés pendant au moins 20 minutes après l’administration de Rhophylac.</p>
+<p class=AmmCorpsTexte>Injecter lentement par voie intraveineuse ou intramusculaire.</p>
+<p class=AmmCorpsTexte>Si un volume important (>2 ml pour les enfants ou >5 ml pour les adultes) est nécessaire et l’injection intramusculaire est choisie, il est conseillé d’injecter des doses fractionnées en différents sites.</p>
+<p class=AmmCorpsTexte>Si la voie intramusculaire est contre-indiquée (troubles hémorragiques), Rhophylac doit être administré par voie intraveineuse.</p>
+<p class=AmmCorpsTexte><i><u>Obésité </u></i>Chez les patients avec un indice de masse corporelle (IMC) &#8805; 30, l’administration intraveineuse doit être envisagée (voir rubrique 4.4).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278919">Hypersensibilité à la substance active ou à l'un des excipients de Rhophylac listés en rubrique 6.1.</a></p>
+<p class=AmmCorpsTexte>Hypersensibilité aux immunoglobulines humaines.</p>
+<p class=AmmCorpsTexte>La voie intramusculaire est contre-indiquée chez les sujets présentant une thrombocytopénie sévère ou d'autres troubles de l'hémostase.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278920">En cas d'utilisation <i>postpartum</i>, l’immunoglobuline anti-Dest destiné à une administration maternelle. Il ne doit pas être administré au nouveau-né.</a></p>
+<p class=AmmCorpsTexte>Le produit ne doit pas être utilisé chez les sujets Rh(D) positif, ni chez les personnes déjà immunisées contre l'antigène Rh(D).</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><u>Hypersensibilité</u></p>
+<p class=AmmCorpsTexte>Les réactions allergiques à l'immunoglobuline anti-D peuvent survenir même chez les patients qui ont tolérés les administrations précédentes. Les patients doivent être informés des signes précoces des réactions d’hypersensibilité : urticaire, urticaire généralisé, oppression thoracique, respiration sifflante, hypotension et anaphylaxie. Le traitement requis dépend de la nature et de la gravité de l’effet secondaire. En cas de choc, la prise en charge médicale standard pour le traitement du choc doit être respectée. Si les symptômes de réactions de type allergique ou anaphylactique apparaissent, l’interruption immédiate de l’administration est nécessaire. La concentration d’IgA contenue dans Rhophylac est inférieure à la limite de détection de 5 microgrammes / ml. Néanmoins, le produit peut contenir des quantités infimes d’IgA.</p>
+<p class=AmmCorpsTexte>Bien que l'immunoglobuline anti-D ait été utilisée avec succès pour traiter lespatients présentant un déficit en IgA, celles-ci peuvent développer des anticorps anti-IgA et présenter une réaction anaphylactique après administration de dérivés du sangcontenant des IgA. Le médecin traitant doit évaluer le bénéfice du traitement avec RHOPHYLAC par rapport aux risques potentiels de réactions d'hypersensibilité.</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><u>Réactions hémolytiques</u></p>
+<p class=AmmCorpsTexte>Les patients qui ont reçu une transfusion incompatible et à qui des doses très importantes d'immunoglobulines anti-D sont administrées, doivent être suivis sur le plan clinique et du point de vue des paramètres biologiques, en raison du risque de réaction hémolytique.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:0cm;margin-bottom:.0001pt;page-break-after:avoid'><u>Obésité</u></p>
+<p class=AmmCorpsTexte>Il a été reporté que l’administration intramusculaire de RHOPHYLAC chez les patients présentant un indice de masse corporelle (IMC) &#8805; 30 est associée à un risque accru de manque d'efficacité. Par conséquent, chez les patients présentant un IMC &#8805; 30, l’administration intraveineuse doit être envisagée.</p>
+<p class=AmmCorpsTexte><u>Excipients</u></p>
+<p class=AmmCorpsTexte>RHOPHYLAC contient moins de 1 mmol de sodium (23 mg) par seringue, c’est-à-dire essentiellement « sans sodim ». </p>
+<p class=AmmCorpsTexte><u><span lang=FR-CA>Informations sur la sécurité relative au risque de transmission d’agents infectieux</span></u></p>
+<p class=AmmCorpsTexte>Les mesures habituelles de prévention du risque de transmission d'agents infectieux par les médicaments préparés à partir de sang ou de plasma humain comprennent la sélection clinique des donneurs, la recherche des marqueurs spécifiques d'infection sur chaque don et sur les mélanges de plasma ainsi que la mise en œuvre dans le procédé de fabrication d'étapes efficaces pour l'inactivation / élimination virale. Cependant, lorsque des médicaments préparés à partir de sang ou de plasma humain sont administrés, le risque de transmission d'agents infectieux ne peut pas être totalement exclu. Ceci s'applique également aux virus inconnus ou émergents ou autres types d'agents infectieux.</p>
+<p class=AmmCorpsTexte>Les mesures prises sont considérées comme efficaces vis-à-vis des virus enveloppés tels que le virus de l’immunodéficience humaine (VIH), le virus de l’hépatite B (VHB) et le virus de l’hépatite C (VHC).</p>
+<p class=AmmCorpsTexte>Elles peuvent être d'efficacité limitée vis-à-vis des virus non-enveloppés tels que le virus de l’hépatite A (VHA) et le parvovirus B19.</p>
+<p class=AmmCorpsTexte>L'expérience clinique avec les immunoglobulines montre l'absence de transmission du VHA ou du parvovirus B19 et laisse également supposer que la présence d'anticorps contribue de façon importante à la sécurité virale.</p>
+<p class=AmmCorpsTexte>Il est fortement recommandé lors de chaque administration de RHOPHYLAC à un patient, d'enregistrer le nom et le numéro de lot du médicament, afin de maintenir un lien entre le patient et le lot du produit. </p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142278928"></a><a name="_Toc142278926"></a><a name="_Toc142278925"><u>Vaccins à base de virus vivants atténués</u></a></p>
+<p class=AmmCorpsTexte>L'immunisation active avec des vaccins à virus vivant atténué (par exemple, le vaccin contre la rougeole, les oreillons,la rubéole ou la varicelle) doit être reportée jusqu’à 3 mois après la dernière administration de l'immunoglobuline anti-D car l'efficacité du vaccin peut être altérée. </p>
+<p class=AmmCorpsTexte>Si l'immunoglobuline anti-D doit être administrée, dans les 2 à 4 semaines qui suivent l'administration d'un vaccin à virus vivant atténué, l'efficacité de cette vaccination peut être altérée.</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><u>Interférence avec les tests sérologiques</u></p>
+<p class=AmmCorpsTexte>Après l’injection d’immunoglobuline, l’augmentation transitoire de divers anticorps transférés passivement dans le sang du patient peut être responsable de résultats faux positifs lors de tests sérologiques.</p>
+<p class=AmmCorpsTexte>La transmission passive d’anticorps dirigés contre les antigènes érythrocytaires, tels que les groupes sanguins A ou B, Rh(C), Rh(D), peut interférer avec certains tests sérologiques sur les anticorps desGR, comme le test à l’antiglobuline (ou test de Coombs), en particulier chez les nouveau nés Rh(D) positif dont la mère a reçu une prophylaxie <i>antepartum</i>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte>Ce médicament est destiné à être utilisé pendant la grossesse.</p>
+<p class=AmmCorpsTexte>Aucun événement indésirable imputable au médicament n'a été rapporté chez les enfants lors d'une étude incluant 432 femmes Rh(D) négatif ayant reçu une injection de RHOPHYLAC 300 microgrammes avant l'accouchement.</p>
+<p class=AmmAnnexeTitre3>Allaitement</p>
+<p class=AmmCorpsTexte>Ce médicament peut être utilisé pendant l’allaitement.</p>
+<p class=AmmCorpsTexte>Les immunoglobulines sont excrétées dans le lait maternel. Aucun événement indésirable imputable au médicament n'a été rapporté chez les enfants de 256 femmes ayant reçu une administration<i> postpartum </i>de Rhophylac 300 microgrammes, ni chez les enfants de 139 femmes ayant reçu une administration<i> postpartum </i>de Rhophylac 200 microgrammes<i>.</i></p>
+<p class=AmmAnnexeTitre3>Fertilité</p>
+<p class=AmmCorpsTexte>Aucune étude chez l’animal n’a été menée avec Rhophylac. Cependant, l’expérience clinique avec l’immunoglobuline humaine anti-D suggère qu’aucun effet toxique sur la fertilité ne devrait être attendu.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929">RHOPHYLAC n’a </a>aucun effet sur l’aptitude à conduire des véhicules et à utiliser des machines.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmCorpsTexte><u>Résumé du profil de sécurité</u></p>
+<p class=AmmCorpsTexte>Les effets indésirables les plus sévères observées au cours du traitement sont une hypersensibilité ou des réactions allergiques qui peuvent dans de rares cas évoluer vers une chute soudaine de la pression artérielle et un choc anaphylactique, même lorsque le patient n'a pas présenté une hypersensibilité lors d’une précédente administration. Lorsque les immunoglobulines anti-D sont administrées par voie intramusculaire, une douleur locale et une sensibilité peuvent être observées au niveau du site d’injection.</p>
+<p class=AmmCorpsTexte><u>Tableau des effets indésirables :</u></p>
+<p class=AmmCorpsTexte>Les effets indésirables suivants ont été rapportés à partir des études cliniques menées chez 592 patients et de l'expérience après commercialisation. Le tableau récapitulatif présenté ci-dessous est conforme à la classification du système d'organe MedDRA (catégories standard de fréquence).</p>
+<p class=AmmCorpsTexte style='margin-bottom:9.0pt'><span style='color:black'>La fréquence a été évaluée en utilisant les critères suivants : Très fréquent (&#8805;1/10), fréquent (&#8805;1/100 à <1/10), peu fréquent (&#8805;1/1 000 à <1/100), rare (&#8805;1/10 000 à <1/1 000), très rare (<1/10 000).</span></p>
+<div class='fr-table--lg fr-table'><table>
+<thead>
+<tr>
+<td width=295 valign=top style='width:221.2pt;border:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexteGras>Classe de système d'organe MedDRA (SOC)</p>
+</td>
+<td width=222 valign=top style='width:166.7pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexteGras>Effets indésirables (Termes Préconisés, TP, MedDRA)</p>
+</td>
+<td width=97 valign=top style='width:72.6pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexteGras>Fréquence</p>
+</td>
+</tr>
+<tr style='height:23.0pt'>
+<td width=295 style='width:221.2pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 3.5pt 0cm 3.5pt;height:23.0pt'>
+<p class=AmmCorpsTexte><span style='color:black'>Affections du système immunitaire</span></p>
+</td>
+<td width=222 style='width:166.7pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt;height:23.0pt'>
+<p class=AmmCorpsTexte><span style='color:black'>Hypersensibilité, choc anaphylactique </span></p>
+</td>
+<td width=97 style='width:72.6pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt;height:23.0pt'>
+<p class=AmmCorpsTexte><span style='color:black'>rare</span></p>
+</td>
+</tr>
+<tr>
+<td width=295 valign=top style='width:221.2pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><span style='color:black'>Affections du système nerveux</span></p>
+</td>
+<td width=222 valign=top style='width:166.7pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><span style='color:black'>Maux de tête</span></p>
+</td>
+<td width=97 valign=top style='width:72.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><span style='color:black'>peu fréquent</span></p>
+</td>
+</tr>
+<tr>
+<td width=295 valign=top style='width:221.2pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><span style='color:black'>Affections cardiaques</span></p>
+</td>
+<td width=222 valign=top style='width:166.7pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><span style='color:black'>Tachycardie</span></p>
+</td>
+<td width=97 valign=top style='width:72.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><span style='color:black'>rare</span></p>
+</td>
+</tr>
+<tr>
+<td width=295 valign=top style='width:221.2pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><span style='color:black'>Affections vasculaires</span></p>
+</td>
+<td width=222 valign=top style='width:166.7pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><span style='color:black'>Hypotension</span></p>
+</td>
+<td width=97 valign=top style='width:72.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><span style='color:black'>rare</span></p>
+</td>
+</tr>
+<tr style='height:12.3pt'>
+<td width=295 valign=top style='width:221.2pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 3.5pt 0cm 3.5pt;height:12.3pt'>
+<p class=AmmCorpsTexte><span style='color:black'>Affections respiratoires, thoraciques et mediasténal</span></p>
+</td>
+<td width=222 valign=top style='width:166.7pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt;height:12.3pt'>
+<p class=AmmCorpsTexte><span style='color:black'>Dyspnée</span></p>
+</td>
+<td width=97 valign=top style='width:72.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt;height:12.3pt'>
+<p class=AmmCorpsTexte><span style='color:black'>rare</span></p>
+</td>
+</tr>
+<tr style='height:12.3pt'>
+<td width=295 valign=top style='width:221.2pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 3.5pt 0cm 3.5pt;height:12.3pt'>
+<p class=AmmCorpsTexte><span style='color:black'>Affections gastro-intestinales</span></p>
+</td>
+<td width=222 valign=top style='width:166.7pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt;height:12.3pt'>
+<p class=AmmCorpsTexte><span style='color:black'>Nausées, vomissements</span></p>
+</td>
+<td width=97 valign=top style='width:72.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt;height:12.3pt'>
+<p class=AmmCorpsTexte><span style='color:black'>rare</span></p>
+</td>
+</tr>
+<tr>
+<td width=295 valign=top style='width:221.2pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><span style='color:black'>Affections de la peau et du tissu sous-cutané</span></p>
+</td>
+<td width=222 valign=top style='width:166.7pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><span style='color:black'>Réaction cutanée, érythème, prurit </span></p>
+</td>
+<td width=97 valign=top style='width:72.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><span style='color:black'>peu fréquent</span></p>
+</td>
+</tr>
+<tr>
+<td width=295 valign=top style='width:221.2pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><span style='color:black'>Affections musculo-squelettiques et systémiques</span></p>
+</td>
+<td width=222 valign=top style='width:166.7pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><span style='color:black'>Arthralgie</span></p>
+</td>
+<td width=97 valign=top style='width:72.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt'>
+<p class=AmmCorpsTexte><span style='color:black'>rare</span></p>
+</td>
+</tr>
+<tr style='height:21.0pt'>
+<td width=295 rowspan=2 valign=top style='width:221.2pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 3.5pt 0cm 3.5pt;height:21.0pt'>
+<p class=AmmCorpsTexte><span style='color:black'>Troubles généraux et anomalies au site d'administration</span></p>
+</td>
+<td width=222 valign=top style='width:166.7pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt;height:21.0pt'>
+<p class=AmmCorpsTexte><span style='color:black'>Pyrexie, malaise, frissons</span></p>
+</td>
+<td width=97 valign=top style='width:72.6pt;border:none;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt;height:21.0pt'>
+<p class=AmmCorpsTexte><span style='color:black'>peu fréquent</span></p>
+<p class=AmmCorpsTexte><span style='color:black'> </span></p>
+</td>
+</tr>
+<tr style='height:53.75pt'>
+<td width=222 valign=top style='width:166.7pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.5pt 0cm 3.5pt;height:53.75pt'>
+<p class=AmmCorpsTexte><span style='color:black'>Réaction au site d'injection : gonflement, douleur, érythème, induration, </span><span style='font-size:9.5pt;color:black'>chaleur, prurit, éruption cutanée</span></p>
+</td>
+<td width=97 valign=top style='width:72.6pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 3.5pt 0cm 3.5pt;height:53.75pt'>
+<p class=AmmCorpsTexte><span style='color:black'>rare</span></p>
+</td>
+</tr>
+</thead>
+</table></div>
+<p class=AmmCorpsTexte style='margin-top:3.0pt'>Il y a eu des cas spontanés d’hémolyse intravasculaire sévère quand l’anti-D a été administré par voie intraveineuse à des patients Rh(D) positif atteints de thrombocytopénie immune primaire. Une hémolyse accompagnée de décès a été rapportée. L’exacte fréquence de cet effet indésirable n’est pas connue. </p>
+<p class=AmmCorpsTexte>Pour une information sur la sécurité virale, voir rubrique 4.4.</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278931">Aucune donnée n’est disponible concernant un surdosage. Les conséquences d’un surdosage ne sont pas connues. </a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278933">Classe pharmacothérapeutique : Immunsérums<span style='text-transform:uppercase'> </span>et immunoglobulines, Immunoglobuline anti-D (Rh), code ATC : J06BB01.</a></p>
+<p class=AmmCorpsTexte><u>Mécanisme d’action</u></p>
+<p class=AmmCorpsTexte>RHOPHYLAC contient des anticorps spécifiques de type IgG, dirigés contre l’antigène Rh(D) des érythrocytes humains.</p>
+<p class=AmmCorpsTexte><span style='color:black'>Il peut également contenir des anticorps contre d’autres antigènes Rh par exemple anticorps anti-Rh C.</span></p>
+<p class=AmmCorpsTexte>Pendant la grossesse et surtout au moment de l'accouchement, des GR fœtaux peuvent passer dans la circulation maternelle. Si la femme est Rh(D) négatif et que le fœtus est Rh(D) positif, elle peut s'immuniser contre l'antigène Rh(D) et produire des anticorps anti-Rh(D) qui traversent le placenta pouvant provoquer une maladie hémolytique du nouveau-né. L'immunisation passive avec l'immunoglobuline anti-D prévient l'immunisation Rh(D) dans plus de 99 % des cas, à condition qu'une dose suffisante d'immunoglobulines anti-D soit administrée suffisamment tôt après l'exposition aux GR fœtaux Rh(D) positif.</p>
+<p class=AmmCorpsTexte>Le mécanisme par lequel l'immunoglobuline anti-D supprime l'immunisation contre les GR Rh(D) positif n'a pas été élucidé. Cette suppression peut être liée à l'élimination des GR de la circulation avant qu'elles n'aient atteint des sites immunocompétents, ou à des mécanismes plus complexes impliquant la reconnaissance de l'antigène étranger et la présentation de cet antigène par les cellules appropriées aux sites compétents, en présence ou absence d'anticorps.</p>
+<p class=AmmCorpsTexte><u>Effets pharmacodynamiques</u></p>
+<p class=AmmCorpsTexte><u>Prévention de l’isoimmunisation Rh(D)</u></p>
+<p class=AmmCorpsTexte>Chez des volontaires sains, Rh(D) négatif, de sexe masculin, l'administration intraveineuse et intramusculaire de 200 microgrammes (1000 UI) de RHOPHYLAC, 48 heures après l'injection de 5 ml de GR Rh(D) positifs, a entraîné l'élimination quasi-complète des GR Rh(D) positifs en 24 heures. Alors que l'administration intraveineuse de RHOPHYLAC a déclenché instantanément le début de l'élimination des GR, celui observé après l'administration intramusculaire a été retardé, les IgG anti-D devant d'abord être absorbées à partir du point d'injection. Soixante-dix pour cent, en moyenne, des GR Rh(D) positifs injectés ont été éliminés 2 heures après l'administration intraveineuse de RHOPHYLAC. Après une administration intramusculaire, un pourcentage comparable d'élimination des GR Rh(D) positifs a été mesuré après 12 heures.</p>
+<p class=AmmCorpsTexte>De plus, l'efficacité, la tolérance et la pharmacocinétique de RHOPHYLAC sont confirmées par les résultats de trois études cliniques réalisées chez des femmes enceintes. Dans une étude clinique, RHOPHYLAC 200 (1000 UI) a été administré après l'accouchement à 139 sujets "per-protocole". Dans les deux autres études cliniques, RHOPHYLAC 300 (1500 UI) a été administré avant l'accouchement à 408 sujets « per protocole » et également après l’accouchement à 256 sujets qui ont donné naissance à un enfant Rh(D) positif. Aucune des femmes enceintes incluses dans ces études n'a développé d'anticorps dirigés contre l'antigène Rh(D). Dans les études cliniques avec le Rhophylac 300, 207 sujets « per-protocole » se sont vus administrer une dose de Rhophylac 300 par voie intraveineuse, et 201 sujets « per-protocole » par voie intramusculaire. Dans plus de 99% des cas, le mode d’administration avant et après accouchement était le même.</p>
+<p class=AmmCorpsTexte>Des études cliniques avec un dosage inférieur à 200 microgrammes (1000 UI) de RHOPHYLAC n'ont pas été effectuées.</p>
+<p class=AmmAnnexeTitre4>Population pédiatrique</p>
+<p class=AmmCorpsTexte>La sécurité et l’efficacité de RHOPHYLAC n’ont pas été démontrées dans les études cliniques dans la population pédiatrique après une transfusion incompatible de sang Rh(D) positif ou d’autres produits contenant des GR Rh(D) positifs.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278934"><u>Absorption et distribution</u></a></p>
+<p class=AmmCorpsTexte>La biodisponibilité de l'immunoglobuline humaine anti-D par voie intraveineuse est complète et immédiate. L’IgG est rapidement distribuée entre le plasma et le liquide extravasculaire.</p>
+<p class=AmmCorpsTexte>L'immunoglobuline humaine anti-D pour administration intramusculaire est lentement absorbée dans la circulation des compartiments et atteint un maximum après un délai de 2-3 jours.</p>
+<p class=AmmCorpsTexte><u>Elimination</u></p>
+<p class=AmmCorpsTexte>L'immunoglobuline humaine anti-D a une demi-vie d'environ 3 à4 semaines. Cette demi-vie peut varier individuellement d'un patient à un autre.</p>
+<p class=AmmCorpsTexte>Les IgG et les complexes d'IgG sont dégradés par les cellules du système réticulo-endothélial.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278935">En raison de l’induction d’anticorps et de leur interférence, les données précliniques pertinentes disponibles sur l'immunoglobuline anti-D sont limitées. Les études de toxicité par administrations répétées et de toxicité embryo-fœtale n'ont pas été effectuées et sont irréalisables. Le potentiel mutagène des immunoglobulines n'a pas été étudié.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142278937">Albumine humaine</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>Glycine</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>Chlorure de sodium</p>
+<p class=AmmCorpsTexte>Eau pour préparations injectables</p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">En l'absence d'études de compatibilité, ce médicament ne doit pas être mélangé avec d'autres médicaments.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278939">3 ans.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940">A conserver au réfrigérateur (entre 2°C et 8°C). Ne pas congeler.</a></p>
+<p class=AmmCorpsTexte>Le produit ne doit pas être utilisé après la date de péremption (EXP) imprimée sur l’emballage extérieur.</p>
+<p class=AmmCorpsTexte><span lang=FR-CA>Conserver la seringue (sous blister) dans l’emballage extérieur, à l’abri de la lumière.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278942"></a><a name="_Toc142278941"><span lang=FR-CA>2 ml de solution en seringue préremplie (verre de type I) avec 1 aiguille pour injection dans une boîte unitaire.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte>RHOPHYLAC doit être amené à la température ambiante (25°C) avant utilisation.</p>
+<p class=AmmCorpsTexte>RHOPHYLAC doit être inspecté visuellement avant administration pour mettre en évidence la présence de particules et/ou un changement de coloration.</p>
+<p class=AmmCorpsTexte>Ne pas utiliser de solution trouble ou présentant un dépôt.</p>
+<p class=AmmCorpsTexte>RHOPHYLAC est à usage unique seulement (une seringue –  un patient).</p>
+<p class=AmmCorpsTexte>Tout produit non utilisé ou déchet doit être éliminé conformément à la réglementation en vigueur.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Toc142278943"><span lang=DE-CH>CSL BEHRING GMBH</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE-CH>EMIL-VON-BEHRING </span><span lang=DE>STRASSE 76</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>35041 MARBURG</p>
+<p class=AmmCorpsTexte>ALLEMAGNE</p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><a name="_Toc142278944"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>363 970-2 : 2 ml (200 microgrammes) de solution en seringue préremplie –  boîte de 1.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946">[à compléter ultérieurement par le titulaire]</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>{JJ mois AAAA}</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278947">Sans objet.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I.</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_RHOPHYLAC_200_microgrammes/_2_ml,_solution_injectable_en_seringue_préremplie_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE RHOPHYLAC 200 microgrammes/ 2 ml, solution injectable en seringue préremplie ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE RHOPHYLAC 200 microgrammes/ 2 ml, solution injectable en seringue préremplie ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_RHOPHYLAC_200_microgrammes/_2_ml,_solution_injectable_en_seringue_préremplie?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER RHOPHYLAC 200 microgrammes/ 2 ml, solution injectable en seringue préremplie? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER RHOPHYLAC 200 microgrammes/ 2 ml, solution injectable en seringue préremplie?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_UTILISER_RHOPHYLAC_200_microgrammes/2_ml,_solution_injectable_en_seringue_préremplie_?"
+                     aria-label="3. COMMENT UTILISER RHOPHYLAC 200 microgrammes/2 ml, solution injectable en seringue préremplie ? (Lien de redirection)">
+                    3. COMMENT UTILISER RHOPHYLAC 200 microgrammes/2 ml, solution injectable en seringue préremplie ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_RHOPHYLAC_200_microgrammes/_2_ml,_solution_injectable_en_seringue_préremplie_?"
+                     aria-label="5. COMMENT CONSERVER RHOPHYLAC 200 microgrammes/ 2 ml, solution injectable en seringue préremplie ? (Lien de redirection)">
+                    5. COMMENT CONSERVER RHOPHYLAC 200 microgrammes/ 2 ml, solution injectable en seringue préremplie ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : RHOPHYLAC 200 microgrammes/2 ml, solution injectable en seringue préremplie - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="RHOPHYLAC 200 microgrammes/2 ml, solution injectable en seringue préremplie, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 12/06/2024</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'><a name="_Toc142278999"><span lang=FR-CA>RHOPHYLAC</span> 200 microgrammes/2 ml, solution injectable en seringue préremplie</a></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Immunoglobuline humaine anti-D</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmListePuces1 style='text-indent:0cm'><b>Veuillez lire attentivement l'intégralité de cette notice avant d’utiliser ce médicament car elle contient des informations importantes pour vous.</b></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Gardez cette notice, vous pourriez avoir besoin de la relire.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous avez toute autre question, si vous avez un doute, demandez plus d’informations à votre médecin ou à votre pharmacien.</p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous ressentez un quelconque effet indésirable, <span lang=FR-BE>parlez-en à votre médecin ou professionnel de santé</span><span lang=FR-BE>. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice</span><span lang=FR-BE>. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><a name="_Toc142279001">1. Qu'est-ce que </a><span lang=FR-CA>RHOPHYLAC</span> et dans quel cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant d’utiliser <span lang=FR-CA>RHOPHYLAC </span><span style='text-transform:uppercase'>?</span></p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment utiliser <span lang=FR-CA>RHOPHYLAC ?</span></p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver <span lang=FR-CA>RHOPHYLAC </span><span style='text-transform: uppercase'>?</span></p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>6. Informations supplémentaires.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_RHOPHYLAC_200_microgrammes/_2_ml,_solution_injectable_en_seringue_préremplie_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE RHOPHYLAC 200 microgrammes/ 2 ml, solution injectable en seringue préremplie ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279004">Classe pharmacothérapeutique : Immunsérums<span style='text-transform:uppercase'> </span>et immunoglobulines, Immunoglobuline anti-D (Rh), code ATC : J06BB01.</a></p>
+<p class=AmmCorpsTexte><b><span lang=FR-CA>RHOPHYLAC</span> 200 microgrammes/ 2 ml est</b></p>
+<p class=AmmCorpsTexte><span lang=FR-CA>Ce médicament</span> est une solution injectable prête à l’emploi, en seringue préremplie. La solution contient des protéines spécifiques, isolées à partir de plasma humain. Ces protéines appartiennent à la classe des « immunoglobulines », appelées aussi anticorps. Le principe actif de <span lang=FR-CA>RHOPHYLAC</span> 200 microgrammes/2 ml est un anticorps spécifique appelé « immunoglobuline anti-D (Rh) ». Cet anticorps est dirigé contre le facteur Rhésus de type D.</p>
+<p class=AmmCorpsTexte><b>Le facteur Rhésus de type D est</b></p>
+<p class=AmmCorpsTexte>Les facteurs Rhésus sont spécifiques des globules rouges humains. Ce facteur Rhésus de type D (abréviation « Rh(D) ») est présent chez environ 85 % de la population. Ces personnes sont dites <i>Rh(D)</i> <i>positif</i>. Les personnes ne possédant pas le facteur Rhésus de type D sont dites <i>Rh(D) négatif</i>.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><b>L’immunoglobuline anti-D (Rh) est</b></p>
+<p class=AmmCorpsTexte>L’immunoglobuline anti-D (Rh) est un anticorps, actif contre le facteur Rhésus de type D et produit par le système immunitaire. Quand une personne Rh(D) négatif reçoit du sang Rh(D) positif, son système immunitaire reconnaît les globules rouges Rh(D) positif comme « étrangers » et va tenter de les détruire. </p>
+<p class=AmmCorpsTexte>Pour cela, le système immunitaire va fabriquer des anticorps spécifiques dirigés contre le facteur Rhésus de type D. Ce mécanisme initial est appelé « immunisation » et dure habituellement un certain temps (2-3 semaines). Lors de ce premier contact, les globules rouges Rh(D) positif ne sont pas détruits, et en général aucun signe ou symptôme n’apparaît. Mais si la même personne Rh(D) négatif reçoit à nouveau du sang Rh(D) positif, ses anticorps sont alors disponibles et son système immunitaire détruit les globules rouges Rh(D) positifs étrangers de façon immédiate.</p>
+<p class=AmmCorpsTexteGras>Comment <span lang=FR-CA>RHOPHYLAC</span> 200 microgrammes/ 2 ml agit</p>
+<p class=AmmCorpsTexte>Si une personne Rh(D) négatif reçoit une quantité suffisante d’immunoglobulines anti-D (Rh), l’isoimmunisation contre le facteur Rhésus de type D peut être évitée. Pour cela, le traitement par RHOPHYLAC 200 microgrammes/2 ml doit être initié avant, ou suffisamment tôt après, le premier contact avec les globules rouges Rh(D) positif. Les immunoglobulines anti-D (Rh) contenues dans ce médicament vont détruire les globules rouges étrangers Rh(D) positif immédiatement. Ainsi, le système immunitaire de la personne n’aura pas le temps nécessaire pour fabriquer ses propres anticorps.</p>
+<p class=AmmCorpsTexteGras>Dans quel cas <span lang=FR-CA>RHOPHYLAC</span> 200 microgrammes/ 2 ml est-il utilisé ?</p>
+<p class=AmmCorpsTexte><span lang=FR-CA>Ce médicament</span> est utilisé dans 2 cas distincts :</p>
+<p class=AmmCorpsTexte><u>A) Vous êtes une femme enceinte Rh(D) négatif et vous attendez un enfant Rh(D) positif</u></p>
+<p class=AmmCorpsTexte>Dans cette situation particulière, vous pouvez être immunisée par les globules rouges Rh(D) positifs de votre enfant qui passent dans votre propre circulation sanguine. Si cela arrive, le premier enfant n’est généralement pas affecté et en bonne santé. Cependant lors d’une prochaine grossesse d’un enfant Rh(D) positif, vos anticorps peuvent détruire les globules rouges Rh(D) positifs de l’enfant, entraînant des complications dans le développement de votre futur bébé, pouvant aller jusqu’à son décès.</p>
+<p class=AmmCorpsTexte><i>Pour cette raison, vous pouvez recevoir du Rhophylac 200 :</i></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous attendez ou venez juste d’accoucher d’un enfant Rh(D) positif ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si avez perdu ou vous risquez de perdre un enfant Rh(D) positif (<i>mort fœtale intra-utérine,</i> <i>fausse couche ou menace de fausse couche </i>ou<i> avortement</i>) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si votre grossesse présente des complications sévères (<i>grossesse ectopique ou une grossesse avec un ovule fécondé non viable (môle hydatiforme</i>)) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>s’il est probable que les globules rouges Rh(D) positifs de votre enfant soient passés dans votre propre circulation sanguine (<i>hémorragie transplacentaire</i> secondaire à une <i>hémorragie pré-partum</i>), par exemple, lors de saignements vaginaux durant la grossesse ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>quand votre médecin a besoin de faire des tests pour rechercher une malformation fœtale (<i>amniocentèse, biopsie de villosités choriales, cordocentèse</i>) ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>quand votre médecin ou la sage-femme a besoin d’essayer de changer la position du fœtus (<i>par ex, version céphalique externe du fœtus ou toute autre manœuvre obstétricale)</i> ;</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez subi un accident au cours duquel l’abdomen a été touché (<i>traumatisme abdominal</i>).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:0cm;margin-bottom:.0001pt'><u>Ce médicament est également utilisé si vous êtes une femme enceinte Rh(D) négatif et quand on ne sait pas si votre enfant est Rh(D) positif.</u></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:0cm;margin-bottom:.0001pt'><u><span style='text-decoration: none'> </span></u></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:0cm;margin-bottom:.0001pt'><u>B) Vous êtes un adulte, enfant ou adolescent (0-18 ans) Rh(D) négatif, qui a reçu accidentellement du sang (transfusion) Rh(D) positif ou d’autres préparations contenant des globules rouges Rh(D) positifs comme le « concentré plaquettaire » (transfusion incompatible).</u></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_RHOPHYLAC_200_microgrammes/_2_ml,_solution_injectable_en_seringue_préremplie?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER RHOPHYLAC 200 microgrammes/ 2 ml, solution injectable en seringue préremplie?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279015"><b>Veuillez lire cette rubrique attentivement. Les informations indiquées doivent être prises en considération par vous et votre docteur avant d’utiliser ce médicament.</b></a></p>
+<p class=AmmCorpsTexteGras>N'utilisez jamais RHOPHYLAC 200 :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous êtes allergique (hypersensible) aux immunoglobulines humaines,</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>ou à tout autre composant de ce médicament (listé à la rubrique 6).</p>
+<p class=AmmCorpsTexte>Avant le traitement, veuillez informer votre médecin ou tout autre professionnel de santé d'une mauvaise tolérance antérieure à un médicament.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Vous ne devez pas recevoir d'injection dans un muscle, si vous avez :</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>une baisse importante du nombre de plaquettes (<i>thrombocytopénie</i>) ou</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>tout autre trouble sévère de la coagulation. </p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Veuillez en informer votre médecin ou tout autre professionnel de santé avant le traitement. Dans ce cas, ce médicament doit alors vous être administré par injection dans une veine.</p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Avertissements et précautions</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'>Discutez-en avec votre médecin ou professionnel de santé avant que RHOPHYLAC 200 ne vous soit administré :  </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Pour protéger les femmes Rh(D) négatif après l'accouchement d'un enfant Rh(D) positif, ce médicament est toujours administré à la mère, pas au nouveau-né.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ce médicament n'est pas destiné à être administré aux personnes Rh(D) positif, ni chez les personnes déjà immunisées contre l’antigène Rh(D).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><u>L'arrêt de l'administration peut être nécessaire</u></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>RHOPHYLAC 200 microgrammes/2 ml peut entraîner des réactions d'hypersensibilité (réactions allergiques). Dans des rares cas, les réactions allergiques telles qu’une chute soudaine de la pression artérielle ou un choc anaphylactique peuvent survenir (voir aussi rubrique 4 « Quels sont les effets indésirables éventuels ?») même si vous avez reçu antérieurement des immunoglobulines humaines et que vous les avez bien tolérées.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Veuillez informer votre médecin ou professionnel de santé immédiatement si de telles réactions apparaissent. Il ou elle arrêtera l'administration du produit et initiera un traitement en fonction de la nature et de la sévérité de l'effet secondaire.</p>
+<p class=AmmCorpsTexte>Votre médecin ou professionnel de santé sera particulièrement vigilant. </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous présentez un faible taux d'immunoglobulines de type IgA, vous êtes plus susceptible d’avoir une réaction d’hypersensibilité.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Veuillez informer votre médecin ou professionnel de santé si vous présentez un faible taux d’IgA. Il ou elle évaluera alors très minutieusement le bénéfice du traitement avec ce médicament par rapport à l'augmentation du risque de réactions d'hypersensibilité.</p>
+<p class=AmmListePuces2 style='text-align:justify'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Si vous êtes traité avec ce médicament après une transfusion incompatible, vous devez recevoir une assez grande quantité du produit (jusqu'à 3000 microgrammes, équivalent à 30 ml ou 15 seringues). Dans ce cas, une <i>réaction hémolytique </i>peut survenir. Ceci résulte de la destruction attendue des globules rouges étrangers Rh(D) positif. Pour cette raison votre médecin ou tout autre professionnel de santé vous surveillera attentivement et peut avoir besoin de faire certains tests sanguins.</p>
+<p class=AmmListePuces2 style='text-align:justify'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Si votre indice de masse corporelle (IMC) est supérieur ou égal à 30 (calculé en divisant votre masse par le carré de votre taille), l'injection de Rhophylac dans un muscle ne peut être pleinement efficace. Dans ce cas, votre médecin ou professionnel de santé devrait plutôt injecter ce médicament dans une veine.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Informations sur la sécurité par rapport aux infections</p>
+<p class=AmmCorpsTexte>Ce médicament est fabriqué à partir de plasma humain (c'est la partie liquide du sang).</p>
+<p class=AmmCorpsTexte>Quand des médicaments sont fabriqués à partir de sang ou de plasma humain, certaines mesures sont mises en place pour la prévention des infections pouvant être transmises aux patients. Celles-ci comprennent :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une sélection rigoureuse des donneurs de sang et de plasma pour être certain d'exclure ceux risquant d'être porteurs d'infections, et</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>le contrôle de chaque don et des mélanges de plasma pour la présence de virus/d'infection.</p>
+<p class=AmmListePuces2 style='text-align:justify'><span style='font-family: "Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>l’inclusion d’étapes capables d'éliminer ou d'inactiver les virus au cours du procédé de fabrication. </p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Malgré ces mesures, lorsque des médicaments préparés à partir de sang ou de plasma humain sont administrés, le risque de transmission de maladies infectieuses ne peut être totalement exclu. Ceci s'applique également à tous les virus inconnus ou émergents ou autres types d'agents infectieux.</p>
+<p class=AmmCorpsTexte>Les mesures prises 2sont considérées comme efficaces pour les virus enveloppés comme le virus de l'immunodéficience humaine (VIH, virus du SIDA), le virus de l'hépatite B et le virus de l'hépatite C.</p>
+<p class=AmmCorpsTexte>Ces mesures prises peuvent être d'efficacité limitée vis-à-vis de certains virus non-enveloppés comme le virus de l'hépatite A et le parvovirus B19.</p>
+<p class=AmmCorpsTexte>L'expérience clinique avec les immunoglobulines 2montre l'absence de transmission du virus de l'hépatite A ou du parvovirus B19, probablement parce que les anticorps présents contre ces infections dans ce produit, sont protecteurs.</p>
+<p class=AmmCorpsTexte>Il est fortement recommandé <b>de noter le nom et le numéro de lot du produit à chaque administration,</b> afin de garder un enregistrement de tous les lots utilisés.</p>
+<p class=AmmCorpsTexte><u>Tests sanguins</u></p>
+<p class=AmmCorpsTexte>Veuillez informer votre médecin ou professionnel de santé que vous avez été traité avec RHOPHYLAC 200 dans le cas où il vous prescrirait à vous-même ou à votre nouveau-né un test sanguin (test sérologique).</p>
+<p class=AmmCorpsTexte>Après l'administration de ce médicament, les résultats de certains tests sanguins peuvent être modifiés pendant un certain temps. Si vous avez reçu ce médicament avant d’accoucher, les résultats de certains tests sanguins de votre nouveau-né peuvent également être modifiés.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et RHOPHYLAC 200</p>
+<p class=AmmCorpsTexte>Veuillez toujours indiquer à votre médecin ou tout autre professionnel de santé si vous prenez, avez pris récemment ou que vous pourriez prendre un autre médicament. Ceci s'applique aussi aux médicaments obtenus sans ordonnance.</p>
+<p class=AmmCorpsTexte><u>Vaccinations</u></p>
+<p class=AmmCorpsTexte>Avant le traitement, veuillez informer votre médecin ou professionnel de santé si vous avez été vacciné au cours des 2-4 semaines précédentes.</p>
+<p class=AmmCorpsTexte>Après le traitement, informez également le médecin qui vous a vacciné. Il pourrait alors prévoir de vérifier l’efficacité de votre vaccination.</p>
+<p class=AmmCorpsTexte>Ce médicament peut entraver l'efficacité de la vaccination avec des vaccins constitués de virus vivants, tels que les vaccins contre la rougeole, les oreillons, la rubéole ou la varicelle.</p>
+<p class=AmmCorpsTexte>De telles vaccinations ne doivent donc pas être faites pendant trois mois après la dernière administration de RHOPHYLAC 200.</p>
+<p class=AmmCorpsTexteGras>Aliments et boissons</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras>Grossesse et allaitement</p>
+<p class=AmmCorpsTexte>Ce médicament est destiné à une utilisation pendant la grossesse ou juste après l'accouchement. </p>
+<p class=AmmCorpsTexte>Les immunoglobulines sont excrétées dans le lait maternel. Lors des études cliniques, 432 femmes ont reçu ce médicament avant l'accouchement et 256 d’entre elles à nouveau après l’accouchement, et aucun effet indésirable n'a été observé chez leur enfant.</p>
+<p class=AmmCorpsTexteGras>Sportifs</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>Rien ne suggère que RHOPHYLAC 200 microgrammes/2 ml ait un effet sur l'aptitude à conduire des véhicules et à utiliser des machines.</p>
+<p class=AmmCorpsTexteGras>RHOPHYLAC contient du sodium.</p>
+<p class=AmmCorpsTexte>Ce médicament contient moins de 1 mmol de sodium (23 mg) par seringue, c’est-à-dire essentiellement « sans sodium ». </p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_UTILISER_RHOPHYLAC_200_microgrammes/2_ml,_solution_injectable_en_seringue_préremplie_?'>3. COMMENT UTILISER RHOPHYLAC 200 microgrammes/2 ml, solution injectable en seringue préremplie ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmAnnexeTitre3><a name="_Toc142279021">Posologie</a></p>
+<p class=AmmCorpsTexte><span style='color:black'>Ce médicament<b> </b></span>peut être administré par votre médecin ou tout autre professionnel de santé dans un muscle ou directement dans une veine.</p>
+<p class=AmmCorpsTexte>Votre médecin décidera quelle quantité de RHOPHYLAC 200 microgrammes/2 ml vous devez recevoir et quelle voie d'administration est appropriée. Par exemple, si votre indice de masse corporelle (IMC) est supérieur ou égal à 30, il/elle devrait plutôt injecter ce médicament directement dans une veine (voir aussi rubrique 2).</p>
+<p class=AmmCorpsTexte>La seringue doit être amenée à température ambiante (25°C) avant l'administration.</p>
+<p class=AmmCorpsTexte><b>Une seringue</b> doit être utilisée pour <b>un patient</b> seulement (même s'il reste du produit).</p>
+<p class=AmmCorpsTexte>Vous devrez être surveillé pendant au moins 20 minutes après avoir reçu RHOPHYLAC.</p>
+<p class=AmmCorpsTexteGras>Si vous avez utilisé plus de RHOPHYLAC 200 microgrammes/ 2 ml, solution injectable en seringue préremplie que vous n'auriez dû :</p>
+<p class=AmmCorpsTexte>Les conséquences d’un surdosage ne sont pas connues.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament est susceptible d'avoir des effets indésirables, bien que tout le monde n'y soit pas sujet. De tels effets secondaires peuvent apparaître même si vous avez déjà reçu des immunoglobulines humaines et que vous les avez bien tolérées.</a></p>
+<p class=AmmCorpsTexte>Des réactions allergiques (réactions d’hypersensibilité) ont été observées rarement (survient chez 1 à 10 utilisateurs sur 10000).</p>
+<p class=AmmCorpsTexte>Les premiers signes peuvent apparaître comme des petites bulles de démangeaisons sur la peau (urticaire) ou sur tout le corps (urticaire généralisée). Ils peuvent évoluer vers des réactions d'hypersensibilité / anaphylactiques sévères, comme une chute soudaine de la pression artérielle ou un choc (par exemple, vous pouvez ressentir des étourdissements, des vertiges, défaillir en position debout, froid dans les mains et les pieds, un rythme cardiaque anormal ou une douleur thoracique, une oppression thoracique, une respiration sifflante ou une vision floue) même si vous n'avez pas présenté d'hypersensibilité sur les administrations précédentes<span style='color:#222222'>.</span></p>
+<p class=AmmCorpsTexte>Veuillez informer votre médecin ou professionnel de santé immédiatement si vous notez de tels signes pendant l’administration de RHOPHYLAC. Il ou elle décidera d’arrêter l’administration complétement et commencera un traitement adapté.</p>
+<p class=AmmCorpsTexte>Si on vous administre ce médicament dans un muscle, vous pouvez ressentir une douleur locale et une sensibilité au site d'injection.</p>
+<p class=AmmCorpsTexte>Les effets indésirables suivants sont <b>peu fréquents</b> (survient chez 1 à 10 utilisateurs sur 1000) :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>fièvre et sensation de froid (<i>tremblements</i>),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>impression de se sentir souffrant (<i>malaise</i>),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>maux de tête,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>réactions cutanées, rougeur de la peau (<i>érythème</i>), démangeaisons (<i>prurit</i>).</p>
+<p class=AmmCorpsTexte>Les effets indésirables suivants sont <b>rares</b> (survient chez 1 à 10 utilisateurs sur 10000) :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>réactions allergiques, choc anaphylactiqu<a name="_GoBack"></a>e</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>nausées et/ou vomissements,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>faible tension artérielle (<i>hypotension</i>),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>battements cardiaques ou pouls rapides (<i>tachycardie</i>),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>douleur articulaire (<i>arthralgie</i>),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>difficulté à respirer (<i>dyspnée</i>).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>réactions au site d’injection.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à <votre médecin> <ou> <,> <votre pharmacien> <ou à votre infirmier/ère>. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet:<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a>.</p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_RHOPHYLAC_200_microgrammes/_2_ml,_solution_injectable_en_seringue_préremplie_?'>5. COMMENT CONSERVER RHOPHYLAC 200 microgrammes/ 2 ml, solution injectable en seringue préremplie ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026"></a><a name="_Toc142279024">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte>Ne pas utiliser ce médicament après la date de péremption mentionnée sur l'emballage extérieur et sur l'étiquette de la seringue après EXP. La date de péremption fait référence au dernier jour du mois.</p>
+<p class=AmmCorpsTexte>A conserver au réfrigérateur (entre 2°C et 8°C).</p>
+<p class=AmmCorpsTexte>Ne pas congeler.</p>
+<p class=AmmCorpsTexte>Conserver la seringue dans l'emballage extérieur (emballage en plastique scellé) à l'abri de la lumière.</p>
+<p class=AmmCorpsTexte>N'utilisez pas ce médicament si vous constatez que la solution est trouble ou contient des dépôts.</p>
+<p class=AmmCorpsTexte>Ne jetez aucun médicament au tout-à-l'égout ou avec les ordures ménagères. Demandez à votre médecin ou à votre pharmacien comment éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l'environnement.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient RHOPHYLAC 200 microgrammes/ 2 ml, solution injectable en seringue préremplie </a></p>
+<p class=AmmCorpsTexte>La substance active est l'immunoglobuline humaine normale anti-D (Rh) (anticorps de type IgG contre le facteur Rhésus de type D)</p>
+<p class=AmmCorpsTexte>Les autres composants sont l’albumine humaine, la glycine, le chlorure de sodium et l’eau pour préparations injectables.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Le produit contient au maximum 30 mg/ml de protéines plasmatiques humaines dont 10 mg/ml d'albumine humaine utilisée comme stabilisant. Au moins 95 % des autres protéines plasmatiques humaines sont des immunoglobulines (anticorps) de type IgG. RHOPHYLAC 200 microgrammes/2 ml ne contient pas plus de 5 microgrammes/ml d'immunoglobulines (anticorps) de type IgA.</p>
+<p class=AmmCorpsTexte>RHOPHYLAC ne contient pas de conservateurs.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que RHOPHYLAC 200 et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279030">Ce médicament est une solution injectable limpide ou légèrement opalescente et incolore ou jaune pâle. Rhophymac 200 est fourni dans une seringue en verre préremplie de 2 ml de solution stérile prête à l’emploi contenant 200 microgrammes (1000 UI) d'immunoglobulines anti-D.</a></p>
+<p class=AmmCorpsTexte>Chaque boîte contient une seringue préremplie et une aiguille pour injection, le tout dans un conditionnement transparent (récipient en plastique clair scellé par une feuille de papier).</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Toc142279031"><span lang=DE-CH>CSL BEHRING GMBH</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=DE-CH>EMIL-VON-BEHRING </span><span lang=DE>STRASSE 76</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>35041 MARBURG</p>
+<p class=AmmCorpsTexte>ALLEMAGNE</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmTitulaireNom0><a name="_Toc142279032">CSL BEHRING SA</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>CARRE SUFFREN </p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>31-35 RUE DE LA FEDERATION</p>
+<p class=AmmCorpsTexte>75015 PARIS</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Toc142279033">CSL BEHRING GMBH</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>EMIL-VON-BEHRING STRASSE 76</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>35041 MARBURG</p>
+<p class=AmmCorpsTexte>ALLEMAGNE</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexteGras>Ce médicament est autorisé dans les Etats membres de l'Espace Economique Européen sous les noms suivants : Conformément à la réglementation en vigueur.</p>
+<p class=AmmCorpsTexte>[À compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279038">[à compléter ultérieurement par le titulaire]</a></p>
+<p class=AmmCorpsTexteGras>{MM/AAAA}</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

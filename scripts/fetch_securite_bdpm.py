@@ -24,8 +24,8 @@ paracetamol vaut pour Doliprane comme pour Panadol. On choisit donc une
 specialite francaise representative par molecule et on lit sa notice.
 
 Usage :
-    py scripts/fetch_securite_bdpm.py            # 300 molecules les plus repandues
-    py scripts/fetch_securite_bdpm.py --top 20   # echantillon de mise au point
+    py scripts/fetch_securite_bdpm.py              # toutes les molecules du marche
+    py scripts/fetch_securite_bdpm.py --top 20     # echantillon de mise au point
 """
 import argparse
 import re
@@ -52,8 +52,13 @@ FICHIERS = {"cis": "CIS_bdpm.txt", "compo": "CIS_COMPO_bdpm.txt"}
 ENTETES = {"User-Agent": "DwaTalk/0.1 (projet etudiant, assistant pharmacie Maroc)"}
 DELAI_S = 1.0  # une notice par seconde : le site est un service public, pas une API
 
-SEPARATEUR_DCI = "//"
-SEUIL_SUBSTANCE = 92
+# Une association s'ecrit "A // B", "A / B" ou "A + B" selon la liste d'origine.
+SEPARATEUR_DCI = re.compile(r"\s*//\s*|\s+/\s+|\s*\+\s*")
+# Rattrape une faute de frappe ("CHLOHYDRATE", "ETHINYLESTRADIOL" /
+# "ETHINYLOESTRADIOL"), pas un nom voisin : deux molecules differentes peuvent
+# ne differer que de deux lettres ("chlorphenoxamine" / "chlorphenamine"),
+# d'ou un seuil haut sur le nom entier.
+SEUIL_SUBSTANCE = 94
 
 # Debut de chaque rubrique dans une notice francaise, dans l'ordre ou elles
 # apparaissent. La rubrique court jusqu'au debut de la suivante.
@@ -122,13 +127,37 @@ MOTS_SELS = {
     "succinate", "phosphate", "nitrate", "gluconate", "lactate", "oxalate",
     "trihydratee", "trihydrate", "dihydrate", "monohydrate", "hemihydrate",
     "anhydre", "hydrate", "micronise", "micronisee", "base", "de", "d", "du", "l",
+    "dihydratee", "monohydratee", "hemihydratee", "sesquihydrate", "sesquihydratee",
+    "pentahydrate", "pentahydratee", "dichlorhydrate", "hemifumarate", "hydrogenosulfate",
+    "disodique", "monosodique", "dipotassique", "hemicalcique", "arginine", "tert",
+    "butylamine", "erbumine", "trometamol", "meglumine", "propionate", "dipropionate",
+    "furoate", "xinafoate", "hyclate", "embonate", "pamoate", "tosilate", "valerate",
+    "dl",
 }
+
+# Quand il ne reste que l'un de ces mots une fois le sel retire, le sel etait
+# la molecule elle-meme : "chlorure de sodium" et "chlorure de potassium" ne
+# doivent pas se reduire tous deux a "chlorure" et partager une notice.
+ANIONS_SEULS = {
+    "chlorure", "bicarbonate", "carbonate", "hydroxyde", "oxyde", "iodure", "fluorure",
+    "bromure", "peroxyde", "permanganate", "thiosulfate", "alginate", "valproate",
+    "acide", "sel", "sels",
+}
+ARTICLES = {"de", "d", "du", "l"}
 
 
 def cle_base(nom) -> str:
     """Nom de molecule debarrasse de la forme saline et de l'hydratation."""
-    mots = [m for m in cle(nom).split() if m not in MOTS_SELS]
+    tous = cle(nom).split()
+    mots = [m for m in tous if m not in MOTS_SELS]
+    if not mots or all(m in ANIONS_SEULS for m in mots):
+        mots = [m for m in tous if m not in ARTICLES]
     return " ".join(mots)
+
+
+def principes_actifs(dci) -> list[str]:
+    """Les substances d'une DCI marocaine, une par element."""
+    return [p.strip() for p in SEPARATEUR_DCI.split(str(dci)) if p.strip()]
 
 
 def variantes(nom) -> list[str]:
@@ -137,13 +166,20 @@ def variantes(nom) -> list[str]:
     Un acide et son sel portent des noms differents ("acide clavulanique" cote
     marocain, "clavulanate de potassium" cote BDPM) : la regle de formation est
     reguliere en francais, on genere donc la forme en -ate."""
-    base = cle_base(nom)
-    formes = [base]
-    mots = base.split()
-    if mots and mots[0] == "acide" and len(mots) > 1:
-        radical = re.sub(r"(ique|iques)$", "", mots[1])
-        formes.append(" ".join([radical + "ate"] + mots[2:]).strip())
-    return [f for f in formes if f]
+    # Une parenthese porte soit le sel ("ONDANSETRON (CHLORHYDRATE)"), soit
+    # l'autre nom de la molecule ("VITAMINE D3 (CHOLECALCIFEROL)") : on essaie
+    # le nom sans elle, puis son contenu.
+    nom = str(nom)
+    ecritures = [re.sub(r"\([^)]*\)", " ", nom), nom] + re.findall(r"\(([^)]*)\)", nom)
+    formes = []
+    for ecriture in ecritures:
+        base = cle_base(ecriture)
+        formes.append(base)
+        mots = base.split()
+        if mots and mots[0] == "acide" and len(mots) > 1:
+            radical = re.sub(r"(ique|iques)$", "", mots[1])
+            formes.append(" ".join([radical + "ate"] + mots[2:]).strip())
+    return [f for f in dict.fromkeys(formes) if f]
 
 
 def telecharger_fichier(nom: str) -> Path:
@@ -186,20 +222,39 @@ def dci_les_plus_repandues(reference: pd.DataFrame, combien: int) -> list[str]:
     return compte.head(combien).index.tolist()
 
 
+def _suffixes(nom: str) -> list[str]:
+    """Les variantes numerotees d'un nom : "2a", "1b"..."""
+    return re.findall(r"\b\d+\s?[a-z]\b", nom)
+
+
 def composition_de(actif: str, index_substances: dict) -> str | None:
     """La cle BDPM correspondant a un principe actif marocain, ou None."""
     for forme in variantes(actif):
         if forme in index_substances:
             return forme
-    meilleur = process.extractOne(
-        cle_base(actif), list(index_substances), scorer=fuzz.WRatio,
-        score_cutoff=SEUIL_SUBSTANCE,
-    )
-    return meilleur[0] if meilleur else None
+    formes = variantes(actif)
+    if not formes or len(formes[0]) < 6:
+        return None  # nom trop court pour tolerer une faute sans risque
+    cherche = formes[0]
+    chiffres = re.findall(r"\d+", cherche)
+    # Un "e" final en plus ou en moins est la meme molecule ecrite a la
+    # francaise ou a l'anglaise ("imipenem" / "imipeneme").
+    for cle_bdpm in (cherche + "e", cherche[:-1] if cherche.endswith("e") else None):
+        if cle_bdpm in index_substances:
+            return cle_bdpm
+    for cle_bdpm, _, _ in process.extract(
+        cherche, list(index_substances), scorer=fuzz.ratio,
+        score_cutoff=SEUIL_SUBSTANCE, limit=5,
+    ):
+        # "interferon alfa 2a" n'est pas "interferon alfa 2b" : les chiffres et
+        # la lettre qui les suit doivent etre les memes.
+        if re.findall(r"\d+", cle_bdpm) == chiffres and _suffixes(cle_bdpm) == _suffixes(cherche):
+            return cle_bdpm
+    return None
 
 
 def choisir_specialites(actifs: list[str], cis: pd.DataFrame, compositions: dict,
-                        index_substances: dict, combien: int = 4) -> list[tuple[str, str]]:
+                        index_substances: dict, combien: int = 6) -> list[tuple[str, str]]:
     """Une specialite francaise dont la composition est EXACTEMENT celle de la
     DCI marocaine, ni plus ni moins.
 
@@ -223,9 +278,12 @@ def choisir_specialites(actifs: list[str], cis: pd.DataFrame, compositions: dict
     if lignes.empty:
         return []
     # Une specialite commercialisee et sous forme orale simple a la notice la
-    # plus complete et la plus proche de l'usage courant.
+    # plus complete et la plus proche de l'usage courant. Celles autorisees par
+    # la procedure europeenne centralisee passent en dernier : leur notice est
+    # hebergee par l'Agence europeenne, la BDPM n'en affiche qu'un renvoi.
     lignes["_score"] = (
-        lignes["etat_commercialisation"].str.contains("Commercialis", na=False).astype(int) * 2
+        (~lignes["type_procedure"].str.contains("centralis", case=False, na=False)).astype(int) * 4
+        + lignes["etat_commercialisation"].str.contains("Commercialis", na=False).astype(int) * 2
         + lignes["forme"].str.contains("comprim|g[ée]lule|poudre|suspension", case=False, na=False).astype(int)
     )
     lignes = lignes.sort_values("_score", ascending=False).head(combien)
@@ -359,13 +417,14 @@ def main(combien: int) -> None:
 
     lignes, sans_specialite, sans_rubrique = [], [], []
     for i, dci in enumerate(dcis, start=1):
-        actifs = [p.strip() for p in str(dci).split(SEPARATEUR_DCI) if p.strip()]
+        actifs = principes_actifs(dci)
         candidates = choisir_specialites(actifs, cis, compositions, index_substances)
         if not candidates:
             sans_specialite.append(dci)
             continue
         # La premiere specialite n'a pas toujours de notice en ligne : on
-        # descend la liste jusqu'a en trouver une exploitable.
+        # descend la liste jusqu'a en trouver une qui dit a quoi sert le
+        # medicament ; a defaut, on garde celle qui a le plus de rubriques.
         cis_code = denomination = rubriques = code_atc = None
         for code, nom_specialite in candidates:
             texte = texte_notice(code)
@@ -375,8 +434,10 @@ def main(combien: int) -> None:
             code_atc = atc_trouve.group(1) if atc_trouve else code_atc
             trouvees = decouper_rubriques(texte)
             trouvees["indications"] = extraire_indications(texte)
-            if any(trouvees.values()):
+            remplies = sum(bool(v) for v in trouvees.values())
+            if remplies > sum(bool(v) for v in (rubriques or {}).values()):
                 cis_code, denomination, rubriques = code, nom_specialite, trouvees
+            if trouvees["indications"]:
                 break
         if not rubriques:
             sans_rubrique.append(dci)
@@ -427,5 +488,6 @@ def main(combien: int) -> None:
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser()
-    parser.add_argument("--top", type=int, default=300, help="nombre de molecules")
+    parser.add_argument("--top", type=int, default=100_000,
+                        help="nombre de molecules, les plus repandues d'abord (toutes par defaut)")
     main(parser.parse_args().top)

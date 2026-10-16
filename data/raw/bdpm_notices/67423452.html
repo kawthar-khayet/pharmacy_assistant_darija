@@ -1,0 +1,1580 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="G/jPg1nbLk1wCzTtvrsJfQ==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="G/jPg1nbLk1wCzTtvrsJfQ==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 29/09/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant MYDRIASERT, insert ophtalmique"
+            aria-level="3"
+          >
+            MYDRIASERT, insert ophtalmique
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament MYDRIASERT, insert ophtalmique - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                      </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 01/03/2000
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : MYDRIASERT, insert ophtalmique - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0434501">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte><a name="_Toc142279003">Classe pharmacothérapeutique Mydriatique et cycloplégique - Tropicamide en association - code ATC : S01FA56</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279004">MYDRIASERT est un produit ophtalmique, ce qui signifie qu'il est prévu pour un usage oculaire uniquement.</a></p>
+<p class=AmmCorpsTexte><b>L'utilisation de MYDRIASERT est réservée à l'usage des professionnels de santé.</b></p>
+<p class=AmmCorpsTexte>MYDRIASERT sera appliqué dans la paupière inférieure de votre œil par le personnel médical. Il est utilisé afin d'obtenir une mydriase (dilatation de la pupille) avant une intervention chirurgicale ou pour un examen diagnostique</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament n'appartient à aucun groupe générique</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Insert ( Composition pour un insert )<ul role="list"><li role="listitem" style="list-style-type: none;"> > chlorhydrate de phényléphrine<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">5,40 mg </span><li role="listitem" style="list-style-type: none;"> > tropicamide<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">0,28 mg </span></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > 1 sachet(s) papier polyéthylène aluminium de 1 insert(s) avec pince stérile jetable  </p><p>Code CIP : 353 728-4 ou 34009 353 728 4 0<br/>Déclaration de commercialisation : 01/08/2000<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p>Prix libre, médicament non remboursable ( <a href='/aide#que-signifie-la-notion-de-prix-libre-un-medicament-non-rembourse'>cliquez ici pour en savoir plus sur les médicaments non remboursables</a> )<br/><p> > 20 sachet(s) papier polyéthylène aluminium de 1 insert(s) avec pince stérile jetable  </p><p>Code CIP : 353 729-0 ou 34009 353 729 0 1<br/>Déclaration de commercialisation : 01/02/2001<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p>Prix libre, médicament non remboursable ( <a href='/aide#que-signifie-la-notion-de-prix-libre-un-medicament-non-rembourse'>cliquez ici pour en savoir plus sur les médicaments non remboursables</a> )</div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><p>Pas de SMR disponible pour ce médicament ( <a href='/aide#le-medicament-que-je-recherche-ne-mentionne-pas-de-service-medical-rendu-(SMR)-ni-amelioration-du-service-medical-rendu-(ASMR)' aria-describedby='tooltip-smr-aide'>plus d'informations dans l'aide</a><span id='tooltip-smr-aide' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers aide</span> )</p></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div><div class='fr-col'><p>Pas d'ASMR disponible pour ce médicament (<a href='/aide#le-medicament-que-je-recherche-ne-mentionne-pas-de-service-medical-rendu-(SMR)-ni-amelioration-du-service-medical-rendu-(ASMR)' aria-describedby='tooltip-asmr-aide-2'>plus d'informations dans l'aide )</a></p><span id='tooltip-asmr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers la page aide</span></div></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : Laboratoires THEA</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure de reconnaissance mutuelle</li><li>Code CIS : &nbsp;6 742 345 2</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : MYDRIASERT, insert ophtalmique - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="MYDRIASERT, insert ophtalmique, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 13/06/2025</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278913"><b><span style='font-size:10.0pt; font-family:"Arial",sans-serif'>MYDRIASERT, insert ophtalmique</span> </b></a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=ammcomposition0 style='margin-bottom:6.0pt'><a name="_Toc142278914"><span style='font-size:10.0pt'>Tropicamide..................................................................................................................................0,28 mg</span></a></p>
+<p class=ammcomposition0 style='margin-bottom:6.0pt'><span style='font-size: 10.0pt'>Chlorhydrate de phényléphrine....................................................................................................5,40 mg</span></p>
+<p class=ammcomposition0 align=center style='margin-bottom:6.0pt;text-align: center'><span style='font-size:10.0pt'>Pour un insert ophtalmique</span></p>
+<p class=AmmCorpsTexte><span style='color:black'>Pour la liste complète des excipients, voir rubrique 6.1.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Insert ophtalmique.</a></p>
+<p class=AmmCorpsTexte>Insert blanc à blanc-jaunâtre, de forme oblongue, 4.3 mm x 2.3 mm.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">MYDRIASERT est indiqué dans l’obtention d’une mydriase :</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>préopératoire,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>ou à visée diagnostique quand la monothérapie est connue pour être insuffisante.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278918">Réservé à l’usage des professionnels de santé.</a></p>
+<p class=AmmAnnexeTitre3>Posologie</p>
+<p class=ammcorpstexte0 style='margin-bottom:6.0pt'><span style='font-size: 10.0pt'>Un insert ophtalmique par oeil concerné, au maximum 2 heures avant la chirurgie ou l’examen (voir également rubrique 5.1).</span></p>
+<p class=AmmCorpsTexte><i>Population pédiatrique</i></p>
+<p class=AmmCorpsTexte>MYDRIASERT est contre-indiqué chez l’enfant âgé de moins de 12 ans (voir rubrique 4.3). </p>
+<p class=AmmCorpsTexte>Il n’existe pas de données chez l’enfant âgé de 12 à 18 ans. MYDRIASERT n’est pas recommandé chez ces patients.</p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte>Découper la languette au niveau du trait repère, ouvrir le sachet et localiser l’insert.</p>
+<p class=AmmCorpsTexte>Prendre l’insert à l’aide de la pince stérile jetable aux extrémités arrondies fournie dans le conditionnement, en prenant soin de ne pas l’endommager.</p>
+<p class=AmmCorpsTexte>Tirer la paupière inférieure en la pinçant avec le pouce et l’index (A) et placer l’insert ophtalmique, à l’aide de la pince stérile jetable, dans le cul-de-sac conjonctival inférieur (B).</p>
+<p class=AmmCorpsTexteGras>Conseils d'utilisation</p>
+<p class=AmmCorpsTexte>Ne pas laisser l'insert ophtalmique plus de 2 heures dans le cul-de-sac conjonctival inférieur. Le praticien peut retirer l'insert ophtalmique dès que la mydriase est jugée suffisante pour l'opération ou l'examen qui sera pratiqué, au plus tard, dans la demi-heure suivante.</p>
+<p class=AmmCorpsTexte>En cas d'inconfort, vérifier que l'insert a été placé correctement à la base du cul-de-sac conjonctival.</p>
+<p class=AmmCorpsTexte>Manipuler de façon aseptique. Il est recommandé d'éviter les manipulations excessives des paupières.</p>
+<p class=AmmCorpsTexteGras>ATTENTION: Retrait de l'insert</p>
+<p class=AmmCorpsTexte>Avant l'opération ou l'examen, et dès que la mydriase souhaitée a été obtenue, l'insert ophtalmique doit être retiré du cul-de-sac conjonctival inférieur (C) à l'aide soit d'une pince chirurgicale stérile, soit d'une compresse stérile, soit d'une solution stérile d'irrigation ou de lavage, en abaissant la paupière inférieure.</p>
+<p class=AmmCorpsTexte>Ne pas réutiliser l'insert. Jeter l'insert immédiatement après utilisation.</p>
+
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278919">Hypersensibilité aux substances actives, ou à l'un des excipients mentionnés à la rubrique 6.1.</a></p>
+<p class=AmmCorpsTexte>Risque de glaucome par fermeture de l'angle: patients souffrant de glaucome à angle fermé (non traité préalablement par iridectomie) et patients présentant un angle étroit, prédisposé au glaucome déclenché par les mydriatiques.</p>
+<p class=AmmCorpsTexte>Enfants âgés de moins de 12 ans (voir rubrique 4.4)</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278920">Mises en garde spéciales</a></p>
+<p class=ammcorpstexte0 style='margin-bottom:6.0pt;text-align:justify'><span style='font-size:10.0pt'>Ce médicament entraînant des troubles visuels persistants, il sera conseillé au patient de se faire accompagner à la consultation (</span><a href="http://afssaps-prd.afssaps.fr/php/ecodex/rcp/R0178390.htm#Rcp_4_8_EffetsIndesirables_2#Rcp_4_8_EffetsIndesirables_2"><span style='font-size:10.0pt;color:black;text-decoration:none'>voir rubrique 4.8</span></a><span style='font-size:10.0pt'>).</span></p>
+<p class=ammcorpstexte0 style='margin-bottom:6.0pt;text-align:justify'><span style='font-size:10.0pt'>Protéger l'œil contre la lumière brillante à la fin de l'intervention/l'examen.</span></p>
+<p class=ammcorpstexte0 style='margin-bottom:6.0pt;text-align:justify'><span style='font-size:10.0pt'>Une hyperhémie oculaire peut augmenter l'absorption des substances actives contenues dans l'insert.</span></p>
+<p class=AmmCorpsTexteGras>Précautions particulières d'emploi</p>
+<p class=AmmCorpsTexte>Le déplacement, ou, plus rarement, l'expulsion de l'insert est possible. Dans ce cas, ne pas réutiliser l'insert, en prendre un nouveau (<a href="http://afssaps-prd.afssaps.fr/php/ecodex/rcp/R0178390.htm#Rcp_4_2_PosoAdmin_1#Rcp_4_2_PosoAdmin_1"><span style='color:windowtext;text-decoration:none'>voir rubrique 4.2</span></a>).</p>
+<p class=AmmCorpsTexte>MYDRIASERT ne doit pas être laissé dans le cul-de-sac conjonctival plus de 2 heures. Dans les cas où MYDRIASERT a été oublié, des réactions indésirables locales ont été observées (<a href="http://afssaps-prd.afssaps.fr/php/ecodex/rcp/R0178390.htm#Rcp_4_8_EffetsIndesirables_2#Rcp_4_8_EffetsIndesirables_2"><span style='color:windowtext;text-decoration:none'>voir rubrique 4.8</span></a>)</p>
+<p class=AmmCorpsTexte>Du fait d'une irritation potentielle, peu fréquente, de la conjonctive, une attention particulière devra être accordée chez les patients souffrant de sécheresse oculaire sévère (l'utilisation de MYDRIASERT chez certains patients peut nécessiter l'addition d'une goutte de solution saline pour améliorer la tolérance).</p>
+<p class=AmmCorpsTexte>Tous les agents mydriatiques sont susceptibles de déclencher une crise de glaucome par obstruction mécanique des voies d'élimination de l'humeur aqueuse chez les sujets présentant un angle irido-cornéen étroit.</p>
+<p class=AmmCorpsTexte>Bien que peu probable avec MYDRIASERT, du fait du passage systémique négligeable des substances actives, il est cependant rappelé que la phényléphrine a des activités sympathomimétiques qui pourraient affecter les patients atteints d'hypertension, d'affections cardiaques, d'hyperthyroïdie, d'athérosclérose ou de désordres prostatiques et chez tous les sujets présentant une contre-indication à l'utilisation systémique des amines pressives.</p>
+<p class=AmmCorpsTexte>L'attention des sportifs et athlètes doit être attirée sur le fait que cette spécialité contient une substance active (phényléphrine) susceptible d'induire une réaction positive aux tests pratiqués lors des contrôles anti-dopage.</p>
+<p class=AmmCorpsTexte>Le port de lentilles de contact hydrophiles souples n'est pas recommandé durant le traitement.</p>
+<p class=AmmCorpsTexte>Après insertion de MYDRIASERT, et si l'administration d'autres mydriatiques ne peut être évitée, tenir compte des doses contenues dans l'insert soit environ 1 goutte de solution de phényléphrine à 10 % et environ 1 goutte de solution de tropicamide à 0,5 %.</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmCorpsTexte>L’utilisation chez l’enfant âgé de moins de 12 ans est contre-indiquée, car des réactions indésirables systémiques ont été rapportées avec des produits ophtalmiques contenant de la phényléphrine et tropicamide en particulier dans la population pédiatrique, tel que des troubles cardiovasculaires avec une hypertension sévère, des altérations du rythme cardiaque et un œdème pulmonaire.</p>
+<p class=AmmCorpsTexte>Comparé à l’adulte, l’enfant âgé de moins de 12 ans paraît plus sensible.</p>
+<p class=AmmCorpsTexte>L’utilisation chez l’enfant âgé de 12 à 18 ans n’est pas recommandée car il manque l’expérience clinique adéquate.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278921">Aucune étude spécifique d'interactions n'a été réalisée avec MYDRIASERT.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte>Il n’existe pas de données suffisamment pertinentes concernant l’utilisation de la phényléphrine et du tropicamide chez la femme enceinte. Les études animales ne sont pas concluantes pour ce qui est des effets délétères directs ou indirects sur la gestation, le développement embryonnaire ou fœtal, l’accouchement ou le développement post-natal (voir rubrique 5.3).</p>
+<p class=AmmCorpsTexte>Bien que le passage systémique attendu soit négligeable, une faible exposition systémique ne peut être exclue.</p>
+<p class=AmmCorpsTexte>En conséquence, MYDRIASERT ne doit pas être utilisé sauf si son utilisation s’avère indispensable.</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278927">Allaitement</a></p>
+<p class=AmmCorpsTexte>Il n’existe pas de données concernant le passage de la phényléphrine ou du tropicamide dans le lait maternel. Cependant, la phényléphrine est faiblement absorbée oralement, par conséquent une absorption par le nouveau-né devrait être négligeable.</p>
+<p class=AmmCorpsTexte>Par ailleurs, les nouveau-nés peuvent être très sensibles aux anticholinergiques et, malgré l’exposition systémique négligeable envisagée, le tropicamide n’est pas recommandé pendant l’allaitement.</p>
+<p class=AmmCorpsTexte>En conséquence, MYDRIASERT ne doit pas être utilisé pendant l’allaitement.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929">MYDRIASERT a une influence majeure sur l’aptitude à conduire des véhicules et à utiliser des machines.</a></p>
+<p class=AmmCorpsTexte>L’attention des patients sera attirée sur les risques liés aux agents mydriatiques et cycloplégiques, pouvant engendrer des troubles visuels, des vertiges, une somnolence, ou une concentration altérée : l’application de l’insert ophtalmique MYDRIASERT provoque une mydriase gênante pendant plusieurs heures. En conséquence, après administration, le patient doit être avisé de ne pas conduire et/ou utiliser des machines tant que les troubles visuels persistent et/ou ne pas effectuer d’autres activités à risque.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmCorpsTexte>Les effets transitoires suivants ont été rapportés pendant les études cliniques et depuis la mise sur le marché.</p>
+<p class=AmmCorpsTexte>Les effets indésirables sont catégorisés par fréquence comme suit : Très fréquents (&#8805; 1/10), fréquents (&#8805; 1/100, <1/10), peu fréquents (&#8805; 1/1 000 à <1/100), rares (&#8805; 1/10 000 à <1/1 000), très rares (<1/10 000) fréquence indéterminée (ne peut être estimée sur la base des données disponibles).</p>
+<div align=center>
+<div class='fr-table--lg fr-table'><table>
+<tr style='page-break-inside:avoid'>
+<td width=103 style='width:77.45pt;border:solid windowtext 1.0pt;padding:
+0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=center style='text-align:center;page-break-after: avoid'><span style='font-size:9.0pt'>Classes de systèmes d'organes</span></p>
+</td>
+<td width=79 style='width:59.35pt;border:solid windowtext 1.0pt;border-left:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=center style='text-align:center;page-break-after: avoid'><span style='font-size:9.0pt'>Très fréquents</span></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center;page-break-after: avoid'><span lang=EN-GB style='font-size:11.0pt;font-family:"Times New Roman",serif; font-weight:normal'>&#8805;</span><span lang=EN-GB style='font-size:11.0pt; font-weight:normal'>1/10</span></p>
+</td>
+<td width=103 style='width:77.3pt;border:solid windowtext 1.0pt;border-left:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=center style='text-align:center;page-break-after: avoid'><span style='font-size:9.0pt'>Fréquents</span></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center;page-break-after: avoid'><span lang=EN-GB style='font-size:11.0pt;font-family:"Times New Roman",serif; font-weight:normal'>&#8805;</span><span lang=EN-GB style='font-size:11.0pt; font-weight:normal'>1/100 à <1/10</span></p>
+</td>
+<td width=105 style='width:78.55pt;border:solid windowtext 1.0pt;border-left:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=center style='text-align:center;page-break-after: avoid'><span style='font-size:9.0pt'>Peu fréquents</span></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center;page-break-after: avoid'><span lang=EN-GB style='font-size:11.0pt;font-family:"Times New Roman",serif; font-weight:normal'>&#8805;</span><span lang=EN-GB style='font-size:11.0pt; font-weight:normal'>1/1 000 à <1/100</span></p>
+</td>
+<td width=106 style='width:79.7pt;border:solid windowtext 1.0pt;border-left:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=center style='text-align:center;page-break-after: avoid'><span style='font-size:9.0pt'>Rares</span></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center;page-break-after: avoid'><span lang=EN-GB style='font-size:11.0pt;font-family:"Times New Roman",serif; font-weight:normal'>&#8805;</span><span lang=EN-GB style='font-size:11.0pt; font-weight:normal'>1/10 000 à <1/1 000</span></p>
+</td>
+<td width=93 valign=top style='width:69.65pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 0cm 0cm 0cm'>
+<p class=AmmCorpsTexteGras align=center style='text-align:center;page-break-after: avoid'><span style='font-size:9.0pt'>Très rares</span></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center;page-break-after: avoid'><span lang=EN-GB style='font-size:11.0pt;font-weight:normal'><1/10 000</span></p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td width=103 valign=top style='width:77.45pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><b><span style='font-size:9.0pt'>Affections du système nerveux</span></b></p>
+</td>
+<td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td width=103 valign=top style='width:77.3pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td width=105 valign=top style='width:78.55pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td width=106 valign=top style='width:79.7pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'></td>
+<td width=93 valign=top style='width:69.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 0cm 0cm 0cm'>
+<p class=AmmListePuces1 style='margin-left:0cm;text-indent:0cm;page-break-after: avoid'>Convulsions</p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td width=103 valign=top style='width:77.45pt;border-top:none;border-left:
+solid windowtext 1.0pt;border-bottom:inset 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><b><span style='font-size:9.0pt'>Affections oculaires</span></b></p>
+</td>
+<td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=103 valign=top style='width:77.3pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmListePuces1>Picotements,</p>
+<p class=AmmListePuces1 style='margin-left:0cm;text-indent:0cm;page-break-after: avoid'>Vision floue,</p>
+<p class=AmmListePuces1 style='margin-left:0cm;text-indent:0cm;page-break-after: avoid'>Inconfort visuel</p>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=105 valign=top style='width:78.55pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmListePuces1>Larmoiement,</p>
+<p class=AmmListePuces1>Irritation,</p>
+<p class=AmmListePuces1 style='margin-left:0cm;text-indent:0cm;page-break-after: avoid'>Mydriase gênante due à la dilatation prolongée de la pupille,</p>
+<p class=AmmListePuces1 style='margin-left:0cm;text-indent:0cm;page-break-after: avoid'>Photophobie,</p>
+<p class=AmmListePuces1 style='margin-left:.05pt;text-indent:0cm;page-break-after: avoid'>Kératite ponctuée superficielle.</p>
+</td>
+<td width=106 valign=top style='width:79.7pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmListePuces1>Blépharite,</p>
+<p class=AmmListePuces1>Conjonctivite,</p>
+<p class=AmmListePuces1 style='margin-left:0cm;text-indent:0cm;page-break-after: avoid'>Risque de glaucome à angle fermé,</p>
+<p class=AmmListePuces1 style='margin-left:0cm;text-indent:0cm;page-break-after: avoid'>Hypertension intraoculaire.</p>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'> </span></p>
+</td>
+<td width=93 valign=top style='width:69.65pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 0cm 0cm 0cm'>
+<p class=AmmCorpsTexte align=left style='text-align:left;page-break-after: avoid'><span style='font-size:9.0pt'> </span></p>
+</td>
+</tr>
+</table></div>
+</div>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>De très rares cas d’ulcère cornéen et d’œdème cornéen ont été observés lorsque l’insert à été oublié.</p>
+<p class=AmmCorpsTexte>Bien qu’administré par voie locale, les agents mydriatiques contenus dans cet insert peuvent causer les effets systémiques suivants, dont il faut tenir compte :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>élévation de la pression sanguine, tachycardie,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>très rarement, des accidents majeurs tels qu’arythmie cardiaque,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>tremblements, pâleur, céphalées, sécheresse buccale.</p>
+<p class=AmmCorpsTexteGras style='margin-top:12.0pt'><u>Population pédiatrique</u></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Affections oculaires :</p>
+<p class=AmmListePuces1 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:0cm;margin-bottom:.0001pt;text-indent:0cm'>Pâleur périorbitaire chez les patients prématurés –  Fréquence indéterminée (ne peut être estimée sur la base des données disponibles).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Affections respiratoires, thoraciques et médiastinales :</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Œdème pulmonaire –  Fréquence indéterminée (ne peut être estimée sur la base des données disponibles).</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278931">Bien que peu probable du fait d’une administration unique avec MYDRIASERT (soit en préopératoire soit à visée diagnostique), un risque de surdosage peut cependant arriver dans le cas ou des instillations supplémentaires de collyres mydriatiques ont lieu.</a></p>
+<p class=AmmCorpsTexte>Les symptômes d’un surdosage avec la phényléphrine incluent une fatigue extrême, des sueurs, des vertiges, un ralentissement cardiaque et le coma.</p>
+<p class=AmmCorpsTexte>Les réactions toxiques graves avec la phényléphrine étant d’installation rapide et de faible durée, le traitement est essentiellement symptomatique. Une injection immédiate d’un agent bloquant alpha-adrénergique à action rapide tel que le phentolamine (à la dose de 2 à 5 mg I.V) a été recommandée.</p>
+<p class=AmmCorpsTexte>Les symptômes d’un surdosage avec le tropicamide par voie ophtalmique incluent des maux de têtes, une accélération du rythme cardiaque, une sécheresse de la bouche et de la peau, une somnolence inhabituelle et des rougeurs.</p>
+<p class=AmmCorpsTexte>Aucun effet systémique du tropicamide n’est attendu. Si un surdosage avait lieu avec des effets locaux tels qu’une mydriase prolongée, une administration de pilocarpine ou de physostogmine à 0,25% pourrait être effectuée.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : Mydriatique et cycloplégique –  Tropicamide en association, code ATC : S01FA56.</a></p>
+<p class=AmmCorpsTexte>(S=organes sensoriels)</p>
+<p class=AmmCorpsTexte>MYDRIASERT est un insert ophtalmique combinant deux agents mydriatiques de synthèse (la phényléphrine, alpha sympathomimétique et le tropicamide, anticholinergique).</p>
+<p class=AmmCorpsTexte>Les études cliniques ont montré que le temps nécessaire à l’obtention d’une mydriase stable et suffisante se situe entre 45 et 90 minutes. La mydriase maximale (diamètre pupillaire de 9 mm) est atteinte entre 90 et 120 min.</p>
+<p class=AmmCorpsTexte>La mydriase, une fois atteinte, dure au moins 60 minutes.</p>
+<p class=AmmCorpsTexteGras>En moyenne, la récupération du réflexe pupillaire a été observée après 90 minutes.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278934">Après administration d’un insert pendant 2 heures chez 138 patients dans le cadre d’une chirurgie de la cataracte, les concentrations des substances actives mesurées dans l’humeur aqueuse étaient très faibles :</a></p>
+<p class=AmmCorpsTexte>1,9±3,4 <a name="OLE_LINK4"></a><a name="OLE_LINK3">µg/ml</a> pour la phényléphrine et 0,85±2,06 µg/ml pour le tropicamide. Les quantités cumulées de substances actives libérées en 2 heures par l’insert représentent moins de 40% des doses contenues dans l’insert.</p>
+<p class=AmmCorpsTexte>Dans les mêmes conditions, les taux plasmatiques de phényléphrine mesurés pendant 6 heures chez des volontaires sains n’étaient pas détectables (<0,5 ng/ml).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278935">Des études de pharmacologie de sécurité, de génotoxicité et des études conventionnelles de reproduction n’ont pas été conduites avec le phényléphrine, le tropicamide ou l’association fixe.</a></p>
+<p class=AmmCorpsTexte>Chez le rat, l’administration de phényléphrine (12,5 mg/kg, s.c.) a entraîné une diminution du débit sanguin utérin (86,8% de réduction en 15 minutes environ), montrant ainsi des propriétés foetotoxiques et co-tératogéniques.</p>
+<p class=AmmCorpsTexte>Une étude de tolérance locale de 14 jours a été réalisée chez le lapin, avec insertion pendant 6 heures par jour. Cette étude a démontré un faible effet irritant sur la conjonctive au site d’administration.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937">Copolymère d’ammonio méthacrylate (Type A), dispersion de polyacrylate à 30 %, dibéhénate de glycérol, éthylcellulose. </a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">Sans objet.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278939">3 ans.</a></p>
+<p class=AmmCorpsTexte>Après ouverture du sachet : utiliser immédiatement.</p>
+<p class=AmmCorpsTexte>Après utilisation : jeter l’insert immédiatement.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940">A conserver à une température ne dépassant pas 25°C.</a></p>
+<p class=AmmCorpsTexte>A utiliser immédiatement après ouverture du sachet.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte>Insert ophtalmique en sachet (Papier/PE/Aluminium/PE) et pince stérile jetable en sachet (PET/PEVA transparent d’un côté et papier de l’autre).</p>
+<p class=AmmCorpsTexte>Boîte de 1, 10, 20, 50 ou 100 inserts avec respectivement 1, 10, 20, 50 et 100 pinces.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte>Découper la languette au niveau du trait repère, ouvrir le sachet et localiser l’insert.</p>
+<p class=AmmCorpsTexte>Prendre l’insert à l’aide de la pince stérile jetable aux extrémités arrondies fournie dans le conditionnement, en prenant soin de ne pas l’endommager.</p>
+<p class=AmmCorpsTexte>Tirer la paupière inférieure en la pinçant entre le pouce et l’index et placer l’insert ophtalmique, à l’aide de la pince stérile jetable, dans le cul-de-sac conjonctival inférieur.</p>
+<p class=AmmCorpsTexte>Usage unique.</p>
+<p class=AmmCorpsTexte>Utiliser immédiatement après ouverture du sachet.</p>
+<p class=AmmCorpsTexte>Jeter immédiatement après utilisation.</p>
+<p class=AmmCorpsTexte>Tout médicament non utilisé ou déchet doit être éliminé conformément à la réglementation en vigueur.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmTitulaireNom><a name="_Toc142278943"><span lang=X-NONE>Laboratoires THEA</span></a></p>
+<p class=AmmTitulaireAdresse><span lang=X-NONE style='text-transform:none'>12, RUE LOUIS BLERIOT</span></p>
+<p class=AmmTitulaireAdresse><span lang=X-NONE style='text-transform:none'>ZONE INDUSTRIELLE DU BREZET</span></p>
+<p class=AmmTitulaireAdresse><span lang=X-NONE style='text-transform:none'>63100 CLERMONT FERRAND</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 353 728-4 0 : insert ophtalmique en sachet (Papier/PE/Aluminium/PE) + pince stérile jetable en sachet, boîte de 1.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 353 578-2 3 : insert ophtalmique en sachet (Papier/PE/Aluminium/PE) + pince stérile jetable en sachet, boîte de 10.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 353 729-0 1 : insert ophtalmique en sachet (Papier/PE/Aluminium/PE) + pince stérile jetable en sachet, boîte de 20.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 353 579-9 1 : insert ophtalmique en sachet (Papier/PE/Aluminium/PE) + pince stérile jetable en sachet, boîte de 50.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 353 580-7 3 : insert ophtalmique en sachet (Papier/PE/Aluminium/PE) + pince stérile jetable en sachet, boîte de 100.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946"><span lang=FR-BE>[à compléter ultérieurement par le titulaire]</span></a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I</p>
+<p class=AmmCorpsTexte>Médicament soumis à prescription médicale.</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_MYDRIASERT,_insert_ophtalmique_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE MYDRIASERT, insert ophtalmique ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE MYDRIASERT, insert ophtalmique ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_MYDRIASERT,_insert_ophtalmique_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER MYDRIASERT, insert ophtalmique ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER MYDRIASERT, insert ophtalmique ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_UTILISER_MYDRIASERT,_insert_ophtalmique_?"
+                     aria-label="3. COMMENT UTILISER MYDRIASERT, insert ophtalmique ? (Lien de redirection)">
+                    3. COMMENT UTILISER MYDRIASERT, insert ophtalmique ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_MYDRIASERT,_insert_ophtalmique_?"
+                     aria-label="5. COMMENT CONSERVER MYDRIASERT, insert ophtalmique ? (Lien de redirection)">
+                    5. COMMENT CONSERVER MYDRIASERT, insert ophtalmique ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : MYDRIASERT, insert ophtalmique - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="MYDRIASERT, insert ophtalmique, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 13/06/2025</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmDenomination align=center style='text-align:center'><a name="_Toc142278999">MYDRIASERT, insert ophtalmique</a></p>
+<p class=AmmDenomination align=center style='text-align:center'>Tropicamide et chlorhydrate de phényléphrine</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Veuillez lire attentivement cette notice avant d’utiliser ce médicament car elle contient des informations importantes pour vous.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin, votre pharmacien ou votre infirmier/ère.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin, votre pharmacien ou votre infirmier/ère. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que <span style='text-transform:uppercase'>MYDRIASERT</span>, insert ophtalmique et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant d'utiliser <span style='text-transform: uppercase'>MYDRIASERT</span>, insert ophtalmique?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment utiliser <span style='text-transform:uppercase'>MYDRIASERT</span>, insert ophtalmique?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver<span style='text-transform:uppercase'> MYDRIASERT</span>, insert ophtalmique?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_MYDRIASERT,_insert_ophtalmique_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE MYDRIASERT, insert ophtalmique ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279003">Classe pharmacothérapeutique Mydriatique et cycloplégique - Tropicamide en association - code ATC : S01FA56</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279004">MYDRIASERT est un produit ophtalmique, ce qui signifie qu'il est prévu pour un usage oculaire uniquement.</a></p>
+<p class=AmmCorpsTexte><b>L'utilisation de MYDRIASERT est réservée à l'usage des professionnels de santé.</b></p>
+<p class=AmmCorpsTexte>MYDRIASERT sera appliqué dans la paupière inférieure de votre œil par le personnel médical. Il est utilisé afin d'obtenir une mydriase (dilatation de la pupille) avant une intervention chirurgicale ou pour un examen diagnostique</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_MYDRIASERT,_insert_ophtalmique_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER MYDRIASERT, insert ophtalmique ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">N’utilisez jamais <span style='text-transform:uppercase'>MYDRIASERT</span>, insert ophtalmique dans les cas suivants:</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique au tropicamide ou à la phényléphrine (chlorhydrate de) ou à l’un des autres composants contenus dans ce médicament, mentionnés dans la rubrique 6.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous souffrez de glaucome à angle fermé ou si vous présentez un risque de glaucome (augmentation de la pression oculaire).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Chez l’enfant âgé de moins de 12 ans</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Avertissements et précautions</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Du fait que ce médicament provoque des perturbations visuelles de longue durée, rappelez -vous de vous faire accompagner en allant à votre rendez-vous (<a href="http://afssaps-prd.afssaps.fr/php/ecodex/notice/N0178390.htm#Ann3b_4_EffetsIndesirables_6#Ann3b_4_EffetsIndesirables_6"><span style='color:windowtext;text-decoration:none'>voir effets indésirables éventuels</span></a>).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous ressentez un inconfort après l'insertion de l'insert, informez votre médecin, un déplacement ou plus rarement, une perte de l'insert est possible.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous souffrez de sécheresse oculaire sévère, votre médecin peut ajouter une goutte de solution saline pour réduire le risque d'irritation de l'œil.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>En cas d'hypertension (pression sanguine élevée), d'athérosclérose (épaississement des parois artérielles), de maladie cardiaque et d'hyperthyroïdie (activité intense de la glande thyroïde), ou de désordres prostatiques, informez votre médecin.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Chez certaines personnes prédisposées, les mydriatiques (produits dilatant la pupille) sont susceptibles de déclencher une crise de glaucome aigu (par augmentation brutale de la pression dans l'œil).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Le port de lentilles de contact souples hydrophiles est déconseillé pendant le traitement.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Enfants et adolescents</p>
+<p class=AmmCorpsTexte>MYDRIASERT ne doit pas être utilisé chez l’enfant âgé de moins de 12 ans car les enfants semblent plus sensibles au risque d’effets indésirables graves.</p>
+<p class=AmmCorpsTexte>MYDRIASERT n’est pas recommandé chez l’enfant âgé de 12 à 18 ans car il manque l’expérience clinique adéquate.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et <span style='text-transform: uppercase'>MYDRIASERT</span>, insert ophtalmique</p>
+<p class=AmmCorpsTexte>Si vous utilisez des médicaments qui dilatent la pupille (mydriatiques) en plus de MYDRIASERT, informez votre médecin, qui saura ainsi la quantité totale de mydriatiques à laquelle vous êtes exposé.</p>
+<p class=AmmCorpsTexte>Informez votre médecin ou pharmacien si vous prenez, avez récemment pris ou pourriez prendre tout autre médicament, y compris un médicament obtenu sans ordonnance. Bien que MYDRIASERT soit appliqué localement, une telle information peut être importante car les médicaments influencent leurs actions réciproques.</p>
+<p class=AmmCorpsTexteGras><span style='text-transform:uppercase'>MYDRIASERT</span>, insert ophtalmique avec des aliment et boissons</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279012">Grossesse et allaitement </a></p>
+<p class=AmmCorpsTexte>Il n'y a pas de données adéquates sur l'utilisation de MYDRIASERT ou de ses substances actives chez les femmes enceintes. En conséquence, MYDRIASERT ne devrait pas être utilisé pendant la grossesse, sauf si nécessaire.</p>
+<p class=AmmCorpsTexte>L'utilisation pendant l'allaitement n'est pas recommandée.</p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>Il est déconseillé de conduire ou d'utiliser certains outils ou machines car MYDRIASERT peut causer des troubles visuels pendant quelques heures (éblouissement lié à la dilatation prolongée de la pupille).</p>
+<p class=AmmCorpsTexteGras><span style='text-transform:uppercase'>MYDRIASERT</span>, insert ophtalmique contient </p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Sans objet.</span></p>
+<p class=AmmCorpsTexte>L'attention des sportifs est attirée sur le fait que ce médicament contient une substance active (chlorhydrate de phényléphrine) susceptible d'induire une réaction positive aux tests pratiqués lors des contrôles anti-dopage.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_UTILISER_MYDRIASERT,_insert_ophtalmique_?'>3. COMMENT UTILISER MYDRIASERT, insert ophtalmique ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279021"><b>RESERVE A l'USAGE DES PROFESSIONNELS DE SANTE.</b></a></p>
+<p class=AmmCorpsTexte>MYDRIASERT doit être utilisé chez l'adulte. MYDRIASERT ne doit pas être avalé.</p>
+<p class=AmmCorpsTexte>Le professionnel de santé placera un insert sous la paupière inférieure de l'œil concerné. Le professionnel enlèvera l'insert lorsque la dilatation de la pupille sera suffisante, avant l'opération ou l'examen. L'insert ne doit pas être laissé dans l'œil plus de 2 heures.</p>
+<p class=AmmCorpsTexteGras>Si vous avez utilisé plus de MYDRIASERT, insert ophtalmique que vous n’auriez dû</p>
+<p class=AmmCorpsTexte>Etant donné qu'un seul insert sera placé dans l'œil par le professionnel de santé, le risque d'utiliser plus de MYDRIASERT que recommandé est improbable. Cependant, si le professionnel doit utiliser des collyres mydriatiques en plus de MYDRIASERT, un risque de surdosage avec les substances actives de MYDRIASERT peut arriver.</p>
+<p class=AmmCorpsTexte>Les symptômes de surdosage avec les substances actives de MYDRIASERT peuvent inclure une extrême fatigue, des suées, un vertige, ralentissement ou accélération des battements de cœur, un coma, des maux de têtes, une sécheresse de la peau et de la bouche, un assoupissement inhabituel, des rougeurs et une dilatation prolongée de la pupille.</p>
+<p class=AmmCorpsTexte>Si vous avez d'autres questions sur l'utilisation de ce médicament, demandez plus d'informations à votre médecin, votre pharmacien ou <span lang=FR-BE>infirmier/ère</span>.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez d’utiliser MYDRIASERT, insert ophtalmique</p>
+<p class=AmmCorpsTexte><a name="_Toc142279020">Sans objet.</a></p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez d’utiliser MYDRIASERT, insert ophtalmique</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</a></p>
+<p class=AmmCorpsTexte>Fréquents : pouvant affecter jusqu’à 1 patient sur 10 : </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>picotement, </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>vision brouillée, </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>inconfort visuel lié à la perception de l'insert ou au déplacement de l'insert.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Peu fréquents : pouvant affecter jusqu’à 1 patient sur 100 : </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>larmoiement, </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>irritation, </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>éblouissement en raison de la dilatation prolongée de la pupille</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>kératite ponctuée superficielle (inflammation de la cornée).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Rares : pouvant affecter jusqu’à 1 patient sur 1 000: </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Réactions allergiques: inflammation de la paupière (blépharite), inflammation de la conjonctive (conjonctivite).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Très rares : pouvant affecter jusqu’à 1 patient sur 10 000 : </p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>convulsions.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Des ulcères cornéens (faible érosion de la surface de l'œil) et des œdèmes cornéens (inflammation de la surface de l'œil) ont été observés quand l'insert avait été accidentellement oublié dans l'œil.</p>
+<p class=AmmCorpsTexte>Chez les sujets prédisposés, MYDRIASERT peut déclencher une crise de glaucome aigu (augmentation brutale de la pression intraoculaire): en cas de symptômes anormaux après application (rougeur, douleur et troubles visuels), consultez immédiatement votre médecin.</p>
+<p class=AmmCorpsTexte>Bien qu'improbable après administration dans l'œil, les substances actives contenues dans MYDRIASERT peuvent causer les effets indésirables suivants qui doivent être pris en compte:</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>élévation de la pression sanguine, tachycardie,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>très rarement, des accidents majeurs tels qu'une arythmie cardiaque,</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>tremblements, pâleur, maux de tête, sécheresse de la bouche.</p>
+<p class=AmmCorpsTexteGras style='margin-top:12.0pt'>Effets indésirables supplémentaires chez les enfants</p>
+<p class=AmmCorpsTexte>Fréquence indéterminée (ne peut être estimée sur la base des données disponibles) :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Pâleur autour des yeux chez les prématurés</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Infiltration de liquide ou augmentation du volume des poumons</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin, votre pharmacien ou à votre infirmier/ère. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet:<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_MYDRIASERT,_insert_ophtalmique_?'>5. COMMENT CONSERVER MYDRIASERT, insert ophtalmique ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026"></a><a name="_Toc142279024">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas ce médicament après la date de péremption indiquée sur le sachet. La date de péremption fait référence au dernier jour de ce mois.</span></p>
+<p class=AmmCorpsTexte>Utiliser immédiatement après ouverture du sachet.</p>
+<p class=AmmCorpsTexte>A conserver à température inférieure à 25°C.</p>
+<p class=AmmCorpsTexte>Ne pas utiliser si vous remarquez une détérioration de la fermeture du sachet ou de l'insert.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout <span style='color:black'>ou avec </span>les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient MYDRIASERT, insert ophtalmique </a></p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les substances actives sont :</p>
+<p class=AmmComposition style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;page-break-after:avoid'><span style='color:black'>Tropicamide</span>................................................................................................................. <span style='color:black'>0,28 mg</span></p>
+<p class=AmmComposition style='margin-left:18.0pt;page-break-after:avoid'>Chlorhydrate de phényléphrine...................................................................................... 5,40 mg</p>
+<p class=AmmCorpsTexte align=center style='margin-bottom:3.0pt;text-align:center; page-break-after:avoid'><span style='font-size:10.0pt;font-family:"Arial",sans-serif; color:black'>pour un insert ophtalmique.</span></p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont : </p>
+<p class=AmmListePuces1 style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:17.85pt;margin-bottom:.0001pt;text-indent:0cm;page-break-after: avoid'>Copolymère d'ammonio méthacrylate (type A), dispersion de polyacrylate à 30 %, dibéhénate de glycérol, éthylcellulose.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que MYDRIASERT, insert ophtalmique et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>MYDRIASERT est fourni conditionné dans un sachet.</p>
+<p class=AmmCorpsTexte>MYDRIASERT se présente sous la forme d'un petit comprimé blanc de forme oblongue (4,3 mm x 2,3 mm).</p>
+<p class=AmmCorpsTexte>Chaque boîte contient une (des) pince(s) stérile(s) jetable(s) nécessaire(s) à la mise en place de MYDRIASERT dans l'œil.</p>
+<p class=AmmCorpsTexte>Boîte de 1 insert et 1 pince, 20 inserts et 20 pinces, 50 inserts et 50 pinces, ou 100 inserts et 100 pinces.</p>
+<p class=AmmCorpsTexte>Toutes les présentations ne sont pas nécessairement commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmTitulaireNom><a name="_Toc142279031"><span lang=X-NONE>Laboratoires thea</span></a></p>
+<p class=AmmTitulaireAdresse><span lang=X-NONE>12, rue louis bleriot</span></p>
+<p class=AmmTitulaireAdresse><span lang=X-NONE>zone industrielle du brezet</span></p>
+<p class=AmmTitulaireAdresse><span lang=X-NONE>63</span>017<span lang=X-NONE> clermont ferrand</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>THEA PHARMA</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>37 RUE GEORGES BESSE</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>63100 CLERMONT-FERRAND </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmTitulaireNom><a name="_Toc142279033"><span lang=X-NONE>benac </span></a></p>
+<p class=AmmTitulaireAdresse><span lang=X-NONE>27A avenue paul langevin</span></p>
+<p class=AmmTitulaireAdresse><span lang=X-NONE>17180 perigny</span></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>ou</p>
+<p class=AmmTitulaireAdresse><b><span lang=X-NONE>BENAC</span></b></p>
+<p class=AmmTitulaireAdresse><span lang=X-NONE>5 rue albert Turpain</span></p>
+<p class=AmmTitulaireAdresse><span lang=X-NONE>17000 la rochelle</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexteGras>Ce médicament est autorisé dans les Etats membres de l'Espace Economique Européen sous les noms suivants : Conformément à la réglementation en vigueur.</p>
+<p class=AmmCorpsTexte>[À compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte><a name="_Toc142279038">[à compléter ultérieurement par le titulaire]</a></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+<p class=AmmCorpsTexte>Les informations suivantes sont destinées exclusivement aux professionnels de santé:</p>
+<p class=AmmCorpsTexte>Ne pas avaler.</p>
+<p class=AmmCorpsTexte>Avant d'utiliser le produit, vérifier l'intégrité du sachet. En cas de détérioration de la fermeture du sachet, la stérilité n'est plus assurée. Dans ce cas, utiliser un autre insert issu d'un conditionnement intact.</p>
+<p class=AmmCorpsTexte><b><u>Posologie</u></b></p>
+<p class=AmmCorpsTexte>Le professionnel de santé place un insert ophtalmique dans le cul-de-sac conjonctival inférieur de l'œil concerné, au maximum 2 heures avant la chirurgie ou l'examen.</p>
+<p class=AmmCorpsTexte><i>Population pédiatrique</i></p>
+<p class=AmmCorpsTexte>MYDRIASERT est contre-indiqué chez l’enfant âgé de moins de 12 ans. </p>
+<p class=AmmCorpsTexte>Il n’existe pas de données chez l’enfant âgé de 12 à 18 ans. MYDRIASERT n’est pas recommandé chez ces patients.</p>
+<p class=AmmCorpsTexte><b><u>Mode d'administration</u></b></p>
+<p class=AmmCorpsTexte>Couper la partie scellée le long de la ligne pointillée, ouvrir le sachet et repérer l'insert. Tirer la paupière inférieure en la pinçant entre le pouce et l'index (A) et placer l'insert ophtalmique, à l'aide de la pince stérile jetable fournie dans le conditionnement, dans le cul-de-sac conjonctival inférieur. La pince doit être jetée immédiatement après usage (B).</p>
+<p class=AmmCorpsTexte><b>Conseils d'utilisation</b></p>
+<p class=AmmCorpsTexte>Ne pas laisser l'insert ophtalmique plus de deux heures dans cul-de-sac conjonctival inférieur. Le praticien peut retirer l'insert dès que la mydriase est jugée suffisante pour l'opération ou l'examen qui sera pratiqué, au plus tard, dans les 30 minutes. En cas d'inconfort, vérifier que l'insert a été placé correctement à la base du cul-de-sac conjonctival.</p>
+<p class=AmmCorpsTexte>ATTENTION: RETRAIT DE L'INSERT OPHTALMIQUE</p>
+<p class=AmmCorpsTexte>Avant l'opération ou l'examen, et dès que la mydriase souhaitée est atteinte, l'insert ophtalmique doit être retiré du cul-de-sac conjonctival à l'aide soit d'une pince chirurgicale stérile, soit d'une compresse stérile, soit d'une solution stérile d'irrigation ou de lavage oculaire, en abaissant la paupière inférieure (C). </p>
+<p class=AmmCorpsTexte><img border=0 width=186 height=146 id="Image 4" src="/images/N0434501/image004.jpg"><img border=0 width=195 height=142 id="Image 5" src="/images/N0434501/image005.jpg"><img border=0 width=190 height=138 id="Image 6" src="/images/N0434501/image006.jpg"></p>
+<p class=AmmCorpsTexte>Ne pas réutiliser l'insert pour l'autre œil du même patient ou pour un autre patient.</p>
+<p class=AmmCorpsTexte>Jeter l'insert après utilisation. (Voir section 3.)</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

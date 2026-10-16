@@ -1,0 +1,1564 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="o8LLh/g/hzkHGB+qACQQ0g==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="o8LLh/g/hzkHGB+qACQQ0g==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 29/09/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose"
+            aria-level="3"
+          >
+            TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                          <p id="tag-generique" class="fr-tag" aria-controls="fr-modal-tag-generique" data-fr-opened="false">
+              <span class="fr-icon-capsule-fill">
+              </span>&nbsp;générique
+          </p>
+              </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 20/09/1999
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0448766">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte>Classe pharmacothérapeutique - code ATC : A07XA04. (A: appareil digestif et métabolisme).</p>
+<p class=AmmCorpsTexte>Ce médicament est un antidiarrhéique</p>
+<p class=AmmCorpsTexte>Tiorfan est indiqué chez le nourrisson en complément de la réhydratation orale dans le traitement symptomatique des diarrhées aiguës.</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament appartient au(x) groupe(s) générique(s) suivants : <br/><ul role="list"><li role='listitem'><a href='/medicament/affiche/groupe-generique/62804360/1692' aria-describedby='tooltip-medicament-generique-0'>RACÉCADOTRIL 10 mg pour un sachet- TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose</a><span id='tooltip-medicament-generique-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Ouvrir la page de détail sur ce groupe générique</span></li></ul></p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Poudre ( Composition pour un sachet-dose )<ul role="list"><li role="listitem" style="list-style-type: none;"> > racécadotril<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">10 mg </span></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > 16 sachet(s)-dose(s) polyéthylène papier aluminium de 1 g  </p><p>Code CIP : 352 111-3 ou 34009 352 111 3 2<br/>Déclaration de commercialisation : 08/11/2000<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 6,55 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 7,57 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :30%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><div class='fr-grid-row'><div class='fr-col'><p>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence. </p></div></div><div class='fr-grid-row'><div class='fr-col'><p>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprès de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-smr-aide-2'>plus d'informations dans l'aide</a>). Les avis et synthèses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-smr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection à la page d'aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'SMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur du SMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td>Modéré</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2642053'>Avis du 22/06/2016</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 22/06/2016 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Renouvellement d'inscription (CT)</td><td class='text-align-center'>Le service médical rendu par les spécialités TIORFAN 10, 30, 100 mg et TIORFANOR 175 mg reste modéré dans les indications et aux posologies de l’AMM. ;</td></tr></tbody></table></div></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div><div class='fr-col'><p>Pas d'ASMR disponible pour ce médicament (<a href='/aide#le-medicament-que-je-recherche-ne-mentionne-pas-de-service-medical-rendu-(SMR)-ni-amelioration-du-service-medical-rendu-(ASMR)' aria-describedby='tooltip-asmr-aide'>plus d'informations dans l\'aide</a>)</p><span id='tooltip-asmr-aide' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers aide</span></div></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : BIOPROJET PHARMA</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure nationale</li><li>Code CIS : &nbsp;6 280 436 0</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 15/06/2026</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><b>TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose</b></p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278914">Racécadotril ........................................................................................................................ 10 mg</a></p>
+<p class=AmmCorpsTexte>Pour<span style='letter-spacing:1.05pt'> </span>un<span style='letter-spacing:.55pt'> </span>sachet-dose.</p>
+<p class=AmmCorpsTexte>Excipient<span style='letter-spacing:.2pt'> </span>à<span style='letter-spacing:.45pt'> </span>effet<span style='letter-spacing:1.15pt'> </span>notoire:<span style='letter-spacing:-.15pt'> </span>chaque<span style='letter-spacing:2.15pt'> </span>sachet<span style='letter-spacing:1.35pt'> </span>contient<span style='letter-spacing:1.8pt'> </span>966,5<span style='letter-spacing:.95pt'> </span>mg<span style='letter-spacing:1.4pt'> </span>de<span style='letter-spacing:.7pt'> </span>saccharose et 0,2 mg de sorbitol. </p>
+<p class=AmmCorpsTexte>Pour<span style='letter-spacing:1.15pt'> </span>la<span style='letter-spacing:.6pt'> </span>liste<span style='letter-spacing:1.0pt'> </span>complète<span style='letter-spacing:1.95pt'> </span>des<span style='letter-spacing:1.0pt'> </span>excipients,<span style='letter-spacing:2.35pt'> </span>voir<span style='letter-spacing:.65pt'> </span>rubrique<span style='letter-spacing:2.25pt'> </span>6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Poudre orale en sachet-dose</a></p>
+<p class=AmmCorpsTexte>Poudre blanche avec une odeur caractéristique d'abricot.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">En complément à la réhydratation orale,<span style='letter-spacing:1.2pt'> </span>traitement<span style='letter-spacing:2.2pt'> </span>symptomatique<span style='letter-spacing: 2.6pt'> </span>des<span style='letter-spacing:1.05pt'> </span>diarrhées<span style='letter-spacing:2.2pt'> </span>aiguës<span style='letter-spacing:1.35pt'> </span>du<span style='letter-spacing:.65pt'> </span>nourrisson. </a></p>
+<p class=AmmCorpsTexte>L'importance de la réhydratation par soluté de réhydratation orale ou par voie intraveineuse doit être adaptée en fonction de l'intensité de la diarrhée, de l'âge et des particularités de l'enfant (maladies associées...).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmCorpsTexte>Voie orale.</p>
+<p class=AmmCorpsTexte>Tiorfan 10 mg est indiqué chez le nourrisson à partir d’un mois et de moins de 13 kg.</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278918"><u>Posologie</u></a></p>
+<p class=AmmCorpsTexte><span style='color:black'>La<span style='letter-spacing: 1.5pt'> </span>posologie usuelle journalière est<span style='letter-spacing: 2.0pt'> </span>établie<span style='letter-spacing:2.55pt'> </span>en<span style='letter-spacing:1.85pt'> </span>fonction du<span style='letter-spacing: 2.05pt'> </span>poids<span style='letter-spacing:2.05pt'> </span>corporel sur<span style='letter-spacing:1.85pt'> </span>la<span style='letter-spacing:1.3pt'> </span>base<span style='letter-spacing:1.95pt'> </span>de<span style='letter-spacing:1.7pt'> </span>1,5<span style='letter-spacing:2.1pt'> </span>mg/kg<span style='letter-spacing:2.45pt'> </span>par<span style='letter-spacing:1.7pt'> </span>prise,<span style='letter-spacing:2.05pt'> </span><span style='letter-spacing:1.35pt'>jusqu’à un maximum de </span>trois<span style='letter-spacing:.9pt'> </span>prises<span style='letter-spacing:1.15pt'> </span>réparties<span style='letter-spacing:2.15pt'> </span>dans<span style='letter-spacing:1.4pt'> </span>la<span style='letter-spacing:.55pt'> </span>journée.</span></p>
+<p class=AmmCorpsTexte><u>En<span style='letter-spacing:.65pt'> </span>pratique<span style='letter-spacing:1.85pt'> </span>:</u></p>
+<p class=AmmCorpsTexte><span style='color:black'>Nombre<span style='letter-spacing: 2.25pt'> </span>de<span style='letter-spacing:.75pt'> </span>sachet(s)<span style='letter-spacing:2.2pt'> </span>par<span style='letter-spacing:.85pt'> </span>prise<span style='letter-spacing:1.4pt'> </span>en<span style='letter-spacing:.65pt'> </span>fonction<span style='letter-spacing:1.55pt'> </span>du<span style='letter-spacing:.9pt'> </span>poids<span style='letter-spacing:1.25pt'> </span>corporel<span style='letter-spacing:2.45pt'> </span>du<span style='letter-spacing:.6pt'> </span>nourrisson:</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Pour<span style='letter-spacing:1.15pt'> </span>un<span style='letter-spacing:.95pt'> </span>nourrisson<span style='letter-spacing: 2.35pt'> </span>de<span style='letter-spacing:.6pt'> </span>moins<span style='letter-spacing:1.5pt'> </span>de<span style='letter-spacing:.6pt'> </span>9<span style='letter-spacing:.4pt'> </span>Kg:<span style='letter-spacing:1.0pt'> </span>1<span style='letter-spacing:.45pt'> </span>sachet,<span style='letter-spacing:1.75pt'> </span>3<span style='letter-spacing:.55pt'> </span>fois<span style='letter-spacing: .95pt'> </span>par<span style='letter-spacing:.7pt'> </span>jour</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Pour<span style='letter-spacing:1.05pt'> </span>un<span style='letter-spacing:.95pt'> </span>nourrisson<span style='letter-spacing: 2.35pt'> </span>de<span style='letter-spacing:.85pt'> </span>9<span style='letter-spacing:.3pt'> </span>à<span style='letter-spacing:.5pt'> </span>13<span style='letter-spacing:.7pt'> </span>kg:<span style='letter-spacing:.95pt'> </span>2<span style='letter-spacing:.45pt'> </span>sachets,<span style='letter-spacing:1.95pt'> </span>3<span style='letter-spacing:.55pt'> </span>fois<span style='letter-spacing: .7pt'> </span>par<span style='letter-spacing:1.25pt'> </span>jour.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><u>Mode d’administration</u></p>
+<p class=AmmCorpsTexte><span style='color:black'>La<span style='letter-spacing: .75pt'> </span>poudre<span style='letter-spacing:2.1pt'> </span>peut<span style='letter-spacing:1.5pt'> </span>être<span style='letter-spacing:1.25pt'> </span>versée<span style='letter-spacing:1.85pt'> </span>soit<span style='letter-spacing:1.05pt'> </span>dans<span style='letter-spacing:1.65pt'> </span>l'alimentation, soit<span style='letter-spacing:1.05pt'> </span>dans<span style='letter-spacing:1.85pt'> </span>un<span style='letter-spacing:.7pt'> </span>verre<span style='letter-spacing:1.55pt'> </span>d'eau<span style='letter-spacing:1.65pt'> </span>ou<span style='letter-spacing:.65pt'> </span>un<span style='letter-spacing:.95pt'> </span>biberon,<span style='letter-spacing:1.95pt'> </span>en<span style='letter-spacing:1.15pt'> </span>remuant<span style='letter-spacing:1.95pt'> </span>bien<span style='letter-spacing:1.1pt'> </span>et en<span style='letter-spacing:.5pt'> </span>faisant<span style='letter-spacing: 1.45pt'> </span>avaler<span style='letter-spacing:2.05pt'> </span>la<span style='letter-spacing:.45pt'> </span>totalité<span style='letter-spacing:1.4pt'> </span>du<span style='letter-spacing:.9pt'> </span>mélange<span style='letter-spacing:1.9pt'> </span>immédiatement.</span></p>
+<p class=AmmCorpsTexte><span style='color:black'>Le premier jour: une première prise d'emblée, puis selon l’heure de la première prise, jusqu’à un maximum de trois prises réparties dans la journée, en comptant dans ces trois prises la première prise d’emblée. Les prises doivent se faire de préférence au début des trois principaux repas. </span></p>
+<p class=AmmCorpsTexte><span style='color:black'>Les jours suivants: trois prises réparties dans la journée, de préférence au début des trois principaux repas.</span></p>
+<p class=AmmCorpsTexte><span style='color:black'>La posologie journalière maximale est de trois prises. </span></p>
+<p class=AmmCorpsTexte><span style='color:black'>Le<span style='letter-spacing: .5pt'> </span>traitement<span style='letter-spacing:2.65pt'> </span>sera<span style='letter-spacing:1.0pt'> </span>poursuivi<span style='letter-spacing:2.15pt'> </span>jusqu'au<span style='letter-spacing:1.55pt'> </span>retour<span style='letter-spacing:1.55pt'> </span>de<span style='letter-spacing:.7pt'> </span>deux<span style='letter-spacing:1.6pt'> </span>selles<span style='letter-spacing:1.6pt'> </span>moulées consécutives,<span style='letter-spacing:2.55pt'> </span>sans<span style='letter-spacing:.8pt'> </span>dépasser<span style='letter-spacing:1.95pt'> </span>7<span style='letter-spacing:.15pt'> </span>jours.</span></p>
+<p class=AmmCorpsTexte><span style='color:black'> </span></p>
+<p class=AmmCorpsTexteGras><u>Populations<span style='letter-spacing:-.1pt'> </span>particulières</u></p>
+<p class=AmmCorpsTexte>Aucune<span style='letter-spacing:1.5pt'> </span>étude<span style='letter-spacing:1.35pt'> </span>n'a<span style='letter-spacing:.8pt'> </span>été<span style='letter-spacing:.85pt'> </span>menée<span style='letter-spacing:1.9pt'> </span>chez<span style='letter-spacing:1.35pt'> </span>les<span style='letter-spacing:.55pt'> enfants</span><span style='letter-spacing:1.6pt'> </span>de<span style='letter-spacing:.9pt'> </span>moins<span style='letter-spacing:1.5pt'> </span>de<span style='letter-spacing:.85pt'> </span>3<span style='letter-spacing:.25pt'> </span>mois.</p>
+<p class=AmmCorpsTexte>Aucune<span style='letter-spacing:1.5pt'> </span>étude<span style='letter-spacing:1.6pt'> </span>n'a<span style='letter-spacing:.8pt'> </span>été<span style='letter-spacing:.6pt'> </span>menée<span style='letter-spacing:1.9pt'> </span>chez<span style='letter-spacing:1.3pt'> </span>les<span style='letter-spacing:.8pt'> enfants</span><span style='letter-spacing:1.85pt'> </span>souffrant<span style='letter-spacing:1.65pt'> </span>d'insuffisance hépatique<span style='letter-spacing:2.1pt'> </span>ou<span style='letter-spacing:.6pt'> </span>rénale<span style='letter-spacing:1.0pt'> </span>(voir<span style='letter-spacing:1.5pt'> </span>rubrique<span style='letter-spacing:1.55pt'> </span>4.4).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278919">Hypersensibilité à la substance active ou à l'un des excipients mentionnés à la rubrique 6.1.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmCorpsTexte>Le traitement par Tiorfan n'est qu'un traitement adjuvant, en complément de la réhydratation orale et ne dispense en aucun cas de celle-ci. La réhydratation doit être systématique chez les nourrissons/ enfants présentant une diarrhée aigüe, afin de prévenir ou traiter la déshydratation, et doit être adaptée de façon à compenser les pertes hydro électrolytiques.</p>
+<p class=AmmCorpsTexte>Le traitement des diarrhées aiguës chez l’enfant repose essentiellement sur la correction des pertes en eau et électrolytes par utilisation de solutés de réhydratation orale et la réalimentation précoce dont les modalités dépendent en fonction de l'âge de l'enfant et du type de l'alimentation antérieure à la diarrhée.</p>
+<p class=AmmCorpsTexte>En cas de diarrhée sévère ou prolongée, de vomissement important ou de refus d'alimentation, une réhydratation par voie intraveineuse devra être envisagée.</p>
+<p class=AmmCorpsTexte>La présence de sang ou de pus dans les selles avec fièvre peut être le signe d'une diarrhée à germe invasif ou la présence d'autres maladies en cours. En cas de diarrhée infectieuse avec des manifestations cliniques suggérant un phénomène invasif, recourir à des antibactériens à bonne diffusion systémique.</p>
+<p class=AmmCorpsTexte>Le racécadotril n'a pas été évalué au cours des diarrhées associées aux antibiotiques. Par conséquent, le racécadotril ne doit pas être utilisé dans ces cas.</p>
+<p class=AmmCorpsTexte>Du fait d'une biodisponibilité potentiellement réduite, le racécadotril ne devra pas être administré en cas de vomissements prolongés ou incontrôlables.</p>
+<p class=AmmCorpsTexte>Insuffisance rénale et hépatique : </p>
+<p class=AmmCorpsTexte>En cas d'insuffisance rénale ou hépatique, Tiorfan ne devra pas être administré en raison de l'absence de données.</p>
+<p class=AmmCorpsTexte>Excipients : </p>
+<p class=AmmCorpsTexte>Ce médicament contient du saccharose. Les patients présentant une intolérance au fructose, un syndrome de malabsorption du glucose et du galactose ou un déficit en sucrase/isomaltase (maladies héréditaires rares) ne doivent pas prendre ce médicament.</p>
+<p class=AmmCorpsTexte>Ce médicament contient 0,966 g de saccharose par sachet. Si la quantité de saccharose (source de glucose et de fructose) dans la dose journalière de ce médicament dépasse 5 g par jour, il faut en tenir compte dans la ration journalière en cas de régime pauvre en sucre ou de diabète.</p>
+<p class=AmmCorpsTexte>Ce médicament contient 0,2 mg de sorbitol par sachet. </p>
+<p class=AmmCorpsTexte>Hypersensibilités : </p>
+<p class=AmmCorpsTexte>Des réactions cutanées ont été rapportées avec l’utilisation de ce médicament. Dans la plupart des cas, ces réactions sont légères et ne requièrent aucun traitement. Cependant dans certaines situations, ces réactions peuvent être sévères et mettre en jeu le pronostic vital ; le lien avec la prise de racécadotril ne peut pas être entièrement exclu. Si des réactions cutanées sévères apparaissent, le traitement par racécadotril doit être immédiatement arrêté. </p>
+<p class=AmmCorpsTexte>Des cas d’hypersensibilité et d’œdème de Quincke ont été rapportés chez des patients traités par le racécadotril. Ces évènements peuvent survenir à tout moment au cours du traitement.</p>
+<p class=AmmCorpsTexte>Un angio-oedème du visage, des extrémités, des lèvres, des muqueuses peut se produire.</p>
+<p class=AmmCorpsTexte>Lorsque l'angio-œdème est associé à une obstruction des voies respiratoires supérieures, comme par exemple au niveau de la langue, de la glotte et / ou du larynx, un traitement d'urgence doit être immédiatement administré.</p>
+<p class=AmmCorpsTexte>Le racécadotril doit être interrompu et le patient doit faire l’objet d’une surveillance médicale étroite avec initiation d’un suivi approprié jusqu’à disparition complète et durable des symptômes. <a name="_Hlk115873196">Le racécadotril ne doit pas être réintroduit </a></p>
+<p class=AmmCorpsTexte><a name="_Hlk115873280">Angioœdème bradykinique : </a></p>
+<p class=AmmCorpsTexte>Le racécadotril ou certaines classes thérapeutiques sont susceptibles de provoquer une réaction vasculaire à type d’angioœdème de la face et du cou, résultant de l’inhibition de la dégradation de la bradykinine (voir rubrique 4.8). </p>
+<p class=AmmCorpsTexte>Les conséquences de l’angioœdème peuvent parfois être fatales, par obstruction des voies respiratoires. L’angioœdème peut survenir indépendamment d’une association simultanée entre ces médicaments, au cas où le patient aurait été exposé antérieurement à l’un des deux protagonistes. Il conviendra de rechercher des antécédents de survenue de cet effet et de mesurer la nécessité de ce type d’association. </p>
+<p class=AmmCorpsTexte>L’association du racécadotril à certains médicaments majorant la concentration de bradykinine, notamment les inhibiteurs de l’enzyme de conversion (IEC) (p.ex. : périndopril et ramipril) augmente le risque de provoquer un angioœdème bradykinique (voir rubrique 4.5).</p>
+<p class=AmmCorpsTexte>Par conséquent, une évaluation rigoureuse du rapport bénéfice / risque est nécessaire avant d'initier le traitement par le racécadotril chez les patients sous inhibiteurs de l'enzyme de conversion (voir rubrique 4.5).</p>
+<p class=AmmCorpsTexte>Réactions<span style='letter-spacing:-.3pt'> </span>cutanées<span style='letter-spacing:-.3pt'> </span>indésirables<span style='letter-spacing: -.3pt'> </span>graves<span style='letter-spacing:-.3pt'> </span>(SCAR)<span style='letter-spacing:-.1pt'> </span><span style='letter-spacing:-.5pt'>:</span></p>
+<p class=AmmCorpsTexte>Des réactions cutanées indésirables graves (SCAR), notamment des syndromes d’hypersensibilité médicamenteuse avec éosinophilie et symptômes systémiques (DRESS) pouvant mettre en<span style='letter-spacing: -.05pt'> </span>jeu<span style='letter-spacing:-.05pt'> </span>le pronostic vital ou<span style='letter-spacing:-.05pt'> </span>être fatales, ont été rapportées<span style='letter-spacing:-.05pt'> </span>avec le<span style='letter-spacing:-.05pt'> </span>traitement<span style='letter-spacing: -.05pt'> </span>par racécadotril. Il faut indiquer aux patients quels sont les signes et symptômes et exercer une surveillance étroite<span style='letter-spacing: -.1pt'> </span>pour<span style='letter-spacing:-.05pt'> </span>déceler<span style='letter-spacing:-.05pt'> </span>d’éventuelles<span style='letter-spacing: -.1pt'> </span>réactions<span style='letter-spacing:-.1pt'> </span>cutanées. En<span style='letter-spacing:-.1pt'> </span>cas<span style='letter-spacing:-.1pt'> </span>d'apparition<span style='letter-spacing:-.1pt'> </span>de<span style='letter-spacing:-.05pt'> signes</span><span style='letter-spacing:-.2pt'> </span>et<span style='letter-spacing:-.15pt'> </span>de<span style='letter-spacing:-.1pt'> </span>symptômes<span style='letter-spacing:-.05pt'> </span>évocateurs<span style='letter-spacing: -.2pt'> </span>d'un<span style='letter-spacing:-.2pt'> </span>DRESS,<span style='letter-spacing:-.15pt'> </span>il<span style='letter-spacing:-.2pt'> </span>faut<span style='letter-spacing:-.15pt'> </span>immédiatement<span style='letter-spacing: -.15pt'> </span>arrêter<span style='letter-spacing:-.15pt'> </span>le<span style='letter-spacing:-.1pt'> </span>racécadotril<span style='letter-spacing: -.15pt'> </span>et envisager un traitement alternatif. Si un DRESS apparaît chez un(e) patient(e) lors de l’administration de racécadotril, il ne faut en aucun cas reprendre le traitement par racécadotril chez ce/cette patient(e).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278928"></a><a name="_Toc142278926"></a><a name="_Toc142278925"><b><u>Association déconseillée</u></b> :</a></p>
+<p class=AmmCorpsTexteGras>Médicaments bradykinine et angioœdème </p>
+<p class=AmmCorpsTexte>Certains médicaments ou classes thérapeutiques sont susceptibles de provoquer une réaction vasculaire à type angioœdème de la face et du cou, résultant de l’inhibition de la dégradation de la bradykinine. Les médicaments les plus fréquemment impliqués sont les IEC (p.ex. : périndopril, ramipril), et dans une moindre mesure les antagonistes de l’angiotensine II (p.ex. : candésartan, irbésartan), les immunosuppresseurs dits mTORi, des antidiabétiques de la classe des gliptines, le racécadotril, l’estramustine, le sacubitril et l’altépase recombinante. </p>
+<p class=AmmCorpsTexte>Les conséquences de l’angioœdème peuvent parfois être fatales, par obstruction des voies respiratoires. L’angioœdème peut survenir indépendamment d’une association simultanée entre ces médicaments, au cas où le patient aurait été exposé antérieurement à l’un des deux protagonistes. Il conviendra de rechercher des antécédents de survenue de cet effet et de mesurer la nécessité de ce type d’association. </p>
+<p class=AmmCorpsTexte><b><u>Association déconseillée (voir aussi la rubrique 4.4)</u></b></p>
+<p class=AmmCorpsTexte>+ Autres médicaments à risque d’angioœdème bradykinique (voir la rubrique <b>Médicaments, bradykinine et angioœdème</b>)</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><b>Autres </b></p>
+<p class=AmmCorpsTexte>La<span style='letter-spacing:1.35pt'> </span>prise<span style='letter-spacing:1.8pt'> </span>concomitante<span style='letter-spacing: 1.55pt'> </span>de<span style='letter-spacing:1.55pt'> </span>racécadotril<span style='letter-spacing:.8pt'> </span>avec<span style='letter-spacing:1.55pt'> </span>le<span style='letter-spacing:1.65pt'> </span>lopéramide<span style='letter-spacing: 1.7pt'> </span>ou<span style='letter-spacing:1.55pt'> </span>le<span style='letter-spacing:1.4pt'> </span>nifuroxazide<span style='letter-spacing: .9pt'> </span>ne<span style='letter-spacing:1.35pt'> </span>modifie<span style='letter-spacing:1.1pt'> </span>pas<span style='letter-spacing:1.5pt'> </span>la<span style='letter-spacing:1.15pt'> </span>cinétique<span style='letter-spacing: .75pt'> </span>du racécadotril.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmCorpsTexte><b><u>Grossesse</u></b></p>
+<p class=AmmCorpsTexte>Les études sur l'animal n'ont montré aucun effet nocif direct ou indirect concernant la toxicité sur la reproduction. Les données cliniques sur l'utilisation de racécadotril au cours de la grossesse sont très limitées. En conséquence il est préférable par mesure de prudence d'éviter d'utiliser le TIORFAN au cours de la grossesse quel qu'en soit le terme.</p>
+<p class=AmmCorpsTexte><a name="_Toc142278927"><b><u>Allaitement</u></b></a></p>
+<p class=AmmCorpsTexte>En l'absence de données sur le passage de racécadotril dans le lait et en raison de ses propriétés pharmacologiques et de l'immaturité du tube digestif du nouveau-né, TIORFAN ne devrait pas être administré au cours de l'allaitement.</p>
+<p class=AmmCorpsTexte><b><u>Fertilité</u></b></p>
+<p class=AmmCorpsTexte>Aucun effet sur la fertilité n'a été observé lors des études de fertilité menées chez les rats mâle et femelle.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929">Le racécadotril n’a aucun effet ou un effet négligeable sur l’aptitude à conduire des véhicules et à utiliser des machines.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmCorpsTexte>Les essais cliniques conduits au cours de la diarrhée aigüe ont fourni des données de sécurité d'emploi chez 860 nourrissons et enfants traités par du racécadotril et 441 traités par du placebo.</p>
+<p class=AmmCorpsTexte>Les effets indésirables listés ci-dessous ont été observés plus fréquemment avec racécadotril qu'avec placebo au cours des essais cliniques, ou ont été rapportés pendant la période de commercialisation.</p>
+<p class=AmmCorpsTexte>Les effets indésirables sont repris selon les classes principales de systèmes d’organes MedDRA. Au sein de chaque classe de systèmes d’organes, les effets indésirables sont présentés par fréquence. Au sein de chaque groupe de fréquence, les effets indésirables sont présentés par ordre décroissant de gravité. La fréquence des effets indésirables a été définie selon la convention suivante : très fréquent (&#8805;1/10), fréquent (&#8805;1/100 à <1/10), peu fréquent (&#8805;1/1 000 à <1/100), rare (&#8805;1/10 000 à <1/1 000), très rares (<1/10 000), fréquence indéterminée (ne peut être estimée sur la base des données disponibles).</p>
+<p class=AmmCorpsTexte>Des réactions cutanées indésirables graves (SCAR), notamment des syndromes d’hypersensibilité<span style='letter-spacing:-.2pt'> </span>médicamenteuse<span style='letter-spacing:-.2pt'> </span>avec<span style='letter-spacing:-.25pt'> </span>éosinophilie<span style='letter-spacing:-.2pt'> </span>et<span style='letter-spacing:-.25pt'> </span>symptômes<span style='letter-spacing:-.3pt'> </span>systémiques<span style='letter-spacing: -.3pt'> </span>(DRESS),<span style='letter-spacing:-.25pt'> </span>ont<span style='letter-spacing:-.2pt'> </span>été rapportées avec le traitement par racécadotril (voir Section 4.4).<span style='letter-spacing:2.0pt'> </span></p>
+<div align=center>
+<div class='fr-table--lg fr-table'><table>
+<tr>
+<td width=152 style='width:113.9pt;border:solid windowtext 1.0pt;padding:
+0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b>Classes de systèmes d’organes</b></p>
+</td>
+<td width=152 style='width:113.9pt;border:solid windowtext 1.0pt;border-left:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b>Fréquence</b></p>
+</td>
+<td width=301 style='width:225.8pt;border:solid windowtext 1.0pt;border-left:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b>Effet indésirable</b></p>
+</td>
+</tr>
+<tr>
+<td width=152 rowspan=2 style='width:113.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b>Affections de la peau et du tissu sous-cutané (voir rubrique 4.4)</b></p>
+</td>
+<td width=152 style='width:113.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Peu fréquent</p>
+</td>
+<td width=301 valign=bottom style='width:225.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Rash, érythème.</p>
+</td>
+</tr>
+<tr>
+<td width=152 style='width:113.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Fréquence indéterminée</p>
+</td>
+<td width=301 style='width:225.8pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Urticaire, angio-œdème, œdème de la langue, de la face, de la lèvre, de la paupière, érythème polymorphe, érythème noueux, rash papulaire, prurit, prurigo, syndrome d’hypersensibilité médicamenteuse avec éosinophilie et symptômes systémiques (DRESS)</p>
+<p class=AmmCorpsTexte> </p>
+</td>
+</tr>
+<tr>
+<td width=152 valign=top style='width:113.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b>Affection du système immunitaire</b></p>
+</td>
+<td width=152 style='width:113.9pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Fréquence indéterminée</p>
+</td>
+<td width=301 style='width:225.8pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Choc anaphylactique</p>
+</td>
+</tr>
+</table></div>
+</div>
+<p class=AmmCorpsTexte style='margin-top:12.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:0cm;margin-bottom:.0001pt'><b><u>Déclaration des effets indésirables suspectés </u></b></p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte>Dans les cas de surdosage rapportés, les patients n'ont pas présenté d'effets indésirables.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'><a name="_Toc142278933"><span style='color:black'>Classe<span style='letter-spacing: .65pt'> </span>pharmacothérapeutique:<span style='letter-spacing:1.95pt'> </span>AUTRE<span style='letter-spacing:1.05pt'> </span>ANTIDIARRHEIQUE<span style='letter-spacing: .15pt'> </span>(MEDICAMENT ANTISECRETOIRE INTESTINAL. </span></a></p>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'><span style='color:black'>Code ATC:<span style='letter-spacing:-.85pt'> </span>A07XA04.<span style='letter-spacing:-.45pt'> </span>(A:<span style='letter-spacing:-.5pt'> </span>appareil<span style='letter-spacing:-.75pt'> </span>digestif<span style='letter-spacing:-.4pt'> </span>et<span style='letter-spacing:-.3pt'> </span>métabolisme).</span></p>
+<p class=AmmCorpsTexte><span style='color:black'>Le<span style='letter-spacing: 1.45pt'> </span>racécadotril<span style='letter-spacing:1.55pt'> </span>est<span style='letter-spacing:1.5pt'> </span>une<span style='letter-spacing:1.7pt'> </span>prodrogue<span style='letter-spacing:1.45pt'> </span>qui<span style='letter-spacing:1.5pt'> </span>doit<span style='letter-spacing:1.65pt'> </span>être<span style='letter-spacing:1.85pt'> </span>hydrolysée<span style='letter-spacing:1.5pt'> </span>en<span style='letter-spacing:1.75pt'> </span>son<span style='letter-spacing:1.6pt'> </span>métabolite<span style='letter-spacing: .85pt'> </span>actif,<span style='letter-spacing:1.65pt'> </span>le<span style='letter-spacing:1.35pt'> </span>thiorphan,<span style='letter-spacing: 1.0pt'> </span>qui<span style='letter-spacing:1.55pt'> </span>est<span style='letter-spacing:1.5pt'> </span>un inhibiteur de l'enképhalinase,<span style='letter-spacing:2.35pt'> </span>enzyme de la membrane cellulaire, présente dans différents tissus,<span style='letter-spacing:2.6pt'> </span>dont l'épithélium<span style='letter-spacing:.05pt'> </span>intestinal.</span></p>
+<p class=AmmCorpsTexte><span style='color:black'>Cette<span style='letter-spacing: -.2pt'> </span>enzyme<span style='letter-spacing:.1pt'> </span>contribue<span style='letter-spacing:-.3pt'> </span>à<span style='letter-spacing:.4pt'> </span>l'hydrolyse<span style='letter-spacing:-.55pt'> </span>de<span style='letter-spacing:.2pt'> </span>peptides<span style='letter-spacing:-.3pt'> </span>exogènes<span style='letter-spacing:.25pt'> </span>et<span style='letter-spacing:-.2pt'> </span>endogènes,<span style='letter-spacing:-.35pt'> </span>telles<span style='letter-spacing:-.35pt'> </span>que<span style='letter-spacing:.15pt'> </span>les<span style='letter-spacing: -.2pt'> </span>enképhalines.</span></p>
+<p class=AmmCorpsTexte><span style='color:black'>Le<span style='letter-spacing: .3pt'> </span>racécadotril<span style='letter-spacing:.3pt'> </span>protège<span style='letter-spacing:.25pt'> </span>ainsi<span style='letter-spacing:.3pt'> </span>les<span style='letter-spacing:.3pt'> </span>enképhalines<span style='letter-spacing: .6pt'> </span>de<span style='letter-spacing:.6pt'> </span>la<span style='letter-spacing:.25pt'> </span>dégradation<span style='letter-spacing: .05pt'> </span>enzymatique,<span style='letter-spacing:-.3pt'> </span>prolongeant<span style='letter-spacing:-.2pt'> </span>ainsi<span style='letter-spacing:.5pt'> </span>leur<span style='letter-spacing:.25pt'> </span>action<span style='letter-spacing:-.3pt'> </span>au niveau<span style='letter-spacing:.05pt'> </span>des<span style='letter-spacing: .3pt'> </span>synapses<span style='letter-spacing:-.2pt'> </span>enképhalinergiques<span style='letter-spacing:.1pt'> </span>de<span style='letter-spacing:-.1pt'> </span>l'intestin<span style='letter-spacing:.05pt'> </span>grêle,<span style='letter-spacing:.35pt'> </span>réduisant<span style='letter-spacing:2.5pt'> </span>ainsi<span style='letter-spacing:.05pt'> </span>l'hypersécrétion.</span></p>
+<p class=AmmCorpsTexte><span style='color:black'>Le<span style='letter-spacing: .5pt'> </span>racécadotril<span style='letter-spacing:.35pt'> </span>est<span style='letter-spacing:.5pt'> </span>un<span style='letter-spacing:.45pt'> </span>antisécrétoire<span style='letter-spacing:.15pt'> </span>intestinal<span style='letter-spacing: .3pt'> </span>pur.<span style='letter-spacing:.6pt'> </span>Il<span style='letter-spacing:.7pt'> </span>diminue<span style='letter-spacing:.85pt'> </span>l'hypersécrétion<span style='letter-spacing:-.65pt'> </span>intestinale<span style='letter-spacing: -.1pt'> </span>d'eau<span style='letter-spacing:.45pt'> </span>et<span style='letter-spacing:.6pt'> </span>d'électrolytes induite<span style='letter-spacing:1.9pt'> </span>par<span style='letter-spacing:2.35pt'> </span>la<span style='letter-spacing:2.15pt'> </span>toxine<span style='letter-spacing:1.65pt'> </span>cholérique<span style='letter-spacing:2.0pt'> </span>ou<span style='letter-spacing:2.35pt'> </span>l'inflammation,<span style='letter-spacing: 1.4pt'> </span>sans<span style='letter-spacing:2.25pt'> </span>avoir<span style='letter-spacing:1.8pt'> </span>d'effet<span style='letter-spacing:1.8pt'> </span>sur<span style='letter-spacing:1.85pt'> </span>la<span style='letter-spacing: 2.0pt'> </span>sécrétion<span style='letter-spacing:1.35pt'> </span>basal<span style='letter-spacing:-.1pt'>e</span>.<span style='letter-spacing:1.75pt'> </span>Il<span style='letter-spacing:2.1pt'> </span>exerce<span style='letter-spacing:1.65pt'> </span>une activité<span style='letter-spacing:-.2pt'> </span>antidiarrhéique,<span style='letter-spacing:-.45pt'> </span>sans<span style='letter-spacing:.25pt'> </span>modification<span style='letter-spacing:-.5pt'> </span>du<span style='letter-spacing:.1pt'> </span>temps<span style='letter-spacing:-.1pt'> </span>de<span style='letter-spacing:-.1pt'> </span>transit<span style='letter-spacing:-.5pt'> </span>intestinal.</span></p>
+<p class=AmmCorpsTexte><span style='color:black'>Dans<span style='letter-spacing: .8pt'> </span>deux<span style='letter-spacing:.8pt'> </span>études<span style='letter-spacing:.55pt'> </span>cliniques<span style='letter-spacing:.55pt'> </span>effectués<span style='letter-spacing:.45pt'> </span>chez<span style='letter-spacing:.7pt'> </span>l'enfant,<span style='letter-spacing:1.15pt'> </span>le<span style='letter-spacing:.7pt'> </span>racécadotril<span style='letter-spacing:.05pt'> </span>réduit<span style='letter-spacing:.6pt'> </span>de<span style='letter-spacing:.75pt'> </span>40%<span style='letter-spacing:.3pt'> </span>et<span style='letter-spacing:.8pt'> </span>46%, <span style='letter-spacing:.65pt'>r</span>espectivement, les poids<span style='letter-spacing:.1pt'> </span>de<span style='letter-spacing: .25pt'> </span>selles<span style='letter-spacing:.1pt'> </span>dans les<span style='letter-spacing:2.65pt'> </span>premières<span style='letter-spacing: -.15pt'> </span>48<span style='letter-spacing:-.1pt'> </span>heures.</span></p>
+<p class=AmmCorpsTexte><span style='color:black'>Une<span style='letter-spacing: -.05pt'> </span>réduction<span style='letter-spacing:.25pt'> </span>significative<span style='letter-spacing:-.35pt'> </span>de<span style='letter-spacing:-.1pt'> </span>la<span style='letter-spacing:-.15pt'> </span>durée<span style='letter-spacing:.1pt'> </span>de<span style='letter-spacing:.15pt'> </span>la<span style='letter-spacing:-.15pt'> </span>diarrhée<span style='letter-spacing:.15pt'> </span>et<span style='letter-spacing:.05pt'> </span>le besoin<span style='letter-spacing:-.2pt'> </span>de<span style='letter-spacing: -.1pt'> </span>réhydratation<span style='letter-spacing:-.55pt'> </span>a également<span style='letter-spacing:-.65pt'> </span>été<span style='letter-spacing: -.25pt'> </span>observée. </span></p>
+<p class=AmmCorpsTexte><span style='color:black'>Une<span style='letter-spacing: 1.95pt'> </span>méta-analyse<span style='letter-spacing:2.25pt'> </span>(9<span style='letter-spacing:2.2pt'> </span>essais<span style='letter-spacing:2.2pt'> </span>cliniques<span style='letter-spacing:2.45pt'> </span>randomisés,<span style='letter-spacing: 2.55pt'> </span>racécadotril<span style='letter-spacing:1.55pt'> </span>versus<span style='letter-spacing:1.9pt'> </span>placebo,<span style='letter-spacing:2.2pt'> </span>en<span style='letter-spacing:2.15pt'> </span>plus<span style='letter-spacing:2.4pt'> </span>de<span style='letter-spacing:2.25pt'> </span>la<span style='letter-spacing:2.2pt'> </span>solution<span style='letter-spacing:1.45pt'> </span>de réhydratation<span style='letter-spacing:.8pt'> </span>orale)<span style='letter-spacing:.4pt'> </span>a<span style='letter-spacing:.7pt'> </span>recueilli<span style='letter-spacing:.3pt'> </span>les<span style='letter-spacing:.8pt'> </span>données<span style='letter-spacing:.75pt'> </span>individuelles<span style='letter-spacing: .6pt'> </span>des<span style='letter-spacing:.45pt'> </span>1384<span style='letter-spacing:.7pt'> </span>garçons<span style='letter-spacing:.3pt'> </span>et<span style='letter-spacing:.6pt'> </span>filles<span style='letter-spacing:.55pt'> </span>souffrant<span style='letter-spacing:-.4pt'> </span>de<span style='letter-spacing:.45pt'> </span>diarrhée<span style='letter-spacing:.2pt'> </span>aigüe de<span style='letter-spacing:.25pt'> </span>sévérité<span style='letter-spacing:.1pt'> </span>variée,<span style='letter-spacing:.05pt'> </span>traités<span style='letter-spacing:-.15pt'> </span>en ambulatoire<span style='letter-spacing:-.35pt'> </span>ou en<span style='letter-spacing:.15pt'> </span>hospitalisatio<span style='letter-spacing: -.2pt'>n</span>. </span></p>
+<p class=AmmCorpsTexte><span style='color:black'>L'âge<span style='letter-spacing: -.45pt'> </span>moyen<span style='letter-spacing:.6pt'> </span>était<span style='letter-spacing:-.3pt'> </span>de<span style='letter-spacing:-.05pt'> </span>12<span style='letter-spacing:-.05pt'> </span>mois (intervalle<span style='letter-spacing: -.35pt'> </span>interquartile:<span style='letter-spacing:-.45pt'> </span>6<span style='letter-spacing:.3pt'> </span>à<span style='letter-spacing:1.0pt'> </span>39<span style='letter-spacing:-.05pt'> </span>mois<span style='letter-spacing:.25pt'>)</span>.</span></p>
+<p class=AmmCorpsTexte><span style='color:black'>Un<span style='letter-spacing: .2pt'> </span>total<span style='letter-spacing:-.5pt'> </span>de<span style='letter-spacing:.1pt'> </span>714<span style='letter-spacing:.15pt'> </span>patients<span style='letter-spacing:-.3pt'> </span>avait moins<span style='letter-spacing: .15pt'> </span>de<span style='letter-spacing:-.05pt'> </span>1<span style='letter-spacing:.3pt'> </span>an et<span style='letter-spacing:.05pt'> </span>670 patients<span style='letter-spacing:.1pt'> </span>avaient<span style='letter-spacing:-.3pt'> </span>plus<span style='letter-spacing:-.25pt'> </span>de<span style='letter-spacing:-.05pt'> </span>1<span style='letter-spacing:.05pt'> </span>a<span style='letter-spacing:-.2pt'>n</span>.<span style='letter-spacing:.1pt'> </span>Le<span style='letter-spacing:.05pt'> </span>poids<span style='letter-spacing:-.25pt'> </span>moyen<span style='letter-spacing:-.05pt'> </span>variait<span style='letter-spacing:-.65pt'> </span>de<span style='letter-spacing:-.15pt'> </span>7,4 kg<span style='letter-spacing:1.3pt'> </span>à<span style='letter-spacing:1.75pt'> </span>12.2<span style='letter-spacing:1.25pt'> </span>kg<span style='letter-spacing:1.35pt'> </span>selon<span style='letter-spacing:.65pt'> </span>les<span style='letter-spacing:1.0pt'> </span>étude<span style='letter-spacing:-.1pt'>s</span>. La<span style='letter-spacing:1.1pt'> </span>durée<span style='letter-spacing:.75pt'> </span>globale<span style='letter-spacing:1.55pt'> </span>moyenne<span style='letter-spacing:1.0pt'> </span>de<span style='letter-spacing:.85pt'> </span>la<span style='letter-spacing:1.0pt'> </span>diarrhée<span style='letter-spacing:.9pt'> </span>après<span style='letter-spacing:1.05pt'> </span>l'inclusion<span style='letter-spacing:.15pt'> </span>était<span style='letter-spacing:.65pt'> </span>de<span style='letter-spacing:1.0pt'> </span><span style='letter-spacing:-.2pt'>2</span><span style='letter-spacing:.3pt'>,</span>81<span style='letter-spacing:.6pt'> </span>jours dans<span style='letter-spacing:-.2pt'> </span>le<span style='letter-spacing: .05pt'> </span>groupe<span style='letter-spacing:.3pt'> </span>placebo<span style='letter-spacing:.1pt'> </span>et<span style='letter-spacing:.1pt'> </span>de<span style='letter-spacing:-.35pt'> </span>1<span style='letter-spacing:.25pt'>,</span>75 jour pour<span style='letter-spacing:-.15pt'> </span>racécadotril.</span></p>
+<p class=AmmCorpsTexte><span style='color:black'>Par<span style='letter-spacing: .05pt'> </span>voie<span style='letter-spacing:-.15pt'> </span>orale,<span style='letter-spacing:.35pt'> </span>l'activité<span style='letter-spacing: -.5pt'> </span>du<span style='letter-spacing:-.05pt'> </span>racécadotril<span style='letter-spacing:-.7pt'> </span>reste périphérique<span style='letter-spacing: .65pt'> </span>sans<span style='letter-spacing:-.2pt'> </span>effet<span style='letter-spacing:-.05pt'> </span>sur<span style='letter-spacing:-.2pt'> </span>le<span style='letter-spacing:.1pt'> </span>système<span style='letter-spacing:-.7pt'> </span>nerveux<span style='letter-spacing:-.25pt'> </span>central.</span></p>
+<p class=AmmCorpsTexte><span style='color:black'>Une étude<span style='letter-spacing:.3pt'> </span>clinique<span style='letter-spacing:.35pt'> </span>randomisée,<span style='letter-spacing:.15pt'> </span>croisée,<span style='letter-spacing:.15pt'> </span>a montré<span style='letter-spacing:.1pt'> </span>que<span style='letter-spacing:.1pt'> </span>le racécadotril<span style='letter-spacing:.15pt'>1</span>00<span style='letter-spacing:1.45pt'> </span>mg<span style='letter-spacing:.25pt'> </span>à<span style='letter-spacing:1.05pt'> </span>la<span style='letter-spacing:-.2pt'> </span>dose<span style='letter-spacing:-.2pt'> </span>thérapeutique<span style='letter-spacing:-.75pt'> </span>(1<span style='letter-spacing:-.15pt'> </span>gélule) ou<span style='letter-spacing:.15pt'> </span>à<span style='letter-spacing:1.05pt'> </span>une<span style='letter-spacing:.45pt'> </span>dose<span style='letter-spacing:.5pt'> </span>supérieure (4<span style='letter-spacing: .35pt'> </span>gélules)<span style='letter-spacing:-.1pt'> </span>n'induit<span style='letter-spacing:.6pt'> </span>pas<span style='letter-spacing:.4pt'> </span>de<span style='letter-spacing:.15pt'> </span>prolongation<span style='letter-spacing: -.2pt'> </span>du<span style='letter-spacing:.1pt'> </span>QT/QTc<span style='letter-spacing:-.25pt'> </span>chez 56<span style='letter-spacing:.05pt'> </span>adultes<span style='letter-spacing:-.25pt'> </span>volontaires<span style='letter-spacing:-.8pt'> </span>sains (contrairement<span style='letter-spacing:-.05pt'> </span>à<span style='letter-spacing:1.05pt'> </span>l'effet<span style='letter-spacing:.35pt'> </span>observé<span style='letter-spacing:.05pt'> </span>avec<span style='letter-spacing:.05pt'> </span>la moxifloxacine,<span style='letter-spacing:.4pt'> </span>utilisé<span style='letter-spacing:-.45pt'> </span>comme<span style='letter-spacing:.1pt'> </span>contrôle<span style='letter-spacing:-.65pt'> </span>positif<span style='letter-spacing:-.05pt'>)</span>.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278934"><u>Absorption</u></a></p>
+<p class=AmmCorpsTexte>Après administration orale, le racécadotril est rapidement absorbé. L'activité sur l'enképhalinase plasmatique apparaît dès la trentième minute.</p>
+<p class=AmmCorpsTexte>La biodisponibilité du racécadotril n'est pas modifiée par les repas, mais le pic d'activité est retardé d'environ 1 heure et demie.</p>
+<p class=AmmCorpsTexteGras><u>Distribution</u></p>
+<p class=AmmCorpsTexte>Après administration orale de racécadotril marqué au 14C chez des volontaires sains, la concentration de racécadotril était environ 200 fois supérieure dans le plasma que dans les cellules sanguines et environ 3 fois supérieure dans le plasma que dans le volume total de sang. Le racécadotril ne se lie pas aux cellules sanguines de manière importante.</p>
+<p class=AmmCorpsTexte>Dans le plasma, le volume apparent moyen de distribution de 66.4 L/kg démontre une distribution modérée du14C dans les autres tissus.</p>
+<p class=AmmCorpsTexte>Quatre-vingt-dix pour cent du métabolite actif du racécadotril, tiorphan, (RS)-N-(1-oxo-2-(mercaptométhyl)-3- phénylpropyl) glycine, sont liés aux protéines plasmatiques, principalement, l'albumine.</p>
+<p class=AmmCorpsTexte>Les propriétés pharmacocinétiques du racécadotril ne sont pas modifiées lors de l'administration de doses répétées ou chez le sujet âgé.</p>
+<p class=AmmCorpsTexte>L'amplitude et la durée d'action du racécadotril sont liées à la dose administrée. Le pic de concentration est de 2 h 30 environ et correspond à une inhibition de 90 % de l'activité enzymatique pour la dose administrée de 1,5 mg/kg.</p>
+<p class=AmmCorpsTexte>Pour une dose de 100 mg, la durée d'activité sur l'enképhalinase plasmatique est d'environ 8 heures.</p>
+<p class=AmmCorpsTexteGras><u>Biotransformation</u></p>
+<p class=AmmCorpsTexte>La demi-vie biologique du racécadotril, déterminée à partir de l'inhibition plasmatique de l'enképhalinase, est de 3 heures.</p>
+<p class=AmmCorpsTexte>Le racécadotril est rapidement hydrolysé en tiorphan (RS)-N-(1-oxo-2-(mercaptométhyl)-3-phénylpropyl) glycine, son métabolite actif, lui-même transformé en métabolites inactifs S-methylthiorphan sulfoxyde, S­ methyl tiorfan, acide 2-methanesulfinylmethyl propionique et acide 2-methylsulfanylmethyl propionique, qui ont tous été formés à plus de 10% de l'exposition systémique de la molécule mère.</p>
+<p class=AmmCorpsTexte>D'autres métabolites mineurs ont également été détectés et quantifiés dans les urines et les matières fécales. L'administration répétée de racécadotril n'induit pas d'accumulation dans l'organisme.</p>
+<p class=AmmCorpsTexte>Les données <i>in vitro </i>montrent que, le racécadotril/thiorfan et ses quatre métabolites inactifs majeurs n'agissent pas de manière significative comme inhibiteurs des isoformes du cytochrome CYP 3A4, 2D6, 2C9, 1A2 et 2C19.</p>
+<p class=AmmCorpsTexte>Les données <i>ln vitro </i>montrent que, le racécadotril/thiorfan et ses quatre métabolites inactifs majeurs n'agissent pas de manière significative comme inducteurs des isoformes du cytochrome CYP (famille 3A, 2A6, 2B6, 2C9/2C19, famille 1A, 2E1) et des enzymes qui se lient à la glucuronyltransférase.</p>
+<p class=AmmCorpsTexte>Le racécadotril ne modifie pas la liaison protéique de produits fortement liés aux protéines, tels que tolbutamide, warfarine, acide niflumique, digoxine ou phénytoine.</p>
+<p class=AmmCorpsTexte>Chez des patients insuffisants hépatiques (cirrhose, Child-Pugh B), le profil cinétique du métabolite montre les mêmes Tmax et T<sup>1/2</sup>, et de plus faibles Cmax (-65 %) et Aire sous la courbe (-29 %), par rapport à des sujets sains.</p>
+<p class=AmmCorpsTexte>Chez des patients ayant une insuffisance rénale sévère (clairance de la créatinine entre 11 et 39 ml/mn), le profil cinétique du métabolite montre une plus faible Cmax (-49 %) et de plus grandes Aire sous la Courbe (+15 %) et T<sup>1/2</sup>, par rapport à des volontaires sains (clairance de la créatinine > 70 ml/min).</p>
+<p class=AmmCorpsTexte>Dans la population pédiatrique, les résultats pharmacodynamiques sont similaires à ceux de la population adulte, avec une Cmax atteinte 2 heures 30 minutes après l'administration. Il n'y a pas d'accumulation après administration de doses répétées toutes les 8 heures, pendant 7 jours.</p>
+<p class=AmmCorpsTexteGras><u>Élimination</u></p>
+<p class=AmmCorpsTexte>Le racécadotril est éliminé via ses métabolites actifs et inactifs. L'élimination se fait surtout par voie rénale (81.4%), et à moindre degré par voie fécale (environ 8%). L'excrétion par voie pulmonaire n'est pas significative (moins de 1% de la dose).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278935">Des études de toxicité chronique de 4 semaines réalisées chez des singes et des chiens, utiles pour l'évaluation<span style='letter-spacing:2.55pt'> </span>de<span style='letter-spacing:1.0pt'> </span>la<span style='letter-spacing:.95pt'> </span>durée<span style='letter-spacing:1.85pt'> </span>du<span style='letter-spacing:1.2pt'> </span>traitement<span style='letter-spacing: 1.9pt'> </span>chez<span style='letter-spacing:1.8pt'> </span>l'homme, n'ont<span style='letter-spacing:1.7pt'> </span>mis<span style='letter-spacing:1.45pt'> </span>en<span style='letter-spacing:.85pt'> </span>évidence<span style='letter-spacing:2.5pt'> </span>aucun<span style='letter-spacing:1.4pt'> </span>effet<span style='letter-spacing:1.05pt'> </span>à<span style='letter-spacing:.65pt'> </span>des<span style='letter-spacing:1.35pt'> </span>dosages<span style='letter-spacing:2.0pt'> </span>jusqu'à 1250 mg/kg/jour et<span style='letter-spacing:2.6pt'> </span>200 mg/kg qui<span style='letter-spacing:2.25pt'> </span>correspondent à des marges de sécurité de 625 et 62 (par rapport à l'homme)<span style='letter-spacing: 2.05pt'> </span>respectivement.</a></p>
+<p class=AmmCorpsTexte>Le<span style='letter-spacing:.2pt'> </span>racécadotril<span style='letter-spacing:1.7pt'> </span>ne<span style='letter-spacing:.9pt'> </span>s'est<span style='letter-spacing:1.15pt'> </span>pas<span style='letter-spacing:.85pt'> </span>révélé<span style='letter-spacing:1.4pt'> </span>immunotoxique<span style='letter-spacing: 2.45pt'> </span>sur<span style='letter-spacing:.45pt'> </span>la<span style='letter-spacing:.5pt'> </span>souris<span style='letter-spacing:1.4pt'> </span>traitée<span style='letter-spacing:.95pt'> </span>pendant<span style='letter-spacing:1.65pt'> </span>1<span style='letter-spacing:.3pt'> </span>mois.</p>
+<p class=AmmCorpsTexte>Une<span style='letter-spacing:2.5pt'> </span>exposition de<span style='letter-spacing:2.65pt'> </span>plus<span style='letter-spacing: 2.6pt'> </span>longue durée (1an)<span style='letter-spacing:2.6pt'> </span>chez les<span style='letter-spacing:2.4pt'> </span>singes a<span style='letter-spacing: 2.05pt'> </span>montré des infections généralisées et des réponses réduites<span style='letter-spacing:2.25pt'> </span>aux<span style='letter-spacing:1.5pt'> </span>anticorps<span style='letter-spacing:2.45pt'> </span>à<span style='letter-spacing:1.95pt'> </span>la<span style='letter-spacing:1.15pt'> </span>vaccination<span style='letter-spacing: 2.3pt'> </span>(à<span style='letter-spacing:1.5pt'> </span>la<span style='letter-spacing:1.15pt'> </span>dose<span style='letter-spacing:1.95pt'> </span>de<span style='letter-spacing:1.45pt'> </span>500mg/kg/jour) et<span style='letter-spacing: 1.15pt'> </span>aucune<span style='letter-spacing:1.65pt'> </span>infection/dépression immunitaire<span style='letter-spacing:2.15pt'> </span>à<span style='letter-spacing: .2pt'> </span>120<span style='letter-spacing:.95pt'> </span>mg/kg/jour.</p>
+<p class=AmmCorpsTexte>De même, chez le chien traité à la dose de 200 mg/kg/jour pendant 26<span style='letter-spacing:.55pt'> </span>semaines quelques réactions infectieuses/immunes<span style='letter-spacing:1.4pt'> </span>ont<span style='letter-spacing:1.95pt'> </span>été<span style='letter-spacing:1.95pt'> </span>détectées. Leur<span style='letter-spacing:2.5pt'> </span>signification clinique est<span style='letter-spacing:2.0pt'> </span>méconnue<span style='letter-spacing:1.65pt'> </span>:<span style='letter-spacing:1.65pt'> </span>se<span style='letter-spacing: 1.5pt'> </span>référer<span style='letter-spacing:2.55pt'> </span>au<span style='letter-spacing:1.75pt'> </span>paragraphe <span style='letter-spacing: -.15pt'>4</span><span style='letter-spacing:.2pt'>.</span>8</p>
+<p class=AmmCorpsTexte>Aucun<span style='letter-spacing:1.0pt'> </span>effet<span style='letter-spacing:1.1pt'> </span>mutagénique<span style='letter-spacing: 2.45pt'> </span>ou<span style='letter-spacing:.8pt'> </span>clastogénique du<span style='letter-spacing:1.0pt'> </span>racécadotril<span style='letter-spacing: 1.95pt'> </span>n'a<span style='letter-spacing:1.15pt'> </span>été<span style='letter-spacing:.5pt'> </span>détecté<span style='letter-spacing:1.65pt'> </span>lors<span style='letter-spacing:.7pt'> </span>des<span style='letter-spacing: 1.0pt'> </span>tests<span style='letter-spacing:.85pt'> </span>standards<span style='letter-spacing:1.55pt'> </span><i>in<span style='letter-spacing:.75pt'> </span>vivo<span style='letter-spacing:.65pt'> </span></i>et<span style='letter-spacing:.65pt'> </span><i>in vitro.</i></p>
+<p class=AmmCorpsTexte>Des<span style='letter-spacing:.75pt'> </span>tests<span style='letter-spacing:1.05pt'> </span>de<span style='letter-spacing:.5pt'> </span>cancérogénicité n'ont<span style='letter-spacing:1.4pt'> </span>pas<span style='letter-spacing: .65pt'> </span>été<span style='letter-spacing:.75pt'> </span>effectués<span style='letter-spacing:1.55pt'> </span>car<span style='letter-spacing:.85pt'> </span>il<span style='letter-spacing:.3pt'> </span>s'agit<span style='letter-spacing:1.4pt'> </span>d'un<span style='letter-spacing:1.0pt'> </span>traitement<span style='letter-spacing: 1.75pt'> </span>de<span style='letter-spacing:.3pt'> </span>courte<span style='letter-spacing:1.05pt'> </span>durée.</p>
+<p class=AmmCorpsTexte>Etudes<span style='letter-spacing:1.3pt'> </span>de<span style='letter-spacing:1.35pt'> </span>toxicité<span style='letter-spacing:2.3pt'> </span>reproductive et<span style='letter-spacing:1.25pt'> </span>du<span style='letter-spacing:1.3pt'> </span>développement (développement pré-embryonnaire et<span style='letter-spacing:.75pt'> </span>fertilité, développement pré-natal et post-natal, études de développement embryo-fœtal) n'ont révélé aucun effet particulier<span style='letter-spacing:1.5pt'> </span>du<span style='letter-spacing:.8pt'> </span>racécadotril.</p>
+<p class=AmmCorpsTexte>D'autres<span style='letter-spacing:2.4pt'> </span>effets<span style='letter-spacing:2.1pt'> </span>précliniques (tels<span style='letter-spacing: 1.75pt'> </span>qu'anémie sévère<span style='letter-spacing:2.05pt'> </span>vraisemblablement<span style='letter-spacing:1.4pt'> </span>aplasique, augmentation de<span style='letter-spacing:1.5pt'> </span>la<span style='letter-spacing:.95pt'> </span>diurès<span style='letter-spacing:-.05pt'>e</span>, cétonurie,<span style='letter-spacing: 2.05pt'> </span>diarrhée)<span style='letter-spacing:2.3pt'> </span>ont<span style='letter-spacing:1.25pt'> </span>été<span style='letter-spacing:1.25pt'> </span>observés<span style='letter-spacing:2.3pt'> </span>seulement<span style='letter-spacing:2.6pt'> </span>lors<span style='letter-spacing:1.25pt'> </span>d'une<span style='letter-spacing:2.1pt'> </span>à<span style='letter-spacing:.85pt'> </span>exposition<span style='letter-spacing:1.95pt'> </span>suffisamment<span style='letter-spacing: 2.25pt'> </span>supérieure<span style='letter-spacing:1.95pt'> </span>par<span style='letter-spacing:1.25pt'> </span>rapport<span style='letter-spacing:1.7pt'> </span>à l'exposition<span style='letter-spacing:2.2pt'> </span>maximale<span style='letter-spacing:2.15pt'> </span>chez<span style='letter-spacing:1.15pt'> </span>l'homme.<span style='letter-spacing:2.25pt'> </span>Leur<span style='letter-spacing:.85pt'> </span>signification<span style='letter-spacing:2.1pt'> </span>clinique<span style='letter-spacing:1.7pt'> </span>n'est<span style='letter-spacing:.95pt'> </span>pas<span style='letter-spacing:.95pt'> </span>connue.</p>
+<p class=AmmCorpsTexte>Une étude de toxicité réalisée chez des rats juvéniles n’ont mis en évidence aucun effet significatif du au racecadotril à des doses jusqu’à 160mg/kg/jour qui correspond à une dose 35 fois plus élevée que la dose pédiatrique recommandée (ex : 4.5mg/kg/jour).</p>
+<p class=AmmCorpsTexte>Malgré l’immaturité de la fonction rénale chez les enfants de moins de 1 an, des niveaux d’exposition supérieurs ne sont pas attendus chez ceux-ci.</p>
+<p class=AmmCorpsTexte>D'autres études de pharmacologie de sécurité n'ont mis en évidence aucun effet nocif sur le système nerveux central, sur le système cardiovasculaire et les fonctions respiratoires.</p>
+<p class=AmmCorpsTexte>Chez l'animal, le racécadotril renforce l'effet de la butylhyoscine sur le transit intestinal et sur l'effet anticonvulsivant de la phénythoïne.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937"><span style='background:white'>Saccharose, silice colloïdale anhydre, dispersion de polyacrylate à 30%, arôme abricot (vanilline, gamma undécalactone, gamma nonalactone, caproate d'allyle, citron, néroli, orange, gomme arabique, maltodextrine, sorbitol).</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">Sans objet.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278939">3 ans en zone climatiques I et II</a></p>
+<p class=AmmCorpsTexte>2 ans en zone climatiques III et IV</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940">Ce<span style='letter-spacing: .65pt'> </span>médicament ne<span style='letter-spacing:.7pt'> </span>nécessite<span style='letter-spacing:1.8pt'> </span>pas<span style='letter-spacing:.7pt'> </span>de<span style='letter-spacing:.55pt'> </span>précautions<span style='letter-spacing: 2.2pt'> </span>particulières de<span style='letter-spacing:.55pt'> </span>conservation.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278942"></a><a name="_Toc142278941">1<span style='letter-spacing:.25pt'> </span>g<span style='letter-spacing:.2pt'> </span>de<span style='letter-spacing:.9pt'> </span>poudre<span style='letter-spacing:2.2pt'> </span>en<span style='letter-spacing:.45pt'> </span>sachet-dose<span style='letter-spacing: 2.6pt'> </span>(PE/Papier/Aluminium),<span style='letter-spacing:.25pt'> </span>boîte<span style='letter-spacing:1.1pt'> </span>de<span style='letter-spacing:.75pt'> </span>16</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte>Pas d'exigences particulières pour l’élimination.</p>
+<p class=AmmCorpsTexte>Tout médicament non utilisé ou déchet doit être éliminé conformément à la réglementation en vigueur.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142278943"><b>BIOPROJET PHARMA</b></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>9 RUE RAMEAU</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>75002 PARIS</p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><a name="_Toc142278944"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009<span style='letter-spacing:1.4pt'> </span>352<span style='letter-spacing:.75pt'> </span>111<span style='letter-spacing:.8pt'> </span>3<span style='letter-spacing:.1pt'> </span>2:<span style='letter-spacing:-.55pt'> </span>1<span style='letter-spacing:.25pt'> </span>g<span style='letter-spacing:.45pt'> </span>de<span style='letter-spacing:.7pt'> </span>poudre<span style='letter-spacing:1.95pt'> </span>en<span style='letter-spacing:.7pt'> </span>sachet-dose<span style='letter-spacing: 2.05pt'> </span>(PE/Papier/Aluminium),<span style='letter-spacing:.25pt'> </span>boîte<span style='letter-spacing:.85pt'> </span>de<span style='letter-spacing:.5pt'> </span>16</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945"><span style='color:#538135'>[à compléter ultérieurement par le titulaire]</span></a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946"><span style='color:#538135'>[à compléter ultérieurement par le titulaire]</span></a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_TIORFAN_10_mg_NOURRISSONS,_poudre_orale_en_sachet-dose_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_TIORFAN_10_mg_NOURRISSONS,_poudre_orale_en_sachet-dose_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_PRENDRE_TIORFAN_10_mg_NOURRISSONS_poudre_orale_en_sachet-dose_?"
+                     aria-label="3. COMMENT PRENDRE TIORFAN 10 mg NOURRISSONS poudre orale en sachet-dose ? (Lien de redirection)">
+                    3. COMMENT PRENDRE TIORFAN 10 mg NOURRISSONS poudre orale en sachet-dose ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_TIORFAN_10_mg_NOURRISSONS,_poudre_orale_en_sachet-dose_?"
+                     aria-label="5. COMMENT CONSERVER TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose ? (Lien de redirection)">
+                    5. COMMENT CONSERVER TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 15/06/2026</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose</p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Racécadotril</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Veuillez lire attentivement cette notice avant de prendre ce médicament car elle contient des informations importantes pour vous.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Gardez<span style='letter-spacing:-.25pt'> </span>cette notice.<span style='letter-spacing:.15pt'> </span>Vous<span style='letter-spacing:-.35pt'> </span>pourriez<span style='letter-spacing:-.35pt'> </span>avoir besoin<span style='letter-spacing: .35pt'> </span>de<span style='letter-spacing:.15pt'> </span>la<span style='letter-spacing:.25pt'> </span>relire.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous<span style='letter-spacing:.1pt'> </span>avez<span style='letter-spacing:-.15pt'> </span>d'autres<span style='letter-spacing:.15pt'> </span>questions,<span style='letter-spacing:-.5pt'> </span>interrogez votre médecin ou votre pharmacien. </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='font-size:7.0pt;font-family:"Times New Roman",serif'></span>Ce<span style='letter-spacing:1.3pt'> </span>médicament<span style='letter-spacing: 1.6pt'> </span>a<span style='letter-spacing:1.0pt'> </span>été<span style='letter-spacing:1.2pt'> </span>prescrit<span style='letter-spacing:1.25pt'> </span>pour<span style='letter-spacing:1.1pt'> </span>votre<span style='letter-spacing:1.0pt'> </span>enfant.<span style='letter-spacing:1.35pt'> </span>Ne<span style='letter-spacing:1.3pt'> </span>le<span style='letter-spacing: 1.25pt'> </span>donnez<span style='letter-spacing:1.1pt'> </span>pas<span style='letter-spacing:.9pt'> </span>à<span style='letter-spacing:1.3pt'> </span>d'autres<span style='letter-spacing:1.3pt'> </span>personnes.<span style='letter-spacing: 1.2pt'> </span>Il<span style='letter-spacing:1.1pt'> </span>pourrait<span style='letter-spacing:.95pt'> </span>leur être nocif,<span style='letter-spacing: .4pt'> </span>même<span style='letter-spacing:.1pt'> </span>si<span style='letter-spacing:-.1pt'> </span>les<span style='letter-spacing:.15pt'> </span>signes<span style='letter-spacing:-.1pt'> </span>de<span style='letter-spacing:.15pt'> </span>leur<span style='letter-spacing:-.3pt'> </span>maladie<span style='letter-spacing:.05pt'> </span>sont identiques<span style='letter-spacing:-.1pt'> </span>à ceux<span style='letter-spacing:-.05pt'> </span>de votre<span style='letter-spacing:-.4pt'> </span>enfant.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si<span style='letter-spacing:.95pt'> </span>votre<span style='letter-spacing:1.0pt'> </span>enfant<span style='letter-spacing:1.05pt'> </span>ressent<span style='letter-spacing:1.0pt'> </span>un<span style='letter-spacing:1.0pt'> </span>quelconque<span style='letter-spacing: .95pt'> </span>effet<span style='letter-spacing:1.05pt'> </span>indésirable,<span style='letter-spacing:1.85pt'> </span><span lang=FR-BE>parlez-en à votre médecin ou votre pharmacien Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>1. Qu'est-ce que TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>2. Quelles sont les informations à connaître avant de prendre TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose?</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>3. Comment prendre TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose ?</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>5. Comment conserver TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose?</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>6. Contenu de l’emballage et autres informations<span style='color:black'>.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_TIORFAN_10_mg_NOURRISSONS,_poudre_orale_en_sachet-dose_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte>Classe pharmacothérapeutique - code ATC : A07XA04. (A: appareil digestif et métabolisme).</p>
+<p class=AmmCorpsTexte>Ce médicament est un antidiarrhéique</p>
+<p class=AmmCorpsTexte>Tiorfan est indiqué chez le nourrisson en complément de la réhydratation orale dans le traitement symptomatique des diarrhées aiguës.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_TIORFAN_10_mg_NOURRISSONS,_poudre_orale_en_sachet-dose_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Si votre médecin vous a informé(e) que votre enfant présente une intolérance à certains sucres, contactez-le avant de donner ce médicament à votre enfant, car ce médicament contient du saccharose.</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">Ne donnez jamais TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si votre enfant est allergique (hypersensible) à la substance active ou à l'un des autres composants contenus dans ce médicament, mentionnées dans la rubrique 6</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si une éruption cutanée sévère ou une desquamation de la peau, des cloques et/ou des aphtes sont apparues après que vous avez pris du racécadotril.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Avertissements et précautions</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Chez le nourrisson, l'apparition d'une diarrhée c'est-à-dire l'augmentation du nombre de selles par jour nécessite une consultation médicale.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>En effet, l'origine de la diarrhée doit être recherchée et il est indispensable de faire boire à l'enfant le soluté de réhydratation orale qui sera prescrit.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>En cas d'allaitement maternel, celui-ci devra être poursuivi.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Chez le nourrisson, il est impératif de respecter les modalités d'utilisation ainsi que le mode de reconstitution du soluté de réhydratation orale éventuellement prescrit par votre médecin et de suivre ses conseils concernant l'alimentation.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Vous devez consulter rapidement votre médecin dans les cas suivants :</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Diarrhée supérieure à 6 selles liquides par jour ou qui dure plus de 24 heures ou qui s'accompagne d'une perte de poids; votre médecin jugera alors de la nécessité de prescrire une réhydratation par soluté de réhydratation orale.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Présence de sang ou de glaires dans les selles et en cas d'apparition de fièvre.</span><span lang=FR-BE> </span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Vomissements prolongés ou non contrôlés.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Insuffisance rénale ou hépatique (défaillance des fonctions du rein ou du foie) en raison de l'absence de données.</span></p>
+<p class=AmmCorpsTexte style='margin-top:12.0pt'><span lang=FR-BE>Ce médicament n'est pas indiqué si votre enfant souffre de diarrhée survenant au cours du traitement antibiotique.</span></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Des cas d'hypersensibilité et d’œdème de Quincke (gonflement) ont été rapportés chez des patients traités par le racécadotril (la substance active de ce médicament). Un angioœdème du visage, des extrémités, des lèvres, des muqueuses etc.., ou gonflement des voies respiratoires supérieures, comme la langue, la glotte et/ou le larynx peuvent se produire à tout moment au cours du traitement.</p>
+<p class=AmmCorpsTexte>Si<span style='letter-spacing:.6pt'> </span>vous<span style='letter-spacing:.6pt'> </span>ressentez<span style='letter-spacing:.45pt'> </span>un<span style='letter-spacing:.7pt'> </span>quelconque<span style='letter-spacing:.6pt'> de ces </span>effets<span style='letter-spacing: .65pt'> </span>indésirables,<span style='letter-spacing:1.0pt'> </span>arrêtez immédiatement le traitement et contactez votre médecin.</p>
+<p class=AmmCorpsTexte>Les patients ayant des antécédents d'angioœdème (gonflement) sans rapport avec le traitement par le racécadotril peuvent présenter un risque accru d'angioœdème.</p>
+<p class=AmmCorpsTexte>L’utilisation concomitante de racécadotril et d’autres médicaments peut augmenter le risque d’angioœdème (voir la rubrique « Autres médicaments et TIORFAN 10 mg Nourrissons, poudre orale en sachet-dose »)</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Des réactions cutanées ont été rapportées avec l’utilisation de ce médicament. Dans la plupart des cas, ces réactions sont légères et modérées. Si des réactions cutanées sévères apparaissent, le traitement par racécadotril doit être immédiatement arrêté et vous devez consulter un médecin. Le racécadotril ne pas être réintroduit. </span></p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Il convient d'être particulièrement prudent avec le racécadotril :</span></p>
+<p class=AmmCorpsTexte>Des réactions cutanées graves, notamment des syndromes d’hypersensibilité médicamenteuse avec éosinophilie et symptômes systémiques (DRESS), ont été rapportées avec le traitement par racécadotril. Arrêtez d'utiliser le racécadotril et consultez immédiatement un médecin si vous remarquez l'un des symptômes liés à ces réactions cutanées graves décrites à la Section 4.</p>
+<p class=AmmCorpsTexteGras>Enfants et adolescents</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et TIORFAN 10 mg NOURRISSONS poudre orale en sachet-dose</p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Informez votre médecin ou votre pharmacien si votre enfant prend, a récemment pris ou pourrait prendre tout autre médicament, notamment : </span></p>
+<p class=AmmCorpsTexteGras style='margin-left:36.0pt;text-indent:-18.0pt'><span style='font-weight:normal'>-<span style='font:7.0pt "Times New Roman"'>       </span></span><span style='font-weight:normal'>un inhibiteur de l’enzyme de conversion (p.ex. : périndopril ou ramipril) pour faire baisser la pression artérielle et faciliter le travail du cœur,</span></p>
+<p class=AmmCorpsTexteGras style='margin-left:36.0pt;text-indent:-18.0pt'><span style='font-weight:normal'>-<span style='font:7.0pt "Times New Roman"'>       </span></span><span style='font-weight:normal'>les antagonistes de l’angiotensine II (p.ex. : candésartan ou irbésartan) pour traiter l’hypertension artérielle et l’insuffisance cardiaque. </span></p>
+<p class=AmmCorpsTexteGras><span style='font-weight:normal'>Si vous donnez ou avez donné récemment un autre médicament à votre enfant, y compris un médicament sans ordonnance, parlez-en à votre médecin ou à votre pharmacien. </span></p>
+<p class=AmmCorpsTexte><b>TIORFAN 10mg NOURRISSONS poudre orale en sachet-dose avec des aliments, boissons et de l’alcool</b></p>
+<p class=AmmCorpsTexte><a name="_Toc142279012">Sans objet.</a></p>
+<p class=AmmCorpsTexteGras>Grossesse, allaitement et fertilité</p>
+<p class=AmmCorpsTexteGras>Grossesse</p>
+<p class=AmmCorpsTexte>Demandez conseil<span style='letter-spacing:.25pt'> </span>à<span style='letter-spacing:1.1pt'> </span>votre<span style='letter-spacing:-.25pt'> </span>médecin<span style='letter-spacing:.1pt'> </span>ou<span style='letter-spacing:-.05pt'> </span>à<span style='letter-spacing:1.05pt'> </span>votre pharmacien<span style='letter-spacing: .45pt'> </span>avant<span style='letter-spacing:-.1pt'> </span>de<span style='letter-spacing:-.05pt'> </span>prendre<span style='letter-spacing:-.3pt'> </span>tout<span style='letter-spacing:.1pt'> </span>médicament.</p>
+<p class=AmmCorpsTexte>Compte tenu des données disponibles, il est préférable par mesure de prudence d'éviter d'utiliser le racécadotril<span style='letter-spacing:-.1pt'> </span>au cours<span style='letter-spacing:-.1pt'> </span>de<span style='letter-spacing:.2pt'> </span>la<span style='letter-spacing: .05pt'> </span>grossesse<span style='letter-spacing:-.2pt'> </span>quel<span style='letter-spacing:.05pt'> </span>qu'en<span style='letter-spacing:.15pt'> </span>soit le<span style='letter-spacing:.3pt'> </span>terme.</p>
+<p class=AmmCorpsTexteGras>Allaitement</p>
+<p class=AmmCorpsTexte>En l'absence de données sur le passage de la substance active dans le lait, ce médicament ne doit pas être administré au cours de l'allaitement chez la femme qui allaite.</p>
+<p class=AmmCorpsTexte>Demandez conseil à votre médecin ou à votre pharmacien avant de prendre tout médicament.</p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte><span class=AmmCorpsTexteCar>TIORFAN 10 mg NOURRISSONS </span>poudre orale en sachet-dose <span class=AmmCorpsTexteCar>n’a aucun effet ou un effet négligeable sur l’aptitude à conduire des véhicules ou à utiliser des machines</span><span style='color:black'>.</span></p>
+<p class=AmmCorpsTexteGras style='margin-top:12.0pt'>TIORFAN 10 mg NOURRISSONS poudre orale en sachet-dose contient du saccharose et du sorbitol</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si votre médecin vous a informé(e) que votre enfant présente une intolérance à certains sucres, contactez votre médecin avant de donner ce médicament à votre enfant.</span></p>
+<p class=AmmCorpsTexte>Ce<span style='letter-spacing:-.15pt'> </span>médicament<span style='letter-spacing:.35pt'> </span>contient<span style='letter-spacing:-.45pt'> </span>environ<span style='letter-spacing:.3pt'> </span>1<span style='letter-spacing:.1pt'> </span>g<span style='letter-spacing:-.2pt'> </span>de<span style='letter-spacing:.45pt'> </span>saccharose<span style='letter-spacing: -.25pt'> </span>(source<span style='letter-spacing:.4pt'> </span>de<span style='letter-spacing:-.2pt'> </span>glucose<span style='letter-spacing:-.25pt'> </span>et de<span style='letter-spacing:.05pt'> </span>fructose)<span style='letter-spacing:-.75pt'> </span>par<span style='letter-spacing:.15pt'> </span>sachet.</p>
+<p class=AmmCorpsTexte>Si<span style='letter-spacing:.5pt'> </span>votre<span style='letter-spacing:.45pt'> </span>médecin<span style='letter-spacing:1.15pt'> </span>a<span style='letter-spacing:.7pt'> </span>prescrit<span style='letter-spacing:.5pt'> </span>plus<span style='letter-spacing:.6pt'> </span>de<span style='letter-spacing:.65pt'> </span>5<span style='letter-spacing:.9pt'> </span>sachets<span style='letter-spacing:.65pt'> </span>de<span style='letter-spacing:.55pt'> </span>TIORFAN<span style='letter-spacing:.65pt'> </span>10<span style='letter-spacing:.65pt'> </span>mg<span style='letter-spacing:.45pt'> </span>NOURRISSONS<span style='letter-spacing: -.4pt'> </span>par<span style='letter-spacing:.7pt'> </span>jour<span style='letter-spacing:.45pt'> </span>(correspondant<span style='letter-spacing: .3pt'> </span>à plus<span style='letter-spacing:.75pt'> </span>de<span style='letter-spacing:1.25pt'> </span>5<span style='letter-spacing:.55pt'> </span>g<span style='letter-spacing:1.15pt'> </span>de<span style='letter-spacing:.9pt'> </span>sucre)<span style='letter-spacing:.9pt'> </span>en<span style='letter-spacing:.75pt'> </span>tenir<span style='letter-spacing:.6pt'> </span>compte<span style='letter-spacing:.7pt'> </span>dans<span style='letter-spacing:1.1pt'> </span>la<span style='letter-spacing:1.15pt'> </span>ration<span style='letter-spacing:.7pt'> </span>journalière<span style='letter-spacing: .65pt'> </span>de<span style='letter-spacing:.85pt'> </span>votre<span style='letter-spacing:.45pt'> </span>enfant<span style='letter-spacing:.75pt'> </span>en<span style='letter-spacing:.65pt'> </span>cas<span style='letter-spacing:.9pt'> </span>de<span style='letter-spacing:.8pt'> </span>régime<span style='letter-spacing:.8pt'> </span>pauvre en sucre<span style='letter-spacing:-.2pt'> </span>ou<span style='letter-spacing: .15pt'> </span>de<span style='letter-spacing:.05pt'> </span>diabète.</p>
+<p class=AmmCorpsTexte>Ce médicament contient 0,2 mg de sorbitol par sachet.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_PRENDRE_TIORFAN_10_mg_NOURRISSONS_poudre_orale_en_sachet-dose_?'>3. COMMENT PRENDRE TIORFAN 10 mg NOURRISSONS poudre orale en sachet-dose ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279021">TIORFAN<span style='letter-spacing:2.1pt'> </span>10<span style='letter-spacing:.7pt'> </span>mg<span style='letter-spacing:1.15pt'> </span>NOURRISSONS poudre orale en sachet-dose se<span style='letter-spacing:.4pt'> </span>présente<span style='letter-spacing:2.1pt'> </span>sous<span style='letter-spacing:1.15pt'> </span>la<span style='letter-spacing:.55pt'> </span>forme<span style='letter-spacing:1.45pt'> </span>de<span style='letter-spacing:.6pt'> </span>poudre.</a></p>
+<p class=AmmCorpsTexte>Elle<span style='letter-spacing:1.5pt'> </span>peut<span style='letter-spacing:.7pt'> </span>être<span style='letter-spacing:1.75pt'> </span>versée<span style='letter-spacing:2.05pt'> </span>soit<span style='letter-spacing:1.5pt'> </span>dans<span style='letter-spacing:2.25pt'> </span>l'alimentation, soit<span style='letter-spacing:1.8pt'> </span>dans<span style='letter-spacing:2.25pt'> </span>un<span style='letter-spacing:1.2pt'> </span>verre<span style='letter-spacing:2.0pt'> </span>d'eau<span style='letter-spacing:1.55pt'> </span>ou<span style='letter-spacing:1.65pt'> </span>un<span style='letter-spacing:1.4pt'> </span>biberon,<span style='letter-spacing:2.4pt'> </span>en<span style='letter-spacing:1.4pt'> </span>remuant bien<span style='letter-spacing:1.25pt'> </span>et<span style='letter-spacing:1.2pt'> </span>en faisant<span style='letter-spacing:1.15pt'> </span>avaler<span style='letter-spacing:1.75pt'> </span>la<span style='letter-spacing:.45pt'> </span>totalité<span style='letter-spacing:1.35pt'> </span>du<span style='letter-spacing:.65pt'> </span>mélange<span style='letter-spacing:1.9pt'> </span>immédiatement.</p>
+<p class=AmmCorpsTexte><b><span style='color:black'>Posologie</span></b></p>
+<p class=AmmCorpsTexte><span style='color:black'>La<span style='letter-spacing: .7pt'> </span>posologie usuelle<span style='letter-spacing:2.25pt'> </span>journalière<span style='letter-spacing:2.6pt'> </span>établie<span style='letter-spacing:1.85pt'> </span>en<span style='letter-spacing:1.45pt'> </span>fonction<span style='letter-spacing:2.05pt'> </span>du<span style='letter-spacing:1.35pt'> </span>poids<span style='letter-spacing:1.85pt'> </span>corporel<span style='letter-spacing:1.95pt'> </span>de<span style='letter-spacing:1.2pt'> </span>votre<span style='letter-spacing:1.5pt'> </span>enfant<span style='letter-spacing:1.65pt'> </span>sur<span style='letter-spacing:1.35pt'> </span>la<span style='letter-spacing: .75pt'> </span>base<span style='letter-spacing:1.5pt'> </span>de<span style='letter-spacing:.9pt'> </span>1,5<span style='letter-spacing:.9pt'> </span>mg/kg par<span style='letter-spacing:.55pt'> </span>prise,<span style='letter-spacing: 1.75pt'> </span>jusqu’à un maximum de trois<span style='letter-spacing:1.1pt'> </span>prises<span style='letter-spacing:1.45pt'> </span>réparties<span style='letter-spacing: 1.9pt'> </span>dans<span style='letter-spacing:1.25pt'> </span>la<span style='letter-spacing:.55pt'> </span>journée.</span></p>
+<p class=AmmCorpsTexte><b><span style='color:black'>En<span style='letter-spacing: .35pt'> </span>pratique<span style='letter-spacing:2.1pt'> </span>:</span></b></p>
+<p class=AmmCorpsTexte><u><span style='color:black'>Nombre<span style='letter-spacing:1.85pt'> </span>de<span style='letter-spacing:.7pt'> </span>sachet(s)<span style='letter-spacing:1.75pt'> </span>par<span style='letter-spacing:.85pt'> </span>prise<span style='letter-spacing:1.15pt'> </span>en<span style='letter-spacing:.85pt'> </span>fonction<span style='letter-spacing:1.4pt'> </span>du<span style='letter-spacing:.8pt'> </span>poids<span style='letter-spacing:.95pt'> </span>corpor<span style='letter-spacing:-.1pt'>e</span>l<span style='letter-spacing:-.8pt'> </span>du nourrisson<span style='letter-spacing: 1.3pt'> </span>:</span></u></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Nourrisson de plus de 1 mois et de moins<span style='letter-spacing: 1.75pt'> </span>de 9<span style='letter-spacing:.45pt'> </span>kg<span style='letter-spacing:.5pt'> </span>:<span style='letter-spacing:.3pt'> </span>1<span style='letter-spacing:.5pt'> </span>sachet<span style='letter-spacing:1.35pt'> </span>par<span style='letter-spacing:.85pt'> </span>prise.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='letter-spacing:.4pt'>Nourrisson d’</span>environ<span style='letter-spacing:1.75pt'> </span>de<span style='letter-spacing:1.15pt'> </span>9 à<span style='letter-spacing:1.35pt'> </span>13<span style='letter-spacing: .6pt'> </span>Kg:<span style='letter-spacing:.8pt'> </span>2<span style='letter-spacing:.45pt'> </span>sachets<span style='letter-spacing:1.85pt'> </span>par<span style='letter-spacing:.85pt'> </span>prise</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Mode<span style='letter-spacing: 1.2pt'> </span>d'administration</p>
+<p class=AmmCorpsTexte>Voie<span style='letter-spacing:1.0pt'> </span>orale</p>
+<p class=AmmCorpsTexteGras>Fréquence<span style='letter-spacing:2.4pt'> </span>d'administration</p>
+<p class=AmmCorpsTexte>Le premier jour: une première prise d'emblée, puis selon l’heure de la première prise, jusqu’à un maximum de trois prises réparties dans la journée, en comptant dans ces trois prises la première prise d’emblée. Les prises doivent se faire de préférence au début des trois principaux repas. </p>
+<p class=AmmCorpsTexte>Les jours suivants: trois prises réparties dans la journée, de préférence au début des trois principaux repas.</p>
+<p class=AmmCorpsTexte>La posologie journalière maximale est de trois prises. </p>
+<p class=AmmCorpsTexteGras>Durée<span style='letter-spacing:1.05pt'> </span>du<span style='letter-spacing:.75pt'> </span>traitement</p>
+<p class=AmmCorpsTexte>Le traitement sera poursuivi jusqu'au retour des deux premières selles moulées consécutives, sans dépasser 7 jours. </p>
+<p class=AmmCorpsTexte>Respectez toujours la posologie indiquée par votre médecin. En cas de doute, consultez votre médecin ou votre pharmacien.</p>
+<p class=AmmCorpsTexteGras>Conseils<span style='letter-spacing:1.95pt'> </span>diététiques</p>
+<p class=AmmCorpsTexte>Afin<span style='letter-spacing:1.05pt'> </span>de<span style='letter-spacing:1.15pt'> </span>compenser les<span style='letter-spacing: 1.25pt'> </span>pertes<span style='letter-spacing:1.8pt'> </span>de<span style='letter-spacing:1.15pt'> </span>liquides<span style='letter-spacing:2.05pt'> </span>dues<span style='letter-spacing:1.85pt'> </span>à<span style='letter-spacing: 1.55pt'> </span>la<span style='letter-spacing:1.1pt'> </span>diarrhée, ce<span style='letter-spacing:1.2pt'> </span>médicament doit<span style='letter-spacing: 1.5pt'> </span>être<span style='letter-spacing:1.3pt'> </span>utilisé<span style='letter-spacing:1.45pt'> </span>avec<span style='letter-spacing:1.55pt'> </span>un<span style='letter-spacing:1.0pt'> </span>soluté<span style='letter-spacing:1.25pt'> </span>de réhydratation orale.<span style='letter-spacing:1.25pt'> </span>Demandez à<span style='letter-spacing:.45pt'> </span>votre<span style='letter-spacing: 1.05pt'> </span>médecin<span style='letter-spacing:2.3pt'> </span>ou<span style='letter-spacing:.95pt'> </span>votre<span style='letter-spacing:1.2pt'> </span>pharmacien<span style='letter-spacing:2.65pt'> </span>si<span style='letter-spacing:-.25pt'> </span>vous<span style='letter-spacing:1.2pt'> </span>avez<span style='letter-spacing:1.15pt'> </span>des<span style='letter-spacing:.75pt'> </span>doutes.</p>
+<p class=AmmCorpsTexte>Chez<span style='letter-spacing:1.45pt'> </span>le<span style='letter-spacing:.7pt'> </span>nourrisson il<span style='letter-spacing: .65pt'> </span>est<span style='letter-spacing:1.0pt'> </span>impératif<span style='letter-spacing:1.95pt'> </span>de<span style='letter-spacing:.7pt'> </span>respecter<span style='letter-spacing:2.45pt'> </span>les<span style='letter-spacing:.75pt'> </span>modalités<span style='letter-spacing:2.6pt'> </span>d'utilisation<span style='letter-spacing: 2.3pt'> </span>ainsi<span style='letter-spacing:1.15pt'> </span>que<span style='letter-spacing:1.1pt'> </span>le<span style='letter-spacing:.5pt'> </span>mode<span style='letter-spacing:1.6pt'> </span>de<span style='letter-spacing:.85pt'> </span>reconstitution<span style='letter-spacing:1.9pt'> </span>du soluté<span style='letter-spacing:2.2pt'> </span>de<span style='letter-spacing:1.6pt'> </span>réhydratation orale<span style='letter-spacing:2.35pt'> </span>éventuellement<span style='letter-spacing: .8pt'> </span>prescrit par<span style='letter-spacing:1.85pt'> </span>votre<span style='letter-spacing:1.9pt'> </span>médecin et<span style='letter-spacing: 1.5pt'> </span>de<span style='letter-spacing:1.95pt'> </span>suivre<span style='letter-spacing:2.45pt'> </span>ses<span style='letter-spacing:1.7pt'> </span>conseils<span style='letter-spacing:2.25pt'> </span>concernant l'alimentation.</p>
+<p class=AmmCorpsTexteGras>Si vous donnez plus de TIORFAN 10 mg NOURRISSONS poudre orale en sachet-dose que vous n’auriez dû :</p>
+<p class=AmmCorpsTexte>Consultez<span style='letter-spacing:2.25pt'> </span>immédiatement<span style='letter-spacing:.15pt'> </span>votre<span style='letter-spacing:1.05pt'> </span>médecin<span style='letter-spacing:2.0pt'> </span>ou<span style='letter-spacing:.9pt'> </span>votre<span style='letter-spacing:1.15pt'> </span>pharmacien.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez de donner TIORFAN 10 mg NOURRISSONS poudre orale en sachet-dose :</p>
+<p class=AmmCorpsTexte>Ne<span style='letter-spacing:-.2pt'> </span>donnez<span style='letter-spacing:-.45pt'> </span>pas<span style='letter-spacing:.15pt'> </span>de<span style='letter-spacing:-.15pt'> </span>dose<span style='letter-spacing:-.15pt'> </span>double<span style='letter-spacing:-.3pt'> </span>pour<span style='letter-spacing:-.2pt'> </span>compenser<span style='letter-spacing:.1pt'> </span>la<span style='letter-spacing:-.2pt'> </span>dose<span style='letter-spacing:.05pt'> </span>que<span style='letter-spacing:.15pt'> </span>vous<span style='letter-spacing:-.2pt'> </span>avez<span style='letter-spacing:-.2pt'> </span>oublié de donner à votre enfant. Poursuivez<span style='letter-spacing:-.95pt'> </span>avec<span style='letter-spacing:.1pt'> </span>la<span style='letter-spacing:-.25pt'> </span>dose<span style='letter-spacing:.1pt'> </span>suivante.</p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez de donner TIORFAN 10 mg NOURRISSONS poudre orale en sachet-dose :</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexte>Si vous avez d'autres questions sur l'utilisation de ce médicament, demandez plus d'informations à votre médecin ou à votre pharmacien.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme<span style='letter-spacing: .2pt'> </span>tous<span style='letter-spacing:.15pt'> </span>les<span style='letter-spacing:.05pt'> </span>médicaments,<span style='letter-spacing: .05pt'> </span>ce<span style='letter-spacing:.45pt'> </span>médicament<span style='letter-spacing:.5pt'> </span>peut<span style='letter-spacing:.15pt'> </span>provoquer<span style='letter-spacing:.2pt'> </span>des<span style='letter-spacing:.1pt'> </span>effets<span style='letter-spacing:.3pt'> </span>indésirables,<span style='letter-spacing: .05pt'> </span>mais<span style='letter-spacing:.45pt'> </span>ils<span style='letter-spacing:.2pt'> </span>ne<span style='letter-spacing:.2pt'> </span>surviennent pas<span style='letter-spacing:-.15pt'> </span>systématiquement<span style='letter-spacing:-.95pt'> </span>chez<span style='letter-spacing:-.05pt'> </span>tout<span style='letter-spacing:-.1pt'> </span>le<span style='letter-spacing:-.1pt'> </span>monde.</a></p>
+<p class=AmmCorpsTexte>Vous devez arrêter de donner TIORFAN 10 mg NOURRISSONS poudre orale en sachet-dose<b> </b>à votre enfant et consulter immédiatement un médecin si votre enfant ressent des symptômes d’angio-œdème tels que: </p>
+<p class=AmmCorpsTexte>Gonflement du visage, de la langue ou du pharynx</p>
+<p class=AmmCorpsTexte>Difficulté d’avaler</p>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Urticaires et difficultés pour respirer</p>
+<p class=AmmCorpsTexte align=left style='margin-top:7.15pt;text-align:left; line-height:127%'><span style='font-size:10.0pt;line-height:127%;font-family: "Arial",sans-serif'>Arrêtez d'utiliser le racécadotril et consultez immédiatement un médecin si vous remarquez l'un des symptômes suivants :</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Éruption cutanée généralisée, température corporelle élevée et ganglions lymphatiques hypertrophiés (syndrome DRESS)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Difficulté à respirer, gonflement, étourdissements/vertiges, rythme cardiaque rapide, transpiration et sensation de perte de conscience ; ce sont les symptômes d'une réaction allergique soudaine et grave</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><span class=AmmCorpsTexteGrasCar>Effets indésirables peu fréquents</span><b><span style='letter-spacing:.15pt'> </span></b>(rapportés chez<span style='letter-spacing: 1.8pt'> </span>au<span style='letter-spacing:1.35pt'> </span>moins<span style='letter-spacing:1.7pt'> </span>1<span style='letter-spacing:.9pt'> </span>patient<span style='letter-spacing:1.65pt'> </span>sur<span style='letter-spacing:1.2pt'> </span>1<span style='letter-spacing:.85pt'> </span>000<span style='letter-spacing:1.5pt'> </span>mais<span style='letter-spacing:1.6pt'> </span>chez<span style='letter-spacing:1.55pt'> </span>moins<span style='letter-spacing:1.75pt'> </span>d'1<span style='letter-spacing:.9pt'> </span>patient sur<span style='letter-spacing:.9pt'> </span>100): Rash et érythème</p>
+<p class=AmmCorpsTexte><span class=AmmCorpsTexteGrasCar>Fréquence indéterminée</span><b><span style='letter-spacing:2.4pt'> </span></b>(ne<span style='letter-spacing:1.35pt'> </span>peut<span style='letter-spacing:1.15pt'> </span>être<span style='letter-spacing:.75pt'> </span>estimée<span style='letter-spacing:2.25pt'> </span>sur<span style='letter-spacing:.9pt'> </span>la<span style='letter-spacing: .7pt'> </span>base<span style='letter-spacing:1.0pt'> </span>des<span style='letter-spacing:1.05pt'> </span>données<span style='letter-spacing:1.7pt'> d</span>isponibles):</p>
+<p class=AmmCorpsTexte>érythème<span style='letter-spacing:2.6pt'> </span>polymorphe (lésions rosâtres au<span style='letter-spacing:1.9pt'> </span>niveau des<span style='letter-spacing:2.2pt'> </span>extrémités et<span style='letter-spacing: 1.5pt'> </span>dans la<span style='letter-spacing:1.55pt'> </span>bouche), œdème<span style='letter-spacing:2.5pt'> </span>de<span style='letter-spacing: 1.65pt'> </span>la<span style='letter-spacing:1.45pt'> </span>langue, œdème<span style='letter-spacing:2.2pt'> </span>des<span style='letter-spacing:1.9pt'> </span>lèvres, œdème<span style='letter-spacing:2.5pt'> </span>des<span style='letter-spacing: 1.85pt'> </span>paupières, œdème de<span style='letter-spacing:1.65pt'> </span>la<span style='letter-spacing:1.8pt'> </span>face<span style='letter-spacing:2.1pt'> </span>du<span style='letter-spacing:1.6pt'> </span>visage, angio-œdème (inflammation sous­ cutanée touchant diverses parties du<span style='letter-spacing:2.0pt'> </span>corps), urticaire, érythème noueux (inflammation prenant la<span style='letter-spacing: 1.8pt'> </span>forme d'un nodule<span style='letter-spacing:2.05pt'> </span>sous<span style='letter-spacing:1.9pt'> </span>la<span style='letter-spacing:1.5pt'> </span>peau),<span style='letter-spacing:2.55pt'> </span>rash<span style='letter-spacing:1.75pt'> </span>papulaire (éruption cutanée<span style='letter-spacing:2.55pt'> </span>présentant<span style='letter-spacing:2.6pt'> </span>des<span style='letter-spacing:1.6pt'> </span>petites<span style='letter-spacing:2.4pt'> </span>lésions dures<span style='letter-spacing: 1.9pt'> </span>et<span style='letter-spacing:1.4pt'> </span>pustuleuses)<span style='letter-spacing:2.4pt'> </span>, prurit<span style='letter-spacing:.65pt'> </span>(démangeaisons<span style='letter-spacing:-.2pt'> </span>affectant<span style='letter-spacing:1.45pt'> </span>tout<span style='letter-spacing:1.05pt'> </span>le<span style='letter-spacing:.2pt'> </span>corps),<span style='letter-spacing:2.0pt'> </span>prurigo<span style='letter-spacing:2.0pt'> </span>(lésions<span style='letter-spacing:1.85pt'> </span>cutanées<span style='letter-spacing:1.5pt'> </span>provoquant<span style='letter-spacing:2.65pt'> </span>des<span style='letter-spacing:1.05pt'> </span>démangeaisons).</p>
+<p class=AmmCorpsTexteGras>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet: <a href="https://signalement.social-sante.gouv.fr/">https://signalement.social-sante.gouv.fr/</a><span style='color:#353838'> </span></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_TIORFAN_10_mg_NOURRISSONS,_poudre_orale_en_sachet-dose_?'>5. COMMENT CONSERVER TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026"></a><a name="_Toc142279024">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas ce médicament après la date de péremption indiquée sur la boîte après l’abréviation EXP.</span></p>
+<p class=AmmCorpsTexte>La date de péremption se réfère au dernier jour de ce mois.</p>
+<p class=AmmCorpsTexte>Ce médicament ne nécessite pas de précautions particulières de conservation.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout <span style='color:black'>ou avec </span>les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient Tiorfan 10 mg NOURRISSONS poudre orale en sachet-dose</a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279030"><span style='font-weight: normal'>La<span style='letter-spacing:.4pt'> </span>substance<span style='letter-spacing:1.85pt'> </span>active<span style='letter-spacing:1.35pt'> </span>est<span style='letter-spacing:.8pt'> </span>:</span></a></p>
+<p class=AmmComposition>Racécadotril........<span style='letter-spacing:-.05pt'>.</span>.<span style='letter-spacing:.25pt'>.</span>....................<span style='letter-spacing:.2pt'>.</span>....<span style='letter-spacing:.2pt'>.</span>......................................<span style='letter-spacing:.65pt'>.</span>....<span style='letter-spacing:.65pt'>.</span>......<span style='letter-spacing:.65pt'>.</span><span style='letter-spacing:.2pt'>.</span>............................<span style='letter-spacing:.25pt'>.</span><span style='letter-spacing:.2pt'>.</span>...........<span style='letter-spacing:-.65pt'> </span><span style='letter-spacing:.1pt'>1</span>0<span style='letter-spacing:.75pt'> </span>mg</p>
+<p class=AmmComposition align=center style='text-align:center'>Pour<span style='letter-spacing:.75pt'> </span>un sachet-dose.</p>
+<p class=AmmComposition><span class=AmmCorpsTexteGrasCar><span style='font-weight:normal'>Les autres composants sont :</span></span></p>
+<p class=AmmComposition>Saccharose, silice<span style='letter-spacing:.95pt'> </span>colloïdale<span style='letter-spacing:2.0pt'> </span>anhydre, dispersion de<span style='letter-spacing:.6pt'> </span>polyacrylate<span style='letter-spacing: 2.25pt'> </span>à<span style='letter-spacing:.4pt'> </span>30<span style='letter-spacing:.55pt'> </span>%,<span style='letter-spacing:1.0pt'> </span>arôme<span style='letter-spacing:1.5pt'> </span>abricot.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que TIORFAN 10 mg NOURRISSONS, poudre orale en sachet-dose et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>Ce médicament se présente sous forme de poudre orale en sachet-dose, blanche avec une odeur caractéristique d'abricot.</p>
+<p class=AmmCorpsTexte>Boîte<span style='letter-spacing:1.1pt'> </span>de<span style='letter-spacing:.95pt'> </span>16.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>BIOPROJET PHARMA</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>9 RUE RAMEAU</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>75002 PARIS</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>BIOPROJET PHARMA</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>115 RUE D’ABOUKIR</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>75002 PARIS</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><b>SOPHARTEX</b></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>21 RUE DU PRESSOIR</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>28500 VERNOUILLET</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Ou </p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><b><span lang=ES style='color:black'>FERRER<span style='letter-spacing:1.95pt'> </span>INTERNATIONAL,<span style='letter-spacing:-.95pt'> </span>S.A.</span></b></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=ES style='color:black'>Cl<span style='letter-spacing:1.2pt'> </span>JOAN<span style='letter-spacing:1.4pt'> </span>BUSCALLA, 1-9</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=ES style='color:black'>08190<span style='letter-spacing:1.6pt'> </span>SANT<span style='letter-spacing:1.0pt'> </span>CUGAT<span style='letter-spacing:1.9pt'> </span>DEL<span style='letter-spacing:.85pt'> </span>VALLES<span style='letter-spacing:1.6pt'> </span>(BARCELONA) </span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=ES style='color:black'>ESPAGNE</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte><span style='color:#385623'>[à compléter ultérieurement par le titulaire]</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France). </p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

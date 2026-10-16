@@ -1,0 +1,1626 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="fxrFiTwIPuwA1vofoMCNOQ==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="fxrFiTwIPuwA1vofoMCNOQ==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 29/09/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant CEZIBOE 0,25 mg, solution injectable en seringue pré-remplie"
+            aria-level="3"
+          >
+            CEZIBOE 0,25 mg, solution injectable en seringue pré-remplie
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament CEZIBOE 0,25 mg, solution injectable en seringue pré-remplie - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                      </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 15/12/2020
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : CEZIBOE 0,25 mg, solution injectable en seringue pré-remplie - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0411458">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte>Classe pharmacothérapeutique : A<span style='letter-spacing:-.05pt'>ntagoniste</span>s<span style='letter-spacing: -.05pt'> d</span>e<span style='letter-spacing:-.05pt'> l</span>a<span style='letter-spacing:-.05pt'> GnRH</span>, code ATC : H01CC02.</p>
+<p class=AmmCorpsTexte><b><span style='letter-spacing:-.05pt'>Qu’est ce </span></b><span style='text-transform:uppercase;letter-spacing:-.05pt'>CEZIBOE</span></p>
+<p class=AmmCorpsTexte><span style='text-transform:uppercase;letter-spacing: -.05pt'>CEZIBOE </span><span style='letter-spacing:-.05pt'>contien</span>t<span style='letter-spacing:-.05pt'> u</span>n<span style='letter-spacing:-.05pt'> médicamen</span>t<span style='letter-spacing:-.05pt'> appel</span>é<span style='letter-spacing:-.05pt'> </span>«<span style='letter-spacing:-.3pt'> </span>cétrorélix <span style='letter-spacing:-.25pt'>»</span>.<span style='letter-spacing:.1pt'> </span><span style='letter-spacing:-.05pt'>C</span>e<span style='letter-spacing: -.05pt'> médicamen</span>t<span style='letter-spacing:-.05pt'> empêch</span>e<span style='letter-spacing:-.05pt'> l</span>a<span style='letter-spacing:-.05pt'> libératio</span>n<span style='letter-spacing:-.05pt'> d’un</span> <span style='letter-spacing:-.05pt'>ovul</span>e<span style='letter-spacing:-.05pt'> pa</span>r<span style='letter-spacing:-.05pt'> vo</span>s<span style='letter-spacing:-.05pt'> ovaire</span>s<span style='letter-spacing:-.05pt'> (ovulation</span>)<span style='letter-spacing:-.05pt'> pendan</span>t<span style='letter-spacing:-.05pt'> votr</span>e<span style='letter-spacing:-.05pt'> cycl</span>e<span style='letter-spacing:-.05pt'> menstruel</span>.<span style='letter-spacing:-.05pt'> <span style='text-transform:uppercase'>CEZIBOE </span>fai</span>t<span style='letter-spacing:-.05pt'> parti</span>e<span style='letter-spacing:-.05pt'> d’u</span><span style='letter-spacing:-.1pt'>n</span>e<span style='letter-spacing: -.05pt'> class</span>e<span style='letter-spacing:-.05pt'> de </span><span style='letter-spacing:-.2pt'>m</span>é<span style='letter-spacing:-.05pt'>dicament</span>s<span style='letter-spacing:-.05pt'> appelé</span>e<span style='letter-spacing:-.05pt'> </span>«<span style='letter-spacing:-.25pt'> </span><span style='letter-spacing: -.05pt'>antagoniste</span>s <span style='letter-spacing:-.05pt'>d</span>e <span style='letter-spacing:-.05pt'>l</span>a <span style='letter-spacing:-.05pt'>GnR</span>H<span style='letter-spacing:-.1pt'> </span><span style='letter-spacing:-.25pt'>».</span></p>
+<p class=AmmCorpsTexte><b><span style='letter-spacing:-.05pt'>Dans quels cas <span style='text-transform:uppercase'>CEZIBOE </span>est-il utilisé</span></b></p>
+<p class=AmmCorpsTexte><span style='text-transform:uppercase;letter-spacing: -.05pt'>CEZIBOE</span><span style='letter-spacing:-.05pt'>es</span>t<span style='letter-spacing:-.05pt'> l’u</span>n<span style='letter-spacing:-.05pt'> de</span>s<span style='letter-spacing:-.05pt'> médicament</span>s<span style='letter-spacing:-.05pt'> utilisé</span>s<span style='letter-spacing:-.05pt'> dan</span>s<span style='letter-spacing:-.05pt'> l</span>e<span style='letter-spacing:-.05pt'> cadr</span>e<span style='letter-spacing:-.05pt'> d</span>e<span style='letter-spacing:-.05pt'> </span>«<span style='letter-spacing: -.35pt'> </span><span style='letter-spacing:-.05pt'>l’assistanc</span>e<span style='letter-spacing:-.05pt'> médical</span>e<span style='letter-spacing:-.05pt'> </span>à<span style='letter-spacing:-.05pt'> l</span>a<span style='letter-spacing: -.05pt'> procréatio</span>n<span style='letter-spacing:-.05pt'> </span>» <span style='letter-spacing:-.05pt'>afi</span>n<span style='letter-spacing:-.05pt'> d</span>e<span style='letter-spacing:-.05pt'> vou</span>s<span style='letter-spacing:-.05pt'> aide</span>r<span style='letter-spacing:-.05pt'> </span>à<span style='letter-spacing:-.05pt'> deveni</span>r<span style='letter-spacing:-.05pt'> enceinte</span>.<span style='letter-spacing:-.05pt'> I</span>l<span style='letter-spacing:-.05pt'> empêch</span>e<span style='letter-spacing:-.05pt'> l</span>a <span style='letter-spacing:-.05pt'>libérat</span>ion<span style='letter-spacing:-.15pt'> </span><span style='letter-spacing:-.05pt'>prématuré</span>e<span style='letter-spacing:-.05pt'> de</span>s<span style='letter-spacing:-.05pt'> ovules</span>,<span style='letter-spacing:-.05pt'> ca</span>r<span style='letter-spacing:-.05pt'> s</span>i<span style='letter-spacing:-.05pt'> le</span>s<span style='letter-spacing:-.05pt'> ovules son</span>t<span style='letter-spacing: -.05pt'> libéré</span>s<span style='letter-spacing:-.05pt'> tro</span>p<span style='letter-spacing:-.05pt'> tô</span>t<span style='letter-spacing:-.05pt'> (ovulatio</span>n<span style='letter-spacing:-.05pt'> prématurée)</span>,<span style='letter-spacing:-.05pt'> i</span>l<span style='letter-spacing:-.05pt'> es</span>t<span style='letter-spacing:-.05pt'> alor</span>s<span style='letter-spacing:-.05pt'> possibl</span>e<span style='letter-spacing:-.05pt'> qu</span>e<span style='letter-spacing:-.05pt'> votr</span>e<span style='letter-spacing:-.05pt'> médeci</span>n<span style='letter-spacing:-.05pt'> n</span>e<span style='letter-spacing:-.05pt'> puiss</span>e<span style='letter-spacing:-.05pt'> pa</span>s<span style='letter-spacing:-.05pt'> les prélever.</span></p>
+<p class=AmmCorpsTexte><b><span style='letter-spacing:-.05pt'>Comment <span style='text-transform:uppercase'>CEZIBOE </span>agit-il ?</span></b></p>
+<p class=AmmCorpsTexte><span style='text-transform:uppercase;letter-spacing: -.05pt'>CEZIBOE </span><span style='letter-spacing:-.05pt'>bloqu</span>e<span style='letter-spacing:-.05pt'> un</span>e<span style='letter-spacing:-.05pt'> hormon</span>e<span style='letter-spacing:-.05pt'> naturell</span>e<span style='letter-spacing:-.05pt'> présent</span>e<span style='letter-spacing:-.05pt'> dan</span>s<span style='letter-spacing:-.05pt'> votr</span>e<span style='letter-spacing:-.1pt'> </span>c<span style='letter-spacing:-.05pt'>orp</span>s<span style='letter-spacing:-.05pt'> appel</span>ée <span style='letter-spacing:-.05pt'>LH</span><span style='letter-spacing:-.2pt'>-</span>RH («<span style='letter-spacing:-.25pt'> </span><span style='letter-spacing:.05pt'>hor</span><span style='letter-spacing:-.2pt'>m</span>one de <span style='letter-spacing:-.05pt'>libératio</span>n<span style='letter-spacing: -.05pt'> d</span>e<span style='letter-spacing:-.05pt'> l’hormon</span>e<span style='letter-spacing:-.05pt'> lutéinisant</span>e<span style='letter-spacing: -.05pt'> </span><span style='letter-spacing:-.25pt'>»</span>).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La L<span style='letter-spacing:-.1pt'>H</span><span style='letter-spacing:-.2pt'>-</span>RH contrôle une autre hormone, appelée LH («<span style='letter-spacing:-.2pt'> </span>hormone lutéinisante <span style='letter-spacing:-.25pt'>»</span>).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La LH stimule l’ovulation au cours de votre cycle menstruel.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Cela signifie que <span style='text-transform:uppercase'>CEZIBOE </span>interrompt la <span style='letter-spacing:-.2pt'>s</span>érie de pr<span style='letter-spacing: -.15pt'>o</span>c<span style='letter-spacing:-.15pt'>e</span>ssus conduisant à la libération d’un ovule par vos ovaires. Lorsque vos ovules sont prêts à être prélevés, un autre médicament vous sera prescrit pour déclencher leur libération (induction de l’ovulation).</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament n'appartient à aucun groupe générique</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Solution ( Composition pour 1 mL de solution )<ul role="list"><li role="listitem" style="list-style-type: none;">cétrorélix base<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span><span class="italique">0,25 mg </span><ul role="list" style="list-style-type: none;"><li class="sousFormeDe" role="listitem"><i class="fa fa-plus-square" aria-hidden="true"></i> sous forme de : cétrorélix (acétate de)</li></ul></li></ul></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > 1 seringue(s) préremplie(s) en verre de 1 ml  </p><p>Code CIP : 34009 302 195 0 8<br/>Déclaration de commercialisation : 23/02/2024<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 30,82 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 31,84 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :100 %</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><div class='fr-grid-row'><div class='fr-col'><p>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence. </p></div></div><div class='fr-grid-row'><div class='fr-col'><p>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprès de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-smr-aide-2'>plus d'informations dans l'aide</a>). Les avis et synthèses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-smr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection à la page d'aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'SMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur du SMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/p_3361529'>Avis du 20/07/2022</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 20/07/2022 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Inscription (CT)</td><td class='text-align-center'>Le service médical rendu par <br>CEZIBOE 0,25 mg (cétrorélix) est important dans l’indication de l’AMM. ;</td></tr></tbody></table></div></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence.</p></div></div><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprés de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-asmr-aide-3'>plus d'informations dans l'aide</a>). Les avis et synthéses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-asmr-aide-3' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers la page aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'ASMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur de l'ASMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td class="text-align-center">V (Inexistant)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/p_3361529'>Avis du 20/07/2022</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 20/07/2022 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Inscription (CT)</td><td class="text-align-center">CEZIBOE (cétrorélix) est un hybride qui n’apporte pas d’amélioration du service médical ren-du (ASMR V) par rapport au médicament de référence.</td></tr></tbody></table></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : SUN PHARMACEUTICAL INDUSTRIES EUROPE BV</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li><li>médicament nécessitant une surveillance particulière pendant le traitement</li><li>prescription réservée aux spécialistes et services ENDOCRINOLOGIE</li><li>prescription réservée aux spécialistes et services GYNECOLOGIE</li><li>prescription réservée aux spécialistes et services MALADIES METABOLIQUES</li><li>prescription réservée aux spécialistes et services OBSTETRIQUE</li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure décentralisée</li><li>Code CIS : &nbsp;6 566 939 8</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : CEZIBOE 0,25 mg, solution injectable en seringue pré-remplie - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="CEZIBOE 0,25 mg, solution injectable en seringue pré-remplie, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 02/11/2023</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras><span style='letter-spacing:-.05pt'>CEZIBOE 0,2</span>5<span style='letter-spacing:-.05pt'> m</span>g<span style='letter-spacing:-.05pt'> solutio</span>n<span style='letter-spacing:-.05pt'> injectable en seringue pré-remplie</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Chaque flacon de 1 ml solution contient 0,25 mg de cétrorélix (sous forme d’acétate).</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Solution injectable en seringue pré-remplie</a></p>
+<p class=AmmCorpsTexte>Solution claire et incolore, exempte de particules visibles avec un pH de 4,0 à 6,0.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">Prévention de l’ovulation prématurée chez les patientes incluses dans un protocole de stimulation ovarienne contrôlée, suivie de prélèvement d’ovocytes et de techniques de reproduction assistée.</a></p>
+<p class=AmmCorpsTexte>Dans les études cliniques, cétrorélix a été associé à la gonadotrophine de femme ménopausée (HMG). Cependant, l’expérience plus réduite acquise avec l’hormone folliculo-stimulante (FSH) recombinante suggère une efficacité équivalente</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmCorpsTexte>Cétrorélix ne sera prescrit que par un spécialiste de l’indication concernée. </p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278918">Posologie</a></p>
+<p class=AmmCorpsTexte>La première injection de cétrorélix doit être réalisée sous la surveillance d’un médecin et dans des conditions où d’éventuelles réactions allergiques/pseudo-allergiques (y compris des réactions anaphylactiques mettant en jeu le pronostic vital) peuvent être prises en charge immédiatement. La patiente pourra pratiquer elle-même les injections suivantes, à condition qu’elle soit informée des signes et symptômes pouvant révéler une hypersensibilité, des conséquences d’une telle réaction et de la nécessité d’une intervention médicale immédiate.</p>
+<p class=AmmCorpsTexte>Le contenu d’un flacon (0,25 mg de cétrorélix) sera administré une fois par jour, à intervalles de 24 heures, soit le matin, soit le soir. Après la première administration, il est recommandé que la patiente reste sous surveillance médicale pendant 30 minutes pour s’assurer qu’il n’y a pas de réaction allergique/pseudo-allergique à l’injection.</p>
+<p class=AmmAnnexeTitre4>Population âgée</p>
+<p class=AmmCorpsTexte>Il n’existe pas d’utilisation justifiée de cétrorélix dans la population âgée</p>
+<p class=AmmAnnexeTitre4>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Il n’existe pas d’utilisation justifiée de cétrorélix dans la population pédiatrique.</p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte>Cétrorélix est administré par injection sous-cutanée dans la paroi abdominale inférieure.</p>
+<p class=AmmCorpsTexte>Les réactions au site d’injection peuvent être réduites en choisissant des sites d’injection différents pour espacer les injections consécutives sur un même site et en injectant le médicament lentement pour faciliter l’absorption progressive du médicament.</p>
+<p class=AmmAnnexeTitre4>Administration le matin</p>
+<p class=AmmCorpsTexte>Le traitement par cétrorélix doit commencer le 5<sup>ème</sup> ou le 6<sup>ème</sup> jour de la stimulation ovarienne par les gonadotrophines urinaires ou recombinantes (environ 96 à 120 heures après le début de la stimulation ovarienne), et doit se poursuivre pendant toute la période de traitement par les gonadotrophines, y compris le jour de l’induction de l’ovulation.</p>
+<p class=AmmCorpsTexte>Le jour d’initiation du traitement par cétrorélix est déterminé en fonction de la réponse ovarienne, c’est-à-dire du nombre et de la taille des follicules en croissance et/ou du taux d’estradiol circulant. Le début du traitement par cétrorélix peut être retardé en l’absence de croissance folliculaire, bien que l’expérience clinique soit basée sur un début de traitement par cétrorélix au 5<sup>ème</sup> ou au 6<sup>ème</sup> jour de la stimulation.</p>
+<p class=AmmAnnexeTitre4>Administration le soir</p>
+<p class=AmmCorpsTexte>Le traitement par cétrorélix doit commencer le 5<sup>ème</sup> jour de la stimulation ovarienne par les gonadotrophines urinaires ou recombinantes (environ 96 à 108 heures après le début de la stimulation ovarienne), et doit se poursuivre pendant toute la période de traitement par les gonadotrophines jusqu’au soir précédant le jour de l’induction de l’ovulation.</p>
+<p class=AmmCorpsTexte>Le jour d’initiation du traitement par cétrorélix est déterminé en fonction de la réponse ovarienne, c’est-à-dire du nombre et de la taille des follicules en croissance et/ou du taux d’estradiol circulant. Le début du traitement par cétrorélix peut être retardé en l’absence de croissance folliculaire, bien que l’expérience clinique soit basée sur un début de traitement par cétrorélix au 5<sup>ème</sup> ou au 6<sup>ème</sup> jour de la stimulation.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278919">Le cétrorélix ne doit pas être utilisé dans les situations indiquées ci-dessous :</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>hypersensibilité à la substance active ou à tout autre analogue structural de la <i>gonadotropin- releasing hormone </i>(GnRH), aux hormones peptidiques exogènes ou à l’un des excipients mentionnés à la rubrique 6.1</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>pendant la grossesse et l’allaitement</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>patientes présentant une insuffisance rénale sévère.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmAnnexeTitre4><a name="_Toc142278920">Allergies</a></p>
+<p class=AmmCorpsTexte>Des cas de réactions allergiques/pseudo<span style='letter-spacing:-.2pt'>-</span>allergiques, y compris des réactions anaphylactiques mettant en jeu le pronostic vital, ont été signalés lors de l’admin<span style='letter-spacing:.05pt'>i</span>stration de la première dose (voir rubrique<span style='letter-spacing:-.1pt'> </span>4.8).</p>
+<p class=AmmCorpsTexte>Des précautions particulières seront prises chez les femmes présentant des signes et symptômes d’allergie active ou ayant un terrain allergique connu. Le traitement par cétrorélix n’est pas recommandé chez<span style='letter-spacing:-.15pt'> </span>les femmes ayant des épisodes allergiques graves.</p>
+<p class=AmmAnnexeTitre4>Syndrome d’hyperstimulation ovarienne (SHO)</p>
+<p class=AmmCorpsTexte>Un syndrome d’hyperstimulation ovarienne peut survenir pendant ou à la suite d’une stimulation ovarienne. Cette éventualité doit être considérée comme un risque<span style='letter-spacing:-.2pt'> </span>intrinsèque du processus de stimulation par les gonadotrophines.</p>
+<p class=AmmCorpsTexte>Un SHO doit être traité de manière symptomatique, par exemple<span style='letter-spacing:-.2pt'> </span>: repos, injection intraveineuse d’électrolytes/colloïdes, héparine.</p>
+<p class=AmmCorpsTexte>Un traitement de soutien de la phase lutéale sera instauré en fonction des pratiq<span style='letter-spacing:-.15pt'>u</span>es habituelles du centre.</p>
+<p class=AmmAnnexeTitre4>Protocole de stimulation ovarienne répété</p>
+<p class=AmmCorpsTexte>À l’heure actuelle, l’expérience acquise sur<span style='letter-spacing:-.2pt'> </span>le cétrorélix au cours de protocole de stimulation ovarienne répété est limitée. Par conséquent, l’utilisation<span style='letter-spacing:-.1pt'> </span>du cét<span style='letter-spacing:-.1pt'>r</span>orélix sur plusieurs cycles ne doit intervenir qu’après une évaluation attentive du rapport bénéfice/risque.</p>
+<p class=AmmAnnexeTitre4>Anomalies congénitales</p>
+<p class=AmmCorpsTexte>La prévalence des anomalies congénitales après le recours aux techniques <span style='letter-spacing: -.1pt'>d</span>e reproduction assistée, avec ou sans antagonist<span style='letter-spacing:-.15pt'>e</span>s de la GnR<span style='letter-spacing: -.1pt'>H</span>, <span style='letter-spacing:-.15pt'>p</span>eut être<span style='letter-spacing:-.15pt'> </span>légèrement plus élevée qu’après une conception spontanée, bien que l’on ne sache pas clairement si cela est lié à des facteurs inhérents à l’infertilité du couple ou aux procédures de reproduction assistée. D’après des données limi<span style='letter-spacing: .05pt'>t</span>ées issues d’études de suivi clinique menées chez 316 nouveau<span style='letter-spacing:-.2pt'>-</span>nés dont la mère avait reçu<span style='letter-spacing:-.15pt'> </span>le cétrorélix<span style='letter-spacing: -.15pt'> </span>pour<span style='letter-spacing:-.1pt'> </span>trai<span style='letter-spacing:-.1pt'>t</span>er l’infertilité,<span style='letter-spacing: -.15pt'> </span>le cétrorélix n’augmente pas le risque d’anomalies congénitales chez la descendance.</p>
+<p class=AmmAnnexeTitre4>Insuffisance hépatique</p>
+<p class=AmmCorpsTexte>Le cétrorélix <span style='letter-spacing:-.15pt'>n</span>’a pas été étudié chez des patientes présentant une insuffisance hépatique. La prudence s’impose donc dans ce cas.</p>
+<p class=AmmAnnexeTitre4>Insuffisance rénale</p>
+<p class=AmmCorpsTexte>Le cétrorélix n’a pas été étudié chez des patientes présentant une insuffisance rénale. La prudence s’impose donc dans <span style='letter-spacing:-.15pt'>c</span>e cas.</p>
+<p class=AmmCorpsTexte>Le cétrorélix est<span style='letter-spacing:-.1pt'> </span>contre<span style='letter-spacing:-.2pt'>-</span>indiqué chez les patientes présentant une insuffisance rénale sévère (voir rubrique<span style='letter-spacing:-.1pt'> </span>4.3).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmCorpsTexte>Aucune étude d’interaction médicamenteuse n’a été formellement réalisée avec le cétrorélix. Les études in vitro ont montré qu’il est peu probable d’observer des interactions avec les médicaments métabolisés par le cytochrome P-450 ou subissant une conjugaison ou une glucuroconjugaison. Cependant, l’éventualité d’interactions avec les gonadotrophines ou les médicaments histamino-libérateurs chez les individus sensibles ne peut être totalement exclue.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte>Cétrorélix n’est pas destiné à être utilisé pendant la grossesse et l’allaitement (voir rubrique 4.3).</p>
+<p class=AmmAnnexeTitre3>Fertilité</p>
+<p class=AmmCorpsTexte>Les études réalisées chez l’animal ont montré que le cétrorélix exerce une influence dose-dépendante sur la fertilité, les performances de reproduction et la grossesse. Aucun effet tératogène n’a été observé lorsque le médicament est administré pendant la phase sensible de la gestation.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929"><span lang=FR-BE>CEZIBOE n’a aucun effet ou un effet négligeable sur l’aptitude à conduire des véhicules et à utiliser des machines.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmAnnexeTitre4>Résumé du profil de sécurité</p>
+<p class=AmmCorpsTexte>Les effets indésirables les plus fréquemment rapportés sont des réactions localisées au site d’injection telles qu’érythème, réaction œdémateuse et démangeaisons, et sont généralement légères et transitoires. Dans les études cliniques, leur fréquence était de 9,4 % après injections multiples de cétrorélix 0,25 mg.</p>
+<p class=AmmCorpsTexte>Le SHO d’intensité légère à modérée (OMS–  grade I ou II) a été fréquemment rapporté et doit être considéré comme un risque intrinsèque du processus de stimulation. En revanche, les cas de SHO sévère restent peu fréquents.</p>
+<p class=AmmCorpsTexte>Des cas peu fréquents de réactions d’hypersensibilité, y compris de réactions pseudo- allergiques/anaphylactiques, ont été rapportés.</p>
+<p class=AmmAnnexeTitre4>Liste des effets indésirables</p>
+<p class=AmmCorpsTexte>Les effets indésirables rapportés ci-dessous sont classés en fonction de leur fréquence comme suit : très fréquent (&#8805;1/10), fréquent (&#8805;1/100, <1/10), peu fréquent (&#8805;1/1 000, <1/100), rare (&#8805;1/10 000, <1/1 000), très rare (<1/10 000).</p>
+<div class='fr-table--lg fr-table'><table>
+<thead>
+<tr>
+<td width=188 valign=top style='width:140.9pt;border:solid windowtext 1.0pt;
+padding:0cm 2.0pt 0cm 2.0pt'>
+<p class=AmmCorpsTexte>MedDRA des classes de systèmes d’organes</p>
+</td>
+<td width=219 valign=top style='width:163.9pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 2.0pt 0cm 2.0pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Fréquent</span></p>
+</td>
+<td width=198 valign=top style='width:148.8pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 2.0pt 0cm 2.0pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Peu fréquent</span></p>
+</td>
+</tr>
+</thead>
+<tr>
+<td width=188 valign=top style='width:140.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 2.0pt 0cm 2.0pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Affections du système immunitaire</span></p>
+</td>
+<td width=219 valign=top style='width:163.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 2.0pt 0cm 2.0pt'>
+<p class=AmmCorpsTexte><span lang=EN-US> </span></p>
+</td>
+<td width=198 valign=top style='width:148.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 2.0pt 0cm 2.0pt'>
+<p class=AmmCorpsTexte>Réactions allergiques généralisées/pseudo-allergiques, y compris réactions anaphylactiques mettant en jeu le pronostic vital</p>
+</td>
+</tr>
+<tr>
+<td width=188 valign=top style='width:140.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 2.0pt 0cm 2.0pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Affections du système nerveux</span></p>
+</td>
+<td width=219 valign=top style='width:163.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 2.0pt 0cm 2.0pt'>
+<p class=AmmCorpsTexte><span lang=EN-US> </span></p>
+</td>
+<td width=198 valign=top style='width:148.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 2.0pt 0cm 2.0pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Maux de tête</span></p>
+</td>
+</tr>
+<tr>
+<td width=188 valign=top style='width:140.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 2.0pt 0cm 2.0pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Affections gastro-intestinales</span></p>
+</td>
+<td width=219 valign=top style='width:163.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 2.0pt 0cm 2.0pt'>
+<p class=AmmCorpsTexte><span lang=EN-US> </span></p>
+</td>
+<td width=198 valign=top style='width:148.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 2.0pt 0cm 2.0pt'>
+<p class=AmmCorpsTexte><span lang=EN-US>Nausées</span></p>
+</td>
+</tr>
+<tr>
+<td width=188 valign=top style='width:140.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 2.0pt 0cm 2.0pt'>
+<p class=AmmCorpsTexte>Affections des organes de reproduction et du sein</p>
+</td>
+<td width=219 valign=top style='width:163.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 2.0pt 0cm 2.0pt'>
+<p class=AmmCorpsTexte>Un SHO d’intensité légère à modérée (OMS –  grade I ou II), risque intrinsèque du processus de stimulation, peut survenir (voir rubrique 4.4).</p>
+</td>
+<td width=198 valign=top style='width:148.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 2.0pt 0cm 2.0pt'>
+<p class=AmmCorpsTexte>SHO sévère (OMS –  grade III).</p>
+</td>
+</tr>
+<tr>
+<td width=188 valign=top style='width:140.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 2.0pt 0cm 2.0pt'>
+<p class=AmmCorpsTexte>Troubles généraux et anomalies au site d’administration</p>
+</td>
+<td width=219 valign=top style='width:163.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 2.0pt 0cm 2.0pt'>
+<p class=AmmCorpsTexte>Réactions au site d’injection (telles que érythème, réaction œdémateuse et démangeaisons).</p>
+</td>
+<td width=198 valign=top style='width:148.8pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 2.0pt 0cm 2.0pt'>
+<p class=AmmCorpsTexte> </p>
+</td>
+</tr>
+</table></div>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="http://www.signalement-sante.gouv.fr">www.signalement-sante.gouv.fr</a>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte>Un surdosage peut avoir pour conséquence une augmentation de la durée d’action, mais il est peu probable qu’il soit accompagné d’effets toxiques aigus.</p>
+<p class=AmmCorpsTexte>Dans le cadre d’études de toxicité aiguë réalisées chez le rongeur, des symptômes de toxicité non spécifiques ont été observés suite à l’administration intrapéritonéale de doses de cétrorélix plus de 200 fois supérieures à la dose pharmacologique efficace par voie sous-cutanée.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : <span style='letter-spacing:-.05pt'>Antagoniste</span>s<span style='letter-spacing:-.05pt'> d</span>e<span style='letter-spacing:-.05pt'> l</span>a<span style='letter-spacing:-.05pt'> GnRH</span>, code ATC : H01CC02.</a></p>
+<p class=AmmAnnexeTitre3>Mécanisme d’action</p>
+<p class=AmmCorpsTexte>Le cétrorélix est un antagonis<span style='letter-spacing: -.1pt'>t</span>e du facteur de libération de l’hormone lutéinisante (LH<span style='letter-spacing:-.2pt'>-</span>RH). La L<span style='letter-spacing:.05pt'>H</span>- RH se lie aux récepteurs membranaires des cellules hypophysaires. Le cétrorélix entre en compétition avec la L<span style='letter-spacing:-.1pt'>H</span><span style='letter-spacing:-.2pt'>-</span>RH endogène au niveau de ses récepteurs. Grâce à ce mode d’action, le cétrorélix contrôle la sécrétion des gonadotrophines (LH et FSH).</p>
+<p class=AmmCorpsTexte>Le cétrorélix inhibe de façon dose-dépendante la sécrétion de la LH et de la FSH par l’hypophyse. La suppression se produit pratiquement immédiatement et se maintient pendant la poursuite du traitement, sans effet stimulant initial.</p>
+<p class=AmmAnnexeTitre3>Efficacité et sécurité clinique</p>
+<p class=AmmCorpsTexte>Chez la femme, le cétrorélix retarde le pic de LH et par conséquent l’ovulation. Chez les femmes subissant un traitement de stimulation ovarienne, la durée d’action du cétrorélix est dose-dépendante. A la dose de 0,25 mg par injection, des injections répétées toutes les 24 heures maintiennent l’effet du cétrorélix.</p>
+<p class=AmmCorpsTexte>Chez l’animal comme chez l’homme, les effets hormonaux antagonistes du cétrorélix sont complètement réversibles à l’arrêt du traitement.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278934">Absorption</a></p>
+<p class=AmmCorpsTexte><span style='letter-spacing:-.05pt'>Aprè</span>s<span style='letter-spacing:-.05pt'> administratio</span>n<span style='letter-spacing: -.05pt'> sou</span>s<span style='letter-spacing:-.1pt'>-</span><span style='letter-spacing:-.05pt'>cutanée</span>,<span style='letter-spacing:-.05pt'> l</span>a<span style='letter-spacing:-.05pt'> biodisponibilit</span>é<span style='letter-spacing:-.05pt'> absolu</span>e<span style='letter-spacing:-.05pt'> d</span>u<span style='letter-spacing:-.05pt'> cétroréli</span>x<span style='letter-spacing:-.05pt'> es</span>t<span style='letter-spacing:-.05pt'> d’enviro</span>n<span style='letter-spacing:-.05pt'> 8</span>5<span style='letter-spacing:-.2pt'> </span>%.</p>
+<p class=AmmAnnexeTitre3>Distribution</p>
+<p class=AmmCorpsTexte><span style='position:relative;top:-1.0pt;letter-spacing: -.05pt'>L</span><span style='position:relative;top:-1.0pt'>e<span style='letter-spacing:-.1pt'> </span><span style='letter-spacing:-.05pt'>volum</span>e<span style='letter-spacing:-.05pt'> d</span>e<span style='letter-spacing:-.05pt'> distributio</span>n<span style='letter-spacing:-.05pt'> (</span>V</span><sub>d</sub><span style='position:relative;top:-1.0pt'>)<span style='letter-spacing:-.05pt'> es</span>t<span style='letter-spacing:-.1pt'> </span><span style='letter-spacing:-.05pt'>d</span>e<span style='letter-spacing:-.05pt'> 1,</span>1 l<span style='letter-spacing:-.15pt'> </span>× <span style='letter-spacing:-.15pt'>kg<sup>-1</sup></span>.</span></p>
+<p class=AmmAnnexeTitre3>Élimination</p>
+<p class=AmmCorpsTexte>La<span style='letter-spacing:-.1pt'> </span>clairance plas<span style='letter-spacing:-.25pt'>m</span>atique totale et la clairance rénale<span style='letter-spacing:-.1pt'> </span>sont respectivement de 1,2<span style='letter-spacing:-.1pt'> </span><span style='letter-spacing:-.2pt'>ml</span> x <span style='letter-spacing:-.1pt'>mi</span>n<sup>-1</sup> x kg<sup>-1</sup><span style='position:relative;top:-4.0pt;letter-spacing:1.0pt'> </span>et de 0,1 <span style='letter-spacing:-.2pt'>ml</span><span style='letter-spacing:-.1pt'> </span>x <span style='letter-spacing:-.1pt'>mi</span>n<sup>-1</sup><span style='position:relative;top:-4.0pt;letter-spacing:1.0pt'> </span>x<span style='letter-spacing:.05pt'> </span><span style='letter-spacing:-.15pt'>k</span>g<sup>-1</sup>.</p>
+<p class=AmmCorpsTexte>Les demi<span style='letter-spacing:-.1pt'>-</span>vies terminales moyennes après l’administration intraveineuse et sou<span style='letter-spacing:-.1pt'>s</span><span style='letter-spacing:-.2pt'>-</span>cutanée sont respectivement d’environ 12 heures et 30<span style='letter-spacing:-.15pt'> </span>heures, dé<span style='letter-spacing:-.2pt'>m</span>ontrant l’impact du processus de résorption au site d’injection.</p>
+<p class=AmmAnnexeTitre3>Linéarité</p>
+<p class=AmmCorpsTexte><span style='letter-spacing:-.05pt'>L’administratio</span>n<span style='letter-spacing:-.05pt'> sou</span>s<span style='letter-spacing:-.2pt'>-</span><span style='letter-spacing:-.05pt'>cutané</span>e<span style='letter-spacing:-.05pt'> d</span>e<span style='letter-spacing:-.05pt'> dose</span>s<span style='letter-spacing:-.05pt'> unique</span>s<span style='letter-spacing:-.05pt'> (d</span>e<span style='letter-spacing:-.05pt'> 0,2</span>5<span style='letter-spacing:-.05pt'> m</span>g<span style='letter-spacing:-.1pt'> </span>à<span style='letter-spacing:-.1pt'> </span>3 <span style='letter-spacing:-.05pt'>m</span>g<span style='letter-spacing:-.05pt'> d</span>e<span style='letter-spacing:-.05pt'> cétrorélix</span>)<span style='letter-spacing:-.05pt'> ains</span>i<span style='letter-spacing:-.05pt'> qu</span>e<span style='letter-spacing:-.05pt'> des administration</span>s<span style='letter-spacing:-.05pt'> journalière</span>s<span style='letter-spacing:-.05pt'> pendan</span>t<span style='letter-spacing:-.05pt'> 1</span>4<span style='letter-spacing:-.15pt'> </span><span style='letter-spacing: -.05pt'>jour</span>s<span style='letter-spacing:-.05pt'> fon</span>t<span style='letter-spacing:-.05pt'> apparaî</span>t<span style='letter-spacing:-.1pt'>r</span>e<span style='letter-spacing:-.05pt'> un</span>e<span style='letter-spacing:-.05pt'> cinétiqu</span>e<span style='letter-spacing:-.05pt'> linéair</span><span style='letter-spacing:-.15pt'>e</span>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278935">Les données non cliniques issues des études conventionnelles de pharmacologie de sécurité, toxicologie en administration répétée, génotoxicité, cancérogénèse, et des fonctions de reproduction, n’ont pas révélé de risque particulier pour l’homme.</a></p>
+<p class=AmmCorpsTexte><span style='letter-spacing:-.05pt'>Le</span>s<span style='letter-spacing:-.05pt'> étude</span>s<span style='letter-spacing:-.05pt'> d</span>e<span style='letter-spacing:-.05pt'> toxicit</span>é<span style='letter-spacing:-.05pt'> aiguë</span>,<span style='letter-spacing:-.05pt'> subaigu</span>ë<span style='letter-spacing:-.05pt'> e</span>t<span style='letter-spacing:-.05pt'> chroniqu</span>e<span style='letter-spacing: -.05pt'> réalisée</span>s<span style='letter-spacing:-.05pt'> che</span>z<span style='letter-spacing:-.05pt'> l</span>e<span style='letter-spacing:-.05pt'> ra</span>t<span style='letter-spacing:-.05pt'> e</span>t<span style='letter-spacing:-.05pt'> l</span>e<span style='letter-spacing:-.05pt'> chie</span>n<span style='letter-spacing:-.05pt'> pa</span>r<span style='letter-spacing:-.05pt'> voi</span>e<span style='letter-spacing:-.05pt'> sous</span>- <span style='letter-spacing:-.05pt'>cutané</span>e<span style='letter-spacing:-.05pt'> n’on</span>t<span style='letter-spacing:-.05pt'> mi</span>s<span style='letter-spacing:-.05pt'> e</span>n<span style='letter-spacing: -.05pt'> évidenc</span>e<span style='letter-spacing:-.05pt'> aucu</span>n<span style='letter-spacing:-.05pt'> organ</span>e<span style='letter-spacing:-.05pt'> cible</span>.<span style='letter-spacing:-.05pt'> Aucu</span>n<span style='letter-spacing:-.05pt'> sign</span>e<span style='letter-spacing:-.05pt'> d’irritatio</span>n<span style='letter-spacing:-.05pt'> local</span>e<span style='letter-spacing:-.05pt'> o</span>u<span style='letter-spacing:-.05pt'> d’intoléranc</span>e<span style='letter-spacing:-.05pt'> </span><span style='letter-spacing:-.15pt'>e</span>n <span style='letter-spacing:-.05pt'>relatio</span>n<span style='letter-spacing:-.05pt'> ave</span>c<span style='letter-spacing:-.05pt'> l</span>e<span style='letter-spacing:-.05pt'> médicamen</span>t<span style='letter-spacing:-.05pt'> n’</span>a<span style='letter-spacing:-.05pt'> ét</span>é<span style='letter-spacing:-.05pt'> observ</span>é<span style='letter-spacing:-.05pt'> che</span>z<span style='letter-spacing:-.05pt'> l</span>e<span style='letter-spacing:-.05pt'> chie</span>n<span style='letter-spacing:-.05pt'> suit</span>e<span style='letter-spacing:-.05pt'> </span>à<span style='letter-spacing:-.05pt'> l’injectio</span>n<span style='letter-spacing:-.05pt'> intraveineuse</span>,<span style='letter-spacing: -.05pt'> intra</span>- <span style='letter-spacing:-.05pt'>artériell</span>e<span style='letter-spacing:-.05pt'> e</span>t<span style='letter-spacing:-.05pt'> paraveineus</span>e<span style='letter-spacing:-.05pt'> d</span>e<span style='letter-spacing:-.05pt'> dose</span>s<span style='letter-spacing:-.05pt'> d</span>e<span style='letter-spacing:-.05pt'> cétroréli</span>x<span style='letter-spacing:-.05pt'> nettemen</span>t<span style='letter-spacing: -.05pt'> supérieure</span>s<span style='letter-spacing:-.05pt'> </span>à<span style='letter-spacing:-.05pt'> celle</span>s<span style='letter-spacing:-.05pt'> qu</span>i<span style='letter-spacing:-.05pt'> son</span>t<span style='letter-spacing:-.05pt'> prévue</span>s<span style='letter-spacing:-.05pt'> en clinique.</span></p>
+<p class=AmmCorpsTexte><span style='letter-spacing:-.05pt'>L</span>e<span style='letter-spacing:-.05pt'> cétroréli</span>x<span style='letter-spacing: -.05pt'> n’</span>a<span style='letter-spacing:-.05pt'> montr</span>é<span style='letter-spacing:-.05pt'> aucu</span>n<span style='letter-spacing:-.05pt'> potentie</span>l<span style='letter-spacing:-.05pt'> mu</span><span style='letter-spacing:.05pt'>t</span><span style='letter-spacing:-.05pt'>agèn</span>e<span style='letter-spacing:-.05pt'> o</span>u<span style='letter-spacing:-.05pt'> clastogèn</span>e<span style='letter-spacing:-.05pt'> lor</span>s <span style='letter-spacing:-.05pt'>de</span>s<span style='letter-spacing:-.05pt'> essai</span>s<span style='letter-spacing:-.05pt'> d</span>e<span style='letter-spacing:-.05pt'> mutatio</span>n<span style='letter-spacing:-.05pt'> génique o</span>u<span style='letter-spacing:-.05pt'> chromosomique.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937">Mannitol (E421)</a></p>
+<p class=AmmCorpsTexte>Acide lactique (-S)</p>
+<p class=AmmCorpsTexte>Eau pour préparations injectables.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">Ce médicament ne doit pas être mélangé avec d’autres médicaments à l’exception de ceux mentionnés dans la rubrique 6.6.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte>2 ans</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278940">À conserver au réfrigérateur (entre 2°C et 8°C).</a></p>
+<p class=AmmCorpsTexte><span style='letter-spacing:-.05pt'>Avan</span>t<span style='letter-spacing:-.05pt'> ouverture</span>,<span style='letter-spacing: -.05pt'> l</span>e<span style='letter-spacing:-.05pt'> médicamen</span>t <span style='letter-spacing:-.05pt'>peu</span>t<span style='letter-spacing:-.05pt'> êtr</span>e<span style='letter-spacing:-.05pt'> conserv</span>é<span style='letter-spacing:-.05pt'> dan</span>s<span style='letter-spacing:-.05pt'> l’emballag</span>e<span style='letter-spacing:-.05pt'> d’origin</span>e<span style='letter-spacing:-.05pt'> </span>à<span style='letter-spacing:-.05pt'> tempéra</span>t<span style='letter-spacing:-.05pt'>ur</span>e<span style='letter-spacing:-.05pt'> ambiante (n</span>e<span style='letter-spacing: -.05pt'> dépassan</span>t<span style='letter-spacing:-.05pt'> pa</span>s<span style='letter-spacing:-.05pt'> 25°C</span>)<span style='letter-spacing:-.05pt'> pendan</span>t<span style='letter-spacing:-.05pt'> u</span>n<span style='letter-spacing:-.05pt'> maximu</span>m<span style='letter-spacing:-.05pt'> d</span>e<span style='letter-spacing:-.05pt'> troi</span>s<span style='letter-spacing:-.05pt'> mois.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte>La présentation en seringue préremplie comporte :</p>
+<p class=AmmCorpsTexte>1 cylindre en verre transparent de type I (1 ml) avec aiguille 27 gauge de ½ pouce prémontée, fermé par un bouchon-piston en élastomère (bromobutyle). La seringue comporte une tige de piston blanc et un système de sécurité automatique.</p>
+<p class=AmmCorpsTexte>1 seringue préremplie assemblée avec dispositif de sécurité est conditionnée dans 1 emballage blister. 1 emballage blister avec 1 tampon imbibé d’alcool sera conditionné dans une boîte en carton.</p>
+<p class=AmmCorpsTexte>Conditionnement multiple contenant 7 seringues préremplies assemblées avec dispositifs de sécurité sont conditionnées dans 7 emballages blisters. 7 emballages blisters avec 7 tampons imbibés d’alcool sont conditionnés séparément dans 7 boîtes en carton et placés ensemble dans le conditionnement multiple.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte>Ce produit doit être ramené à température ambiante avant injection. Il doit être sorti du réfrigérateur 30 minutes environ avant utilisation.</p>
+<p class=AmmCorpsTexte>L’injection sous-cutanée est administrée de la même manière qu’avec une seringue classique. Pour les seringues munies d'un système de sécurité, l'aiguille doit être orientée loin de l'utilisateur et de toute autre personne présente. Le système de sécurité est activé en appuyant fermement sur la tige du piston. Le manchon protecteur couvrira automatiquement l'aiguille et produira un clic audible qui confirmera l'activation du dispositif. La seringue doit être éliminée immédiatement, en la jetant dans le collecteur d’aiguilles le plus proche (l'aiguille dedans). Le couvercle du récipient doit être fermé hermétiquement et le contenant placé hors de la portée des enfants.</p>
+<p class=AmmCorpsTexte>Tout médicament non utilisé ou déchet doit être éliminé conformément à la réglementation locale en vigueur.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><a name="_Toc142278943"><span style='text-transform: uppercase'>Sun Pharmaceutical Industries Europe B.V.</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><span style='text-transform:uppercase'>Polarisavenue 87</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt; page-break-after:avoid'><span style='text-transform:uppercase'>2132 JH Hoofddorp</span></p>
+<p class=AmmCorpsTexte><span style='text-transform: uppercase'>Pays-Bas</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 302 195 0 8 : 1 mL en seringue pré-remplie (verre). Boîte de 1.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 302 195 1 5 : 1 mL en seringue pré-remplie (verre). Boîte de 7.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945"><span style='color:#538135'>[à compléter ultérieurement par le titulaire]</span></a></p>
+<p class=AmmCorpsTexte>Date de première autorisation:{JJ mois AAAA}</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946"><span style='color:#538135'>[à compléter ultérieurement par le titulaire]</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>{JJ mois AAAA}</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I </p>
+<p class=AmmCorpsTexte>Médicament nécessitant une surveillance particulière pendant le traitement   </p>
+<p class=AmmCorpsTexte>Médicament soumis à une prescription réservée aux spécialistes en gynécologie et/ou en gynécologie-obstétrique et/ou en endocrinologie et métabolisme.</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_CEZIBOE_0,25_mg_solution_injectable_en_seringue_pré-remplie_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE CEZIBOE 0,25 mg solution injectable en seringue pré-remplie ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE CEZIBOE 0,25 mg solution injectable en seringue pré-remplie ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_CEZIBOE_0,25_mg_solution_injectable_en_seringue_pré-remplie_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER CEZIBOE 0,25 mg solution injectable en seringue pré-remplie ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER CEZIBOE 0,25 mg solution injectable en seringue pré-remplie ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_UTILISER_CEZIBOE_0,25_mg_solution_injectable_en_seringue_pré-remplie?"
+                     aria-label="3. COMMENT UTILISER CEZIBOE 0,25 mg solution injectable en seringue pré-remplie? (Lien de redirection)">
+                    3. COMMENT UTILISER CEZIBOE 0,25 mg solution injectable en seringue pré-remplie?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_CEZIBOE_0,25_mg_solution_injectable_en_seringue_pré-remplie_?"
+                     aria-label="5. COMMENT CONSERVER CEZIBOE 0,25 mg solution injectable en seringue pré-remplie ? (Lien de redirection)">
+                    5. COMMENT CONSERVER CEZIBOE 0,25 mg solution injectable en seringue pré-remplie ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : CEZIBOE 0,25 mg, solution injectable en seringue pré-remplie - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="CEZIBOE 0,25 mg, solution injectable en seringue pré-remplie, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 02/11/2023</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'><a name="_Toc142278999">CEZIBOE 0,25 mg solution injectable en seringue pré-remplie</a></p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>cétrorélix (sous forme d’acétate)</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279000"><span lang=FR-BE>Veuillez lire attentivement cette notice avant d’utiliser ce médicament car elle contient des informations importantes pour vous.</span></a></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin ou votre pharmacien.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que CEZIBOE 0,25 mg solution injectable en seringue pré-remplie et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant d'utiliser CEZIBOE 0,25 mg solution injectable en seringue pré-remplie ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment utiliser CEZIBOE 0,25 mg solution injectable en seringue pré-remplie ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver CEZIBOE 0,25 mg solution injectable en seringue pré-remplie ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_CEZIBOE_0,25_mg_solution_injectable_en_seringue_pré-remplie_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE CEZIBOE 0,25 mg solution injectable en seringue pré-remplie ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte>Classe pharmacothérapeutique : A<span style='letter-spacing:-.05pt'>ntagoniste</span>s<span style='letter-spacing: -.05pt'> d</span>e<span style='letter-spacing:-.05pt'> l</span>a<span style='letter-spacing:-.05pt'> GnRH</span>, code ATC : H01CC02.</p>
+<p class=AmmCorpsTexte><b><span style='letter-spacing:-.05pt'>Qu’est ce </span></b><span style='text-transform:uppercase;letter-spacing:-.05pt'>CEZIBOE</span></p>
+<p class=AmmCorpsTexte><span style='text-transform:uppercase;letter-spacing: -.05pt'>CEZIBOE </span><span style='letter-spacing:-.05pt'>contien</span>t<span style='letter-spacing:-.05pt'> u</span>n<span style='letter-spacing:-.05pt'> médicamen</span>t<span style='letter-spacing:-.05pt'> appel</span>é<span style='letter-spacing:-.05pt'> </span>«<span style='letter-spacing:-.3pt'> </span>cétrorélix <span style='letter-spacing:-.25pt'>»</span>.<span style='letter-spacing:.1pt'> </span><span style='letter-spacing:-.05pt'>C</span>e<span style='letter-spacing: -.05pt'> médicamen</span>t<span style='letter-spacing:-.05pt'> empêch</span>e<span style='letter-spacing:-.05pt'> l</span>a<span style='letter-spacing:-.05pt'> libératio</span>n<span style='letter-spacing:-.05pt'> d’un</span> <span style='letter-spacing:-.05pt'>ovul</span>e<span style='letter-spacing:-.05pt'> pa</span>r<span style='letter-spacing:-.05pt'> vo</span>s<span style='letter-spacing:-.05pt'> ovaire</span>s<span style='letter-spacing:-.05pt'> (ovulation</span>)<span style='letter-spacing:-.05pt'> pendan</span>t<span style='letter-spacing:-.05pt'> votr</span>e<span style='letter-spacing:-.05pt'> cycl</span>e<span style='letter-spacing:-.05pt'> menstruel</span>.<span style='letter-spacing:-.05pt'> <span style='text-transform:uppercase'>CEZIBOE </span>fai</span>t<span style='letter-spacing:-.05pt'> parti</span>e<span style='letter-spacing:-.05pt'> d’u</span><span style='letter-spacing:-.1pt'>n</span>e<span style='letter-spacing: -.05pt'> class</span>e<span style='letter-spacing:-.05pt'> de </span><span style='letter-spacing:-.2pt'>m</span>é<span style='letter-spacing:-.05pt'>dicament</span>s<span style='letter-spacing:-.05pt'> appelé</span>e<span style='letter-spacing:-.05pt'> </span>«<span style='letter-spacing:-.25pt'> </span><span style='letter-spacing: -.05pt'>antagoniste</span>s <span style='letter-spacing:-.05pt'>d</span>e <span style='letter-spacing:-.05pt'>l</span>a <span style='letter-spacing:-.05pt'>GnR</span>H<span style='letter-spacing:-.1pt'> </span><span style='letter-spacing:-.25pt'>».</span></p>
+<p class=AmmCorpsTexte><b><span style='letter-spacing:-.05pt'>Dans quels cas <span style='text-transform:uppercase'>CEZIBOE </span>est-il utilisé</span></b></p>
+<p class=AmmCorpsTexte><span style='text-transform:uppercase;letter-spacing: -.05pt'>CEZIBOE</span><span style='letter-spacing:-.05pt'>es</span>t<span style='letter-spacing:-.05pt'> l’u</span>n<span style='letter-spacing:-.05pt'> de</span>s<span style='letter-spacing:-.05pt'> médicament</span>s<span style='letter-spacing:-.05pt'> utilisé</span>s<span style='letter-spacing:-.05pt'> dan</span>s<span style='letter-spacing:-.05pt'> l</span>e<span style='letter-spacing:-.05pt'> cadr</span>e<span style='letter-spacing:-.05pt'> d</span>e<span style='letter-spacing:-.05pt'> </span>«<span style='letter-spacing: -.35pt'> </span><span style='letter-spacing:-.05pt'>l’assistanc</span>e<span style='letter-spacing:-.05pt'> médical</span>e<span style='letter-spacing:-.05pt'> </span>à<span style='letter-spacing:-.05pt'> l</span>a<span style='letter-spacing: -.05pt'> procréatio</span>n<span style='letter-spacing:-.05pt'> </span>» <span style='letter-spacing:-.05pt'>afi</span>n<span style='letter-spacing:-.05pt'> d</span>e<span style='letter-spacing:-.05pt'> vou</span>s<span style='letter-spacing:-.05pt'> aide</span>r<span style='letter-spacing:-.05pt'> </span>à<span style='letter-spacing:-.05pt'> deveni</span>r<span style='letter-spacing:-.05pt'> enceinte</span>.<span style='letter-spacing:-.05pt'> I</span>l<span style='letter-spacing:-.05pt'> empêch</span>e<span style='letter-spacing:-.05pt'> l</span>a <span style='letter-spacing:-.05pt'>libérat</span>ion<span style='letter-spacing:-.15pt'> </span><span style='letter-spacing:-.05pt'>prématuré</span>e<span style='letter-spacing:-.05pt'> de</span>s<span style='letter-spacing:-.05pt'> ovules</span>,<span style='letter-spacing:-.05pt'> ca</span>r<span style='letter-spacing:-.05pt'> s</span>i<span style='letter-spacing:-.05pt'> le</span>s<span style='letter-spacing:-.05pt'> ovules son</span>t<span style='letter-spacing: -.05pt'> libéré</span>s<span style='letter-spacing:-.05pt'> tro</span>p<span style='letter-spacing:-.05pt'> tô</span>t<span style='letter-spacing:-.05pt'> (ovulatio</span>n<span style='letter-spacing:-.05pt'> prématurée)</span>,<span style='letter-spacing:-.05pt'> i</span>l<span style='letter-spacing:-.05pt'> es</span>t<span style='letter-spacing:-.05pt'> alor</span>s<span style='letter-spacing:-.05pt'> possibl</span>e<span style='letter-spacing:-.05pt'> qu</span>e<span style='letter-spacing:-.05pt'> votr</span>e<span style='letter-spacing:-.05pt'> médeci</span>n<span style='letter-spacing:-.05pt'> n</span>e<span style='letter-spacing:-.05pt'> puiss</span>e<span style='letter-spacing:-.05pt'> pa</span>s<span style='letter-spacing:-.05pt'> les prélever.</span></p>
+<p class=AmmCorpsTexte><b><span style='letter-spacing:-.05pt'>Comment <span style='text-transform:uppercase'>CEZIBOE </span>agit-il ?</span></b></p>
+<p class=AmmCorpsTexte><span style='text-transform:uppercase;letter-spacing: -.05pt'>CEZIBOE </span><span style='letter-spacing:-.05pt'>bloqu</span>e<span style='letter-spacing:-.05pt'> un</span>e<span style='letter-spacing:-.05pt'> hormon</span>e<span style='letter-spacing:-.05pt'> naturell</span>e<span style='letter-spacing:-.05pt'> présent</span>e<span style='letter-spacing:-.05pt'> dan</span>s<span style='letter-spacing:-.05pt'> votr</span>e<span style='letter-spacing:-.1pt'> </span>c<span style='letter-spacing:-.05pt'>orp</span>s<span style='letter-spacing:-.05pt'> appel</span>ée <span style='letter-spacing:-.05pt'>LH</span><span style='letter-spacing:-.2pt'>-</span>RH («<span style='letter-spacing:-.25pt'> </span><span style='letter-spacing:.05pt'>hor</span><span style='letter-spacing:-.2pt'>m</span>one de <span style='letter-spacing:-.05pt'>libératio</span>n<span style='letter-spacing: -.05pt'> d</span>e<span style='letter-spacing:-.05pt'> l’hormon</span>e<span style='letter-spacing:-.05pt'> lutéinisant</span>e<span style='letter-spacing: -.05pt'> </span><span style='letter-spacing:-.25pt'>»</span>).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La L<span style='letter-spacing:-.1pt'>H</span><span style='letter-spacing:-.2pt'>-</span>RH contrôle une autre hormone, appelée LH («<span style='letter-spacing:-.2pt'> </span>hormone lutéinisante <span style='letter-spacing:-.25pt'>»</span>).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La LH stimule l’ovulation au cours de votre cycle menstruel.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Cela signifie que <span style='text-transform:uppercase'>CEZIBOE </span>interrompt la <span style='letter-spacing:-.2pt'>s</span>érie de pr<span style='letter-spacing: -.15pt'>o</span>c<span style='letter-spacing:-.15pt'>e</span>ssus conduisant à la libération d’un ovule par vos ovaires. Lorsque vos ovules sont prêts à être prélevés, un autre médicament vous sera prescrit pour déclencher leur libération (induction de l’ovulation).</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_CEZIBOE_0,25_mg_solution_injectable_en_seringue_pré-remplie_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER CEZIBOE 0,25 mg solution injectable en seringue pré-remplie ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">N’utilisez jamais</a><span style='text-transform:uppercase; letter-spacing:-.05pt'> CEZIBOE</span></p>
+<p class=AmmListePuces1><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique au cétrorélix ou à l’un des autres composants contenus dans ce médicament, mentionnés dans la rubrique 6.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique aux médicaments similaires à <span style='text-transform:uppercase;letter-spacing:-.05pt'>CEZIBOE </span>(toute autre hormone peptidique)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes enceinte ou si vous allaitez</p>
+<p class=AmmListePuces1 style='margin-bottom:12.0pt'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous souffrez de troubles graves des reins</p>
+<p class=AmmCorpsTexte>N’utilisez pas <span style='text-transform:uppercase; letter-spacing:-.05pt'>CEZIBOE </span>si l’un des cas ci<span style='letter-spacing: -.2pt'>-</span>dessus vous concerne. En cas de doute, parle<span style='letter-spacing:-.15pt'>z</span><span style='letter-spacing:-.2pt'>-</span>en à votre médecin avant d’utiliser ce<span style='letter-spacing:-.15pt'> </span><span style='letter-spacing:-.2pt'>m</span>édicament.</p>
+<p class=AmmCorpsTexteGras>Avertissements et précautions</p>
+<p class=AmmCorpsTexte><b>Allergies</b></p>
+<p class=AmmCorpsTexte>Avant d’utiliser <span style='text-transform:uppercase; letter-spacing:-.05pt'>CEZIBOE</span>, signalez à votre médecin toute allergie active ou tout terrain allergique connu.</p>
+<p class=AmmCorpsTexte><b>Syndrome d’hyperstimulation ovarienne (SHO)</b></p>
+<p class=AmmCorpsTexte><span style='text-transform:uppercase;letter-spacing: -.05pt'>CEZIBOE </span>est utilisé en association avec d’autres médicaments qui stimulent vos ovaires afin que ceux- ci produisent un plus grand nombre d’ovules prêts à être libérés. Lorsque vous prenez ce médicament, ou par la suite, il est possible que vous développiez un SHO. Cela se produit lorsque vos follicules se développent de manière excessive et se transforment en gros kystes.</p>
+<p class=AmmCorpsTexte>Pour connaître les signes éventuels à surveiller et ce qu’il faut faire si cela vous arrive, voir rubrique 4 « Quels sont les effets indésirables éventuels<i> </i>».</p>
+<p class=AmmCorpsTexte><b>Utilisation de </b><b><span style='text-transform: uppercase;letter-spacing:-.05pt'>CEZIBOE </span>pendant plus d’un cycle</b></p>
+<p class=AmmCorpsTexte>L’expérience acquise lors de l’utilisation de <span style='text-transform:uppercase;letter-spacing:-.05pt'>CEZIBOE </span>pendant plus d’un cycle est limitée. S’il est nécessaire que vous utilisiez du <span style='text-transform:uppercase;letter-spacing:-.05pt'>CEZIBOE </span>pendant plus d’un cycle, votre médecin examinera de façon approfondie les avantages et les risques qui s’appliquent à votre cas.</p>
+<p class=AmmCorpsTexte><b>Troubles hépatiques</b></p>
+<p class=AmmCorpsTexte>Avant d’utiliser <span style='text-transform:uppercase; letter-spacing:-.05pt'>CEZIBOE</span>, signalez à votre médecin toute maladie du foie. <span style='text-transform:uppercase;letter-spacing:-.05pt'>CEZIBOE </span>n’a pas été étudié chez les patientes atteintes d’une maladie du foie.</p>
+<p class=AmmCorpsTexte><b>Troubles rénaux</b></p>
+<p class=AmmCorpsTexte>Avant d’utiliser <span style='text-transform:uppercase; letter-spacing:-.05pt'>CEZIBOE</span>, signalez à votre médecin toute maladie des reins. <span style='text-transform:uppercase;letter-spacing:-.05pt'>CEZIBOE </span>n’a pas été étudié chez les patientes atteintes d’une maladie des reins.</p>
+<p class=AmmCorpsTexteGras>Enfants et adolescents</p>
+<p class=AmmCorpsTexte><span style='letter-spacing:-.05pt'>L’utilisatio</span>n<span style='letter-spacing:-.05pt'> d</span>e<span style='letter-spacing:-.05pt'> </span><span style='text-transform:uppercase;letter-spacing:-.05pt'>CEZIBOE </span><span style='letter-spacing:-.05pt'>n’es</span>t<span style='letter-spacing:-.05pt'> pa</span>s<span style='letter-spacing:-.05pt'> indiqué</span>e<span style='letter-spacing:-.05pt'> c</span><span style='letter-spacing:-.2pt'>h</span>ez<span style='letter-spacing:-.05pt'> le</span>s<span style='letter-spacing:-.05pt'> enfant</span>s<span style='letter-spacing:-.05pt'> e</span>t<span style='letter-spacing:-.05pt'> le</span>s<span style='letter-spacing:-.05pt'> adolescentes.</span></p>
+<p class=AmmCorpsTexteGras>Autres médicaments et <span style='text-transform: uppercase;letter-spacing:-.05pt'>CEZIBOE</span></p>
+<p class=AmmCorpsTexte>Informez votre médecin si vous prenez, avez récemment pris ou pourriez prendre tout autre médicament.</p>
+<p class=AmmCorpsTexteGras><span style='text-transform:uppercase;letter-spacing: -.05pt'>CEZIBOE </span>avec des aliments, boissons et de l’alcool</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279012">Grossesse, allaitement et fertilité</a></p>
+<p class=AmmCorpsTexte><span style='letter-spacing:-.05pt'>N’utilise</span>z<span style='letter-spacing:-.05pt'> pa</span>s<span style='text-transform:uppercase; letter-spacing:-.05pt'> CEZIBOE </span><span style='letter-spacing:-.05pt'>s</span>i<span style='letter-spacing:-.05pt'> vou</span>s<span style='letter-spacing:-.05pt'> êt</span>es<span style='letter-spacing:-.1pt'> </span><span style='letter-spacing: -.05pt'>enceinte</span>,<span style='letter-spacing:-.05pt'> s</span>i<span style='letter-spacing:-.05pt'> vou</span>s<span style='letter-spacing:-.05pt'> pense</span>z<span style='letter-spacing:-.05pt'> êtr</span>e<span style='letter-spacing:-.05pt'> enceint</span>e,<span style='letter-spacing: -.05pt'> o</span>u<span style='letter-spacing:-.05pt'> s</span>i<span style='letter-spacing:-.05pt'> vou</span>s<span style='letter-spacing:-.05pt'> allait</span>e<span style='letter-spacing:-.1pt'>z.</span></p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte><span style='letter-spacing:-.2pt'>I</span>l <span style='letter-spacing:-.05pt'>es</span>t<span style='letter-spacing:-.05pt'> pe</span>u<span style='letter-spacing:-.05pt'> probabl</span>e<span style='letter-spacing:-.05pt'> qu</span>e<span style='letter-spacing:-.05pt'> </span><span style='text-transform: uppercase;letter-spacing:-.05pt'>CEZIBOE </span><span style='letter-spacing: -.05pt'>agiss</span>e<span style='letter-spacing:-.05pt'> su</span>r<span style='letter-spacing:-.05pt'> votr</span>e<span style='letter-spacing:-.05pt'> aptitud</span>e<span style='letter-spacing:-.05pt'> </span>à<span style='letter-spacing:-.05pt'> conduir</span>e<span style='letter-spacing:-.05pt'> de</span>s<span style='letter-spacing:-.05pt'> véhicule</span>s<span style='letter-spacing:-.05pt'> e</span>t<span style='letter-spacing:-.05pt'> </span>à<span style='letter-spacing:-.05pt'> utiliser </span>des <span style='letter-spacing: -.05pt'>machines.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_UTILISER_CEZIBOE_0,25_mg_solution_injectable_en_seringue_pré-remplie?'>3. COMMENT UTILISER CEZIBOE 0,25 mg solution injectable en seringue pré-remplie?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279021">Veillez à toujours utiliser ce médicament en suivant exactement les indications de votre médecin. Vérifiez auprès de votre médecin en cas de doute.</a></p>
+<p class=AmmCorpsTexte><span style='letter-spacing:-.05pt'>C</span>e<span style='letter-spacing:-.05pt'> </span>médicament<span style='letter-spacing: -.05pt'> s’administr</span>e<span style='letter-spacing:-.05pt'> uniquemen</span>t<span style='letter-spacing:-.05pt'> pa</span>r<span style='letter-spacing:-.05pt'> injectio</span>n<span style='letter-spacing:-.05pt'> sou</span>s<span style='letter-spacing:-.05pt'> l</span>a<span style='letter-spacing:-.05pt'> pea</span>u<span style='letter-spacing:-.05pt'> (sou</span><span style='letter-spacing:-.1pt'>s</span><span style='letter-spacing:-.2pt'>-</span>c<span style='letter-spacing:-.05pt'>utanée</span>)<span style='letter-spacing:-.05pt'> d</span>e<span style='letter-spacing:-.05pt'> votr</span>e<span style='letter-spacing:-.05pt'> ventre. Afi</span>n<span style='letter-spacing: -.05pt'> d</span>e<span style='letter-spacing:-.05pt'> réduir</span>e<span style='letter-spacing:-.05pt'> l’irritatio</span>n<span style='letter-spacing: -.05pt'> cutanée</span>,<span style='letter-spacing:-.05pt'> change</span>z<span style='letter-spacing:-.1pt'> </span><span style='letter-spacing:-.05pt'>chaqu</span>e<span style='letter-spacing:-.05pt'> jou</span>r<span style='letter-spacing:-.05pt'> d</span>e<span style='letter-spacing:-.05pt'> poin</span>t<span style='letter-spacing:-.05pt'> d’injectio</span>n<span style='letter-spacing: -.05pt'> su</span>r<span style='letter-spacing:-.05pt'> votr</span>e<span style='letter-spacing:-.05pt'> ventre.</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Votre médecin doit surveiller votre première injection. Votre médecin ou votre infirmier<span style='letter-spacing:.05pt'>/</span>ère vous montrera comment préparer et injec<span style='letter-spacing:-.15pt'>t</span>er le médicament.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Vous pourrez ensuite réaliser vous<span style='letter-spacing: -.1pt'>-</span><span style='letter-spacing:-.2pt'>m</span><span style='letter-spacing:.1pt'>ê</span>me les injectio<span style='letter-spacing: -.15pt'>n</span>s, dans la mesure où votre médecin vous a alertée des signes révélateurs d’une allergie et des conséquences potentiellement graves ou fatales nécessitant un traitement immédiat (voir r<span style='letter-spacing: -.1pt'>u</span><span style='letter-spacing:-.15pt'>b</span>rique 4 « Quels sont les effets indésirables éventuels <span style='letter-spacing:-.15pt'>»</span>).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Veuillez lire et suivre attentivement les instructions figurant à la fin de cette notice intitulées « Comment injecter <span style='text-transform: uppercase'>CEZIBOE</span>».</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Vous<span style='letter-spacing:-.1pt'> </span>commencerez par prendre un autre médicament le 1<sup>er</sup> jour de votre cycle de<span style='letter-spacing:-.1pt'> </span>traitement.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Vous prendrez ensuite <span style='text-transform:uppercase'>CEZIBOE </span>quelques jours plus tard. (Voir la rubrique suivante<span style='letter-spacing:-.1pt'> </span>« Quelle quantité utiliser ».)</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Quelle quantité utiliser</p>
+<p class=AmmCorpsTexte><span style='letter-spacing:-.1pt'>In</span><span style='letter-spacing:.15pt'>j</span><span style='letter-spacing:-.05pt'>ecte</span>z<span style='letter-spacing:-.05pt'> l</span>e<span style='letter-spacing:-.05pt'> </span>contenu<span style='letter-spacing:-.05pt'> d’u</span>ne<span style='letter-spacing:-.05pt'> seringue (0,2</span>5<span style='letter-spacing:-.05pt'> m</span>g<span style='letter-spacing:-.05pt'> d</span>e<span style='letter-spacing:-.05pt'> <span style='text-transform:uppercase'>CEZIBOE</span></span>)<span style='letter-spacing: -.05pt'> un</span>e<span style='letter-spacing:-.05pt'> foi</span>s<span style='letter-spacing:-.05pt'> pa</span>r<span style='letter-spacing:-.05pt'> jour</span>,<span style='letter-spacing:-.05pt'> </span><span style='letter-spacing: -.1pt'>t</span><span style='letter-spacing:-.05pt'>ou</span>s<span style='letter-spacing:-.05pt'> le</span>s<span style='letter-spacing:-.05pt'> jours</span>.<span style='letter-spacing:-.05pt'> I</span>l<span style='letter-spacing:-.05pt'> es</span>t<span style='letter-spacing:-.05pt'> préférable d</span>e<span style='letter-spacing:-.05pt'> s’administre</span>r<span style='letter-spacing:-.05pt'> l</span>e<span style='letter-spacing:-.05pt'> médic</span><span style='letter-spacing:-.15pt'>a</span><span style='letter-spacing: -.05pt'>men</span>t<span style='letter-spacing:-.05pt'> chaqu</span>e<span style='letter-spacing:-.15pt'> </span><span style='letter-spacing:-.05pt'>jou</span>r<span style='letter-spacing:-.05pt'> </span>à<span style='letter-spacing:-.05pt'> l</span>a<span style='letter-spacing:-.05pt'> mêm</span>e<span style='letter-spacing:-.05pt'> heure</span>,<span style='letter-spacing:-.05pt'> e</span>n<span style='letter-spacing:-.05pt'> espaçan</span>t<span style='letter-spacing:-.05pt'> chaqu</span>e<span style='letter-spacing:-.05pt'> dos</span>e<span style='letter-spacing:-.05pt'> </span>de 24 heures.</p>
+<p class=AmmCorpsTexte>Vous pouvez choisir de vo<span style='letter-spacing: -.05pt'>u</span>s<span style='letter-spacing:-.05pt'> fair</span>e<span style='letter-spacing:-.05pt'> l’injectio</span>n<span style='letter-spacing: -.05pt'> chaqu</span>e<span style='letter-spacing:-.05pt'> mati</span>n<span style='letter-spacing:-.1pt'> </span><b><span style='letter-spacing:-.05pt'>o</span>u<span style='letter-spacing:-.05pt'> bie</span>n<span style='letter-spacing:-.05pt'> </span></b><span style='letter-spacing:-.05pt'>chaqu</span>e<span style='letter-spacing:-.05pt'> soir.</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si<span style='letter-spacing:-.1pt'> </span>vous faites l’injection chaque matin<span style='letter-spacing:-.15pt'> </span>:<span style='letter-spacing:.05pt'> </span>commencez vos injections le 5<sup>e</sup><span style='position:relative;top:-4.0pt;letter-spacing:.9pt'> </span>ou le 6<sup>e</sup> jour du cycle de traitement. En fonction de votre réponse ovarienne, votre médecin pourra décider que le traitement doit être débuté un autre jour.<span style='letter-spacing:-.2pt'> </span>Votre médecin vous indiquera la date et l’heure précises. Vous contin<span style='letter-spacing:-.15pt'>u</span>erez à vous injecter ce médicament jusqu’au matin (inclus)<span style='letter-spacing: -.2pt'> </span>du jour où vos ovules seront prélevés (induction de l’ovulation).</p>
+<p class=AmmCorpsTexte>OU</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si<span style='letter-spacing:-.1pt'> </span>vous faites l’injection chaque soir : commencez vos injections le 5<sup>e</sup> jour du cycle de traitement. En fonction de votre réponse ovarienne, votre médecin pourra décider que le traitement doit êt<span style='letter-spacing:-.1pt'>r</span>e débuté un autre jour.<span style='letter-spacing:-.15pt'> </span>Votre médecin vous indiquera la date et l’heure précises. Vous continuerez à vous injecter ce médicament jusqu’au soir (inclus) précédant le jour où vos ovules seront prélevés (induction de l’ovulation).</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Si vous avez utilisé plus de <span style='text-transform:uppercase;letter-spacing:-.05pt'>CEZIBOE </span>que vous n’auriez dû</p>
+<p class=AmmCorpsTexte>Si vous injectez accidentellement plus de médicament que vous n’auriez dû, aucun effet négatif n’est attendu. L’effet du médicament durera plus longtemps. Aucune mesure spécifique n’est habituellement nécessaire.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez d’utiliser <span style='text-transform: uppercase;letter-spacing:-.05pt'>CEZIBOE</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous oubliez une dose, injecte<span style='letter-spacing: -.15pt'>z</span><span style='letter-spacing:-.2pt'>-</span>la dès que vous y pensez et signale<span style='letter-spacing:-.15pt'>z</span><span style='letter-spacing:-.2pt'>-</span>le à votre médecin.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ne vous injectez pas de dose double pour compenser la dose que <span style='letter-spacing:-.2pt'>v</span>ous avez oublié d’injecter.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Si vous arrêtez d’utiliser <span style='text-transform:uppercase;letter-spacing:-.05pt'>CEZIBOE</span></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexte style='margin-top:12.0pt'>Si vous avez d’autres questions sur l’utilisation de ce médicament, demandez plus d’informations à votre médecin ou à votre pharmacien.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</a></p>
+<p class=AmmCorpsTexteGras>Réactions allergiques</p>
+<p class=AmmListePuces1 style='text-align:justify;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Rougeurs, chaleur cutanée, démangeaisons (souvent à l’aine ou au niveau des aisselles), plaques rouges saillantes avec démangeaisons (urticaire), écoulement nasal, pouls rapide ou irrégulier, <span style='letter-spacing:-.15pt'>g</span>onflement de la langue et de la gorge, éternuements, respiration sifflante <span style='letter-spacing:-.1pt'>o</span>u importantes difficultés à respirer, ou vertiges. De tels symptômes peuvent indiquer que vous présentez une réaction allergique au médicament pouvant être grave ou fatale. Ces réa<span style='letter-spacing:-.15pt'>c</span>tions sont peu fréquentes<span style='letter-spacing:-.1pt'> </span>(peuvent concerner jusqu’à 1<span style='letter-spacing:-.15pt'> </span>femme sur 100).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Si vous ressentez l’un des effets indésirables mentionnés ci<span style='letter-spacing:-.2pt'>-</span>dessus, cessez d’utiliser <span style='text-transform:uppercase'>CEZIBOE </span>et contactez votre médecin immédiatement.</p>
+<p class=AmmCorpsTexteGras>Syndrome d’hyperstimulation ovarienne (SHO)</p>
+<p class=MsoBodyText style='margin-top:0cm;margin-right:2.45pt;margin-bottom: 0cm;margin-left:0cm;margin-bottom:.0001pt'><span style='font-size:10.0pt; font-family:"Arial",sans-serif;letter-spacing:-.05pt'>C</span><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>e<span style='letter-spacing:-.05pt'> syndrom</span>e<span style='letter-spacing:-.05pt'> peu</span>t<span style='letter-spacing:-.05pt'> surveni</span>r<span style='letter-spacing:-.05pt'> e</span>n<span style='letter-spacing:-.05pt'> raiso</span>n<span style='letter-spacing:-.05pt'> d</span>e<span style='letter-spacing:-.05pt'> l</span>a<span style='letter-spacing:-.05pt'> pris</span>e<span style='letter-spacing:-.05pt'> d’autre</span>s<span style='letter-spacing:-.05pt'> médicament</span>s<span style='letter-spacing: -.05pt'> qu</span>e<span style='letter-spacing:-.05pt'> vou</span>s<span style='letter-spacing:-.05pt'> utilise</span>z<span style='letter-spacing:-.05pt'> pou</span>r<span style='letter-spacing:-.05pt'> stimuler vo</span>s <span style='letter-spacing:-.05pt'>ovaires.</span></span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='letter-spacing:-.05pt'>Un</span>e<span style='letter-spacing:-.05pt'> douleu</span>r<span style='letter-spacing:-.05pt'> dan</span>s<span style='letter-spacing:-.15pt'> </span><span style='letter-spacing: -.05pt'>l</span>e <span style='letter-spacing:-.05pt'>ba</span>s<span style='letter-spacing:-.2pt'>-</span><span style='letter-spacing:-.15pt'>v</span><span style='letter-spacing:.1pt'>e</span><span style='letter-spacing:-.05pt'>ntr</span>e<span style='letter-spacing:-.05pt'> ave</span>c<span style='letter-spacing:-.05pt'> de</span>s<span style='letter-spacing:-.05pt'> nausée</span>s<span style='letter-spacing:-.05pt'> o</span>u<span style='letter-spacing:-.05pt'> de</span>s<span style='letter-spacing:-.05pt'> vomissement</span>s<span style='letter-spacing: -.05pt'> peu</span><span style='letter-spacing:-.15pt'>v</span>e<span style='letter-spacing:-.05pt'>n</span>t<span style='letter-spacing:-.05pt'> êtr</span>e<span style='letter-spacing:-.05pt'> le</span>s<span style='letter-spacing:-.05pt'> signes </span>d’un <span style='letter-spacing:-.05pt'>SHO</span>.<span style='letter-spacing:-.05pt'> Cel</span>a<span style='letter-spacing:-.05pt'> peu</span>t<span style='letter-spacing:-.05pt'> indique</span>r<span style='letter-spacing:-.05pt'> un</span>e<span style='letter-spacing:-.05pt'> réacti</span><span style='letter-spacing:-.2pt'>o</span>n<span style='letter-spacing:-.05pt'> excessiv</span>e <span style='letter-spacing: -.05pt'>de</span>s<span style='letter-spacing:-.05pt'> ovaire</span>s<span style='letter-spacing:-.05pt'> a</span>u<span style='letter-spacing:-.05pt'> traitemen</span>t<span style='letter-spacing:-.05pt'> e</span>t<span style='letter-spacing:-.05pt'> l'apparitio</span>n<span style='letter-spacing: -.05pt'> de</span> <span style='letter-spacing:-.05pt'>gro</span>s<span style='letter-spacing:-.05pt'> kyste</span>s<span style='letter-spacing:-.05pt'> ovariens</span>.<span style='letter-spacing:-.05pt'> I</span>l<span style='letter-spacing:-.05pt'> s’agi</span>t<span style='letter-spacing:-.05pt'> d’u</span>n<span style='letter-spacing:-.05pt'> effe</span>t<span style='letter-spacing:-.05pt'> indésirabl</span>e<span style='letter-spacing: -.05pt'> fréquen</span>t<span style='letter-spacing:-.05pt'> (peu</span>t<span style='letter-spacing:-.05pt'> concerne</span>r<span style='letter-spacing: -.05pt'> jusqu’</span>à<span style='letter-spacing:-.05pt'> </span>1<span style='letter-spacing:-.2pt'> </span><span style='letter-spacing:-.05pt'>femme</span> sur<span style='letter-spacing:.05pt'> </span><span style='letter-spacing:-.05pt'>10).</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='letter-spacing:-.05pt'>L</span>e <span style='letter-spacing:-.05pt'>SH</span>O<span style='letter-spacing:-.05pt'> peu</span>t<span style='letter-spacing:-.05pt'> </span>devenir<span style='letter-spacing:-.05pt'> sévèr</span>e<span style='letter-spacing:-.05pt'> ave</span>c<span style='letter-spacing:-.05pt'> un</span>e<span style='letter-spacing:-.05pt'> nett</span>e<span style='letter-spacing:-.05pt'> augmentatio</span>n<span style='letter-spacing:-.05pt'> d</span>u<span style='letter-spacing:-.05pt'> volum</span>e<span style='letter-spacing:-.05pt'> de</span>s<span style='letter-spacing:-.05pt'> ovaires</span>,<span style='letter-spacing:-.05pt'> une diminutio</span>n<span style='letter-spacing: -.05pt'> d</span>e<span style='letter-spacing:-.05pt'> l</span>a<span style='letter-spacing:-.05pt'> produ</span>c<span style='letter-spacing:-.05pt'>tio</span>n<span style='letter-spacing:-.05pt'> d’urine</span>,<span style='letter-spacing:-.05pt'> un</span>e<span style='letter-spacing:-.05pt'> pris</span>e<span style='letter-spacing:-.05pt'> d</span>e<span style='letter-spacing:-.05pt'> poids</span>,<span style='letter-spacing:-.05pt'> de</span>s<span style='letter-spacing:-.05pt'> difficulté</span>s<span style='letter-spacing: -.05pt'> respiratoire</span>s<span style='letter-spacing:-.05pt'> o</span>u<span style='letter-spacing:-.05pt'> la</span> <span style='letter-spacing:-.05pt'>présenc</span>e<span style='letter-spacing:-.05pt'> d</span>e<span style='letter-spacing:-.05pt'> liquid</span>e<span style='letter-spacing:-.05pt'> dan</span>s<span style='letter-spacing:-.05pt'> l’estoma</span>c<span style='letter-spacing: -.05pt'> o</span>u<span style='letter-spacing:-.05pt'> l</span>a<span style='letter-spacing:-.05pt'> poitrine</span>.<span style='letter-spacing: -.05pt'> Ce</span>t<span style='letter-spacing:-.1pt'> </span><span style='letter-spacing:-.05pt'>effe</span>t<span style='letter-spacing:-.05pt'> indésirabl</span>e<span style='letter-spacing:-.05pt'> es</span>t<span style='letter-spacing:-.05pt'> pe</span>u<span style='letter-spacing:-.05pt'> fréquen</span>t<span style='letter-spacing:-.05pt'> (peut</span> <span style='letter-spacing:-.05pt'>concerne</span>r<span style='letter-spacing:-.05pt'> jusqu’</span>à<span style='letter-spacing:-.05pt'> </span>1<span style='letter-spacing:-.15pt'> </span><span style='letter-spacing:-.05pt'>femm</span>e<span style='letter-spacing:-.05pt'> su</span>r<span style='letter-spacing:-.05pt'> 100).</span></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Si vous ressentez l’un des effets indésira<span style='letter-spacing:-.2pt'>b</span>les mentionnés<span style='letter-spacing:-.1pt'> </span>ci<span style='letter-spacing:-.2pt'>-</span>dessus, contactez votre médecin immédiatement.</p>
+<p class=AmmCorpsTexteGras>Autres effets indésirables</p>
+<p class=AmmCorpsTexteGras>Fréquent (peut toucher jusqu’à 1 femme sur 10) :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='letter-spacing:-.05pt'>un</span>e<span style='letter-spacing:-.05pt'> irritatio</span>n<span style='letter-spacing: -.05pt'> </span>cutanée<span style='letter-spacing:-.05pt'> légèr</span>e<span style='letter-spacing:-.05pt'> e</span>t<span style='letter-spacing:-.05pt'> transitoir</span>e<span style='letter-spacing:-.05pt'> a</span>u<span style='letter-spacing:-.05pt'> poin</span>t<span style='letter-spacing:-.05pt'> d’injection</span>,<span style='letter-spacing:-.05pt'> tell</span>e<span style='letter-spacing:-.05pt'> qu</span>e<span style='letter-spacing:-.05pt'> rougeur</span>,<span style='letter-spacing:-.05pt'> démangeaisons o</span>u<span style='letter-spacing:-.05pt'> gonflement</span>, <span style='letter-spacing: -.05pt'>peu</span>t<span style='letter-spacing:-.05pt'> surv</span>e<span style='letter-spacing:-.05pt'>nir.</span></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Peu<span style='letter-spacing: -.95pt'> </span>fréquent<span style='letter-spacing:-1.0pt'> </span>(pe<span style='letter-spacing:-.15pt'>u</span>t<span style='letter-spacing:-.9pt'> </span>toucher<span style='letter-spacing:-1.0pt'> </span>jusqu<span style='letter-spacing:-.1pt'>’</span>à<span style='letter-spacing:-.9pt'> </span>1<span style='letter-spacing:-.95pt'> </span>fem<span style='letter-spacing:-.2pt'>m</span>e<span style='letter-spacing:-.9pt'> </span>sur<span style='letter-spacing:-.95pt'> </span>100) <span style='letter-spacing: -1.0pt'>:</span></p>
+<p class=AmmListePuces1><span lang=NL style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='letter-spacing:-.05pt'>ma</span>l<span style='letter-spacing:-.05pt'> a</span>u<span style='letter-spacing:-.05pt'> cœu</span>r<span style='letter-spacing:-.05pt'> </span>(<span style='letter-spacing: -.15pt'>n</span><span style='letter-spacing:-.05pt'>ausées)</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='letter-spacing:-.05pt'>mau</span>x <span style='letter-spacing:-.05pt'>d</span>e tête<span style='letter-spacing:-.05pt'>.</span></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin,votre pharmacien ou à votre infirmier/ère. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet:<span style='color:red'> </span><a href="http://www.signalement-sante.gouv.fr">www.signalement-sante.gouv.fr</a></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_CEZIBOE_0,25_mg_solution_injectable_en_seringue_pré-remplie_?'>5. COMMENT CONSERVER CEZIBOE 0,25 mg solution injectable en seringue pré-remplie ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026"></a><a name="_Toc142279024">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas ce médicament après la date de péremption indiquée sur la seringue pré remplie après EXP. La date de péremption fait référence au dernier jour de ce mois.</span></p>
+<p class=AmmCorpsTexte>À<span style='letter-spacing:-.05pt'> conserve</span>r<span style='letter-spacing:-.05pt'> a</span>u<span style='letter-spacing:-.05pt'> réfrigérateu</span>r<span style='letter-spacing:-.05pt'> (entr</span>e<span style='letter-spacing:-.05pt'> 2</span><span style='letter-spacing:-.15pt'>°</span>C<span style='letter-spacing:-.05pt'> e</span>t<span style='letter-spacing:-.05pt'> 8°C</span>).</p>
+<p class=AmmCorpsTexte><span style='letter-spacing:-.05pt'>Avan</span>t<span style='letter-spacing:-.05pt'> ouverture</span>,<span style='letter-spacing: -.05pt'> l</span>e<span style='letter-spacing:-.05pt'> produi</span>t<span style='letter-spacing:-.05pt'> peu</span>t<span style='letter-spacing:-.05pt'> êtr</span>e<span style='letter-spacing:-.05pt'> conserv</span>é<span style='letter-spacing:-.05pt'> dan</span>s<span style='letter-spacing:-.05pt'> l’emballag</span>e<span style='letter-spacing:-.05pt'> d’origin</span>e<span style='letter-spacing:-.05pt'> </span>à<span style='letter-spacing:-.05pt'> températur</span>e<span style='letter-spacing:-.15pt'> </span><span style='letter-spacing:-.05pt'>ambiant</span>e<span style='letter-spacing:-.05pt'> (ne dépassan</span>t<span style='letter-spacing:-.05pt'> pa</span>s<span style='letter-spacing:-.05pt'> 25°C</span>)<span style='letter-spacing:-.05pt'> pendan</span>t<span style='letter-spacing:-.05pt'> u</span>n<span style='letter-spacing:-.05pt'> maximu</span>m<span style='letter-spacing:-.05pt'> d</span>e<span style='letter-spacing:-.05pt'> troi</span>s<span style='letter-spacing:-.05pt'> mois.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas la solution dans la seringue si elle n’est pas incolore et limpide ou s’il y a des particules à l’intérieur.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout <span style='color:black'>ou avec </span>les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient CEZIBOE</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est : <span style='letter-spacing:.05pt'>l</span>e<span style='letter-spacing:-.1pt'> </span><span style='letter-spacing:-.05pt'>cétrorél</span>i<span style='letter-spacing:-.15pt'>x (sous forme d’acétate)</span>.<span style='letter-spacing:-.05pt'> Chaqu</span>e<span style='letter-spacing:-.05pt'> seringue pré-remplie (1 mL) contien</span>t<span style='letter-spacing:-.05pt'> 0,2</span>5<span style='letter-spacing:-.05pt'> </span><span style='letter-spacing: -.2pt'>m</span>g<span style='letter-spacing:-.15pt'> </span>de cétrorélix<span style='letter-spacing:-.15pt'> </span><span style='letter-spacing:-.05pt'>(sou</span>s<span style='letter-spacing:-.05pt'> forme </span>d’a<span style='letter-spacing: -.15pt'>c</span><span style='letter-spacing:-.05pt'>étate</span>).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont : <span style='letter-spacing: -.05pt'>mannitol (E421), acide lactique (-S) et l’eau pour préparations injectables.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que CEZIBOE et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte><span style='letter-spacing:-.05pt'>CEZIBOE se présente sous forme d’une solution claire et incolore dans une </span><span lang=fr>1 cylindre en verre transparent de type I (1 ml) avec aiguille 27 gauge de ½ pouce prémontée, fermé par un bouchon-piston en élastomère (bromobutyle). La seringue pré-remplie comporte une tige de piston blanc et un système de sécurité automatique.</span></p>
+<p class=AmmCorpsTexte><span style='letter-spacing:-.2pt'>I</span>l<span style='letter-spacing:.05pt'> </span><span style='letter-spacing:-.05pt'>es</span>t<span style='letter-spacing:-.05pt'> disponible e</span>n une<span style='letter-spacing: -.05pt'> boîte contenan</span>t<span style='letter-spacing:-.05pt'> </span>1<span style='letter-spacing:-.15pt'> </span>serin<span style='letter-spacing:-.15pt'>gu</span>e <span style='letter-spacing:-.05pt'>pré-rempli</span>e<span style='letter-spacing: -.05pt'> et en conditionnement multiple comprenant 7 boîtes, chacune contenant 1 seringue pré-remplie</span></p>
+<p class=AmmCorpsTexte><span style='letter-spacing:-.05pt'>.</span></p>
+<p class=AmmCorpsTexte>Une boîte contient également pour chaque seringue<span style='letter-spacing:-.15pt'> </span>:</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une seringue préremplie assemblée avec un dispositif de sécurité contenant la solution</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>un tampon imbibé d’alcool pour désinfecter.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279031"><span style='text-transform:uppercase'>Sun Pharmaceutical Industries Europe B.V.</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>Polarisavenue 87</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>2132 JH Hoofddorp</span></p>
+<p class=AmmCorpsTexte><span style='text-transform:uppercase'>Pays-Bas</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras align=left style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:left'><span style='font-family:"Arial Gras",serif; text-transform:uppercase'>SUN PHARMA France</span></p>
+<p class=AmmCorpsTexte align=left style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:left'><span style='text-transform:uppercase;background:white'>31 rue des Poissonniers</span></p>
+<p class=AmmCorpsTexte align=left style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:left'><span style='text-transform:uppercase;background:white'>92200 NEUILLY SUR SEINE</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279033"><span style='text-transform:uppercase'>Sun Pharmaceutical Industries Europe B.V.</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>Polarisavenue 87</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>2132 JH Hoofddorp</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>Pays-Bas</span></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'><span style='text-transform: uppercase'>OU</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><b><span lang=IT style='text-transform:uppercase'>TERAPIA SA</span></b></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span lang=IT style='text-transform:uppercase'>STR. FABRICII NR. 124</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>400 632 CLUJ NAPOCA</span></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>ROUMANIE</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexteGras><span style='color:#385623;font-weight:normal'>[dans le cas des MRP et DCP]</span></p>
+<p class=AmmCorpsTexteGras>Ce médicament est autorisé dans les Etats membres de l'Espace Economique Européen sous les noms suivants : Conformément à la réglementation en vigueur.</p>
+<p class=AmmCorpsTexte>[À compléter ultérieurement par le titulaire]</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte><span style='color:#385623'>[à compléter ultérieurement par le titulaire]</span></p>
+<p class=AmmCorpsTexteGras>{mois AAAA}.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+<p class=AmmCorpsTexteGras><span lang=fr>COMMENT INJECTER CEZIBOE SUN</span></p>
+<p class=AmmCorpsTexteGras><span lang=fr>La seringue pré-remplie de CEZIBOE SUN contient :</span></p>
+<p class=AmmCorpsTexte><span lang=fr>1. Protège-aiguille rigide </span></p>
+<p class=AmmCorpsTexte><span lang=fr>2. Piston</span></p>
+<p class=AmmCorpsTexte><span lang=fr>3. Prise en main</span></p>
+<p class=AmmCorpsTexte><span lang=fr>4. Dispositif de sécurité</span></p>
+<p class=AmmCorpsTexte><img border=0 width=301 height=170 id="Picture 19" src="/images/N0411458/image001.jpg"></p>
+<p class=AmmCorpsTexte><span lang=NL> </span></p>
+<p class=AmmCorpsTexte><span lang=fr>Seringue <u>avant</u> utilisation :</span></p>
+<p class=AmmCorpsTexte><img border=0 width=222 height=128 id="Picture 18" src="/images/N0411458/image002.jpg" alt=2></p>
+<p class=AmmCorpsTexte><span lang=fr>Seringue <u>après</u> utilisation :</span></p>
+<p class=AmmCorpsTexte><img border=0 width=223 height=128 id="Picture 17" src="/images/N0411458/image003.jpg"></p>
+<p class=AmmCorpsTexte><span lang=fr>Cette rubrique vous explique comment injecter votre médicament.</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=fr>Veuillez lire attentivement l'intégralité de cette notice avant d’utiliser le médicament.</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=fr>Ce médicament vous a été personnellement prescrit. Ne laissez jamais quelqu’un d’autre l’utiliser.</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=fr>N’utilisez chaque aiguille et seringue qu’une seule fois.</span></p>
+<p class=AmmListePuces1 style='text-indent:0cm'> </p>
+<p class=AmmCorpsTexteGras><span lang=fr>Avant toute utilisation</span></p>
+<p class=AmmCorpsTexte><span lang=fr>1. Ce produit doit être à température ambiante avant injection. Le sortir du réfrigérateur 30 minutes environ avant utilisation.</span></p>
+<p class=AmmCorpsTexte><span lang=fr>2. Lavez-vous les mains.</span></p>
+<p class=AmmCorpsTexte><span lang=fr>Il est important que vos mains et les objets que vous utilisez soient aussi propres que possible.</span></p>
+<p class=AmmCorpsTexte><span lang=fr>3. Préparez tout ce dont vous avez besoin sur une surface propre :</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=fr>une seringue préremplie </span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=fr>un tampon imbibé d’alcool.</span></p>
+<p class=AmmListePuces1 style='text-indent:0cm'> </p>
+<p class=AmmCorpsTexteGras><span lang=fr>Préparation du site d’injection et injection de votre médicament</span></p>
+<p class=AmmCorpsTexte><span lang=fr>1. Nettoyez le site d’injection.</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=fr>Asseyez-vous ou couchez-vous dans une position confortable. Choisissez un site d’injection sur la paroi abdominale inférieure, de préférence autour du nombril (Figure A). Afin de réduire l’irritation cutanée, changez quotidiennement le site d’injection sur la paroi abdominale. Désinfectez la peau au point d’injection avec un tampon imbibé d’alcool.</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=fr>Retirez le protège-aiguille en le tirant dans l’axe de la seringue (Figure B). Jetez le protège-aiguille. </span><span class=AmmCorpsTexteGrasCar>Pour prévenir tout risque d’infection, ne touchez pas l’aiguille et évitez tout contact entre l’aiguille et une quelconque surface avant l’injection.</span><span lang=fr> La présence d’une petite bulle d’air dans la seringue est normale. Afin d’éviter toute perte de médicament, n’essayez pas de chasser les bulles d’air de la seringue avant d’administrer l’injection.</span></p>
+<p class=AmmCorpsTexte><img width=187 height=142 src="/images/N0411458/image004.jpg" align=left hspace=12 alt=4><span lang=fr> </span><img border=0 width=179 height=146 id="Picture 16" src="/images/N0411458/image005.jpg" alt=5></p>
+<p class=AmmCorpsTexte><span lang=fr>Figure A Figure B</span></p>
+<p class=AmmCorpsTexte><span lang=fr>2. Pincez doucement la peau qui a été désinfectée pour faire un pli. Tenez le pli entre le pouce et l’index d’une main pendant toute la durée de l’injection (Figure C).</span></p>
+<p class=AmmCorpsTexte><img border=0 width=175 height=141 id="Picture 15" src="/images/N0411458/image006.jpg"></p>
+<p class=AmmCorpsTexte><span lang=fr>Figure C</span></p>
+<p class=AmmCorpsTexte><span lang=fr>3. Tenez la seringue d’une main, comme si vous teniez un crayon. </span></p>
+<p class=AmmCorpsTexte><span lang=fr>Pincez doucement la peau autour de la zone du site d’injection et maintenez-la fermement dans cette position avec l’autre main. </span></p>
+<p class=AmmCorpsTexte><span lang=fr>Enfoncez l’aiguille lentement et entièrement dans la peau à un angle de 45 à 90°, puis relâchez la peau.</span></p>
+<p class=AmmCorpsTexte><img border=0 width=177 height=137 id="Picture 14" src="/images/N0411458/image007.png" alt=123></p>
+<p class=AmmCorpsTexte><span lang=fr>Figure D</span></p>
+<p class=AmmCorpsTexte><span lang=fr>4. Retirez doucement le piston de la seringue. Si du sang apparaît, suivez l’étape 5 ci-dessous. </span></p>
+<p class=AmmCorpsTexte><span lang=fr>S’il n’y a pas de sang, appuyez <b>lentement</b> sur le piston pour injecter le médicament. </span></p>
+<p class=AmmCorpsTexte><span lang=fr>Injectez la totalité du médicament contenu dans la seringue en appuyant <b><u>doucement</u></b> sur le piston jusqu’à la butée (Figure E). <b><u>Avertissement : N’appuyez pas fermement, au risque d’activer le dispositif de sécurité de l’aiguille, voir étape 6.</u></b> </span></p>
+<p class=AmmCorpsTexte><span lang=fr>Lorsque la seringue est vide, retirez l’aiguille lentement en conservant le même angle que celui utilisé lorsque vous l'avez enfoncée et en gardant votre doigt sur le piston. Utilisez un tampon imbibé d’alcool pour exercer une légère pression à l’endroit où vous venez d’injecter le médicament.</span></p>
+<p class=AmmCorpsTexte><img border=0 width=170 height=124 id="Picture 13" src="/images/N0411458/image008.jpg" alt=8></p>
+<p class=AmmCorpsTexte><span lang=fr>Figure E</span></p>
+<p class=AmmCorpsTexte><span lang=fr>5. </span><span class=AmmCorpsTexteGrasCar>Si du sang apparaît</span></p>
+<p class=AmmCorpsTexte><span lang=fr>Retirez l’aiguille lentement en conservant le même angle que celui utilisé lorsque vous l'avez enfoncée. Utilisez un tampon imbibé d’alcool pour exercer une légère pression à l’endroit où vous venez de percer la peau. Videz le médicament dans un évier et suivez l’étape 6 ci-dessous. Lavez-vous les mains et recommencez avec une nouvelle seringue préremplie (Figure F). </span></p>
+<p class=AmmCorpsTexte><img border=0 width=170 height=137 id="Picture 12" src="/images/N0411458/image009.jpg" alt=9></p>
+<p class=AmmCorpsTexte><span lang=fr>Figure F</span></p>
+<p class=AmmCorpsTexte><span lang=fr>6. Orientez l’aiguille loin de vous et d’autres personnes et activez le dispositif de sécurité en appuyant fermement sur le piston. Le manchon protecteur couvrira automatiquement l'aiguille et produira un « clic » audible qui confirmera l'activation du dispositif. (Figure G)</span></p>
+<p class=AmmCorpsTexte><img border=0 width=172 height=133 id="Picture 11" src="/images/N0411458/image010.jpg" alt=10></p>
+<p class=AmmCorpsTexte><span lang=fr>Figure G</span></p>
+<p class=AmmCorpsTexte><span lang=fr>Suivez les instructions données par votre infirmier/ère ou votre médecin à propos de l’élimination appropriée de seringues et d’aiguilles usagées. Une législation nationale peut réglementer l’élimination appropriée de seringues, d’aiguilles et de collecteurs de déchets de soins.</span></p>
+<p class=AmmCorpsTexteGras><span lang=fr>REMARQUE :</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=fr>Le système de sécurité ne peut être activé qu’une fois que la seringue a été vidée.</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=fr>L’activation du système de sécurité ne doit intervenir qu’après que l’aiguille a été retirée de la peau du patient.</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=fr>Ne remettez pas le protège-aiguille en place après injection.</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=fr>Le système de sécurité ne doit pas être stérilisé.</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=fr>L’activation du système de sécurité peut provoquer de faibles éclaboussures de solution. Pour une sécurité optimale, activez le système en l’orientant vers le bas, loin de vous et d’autres personnes.</span></p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

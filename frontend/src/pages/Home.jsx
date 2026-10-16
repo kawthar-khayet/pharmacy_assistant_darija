@@ -36,6 +36,7 @@ function Titre({ debut, accent, niveau = 'h2', className = '' }) {
 
 export default function Home() {
   const [question, setQuestion] = useState('')
+  const [medicament, setMedicament] = useState('')
   const naviguer = useNavigate()
   const { t, estArabe } = useLanguage()
 
@@ -49,6 +50,12 @@ export default function Home() {
     const q = texte.trim()
     if (!q) return
     naviguer('/assistant', { state: { question: q } })
+  }
+
+  function chercherMedicament(e) {
+    e.preventDefault()
+    const q = medicament.trim()
+    naviguer('/medicaments', q ? { state: { requete: q } } : undefined)
   }
 
   return (
@@ -169,17 +176,23 @@ export default function Home() {
             <Icon nom="loupe" taille={24} className="acc-icone" />
             <Titre debut={t('acc_med_titre_1')} accent={t('acc_med_titre_2')} />
             <p className="acc-texte">{t('acc_med_desc')}</p>
-            <Link to="/medicaments" className="btn-plein">
-              {t('action_med_titre')}
-              <Icon nom="fleche" taille={16} epaisseur={2.2} className="acc-fleche" />
-            </Link>
           </div>
 
-          <figure className="acc-fiche" aria-label={t('acc_ap_illustration')}>
-            <div className="acc-fiche-recherche">
+          <div className="acc-fiche">
+            <form className="acc-fiche-recherche" onSubmit={chercherMedicament} role="search">
               <Icon nom="loupe" taille={16} />
-              <span>{t('acc_ap_nom_med')}</span>
-            </div>
+              <input
+                type="search"
+                dir="auto"
+                value={medicament}
+                onChange={(e) => setMedicament(e.target.value)}
+                placeholder={t('med_placeholder')}
+                aria-label={t('action_med_titre')}
+              />
+              <button type="submit" className="btn-plein btn-compact">
+                {t('acc_med_chercher')}
+              </button>
+            </form>
             <div className="acc-fiche-tete">
               <strong>{t('acc_ap_nom_med')}</strong>
               <span className="acc-badge">{t('acc_ap_statut')}</span>
@@ -190,7 +203,7 @@ export default function Home() {
               <div><span>CNOPS</span><Trait largeur={30} /></div>
               <div><span>CNSS</span><Trait largeur={30} /></div>
             </div>
-          </figure>
+          </div>
         </div>
       </section>
 

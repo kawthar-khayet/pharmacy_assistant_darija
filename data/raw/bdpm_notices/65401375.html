@@ -1,0 +1,1882 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="j3Jhcz06b+0P5uDkq40/0A==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="j3Jhcz06b+0P5uDkq40/0A==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 29/09/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intra-vésicale"
+            aria-level="3"
+          >
+            TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intra-vésicale
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intra-vésicale - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-bon-usage" class="fr-tabs__tab  fr-tabs__tab--icon-left" tabindex="-1" role="tab"
+                            aria-selected="false" aria-controls="tabpanel-bon-usage-panel">Bon usage
+                    </button>
+                  </li>
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                      </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 15/12/1997
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intra-vésicale - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0403867">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte><a name="_Toc142279004">PRODUIT DE CONTRASTE IODE (V : divers), code ATC : V08AA05.</a></p>
+<p class=AmmCorpsTexte>TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intravésicale est un produit de contraste, hydrosoluble, ionique, d’osmolalité 640 mOsm/kg.</p>
+<p class=AmmNoticeCorpsdeTexte style='margin-left:0cm'><span style='font-size: 10.0pt'>Ce médicament est à usage diagnostique uniquement.</span></p>
+<p class=AmmNoticeCorpsdeTexte style='margin-left:0cm'><span style='font-size: 10.0pt'>Ce médicament est un produit de contraste radiologique iodé (propriétés opacifiantes).</span></p>
+<p class=AmmCorpsTexte>Il vous a été prescrit en vue d'un examen radiologique pour visualiser les voies urinaires.</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament n'appartient à aucun groupe générique</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Solution ( Composition pour 100,00 ml de solution injectable )<ul role="list"><li role="listitem" style="list-style-type: none;">iode<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span><span class="italique">12 g </span><ul role="list" style="list-style-type: none;"><li class="sousFormeDe" role="listitem"><i class="fa fa-plus-square" aria-hidden="true"></i> sous forme de : ioxitalamate de sodium<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span><span class="italique">21,00 g </span></li></ul></li></ul></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > 1 flacon(s) en verre de 250 ml  </p><p>Code CIP : 317 160-1 ou 34009 317 160 1 3<br/>Déclaration de commercialisation : 19/04/1975<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 14,09 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 15,11 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :65%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><div class='fr-grid-row'><div class='fr-col'><p>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence. </p></div></div><div class='fr-grid-row'><div class='fr-col'><p>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprès de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-smr-aide-2'>plus d'informations dans l'aide</a>). Les avis et synthèses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-smr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection à la page d'aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'SMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur du SMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2854452'>Avis du 16/05/2018</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 16/05/2018 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Renouvellement d'inscription (CT)</td><td class='text-align-center'>le service médical rendu par TELEBRIX 12 SODIUM reste important dans les indications de l’AMM. ;</td></tr></tbody></table></div></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div><div class='fr-col'><p>Pas d'ASMR disponible pour ce médicament (<a href='/aide#le-medicament-que-je-recherche-ne-mentionne-pas-de-service-medical-rendu-(SMR)-ni-amelioration-du-service-medical-rendu-(ASMR)' aria-describedby='tooltip-asmr-aide-2'>plus d'informations dans l'aide )</a></p><span id='tooltip-asmr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers la page aide</span></div></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : GUERBET</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure nationale</li><li>Code CIS : &nbsp;6 540 137 5</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intra-vésicale - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intra-vésicale, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 20/04/2023</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras><a name="_Toc142278913">TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intravésicale</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Pour 100 mL de solution :</p>
+<p class=AmmComposition>Ioxitalamate de sodium ........................................................................................................ 21,00 g</p>
+<p class=AmmComposition>quantité correspondant en iode ................................................................................................. 12 g</p>
+<p class=AmmCorpsTexte>Teneur en iode par mL : 120 mg</p>
+<p class=AmmCorpsTexte>Masse d’iode par flacon de 250 mL : 30 g</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Solution pour administration intravésicale.</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Viscosité à 20 °C : 1.7 mPa.s</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Viscosité à 37 °C : 1.1 mPa.s</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Osmolalité : 640 mOsm/kg</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">Ce médicament est à usage diagnostique uniquement.</a></p>
+<p class=AmmCorpsTexte>Produit de contraste destiné à être utilisé pour :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Urétrocystographie rétrograde.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Cystographie sus-pubienne.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278918">Posologie</a></p>
+<p class=AmmCorpsTexte>La dose doit être adaptée en fonction de l'âge, du poids, de la fonction rénale du patient, du type d'examen et du volume de l'organe à examiner.</p>
+<div class='fr-table--lg fr-table'><table>
+<tr style='height:28.2pt'>
+<td width=208 style='width:155.95pt;border:solid windowtext 1.0pt;border-bottom:
+none;padding:0cm 3.55pt 0cm 3.55pt;height:28.2pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b>Indications</b></p>
+</td>
+<td width=217 style='width:163.0pt;border-top:solid windowtext 1.0pt;
+border-left:none;border-bottom:none;border-right:solid windowtext 1.0pt;
+padding:0cm 3.55pt 0cm 3.55pt;height:28.2pt'>
+<p class=AmmCorpsTexte align=center style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:center'><b>Dose moyenne</b></p>
+</td>
+<td width=180 style='width:134.65pt;border-top:solid windowtext 1.0pt;
+border-left:none;border-bottom:none;border-right:solid windowtext 1.0pt;
+padding:0cm 3.55pt 0cm 3.55pt;height:28.2pt'>
+<p class=AmmCorpsTexte align=center style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:center'><b>Volume total</b></p>
+<p class=AmmCorpsTexte align=center style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:center'><b>(mini-maxi) </b></p>
+<p class=AmmCorpsTexte align=center style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:center'><b>mL</b></p>
+</td>
+</tr>
+<tr style='height:24.6pt'>
+<td width=208 style='width:155.95pt;border:solid windowtext 1.0pt;padding:
+0cm 3.55pt 0cm 3.55pt;height:24.6pt'>
+<p class=AmmCorpsTexte>Urétrocystographie rétrograde </p>
+</td>
+<td width=217 style='width:163.0pt;border:solid windowtext 1.0pt;border-left:
+none;padding:0cm 3.55pt 0cm 3.55pt;height:24.6pt'>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Posologie à adapter au volume de l’organe à injecter.</p>
+</td>
+<td width=180 style='width:134.65pt;border:solid windowtext 1.0pt;border-left:
+none;padding:0cm 3.55pt 0cm 3.55pt;height:24.6pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>20 – 100 mL</p>
+</td>
+</tr>
+<tr style='height:28.5pt'>
+<td width=208 style='width:155.95pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 3.55pt 0cm 3.55pt;height:28.5pt'>
+<p class=AmmCorpsTexte>Cystographie sus-pubienne</p>
+</td>
+<td width=217 style='width:163.0pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.55pt 0cm 3.55pt;height:28.5pt'>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Posologie à adapter au volume de l’organe à injecter.</p>
+</td>
+<td width=180 style='width:134.65pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 3.55pt 0cm 3.55pt;height:28.5pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'>100 –  250 mL</p>
+</td>
+</tr>
+</table></div>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte>Le produit doit être administré par voie intravésicale.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmListePuces1 style='text-align:justify'><a name="_Toc142278919"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypersensibilité à l’acide ioxitalamique ou à l’un des excipients mentionnés à la rubrique 6.1.</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Antécédents de réaction cutanée majeure, immédiate ou retardée (voir rubrique 4.8) à l’injection du TELEBRIX 12 SODIUM.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Injection par voie intravasculaire.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>L'administration intrathécale ou sous-arachnoïdienne (ou épidurale) de TELEBRIX 12 SODIUM pour une myélographie, une ventriculographie cérébrale ou une cisternographie est contre-indiquée en raison de la possibilité de réactions neurotoxiques graves pouvant mettre en jeu le pronostic vital (par exemple myoclonus ou épilepsie).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Thyréotoxicose manifeste.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><a name="_Toc142278920"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Quelles que soient la voie d’administration et la dose, un risque allergique existe.</a></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Le risque d’intolérance n’est pas univoque quand il s’agit de spécialités administrées localement pour l’opacification de cavités corporelles :</p>
+<p class=AmmListePuces3 style='margin-left:14.2pt;text-align:justify; text-indent:-14.2pt;line-height:115%'>a. L’administration par certaines voies particulières (articulaire, biliaire, intra-utérine...) entraîne un passage systémique non négligeable : des effets systémiques peuvent être observés.</p>
+<p class=AmmListePuces3 style='margin-left:14.2pt;text-align:justify; text-indent:-14.2pt'>b. L’administration per os ou par voie rectale entraîne normalement une diffusion systémique très limitée ; si la muqueuse digestive est normale, on ne retrouve alors dans l’urine qu’au plus 5 % de la dose administrée, le reste étant éliminé par les fécès. Par contre en cas d’altération de la muqueuse, l’absorption est augmentée ; elle est totale et rapide en cas de perforation avec passage dans la cavité péritonéale et le médicament est éliminé par voie urinaire. L’éventuelle survenue d’effets systémiques dose-dépendants est donc fonction de l’état de la muqueuse digestive.</p>
+<p class=AmmListePuces3 style='margin-left:14.2pt;text-align:justify; text-indent:-14.2pt'>c. Le mécanisme immuno-allergique est en revanche non dose-dépendant et toujours susceptible d’être observé, quelle que soit la voie d’administration.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Donc, du point de vue de la fréquence et de l’intensité des effets indésirables, s’opposent :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les spécialités administrées par voie vasculaire et certaines voies locales.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les spécialités administrées par voie digestive et peu absorbées à l’état normal.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'><u>4.4.1. Mises en garde spéciales</u></p>
+<p class=AmmCorpsTexte><i><u>4.4.1.1. Hypersensibilité</u></i></p>
+<p class=AmmCorpsTexte>Tous les produits de contraste iodés peuvent être à l’origine de réactions mineures ou majeures, pouvant mettre en jeu le pronostic vital. Elles peuvent être immédiates (moins de 60 minutes), ou retardées (jusqu’à 7 jours). Elles sont souvent imprévisibles.</p>
+<p class=AmmCorpsTexte>Le risque de réaction majeure implique d’avoir à disposition immédiate les moyens nécessaires à une réanimation d’urgence.</p>
+<p class=AmmCorpsTexte>Plusieurs mécanismes ont été évoqués :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>toxicité directe sur l’endothélium vasculaire et les protéines tissulaires,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>action pharmacologique modifiant la concentration de certains facteurs endogènes (histamine, fractions du complément, médiateurs de l’inflammation), plus fréquente avec les produits hyperosmolaires,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>allergie immédiate de type IgE dépendante au produit de contraste TELEBRIX 12 SODIUM (anaphylaxie),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>réactions allergiques de mécanisme cellulaire (réactions cutanées retardées).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Les patients ayant déjà présenté une réaction lors d’une précédente administration d’un produit de contraste iodé ont un risque augmenté de nouvelle réaction en cas de ré-administration du même, ou éventuellement d’un autre produit de contraste iodé et sont donc considérés comme sujets à risque.</p>
+<p class=AmmCorpsTexte><i><u>4.4.1.2. Produits de contraste iodés et thyroïde</u></i></p>
+<p class=AmmCorpsTexte>Il convient de s’assurer avant l’administration de produits de contraste iodés que le patient ne va pas bénéficier d’une exploration scintigraphique de la thyroïde ou d’une administration d’iode radioactif à visée thérapeutique.</p>
+<p class=AmmCorpsTexte>En effet, l’administration, quelle qu’en soit la voie, de produits de contraste iodés perturbe les dosages hormonaux et la fixation d’iode par la thyroïde ou les métastases de cancer thyroïdien jusqu’à la normalisation de l’iodurie.</p>
+<p class=AmmCorpsTexte><b><u>4.4.2. Précautions d’emploi</u></b></p>
+<p class=AmmCorpsTexte><i><u>4.4.2.1. Intolérance aux produits de contraste iodés</u></i></p>
+<p class=AmmCorpsTexte>Avant l’examen :</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt;page-break-after: avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>identifier les sujets à risque par un interrogatoire précis sur les antécédents.</p>
+<p class=AmmCorpsTexte>Les corticostéroïdes et les antihistaminiques H1 ont été proposés comme prémédication chez les patients présentant le plus grand risque de réaction d’hypersensibilité. Ils n’empêchent cependant pas la survenue d’un choc anaphylactique grave ou mortel. </p>
+<p class=AmmCorpsTexte>Pendant la durée de l’examen, il convient d’assurer :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>une surveillance médicale,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>le maintien d’une voie d’abord veineuse,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>à disposition immédiate les moyens nécessaires à une réanimation d’urgence.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt;page-break-after:avoid'>Après l’examen :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Après l’administration d’un produit de contraste, le patient doit rester en observation au moins 30 minutes, car la majorité des effets indésirables graves surviennent dans ce délai.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Le patient doit être prévenu de la possibilité de réactions retardées (jusqu’à 7 jours) (voir rubrique 4.8).</p>
+<p class=AmmCorpsTexte><b>Les précautions d’emploi suivantes sont à considérer si l’intégrité de la paroi vésicale ne peut être confirmée préalablement à l’administration du produit :</b></p>
+<p class=AmmCorpsTexte><i><u>4.4.2.2. Asthme</u></i></p>
+<p class=AmmCorpsTexte>L’équilibration de l’asthme est recommandée avant injection d’un produit de contraste iodé.</p>
+<p class=AmmCorpsTexte>Une attention particulière est nécessaire en cas de crise d’asthme déclarée dans les 8 jours avant l’examen, en raison du risque accru de survenue d’un bronchospasme.</p>
+<p class=AmmCorpsTexte><i><u>4.4.2.3. Troubles du système nerveux central</u></i></p>
+<p class=AmmCorpsTexte>Le rapport bénéfice/risque doit être estimé au cas par cas en raison du risque d’aggravation de la symptomatologie neurologique chez les patients présentant un accident ischémique transitoire, un infarctus cérébral aigu, une hémorragie intracrânienne récente, un œdème cérébral, une épilepsie idiopathique ou secondaire (tumeur, cicatrice).</p>
+<p class=AmmCorpsTexte><i><u>4.4.2.4. Myasthénie</u></i></p>
+<p class=AmmCorpsTexte>L’administration de produit de contraste peut aggraver les symptômes de myasthénie.</p>
+<p class=AmmCorpsTexte><i><u>4.4.2.5. Majoration des effets secondaires</u></i></p>
+<p class=AmmCorpsTexte>Les manifestations des effets indésirables liés à l’administration de produit de contraste iodé peuvent être majorées par les états prononcés d’excitation, l’anxiété et la douleur. Une prise en charge adaptée peut s’avérer nécessaire pouvant aller jusqu’à la sédation.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278928"></a><a name="_Toc142278926"></a><a name="_Toc142278925"><b><u>4.5.1. Médicaments</u></b></a></p>
+<p class=AmmListePuces1 style='margin-left:14.2pt;text-indent:-14.2pt'><span style='font-family:Symbol'>+<span style='font:7.0pt "Times New Roman"'>      </span></span><b>Bêta-bloquants, substances vasoactives, inhibiteurs de l’enzyme de conversion de l’angiotensine, antagonistes des récepteurs de l’angiotensine</b></p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Ces médicaments entraînent une baisse de l’efficacité des mécanismes de compensation cardiovasculaire des troubles tensionnels.</p>
+<p class=AmmCorpsTexte>Les réactions d'hypersensibilité peuvent être aggravées chez les patients traités par bêta-bloquants, et en particulier en présence d'asthme bronchique. Ces patients peuvent être réfractaires au traitement standard des réactions d'hypersensibilité avec les agonistes bêta.</p>
+<p class=AmmCorpsTexte>Le médecin doit en être informé avant l’injection de produit de contraste iodé et disposer des moyens de réanimation.</p>
+<p class=AmmListePuces1 style='margin-left:14.2pt;text-indent:-14.2pt'><span style='font-family:Symbol'>+<span style='font:7.0pt "Times New Roman"'>      </span></span><b>Interleukine 2</b></p>
+<p class=AmmCorpsTexte>Il existe un risque de majoration de réaction aux produits de contraste en cas de traitement par l’interleukine 2 (voie intraveineuse) : éruption cutanée bouffée congestive, érythème, fièvre ou symptômes grippaux, ou plus rarement hypotension, oligurie, voire insuffisance rénale.</p>
+<p class=AmmCorpsTexte><b><u>4.5.2. Autres formes d’interactions</u></b></p>
+<p class=AmmCorpsTexte>Des concentrations élevées de produit de contraste iodé dans le plasma et l’urine peuvent interférer avec les dosages <i>in vitro</i> de bilirubine, de protéines et de substances inorganiques (fer, cuivre, calcium et phosphate) ; il est recommandé de ne pas faire pratiquer ces dosages dans les 24 heures qui suivent l’examen.</p>
+<p class=AmmCorpsTexte>Les réactions d'hypersensibilité peuvent être aggravées chez les patients traités par bêta-bloquants, et en particulier en présence d'asthme bronchique.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte>Etant donné que l’exposition aux radiations doit être généralement évitée pendant la grossesse, indépendamment de l’utilisation ou non d’un produit de contraste, le bénéfice d’un examen radiologique doit être pesé soigneusement.</p>
+<p class=AmmCorpsTexte><b><u>Embryotoxicité</u></b></p>
+<p class=AmmCorpsTexte>Les études effectuées chez l’animal n’ont pas mis en évidence d’effet tératogène.</p>
+<p class=AmmCorpsTexte>En l’absence d’effet tératogène chez l’animal, un effet malformatif dans l’espèce humaine n’est pas attendu. En effet, à ce jour, les substances responsables de malformations dans l’espèce humaine se sont révélées tératogènes chez l’animal au cours d’études bien conduites sur deux espèces.</p>
+<p class=AmmCorpsTexte><b><u>Foetotoxicité</u></b></p>
+<p class=AmmCorpsTexte>La surcharge iodée ponctuelle consécutive à l’administration du produit à la mère peut entraîner une dysthyroïdie fœtale si l’examen a lieu après 14 semaines d’aménorrhée. La fonction thyroïdienne de nouveau-nés exposés in utero doit être évaluée et surveillée.</p>
+<p class=AmmCorpsTexte>Cependant, la réversibilité de cet effet et le bénéfice maternel attendu justifient de ne pas surseoir à l’administration ponctuelle d’un produit de contraste iodé dans le cas où l’indication de l’examen radiologique chez une femme enceinte est bien pesée.</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278927">Allaitement</a></p>
+<p class=AmmCorpsTexte>Les produits de contraste iodés sont faiblement excrétés dans le lait maternel. Leur administration ponctuelle à la mère comporte donc un risque faible d’effets indésirables pour le nourrisson. Il est préférable de suspendre l’allaitement maternel pendant 24 heures après l’administration du produit de contraste iodé.</p>
+<p class=AmmAnnexeTitre3>Fertilité</p>
+<p class=AmmCorpsTexte>Les études toxicologiques réalisées sur la fonction de reproduction n’ont pas montré d’effet sur la reproduction, la fertilité ou le développement fœtal et post natal.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929">Aucune étude sur l'aptitude à conduire des véhicules et à utiliser des machines n'a été réalisée. </a></p>
+<p class=AmmCorpsTexte>Du fait des propriétés pharmacologiques du TELEBRIX 12 SODIUM lui-même, un effet sur l'aptitude à conduire des véhicules et à utiliser des machines est peu probable.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmCorpsTexte>Depuis la commercialisation, les effets indésirables les plus fréquemment rapportés après l'administration de TELEBRIX (toutes formes) sont l'hypersensibilité (notamment réaction anaphylactique, réaction anaphylactoïde et choc anaphylactique), urticaire, rash (notamment érythème et rash maculo-papulaire) et des réactions au site d'injection (telles que œdème, douleur et inflammation).</p>
+<p class=AmmCorpsTexte>Les réactions d'hypersensibilité sont habituellement immédiates (pendant l'administration ou dans l'heure qui suit le début de l'administration) ou parfois retardées (de une heure à plusieurs jours après l'administration), et se manifestent sous la forme de réactions cutanées indésirables. </p>
+<p class=AmmCorpsTexte>Les réactions immédiates comportent un ou plusieurs effets successifs ou concomitants, avec habituellement des réactions cutanées, des troubles respiratoires et/ou cardiovasculaires, qui peuvent être les premiers signes de choc, pouvant rarement être fatal.</p>
+<p class=AmmCorpsTexte>Les effets indésirables sont présentés dans le tableau ci-dessous par Système Organe Classe avec une fréquence indéterminée (ne peut être estimée sur la base des données disponibles).</p>
+<p class=AmmCorpsTexte>Liste récapitulative des effets indésirables rapportés avec TELEBRIX 12 SODIUM ou une autre forme de TELEBRIX après administration par voie intravésicale :</p>
+<div class='fr-table--lg fr-table'><table>
+<thead>
+<tr style='height:31.25pt'>
+<td width=177 style='width:133.0pt;border:solid windowtext 1.0pt;padding:
+0cm 5.4pt 0cm 5.4pt;height:31.25pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Classe de systèmes d'organes</p>
+</td>
+<td width=435 style='width:326.0pt;border:solid windowtext 1.0pt;border-left:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:31.25pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Fréquence : Effet indésirable</p>
+</td>
+</tr>
+</thead>
+<tr>
+<td width=177 valign=top style='width:133.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Affections du système immunitaire</p>
+</td>
+<td width=435 valign=top style='width:326.0pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Fréquence inconnue : choc anaphylactique, réaction anaphylactique, réaction anaphylactoïde, hypersensibilité</p>
+</td>
+</tr>
+<tr>
+<td width=177 valign=top style='width:133.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Affections endocriniennes</p>
+</td>
+<td width=435 valign=top style='width:326.0pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Fréquence inconnue : crise thyrotoxique*, hyperthyroïdie*, troubles thyroïdiens**</p>
+</td>
+</tr>
+<tr>
+<td width=177 valign=top style='width:133.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Affections psychiatriques</p>
+</td>
+<td width=435 valign=top style='width:326.0pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Fréquence inconnue : état confusionnel, agitation</p>
+</td>
+</tr>
+<tr>
+<td width=177 valign=top style='width:133.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Affections du système nerveux</p>
+</td>
+<td width=435 valign=top style='width:326.0pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Fréquence inconnue : syncope, convulsion, tremblements, vertiges, céphalées, parésies/paralysies, paresthésies </p>
+</td>
+</tr>
+<tr>
+<td width=177 valign=top style='width:133.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Affections cardiaques</p>
+</td>
+<td width=435 valign=top style='width:326.0pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Fréquence inconnue : tachycardie</p>
+</td>
+</tr>
+<tr>
+<td width=177 valign=top style='width:133.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Affections vasculaires</p>
+</td>
+<td width=435 valign=top style='width:326.0pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Fréquence inconnue : hypotension, collapsus circulatoire </p>
+</td>
+</tr>
+<tr>
+<td width=177 valign=top style='width:133.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Affections respiratoires, thoraciques et médiastinales</p>
+</td>
+<td width=435 valign=top style='width:326.0pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Fréquence inconnue : œdème laryngé, œdème pulmonaire, dyspnée, toux</p>
+</td>
+</tr>
+<tr>
+<td width=177 valign=top style='width:133.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Affections gastro-intestinales</p>
+</td>
+<td width=435 valign=top style='width:326.0pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Fréquence inconnue : diarrhées, nausées, vomissements, douleurs abdominales</p>
+</td>
+</tr>
+<tr>
+<td width=177 valign=top style='width:133.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Affections de la peau et du tissu sous-cutané</p>
+</td>
+<td width=435 valign=top style='width:326.0pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Fréquence inconnue : </p>
+<p class=AmmCorpsTexte align=left style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:left'><i>Immédiats :</i> angiœdème, urticaire, prurit, érythème</p>
+<p class=AmmCorpsTexte align=left style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:left'><i>Retardés :</i> rash maculo-papulaire</p>
+</td>
+</tr>
+<tr>
+<td width=177 valign=top style='width:133.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Affections du rein et des voies urinaires</p>
+</td>
+<td width=435 valign=top style='width:326.0pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Fréquence inconnue : insuffisance rénale aiguë, anurie</p>
+</td>
+</tr>
+<tr>
+<td width=177 valign=top style='width:133.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Troubles généraux et anomalies au site d’administration</p>
+</td>
+<td width=435 valign=top style='width:326.0pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Fréquence inconnue : œdème, œdème de la face, douleurs, malaise, sensation de chaleur</p>
+</td>
+</tr>
+<tr>
+<td width=177 valign=top style='width:133.0pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Investigations</p>
+</td>
+<td width=435 valign=top style='width:326.0pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Fréquence inconnue : augmentation de la créatininémie</p>
+</td>
+</tr>
+</table></div>
+<p class=AmmCorpsTexte style='margin-right:14.2pt'>* Une thyrotoxicose peut survenir chez des patients ayant une hyperthyroïdie asymptomatique ou non contrôlée, de même que chez des patients ayant des nodules thyroïdiens autonomes (précautions particulières avec les patients âgés). L'occurrence des symptômes peut être retardée (de plusieurs mois) après l'administration.</p>
+<p class=AmmCorpsTexte style='margin-right:14.2pt'>** Le trouble thyroïdien peut être l'exacerbation d'un goitre. Il existe également un risque d’hypothyroïdie chez les nouveau-nés (prématurés) ayant reçu, ou dont la mère a reçu, un produit de contraste iodé.</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:14.2pt;margin-bottom: 0cm;margin-left:0cm;margin-bottom:.0001pt'> </p>
+<p class=AmmCorpsTexte style='margin-right:14.2pt'>Les effets indésirables suivants ont été rapportés avec d’autres produits de contraste iodés ou avec TELEBRIX via une autre voie d’administration.</p>
+<p class=AmmCorpsTexte style='margin-right:14.2pt'>Ils sont donc susceptibles de survenir également au cours d’un traitement avec TELEBRIX :</p>
+<div class='fr-table--lg fr-table'><table>
+<thead>
+<tr style='height:27.45pt'>
+<td width=236 style='width:177.2pt;border:solid windowtext 1.0pt;padding:
+0cm 5.4pt 0cm 5.4pt;height:27.45pt'><b><span style='font-size:10.0pt;
+font-family:"Arial",sans-serif'><br clear=all>
+</span></b>
+<p class=AmmCorpsTexteGras align=left style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:left'>Classe de systèmes d'organes</p>
+</td>
+<td width=378 style='width:10.0cm;border:solid windowtext 1.0pt;border-left:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:27.45pt'>
+<p class=AmmCorpsTexteGras align=left style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:left'>Effet indésirable</p>
+</td>
+</tr>
+</thead>
+<tr>
+<td width=236 style='width:177.2pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'><b>Affections psychiatriques</b></p>
+</td>
+<td width=378 valign=top style='width:10.0cm;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Hallucinations, anxiété</p>
+</td>
+</tr>
+<tr>
+<td width=236 style='width:177.2pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Affections du système nerveux</p>
+</td>
+<td width=378 valign=top style='width:10.0cm;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Coma, œdème cérébral, amnésie, troubles de la parole, somnolence, dysgueusie</p>
+</td>
+</tr>
+<tr>
+<td width=236 style='width:177.2pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Affections oculaires</p>
+</td>
+<td width=378 valign=top style='width:10.0cm;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Troubles visuels, photophobie, cécité transitoire</p>
+</td>
+</tr>
+<tr>
+<td width=236 style='width:177.2pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Affections de l'oreille et du labyrinthe</p>
+</td>
+<td width=378 valign=top style='width:10.0cm;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Troubles de l'audition</p>
+</td>
+</tr>
+<tr style='height:21.7pt'>
+<td width=236 style='width:177.2pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:21.7pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Affections cardiaques</p>
+</td>
+<td width=378 valign=top style='width:10.0cm;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:21.7pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Arrêt cardiaque, infarctus du myocarde, angine de poitrine, troubles du rythme, bradycardie</p>
+</td>
+</tr>
+<tr style='height:11.45pt'>
+<td width=236 style='width:177.2pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:11.45pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Affections vasculaires</p>
+</td>
+<td width=378 valign=top style='width:10.0cm;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:11.45pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Thrombophlébite<sup>1</sup></p>
+</td>
+</tr>
+<tr style='height:11.45pt'>
+<td width=236 style='width:177.2pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:11.45pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Affections respiratoires, thoraciques et médiastinales</p>
+</td>
+<td width=378 valign=top style='width:10.0cm;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:11.45pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Arrêt respiratoire, pneumonie par aspiration<sup>2</sup>, laryngospasme, bronchospasme, sensation de gorge serrée, éternuements</p>
+</td>
+</tr>
+<tr style='height:11.45pt'>
+<td width=236 style='width:177.2pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:11.45pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Affections gastro-intestinales</p>
+</td>
+<td width=378 valign=top style='width:10.0cm;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:11.45pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Pancréatite<sup>3</sup>, iléus<sup>4</sup>, hypertrophie des glandes parotides, hypersécrétion salivaire</p>
+</td>
+</tr>
+<tr style='height:11.45pt'>
+<td width=236 style='width:177.2pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:11.45pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Affections de la peau et du tissu sous-cutané</p>
+</td>
+<td width=378 valign=top style='width:10.0cm;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:11.45pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Syndrome de Stevens-Johnson, nécrolyse épidermique toxique, érythème multiforme, eczéma</p>
+</td>
+</tr>
+<tr style='height:26.25pt'>
+<td width=236 style='width:177.2pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:26.25pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Affections musculo-squelettiques et systémiques</p>
+</td>
+<td width=378 valign=top style='width:10.0cm;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:26.25pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Arthralgie<sup>5</sup></p>
+</td>
+</tr>
+<tr style='height:19.0pt'>
+<td width=236 style='width:177.2pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:19.0pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Affections des organes de reproduction et des seins</p>
+</td>
+<td width=378 valign=top style='width:10.0cm;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:19.0pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Douleurs pelviennes</p>
+</td>
+</tr>
+<tr style='height:19.0pt'>
+<td width=236 style='width:177.2pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:19.0pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Troubles généraux et anomalies au site d’administration</p>
+</td>
+<td width=378 valign=top style='width:10.0cm;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:19.0pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Extravasation au site d'injection, douleur au site d'injection, inflammation au site d'injection, œdème au site d'injection, nécrose au site d'injection<sup>6</sup></p>
+</td>
+</tr>
+<tr style='height:19.0pt'>
+<td width=236 style='width:177.2pt;border:solid windowtext 1.0pt;border-top:
+none;padding:0cm 5.4pt 0cm 5.4pt;height:19.0pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Investigations</p>
+</td>
+<td width=378 valign=top style='width:10.0cm;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt;height:19.0pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Électroencéphalogramme anormal, élévation de l'amylase sanguine</p>
+</td>
+</tr>
+</table></div>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><sup>1</sup> après administration intravasculaire</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><sup>2</sup> chez les patients ayant des troubles de la déglutition, voie orale</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><sup>3</sup> après cholangiopancréatographie rétrograde endoscopique (<i>CPRE</i>) </p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><sup>4</sup> après administration entérale</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><sup>5</sup> en cas d'arthrographie</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><sup>6 </sup>en cas d'extravasation</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmCorpsTexte>La nature prévisible des effets indésirables associés à <span style='text-transform:uppercase'>TELEBRIX</span> 12 SODIUM est la même que celle des effets rapportés chez les adultes. Leur fréquence ne peut être estimée à partir des données disponibles.</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="http://www.ansm.sante.fr">www.ansm.sante.fr</a>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278931">La toxicité d’un surdosage de TELEBRIX 12 SODIUM a peu de chances de survenir avec une administration intravésicale.</a></p>
+<p class=AmmCorpsTexte>Le surdosage augmente le risque de néphropathie et peut entraîner diarrhées, déshydratation, déséquilibre électrolyte, troubles hémodynamiques et cardiovasculaires.</p>
+<p class=AmmCorpsTexte>En cas de très fortes doses, la perte hydrique et électrolytique doit être compensée par une réhydratation appropriée. La fonction rénale doit être surveillée pendant au moins trois jours. Si nécessaire, une hémodialyse peut être réalisée.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : PRODUIT DE CONTRASTE IODE (V : divers), code ATC : V08AA05.</a></p>
+<p class=AmmCorpsTexte>TELEBRIX 12 SODIUM est un produit de contraste hydrosoluble, ionique, d’osmolalité 640 mOsm/kg.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278934"><span style='color:black'>Après administration intravésicale, l’acide ioxitalamique est </span></a>rapidement éliminé, inchangé dans les urines.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278935">Des effets n’ont été observés chez l’animal qu’à des expositions largement supérieures à l’exposition maximale chez l’homme, et ont donc peu de signification clinique.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937">Hydroxyde de sodium, calcium édétate de sodium, dihydrogénophosphate de sodium dihydraté, eau pour préparations injectables.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">En l’absence d’études d’incompatibilité, ce médicament ne doit pas être mélangé avec d’autres médicaments.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278939">3 ans.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:6.0pt'><a name="_Toc142278940"><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>A conserver à l'abri de la lumière.</span></a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:6.0pt'><a name="_Toc142278942"></a><a name="_Toc142278941"><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Flacon de 250 mL en verre incolore (type II) muni d'un bouchon en élastomère (chlorobutyle). </span></a></p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Tout médicament non utilisé ou déchet doit être éliminé conformément à la réglementation en vigueur.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142278943">GUERBET</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>BP 57400</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase'>95943 Roissy CDG Cedex</span></p>
+<p class=AmmCorpsTexte><span style='text-transform:uppercase'>France</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1 style='margin-left:0cm;text-indent:0cm'><a name="_Toc142278944"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>3400931716013 : 250 mL en flacon (verre incolore), boîte de 1</a></p>
+<p class=AmmListePuces1 style='margin-left:0cm;text-indent:0cm'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>3400955103783 : 250 mL en flacon (verre incolore), boîte de 10</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945">Date de première autorisation:{JJ mois AAAA}</a></p>
+<p class=AmmCorpsTexte>Date de dernier renouvellement:{JJ mois AAAA}</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946"><span lang=FR-BE>{JJ mois AAAA}</span></a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I></p>
+<p class=AmmCorpsTexte>Médicament non soumis à prescription médicale.</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+                              <div id="tabpanel-bon-usage-panel" class="fr-tabs__panel" role="tabpanel"
+                     aria-labelledby="tabpanel-bon-usage"
+                     tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      
+      <div class="fr-col-12 fr-col-md">
+        <div class="fr-editor">
+
+          
+          
+          
+          
+          
+                      <div class="fr-grid-row">
+              <div class="fr-col">
+                <h5 id="heading-informations-importantes" role="heading" aria-level="5">
+                  <span class="fr-icon-information-line text-color-orange" aria-hidden="true"></span> Informations
+                  importantes
+                  <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage" href="#top"
+                     id="section-glossaire__top_link" role="link"
+                     aria-describedby="tooltip-link-page-top"
+                     aria-label="Redirection vers le haut de page"></a>
+                  <span id="tooltip-link-page-top" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                      Redirection vers le haut de page
+                    </span>
+                </h5>
+                <p aria-labelledby="heading-informations-importantes">Les informations importantes disponibles pour ce médicament sont les suivantes : <br /><ul id="liste_infos_importantes" role="list"><li role='listitem'>    <a  target='_blank'    href='https://ansm.sante.fr/actualites/point-de-situation-sur-les-approvisionnements-des-produits-de-contraste'>Point de situation sur les approvisionnements des produits de contraste</a></li></ul></p>
+              </div>
+            </div>
+          
+          
+          
+                  </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_TELEBRIX_12_SODIUM_(120_mg_I/mL),_solution_pour_administration_intra-vésicale_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intra-vésicale ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intra-vésicale ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_AVANT_D_UTILISER_TELEBRIX_12_SODIUM_(120_mg_I/mL),_solution_pour_administration_intravésicale_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT AVANT D’UTILISER TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intravésicale ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT AVANT D’UTILISER TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intravésicale ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_UTILISER_TELEBRIX_12_SODIUM_(120_mg_I/mL),_solution_pour_administration_intravésicale_?"
+                     aria-label="3. COMMENT UTILISER TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intravésicale ? (Lien de redirection)">
+                    3. COMMENT UTILISER TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intravésicale ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_TELEBRIX_12_SODIUM_(120_mg_I/mL),_solution_pour_administration_intravésicale_?"
+                     aria-label="5. COMMENT CONSERVER TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intravésicale ? (Lien de redirection)">
+                    5. COMMENT CONSERVER TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intravésicale ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intra-vésicale - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intra-vésicale, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 20/04/2023</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte align=center style='text-align:center'><a name="_Toc142278999"><b>TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intravésicale</b></a></p>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b>Ioxitalamate de sodium</b></p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Veuillez lire attentivement cette notice avant d’utiliser ce médicament car elle contient des informations importantes pour vous.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin ou votre pharmacien.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. </span>Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><a name="_Toc142279001">1. Qu'est-ce que </a>TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intravésicale et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant d'utiliser TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intravésicale ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment utiliser TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intravésicale ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intravésicale ?</p>
+<p class=AmmCorpsTexte><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_TELEBRIX_12_SODIUM_(120_mg_I/mL),_solution_pour_administration_intra-vésicale_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intra-vésicale ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279004">PRODUIT DE CONTRASTE IODE (V : divers), code ATC : V08AA05.</a></p>
+<p class=AmmCorpsTexte>TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intravésicale est un produit de contraste, hydrosoluble, ionique, d’osmolalité 640 mOsm/kg.</p>
+<p class=AmmNoticeCorpsdeTexte style='margin-left:0cm'><span style='font-size: 10.0pt'>Ce médicament est à usage diagnostique uniquement.</span></p>
+<p class=AmmNoticeCorpsdeTexte style='margin-left:0cm'><span style='font-size: 10.0pt'>Ce médicament est un produit de contraste radiologique iodé (propriétés opacifiantes).</span></p>
+<p class=AmmCorpsTexte>Il vous a été prescrit en vue d'un examen radiologique pour visualiser les voies urinaires.</p>
+<p class=AmmAnnexeTitre1><span style='text-transform:none'><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_AVANT_D_UTILISER_TELEBRIX_12_SODIUM_(120_mg_I/mL),_solution_pour_administration_intravésicale_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT AVANT D’UTILISER TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intravésicale ?</span></span></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">N’utilisez jamais TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intravésicale :</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique à l’acide ioxitalamique ou à l’un des autres composants contenus dans TELEBRIX 12 SODIUM.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez déjà eu une réaction cutanée majeure immédiate ou retardée après l’injection d’acide ioxitalamique (voir rubrique 4).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous souffrez d’un excès d’hormones thyroïdiennes (thyréotoxicose).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>TELEBRIX 12 SODIUM NE DOIT PAS être introduit dans la moelle épinière/le cerveau car des réactions neurotoxiques sévères et pouvant mettre la vie en danger peuvent survenir.</p>
+<p class=AmmListePuces1 style='margin-left:0cm;text-align:justify;text-indent: 0cm'>TELEBRIX 12 SODIUM NE DOIT PAS être utilisé pour la myélographie ou ne doit pas être injecté dans vos veines ou dans vos artères.</p>
+<p class=AmmCorpsTexte>Adressez-vous à votre médecin ou pharmacien avant d’utiliser TELEBRIX12 SODIUM (120 mg I/mL), solution pour administration intravésicale. </p>
+<p class=AmmCorpsTexte>Comme tous les produits de contraste iodés et quelles que soient la voie d’administration et la dose, il existe une possibilité d’effet indésirable, qui peut être minime mais qui peut aller jusqu’à engager le pronostic vital. Ces réactions peuvent survenir dans l’heure ou, plus rarement, jusqu’à 7 jours après l’administration. Elles sont souvent imprévisibles mais ont un risque augmenté si vous avez déjà présenté une réaction lors d’une précédente administration de produit de contraste iodé (voir rubrique 4). En conséquence, il convient de prévenir le médecin radiologue qui pratiquera l'injection si vous avez présenté un effet indésirable lors d'un examen radiologique antérieur avec un produit de contraste iodé.</p>
+<p class=AmmCorpsTexte>Signalez également toute autre maladie dont vous souffrez afin que le médecin qui pratiquera l'injection puisse prendre les précautions d'emploi nécessaires.</p>
+<p class=AmmCorpsTexte>Prévenez aussi votre médecin :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous avez déjà présenté une réaction lors d’une précédente injection de produit de contraste iodé.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes asthmatique et si vous avez fait une crise d’asthme dans les 8 jours précédant l’examen.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous souffrez de troubles neurologiques tels que épilepsie ou accident vasculaire cérébral, ou d’une myasthénie (maladie auto-immune des muscles).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes anxieux, nerveux ou souffrez de douleurs : dans ces situations les effets indésirables peuvent être majorés.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous présentez un antécédent récent d’hémorragie intracrânienne.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous présentez un œdème cérébral.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>En cas d’alcoolisme ou de toxicomanie, il est important que votre médecin radiologue en soit prévenu.</p>
+<p class=AmmCorpsTexte>Si vous devez avoir prochainement un examen de la thyroïde ou un traitement par iode radioactif, signalez-le au médecin radiologue.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intravésicale</p>
+<p class=AmmCorpsTexte>Veuillez indiquer à votre médecin ou à votre pharmacien toute maladie dont vous souffrez ou si vous prenez ou avez pris récemment un autre médicament, même s’il s’agit d’un médicament obtenu sans ordonnance. </p>
+<p class=AmmCorpsTexte>Faites particulièrement attention si vous prenez :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>des médicaments prescrits pour l'hypertension artérielle (bêtabloquants),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>des médicaments utilisés pour traiter certains cancers (interleukine-2).</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Informez votre médecin ou pharmacien si vous prenez, avez récemment pris ou pourriez prendre tout autre médicament.</p>
+<p class=AmmCorpsTexteGras>TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intravésicale avec des aliments et boissons</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279012">Grossesse et allaitement </a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Il est impératif de signaler au médecin votre grossesse, ou tout retard de règles, avant de faire pratiquer votre examen radiologique.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Il est recommandé de suspendre l'allaitement pendant au moins 24 heures après l'administration de ce produit de contraste.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous êtes enceinte ou que vous allaitez, si vous pensez être enceinte ou planifiez une grossesse, demandez conseil à votre médecin ou pharmacien avant de prendre ce médicament.</span></p>
+<p class=AmmCorpsTexteGras>Sportifs </p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmNoticeCorpsdeTexte style='margin-left:0cm;page-break-after:avoid'><span style='font-size:10.0pt'>Pas de risque particulier connu à ce jour.</span></p>
+<p class=AmmCorpsTexte>Si vous ne vous sentez pas bien après l’examen, vous ne devriez pas conduire ou utiliser des machines.</p>
+<p class=AmmCorpsTexteGras>TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intravésicale contient <{nommer le/les excipient (s)}></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_UTILISER_TELEBRIX_12_SODIUM_(120_mg_I/mL),_solution_pour_administration_intravésicale_?'>3. COMMENT UTILISER TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intravésicale ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmNoticeCorpsdeTexte style='margin-left:0cm'><b><u><span style='font-size:10.0pt'>Posologie</span></u></b></p>
+<p class=AmmNoticeCorpsdeTexte style='margin-left:0cm'><span style='font-size: 10.0pt'>La dose injectée, qui peut varier selon le type d'examen, la technique utilisée mais aussi selon votre poids, votre débit cardiaque et votre état général, est strictement déterminée par le médecin.</span></p>
+<p class=AmmCorpsTexte>Veillez à toujours utiliser ce médicament en suivant exactement les instructions de cette notice ou les indications de votre médecin ou pharmacien. Vérifiez auprès de votre médecin ou pharmacien en cas de doute.</p>
+<p class=AmmNoticeCorpsdeTexte style='margin-left:0cm'><b><u><span style='font-size:10.0pt'>Mode d'administration</span></u></b></p>
+<p class=AmmCorpsTexte>Voie intravésicale.</p>
+<p class=AmmCorpsTexte>Si vous avez d’autres questions sur l’utilisation de ce médicament, demandez plus d’informations à votre médecin ou à votre pharmacien.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</a></p>
+<p class=AmmCorpsTexte>Habituellement, les effets indésirables sont légers et de courte durée. Toutefois, l'administration de produits de contraste tels que TELEBRIX 12 SODIUM peut entraîner, dans de rares cas, des réactions sévères et mettant en jeu le pronostic vital. </p>
+<p class=AmmCorpsTexte>Prévenez immédiatement votre médecin ou votre radiologue/le personnel du service de radiologie si vous remarquez l'un des symptômes suivants :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>démangeaisons de la peau, éruption cutanée, papules œdémateuses sur la peau (urticaire),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>difficulté à respirer, haut-le-cœur, sensation de suffocation,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>gonflement de la face, du cou ou du corps,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>démangeaisons oculaires ou larmoiements, irritation de la gorge ou du nez, enrouement, toux ou éternuements,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>céphalées, vertiges, sensation de malaise,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>sensation de chaleur ou de froid importante, transpiration,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>pâleur ou rougeur de la peau,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>douleurs thoraciques, crampes, tremblements,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>nausées.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>car ils peuvent être les premiers signes de réaction allergique ou de choc. Votre médecin décidera si l'examen doit être arrêté et si vous avez besoin d'un traitement supplémentaire.</p>
+<p class=AmmCorpsTexte>Les effets indésirables observés avec TELEBRIX 12 SODIUM sont :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Des réactions d'hypersensibilité (allergiques), qui surviennent principalement dans les 60 minutes après l'administration des produits de contraste ; ce sont notamment des démangeaisons (prurit), des rougeurs cutanées (érythème), des papules œdémateuses localisées ou généralisées (urticaire), un gonflement de la face et de la peau ou des membranes muqueuses (angiœdème). Dans des cas isolés, la réaction allergique peut être très grave (choc anaphylactique). </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Des réactions d'hypersensibilité retardées peuvent survenir jusqu'à sept jours après l'administration et ont le plus souvent la forme d'éruptions cutanées. </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>troubles thyroïdiens, hyperthyroïdie ou aggravation soudaine d'une glande thyroïde hyperactive (crise thyrotoxique),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>état confusionnel, </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>agitation,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>syncope, convulsions, tremblements, vertiges,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>céphalées,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>parésies/paralysies,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>paresthésies,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>battements rapides du coeur (tachycardie),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>hypotension,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>œdème laryngé, dyspnée, toux,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>accumulation de liquide dans les poumons (œdème pulmonaire),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>nausées, vomissements, douleurs abdominales, diarrhées,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>angiœdème, urticaire, prurit, érythème,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>rash maculo-papulaire,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>insuffisance rénale aigüe, éventuellement avec émission réduite d'urine (anurie),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>œdème, œdème de la face, malaise, douleurs,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>sensation de chaleur,</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>résultats de laboratoire anormaux suggérant une affection rénale (augmentation de la créatininémie),</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>collapsus circulatoire.</p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt'>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à <votre médecin> <ou> <,> <votre pharmacien> <ou à votre infirmier/ère>. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet:<span style='color:red'> </span><a href="http://www.ansm.sante.fr">www.ansm.sante.fr</a></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_TELEBRIX_12_SODIUM_(120_mg_I/mL),_solution_pour_administration_intravésicale_?'>5. COMMENT CONSERVER TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intravésicale ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026"></a><a name="_Toc142279024">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte>N’utilisez pas ce médicament après la date de péremption indiquée sur l’emballage et sur le flacon après EXP.</p>
+<p class=AmmCorpsTexte>La date de péremption fait référence au dernier jour de ce mois.</p>
+<p class=AmmCorpsTexte>A conserver à l'abri de la lumière.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intra-vésicale</a></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est : l’acide ioxitalamique présent sous forme d’ioxitalamate de sodium 21,0 g (quantité correspondant en iode 12 g) pour 100 mL.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont : hydroxyde de sodium, calcium édétate de sodium, dihydrogénophosphate de sodium dihydraté, eau pour préparations injectables.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que TELEBRIX 12 SODIUM (120 mg I/mL), solution pour administration intra-vésicale et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>Solution pour administration par voie intravésicale en flacon de 250 mL.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><a name="_Toc142279031"><b>GUERBET</b></a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>BP57400</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>95943 ROISSY CDG CEDEX</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>FRANCE</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-top:6.0pt;margin-right:0cm;margin-bottom: 0cm;margin-left:0cm;margin-bottom:.0001pt'><a name="_Toc142279032"><span style='text-transform:uppercase'>GUERBET France</span></a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase;font-weight:normal'>15 rue des Vanesses</span></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'><span style='text-transform:uppercase;font-weight:normal'>93420 Villepinte</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'><b>GUERBET</b></p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>BP57400</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>95943 ROISSY CDG CEDEX</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>FRANCE</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexteGras>{MM/AAAA}>< {mois AAAA}</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

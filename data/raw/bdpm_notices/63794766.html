@@ -1,0 +1,2255 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="ulzmNtKflfYLytRiJskkDQ==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="ulzmNtKflfYLytRiJskkDQ==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 29/09/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant ANESDERM 5 %, crème"
+            aria-level="3"
+          >
+            ANESDERM 5 %, crème
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament ANESDERM 5 %, crème - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-bon-usage" class="fr-tabs__tab  fr-tabs__tab--icon-left" tabindex="-1" role="tab"
+                            aria-selected="false" aria-controls="tabpanel-bon-usage-panel">Bon usage
+                    </button>
+                  </li>
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                          <p id="tag-generique" class="fr-tag" aria-controls="fr-modal-tag-generique" data-fr-opened="false">
+              <span class="fr-icon-capsule-fill">
+              </span>&nbsp;générique
+          </p>
+              </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 05/07/2005
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : ANESDERM 5 %, crème - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0440373">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte><a name="_Toc142279004">Classe pharmacothérapeutique : Anesthésiques, local - Amides, Code ATC : N01BB20.</a></p>
+<p class=AmmCorpsTexte>ANESDERM contient deux substances actives appelées la lidocaïne et la prilocaïne. Ces dernières appartiennent à un groupe de médicaments appelés anesthésiques locaux. </p>
+<p class=AmmCorpsTexte>ANESDERM fonctionne en provoquant une anesthésie de la surface de la peau pendant une courte durée. Il est appliqué sur la peau avant certains actes médicaux. Cela permet d’arrêter la douleur au niveau de la peau ; cependant, vous pouvez encore avoir les sensations de pression et de toucher.</p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>Adultes, adolescents et enfants</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>Il peut être utilisé pour anesthésier la peau avant :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>l’insertion d’aiguilles (par exemple, si vous ou votre enfant devez avoir une injection ou faire une prise de sang).</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>des opérations mineures de la peau.</p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>Adultes et adolescents (à partir de 12 ans)</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>Il peut aussi être utilisé : pour anesthésier les parties génitales avant :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>de recevoir une injection.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>certains actes médicaux tels que le retrait de verrues.</p>
+<p class=AmmCorpsTexte>Un médecin ou un(e) infirmier/ère doit superviser l’utilisation d’ANESDERM sur les parties génitales.</p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>Adultes</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>Il peut aussi être utilisé pour anesthésier la peau avant le nettoyage ou le retrait de la peau endommagée en cas d’ulcères de jambe.</p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament appartient au(x) groupe(s) générique(s) suivants : <br/><ul role="list"><li role='listitem'><a href='/medicament/affiche/groupe-generique/63794766/406' aria-describedby='tooltip-medicament-generique-0'>LIDOCAINE  2,5 % + PRILOCAINE 2,5 % - EMLA 5 POUR CENT, crème.</a><span id='tooltip-medicament-generique-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Ouvrir la page de détail sur ce groupe générique</span></li></ul></p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Crème ( Composition pour 100 g de crème )<ul role="list"><li role="listitem" style="list-style-type: none;"> > prilocaïne<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">2,5 g </span><li role="listitem" style="list-style-type: none;"> > lidocaïne<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span> <span class="italique">2,5 g </span></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > 1 tube(s) aluminium verni de 5 g avec 2 pansement(s)  </p><p>Code CIP : 368 636-3 ou 34009 368 636 3 7<br/>Déclaration de commercialisation : 02/01/2006<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 3,09 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 4,11 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :65%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span><br/><p> > 5 tube(s) aluminium verni de 5 g avec 10 pansement(s)  </p><p>Code CIP : 566 400-6 ou 34009 566 400 6 5<br/>Déclaration de commercialisation : 30/05/2006<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p>Prix libre, médicament non remboursable ( <a href='/aide#que-signifie-la-notion-de-prix-libre-un-medicament-non-rembourse'>cliquez ici pour en savoir plus sur les médicaments non remboursables</a> )</div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'>Ce médicament étant un générique, le SMR n'a pas été évalué par la commission de la transparence (CT), il est possible de se référer à la /aux spécialité(s) de référence du groupe générique auquel appartient ce médicament <a href='#heading-groupe-generique' arial-label='cliquez ici pour aller à la rubrique des groupes génériques'>(cliquez ici pour aller à la rubrique des groupes génériques)</a></p></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div><div class='fr-col'><p>Ce médicament étant un générique, l'ASMR n'a pas été évalué par la commission de la transparence (CT), il est possible de se référer à la /aux spécialité(s) de référence du groupe générique auquel appartient ce médicament <a href='#heading-groupe-generique' arial-label='cliquez ici pour aller à la rubrique des groupes génériques'>(cliquez ici pour aller à la rubrique des groupes génériques)</a></p></div></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : Pierre FABRE MEDICAMENT</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste II</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure nationale</li><li>Code CIS : &nbsp;6 379 476 6</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : ANESDERM 5 %, crème - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="ANESDERM 5 %, crème, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 23/10/2025</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras>ANESDERM 5%, crème</p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Lidocaïne................................................................................................................................. 2,5 g</p>
+<p class=AmmComposition>Prilocaïne................................................................................................................................ 2,5 g</p>
+<p class=AmmCorpsTexte align=center style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:center'>pour 100 g de crème.</p>
+<p class=AmmCorpsTexte align=center style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:center'> </p>
+<p class=AmmCorpsTexte>Excipient à effet notoire : huile de ricin hydrogénée polyoxyléthylénée (2 g pour 100 g de crème).</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, <u>voir rubrique 6.1.</u></p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278915">Crème.</a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278917">ANESDERM est indiqué pour :</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>L’anesthésie topique de la peau lors de :</p>
+<p class=AmmListePuces2 style='text-align:justify;page-break-after:auto'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>l’insertion d’aiguilles, par exemple insertion de cathéters intraveineux ou prélèvements sanguins ;</p>
+<p class=AmmListePuces2 style='text-align:justify;page-break-after:auto'><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>procédures chirurgicales superficielles ;</p>
+<p class=AmmCorpsTexte>chez les adultes et dans la population pédiatrique.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>L’anesthésie topique des muqueuses génitales, par exemple avant des procédures chirurgicales superficielles ou une anesthésie par infiltration chez les adultes et les adolescents de 12 ans et plus.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>L’anesthésie topique des ulcères de jambe afin de faciliter le nettoyage mécanique/débridement chez les adultes uniquement.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'><a name="_Toc142278918">Posologie</a></p>
+<p class=AmmAnnexeTitre4>Adultes et adolescents </p>
+<p class=AmmCorpsTexte>Les détails des indications ou des procédures d’utilisation, ainsi que la dose et la durée d’application sont fournis dans les Tableaux 1 et 2.</p>
+<p class=AmmCorpsTexte>Pour plus de renseignements sur l’utilisation appropriée du produit selon de telles procédures, veuillez-vous référer au Mode d’administration.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Tableau 1 - Adultes et adolescents de 12 ans et plus</p>
+<div align=center>
+<div class='fr-table--lg fr-table'><table>
+<tr style='page-break-inside:avoid'>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+background:#B3B3B3;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Indication/Procédure</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-left:none;background:#B3B3B3;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Dose et durée d’application</p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;background:#B3B3B3;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Peau</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><i> </i></p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Petites interventions, par exemple insertion d’aiguilles et traitement chirurgical de lésions localisées.</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>2 g (approximativement un demi-tube de 5 g) ou approximativement 1,5 g/10 cm²<sup> </sup>pendant 1 à 5 heures<sup>1)</sup>.</p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Interventions dermatologiques sur peau récemment rasée sur de larges parties du corps, par exemple l’épilation au laser (auto-application par le patient)</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Dose maximale recommandée : 60 g.</p>
+<p class=AmmCorpsTexte>Surface traitée maximale recommandée : 600 cm²<sup> </sup>pendant au moins 1 heure, maximum 5 heures<sup>1)</sup>.</p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Interventions chirurgicales dermatologiques sur de plus grandes surfaces, par exemple greffe de peau mince en milieu hospitalier</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Approximativement 1,5-2 g/10 cm²<sup> </sup>pendant 2 à 5 heures<sup>1)</sup>.</p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Peau des organes génitaux chez l’homme, avant </p>
+<p class=AmmCorpsTexte>injection d'anesthésiques locaux </p>
+<p class=AmmCorpsTexte>Peau des organes génitaux chez la femme, avant injection d'anesthésiques locaux<sup>2)</sup></p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>1 g/10 cm<sup>² </sup>pendant 15 minutes</p>
+<p class=AmmCorpsTexte> </p>
+<p class=AmmCorpsTexte>1-2 g/10 cm²<sup> </sup>pendant 60 minutes</p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;background:#B3B3B3;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Muqueuses génitales</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><i> </i></p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Traitement chirurgical de lésions localisées, par exemple ablation de verrues génitales (condylomes acuminés) et avant injection d’anesthésiques locaux</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Approximativement 5-10 g de crème pendant 5-10 minutes<sup>1) 3) 4)</sup>.</p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Avant curetage cervical</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>10 g de crème doivent être administrés au niveau du cul-de-sac vaginal latéral pendant 10 minutes.</p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;background:#B3B3B3;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Ulcère(s) de jambe</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><i> </i></p>
+</td>
+</tr>
+<tr style='page-break-inside:avoid'>
+<td width=307 valign=top style='width:230.25pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><u>Adultes uniquement </u></p>
+<p class=AmmCorpsTexte>Nettoyage mécanique/débridement</p>
+</td>
+<td width=307 valign=top style='width:230.25pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Approximativement 1-2 g/10 cm²<sup> </sup>jusqu’à un total de 10 g sur le ou les ulcère(s) de jambe<sup>3) 5)</sup>.</p>
+<p class=AmmCorpsTexte>Temps d’application : 30-60 minutes.</p>
+</td>
+</tr>
+</table></div>
+</div>
+<p class=AmmCorpsTexte><sup>1)</sup> Après une période d’application plus longue, l’anesthésie diminue.</p>
+<p class=AmmCorpsTexte><sup>2)</sup> Sur la peau des organes génitaux chez la femme, l'application seule d’ANESDERM pendant 60 ou 90 minutes ne permet pas une anesthésie suffisante pour le traitement de verrues génitales par thermocautérisation ou diathermie.</p>
+<p class=AmmCorpsTexte><sup>3)</sup> Les concentrations plasmatiques n’ont pas été déterminées chez les patients traités avec des doses > à 10 g (voir aussi rubrique 5.2).</p>
+<p class=AmmCorpsTexte><sup>4)</sup> Chez les adolescents pesant moins de 20 kg, la dose maximale d’ANESDERM à appliquer sur les muqueuses génitales doit être proportionnellement réduite.</p>
+<p class=AmmCorpsTexte><sup>5)</sup> ANESDERM a été utilisé pour le traitement des ulcères de jambe jusqu’à 15 reprises sur une période de 1 à 2 mois sans perte d’efficacité ni augmentation du nombre ou de la sévérité des événements indésirables.</p>
+<p class=AmmAnnexeTitre4>Population pédiatrique</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Tableau 2 - Patients pédiatriques âgés de 0 à 11 ans</p>
+<div align=center>
+<div class='fr-table--lg fr-table'><table>
+<tr>
+<td width=205 style='width:153.5pt;border:solid windowtext 1.0pt;background:
+#B3B3B3;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Groupe d’âge</p>
+</td>
+<td width=205 style='width:153.5pt;border:solid windowtext 1.0pt;border-left:
+none;background:#B3B3B3;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Procédure</p>
+</td>
+<td width=205 style='width:153.5pt;border:solid windowtext 1.0pt;border-left:
+none;background:#B3B3B3;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=left style='text-align:left'>Dosage et temps d’application</p>
+</td>
+</tr>
+<tr>
+<td width=205 valign=top style='width:153.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><i> </i></p>
+</td>
+<td width=205 valign=top style='width:153.5pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Petites interventions, par exemple insertion d’aiguilles et traitement chirurgical de lésions localisées.</p>
+</td>
+<td width=205 valign=top style='width:153.5pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Approximativement 1 g/10 cm² pendant 1 heure (voir détails ci-dessous)</p>
+</td>
+</tr>
+<tr>
+<td width=205 valign=top style='width:153.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Nouveau-nés et nourrissons 0-2 mois <sup>1) 2) 3)</sup></p>
+</td>
+<td width=205 valign=top style='width:153.5pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><i> </i></p>
+</td>
+<td width=205 valign=top style='width:153.5pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Jusqu’à 1 g et 10 cm²<sup> </sup>pendant une heure <sup>4)</sup></p>
+</td>
+</tr>
+<tr>
+<td width=205 valign=top style='width:153.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Nourrissons 3-11 mois <sup>2)</sup></p>
+</td>
+<td width=205 valign=top style='width:153.5pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><i> </i></p>
+</td>
+<td width=205 valign=top style='width:153.5pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Jusqu’à 2 g et 20 cm²<sup> </sup>pendant une heure <sup>5)</sup></p>
+</td>
+</tr>
+<tr>
+<td width=205 valign=top style='width:153.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Jeunes enfants et enfants</p>
+<p class=AmmCorpsTexte>1-5 ans</p>
+</td>
+<td width=205 valign=top style='width:153.5pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><i> </i></p>
+</td>
+<td width=205 valign=top style='width:153.5pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Jusqu’à 10 g et 100 cm²<sup> </sup>pendant 1-5 heures<sup> 6)</sup></p>
+</td>
+</tr>
+<tr>
+<td width=205 valign=top style='width:153.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Enfants</p>
+<p class=AmmCorpsTexte>6-11 ans</p>
+</td>
+<td width=205 valign=top style='width:153.5pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><i> </i></p>
+</td>
+<td width=205 valign=top style='width:153.5pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Jusqu’à 20 g et 200 cm²<sup> </sup>pendant 1-5 heures <sup>6)</sup></p>
+</td>
+</tr>
+<tr>
+<td width=205 valign=top style='width:153.5pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Patients pédiatriques avec dermatite atopique</p>
+</td>
+<td width=205 valign=top style='width:153.5pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Avant curetage de molluscum</p>
+</td>
+<td width=205 valign=top style='width:153.5pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Temps d’application : 30 minutes</p>
+</td>
+</tr>
+</table></div>
+</div>
+<p class=AmmCorpsTexte><sup>1) </sup>Chez les nouveau-nés nés à terme et les nourrissons de moins de 3 mois, une unique dose devra seulement être appliquée sur une période de 24 heures. Pour les enfants âgés de 3 mois et plus, un maximum de 2 doses, séparées d’au moins 12 heures, peut être donnée sur une période de 24 heures, voir rubriques 4.4 et 4.8.</p>
+<p class=AmmCorpsTexte><sup>2) </sup>ANESDERM ne doit pas être utilisé chez les enfants de moins de 12 mois qui sont traités par des médicaments inducteurs de méthémoglobine, pour des raisons de sécurité, voir rubriques 4.4 et 4.8.</p>
+<p class=AmmCorpsTexte><sup>3)</sup> ANESDERM ne doit pas être utilisé chez les prématurés de moins de 37 semaines d’âge gestationnel, pour des raisons de sécurité voir rubrique 4.4.</p>
+<p class=AmmCorpsTexte><sup>4)</sup> Un temps d’application > 1 heure n’a pas été étudié.</p>
+<p class=AmmCorpsTexte><sup>5)</sup> Aucune augmentation cliniquement significative des taux de méthémoglobine après application d’ANESDERM pendant maximum 4 heures sur 16 cm<sup>2</sup> n’a été observée.</p>
+<p class=AmmCorpsTexte><sup>6)</sup> Après une période d’application plus longue, l’anesthésie diminue.</p>
+<p class=AmmCorpsTexte>L’efficacité et la sécurité de l’utilisation d’ANESDERM sur la peau des organes génitaux et les muqueuses génitales n’ont pas été établies chez les enfants de moins de 12 ans.</p>
+<p class=AmmCorpsTexte>Les données pédiatriques disponibles ne démontrent pas d’efficacité adéquate pour la circoncision.</p>
+<p class=AmmAnnexeTitre4>Patients âgés</p>
+<p class=AmmCorpsTexte>Aucune réduction de dose n’est nécessaire chez les patients âgés (voir rubriques 5.1 et 5.2).</p>
+<p class=AmmAnnexeTitre4>Atteinte de la fonction hépatique</p>
+<p class=AmmCorpsTexte>Une réduction de dose unique n’est pas nécessaire chez les patients présentant une atteinte de la fonction hépatique (voir rubrique 5.2).</p>
+<p class=AmmAnnexeTitre4>Atteinte de la fonction rénale</p>
+<p class=AmmCorpsTexte>Une réduction de dose n’est pas nécessaire chez les patients présentant une fonction rénale diminuée.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Mode d’administration</p>
+<p class=AmmCorpsTexte>Voie cutanée.</p>
+<p class=AmmCorpsTexte>La membrane de protection du tube est perforée à l’aide du bouchon.</p>
+<p class=AmmCorpsTexte>Un gramme d’ANESDERM correspond approximativement à 3,5 cm de longueur de crème prélevée dans un tube de 30 g. Si le dosage requiert un niveau de précision élevé pour éviter un surdosage (par exemple à des doses proches de la limite maximale chez le nouveau-né ou si deux applications peuvent être requises sur une durée de 24 heures), il est possible d’utiliser une seringue, sachant que 1 ml = 1 g.</p>
+<p class=AmmCorpsTexte>Une couche épaisse d’ANESDERM doit être appliquée sur la peau, incluant la peau des organes génitaux, sous un pansement occlusif. Pour l’application sur des zones plus étendues, telle que pour la greffe de peau mince, un bandage élastique doit être appliqué au-dessus du pansement occlusif pour assurer une distribution uniforme de la crème et protéger la zone. En présence d’une dermatite atopique, la durée d’application doit être réduite. </p>
+<p class=AmmCorpsTexte>Pour les interventions concernant les muqueuses génitales, il n’est pas nécessaire d’utiliser un pansement occlusif. L’intervention doit commencer immédiatement après le retrait de la crème. </p>
+<p class=AmmCorpsTexte>Pour les interventions concernant les ulcères de jambe, ANESDERM doit être appliqué en couche épaisse sous un pansement occlusif. Le nettoyage doit débuter sans délai après le retrait de la crème. </p>
+<p class=AmmCorpsTexte>Le tube d’ANESDERM est destiné à un usage unique lorsqu’il est utilisé pour traiter les ulcères de jambe : le tube ainsi que le contenu restant doivent être jetés à chaque fois qu’un patient a été traité.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmListePuces1 style='text-align:justify'><a name="_Toc142278919"><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypersensibilité aux substances actives ou à l’un des excipients mentionnés à la rubrique 6.1, ou aux anesthésiques locaux de type amide.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278920">Les patients souffrant d’un déficit congénital en glucose-6-phosphate-déshydrogénase ou de méthémoglobinémie idiopathique sont plus susceptibles de présenter des signes de méthémoglobinémie induite par la substance active. Chez les patients présentant un déficit en glucose-6-phosphate déshydrogénase, l’antidote bleu de méthylène est inefficace pour diminuer le taux de méthémoglobine et peut oxyder l’hémoglobine elle-même. Par conséquent, une thérapie par le bleu de méthylène ne peut pas être effectuée.</a></p>
+<p class=AmmCorpsTexte>En raison de données insuffisantes sur son absorption, ANESDERM ne doit pas être appliqué sur les blessures ouvertes (excepté les ulcères de jambe).</p>
+<p class=AmmCorpsTexte>En raison de l’absorption potentiellement plus importante sur la peau récemment rasée, il est important de respecter la posologie, la zone et le temps d’application recommandés (voir rubrique 4.2).</p>
+<p class=AmmCorpsTexte>Il faut faire attention lors de l’application d'ANESDERM chez les patients atteints de dermatite atopique. Un temps d'application réduit à 15-30 minutes peut être suffisant (voir rubrique 5.1). Des temps d’application supérieurs à 30 minutes chez des patients atteints de dermatite atopique peuvent conduire à une augmentation de l’incidence des réactions vasculaires locales, en particulier rougeur au site d’application et dans certains cas pétéchies et purpura (voir rubrique 4.8). Avant le curetage de molluscum chez les enfants atteints de dermatite atopique, un temps d’application de 30 minutes est recommandé.</p>
+<p class=AmmCorpsTexte>Lors de son application à proximité des yeux, ANESDERM doit être utilisé avec précaution car cela peut provoquer des irritations et/ou des brûlures chimiques au niveau des yeux (voir rubrique 4.8). La perte des réflexes de protection des yeux peut également conduire à une irritation de la cornée et à une potentielle abrasion. En cas de contact oculaire, les yeux doivent être immédiatement rincés avec de l’eau ou une solution saline et protégés jusqu’au retour de la sensibilité.</p>
+<p class=AmmCorpsTexte>Lorsque ANESDERM est utilisé chez l’enfant, quel que soit le site d’application, il convient de surveiller attentivement l’enfant afin d’éviter qu’il ne s’auto-administre ANESDERM dans les yeux.</p>
+<p class=AmmCorpsTexte>ANESDERM ne doit pas être utilisé sur une membrane tympanique endommagée. Des tests effectués sur des animaux de laboratoire ont révélé une ototoxicité d'ANESDERM lors de son instillation dans l'oreille moyenne. Cependant, chez les animaux avec une membrane tympanique intacte, aucune anomalie n’a été montrée lors de l’application d’ANESDERM au niveau du canal auditif externe.</p>
+<p class=AmmCorpsTexte>Les patients traités avec des médicaments anti-arythmiques de classe III (par exemple, l’amiodarone) doivent être étroitement surveillés et une surveillance ECG doit être envisagée car les effets cardiaques peuvent être additifs.</p>
+<p class=AmmCorpsTexte>La lidocaïne et la prilocaïne ont des propriétés bactéricides et antivirales à des concentrations supérieures à 0,5 –  2 %. C’est pourquoi, bien que les résultats d’une étude clinique suggèrent que l’utilisation d’ANESDERM avant une vaccination contre la tuberculose (BCG) n’influence pas la réponse immunitaire, évaluée par la formation d’une papule locale, il est nécessaire de suivre le résultat d’injections intradermiques de vaccins vivants.</p>
+<p class=AmmCorpsTexte>ANESDERM contient de l’huile de ricin hydrogénée polyoxyéthylénée, qui peut causer des réactions cutanées.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Lors d’études, l’efficacité d’ANESDERM lors des prélèvements capillaires au talon chez les nouveau-nés n’a pas été démontrée.</p>
+<p class=AmmCorpsTexte>Chez les nouveau-nés et les nourrissons de moins de 3 mois, une augmentation transitoire dépourvue de signification clinique des taux de méthémoglobine est couramment observée, jusqu’à 12 heures après application de la dose recommandée d’ANESDERM. </p>
+<p class=AmmCorpsTexte>Si la dose recommandée est dépassée, le patient doit être surveillé en cas de survenue d’effets indésirables systémiques secondaires à une méthémoglobinémie (voir rubriques 4.2, 4.8 et 4.9). </p>
+<p class=AmmCorpsTexte>ANESDERM ne doit pas être utilisé : </p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>chez les nouveau-nés/nourrissons de 0 à 12 mois traités par des médicaments inducteurs de méthémoglobine ;</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>chez les nouveau-nés prématurés de moins de 37 semaines d’âge gestationnel car ils risquent de développer des taux élevés de méthémoglobine.</p>
+<p class=AmmCorpsTexte>La sécurité et l’efficacité de l’application d’ANESDERM sur la peau des organes génitaux et sur les muqueuses génitales n’ont pas été établies chez les enfants de moins de 12 ans. </p>
+<p class=AmmCorpsTexte>Les données pédiatriques disponibles ne démontrent pas d’efficacité adéquate pour la circoncision.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmCorpsTexte>De fortes doses de prilocaïne peuvent augmenter les taux de méthémoglobine, en particulier chez des patients traités par des médicaments inducteurs de méthémoglobine (ex. sulfamides, nitrofurantoïne, phénytoïne, phénobarbital). Cette liste n’est pas exhaustive.</p>
+<p class=AmmCorpsTexte>Avec des doses élevées d'ANESDERM, le risque de toxicité systémique supplémentaire doit être envisagé chez les patients recevant d'autres anesthésiques locaux ou des médicaments de structure apparentée aux anesthésiques locaux, puisque les effets toxiques sont additifs.</p>
+<p class=AmmCorpsTexte>Des études d’interaction spécifique avec la lidocaïne/prilocaïne et des anti-arythmiques de classe III (par exemple l’amiodarone) n’ont pas été réalisées mais une précaution particulière est conseillée (voir aussi rubrique 4.4).</p>
+<p class=AmmCorpsTexte>Les médicaments qui réduisent la clairance de la lidocaïne (par exemple la cimétidine ou les béta-bloquants) peuvent causer des concentrations plasmatiques potentiellement toxiques lorsque la lidocaïne est donnée à fortes doses répétées sur une longue période.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Des études d’interaction spécifiques chez les enfants n’ont pas été réalisées. Les interactions sont probablement similaires à celles de la population adulte.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Grossesse</p>
+<p class=AmmCorpsTexte>Bien qu’une application topique soit uniquement associée à un faible taux d’absorption systémique, l’utilisation d’ANESDERM chez les femmes enceintes doit être considérée avec précaution car les données disponibles concernant l’utilisation d’ANESDERM chez les femmes enceintes sont insuffisantes. Cependant, des études chez l’animal n’ont pas montré d’effets nocifs directs ou indirects sur la grossesse, le développement embryonnaire/foetal, l’accouchement ou le développement postnatal. Une toxicité de reproduction a été montrée lors d’une administration sous-cutanée/intramusculaire de fortes doses de lidocaïne ou de prilocaïne excédant considérablement l’exposition lors d’une application topique (voir rubrique 5.3). </p>
+<p class=AmmCorpsTexte>La lidocaïne et la prilocaïne traversent la barrière placentaire, et peuvent être absorbées par les tissus foetaux. Il est raisonnable de penser que la lidocaïne et la prilocaïne ont été utilisées chez de nombreuses femmes enceintes ou en âge de procréer. Jusqu’à présent, aucun trouble spécifique de la fonction reproductrice n’a été rapporté par exemple une incidence accrue de malformations ou autres effets directement ou indirectement nocifs pour le foetus.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'><a name="_Toc142278927">Allaitement</a></p>
+<p class=AmmCorpsTexte>La lidocaïne et, en toute probabilité, la prilocaïne sont excrétées dans le lait maternel mais en quantités si faibles qu’il n’y a généralement pas de risque que l’enfant soit affecté à des doses thérapeutiques. ANESDERM peut être utilisé pendant l’allaitement en cas de nécessité clinique.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Fertilité</p>
+<p class=AmmCorpsTexte>Des études chez l’animal n’ont montré aucune altération de la fertilité des rats mâles ou femelles (voir rubrique 5.3).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278929">ANESDERM n’a pas d’effet ou un effet négligeable sur l’aptitude à conduire des véhicules et à utiliser des machines quand il est utilisé aux doses recommandées.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Résumé du profil de sécurité</p>
+<p class=AmmCorpsTexte>Les effets indésirables les plus fréquemment observés sont liés au site d’administration (réactions locales transitoires au site d’application) et sont rapportés comme fréquents. </p>
+<p class=AmmCorpsTexte>Liste des réactions indésirables sous forme de tableau </p>
+<p class=AmmCorpsTexte>Les incidences des effets indésirables (EIs) associés à un traitement par ANESDERM sont présentées dans le tableau ci-dessous. Le tableau est basé sur les évènements indésirables rapportés pendant les essais cliniques et/ou l’utilisation post-commercialisation. Les effets indésirables sont listés par ordre de fréquence, selon la terminologie MedDRA par Classe de Système d’Organe (SOC), au niveau des termes préférés. </p>
+<p class=AmmCorpsTexte>Dans chaque Classe de Système d’Organe, les fréquences des effets indésirables sont répertoriées comme suit : très fréquent (&#8805; 1/10), fréquent (&#8805; 1/100 à < 1/10), peu fréquent (&#8805; 1/1 000 à < 1/100), rare (&#8805; 1/10 000 à < 1/1 000), très rare (< 1/10 000) et fréquence indéterminée (ne peut être estimée sur la base des données disponibles). Dans chaque groupe de fréquence, les effets indésirables sont présentés dans un ordre de sévérité décroissante.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Tableau 3 - Effets indésirables</p>
+<div align=center>
+<div class='fr-table--lg fr-table'><table>
+<tr>
+<td width=133 rowspan=2 style='width:99.95pt;border:solid windowtext 1.0pt;
+background:#B3B3B3;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Classe de Système d’Organe</p>
+</td>
+<td width=486 colspan=4 style='width:364.35pt;border:solid windowtext 1.0pt;
+border-left:none;background:#B3B3B3;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Fréquence</p>
+</td>
+</tr>
+<tr>
+<td width=118 style='width:88.4pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+background:#B3B3B3;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Fréquent</p>
+</td>
+<td width=125 style='width:93.6pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+background:#B3B3B3;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Peu fréquent</p>
+</td>
+<td width=146 style='width:109.3pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+background:#B3B3B3;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Rare</p>
+</td>
+<td width=97 valign=top style='width:73.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+background:#B3B3B3;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexteGras>Indéterminée</p>
+</td>
+</tr>
+<tr>
+<td width=133 valign=top style='width:99.95pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Affections hématologiques et du système lymphatique</p>
+</td>
+<td width=118 valign=top style='width:88.4pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b> </b></p>
+</td>
+<td width=125 valign=top style='width:93.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b> </b></p>
+</td>
+<td width=146 valign=top style='width:109.3pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Méthémoglobinémie<sup>1</sup></p>
+</td>
+<td width=97 valign=top style='width:73.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte> </p>
+</td>
+</tr>
+<tr>
+<td width=133 valign=top style='width:99.95pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Affections du système immunitaire</p>
+</td>
+<td width=118 valign=top style='width:88.4pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b> </b></p>
+</td>
+<td width=125 valign=top style='width:93.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b> </b></p>
+</td>
+<td width=146 valign=top style='width:109.3pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Hypersensibilité<sup>1, 2, 3</sup></p>
+</td>
+<td width=97 valign=top style='width:73.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte> </p>
+</td>
+</tr>
+<tr>
+<td width=133 valign=top style='width:99.95pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Blessures, empoisonnement et complication procédurale</p>
+</td>
+<td width=118 valign=top style='width:88.4pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b> </b></p>
+</td>
+<td width=125 valign=top style='width:93.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b> </b></p>
+</td>
+<td width=146 valign=top style='width:109.3pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte> </p>
+</td>
+<td width=97 style='width:73.05pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Brûlures chimiques des yeux (voir rubrique 4.4)</p>
+</td>
+</tr>
+<tr>
+<td width=133 valign=top style='width:99.95pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Affections oculaires</p>
+</td>
+<td width=118 valign=top style='width:88.4pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b> </b></p>
+</td>
+<td width=125 valign=top style='width:93.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b> </b></p>
+</td>
+<td width=146 valign=top style='width:109.3pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Irritation de la cornée<sup>1</sup></p>
+</td>
+<td width=97 valign=top style='width:73.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte> </p>
+</td>
+</tr>
+<tr>
+<td width=133 valign=top style='width:99.95pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Affections de la peau et du tissu sous-cutané</p>
+</td>
+<td width=118 valign=top style='width:88.4pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b> </b></p>
+</td>
+<td width=125 valign=top style='width:93.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b> </b></p>
+</td>
+<td width=146 valign=top style='width:109.3pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Purpura<sup>1</sup>, pétéchies<sup>1</sup> (en particulier après des durées d’application plus longues chez les enfants souffrant de dermatite atopique ou de <i>molluscum contagiosum</i>)</p>
+</td>
+<td width=97 valign=top style='width:73.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte> </p>
+</td>
+</tr>
+<tr>
+<td width=133 valign=top style='width:99.95pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Troubles généraux et anomalies au site d’administration</p>
+</td>
+<td width=118 valign=top style='width:88.4pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Sensation de brûlure<sup>2, 3 </sup></p>
+<p class=AmmCorpsTexte>Prurit au site d’application <sup>2, 3 </sup></p>
+<p class=AmmCorpsTexte>Erythème au site d’application <sup>1, 2 ,3 </sup></p>
+<p class=AmmCorpsTexte>OEdème au site d’application <sup>1, 2, 3 </sup></p>
+<p class=AmmCorpsTexte>Chaleur au site d’application <sup>2, 3 </sup></p>
+<p class=AmmCorpsTexte>Pâleur au site d’application <sup>1, 2, 3 </sup></p>
+</td>
+<td width=125 valign=top style='width:93.6pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Sensation de brûlure<sup>1 </sup></p>
+<p class=AmmCorpsTexte>Irritation au site d’application<sup>3 </sup></p>
+<p class=AmmCorpsTexte>Prurit au site d’application <sup>1 </sup></p>
+<p class=AmmCorpsTexte>Paresthésie au site d’application<sup>2 </sup>telle que fourmillements </p>
+<p class=AmmCorpsTexte>Chaleur au site d’application<sup>1</sup></p>
+</td>
+<td width=146 valign=top style='width:109.3pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b> </b></p>
+</td>
+<td width=97 valign=top style='width:73.05pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><b> </b></p>
+</td>
+</tr>
+</table></div>
+</div>
+<p class=AmmCorpsTexte><sup>1</sup>Peau</p>
+<p class=AmmCorpsTexte><sup>2</sup>Muqueuses génitales</p>
+<p class=AmmCorpsTexte><sup>3</sup>Ulcère de jambe</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Population pédiatrique</p>
+<p class=AmmCorpsTexte>La fréquence, le type et la sévérité des effets indésirables sont similaires dans les groupes d’âges pédiatriques et adultes, excepté en ce qui concerne la méthémoglobinémie qui est observée plus fréquemment, souvent en relation avec un surdosage (voir la rubrique 4.9), chez les nouveau-nés et les nourrissons âgés de 0 à 12 mois.</p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278930">Déclaration des effets indésirables suspectés </a></p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsignalement.social-sante.gouv.fr%2F&data=05%7C01%7Cgaelle.alcaraz%40pierre-fabre.com%7C6e971e7b55c640fddcbf08db13413d7a%7Ca899d509e790454bb3fe4b581016bdc5%7C0%7C0%7C638124943147353062%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=KIGetRxivzvd4WQrIUWMJGap0QW51CsNBxo8tm6a8wI%3D&reserved=0">https://signalement.social-sante.gouv.fr/</a>.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte>De rares cas de méthémoglobinémie cliniquement significative ont été rapportés. La prilocaïne à fortes doses peut causer une augmentation des taux de méthémoglobine, en particulier chez les individus sensibles (voir rubrique 4.4), avec une administration trop fréquente chez les nouveau-nés et les nourrissons de moins de 12 mois (voir rubrique 4.2) et traités par des médicaments inducteurs de méthémoglobine (ex. sulfamides, nitrofurantoïne, phénytoïne et phénobarbital). Il convient de tenir compte du fait que les valeurs de saturation à l’oxymètre de pouls peuvent surestimer la saturation réelle en oxygène dans le cas d’une augmentation de la fraction de méthémoglobine ; par conséquent, si une méthémoglobinémie est suspectée, il peut être plus utile de surveiller la saturation d’oxygène par co-oxymétrie.</p>
+<p class=AmmCorpsTexte>Une méthémoglobinémie cliniquement significative devra être traitée par une injection intraveineuse lente de bleu de méthylène (voir également rubrique 4.4).</p>
+<p class=AmmCorpsTexte>Si d’autres symptômes de toxicité systémique survenaient, les signes devraient être similaires à ceux qui se produiraient suite à l’administration d’anesthésiques locaux par d’autres voies d’administration. La toxicité d’un anesthésique local se manifeste par des symptômes d’excitation du système nerveux central et, dans les cas sévères, dépression du système nerveux central et dépression cardiovasculaire. Des symptômes neurologiques graves (convulsions, dépression du système nerveux central) doivent être traités symptomatiquement par assistance respiratoire et par administration de médicaments anticonvulsivants ; les signes circulatoires sont traités suivant les recommandations de réanimation.</p>
+<p class=AmmCorpsTexte>Le taux d’absorption du produit sur peau intacte étant lent, un patient montrant des signes de toxicité doit être maintenu sous observation pendant plusieurs heures après le traitement d’urgence.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras><a name="_Toc142278933">Classe pharmacothérapeutique : Anesthésiques, local - Amides, Code ATC : N01BB20.</a></p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Mécanisme d’action</p>
+<p class=AmmCorpsTexte>ANESDERM produit une anesthésie de la peau par libération de lidocaïne et de prilocaïne à partir de la crème dans les couches épidermique et dermique de la peau et à proximité des récepteurs dermiques de la douleur et des terminaisons nerveuses. </p>
+<p class=AmmCorpsTexte>La lidocaïne et la prilocaïne sont des anesthésiques locaux de type amide. Ces deux composants stabilisent les membranes neuronales en inhibant les flux ioniques nécessaires à l’initiation et à la conduction des influx, produisant ainsi une anesthésie locale. La qualité de l’anesthésie dépend du temps d’application et de la dose utilisée. </p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Peau</p>
+<p class=AmmCorpsTexte>ANESDERM est appliqué sur la peau intacte sous un pansement occlusif. Le temps nécessaire pour réaliser une anesthésie fiable de la peau intacte est de 1 à 2 heures, en fonction du type d’intervention. L’effet anesthésique local est renforcé avec des durées d’application plus longues de 1 à 2 heures sur la plupart des parties du corps, à l’exception de la peau du visage et des parties génitales masculines. Compte tenu de la finesse de la peau du visage et d’une irrigation sanguine élevée des tissus, un effet anesthésique local maximal est obtenu après 30 à 60 minutes sur le front et les joues. De même, une anesthésie locale des parties génitales masculines est obtenue en 15 minutes. La durée de l’anesthésie après l’application d’ANESDERM pendant 1 à 2 heures est d’au moins 2 heures après le retrait du pansement, excepté sur le visage où ce délai est plus court. ANESDERM est tout aussi efficace et a le même temps de déclenchement de l’effet anesthésiant quel que soit le niveau de pigmentation de la peau de claire à foncée (types de peau de I à VI).</p>
+<p class=AmmCorpsTexte>Au cours des études cliniques avec application d’ANESDERM sur la peau intacte, aucune différence de sécurité ou d’efficacité (y compris le délai avant le début de l’anesthésie) n’a été observée entre les patients gériatriques (de 65 à 96 ans) et les patients plus jeunes. </p>
+<p class=AmmCorpsTexte>ANESDERM produit une réponse vasculaire biphasique impliquant une vasoconstriction initiale suivie d’une vasodilatation au site d’application (voir rubrique 4.8). Indépendamment de la réponse vasculaire, ANESDERM facilite l’insertion de l’aiguille par rapport à une crème placebo. Chez les patients atteints de dermatite atopique, une réaction vasculaire similaire mais plus courte a été observée, avec apparition d’un érythème après 30-60 minutes, indiquant une absorption plus rapide à travers la peau (voir rubrique 4.4). ANESDERM peut causer une augmentation transitoire de l’épaisseur cutanée, provoquée en partie par l’hydratation de la peau sous le pansement occlusif. L’épaisseur de la peau se réduit au cours des 15 minutes suivant l’exposition à l’air. </p>
+<p class=AmmCorpsTexte>La profondeur de l'anesthésie cutanée augmente avec le temps d'application. Chez 90 % des patients, l'anesthésie est suffisante pour l'insertion d'un poinçon de biopsie (de 4 mm de diamètre) à une profondeur de 2 mm après 60 minutes et 3 mm après 120 minutes de traitement par ANESDERM. </p>
+<p class=AmmCorpsTexte>L’utilisation d’ANESDERM, avant une vaccination rougeole-oreillons-rubéole ou avant l’administration intramusculaire d’un vaccin inactivé diphtérie-coqueluche-tétanos-poliovirus-Haemophilus influenzae b ou un vaccin contre l’hépatite B, n’a pas affecté la moyenne des titres en anticorps, le taux de séroconversion ou la proportion de patients obtenant des titres d’anticorps protecteurs ou positifs après immunisation, par rapport aux patients traités par un placebo.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Muqueuses génitales</p>
+<p class=AmmCorpsTexte>L’absorption sur les muqueuses génitales est plus rapide, et le délai de survenue de l’anesthésie est plus court qu’après application sur la peau. </p>
+<p class=AmmCorpsTexte>Après une application de 5-10 minutes d’ANESDERM sur la muqueuse génitale de la femme, la durée moyenne de l’analgésie efficace à un stimulus au laser à argon qui produit une douleur vive avec sensation de piqûre était de 15 à 20 minutes (variations individuelles dans l’intervalle 5-45 minutes)</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Ulcères de jambe</p>
+<p class=AmmCorpsTexte>Une anesthésie fiable dans le cas du nettoyage des ulcères de jambe est obtenue après un temps d’application de 30 minutes chez la plupart des patients. Une application d’une durée de 60 minutes peut améliorer davantage l’anesthésie. Le nettoyage doit commencer dans les 10 minutes qui suivent le retrait de la crème. Des données cliniques relatives à des temps d’attente plus longs ne sont pas disponibles. ANESDERM réduit la douleur postopératoire jusqu’à 4 heures après débridement. ANESDERM réduit le nombre de séances de nettoyage nécessaires pour obtenir un ulcère propre par comparaison au débridement obtenu avec une crème placebo. On n’a observé aucun effet négatif sur la guérison de l’ulcère ou sur la flore bactérienne. </p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Des études cliniques impliquant plus de 2300 patients pédiatriques de tout âge ont démontré une efficacité pour la douleur liée à l’aiguille (prélèvement sanguin veineux, cathétérisme, vaccination sous-cutanée et intramusculaire, ponction lombaire), pour le traitement des lésions vasculaires au laser, et le curetage des <i>molluscum contagiosum</i>. ANESDERM a diminué la douleur lors de l’insertion d’aiguilles et lors de l’injection de vaccins. L’efficacité analgésique a augmenté d’une application de 15 minutes à une application de 90 minutes sur une peau normale ; mais sur des lésions vasculaires, une application de 90 minutes n’a pas fourni de bénéfice supérieur à une application de 60 minutes. ANESDERM ne montre pas de bénéfice versus placebo concernant la cryothérapie à l’azote liquide des verrues communes. Aucune efficacité suffisante pour la circoncision n’a pu être démontrée. </p>
+<p class=AmmCorpsTexte>Onze études cliniques réalisées chez des nouveau-nés et des nourrissons ont montré que les pics de concentrations de méthémoglobine qui survenaient environ 8 heures après l’administration épicutanée d’ANESDERM, étaient cliniquement non significatifs au dosage recommandé et revenaient à des valeurs normales après environ 12-13 heures. La formation de méthémoglobine est associée à la quantité cumulée de prilocaïne absorbée par voie percutanée et peut donc augmenter en fonction de l’allongement de la durée d’application d’ANESDERM. </p>
+<p class=AmmCorpsTexte>L’utilisation d’ANESDERM, avant une vaccination rougeole-oreillons-rubéole ou avant l’administration intramusculaire d’un vaccin inactivé diphtérie-coqueluche-tétanos-poliovirus-Haemophilus influenzae b ou un vaccin contre l’hépatite B, n’a pas affecté la moyenne des titres en anticorps, le taux de séroconversion ou la proportion de patients obtenant des titres d’anticorps protecteurs ou positifs après immunisation, par rapport aux patients traités par un placebo.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmAnnexeTitre3><a name="_Toc142278934">Absorption, distribution, biotransformation et élimination </a></p>
+<p class=AmmCorpsTexte>L’absorption systémique de la lidocaïne et de la prilocaïne à partir d’ANESDERM est fonction de la dose, de la surface d’application et du temps d’application. Des facteurs additionnels incluent l’épaisseur de la peau (qui varie selon les parties du corps) ainsi que d’autres facteurs tels que les maladies de la peau, et le rasage. Après application sur des ulcères de jambe, les caractéristiques des ulcères peuvent également affecter l’absorption. Les concentrations plasmatiques après traitement par ANESDERM sont de 20 à 60 % inférieures pour la prilocaïne par rapport à la lidocaïne en raison d’un volume de distribution supérieur et d’une clairance plus rapide. La voie d’élimination principale de la lidocaïne et de la prilocaïne est le métabolisme hépatique et les métabolites sont éliminés par voie rénale. Toutefois, les taux de métabolisation et d’élimination des anesthésiques locaux après une application topique d’ANESDERM dépendent de la vitesse d’absorption. Par conséquent, une réduction de la clairance, notamment chez les patients présentant une atteinte grave de la fonction hépatique, a des effets limités sur les concentrations plasmatiques systémiques après administration d’une dose unique d’ANESDERM et après administrations réitérées une fois par jour de doses uniques à court terme (jusqu’à 10 jours). </p>
+<p class=AmmCorpsTexte>Les symptômes de toxicité anesthésique locale deviennent de plus en plus marqués lorsque la concentration plasmatique augmente de 5 à 10 &#956;g/ml de l’une ou l’autre des substances actives. Il convient de considérer que la toxicité de la lidocaïne et celle de la prilocaïne sont additives. </p>
+<p class=AmmAnnexeTitre4>Peau intacte </p>
+<p class=AmmCorpsTexte>Après application sur la cuisse chez l’adulte (60 g de crème/400 cm² pendant 3 heures), le degré d’absorption de la lidocaïne et de la prilocaïne était d’environ 5 %. Les concentrations plasmatiques maximales (en moyenne 0,12 et 0,07 &#956;g/ml) ont été atteintes en approximativement 2-6 heures après l’application. </p>
+<p class=AmmCorpsTexte>Le degré d’absorption systémique était d’environ 10 % après application sur le visage (10 g/100 cm² pendant 2 heures). Les concentrations plasmatiques maximales (en moyenne 0,16 et 0,06 &#956;g/ml) ont été atteintes après environ 1,5-3 heures.</p>
+<p class=AmmCorpsTexte>Dans des études de greffe de peau mince chez les adultes une application de 7 heures 40 minutes au niveau de la cuisse ou de l’avant-bras jusqu’à une surface de 1 500 cm<sup>2</sup> a conduit des concentrations plasmatiques maximales ne dépassant pas 1,1 &#956;g/ml de lidocaïne et 0,2 &#956;g/ml de prilocaïne. </p>
+<p class=AmmAnnexeTitre4>Muqueuses génitales </p>
+<p class=AmmCorpsTexte>Après application de 10 g d’ANESDERM pendant 10 minutes sur la muqueuse vaginale, les concentrations plasmatiques maximales de lidocaïne et de prilocaïne (en moyenne respectivement 0,18 &#956;g/ml et 0,15 &#956;g/ml) ont été atteintes après 20-45 minutes.</p>
+<p class=AmmAnnexeTitre4>Ulcère de jambe </p>
+<p class=AmmCorpsTexte>Suite à une application unique de 5 à 10 g d’ANESDERM sur des ulcères de jambe d’une surface s’étendant jusqu’à 64 cm<sup>2</sup> pendant 30 minutes, les concentrations plasmatiques maximales de lidocaïne (intervalle de 0,05 à 0,25 &#956;g/ml avec une valeur individuelle de 0,84 &#956;g/ml) et de prilocaïne (0,02-0,08 &#956;g/ml) ont été atteintes en 1 à 2,5 heures. </p>
+<p class=AmmCorpsTexte>Après un temps d’application de 24 heures sur les ulcères de jambe sur une zone s’étendant jusqu’à 50 à 100 cm<sup>2</sup>, les concentrations plasmatiques maximales pour la lidocaïne (0,19-0,71 &#956;g/ml) et pour la prilocaïne (0,06-0,28 &#956;g/ml) ont été généralement atteintes en 2 à 4 heures. </p>
+<p class=AmmCorpsTexte>Des applications répétées de 2-10 g d’ANESDERM sur des ulcères de jambe sur une surface s’étendant jusqu'à 62 cm<sup>2</sup> pendant 30-60 minutes 3-7 fois par semaine jusqu’à 15 doses sur une période d’un mois, n’ont pas montré d’accumulation plasmatique apparente de lidocaïne ni de ses métabolites monoglycinexylidide et 2,6-xylidine ou de prilocaïne ni de son métabolite l’ortho-toluidine. Les concentrations plasmatiques maximales observées de lidocaïne, de monoglycinexylidide et de 2,6-xylidine étaient respectivement de 0,41 &#956;g/ml, de 0,03 &#956;g/ml et de 0,01 &#956;g/ml. Les concentrations plasmatiques maximales observées de prilocaïne et d’ortho-toluidine étaient respectivement de 0,08 &#956;g/ml et de 0,01 &#956;g/ml. </p>
+<p class=AmmCorpsTexte>Après une application répétée de 10 g d’ANESDERM sur des ulcères de jambe chroniques sur une surface comprise entre 62 et 160 cm<sup>2</sup> pendant 60 minutes une fois par jour pendant 10 jours consécutifs, la concentration plasmatique maximale moyenne résultant de la somme des concentrations de lidocaïne et de prilocaïne était de 0,6 &#956;g/ml. La concentration maximale ne dépend pas de l’âge du patient mais est significativement (p < 0,01) associée à la taille de la surface de l’ulcère.</p>
+<p class=AmmCorpsTexte>L’augmentation de la surface de l’ulcère de 1 cm<sup>2</sup> entraîne une augmentation de la valeur Cmax de la somme des concentrations de lidocaïne et de prilocaïne de 7,2 ng/ml. La somme des concentrations plasmatiques maximales de lidocaïne et de prilocaïne est inférieure d’un tiers à celle associée aux réactions toxiques et aucune accumulation n’est apparemment observée sur 10 jours.</p>
+<p class=AmmAnnexeTitre4>Populations spéciales</p>
+<p class=AmmAnnexeTitre4>Patients âgés</p>
+<p class=AmmCorpsTexte>Après application d’ANESDERM sur la peau intacte de patients gériatriques ou sur d’autres patients non gériatriques, les concentrations plasmatiques de lidocaïne et de prilocaïne sont très basses et nettement inférieures aux niveaux toxiques potentiels.</p>
+<p class=AmmAnnexeTitre4>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Les concentrations plasmatiques maximales de lidocaïne et de prilocaïne après application d’ANESDERM chez les patients pédiatriques de différents âges étaient également en dessous des niveaux potentiellement toxiques. Voir Tableau 4.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Tableau 4. Concentrations plasmatiques de lidocaïne et de prilocaïne dans les groupes pédiatriques âgés de 0 mois à 8 ans</p>
+<div align=center>
+<div class='fr-table--lg fr-table'><table>
+<tr>
+<td width=116 rowspan=2 style='width:86.9pt;border:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Age</p>
+</td>
+<td width=127 rowspan=2 style='width:94.9pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Quantité de crème appliquée</p>
+</td>
+<td width=133 rowspan=2 style='width:99.95pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Temps d’application de la crème sur la peau</p>
+</td>
+<td width=243 colspan=2 style='width:182.55pt;border:solid windowtext 1.0pt;
+border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Concentration plasmatique [ng/ml]</p>
+</td>
+</tr>
+<tr>
+<td width=135 style='width:101.35pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Lidocaïne</p>
+</td>
+<td width=108 style='width:81.2pt;border-top:none;border-left:none;
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Prilocaïne</p>
+</td>
+</tr>
+<tr>
+<td width=116 valign=top style='width:86.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>0 - 3 mois</p>
+</td>
+<td width=127 valign=top style='width:94.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>1 g/10 cm²</p>
+</td>
+<td width=133 valign=top style='width:99.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>1 heure</p>
+</td>
+<td width=135 valign=top style='width:101.35pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>135</p>
+</td>
+<td width=108 valign=top style='width:81.2pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>107</p>
+</td>
+</tr>
+<tr>
+<td width=116 valign=top style='width:86.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>3 - 12 mois</p>
+</td>
+<td width=127 valign=top style='width:94.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>2 g/16 cm<sup><span style='position:relative; top:-4.0pt'>2</span></sup></p>
+</td>
+<td width=133 valign=top style='width:99.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>4 heures</p>
+</td>
+<td width=135 valign=top style='width:101.35pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>155</p>
+</td>
+<td width=108 valign=top style='width:81.2pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>131</p>
+</td>
+</tr>
+<tr>
+<td width=116 valign=top style='width:86.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>2 - 3 ans</p>
+</td>
+<td width=127 valign=top style='width:94.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>10 g/100 cm<sup><span style='position:relative; top:-4.0pt'>2</span></sup></p>
+</td>
+<td width=133 valign=top style='width:99.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>2 heures</p>
+</td>
+<td width=135 valign=top style='width:101.35pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>315</p>
+</td>
+<td width=108 valign=top style='width:81.2pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>215</p>
+</td>
+</tr>
+<tr>
+<td width=116 valign=top style='width:86.9pt;border:solid windowtext 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>6 - 8 ans</p>
+</td>
+<td width=127 valign=top style='width:94.9pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>10 –  16 g/100-160 cm<sup><span style='position:relative; top:-4.0pt'>2 </span></sup>(1 g/ 10 cm<sup><span style='position:relative; top:-4.0pt'>2</span></sup>)</p>
+</td>
+<td width=133 valign=top style='width:99.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>2 heures</p>
+</td>
+<td width=135 valign=top style='width:101.35pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>299</p>
+</td>
+<td width=108 valign=top style='width:81.2pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>110</p>
+</td>
+</tr>
+</table></div>
+</div>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278935">Dans des études chez l’animal, la toxicité observée après administrations de doses élevées de lidocaïne ou de prilocaïne, en association ou non, s’est manifestée par des effets sur le système nerveux central et sur le système cardio-vasculaire. Lorsque la lidocaïne et la prilocaïne étaient administrées en association, seuls des effets additifs ont été observés, sans indication de synergie ou de toxicité inattendue.</a></p>
+<p class=AmmCorpsTexte>Après ingestion involontaire d’ANESDERM, les deux substances actives présentaient une faible toxicité orale aiguë avec une marge de sécurité suffisante. Dans des études de toxicité sur la reproduction, des effets embryotoxiques ou fœto-toxiques ont été détectés à des doses de 25 mg/kg de lidocaïne par voie sous-cutanée chez le lapin ; et à partir des doses de 100 mg/kg de prilocaïne par voie intramusculaire chez le rat. A des doses inférieures à la dose maternelle toxique chez le rat, la lidocaïne n’a pas d’effet sur le développement postnatal des petits. La fertilité chez les rats mâles ou femelles traités par la lidocaïne ou la prilocaïne n’a pas été altérée.</p>
+<p class=AmmCorpsTexte>La lidocaïne passe la barrière placentaire par diffusion simple. Le rapport entre la dose embryo-fœtale et les concentrations sériques de la mère est de 0,4 à 1,3. </p>
+<p class=AmmCorpsTexte>Aucun des deux anesthésiques locaux n’a présenté de potentiel génotoxique lors des tests de génotoxicité in vitro ou in vivo. Etant donné l’indication et la durée d’utilisation thérapeutique de ces substances actives, aucune étude de cancérogénicité n’a été réalisée avec la lidocaïne ou la prilocaïne, seules ou en association. </p>
+<p class=AmmCorpsTexte>Un métabolite de la lidocaïne, le 2,6-diméthylaniline, et un métabolite de la prilocaïne, l’o-toluidine, ont fait preuve d’une activité génotoxique. Au cours d’études précliniques toxicologiques évaluant l’exposition chronique, ces métabolites ont montré un potentiel cancérogène. Les évaluations du risque comparant l’exposition humaine maximale calculée lors de l’utilisation intermittente de lidocaïne et de prilocaïne à l’exposition au cours des études précliniques, indiquent une marge de sécurité suffisamment élevée lors de l’utilisation clinique.</p>
+<p class=AmmCorpsTexte>Des études de tolérance locale avec des mélanges de lidocaïne et de prilocaïne 1:1 (m/m) sous forme d’émulsion, de crème ou de gel ont montré que ces formulations sont bien tolérées sur la peau intacte et lésée et sur les muqueuses. </p>
+<p class=AmmCorpsTexte>Lors d’une étude chez l’animal, une réaction irritative prononcée a été observée après application unique dans l’œil d’une émulsion contenant 50 mg/g de lidocaïne + prilocaïne 1:1 (m/m). La concentration en anesthésiques locaux était identique et la formulation similaire à celles d’ANESDERM. Cette réaction oculaire peut avoir été influencée par le pH élevé de la formulation de l’émulsion (environ 9) mais il est probable qu’elle soit due en partie au pouvoir irritant propre des anesthésiques locaux.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278937">Carbomère 980, hydroxystéarate de macrogolglycérol 40 (huile de ricin hydrogénée polyoxyéthylénée), hydroxyde de sodium, eau purifiée.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte><a name="_Toc142278938">En l’absence d’études de compatibilité, ce médicament ne doit pas être mélangé avec d’autres médicaments.</a></p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte>18 mois.</p>
+<p class=AmmCorpsTexte>Après ouverture : 1 mois.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte>A conserver à une température ne dépassant pas + 25°C. Ne pas congeler.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte>5 g en tube (Aluminium) verni (résine époxyphénolique) fermé par un bouchon (Polypropylène) ; boîte de 1 tube + 2 pansements adhésifs.</p>
+<p class=AmmCorpsTexte>5 g en tube (Aluminium) verni (résine époxyphénolique) fermé par un bouchon (Polypropylène) ; boîte de 5 tubes + 10 pansements adhésifs.</p>
+<p class=AmmCorpsTexte>30 g en tube (Aluminium) verni (résine époxyphénolique) fermé par un bouchon (Polypropylène) ; boîte de 1 tube.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Précautions à prendre avant de manipuler ou d’administrer le médicament </p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Les personnes qui appliquent ou enlèvent fréquemment la crème doivent veiller à ce que le contact soit évité afin de prévenir le développement d’hypersensibilité.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Tout médicament non utilisé ou déchet doit être éliminé conformément à la réglementation en vigueur.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmTitulaireNom><a name="_Toc142278943">PIERRE FABRE MEDICAMENT</a></p>
+<p class=AmmTitulaireAdresse>LES CAUQUILLOUS</p>
+<p class=AmmTitulaireCpVillePays>81500 LAVAUR </p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>368 636-3 ou 34009 368 636 3 7 : 5 g en tube (Aluminium) verni (résine époxyphénolique) fermé par un bouchon (Polypropylène) ; boîte de 1 tube + 2 pansements adhésifs.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>566 400-6 ou 34009 566 400 6 5 : 5 g en tube (Aluminium) verni (résine époxyphénolique) fermé par un bouchon (Polypropylène) ; boîte de 5 tubes + 10 pansements adhésifs.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>382 023-5 ou 34009 382 023 5 9 : 30 g en tube (Aluminium) verni (résine époxyphénolique) fermé par un bouchon (Polypropylène) ; boîte de 1 tube.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278945"><span style='color:#538135'>[à compléter ultérieurement par le titulaire]</span></a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278946"><span style='color:#538135'>[à compléter ultérieurement par le titulaire]</span></a></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte><a name="_Toc142278948">Sans objet.</a></p>
+<div style='border:none;border-top:solid windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste II</p>
+<b><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#0B3D92;
+text-transform:uppercase'><br clear=all>
+</span></b>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+                              <div id="tabpanel-bon-usage-panel" class="fr-tabs__panel" role="tabpanel"
+                     aria-labelledby="tabpanel-bon-usage"
+                     tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      
+      <div class="fr-col-12 fr-col-md">
+        <div class="fr-editor">
+
+          
+          
+          
+          
+          
+                      <div class="fr-grid-row">
+              <div class="fr-col">
+                <h5 id="heading-informations-importantes" role="heading" aria-level="5">
+                  <span class="fr-icon-information-line text-color-orange" aria-hidden="true"></span> Informations
+                  importantes
+                  <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage" href="#top"
+                     id="section-glossaire__top_link" role="link"
+                     aria-describedby="tooltip-link-page-top"
+                     aria-label="Redirection vers le haut de page"></a>
+                  <span id="tooltip-link-page-top" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                      Redirection vers le haut de page
+                    </span>
+                </h5>
+                <p aria-labelledby="heading-informations-importantes">Les informations importantes disponibles pour ce médicament sont les suivantes : <br /><ul id="liste_infos_importantes" role="list"><li role='listitem'>    <a  target='_blank'    href='https://ansm.sante.fr/actualites/confusion-entre-solutions-incolores-dantiseptiques-et-danesthesiques-une-erreur-qui-peut-etre-evitee'>Confusion entre solutions incolores d'antiseptiques et d'anesthésiques : une erreur qui peut être évitée</a></li></ul></p>
+              </div>
+            </div>
+          
+          
+          
+                  </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_ANESDERM_5_%,_crème_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE ANESDERM 5 %, crème ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE ANESDERM 5 %, crème ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_ANESDERM_5_%,_crème_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER ANESDERM 5 %, crème ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER ANESDERM 5 %, crème ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_UTILISER_ANESDERM_5_%,_crème_?"
+                     aria-label="3. COMMENT UTILISER ANESDERM 5 %, crème ? (Lien de redirection)">
+                    3. COMMENT UTILISER ANESDERM 5 %, crème ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_ANESDERM_5_%,_crème_?"
+                     aria-label="5. COMMENT CONSERVER ANESDERM 5 %, crème ? (Lien de redirection)">
+                    5. COMMENT CONSERVER ANESDERM 5 %, crème ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : ANESDERM 5 %, crème - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="ANESDERM 5 %, crème, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 23/10/2025</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:center'><a name="_Toc142278999">ANESDERM 5%, crème</a></p>
+<p class=AmmCorpsTexteGras align=center style='margin-bottom:0cm;margin-bottom: .0001pt;text-align:center'>Lidocaïne, Prilocaïne</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279000">Veuillez lire attentivement cette notice avant d’utiliser ce médicament car elle contient des informations importantes pour vous.</a></p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Gardez cette notice. Vous pourriez avoir besoin de la relire.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous avez d’autres questions, interrogez votre médecin, votre pharmacien ou votre <span lang=FR-BE>infirmier/ère</span>.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin, votre pharmacien ou votre <span lang=FR-BE>infirmier/ère</span>. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Voir rubrique 4.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que ANESDERM 5 %, crème et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant d'utiliser ANESDERM 5 %, crème ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment utiliser ANESDERM 5 %, crème ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver ANESDERM 5 %, crème ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_ANESDERM_5_%,_crème_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE ANESDERM 5 %, crème ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279004">Classe pharmacothérapeutique : Anesthésiques, local - Amides, Code ATC : N01BB20.</a></p>
+<p class=AmmCorpsTexte>ANESDERM contient deux substances actives appelées la lidocaïne et la prilocaïne. Ces dernières appartiennent à un groupe de médicaments appelés anesthésiques locaux. </p>
+<p class=AmmCorpsTexte>ANESDERM fonctionne en provoquant une anesthésie de la surface de la peau pendant une courte durée. Il est appliqué sur la peau avant certains actes médicaux. Cela permet d’arrêter la douleur au niveau de la peau ; cependant, vous pouvez encore avoir les sensations de pression et de toucher.</p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>Adultes, adolescents et enfants</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>Il peut être utilisé pour anesthésier la peau avant :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>l’insertion d’aiguilles (par exemple, si vous ou votre enfant devez avoir une injection ou faire une prise de sang).</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>des opérations mineures de la peau.</p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>Adultes et adolescents (à partir de 12 ans)</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>Il peut aussi être utilisé : pour anesthésier les parties génitales avant :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>de recevoir une injection.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>certains actes médicaux tels que le retrait de verrues.</p>
+<p class=AmmCorpsTexte>Un médecin ou un(e) infirmier/ère doit superviser l’utilisation d’ANESDERM sur les parties génitales.</p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>Adultes</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>Il peut aussi être utilisé pour anesthésier la peau avant le nettoyage ou le retrait de la peau endommagée en cas d’ulcères de jambe.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_D_UTILISER_ANESDERM_5_%,_crème_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT D’UTILISER ANESDERM 5 %, crème ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279015">N’utilisez jamais ANESDERM 5 %, crème :</a></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous ou votre enfant êtes allergique à la lidocaïne ou à la prilocaïne, à d’autres anesthésiques locaux similaires ou à l’un des autres composants contenus dans ce médicament (mentionnés dans la rubrique 6).</p>
+<p class=AmmCorpsTexteGras>Avertissements et précautions</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Adressez-vous à votre médecin, pharmacien ou votre infirmier/ère avant d’utiliser ANESDERM,</span></p>
+<p class=AmmListePuces1 style='text-align:justify;page-break-after:avoid'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>si vous ou votre enfant avez une maladie héréditaire rare qui affecte le sang, appelée « déficit en glucose-6-phosphate-déshydrogénase »,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>si vous ou votre enfant avez un problème au niveau de la quantité de pigments sanguins appelé « méthémoglobinémie »,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>n’utilisez pas ANESDERM sur les zones présentant des éruptions cutanées, des coupures, des écorchures ou d’autres plaies ouvertes, à l’exception des ulcères de jambe. Si l’un de ces problèmes est présent, vérifiez avec votre médecin ou pharmacien avant d’utiliser la crème,</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>si vous ou votre enfant souffrez d’une affection cutanée appelée « dermatite atopique », un temps d’application réduit de 15 à 30 minutes peut être suffisant. Un temps d’application de plus de 30 minutes peut conduire à une augmentation de survenue de certaines réactions locales en particulier des rougeurs au site d’application et dans certains cas des pétéchies et purpura (éruptions cutanées, tâches rouges de la peau) (voir aussi rubrique 4 « Quels sont les effets indésirables éventuels ? »),</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Avant le curetage de molluscum (excroissance de peau bénigne) chez les enfants atteints de dermatite atopique, un temps d’application de 30 minutes est recommandé,</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>si vous ou votre enfant prenez des médicaments spécifiques pour traiter les troubles du rythme cardiaque (anti-arythmiques de classe III tels que l’amiodarone). Dans ce cas, le médecin doit surveiller votre fonction cardiaque.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>En raison de l’absorption potentiellement renforcée sur une peau récemment rasée, il est important de suivre la posologie recommandée, le site d’application et le temps d’application.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Evitez le contact d’ANESDERM avec les yeux car il peut provoquer des irritations et/ou des brûlures chimiques au niveau des yeux. Si toutefois votre médecin vous a prescrit ANESDERM pour une application à proximité des yeux, celle-ci </span>doit être réalisée avec précaution.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous ou votre enfant recevez accidentellement ANESDERM dans votre/son œil, vous devez le rincer immédiatement à l’eau tiède ou avec une solution saline (chlorure de sodium). Protégez l’œil atteint jusqu’au retour de la sensibilité pour éviter tout type de contact et prévenez votre médecin.</span></p>
+<p class=AmmCorpsTexte>Lorsque ANESDERM est utilisé chez l’enfant quel que soit la zone d’application du produit, il doit être surveillé attentivement afin d’éviter qu’il ne s’auto-administre le médicament dans les yeux.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>ANESDERM ne doit pas être appliqué à un tympan altéré.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous ou votre enfant utilisez ANESDERM avant d’être vacciné par des vaccins vivants (par exemple le vaccin contre la tuberculose), vous ou votre enfant devez consulter à nouveau votre médecin ou votre infirmier/ère après la période de délai demandée dans le cadre du suivi de la vaccination.</span></p>
+<p class=AmmCorpsTexteGras>Enfants</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Chez les nourrissons et les nouveau-nés âgés de moins de 3 mois, une augmentation transitoire, cliniquement non significative, de la quantité de pigments sanguins appelés « méthémoglobinémie » est couramment observée jusqu’à 12 heures après l’application d’ANESDERM.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>L’efficacité d’ANESDERM lors du prélèvement sanguin au talon chez les nouveau-nés ou afin d’assurer une analgésie adéquate lors de la circoncision n’a pas pu être confirmée dans les études cliniques.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>ANESDERM ne doit pas être appliqué sur les parties génitales, plus particulièrement la peau (par exemple le pénis) ou les muqueuses (par exemple dans le vagin) chez les enfants (âgés de moins de 12 ans) en raison de données insuffisantes sur l’absorption des substances actives.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>ANESDERM ne doit pas être utilisé chez les nouveau-nés/nourrissons âgés de moins de 12 mois qui reçoivent simultanément d’autres traitements affectant la quantité de pigments sanguins « méthémoglobinémie » (par exemple les sulfamides, voir aussi rubrique 2 « Autres médicaments et ANESDERM »).</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>ANESDERM ne doit pas être utilisé chez les nourrissons prématurés </span>de moins de 37 semaines d’âge gestationnel car ils risquent de développer des taux élevés de méthémoglobine<span lang=FR-BE>.</span></p>
+<p class=AmmCorpsTexteGras>Autres médicaments et ANESDERM 5 %, crème</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Informez votre médecin ou pharmacien si vous ou votre enfant utilisez/prenez, avez récemment utilisé/pris ou pourriez utiliser/prendre tout autre médicament. Ceci inclut les médicaments que vous achetez sans prescription et les médicaments à base de plantes. ANESDERM peut avoir un effet sur le mode d’action de certains médicaments et certains médicaments peuvent avoir un effet sur ANESDERM. </span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Informez en particulier votre médecin ou votre pharmacien, si vous ou votre enfant avez récemment utilisé ou reçu l’un des médicaments suivants :</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Des médicaments utilisés pour traiter les infections en particulier les « sulfamides » et du nitrofurantoïne.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Des médicaments utilisés pour traiter l’épilepsie, en particulier la phénytoïne et le phénobarbital.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>D’autres anesthésiques locaux.</span></p>
+<p class=AmmListePuces1 style='text-align:justify'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Des médicaments pour traiter un rythme cardiaque irrégulier (antiarythmiques de classe III tels que l’amiodarone).</span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>La cimétidine ou les bétabloquants qui peuvent augmenter les concentrations de lidocaïne dans le sang et potentiellement sa toxicité. Cette interaction n’a pas d’impact clinique si ANESDERM est utilisé aux doses recommandées pour une courte durée de traitement.</span></p>
+<p class=AmmCorpsTexteGras>ANESDERM 5 %, crème avec des aliments et boissons</p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexteGras><a name="_Toc142279012">Grossesse, allaitement</a></p>
+<p class=AmmCorpsTexte>Si vous êtes enceinte ou que vous allaitez, si vous pensez être enceinte ou planifiez une grossesse, demandez conseil à votre médecin ou pharmacien avant de prendre ce médicament.</p>
+<p class=AmmCorpsTexte>Il est peu probable qu’ANESDERM, utilisé occasionnellement pendant la grossesse, provoque des effets indésirables sur le fœtus.</p>
+<p class=AmmCorpsTexte>Les substances actives contenues dans ANESDERM (lidocaïne et prilocaïne) sont excrétées dans le lait maternel. Cependant, les quantités sont si faibles qu’il n’y a généralement pas de risque pour l’enfant.</p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>ANESDERM n’a aucun effet ou un effet négligeable sur l’aptitude à conduire des véhicules et à utiliser des machines quand il est utilisé aux doses recommandées.</p>
+<p class=AmmCorpsTexteGras>ANESDERM 5 %, crème contient de l’huile de ricin hydrogénée polyoxyéthylénée</p>
+<p class=AmmCorpsTexte>L’huile de ricin hydrogénée polyoxyéthylénée peut provoquer des réactions cutanées.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_UTILISER_ANESDERM_5_%,_crème_?'>3. COMMENT UTILISER ANESDERM 5 %, crème ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279021">Veillez à toujours utiliser ce médicament en suivant exactement les indications de votre médecin ou pharmacien. Vérifiez auprès de votre médecin ou pharmacien ou infirmier/ère en cas de doute.</a></p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Utilisation d’ANESDERM</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Le site d’application, la quantité à utiliser ainsi que le temps d’application dépendront de la raison pour laquelle ANESDERM est utilisé.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Votre médecin, pharmacien ou infirmier/ère vous appliquera la crème (à vous ou à votre enfant) ou vous montrera comment le faire.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si ANESDERM est utilisé sur les parties génitales, l’application doit être supervisée par un médecin ou un(e) infirmier/ère.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Ne pas utiliser ANESDERM sur les zones suivantes :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Coupures, écorchures ou plaies, excepté les ulcères de jambe.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Zone avec éruptions cutanées ou eczéma.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Dans les yeux ou près des yeux.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>A l’intérieur du nez, de l’oreille ou de la bouche.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Au niveau de l’anus.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Sur les parties génitales des enfants.</p>
+<p class=AmmCorpsTexte>Les personnes qui appliquent ou enlèvent régulièrement la crème doivent s’assurer que tout contact est évité afin de prévenir le développement d’une hypersensibilité (allergie).</p>
+<p class=AmmCorpsTexte>La membrane de protection du tube est perforée à l’aide du capuchon.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Utilisation sur la peau avant de petits actes médicaux (comme l’insertion d’aiguille ou des opérations mineures de la peau) :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La crème est appliquée sur la peau en couche épaisse. Votre médecin, pharmacien ou votre infirmier/ère vous diront où vous devrez l’appliquer.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La crème est ensuite recouverte par un pansement [ruban adhésif]. Ce dernier sera enlevé juste avant le début de l’intervention. Si vous appliquez vous-même la crème, assurez-vous d’avoir reçu des pansements de la part de votre médecin, pharmacien ou infirmier/ère.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La dose usuelle chez les adultes et les adolescents âgés de 12 ans et plus est de 2 g (grammes).</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Chez les adultes et adolescents âgés de 12 ans et plus, la crème doit être appliquée au moins 60 minutes avant le début de l’intervention (excepté si la crème est utilisée au niveau des parties génitales). Cependant, ne pas appliquer la crème plus de 5 heures avant le début de l’intervention.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Chez les enfants, la quantité d’ANESDERM utilisée et le temps d’application dépendent de leur âge. Votre médecin, infirmier/ère ou pharmacien vous diront la quantité à utiliser et à quel moment l’appliquer.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Lorsque vous appliquez la crème, il est très important de suivre exactement les instructions suivantes :</p>
+<div class='fr-table--lg fr-table'><table>
+<tr>
+<td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Pressez le tube de crème afin de former un monticule au niveau de la zone à anesthésier (par exemple à l’endroit où l’aiguille va être insérée). Une ligne de crème d’environ 3,5 cm d’épaisseur provenant d’un tube de 30 g est équivalente à 1 g de crème. La moitié d’un tube de 5 g correspond environ à 2 g d’ANESDERM.</p>
+<p class=AmmCorpsTexte>Ne pas faire pénétrer la crème.</p>
+</td>
+<td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><img border=0 width=240 height=187 id="Image 4" src="/images/N0440373/image003.png"></p>
+</td>
+</tr>
+<tr>
+<td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt; margin-left:3.3pt'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>En tenant le pansement par le cadre, retirer la feuille imprimée.</span></p>
+<p class=AmmCorpsTexte> </p>
+</td>
+<td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><img border=0 width=239 height=182 id="Image 2" src="/images/N0440373/image004.png"></p>
+</td>
+</tr>
+<tr>
+<td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Placer la face adhésive du pansement de façon à couvrir la crème (bien faire adhérer les bords du pansement pour assurer l’étanchéité).</p>
+<p class=AmmCorpsTexte>Ne pas étaler la crème sous le pansement.</p>
+<p class=AmmCorpsTexte> </p>
+</td>
+<td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><i><img border=0 width=232 height=182 id="Image 3" src="/images/N0440373/image005.png"></i></p>
+</td>
+</tr>
+<tr>
+<td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Retirer le cadre de papier. Laissez-le en place pendant au moins 60 minutes.</p>
+<p class=AmmCorpsTexte> </p>
+</td>
+<td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte><img border=0 width=235 height=187 id="Image 7" src="/images/N0440373/image006.png"></p>
+</td>
+</tr>
+</table></div>
+<p class=AmmCorpsTexte>Votre médecin ou votre infirmier/ère retirera le pansement et enlèvera la crème juste avant de procéder à l’intervention médicale (par exemple juste avant l’insertion de l’aiguille).</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Utilisation sur des zones de peau plus larges nouvellement rasées avant une intervention médicale ambulatoire (comme certaines techniques d’épilation) :</p>
+<p class=AmmCorpsTexte>La dose usuelle est de 1 g de crème pour 10 cm<sup>2</sup> (10 centimètres carrés) de peau appliquée pendant 1 à 5 heures sous un pansement. ANESDERM ne doit pas être utilisé sur une surface de peau nouvellement rasée dont la superficie dépasse les 600 cm<sup>2</sup> (600 centimètres carrés, par exemple 30 cm sur 20 cm). La dose maximale est de 60 g.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Utilisation sur la peau avant une intervention chirurgicale sur de larges parties du corps (comme une greffe de peau mince) nécessitant une anesthésie plus profonde de la peau :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>ANESDERM peut être utilisé à cette fin chez les adultes et les adolescents âgés de 12 ans et plus.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La dose usuelle est de 1,5 à 2 g de crème pour 10 cm<sup>2</sup> (10 centimètres carrés) de peau.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La crème est appliquée sous un pansement pendant 2 à 5 heures. </p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Utilisation sur la peau avant l’enlèvement de taches ressemblant à des verrues appelées « molluscum »</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>ANESDERM peut être utilisé chez les enfants et adolescents présentant une maladie de peau appelée « dermatite atopique ».</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La dose usuelle dépend de l’âge de l’enfant et est appliquée pendant 30 à 60 minutes (30 minutes si le patient a une dermatite atopique). Votre médecin, infirmier/ère ou pharmacien vous diront la quantité de crème à appliquer.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Utilisation sur la peau des parties génitales avant l’injection d’anesthésiques locaux</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>ANESDERM peut être utilisé à cette fin uniquement chez les adultes et les adolescents âgés de 12 ans et plus.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La dose usuelle est de 1 g de crème (1 à 2 g pour la peau des organes génitaux féminins) pour 10 cm<sup>2</sup> (10 centimètres carrés) de peau.</p>
+<p class=AmmListePuces1 style='text-align:justify;text-indent:0cm'>La crème doit être recouverte par un pansement. Elle doit être appliquée pendant 15 minutes sur la peau des organes génitaux masculins et pendant 60 minutes sur la peau des organes génitaux féminins (sauf si une durée d’application plus longue est recommandée par votre médecin). </p>
+<p class=AmmListePuces1 style='text-align:justify;text-indent:0cm'><span style='background:yellow'> </span></p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Utilisation sur les parties génitales avant des chirurgies mineures de la peau (comme le retrait de verrues).</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>ANESDERM peut être utilisé à cette fin uniquement chez les adultes et adolescents âgés de 12 ans et plus.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La dose usuelle est de 5 à 10 g de crème pendant 10 minutes. Chez les adolescents, âgés de 12 ans et plus, pesant moins de 20 kg, la dose maximale d’ANESDERM à appliquer sera adaptée par votre médecin. Un pansement n’est pas utilisé. L’intervention médicale doit débuter aussitôt après. </p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Utilisation sur les ulcères de jambe avant le nettoyage ou le retrait de la peau endommagée</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La dose usuelle est de 1 à 2 g de crème pour 10 cm<sup>2</sup> de peau jusqu’à un total de 10 g.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La crème est recouverte par un pansement hermétique tel qu’un ruban adhésif. Elle doit être appliquée 30 à 60 minutes avant que l’ulcère ne soit nettoyé. Retirer la crème avec une compresse et commencer le nettoyage sans délai.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt;page-break-after:avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>ANESDERM peut être utilisé avant le nettoyage des ulcères de jambe jusqu’à 15 fois sur une période de 1 à 2 mois.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Le tube ANESDERM est destiné à l’usage unique lorsqu’il est utilisé sur les ulcères de jambe : le tube ainsi que le contenu restant doivent être jetés après chaque traitement.</p>
+<p class=AmmCorpsTexteGras>Si vous avez utilisé plus de ANESDERM 5 %, crème que vous n’auriez dû</p>
+<p class=AmmCorpsTexte>Si vous (ou votre enfant) avez utilisé plus d’ANESDERM que la dose prescrite par votre médecin, informez aussitôt votre médecin ou pharmacien, même si vous ne ressentez aucun symptôme.</p>
+<p class=AmmCorpsTexte>Les symptômes d’un surdosage d’ANESDERM sont listés ci-dessous :</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Nervosité, anxiété, euphorie, confusion, vertiges, somnolence, bourdonnement dans les oreilles, vision double ou floue, goût anormal, vomissement, sensation de chaud, de froid ou d'engourdissement et engourdissement de la langue, picotements de la peau autour de la bouche, tremblements, convulsions, perte de connaissance, ralentissement de la respiration, diminution de la fréquence cardiaque et baisse de la pression artérielle.</p>
+<p class=AmmListePuces1 style='margin-left:17.85pt;text-align:justify; text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Un risque de « méthémoglobinémie aiguë » existe aussi (un problème avec les quantités de pigments sanguins). Ceci est plus probable quand certains médicaments ont été pris simultanément. Si cela se produit, la peau prend une coloration bleu gris en raison d’un manque d’oxygène.</p>
+<p class=AmmListePuces1 style='margin-left:0cm;text-align:justify;text-indent: 0cm'>Ces symptômes sont peu susceptibles de se produire si ANESDERM est utilisé aux doses recommandées.</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>Dans les cas graves de surdosage, les symptômes peuvent inclure des convulsions, une baisse de la pression artérielle, un ralentissement de la respiration, un arrêt respiratoire et une altération du rythme cardiaque. Ces effets peuvent engager le pronostic vital. Si vous (ou votre enfant) constatez l’un de ces symptômes, contactez le service des urgences de l’hôpital.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez d’utiliser ANESDERM 5 %, crème</p>
+<p class=AmmCorpsTexte><a name="_Toc142279020">Sans objet.</a></p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez d’utiliser ANESDERM 5 %, crème </p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class=AmmCorpsTexte>Si vous avez d’autres questions sur l’utilisation de ce médicament, demandez plus d’informations à votre médecin, à votre pharmacien ou à votre infirmier/ère.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279023">Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</a></p>
+<p class=AmmCorpsTexte>Si vous (ou votre enfant) présentez, pendant l’utilisation d’ANESDERM, l’un des effets indésirables listés ci-après, arrêtez le traitement et consultez votre médecin, ou votre pharmacien aussi vite que possible.</p>
+<p class=AmmCorpsTexte>Une légère réaction (pâleur ou rougeur de la peau, légère enflure, brûlure initiale ou démangeaisons) peut survenir au niveau de la zone sur laquelle ANESDERM a été appliqué. Ce sont des réactions normales liées à la crème et à la présence des anesthésiques et elles disparaîtront rapidement sans que des mesures spécifiques ne soient nécessaires.</p>
+<p class=AmmCorpsTexte><span class=AmmCorpsTexteGrasCar>Fréquent </span>(peut affecter jusqu’à 1 personne sur 10)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Réactions locales transitoires (qui ne durent pas) cutanée (pâleur, rougeur, gonflement) au site d’application pendant le traitement de la peau, des muqueuses génitales ou des ulcères de jambes.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Sensation de brûlure, de démangeaison (prurit) ou de chaleur au site d’application pendant le traitement des muqueuses génitales ou des ulcères de jambes.</p>
+<p class=AmmCorpsTexte><span class=AmmCorpsTexteGrasCar>Peu fréquent</span> (peut affecter jusqu’à 1 personne sur 100)</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Sensation de brûlure, de démangeaison ou de chaleur au site d’application pendant le traitement de la peau.</p>
+<p class=AmmListePuces1 style='text-align:justify'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Engourdissement (picotement) au site d’application pendant le traitement des muqueuses génitales.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Irritation de la peau au site d’application pendant le traitement des ulcères de jambe.</p>
+<p class=AmmCorpsTexte><span class=AmmCorpsTexteGrasCar>Rare </span>(peut affecter jusqu’à 1 personne sur 1 000)</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt;page-break-after: avoid'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Réactions allergiques, qui dans de rares cas peuvent conduire à un choc anaphylactique (réaction allergique généralisée soudaine, au cours de laquelle vous pouvez présenter une éruption de la peau (telles que urticaire), des démangeaisons), un gonflement, des difficultés à respirer, une accélération du rythme cardiaque, des étourdissements, de la transpiration, une chute de la tension artérielle et/ou une perte de conscience/évanouissement pendant le traitement de la peau, des muqueuses génitales ou des ulcères de jambes. Une intervention médicale en urgence est nécessaire.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Méthémoglobinémie (trouble sanguin) pendant le traitement de la peau.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Petits saignements en forme de points (purpura, pétéchies) au site d’application (particulièrement chez les enfants présentant de l’eczéma (dermatite atopique) ou des <i>molluscum contagiosum</i> en cas d’application prolongée) pendant le traitement de la peau.</p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Irritations des yeux (irritation de la cornée) lorsqu’ANESDERM a été accidentellement en contact avec les yeux pendant le traitement de la peau.</p>
+<p class=AmmCorpsTexte><span class=AmmCorpsTexteGrasCar>Fréquence indéterminée</span><span class=AmmCorpsTexteGrasCar><span style='font-weight:normal'> (dont la fréquence ne peut être estimée sur la base des données disponibles)</span></span></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-align:justify;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Brûlures chimiques des yeux si ANESDERM a été accidentellement en contact avec les yeux pendant le traitement.</p>
+<p class=AmmCorpsTexteGras>Effets indésirables supplémentaires chez les enfants</p>
+<p class=AmmCorpsTexte>Méthémoglobinémie, une maladie du sang, plus souvent observée en cas de surdosage chez les nouveau-nés et les nourrissons âgés de 0 à 12 mois.</p>
+<p class=AmmAnnexeTitre3 style='page-break-after:auto'>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - Site internet :<span style='color:red'> </span><a href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsignalement.social-sante.gouv.fr%2F&data=05%7C01%7Cgaelle.alcaraz%40pierre-fabre.com%7C6e971e7b55c640fddcbf08db13413d7a%7Ca899d509e790454bb3fe4b581016bdc5%7C0%7C0%7C638124943147353062%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=KIGetRxivzvd4WQrIUWMJGap0QW51CsNBxo8tm6a8wI%3D&reserved=0">https://signalement.social-sante.gouv.fr/</a>.</p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_ANESDERM_5_%,_crème_?'>5. COMMENT CONSERVER ANESDERM 5 %, crème ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte><a name="_Toc142279026"></a><a name="_Toc142279024">Tenir ce médicament hors de la vue et de la portée des enfants.</a></p>
+<p class=AmmCorpsTexte>Ne pas utiliser ANESDERM après la date de péremption mentionnée sur le tube et sur la boîte après EXP.</p>
+<p class=AmmCorpsTexte>La date de péremption fait référence au dernier jour de ce mois.</p>
+<p class=AmmCorpsTexte>A conserver à une température ne dépassant pas 25°C. Ne pas congeler.</p>
+<p class=AmmCorpsTexte>Ne pas conserver ce médicament au-delà d'un mois après ouverture du tube.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout ni avec les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient ANESDERM 5 %, crème</a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les substances actives sont :</p>
+<p class=AmmComposition style='margin-bottom:0cm;margin-bottom:.0001pt'>Lidocaïne.............................................................................................................................. ...2,5 g</p>
+<p class=AmmComposition style='margin-bottom:0cm;margin-bottom:.0001pt'>Prilocaïne................................................................................................................................ 2,5 g</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour 100 g de crème</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres composants sont : </p>
+<p class=AmmCorpsTexte>Carbomère 980, hydroxystéarate de macrogolglycérol 40 (huile de ricin hydrogénée polyoxyéthylénée), hydroxyde de sodium, eau purifiée.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que ANESDERM 5 %, crème et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte>Ce médicament se présente sous forme de crème. Boîte de 1 tube de 5 g avec 2 pansements adhésifs, boîte de 5 tubes de 5 g avec 10 pansements adhésifs ou boîte de 1 tube de 30 g.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmTitulaireNom><a name="_Toc142279031">PIERRE FABRE MEDICAMENT</a></p>
+<p class=AmmTitulaireAdresse>LES CAUQUILLOUS</p>
+<p class=AmmTitulaireCpVillePays>81500 LAVAUR</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmTitulaireNom>PIERRE FABRE MEDICAMENT</p>
+<p class=AmmTitulaireAdresse>PARC INDUSTRIEL DE LA CHARTREUSE </p>
+<p class=AmmTitulaireCpVillePays>81100 CASTRES</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmTitulaireNom><a name="_Toc142279033">PIERRE FABRE MEDICAMENT PRODUCTION</a></p>
+<p class=AmmTitulaireAdresse>SITE PROGIPHARM</p>
+<p class=AmmTitulaireAdresse>RUE DU LYCEE</p>
+<p class=AmmTitulaireCpVillePays>45500 GIEN</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte><span style='color:#385623'>[à compléter ultérieurement par le titulaire]</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+<p class=AmmCorpsTexte> </p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

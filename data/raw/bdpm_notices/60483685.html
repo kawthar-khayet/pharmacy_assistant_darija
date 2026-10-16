@@ -1,0 +1,1843 @@
+<!doctype html>
+<html lang="fr" data-fr-theme>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <title>Base de Données Publique des Médicaments</title>
+  <meta name="theme-color" content="#000091">  <link rel="apple-touch-icon" href="/build/dsfr/favicon/apple-touch-icon.png">  <link rel="icon" href="/build/dsfr/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/build/dsfr/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/build/dsfr/favicon/manifest.webmanifest"
+        crossorigin="use-credentials">
+    
+      <link rel="stylesheet" href="/build/dsfr/931.fd9f074b.css"><link rel="stylesheet" href="/build/dsfr/app.7e25ea17.css">
+  
+        <script src="/build/dsfr/runtime.c33b929f.js"></script><script src="/build/dsfr/27.23722826.js"></script><script src="/build/dsfr/306.ae8f0ef3.js"></script><script src="/build/dsfr/910.74b480b6.js"></script><script src="/build/dsfr/931.0eab88af.js"></script><script src="/build/dsfr/app.ebf2a1f2.js"></script>
+  
+  <script src="/build/dsfr/244.95001bc7.js"></script><script src="/build/dsfr/medicament.02957dad.js"></script>
+</head>
+<body id="top" class="fr-mb-12w">
+  <script type="text/javascript" nonce="8gI9teSJPsC2os7oP5F4Xg==">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://stats.integra.fr/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", '79']);
+      _paq.push(['setCookieSameSite', 'Lax']);
+      _paq.push(['setSecureCookie', true]);
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+<script type="module" nonce="8gI9teSJPsC2os7oP5F4Xg==">
+  const e = "system", t = "dark", c = "dark", o = "data-fr-theme", a = "data-fr-scheme", r = `:root[${o}], :root[${a}]`,
+    m = () => {
+      document.documentElement.setAttribute(o, c), document.documentElement.style.colorScheme = "dark"
+    }, n = () => {
+      window.matchMedia("(prefers-color-scheme: dark)").matches && m()
+    };
+  (() => {
+    if (document.documentElement.matches(r)) {
+      const c = (() => {
+        try {
+          return "localStorage" in window && null !== window.localStorage
+        } catch (e) {
+          return !1
+        }
+      })() ? localStorage.getItem("scheme") : "", o = document.documentElement.getAttribute(a);
+      switch (!0) {
+        case c === t:
+          m();
+          break;
+        case c === e:
+          n();
+          break;
+        case o === t:
+          m();
+          break;
+        case o === e:
+          n()
+      }
+    }
+  })();
+
+</script>
+<div class="fr-mb-12w">
+  <div class="fr-mb-6v">
+    <header role="banner" class="fr-header" aria-label="Bannière du site Base de Données Publique des Médicaments" id="section-container-header">
+  <div class="fr-header__body">
+    <div class="fr-container" aria-labelledby="section-container-header">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo" role="img">
+              <p
+                class="fr-logo"
+                aria-describedby="tooltip-logo"
+                aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+                MINISTÈRE
+                <br>DU TRAVAIL, DE LA SANTÉ,
+                <br>DES SOLIDARITÉS
+                <br>ET DES FAMILLES
+              </p>
+              <span id="tooltip-logo" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">Logo - Base de Données Publique des Médicaments - ministère</span>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header__menu" id="button-8446"
+                      aria-label="Bouton de menu mode mobile"
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" role="link"
+              aria-describedby="tooltip-website-name"
+               aria-label="Accueil - Base de Données Publique des Médicaments"
+            >
+              <p class="fr-header__service-title homepage-header-website-name">
+                Base de Données Publique des Médicaments
+              </p>
+            </a>
+            <span id="tooltip-website-name" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Accueil - Base de Données Publique des Médicaments
+            </span>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a class="fr-icon-arrow-left-line fr-btn" href="https://sante.gouv.fr/soins-et-maladies/medicaments"
+                   role="link"
+                   aria-label="Lien de redirection vers le site internet medicaments.gouv.fr"
+                   aria-describedby="tooltip-medicament-gouv-link"
+                >
+                  Visiter medicaments.gouv.fr
+                </a>
+                <span id="tooltip-medicament-gouv-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                  Lien de redirection vers le site internet medicaments.gouv.fr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-header__menu" class="fr-header__menu fr-modal" aria-labelledby="button-8446">
+      <div class="fr-container">
+        <button aria-controls="modal-header__menu" class="fr-btn fr-btn--close" aria-label="Fermer le menu mobile">
+          Fermer
+        </button>
+        <div class="fr-header__menu-links fr-hidden"></div>
+        <nav class="fr-nav" id="header-navigation" role="navigation"
+     aria-label="Menu Principal">
+        <ul class="fr-nav__list" role="list">
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link"
+               href="/" role="link"
+               id="navigation-menu-principal-accueil"
+               aria-label="Lien de redirection vers la page d'accueil (lien de redirection)"
+                           >
+              Accueil
+            </a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/glossaire" role="link"
+               id="navigation-menu-principal-glossaire"
+               aria-label="Lien de redirection vers la page Glossaire (lien de redirection)"
+                          >Glossaire</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/telechargement"
+               id="navigation-menu-principal-telechargement" role="link"
+               aria-label="Lien de redirection vers la page de telechargement (lien de redirection)"
+                          >Téléchargement</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/contact" role="link"
+               id="navigation-menu-principal-contact"
+               aria-label="Lien de redirection vers la page de contact (lien de redirection)"
+                          >Contact</a>
+          </li>
+          <li class="fr-nav__item" role="listitem">
+            <a class="fr-nav__link" href="/aide" id="navigation-menu-principal-aide" role="link"
+               aria-label="Lien de redirection vers la page d'aide (lien de redirection)"
+                          >Aide</a>
+          </li>
+        </ul>
+</nav>
+      </div>
+  </div>
+  <div class="fr-notice fr-notice--info fr-no-print">
+    <div class="fr-container">
+        <div class="fr-notice__body">
+            <p>
+              <span class="fr-icon-info-fill fr-mr-2v" aria-hidden="true"></span>
+              <a target="_blank" rel="noopener external" aria-describedby="tooltip-notice-link" aria-label="Redirection vers la plateforme d'avis utilisateur - Lien de redirection" href="https://tally.so/r/3xpq1J" class="fr-notice__link" style="text-decoration: underline;">Quel est votre avis sur E-notice ?</a>
+              <span class="fr-tooltip fr-placement" id="tooltip-notice-link" role="tooltip" aria-hidden="true">Redirection vers la plateforme d'avis utilisateur - Lien de redirection</span>
+            </p>
+            <button aria-describedby="tooltip-notice-close-btn" aria-label="Masquer le message" id="button-1299" class="fr-btn--close fr-btn">Masquer le message</button>
+            <span class="fr-tooltip fr-placement" id="tooltip-notice-close-btn" role="tooltip" aria-hidden="true">Masquer le message</span>
+        </div>
+    </div>
+</div>
+</header>
+    <main role="main" id="content">
+      <div class="fr-container--fluid">
+        <div class="fr-mb-md-12w fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+            <div class="fr-container">
+    <div class="fr-editor">
+            <div class="fr-grid-row-gutters">
+        <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-pt-6v fr-pb-3v">
+          <div class="fr-header__tools">
+            <p class="fr-text--sm">
+              Dernière mise à jour le 29/09/2026
+            </p>
+          </div>
+
+          <ol class="fr-breadcrumb__list fr-pb-4v fr-no-print">
+            <li>
+              <a id="link_retour_resultat" href="/">
+                <span class="fr-icon-arrow-left-line fr-icon--sm" aria-hidden="true"></span>Retour aux résultats
+              </a>
+            </li>
+          </ol>
+          <h3
+            role="heading"
+            aria-labelledby="tabs-extrait-medicament"
+            aria-label="Titre du medicamant LERCAN 10 mg, comprimé pelliculé sécable"
+            aria-level="3"
+          >
+            LERCAN 10 mg, comprimé pelliculé sécable
+          </h3>
+
+          
+                      <div class="fr-tabs">
+              <ul class="fr-tabs__list" role="tablist"
+                  aria-label="Visuliser l'extrait du medicament LERCAN 10 mg, comprimé pelliculé sécable - Médicament  - BDPM">
+
+                                  <li role="presentation">
+                    <button id="tab-fiche-info" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-fiche-info-panel">
+                      Fiche info
+                    </button>
+                  </li>
+                
+                
+                                  <li role="presentation">
+                    <button id="tab-rcp" class="fr-tabs__tab  fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-rcp-panel">
+                      Résumé des caractéristiques du produit
+                    </button>
+                  </li>
+                
+                                  <li role="presentation">
+                    <button id="tab-notice" class="fr-tabs__tab fr-tabs__tab--icon-left"
+                            tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-notice-panel">Notice
+                    </button>
+                  </li>
+                
+                              </ul>
+
+                                            <div id="tabpanel-fiche-info-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel"
+                     aria-labelledby="tabpanel-fiche-info" tabindex="0">
+                  <div class="fr-header-section-page-info">
+  <section class="fr-mb-3v fr-py-3v" id="top">
+    <div class="fr-grid-row fr-grid-row--gutters">
+
+      <div id="fiche-info-tags" class="fr-grid-row fr-grid-row--gap fr-col-md">
+                          <p id="tag-remboursable" class="fr-tag" aria-controls="fr-modal-tag-remboursable" data-fr-opened="false">
+              <span class="fr-icon-money-euro-circle-fill">
+              </span>&nbsp;remboursable
+          </p>
+                  
+                          <p id="tag-ordonnance" class="fr-tag" aria-controls="fr-modal-tag-ordonnance" data-fr-opened="false">
+              <span class="fr-icon-file-text-fill">
+              </span>&nbsp;sur ordonnance uniquement
+          </p>
+        
+                
+                          <p id="tag-generique" class="fr-tag" aria-controls="fr-modal-tag-generique" data-fr-opened="false">
+              <span class="fr-icon-capsule-fill">
+              </span>&nbsp;générique
+          </p>
+              </div>
+
+      <div class="fr-col-12 fr-col-md aligncenter-md">
+        Date de l'autorisation : 22/01/1999
+      </div>
+
+      <div class="fr-col-12 fr-col-md fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : LERCAN 10 mg, comprimé pelliculé sécable - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fr-mb-3v fr-py-3v">
+    <div class="fr-grid-row fr-grid-row--gutters">
+      <div class="fr-col-12 fr-col-md">
+        <div>
+          <div class="fr-col">
+            <div class="fr-editor ">
+              
+              
+              
+              <div class="fr-col-12 fr-col-md-12 fr-col-sm-12 fr-py-1v"
+                   data-content="N0429872">
+                
+                
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-indications-therapeutiques">
+                        <span class="fr-icon-information-line" aria-hidden="true"
+                              aria-describedby="tooltip-link-indications"></span>
+                        <span id="tooltip-link-indications" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Indications thérapeutiques
+                        </span>
+                        Indications thérapeutiques
+
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-1"
+                           href="#top"></a>
+                        <span id="tooltip-link-page-top-1" class="fr-tooltip fr-placement" role="tooltip"
+                              aria-hidden="true">
+                          Redirection vers le haut de page
+                        </span>
+                      </h5>
+                      <p aria-labelledby="heading-indications-therapeutiques">
+<p class=AmmCorpsTexte>Classe pharmacothérapeutique ANTAGONISTE CALCIQUE / ANTIHYPERTENSEUR - code ATC : C08CA13.</p>
+<p class=AmmCorpsTexte>LERCAN contient du chlorhydrate de lercanidipine qui est un antihypertenseur de la famille des antagonistes calciques.</p>
+<p class=AmmCorpsTexte>LERCAN est utilisé dans le traitement de la pression sanguine trop élevée, aussi appelée hypertension artérielle, chez les adultes de plus de 18 ans (il n’est pas recommandé chez les enfants de moins de 18 ans). </p>
+</p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-groupe-generique">Groupe(s) générique(s)
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-2"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-2" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-groupe-generique">Ce médicament appartient au(x) groupe(s) générique(s) suivants : <br/><ul role="list"><li role='listitem'><a href='/medicament/affiche/groupe-generique/60483685/762' aria-describedby='tooltip-medicament-generique-0'>LERCANIDIPINE (CHLORHYDRATE DE) 10 mg - ZANIDIP 10 mg, comprimé pelliculé sécable - LERCAN 10 mg, comprimé pelliculé sécable.</a><span id='tooltip-medicament-generique-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Ouvrir la page de détail sur ce groupe générique</span></li></ul></p>
+                    </div>
+                  </div>
+                
+                                  <div class="fr-grid-row">
+                    <div class="fr-col">
+                      <h5 role="heading" aria-level="5" id="heading-composition-substances-active"> Composition en
+                        substances actives
+                        <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left lien-retour-hautdepage"
+                           aria-label="Redirection vers le haut de page" aria-describedby="tooltip-link-page-top-3"
+                           href="#top"></a>
+                      </h5>
+                      <span id="tooltip-link-page-top-3" class="fr-tooltip fr-placement" role="tooltip"
+                            aria-hidden="true">
+                        Redirection vers le haut de page
+                      </span>
+                      <p aria-labelledby="heading-composition-substances-active" aria-label="Composition en substances actives" id="list-composition-substances-active"><ul class="ul-no-style" role="list" style="list-style-type: none;"><li><span class="fr-icon-layout-grid-fill" aria-hidden="true"></span>
+ Comprimé ( Composition pour un comprimé )<ul role="list"><li role="listitem" style="list-style-type: none;">lercanidipine<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span><span class="italique">9,4 mg</span><ul role="list" style="list-style-type: none;"><li class="sousFormeDe" role="listitem"><i class="fa fa-plus-square" aria-hidden="true"></i> sous forme de : chlorhydrate de lercanidipine<span class="fr-icon-arrow-right-fill" aria-hidden="true"></span><span class="italique">10 mg </span></li></ul></li></ul></ul></li></ul>
+                    </div>
+                  </div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-presentation' role='heading' aria-level='5'>Présentations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-heading-presentation-page-top' href='#top'></a></h5><span id='tooltip-heading-presentation-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><p> > plaquette(s) PVC aluminium de 30 comprimé(s)  </p><p>Code CIP : 371 241-6 ou 34009 371 241 6 4<br/>Déclaration de commercialisation : 11/04/2017<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 4,79 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-0-0'>Honoraire de dispensation</a> : 1,02 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 5,81 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :65%</li></ul></span></div><span id='tooltip-info-cnam-0-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span><br/><p> > plaquette(s) PVC aluminium de 90 comprimé(s)  </p><p>Code CIP : 371 242-2 ou 34009 371 242 2 5<br/>Déclaration de commercialisation : 11/04/2017<br/>Cette présentation est <a href='/glossaire#agrement-aux-collectivites'>agréée aux collectivités</a></p><div>En pharmacie de ville : <br/><ul><li> Prix hors honoraire de dispensation : 14,19 &euro;</li><li><a href='/glossaire#honoraire-de-dispensation' aria-describedby='tooltip-info-cnam-1-0'>Honoraire de dispensation</a> : 2,76 &euro;</li><li class='presentation-honoraire-brown-color'>Prix honoraire compris : 16,95 &euro;</li><li class='presentation-honoraire-brown-color'>Taux de remboursement :65%</li></ul></span></div><span id='tooltip-info-cnam-1-0' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></div></div>
+                
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-bon-usage-medicament'>Service médical rendu (<a href='/glossaire#SMR' aria-label='Cliquez ici pour accéder au glossaire sur le SMR' aria-describedby='tooltip-smr'>SMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-smr-page-top' href='#top'></a></h5><span id='tooltip-smr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur le SMR</span><span id='tooltip-smr-page-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span><div'><div class='fr-col'><div class='fr-grid-row'><div class='fr-col'><p>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence. </p></div></div><div class='fr-grid-row'><div class='fr-col'><p>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprès de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-smr-aide-2'>plus d'informations dans l'aide</a>). Les avis et synthèses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-smr-aide-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection à la page d'aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'SMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur du SMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td>Important</td><td><a class='lien_smr' aria-describedby="tooltip-detail-smr-avis" target='_blank' href='https://www.has-sante.fr/jcms/c_2588562'>Avis du 06/01/2016</a><span id='tooltip-detail-smr-avis' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 06/01/2016 - nouvelle fenêtre vers le site de la HAS</span></td><td class='text-align-center'>Renouvellement d'inscription (CT)</td><td class='text-align-center'>Le service médical rendu par LERCAN reste important dans l'indication de l'AMM. ;</td></tr></tbody></table></div></div></div>
+                
+                                  <div><div class='fr-col'><h5 id='heading-document-asmr' >Amélioration du service médical rendu (<a href='/glossaire#asmr' aria-label='Cliquez ici pour accéder au glossaire sur l\'ASMR' aria-describedby='tooltip-asmr'>ASMR</a>) <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-asmr-page-top-2' href='#top'></a><span id='tooltip-asmr' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Cliquez ici pour accéder au glossaire sur l'ASMR</span><span id='tooltip-asmr-page-top-2' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class='fr-editor'><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Les libellés affichés ci-dessous ne sont que des résumés ou extraits issus des avis rendus par la Commission de la Transparence. Seul l'avis complet de la Commission de la Transparence fait référence.</p></div></div><div class='fr-grid-row'><div class='fr-col'><p class='fr-paragraphe-padging'>Cet avis est consultable à partir du lien `Avis du jj/mm/aaaa` ou encore sur demande auprés de la HAS (<a href='/aide#comment-acceder-a-avis-de-la-commission-de-la-transparence' aria-describedby='tooltip-asmr-aide-3'>plus d'informations dans l'aide</a>). Les avis et synthéses d'avis contiennent un paragraphe sur la place du médicament dans la stratégie thérapeutique.</p><span id='tooltip-asmr-aide-3' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers la page aide</span></div></div><div class="fr-table--lg fr-table" id="table-lg-component"><table summary="Liste des avis d'ASMR rendus par la commission de la transparence" id="table-lg"><thead><tr><th class='enteteTableauHas' width='20%'>Valeur de l'ASMR</th><th class='enteteTableauHas' width='20%'>Avis</th><th class='enteteTableauHas' width='30%'>Motif de l'évaluation</th><th class='enteteTableauHas'>Résumé de l'avis</th></tr></thead><tbody><tr><td class="text-align-center">V (Inexistant)</td><td class="text-align-center"><a class='lien_asmr' aria-describedby="tooltip-detail-asmr-has" target='_blank' href='https://www.has-sante.fr/jcms/c_642425'>Avis du 23/01/2007</a><span id='tooltip-detail-asmr-has' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Lien vers l'avis complet de la commission de la transparence du 23/01/2007 - nouvelle fenêtre vers le site de la HAS</span></td><td class="text-align-center">Réévaluation ASMR</td><td class="text-align-center">Compte tenu de l'ensemble des données cliniques disponibles en terme de morbi-mortalité et de tolérance, la Commission de la Transparence considère que LERCAN n'apporte pas d'amélioration du service médical rendu (ASMR V) par rapport aux médicaments de comparaison.</td></tr></tbody></table></div></div></div></div>
+                
+                                  <div class='fr-grid-row'><div class='fr-col'><h5 id='heading-document-other-information'>Autres informations <a class='fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage' aria-label='Redirection vers le haut de page' aria-describedby='tooltip-autres-infos-top' href='#top'></a><span id='tooltip-autres-infos-top' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span></h5><div class="fr-grid-row"><div class="fr-col"><div id="autreInfo" style = "display:block"><ul class="autresInfosListe"><li>Titulaire de l'autorisation : BOUCHARA-RECORDATI</li><li>Conditions de prescription et de délivrance : <ul class="cpdListe"><li><a href='/glossaire#liste-I-et-II' aria-describedby='tooltip-autre-infos-glossaire-1' aria-label='Redirection vers Glossaire'>liste I</a><span id='tooltip-autre-infos-glossaire-1' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Aller au glossaire</span></li></ul></li><li>Statut de l'autorisation : Valide</li><li>Type de procédure : &nbsp;Procédure nationale</li><li>Code CIS : &nbsp;6 048 368 5</li></ul></div></div></div><div class="fr-grid-row"><div class="fr-col"> </div></div></div></div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+              
+              
+                              <div id="tabpanel-rcp-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-rcp"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button
+            role="button"
+            class="fr-sidemenu__btn"
+            aria-controls="fr-sidemenu-wrapper"
+            aria-expanded="false"
+            aria-label="Menu principal : RCP"
+          >
+             Sommaire du résumé des caractéristiques du produit
+          </button>
+          <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <ul class="fr-sidemenu__list">
+                                                                                <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#1._DENOMINATION_DU_MEDICAMENT"
+                       aria-label="1. DENOMINATION DU MEDICAMENT (Lien de redirection)">
+                      1. DENOMINATION DU MEDICAMENT
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE"
+                       aria-label="2. COMPOSITION QUALITATIVE ET QUANTITATIVE (Lien de redirection)">
+                      2. COMPOSITION QUALITATIVE ET QUANTITATIVE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#3._FORME_PHARMACEUTIQUE"
+                       aria-label="3. FORME PHARMACEUTIQUE (Lien de redirection)">
+                      3. FORME PHARMACEUTIQUE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#4._DONNEES_CLINIQUES"
+                       aria-label="4. DONNEES CLINIQUES (Lien de redirection)">
+                      4. DONNEES CLINIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.1._Indications_thérapeutiques"
+                               aria-label="4.1. Indications thérapeutiques (Lien de redirection)">
+                              4.1. Indications thérapeutiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.2._Posologie_et_mode_d_administration"
+                               aria-label="4.2. Posologie et mode d&#039;administration (Lien de redirection)">
+                              4.2. Posologie et mode d&#039;administration
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.3._Contre-indications"
+                               aria-label="4.3. Contre-indications (Lien de redirection)">
+                              4.3. Contre-indications
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.4._Mises_en_garde_spéciales_et_précautions_d_emploi"
+                               aria-label="4.4. Mises en garde spéciales et précautions d&#039;emploi (Lien de redirection)">
+                              4.4. Mises en garde spéciales et précautions d&#039;emploi
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions"
+                               aria-label="4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions (Lien de redirection)">
+                              4.5. Interactions avec d&#039;autres médicaments et autres formes d&#039;interactions
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.6._Fertilité,_grossesse_et_allaitement"
+                               aria-label="4.6. Fertilité, grossesse et allaitement (Lien de redirection)">
+                              4.6. Fertilité, grossesse et allaitement
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines"
+                               aria-label="4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines (Lien de redirection)">
+                              4.7. Effets sur l&#039;aptitude à conduire des véhicules et à utiliser des machines
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.8._Effets_indésirables"
+                               aria-label="4.8. Effets indésirables (Lien de redirection)">
+                              4.8. Effets indésirables
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#4.9._Surdosage"
+                               aria-label="4.9. Surdosage (Lien de redirection)">
+                              4.9. Surdosage
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#5._PROPRIETES_PHARMACOLOGIQUES"
+                       aria-label="5. PROPRIETES PHARMACOLOGIQUES (Lien de redirection)">
+                      5. PROPRIETES PHARMACOLOGIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.1._Propriétés_pharmacodynamiques"
+                               aria-label="5.1. Propriétés pharmacodynamiques (Lien de redirection)">
+                              5.1. Propriétés pharmacodynamiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.2._Propriétés_pharmacocinétiques"
+                               aria-label="5.2. Propriétés pharmacocinétiques (Lien de redirection)">
+                              5.2. Propriétés pharmacocinétiques
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#5.3._Données_de_sécurité_préclinique"
+                               aria-label="5.3. Données de sécurité préclinique (Lien de redirection)">
+                              5.3. Données de sécurité préclinique
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#6._DONNEES_PHARMACEUTIQUES"
+                       aria-label="6. DONNEES PHARMACEUTIQUES (Lien de redirection)">
+                      6. DONNEES PHARMACEUTIQUES
+                    </a>
+                                          <ul class="fr-sidemenu__list">
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.1._Liste_des_excipients"
+                               aria-label="6.1. Liste des excipients (Lien de redirection)">
+                              6.1. Liste des excipients
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.2._Incompatibilités"
+                               aria-label="6.2. Incompatibilités (Lien de redirection)">
+                              6.2. Incompatibilités
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.3._Durée_de_conservation"
+                               aria-label="6.3. Durée de conservation (Lien de redirection)">
+                              6.3. Durée de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.4._Précautions_particulières_de_conservation"
+                               aria-label="6.4. Précautions particulières de conservation (Lien de redirection)">
+                              6.4. Précautions particulières de conservation
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.5._Nature_et_contenu_de_l_emballage_extérieur_"
+                               aria-label="6.5. Nature et contenu de l&#039;emballage extérieur  (Lien de redirection)">
+                              6.5. Nature et contenu de l&#039;emballage extérieur 
+                            </a>
+                          </li>
+                                                                            <li class="fr-sidemenu__item">
+                            <a class="fr-sidemenu__link" href="#6.6._Précautions_particulières_d_élimination_et_de_manipulation"
+                               aria-label="6.6. Précautions particulières d’élimination et de manipulation (Lien de redirection)">
+                              6.6. Précautions particulières d’élimination et de manipulation
+                            </a>
+                          </li>
+                                              </ul>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE"
+                       aria-label="8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE (Lien de redirection)">
+                      8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION"
+                       aria-label="9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION (Lien de redirection)">
+                      9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#10._DATE_DE_MISE_A_JOUR_DU_TEXTE"
+                       aria-label="10. DATE DE MISE A JOUR DU TEXTE (Lien de redirection)">
+                      10. DATE DE MISE A JOUR DU TEXTE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#11._DOSIMETRIE"
+                       aria-label="11. DOSIMETRIE (Lien de redirection)">
+                      11. DOSIMETRIE
+                    </a>
+                                      </li>
+                                                    <li class="fr-sidemenu__item">
+                    <a class="fr-sidemenu__link" href="#12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES"
+                       aria-label="12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES (Lien de redirection)">
+                      12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES
+                    </a>
+                                      </li>
+                                                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+          <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+        <div class="fr-grid-row--right fr-no-print print-div">
+          <button aria-label="Imprimer fiche info du médicament : LERCAN 10 mg, comprimé pelliculé sécable - Médicament  - BDPM" class="fr-link print-button">
+            <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+            <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+          </button>
+        </div>
+                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Résumé des Caractéristiques du Produit">
+    <META name="keywords" content="LERCAN 10 mg, comprimé pelliculé sécable, Médicament, Spécialité pharmaceutique, RCP, Résumé des Caractéristiques du Produit, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Résumé des Caractéristiques du Produit</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 06/02/2025</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDenomination"><span id='1._DENOMINATION_DU_MEDICAMENT'>1. DENOMINATION DU MEDICAMENT</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDenomination" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDenomination' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras>LERCAN 10 mg, comprimé pelliculé sécable</p>
+<p class="AmmAnnexeTitre1"><a name="RcpCompoQualiQuanti"><span id='2._COMPOSITION_QUALITATIVE_ET_QUANTITATIVE'>2. COMPOSITION QUALITATIVE ET QUANTITATIVE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpCompoQualiQuanti" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpCompoQualiQuanti' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmComposition>Chlorhydrate de lercanidipine.................................................................................................. 10 mg</p>
+<p class=AmmCorpsTexte>(équivalent à 9,4 mg de lercanidipine)</p>
+<p class=AmmCorpsTexte>Excipient à effet notoire : lactose monohydraté (30 mg par comprimé).</p>
+<p class=AmmCorpsTexte>Pour la liste complète des excipients, voir rubrique 6.1.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpFormePharm"><span id='3._FORME_PHARMACEUTIQUE'>3. FORME PHARMACEUTIQUE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpFormePharm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpFormePharm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Comprimé pelliculé sécable. Comprimé rond, jaune, biconvexe de 6,5 mm avec une barre de cassure sur un côté.</p>
+<p class=AmmCorpsTexte>Le comprimé peut être divisé en doses égales.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesCliniques"><span id='4._DONNEES_CLINIQUES'>4. DONNEES CLINIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesCliniques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesCliniques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpIndicTherap"><span id='4.1._Indications_thérapeutiques'>4.1. Indications thérapeutiques</span></a></p>
+<p class=AmmCorpsTexte><span lang=fr>LERCAN est indiqué, chez les adultes, pour le traitement de l’hypertension artérielle.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpPosoAdmin"><span id='4.2._Posologie_et_mode_d_administration'>4.2. Posologie et mode d'administration</span></a></p>
+<p class=AmmAnnexeTitre3>Posologie</p>
+<p class=AmmCorpsTexte><span lang=fr>Le traitement peut être initié à la dose de 5 mg chez certains patients, et cette dose peut être suffisante.</span></p>
+<p class=AmmCorpsTexte><span lang=fr>La posologie recommandée est de 10 mg par voie orale une fois par jour au moins 15 minutes avant le petit déjeuner ; la dose peut être augmentée, si besoin, à 20 mg en fonction de la réponse du patient.</span></p>
+<p class=AmmCorpsTexte><span lang=fr>L’augmentation de la posologie doit être progressive, car l’effet antihypertenseur maximal peut survenir après environ 2 semaines de traitement.</span></p>
+<p class=AmmCorpsTexte><span lang=fr>Chez certains patients, en cas de contrôle tensionnel insuffisant, un autre antihypertenseur tel qu'un bêta-bloquant (aténolol), un diurétique (hydrochlorothiazide) ou un inhibiteur de l'enzyme de conversion de l'angiotensine (captopril ou énalapril pourra être associé.</span></p>
+<p class=AmmCorpsTexte><span lang=fr>Comme la courbe dose-réponse s’élève de manière<span style='color:red'> </span><span style='color:black'>importante</span><span style='color:red'> </span>pour atteindre un plateau à des doses comprises entre 20 et 30 mg, il est peu probable que des posologies plus élevées conduisent à une augmentation de l’effet, par contre que les effets indésirables pourront plus importants<span style='color:red'>.</span></span></p>
+<p class=AmmAnnexeTitre4>Population âgée</p>
+<p class=AmmCorpsTexte><span lang=fr>Bien que les données pharmacocinétiques et l'expérience clinique suggèrent qu'aucun ajustement de la posologie quotidienne n'est nécessaire, des précautions particulières doivent être prises lors de l'initiation du traitement chez les personnes âgées.</span></p>
+<p class=AmmAnnexeTitre4>Population pédiatrique</p>
+<p class=AmmCorpsTexte>La sécurité et l’efficacité de LERCAN chez les enfants âgés de moins de 18 ans n’ont pas été établies.</p>
+<p class=AmmCorpsTexte>Aucune donnée n’est disponible.</p>
+<p class=AmmAnnexeTitre4>Patients avec une insuffisance rénale ou hépatique</p>
+<p class=AmmCorpsTexte>Une prudence particulière est requise au début du traitement chez les patients présentant une insuffisance rénale ou hépatique légère à modérée.</p>
+<p class=AmmCorpsTexte>Bien que le schéma posologique habituellement recommandé puisse être toléré par ces patients, une augmentation de la posologie à 20 mg par jour doit être mise en place avec prudence. L'effet antihypertenseur peut être augmenté chez les patients avec une insuffisance hépatique et, par conséquent, un ajustement de la posologie doit être envisagé.</p>
+<p class=AmmCorpsTexte><span style='color:#222222'>LERCAN est contre-indiqué chez les patients présentant une insuffisance hépatique sévère ou chez les patients présentant une insuffisance rénale sévère (DFG <30 ml/min), incluant que les patients dialysés (voir rubriques 4.3 et 4.4).</span></p>
+<p class=AmmAnnexeTitre3>Mode d’administration</p>
+<p class=AmmCorpsTexte>Précautions à prendre avant l’administration du médicament :</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt;text-indent:-18.0pt'><span style='font-size:10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Le traitement doit être administré de préférence le matin au moins 15 min avant le petit déjeuner.</span></p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt;text-indent:-18.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Ce médicament ne doit pas être administré avec du jus de pamplemousse (voir rubriques 4.3 et 4.5).</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpContreindications"><span id='4.3._Contre-indications'>4.3. Contre-indications</span></a></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Hypersensibilité à la substance active ou à l’un des excipients mentionnés à la rubrique 6.1.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol;color:#222222'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Obstacle à l’éjection du ventricule gauche.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='color:#222222'>Insuffisance cardiaque congestive non traitée.</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol;color:#222222'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Angor instable ou infarctus du myocarde datant de moins d’un mois.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol;color:#222222'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='color:#222222'>Insuffisance hépatique sévère.</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol;color:#222222'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='color:#222222'>Insuffisance rénale sévère (DFG <30 ml / min), incluant chez les patients dialysés.</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span style='color:#222222'>En association avec : </span></p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>inhibiteurs puissants du CYP3A4 (voir rubrique 4.5) ;</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>ciclosporine (voir rubrique 4.5) ;</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>pamplemousse ou jus de pamplemousse (voir rubrique 4.5).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpMisesEnGarde"><span id='4.4._Mises_en_garde_spéciales_et_précautions_d_emploi'>4.4. Mises en garde spéciales et précautions d'emploi</span></a></p>
+<p class=AmmAnnexeTitre3>Maladie sinusale</p>
+<p class=AmmCorpsTexte>La lercanidipine doit être administrée avec prudence chez les patients présentant une dysfonction du nœud sinusal (lorsqu’un stimulateur cardiaque n’a pas été installé).</p>
+<p class=AmmAnnexeTitre3>Dysfonction ventriculaire gauche</p>
+<p class=AmmCorpsTexte>Même si des études hémodynamiques contrôlées n’ont révélé aucune altération de la fonction ventriculaire, des précautions doivent être prises chez des patients ayant une dysfonction ventriculaire gauche. </p>
+<p class=AmmAnnexeTitre3>Cardiopathie ischémique</p>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Les données suggèrent que les patients atteints de cardiopathie ischémique présentent un risque cardiovasculaire élevé sous traitement par certaines dihydropyridines à courte durée d’action. Bien que la lercanidipine possède une longue durée d’action, la prudence est recommandée chez ces patients. Dans de rares cas, certaines dihydropyridines peuvent entraîner des douleurs précordiales ou un angor. Dans de très rares cas, des patients ayant un angor préexistant peuvent présenter une augmentation de la fréquence, de la durée ou de la gravité des crises angineuses. Des cas isolés d’infarctus du myocarde peuvent être observés (voir rubrique 4.8).</span></p>
+<p class=AmmAnnexeTitre3>Utilisation en cas d'insuffisance rénale ou hépatique</p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Une prudence particulière doit être exercée au début du traitement chez les patients présentant une insuffisance rénale légère à modérée. Bien que la dose habituelle de 10 mg par jour soit recommandée, une augmentation à 20 mg par jour doit être mise en place avec prudence.</span></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>L'effet antihypertenseur peut être augmenté chez les patients présentant une insuffisance hépatique modérée et, par conséquent, un ajustement de la posologie doit être envisagé.</span></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>La lercanidipine est contre-indiquée chez les patients présentant une insuffisance hépatique sévère ou une insuffisance rénale (DFG <30 ml/min), incluant les patients dialysés (voir rubriques 4.2 et 4.3).</span></p>
+<p class=AmmAnnexeTitre3>Dialyse péritonéale</p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Chez les patients en dialyse péritonéale, le traitement par lercanidipine peut induire des liquides de dialyse troubles. La turbidité est due à une augmentation de la concentration en triglycérides dans le liquide de dialyse. Bien que le mécanisme soit inconnu, la turbidité tend à disparaître rapidement après l’arrêt du traitement par lercanidipine.</span></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Il s'agit d'un effet important à reconnaître, car un liquide de dialyse trouble peut être confondu avec une péritonite infectieuse, entraînant une hospitalisation inutile et une administration d'antibiotiques.</span></p>
+<p class=AmmCorpsTexte><b><u>Inducteurs du cytochrome CYP3A4</u></b></p>
+<p class=AmmCorpsTexte>Les inducteurs du cytochrome CYP3A4 tels que les anticonvulsivants (par exemple, la phénytoïne, la carbamazépine) et la rifampicine peuvent réduire les concentrations plasmatiques de lercanidipine. Par conséquent, l'efficacité de la lercanidipine peut être inférieure à celle attendue (voir rubrique 4.5).</p>
+<p class=AmmAnnexeTitre3>Alcool</p>
+<p class=AmmCorpsTexte>L'alcool doit être évité car il peut potentialiser l'effet des antihypertenseurs vasodilatateurs (voir rubrique 4.5).</p>
+<p class=AmmAnnexeTitre3>Lactose</p>
+<p class=AmmCorpsTexte>Ce médicament contient du lactose. Les patients présentant une intolérance au galactose, un déficit total en lactase ou un syndrome de malabsorption du glucose et du galactose (maladies héréditaires rares) ne doivent pas prendre ce médicament.</p>
+<p class=AmmCorpsTexte><b><u>Sodium</u></b></p>
+<p class=AmmCorpsTexte>Ce médicament contient moins de 1 mmol de sodium (23 mg) par comprimé, c’est-à-dire qu’il est essentiellement sans sodium.</p>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmCorpsTexte>La sécurité et l'efficacité de la lercanidipine n'ont pas été démontrées chez les enfants.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpInteractionsMed"><span id='4.5._Interactions_avec_d_autres_médicaments_et_autres_formes_d_interactions'>4.5. Interactions avec d'autres médicaments et autres formes d'interactions</span></a></p>
+<p class=AmmAnnexeTitre3>Associations contre-indiquées</p>
+<p class=AmmCorpsTexte><b><span style='color:#222222'>Inhibiteurs du cytochrome CYP3A4</span></b></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>La lercanidipine est métabolisée par l’enzyme CYP3A4 et, par conséquent, les inhibiteurs du cytochrome CYP3A4 administrés simultanément peuvent interagir avec le métabolisme et l’élimination de la lercanidipine. Une étude d'interaction avec le kétoconazole, un puissant inhibiteur du cytochrome CYP3A4, a montré une augmentation considérable des concentrations plasmatiques de lercanidipine (multiplication par 15 de l'ASC et par 8 de la Cmax pour l'énantiomère S-lercanidipine).</span></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>L’administration de lercanidipine avec des inhibiteurs du CYP3A4 (par exemple kétoconazole, itraconazole, ritonavir, érythromycine, troléandomycine, clarithromycine) doit être évitée (voir rubrique 4.3).</span></p>
+<p class=AmmCorpsTexte><b><span style='color:#222222'>+ Ciclosporine</span></b></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Une élévation des concentrations plasmatiques de lercanidipine et de ciclosporine a été observée après administration concomitante des 2 principes actifs. Une étude chez de jeunes volontaires sains a montré que, lorsque la ciclosporine était administrée 3 heures après la prise de lercanidipine, les concentrations plasmatiques de lercanidipine n’avaient pas changé, tandis que l’ASC de la ciclosporine augmentait de 27%. Cependant, l'administration concomitante de lercanidipine et de ciclosporine a provoqué une augmentation de 3 fois les concentrations plasmatiques de lercanidipine et une augmentation de 21% de l'ASC de la ciclosporine.</span></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>La ciclosporine et la lercanidipine ne doivent pas être administrées ensemble (voir rubrique 4.3).</span></p>
+<p class=AmmCorpsTexte><b><span style='color:#222222'>+ Jus de pamplemousse ou de pamplemousse</span></b></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Comme pour les autres dihydropyridines, la lercanidipine est sensible à l'inhibition du métabolisme par le pamplemousse ou le jus de pamplemousse, ce qui entraîne une augmentation de sa biodisponibilité systémique et de son effet hypotenseur. La lercanidipine ne doit pas être prise avec du pamplemousse ou du jus de pamplemousse (voir rubrique 4.3).</span></p>
+<p class=AmmAnnexeTitre3>Associations déconseillées</p>
+<p class=AmmCorpsTexte><b><span style='color:#222222'>+ Inducteurs du cytochrome CYP3A4</span></b></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>L'administration concomitante de lercanidipine et d'inducteurs du cytochrome CYP3A4 tels que les anticonvulsivants (par exemple, la phénytoïne, le phénobarbital, la carbamazépine) et la rifampicine doit être envisagée avec prudence, car l'effet antihypertenseur peut être réduit et la pression artérielle doit être surveillée plus fréquemment que d'habitude (voir rubrique 4.4).</span></p>
+<p class=AmmCorpsTexte><b><span style='color:#222222'>+ Alcool</span></b></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>L'alcool doit être évité car il peut potentialiser l'effet des antihypertenseurs vasodilatateurs (voir rubrique 4.4).</span></p>
+<p class=AmmAnnexeTitre3>Associations faisant l'objet de précautions d’emploi</p>
+<p class=AmmCorpsTexte><b>+ Substrats du cytochrome CYP3A4</b></p>
+<p class=AmmCorpsTexte>Une surveillance doit être mise en place lorsque la lercanidipine est administrée avec d’autres substrats du cytochrome CYP3A4, tels que la terfénadine, l’astémizole, les antiarythmiques de classe III tels que l’amiodarone, la quinidine et le sotalol.</p>
+<p class=AmmCorpsTexte><b>+ Midazolam</b></p>
+<p class=AmmCorpsTexte>Lorsque la lercanidipine, à la dose de 20 mg, a été administrée en même temps que du midazolam par voie orale, chez des volontaires âgés, l'absorption de la lercanidipine a été augmentée (d'environ 40%) et le taux d'absorption a été diminué (le Tmax a été retardé de 1,75 à 3 heures). Les concentrations de midazolam n'ont pas été modifiées.</p>
+<p class=AmmCorpsTexte><b><span style='color:#222222'>+ Métoprolol</span></b></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Lorsque la lercanidipine a été associée avec du métoprolol, un &#946;-bloquant éliminé principalement par voie hépatique, la biodisponibilité du métoprolol n’a pas été modifiée, tandis que celle de la lercanidipine a été réduite de 50%. Cet effet peut être dû à la diminution du débit sanguin hépatique causée par les &#946;-bloquants et pourrait donc se produire avec d'autres médicaments de cette classe. Par conséquent, la lercanidipine peut être administrée en toute sécurité avec des médicaments bloquant les récepteurs &#946;-adrénergiques, mais une adaptation de la posologie peut être nécessaire.</span></p>
+<p class=AmmCorpsTexte><b><span style='color:#222222'>+ Digoxine</span></b></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>La co-administration concomitante de 20 mg de lercanidipine chez des patients traités de manière chronique par la &#946;-méthyldigoxine n'a pas mis en évidence d'interaction pharmacocinétique. Cependant, une augmentation moyenne de 33% de la Cmax de digoxine a été observée, alors que l'ASC et la clairance rénale n'étaient pas modifiées de manière significative. Lors d'un traitement par digoxine, les patients doivent être soigneusement observés pour rechercher les signes d'une intoxication à la digoxine. </span></p>
+<p class=AmmAnnexeTitre3>Associations à prendre en compte</p>
+<p class=AmmCorpsTexte><b><span style='color:#222222'>+ Fluoxétine</span></b></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Une étude d'interaction avec la fluoxétine (un inhibiteur des cytochromes CYP2D6 et CYP3A4), menée chez des volontaires âgés de 65 ± 7 ans (moyenne ± déviation standard), n'a montré aucune modification cliniquement pertinente du profil pharmacocinétique de la lercanidipine.</span></p>
+<p class=AmmCorpsTexte><b><span style='color:#222222'>+ Cimétidine</span></b></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>L’administration concomitante de 800 mg de cimétidine par jour n’entraîne pas de modification significative des concentrations plasmatiques de lercanidipine, mais à des doses plus élevées, une prudence est requise, car la biodisponibilité et l’effet hypotenseur de la lercanidipine peuvent être augmentés.</span></p>
+<p class=AmmCorpsTexte><b><span style='color:#222222'>+ Simvastatine</span></b></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Lorsqu'une dose de 20 mg de lercanidipine a été administrée à plusieurs reprises avec 40 mg de simvastatine, l'ASC de la lercanidipine n'a pas été modifiée de manière significative, tandis que l'ASC de la simvastatine a augmenté de 56% et celle de son métabolite actif, le &#946;-hydroxyacide de 28%. Il est peu probable que de tels changements ont une pertinence clinique. Aucune interaction n'est attendue lorsque la lercanidipine est administrée le matin et la simvastatine le soir, comme indiqué pour ce médicament.</span></p>
+<p class=AmmCorpsTexte><b><span style='color:#222222'>+ Diurétiques et inhibiteurs de l’enzyme de conversion de l’angiotensine</span></b></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>La lercanidipine a été administrée en toute sécurité avec des diurétiques et des inhibiteurs de l’enzyme de conversion de l’angiotensine.</span></p>
+<p class=AmmCorpsTexte><b><span style='color:#222222'>+ Autres médicaments agissant sur la pression artérielle</span></b></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Comme pour tous les médicaments antihypertenseurs, une augmentation des effets hypotenseurs peut être observée lorsque la lercanidipine est administrée avec d'autres médicaments agissant sur la pression artérielle, tels que les alpha-bloquants utilisés dans le traitement des symptômes urinaires, les antidépresseurs tricycliques et les neuroleptiques. Au contraire, une diminution de l'effet hypotenseur peut être observée lors d'une utilisation concomitante avec des corticostéroïdes.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpFertGrossAllait"><span id='4.6._Fertilité,_grossesse_et_allaitement'>4.6. Fertilité, grossesse et allaitement</span></a></p>
+<p class=AmmAnnexeTitre3>Grossesse</p>
+<p class=AmmCorpsTexte>Il n’existe pas de données sur l’utilisation de la lercanidipine chez la femme enceinte.</p>
+<p class=AmmCorpsTexte>Les études chez l'animal n'ont pas mis en évidence d'effets tératogènes (voir rubrique 5.3), mais ils ont été observés avec d'autres dihydropyridines.</p>
+<p class=AmmCorpsTexte>La lercanidipine n'est pas recommandée pendant la grossesse et chez les femmes en âge de procréer et, en l’absence de contraception efficace (voir rubrique 4.4).</p>
+<p class=AmmAnnexeTitre3>Allaitement</p>
+<p class=AmmCorpsTexte>L’excrétion de LERCAN ou de ses métabolites dans le lait maternel est inconnue. Un risque chez les nouveau-nés/nourrissons ne peut donc pas être exclu. La lercanidipine ne doit pas être utilisée pendant l’allaitement.</p>
+<p class=AmmAnnexeTitre3>Fertilité</p>
+<p class=AmmCorpsTexte>Aucune donnée clinique n'est disponible avec LERCAN. Certains inhibiteurs calciques ont été associés à des modifications biochimiques réversibles dans la région céphalique des spermatozoïdes, ce qui peut affecter la fécondation.</p>
+<p class=AmmCorpsTexte>En cas d’échecs répétés de fécondations in vitro, et en l’absence d’une autre explication, la possibilité que les inhibiteurs calciques soient à l’origine de ces échecs doit être envisagée.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpConduite"><span id='4.7._Effets_sur_l_aptitude_à_conduire_des_véhicules_et_à_utiliser_des_machines'>4.7. Effets sur l'aptitude à conduire des véhicules et à utiliser des machines</span></a></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>LERCAN a une faible influence sur l'aptitude à conduire des véhicules et à utiliser des machines. Cependant, la prudence est recommandée en raison de la survenue possible de sensations vertigineuse, asthénie, fatigue et plus rarement somnolence.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEffetsIndesirables"><span id='4.8._Effets_indésirables'>4.8. Effets indésirables</span></a></p>
+<p class=AmmAnnexeTitre3>Résumé du profil de sécurité</p>
+<p class=AmmCorpsTexte><span style='color:#222222'>La sécurité de la lercanidipine à une dose de 10 à 20 mg par jour a été évaluée lors d'essais cliniques réalisés en double aveugle et contrôlés versus placebo (1 200 patients recevant la lercanidipine et 603 patients recevant un placebo), ainsi que lors d’essais cliniques à long terme, contrôlés versus substance active et non contrôlés, avec 3676 patients hypertendus recevant de la lercanidipine.</span></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Les effets indésirables les plus fréquemment rapportés dans les essais cliniques et après commercialisation sont les suivants : œdème périphérique, maux de tête, bouffées vasomotrices, tachycardie et palpitations.</span></p>
+<p class=AmmAnnexeTitre3>Tableau des effets indésirables</p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Dans le tableau ci-dessous, les effets indésirables rapportés dans les essais cliniques et en post -commercialisation au niveau mondial et pour lesquels il existe un lien de causalité raisonnable, sont décrits dans le tableau suivant, selon le système de classe organes MedDRA et par fréquence : très fréquent (&#8805; 1/10), fréquent (&#8805; 1/100 à < 1/10), peu fréquent (&#8805; 1/1 000 à < 1/100), rare (&#8805; 1/10 000 à < 1/1 000), très rare (< 1/10 000), non connus (impossibles à estimer d'après les données disponibles). Pour chaque fréquence, les effets indésirables sont présentés par ordre de gravité décroissante.</span></p>
+<div class='fr-table--lg fr-table'><table>
+<tr>
+<td width=123 valign=top style='width:92.1pt;border:solid black 1.0pt;
+border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b>Système de classe organes MedDRA</b></p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border:solid black 1.0pt;
+border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b>Fréquent</b></p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border:solid black 1.0pt;
+border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b>Peu fréquent</b></p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border:solid black 1.0pt;
+border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b>Rare</b></p>
+</td>
+<td width=123 valign=top style='width:92.6pt;border:solid black 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=center style='text-align:center'><b>Inconnue</b></p>
+</td>
+</tr>
+<tr>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections du système immunitaire</p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='layout-grid-mode:char'> </p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='layout-grid-mode:char'> </p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Hypersensibilité</p>
+</td>
+<td width=123 valign=top style='width:92.6pt;border:solid black 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='layout-grid-mode:char'> </p>
+</td>
+</tr>
+<tr>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections du système nerveux</p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Céphalées</p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Sensations vertigineuses</p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Somnolence, syncope</p>
+</td>
+<td width=123 valign=top style='width:92.6pt;border:solid black 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='layout-grid-mode:char'> </p>
+</td>
+</tr>
+<tr>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections cardiaques</p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Tachycardie, palpitations</p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='layout-grid-mode:char'> </p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Angine de poitrine</p>
+</td>
+<td width=123 valign=top style='width:92.6pt;border:solid black 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='layout-grid-mode:char'> </p>
+</td>
+</tr>
+<tr>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections vasculaires</p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Bouffées vasomotrices</p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Hypotension</p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='layout-grid-mode:char'> </p>
+</td>
+<td width=123 valign=top style='width:92.6pt;border:solid black 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='layout-grid-mode:char'> </p>
+</td>
+</tr>
+<tr>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections gastro-intestinales</p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='layout-grid-mode:char'> </p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Dyspepsie, nausées, douleur abdominale haute</p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Vomissements, diarrhées</p>
+</td>
+<td width=123 valign=top style='width:92.6pt;border:solid black 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Hypertrophie gingivale<sup>1</sup>, liquide de dialyse péritonéal trouble<sup>1</sup> </p>
+</td>
+</tr>
+<tr>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections hépato-biliaires</p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='layout-grid-mode:char'> </p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='layout-grid-mode:char'> </p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='layout-grid-mode:char'> </p>
+</td>
+<td width=123 valign=top style='width:92.6pt;border:solid black 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Transaminases augmentées<sup>1</sup></p>
+</td>
+</tr>
+<tr>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections de la peau et du tissu sous-cutané</p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='layout-grid-mode:char'> </p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Eruption cutanée, prurit</p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Urticaire</p>
+</td>
+<td width=123 valign=top style='width:92.6pt;border:solid black 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Angiœdème<sup>1</sup></p>
+</td>
+</tr>
+<tr>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections musculo-squelettiques et du tissu conjonctif</p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='layout-grid-mode:char'> </p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Myalgie</p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='layout-grid-mode:char'> </p>
+</td>
+<td width=123 valign=top style='width:92.6pt;border:solid black 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='layout-grid-mode:char'> </p>
+</td>
+</tr>
+<tr>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Affections du rein et des voies urinaires</p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='layout-grid-mode:char'> </p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Polyurie</p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Pollakiurie</p>
+</td>
+<td width=123 valign=top style='width:92.6pt;border:solid black 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='layout-grid-mode:char'> </p>
+</td>
+</tr>
+<tr>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte align=left style='text-align:left'>Troubles généraux et anomalies au site d’administration</p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Oedèmes périphériques</p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Asthénie, fatigue</p>
+</td>
+<td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+solid black 1.0pt;border-bottom:solid black 1.0pt;border-right:none;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte>Douleur thoracique</p>
+</td>
+<td width=123 valign=top style='width:92.6pt;border:solid black 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=AmmCorpsTexte style='layout-grid-mode:char'> </p>
+</td>
+</tr>
+</table></div>
+<p class=AmmCorpsTexte><sup>1</sup> effets indésirables issus de la déclaration spontanée, après commercialisation internationale.</p>
+<p class=AmmAnnexeTitre3>Description de certains effets indésirables</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Dans les essais cliniques contrôlés par placebo, l'incidence de l'œdème périphérique était de 0,9% avec 10 à 20 mg de lercanidipine et de 0,83% avec le placebo. Cette fréquence a atteint 2% dans l'ensemble de la population étudiée, y compris avec les essais cliniques à long terme.</span></p>
+<p class=AmmCorpsTexte>La lercanidipine ne semble pas modifier pas la glycémie, ni la lipidémie.</p>
+<p class=AmmCorpsTexte>Certaines dihydropyridines peuvent, dans de rares cas, provoquer des douleurs précordiales ou un angor. Dans de très rares cas, des patients ayant une angine de poitrine préexistante peuvent présenter une augmentation de la fréquence, de la durée ou de la gravité des crises angineuses. </p>
+<p class=AmmCorpsTexte>Dans des cas isolés, un infarctus du myocarde peut survenir.</p>
+<p class=AmmAnnexeTitre3>Déclaration des effets indésirables suspectés </p>
+<p class=AmmCorpsTexte>La déclaration des effets indésirables suspectés après autorisation du médicament est importante. Elle permet une surveillance continue du rapport bénéfice/risque du médicament. Les professionnels de santé déclarent tout effet indésirable suspecté via le système national de déclaration : <span lang=fr>Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - </span>Site internet <span lang=fr>:<span style='color:red'> </span></span><a href="http://www.signalement-sante.gouv.fr">www.signalement-sante.gouv.fr</a><span lang=fr>.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpSurdosage"><span id='4.9._Surdosage'>4.9. Surdosage</span></a></p>
+<p class=AmmCorpsTexte><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>Depuis la commercialisation de la lercanidipine, des cas de surdosage, incluant des tentatives de suicide, ont été signalés, avec les doses comprises entre 30-40 mg à 800 mg.</span></p>
+<p class=AmmAnnexeTitre3>Symptômes</p>
+<p class=AmmCorpsTexte>Comme avec d’autres dihydropyridines, un surdosage par lercanidipine peut provoquer une vasodilatation périphérique excessive avec hypotension marquée et une tachycardie réflexe.</p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Cependant, à des doses très élevées, la sélectivité périphérique peut être diminuée, ce qui entraîne une bradycardie et un effet inotrope négatif.</span></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Les effets indésirables les plus fréquemment associés aux cas de surdosage sont l'hypotension, les sensations vertigineuses, les maux de tête et les palpitations.</span></p>
+<p class=AmmAnnexeTitre3>Prise en charge</p>
+<p class=AmmCorpsTexte>Une hypotension cliniquement significative nécessite une prise en charge cardiovasculaire active avec <span style='color:#222222'>une surveillance fréquente de la fonction cardiaque et respiratoire, une surélévation des jambes et un contrôle du volume liquidien circulatoire et du débit urinaire.</span></p>
+<p class=AmmCorpsTexte>Compte tenu de l’action pharmacologique prolongée de la lercanidipine, l’état cardiovasculaire des patients en surdosage doit être surveillé pendant au moins 24 heures.</p>
+<p class=AmmCorpsTexte>Ce médicament étant fortement lié aux protéines plasmatiques, <span style='color:#222222'>la dialyse sera vraisemblablement inefficace</span>.</p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Les patients chez lesquels une intoxication modérée ou sévère est attendue, doivent être surveillés dans un service de soins intensifs.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpPropPharmacologiques"><span id='5._PROPRIETES_PHARMACOLOGIQUES'>5. PROPRIETES PHARMACOLOGIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPropPharmacologiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPropPharmacologiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacodynamiques"><span id='5.1._Propriétés_pharmacodynamiques'>5.1. Propriétés pharmacodynamiques</span></a></p>
+<p class=AmmCorpsTexteGras>Classe pharmacothérapeutique : Inhibiteur calcique sélectif à effets vasculaires prédominants –  Dérivés de la dihydropyridine, code ATC : C08CA13<span style='font-size:8.0pt'>.</span></p>
+<p class=AmmAnnexeTitre3>Mécanisme d’action</p>
+<p class=AmmCorpsTexte>La lercanidipine est un antagoniste du calcium du groupe dihydropyridine et inhibe le flux entrant transmembranaire de calcium des muscles lisses et muscles cardiaques. Le mécanisme de son action antihypertensive est dû à un effet relaxant direct sur les muscles vasculaires lisses, diminuant ainsi globalement les résistances périphériques totales.</p>
+<p class=AmmAnnexeTitre3>Effets pharmacodynamiques</p>
+<p class=AmmCorpsTexte>Malgré une courte demi-vie plasmatique, la lercanidipine a une activité antihypertensive prolongée grâce à son coefficient de partage membranaire élevé. La lercanidipine est dépourvue d'effets inotropes négatifs en raison de sa sélectivité vasculaire élevée.</p>
+<p class=AmmCorpsTexte>Comme la vasodilatation induite par LERCAN est progressive, une hypotension aiguë accompagnée de tachycardie réflexe a rarement été observée chez les patients hypertendus.</p>
+<p class=AmmCorpsTexte>Comme pour les autres 1,4-dihydropyridines asymétriques, l'activité antihypertensive de la lercanidipine est principalement due à son énantiomère (S).</p>
+<p class=AmmAnnexeTitre3>Efficacité et sécurité clinique</p>
+<p class=AmmCorpsTexte><span style='color:#222222'>L’efficacité clinique et la tolérance de la lercanidipine à une dose de 10 à 20 mg une fois par jour ont été évaluées dans des essais cliniques en double aveugle, contrôlés versus placebo (1 200 patients recevant la lercanidipine et 603 patients recevant un placebo) ainsi que des essais cliniques à long terme contrôlés versus substance active ou non contrôlés avec un total de 3 676 patients hypertendus.</span></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>La plupart des essais cliniques ont été menés chez des patients avec une hypertension essentielle légère à modérée (y compris des patients âgés et diabétiques) recevant de la lercanidipine seule ou en association avec inhibiteurs de l’enzyme de conversion, des diurétiques ou des bêta-bloquants.</span></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>En plus des études cliniques effectuées pour soutenir les indications thérapeutiques, une autre petite étude non contrôlée mais randomisée ayant inclus des patients souffrant d'hypertension sévère (pression artérielle diastolique moyenne à 114,5 mmHg ± 3,7 (moyenne ± écart type) a montré que la pression artérielle était normalisée pour 40% des 25 patients à 20 mg de LERCAN une fois par jour et chez 56% des 25 patients à 10 mg de LERCAN, deux fois par jour. Dans une étude contrôlée, randomisée, en double aveugle versus placebo chez des patients présentant une hypertension systolique isolée, LERCAN a été efficace pour baisser la pression artérielle systolique à 140,2 + 8,7 mmHg avec des valeurs initiales moyennes de 172,6 + 5,6 mmHg.</span></p>
+<p class=AmmAnnexeTitre3>Population pédiatrique</p>
+<p class=AmmCorpsTexte>Aucun essai clinique n’a été réalisé dans la population pédiatrique.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPropPharmacocinetiques"><span id='5.2._Propriétés_pharmacocinétiques'>5.2. Propriétés pharmacocinétiques</span></a></p>
+<p class=AmmAnnexeTitre3>Absorption</p>
+<p class=AmmCorpsTexte>Après une administration orale de 10 à 20 mg, LERCAN est totalement absorbé. Les pics plasmatiques atteignent 3,30 ng/ml ± 2,09 d.s. et 7,66 ng/ml ± 5,90 respectivement, environ 1,5 à 3 heures après l'administration.</p>
+<p class=AmmCorpsTexte>Le profil des taux plasmatiques des deux énantiomères de la lercanidipine est semblable : le délai pour atteindre les pics plasmatiques et le temps de ½ vie d’élimination sont identiques pour les deux énantiomères ; les pics plasmatiques et l'ASC sont en moyenne 1,2 fois plus élevés pour l'énantiomère (S). "In vivo", une interconversion des énantiomères n’a pas été observée.</p>
+<p class=AmmCorpsTexte>En raison de l’effet de premier passage important, la biodisponibilité absolue de LERCAN administré oralement à des patients ayant pris de la nourriture est d’environ 10%. Chez des sujets sains à jeun, la biodisponibilité est réduite d’un tiers de cette valeur.</p>
+<p class=AmmCorpsTexte><span style='color:#222222'>La biodisponibilité orale de lercanidipine est multipliée par 4 lorsque LERCAN est pris dans les 2 heures après un repas riche en graisses. En conséquence, LERCAN doit être pris avant les repas.</span></p>
+<p class=AmmAnnexeTitre3>Distribution</p>
+<p class=AmmCorpsTexte>La distribution du principe actif depuis le plasma vers les tissus et les organes est rapide et importante.</p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Le taux de liaison aux protéines sériques de la lercanidipine est supérieur à 98%. Les taux de protéines plasmatiques étant réduits en cas d’insuffisance rénale ou hépatique sévère, la fraction libre du médicament peut être augmentée chez ces patients.</span></p>
+<p class=AmmAnnexeTitre3>Biotransformation</p>
+<p class=AmmCorpsTexte><span style='color:#222222'>LERCAN est largement métabolisé par le CYP3A4 ; on ne retrouve pas de principe actif inchangé dans l’urine ou les selles. Il est principalement transformé en métabolites inactifs et environ 50% de la dose est excrétée dans les urines.</span></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Des études <i>in vitro</i> sur des microsomes hépatiques humains ont montré que la lercanidipine montre une légère inhibition du CYP3A4 et du CYP2D6, à des concentrations respectives respectivement 160 et 40 fois supérieures au pic de concentration plasmatique obtenu après la dose de 20 mg.</span></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>De plus, des études d'interaction chez l'homme ont montré que la lercanidipine ne modifie pas les concentrations plasmatiques de midazolam, un substrat typique du CYP3A4, ni de métoprolol, substrat typique du CYP2D6. Par conséquent, l'inhibition de la biotransformation des médicaments métabolisés par le CYP3A4 et le CYP2D6 par LERCAN n'est pas attendue aux doses thérapeutiques.</span></p>
+<p class=AmmAnnexeTitre3>Élimination</p>
+<p class=AmmCorpsTexte><span style='color:#222222'>L'élimination se fait essentiellement par biotransformation.</span></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Une demi-vie d'élimination terminale moyenne est de 8 à 10 heures. L'effet thérapeutique dure 24 heures en raison de la forte liaison aux membranes lipidiques. Aucune accumulation n'a été observée après une administration répétée.</span></p>
+<p class=AmmAnnexeTitre3>Linéarité/non-linéarité</p>
+<p class=AmmCorpsTexte><span style='color:#222222'>L’administration orale de LERCAN entraîne des concentrations plasmatiques non directement proportionnelles à la dose (cinétique non linéaire). Après l’administration de 10, 20 ou 40 mg, les pics de concentration plasmatique étaient dans les proportions de 1:3:8 et les aires sous les courbes des concentrations plasmatiques en fonction du temps dans les proportions de 1:4:18, ce qui évoque une saturation progressive de l’effet de premier passage. Par conséquent, la biodisponibilité augmente avec l’accroissement de la dose.</span></p>
+<p class=AmmAnnexeTitre3>Populations particulières</p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Le profil pharmacocinétique de la lercanidipine chez les patients âgés et chez les patients atteints d’insuffisance rénale ou hépatique légère à modérée est similaire à celui observé dans la population générale. Des concentrations plus élevées du médicament (environ 70%) ont été mises en évidence chez les patients atteints d’insuffisance rénale sévère ou dialysés. Chez les patients atteints d’insuffisance hépatique modérée à sévère, la biodisponibilité systémique de la lercanidipine est probablement augmentée car le médicament est largement métabolisé par le foie.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpSecuritePreclinique"><span id='5.3._Données_de_sécurité_préclinique'>5.3. Données de sécurité préclinique</span></a></p>
+<p class=AmmCorpsTexte>Les données précliniques ne révèlent aucun risque particulier pour l’homme d’après les études conventionnelles de pharmacologie sur la sécurité d’emploi, de toxicité à doses répétées, de génotoxicité, de potentiel carcinogène et de toxicité sur la reproduction.</p>
+<p class=AmmCorpsTexte>Des études pharmacologiques de sécurité réalisées chez l'animal à doses antihypertensives n'ont montré aucun effet sur le système nerveux autonome, le système nerveux central ou la fonction gastro-intestinale.</p>
+<p class=AmmCorpsTexte>Les effets significatifs observés au cours d’études à long terme chez le rat et le chien ont été liés, directement ou indirectement, aux effets connus de doses élevées d’inhibiteurs calciques, reflétant principalement une activité pharmacodynamique amplifiée.</p>
+<p class=AmmCorpsTexte>La lercanidipine n’a montré ni génotoxicité ni risque cancérigène.</p>
+<p class=AmmCorpsTexte>Le traitement par la lercanidipine n'a eu aucune incidence sur la fertilité ni sur la capacité générale de reproduction générale chez le rat.</p>
+<p class=AmmCorpsTexte>Aucun effet tératogène n'a été observé chez le rat et le lapin. Cependant, chez le rat, la lercanidipine<span style='color:#222222'> administrée à des doses élevées a entraîné des pertes avant et après implantation et un retard du </span>développement fœtal.</p>
+<p class=AmmCorpsTexte>Le chlorhydrate de lercanidipine, administré à forte dose (12 mg/kg/jour) pendant le travail, a provoqué une dystocie.</p>
+<p class=AmmCorpsTexte>La distribution de la lercanidipine et / ou de ses métabolites chez des animaux gravides et l’excrétion dans le lait maternel n'ont pas été étudiées.</p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Les métabolites n'ont pas été évalués séparément dans les études de toxicité.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDonneesPharmaceutiques"><span id='6._DONNEES_PHARMACEUTIQUES'>6. DONNEES PHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDonneesPharmaceutiques" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDonneesPharmaceutiques' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class="AmmAnnexeTitre2"><a name="RcpListeExcipients"><span id='6.1._Liste_des_excipients'>6.1. Liste des excipients</span></a></p>
+<p class=AmmCorpsTexte>Lactose monohydraté, cellulose microcristalline, carboxyméthylamidon sodique, povidone K30, stéarate de magnésium.</p>
+<p class=AmmCorpsTexte>Pelliculage :</p>
+<p class=AmmCorpsTexte>Hypromellose, talc, dioxyde de titane (E171), macrogol 6000, oxyde de fer (E172).</p>
+<p class=AmmCorpsTexte>Pour un comprimé pelliculé sécable.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpIncompatibilites"><span id='6.2._Incompatibilités'>6.2. Incompatibilités</span></a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpDureeConservation"><span id='6.3._Durée_de_conservation'>6.3. Durée de conservation</span></a></p>
+<p class=AmmCorpsTexte>3 ans.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecConservation"><span id='6.4._Précautions_particulières_de_conservation'>6.4. Précautions particulières de conservation</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Conserver dans la boite, à l’abri de la lumière.</span></p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage"><span id='6.5._Nature_et_contenu_de_l_emballage_extérieur_'>6.5. Nature et contenu de l'emballage extérieur </span></a></p>
+<p class=AmmCorpsTexte>Plaquette en aluminium et PVC opaque.</p>
+<p class=AmmCorpsTexte>Boite de 14, 28, 30, 35, 50, 90 et 100 comprimés.</p>
+<p class=AmmCorpsTexte>Toutes les présentations peuvent ne pas être commercialisées.</p>
+<p class="AmmAnnexeTitre2"><a name="RcpPrecEmpl"><span id='6.6._Précautions_particulières_d_élimination_et_de_manipulation'>6.6. Précautions particulières d’élimination et de manipulation</span></a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Tout médicament non utilisé ou déchet doit être éliminé conformément à la réglementation en vigueur.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpTitulaireAmm"><span id='7._TITULAIRE_DE_L’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>7. TITULAIRE DE L’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpTitulaireAmm" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpTitulaireAmm' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>BOUCHARA-RECORDATI</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>TOUR HEKLA</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>52 AVENUE DU GENERAL DE GAULLE</p>
+<p class=AmmCorpsTexte>92800 PUTEAUX</p>
+<p class="AmmAnnexeTitre1"><a name="RcpNumAutor"><span id='8._NUMERO(S)_D’AUTORISATION_DE_MISE_SUR_LE_MARCHE'>8. NUMERO(S) D’AUTORISATION DE MISE SUR LE MARCHE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpNumAutor" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpNumAutor' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 349 490 7 4 : 14 comprimés sous plaquettes (PVC/Aluminium)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 349 491 3 5 : 28 comprimés sous plaquettes (PVC/Aluminium)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 371 241 6 4 : 30 comprimés sous plaquettes (PVC/Aluminium)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 349 493 6 4 : 35 comprimés sous plaquettes (PVC/Aluminium)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 349 494 2 5 : 50 comprimés sous plaquettes (PVC/Aluminium)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 371 242 2 5 : 90 comprimés sous plaquettes (PVC/Aluminium)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>34009 349 495 9 3 : 100 comprimés sous plaquettes (PVC/Aluminium)</p>
+<p class="AmmAnnexeTitre1"><a name="RcpPremiereAutorisation"><span id='9._DATE_DE_PREMIERE_AUTORISATION/DE_RENOUVELLEMENT_DE_L’AUTORISATION'>9. DATE DE PREMIERE AUTORISATION/DE RENOUVELLEMENT DE L’AUTORISATION</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpPremiereAutorisation" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpPremiereAutorisation' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte style='margin-bottom:6.0pt;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif;color:black'>[à compléter ultérieurement par le titulaire]</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDateRevision"><span id='10._DATE_DE_MISE_A_JOUR_DU_TEXTE'>10. DATE DE MISE A JOUR DU TEXTE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDateRevision" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDateRevision' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte style='margin-bottom:6.0pt;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif;color:black'>Juillet 2021.</span></p>
+<p class="AmmAnnexeTitre1"><a name="RcpDosimetrie"><span id='11._DOSIMETRIE'>11. DOSIMETRIE</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpDosimetrie" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpDosimetrie' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre1"><a name="RcpInstPrepRadioph"><span id='12._INSTRUCTIONS_POUR_LA_PREPARATION_DES_RADIOPHARMACEUTIQUES'>12. INSTRUCTIONS POUR LA PREPARATION DES RADIOPHARMACEUTIQUES</span></a><a class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage" aria-label="Redirection vers le haut de page" aria-describedby="tooltip-rpc-page-top-RcpInstPrepRadioph" href="#top"></a></p><span id='tooltip-rpc-page-top-RcpInstPrepRadioph' class='fr-tooltip fr-placement' role='tooltip' aria-hidden='true'>Redirection vers le haut de page</span>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<div style='border:none black 1.0pt;border-top:solid black 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<p class="AmmAnnexeTitre"><a name="RcpCondPrescription">CONDITIONS DE PRESCRIPTION ET DE DELIVRANCE</a></p>
+</div>
+<p class=AmmCorpsTexte>Liste I </p>
+</BODY>
+</HTML>
+
+      </div>
+      </div>
+</div>
+                </div>
+              
+
+              
+                              <div id="tabpanel-notice-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-notice"
+                     tabindex="0">
+                  <div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      <nav class="fr-sidemenu  fr-sidemenu--sticky-full-height" aria-labelledby="fr-sidemenu-title">
+        <div class="fr-sidemenu__inner">
+          <button role="button" class="fr-sidemenu__btn" aria-controls="menu-776" aria-expanded="false"
+                  aria-label="Menu principal : Notice"> Sommaire de la notice
+          </button>
+          <div class="fr-collapse" id="menu-776">
+            <ul class="fr-sidemenu__list">
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Dénomination_du_médicament"
+                     aria-label="Dénomination du médicament (Lien de redirection)">
+                    Dénomination du médicament
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Encadré"
+                     aria-label="Encadré (Lien de redirection)">
+                    Encadré
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#Que_contient_cette_notice_?"
+                     aria-label="Que contient cette notice ? (Lien de redirection)">
+                    Que contient cette notice ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#1._QU_EST-CE_QUE_LERCAN_10_mg,_comprimé_pelliculé_sécable_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?"
+                     aria-label="1. QU’EST-CE QUE LERCAN 10 mg, comprimé pelliculé sécable ET DANS QUELS CAS EST-IL UTILISE ? (Lien de redirection)">
+                    1. QU’EST-CE QUE LERCAN 10 mg, comprimé pelliculé sécable ET DANS QUELS CAS EST-IL UTILISE ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_LERCAN_10_mg,_comprimé_pelliculé_sécable_?"
+                     aria-label="2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE LERCAN 10 mg, comprimé pelliculé sécable ? (Lien de redirection)">
+                    2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE LERCAN 10 mg, comprimé pelliculé sécable ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#3._COMMENT_PRENDRE_LERCAN_10_mg,_comprimé_pelliculé_sécable_?"
+                     aria-label="3. COMMENT PRENDRE LERCAN 10 mg, comprimé pelliculé sécable ? (Lien de redirection)">
+                    3. COMMENT PRENDRE LERCAN 10 mg, comprimé pelliculé sécable ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?"
+                     aria-label="4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ? (Lien de redirection)">
+                    4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#5._COMMENT_CONSERVER_LERCAN_10_mg,_comprimé_pelliculé_sécable_?"
+                     aria-label="5. COMMENT CONSERVER LERCAN 10 mg, comprimé pelliculé sécable ? (Lien de redirection)">
+                    5. COMMENT CONSERVER LERCAN 10 mg, comprimé pelliculé sécable ?
+                  </a>
+                </li>
+                              <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS"
+                     aria-label="6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS (Lien de redirection)">
+                    6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS
+                  </a>
+                </li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row--right fr-col-md fr-mb-7v fr-no-print print-div">
+        <button aria-label="Imprimer fiche info du médicament : LERCAN 10 mg, comprimé pelliculé sécable - Médicament  - BDPM" class="fr-link print-button">
+          <span aria-hidden="true" class="fr-icon-printer-fill"></span>
+          <span class="sr-only" rel="noopener noreferrer">Imprimer</span>
+        </button>
+      </div>
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!-- template_9 -->
+<HTML>
+  <HEAD>
+    
+    <META name="organization" content="ANSM : Agence Nationale de Sécurité du Médicament et des Produit de santé">
+    <META name="description" content="Notice patient">
+    <META name="keywords" content="LERCAN 10 mg, comprimé pelliculé sécable, Médicament, spécialité pharmaceutique, RCP, Notice, Dénomination, Forme pharmaceutique, Indications, Contre-indications, Effets secondaires">
+    <TITLE>Notice patient</TITLE>
+    
+  </HEAD>
+  <BODY>
+
+<p class="DateNotif">ANSM - Mis à jour le : 06/02/2025</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bDenomination"><span id='Dénomination_du_médicament'>Dénomination du médicament</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bDenomination"></a>
+        <span id="tooltip-notice-page-top-Ann3bDenomination" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>LERCAN 10 mg, comprimé pelliculé sécable</p>
+<p class=AmmCorpsTexteGras align=center style='text-align:center'>Chlorhydrate de lercanidipine</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bEncadre"><span id='Encadré'>Encadré</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bEncadre"></a>
+        <span id="tooltip-notice-page-top-Ann3bEncadre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras><span lang=FR-BE>Veuillez lire attentivement cette notice avant de prendre ce médicament car elle contient des informations importantes pour vous.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Gardez cette notice. Vous pourriez avoir besoin de la relire.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous avez d’autres questions, interrogez votre médecin, ou votre pharmacien.</span></p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres personnes. Il pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.</span></p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span><span lang=FR-BE>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice</span><span lang=FR-BE>. </span><span lang=fr>Voir rubrique 4</span>.</p>
+    <p class="AmmNoticeTitre1">
+        <a name="Ann3bSomm"><span id='Que_contient_cette_notice_?'>Que contient cette notice ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-notice-page-top-Ann3bSomm"></a>
+        <span id="tooltip-notice-page-top-Ann3bSomm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>1. Qu'est-ce que LERCAN 10 mg, comprimé pelliculé sécable et dans quels cas est-il utilisé ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>2. Quelles sont les informations à connaître avant de prendre LERCAN 10 mg, comprimé pelliculé sécable ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>3. Comment prendre LERCAN 10 mg, comprimé pelliculé sécable ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>4. Quels sont les effets indésirables éventuels ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'>5. Comment conserver LERCAN 10 mg, comprimé pelliculé sécable ?</p>
+<p class=AmmCorpsTexte style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-indent:-14.2pt'><span style='color:black'>6. Contenu de l’emballage et autres informations.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bQuestceque"><span id='1._QU_EST-CE_QUE_LERCAN_10_mg,_comprimé_pelliculé_sécable_ET_DANS_QUELS_CAS_EST-IL_UTILISE_?'>1. QU’EST-CE QUE LERCAN 10 mg, comprimé pelliculé sécable ET DANS QUELS CAS EST-IL UTILISE ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bQuestceque"></a>
+        <span id="tooltip-annexe-page-top-Ann3bQuestceque" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte>Classe pharmacothérapeutique ANTAGONISTE CALCIQUE / ANTIHYPERTENSEUR - code ATC : C08CA13.</p>
+<p class=AmmCorpsTexte>LERCAN contient du chlorhydrate de lercanidipine qui est un antihypertenseur de la famille des antagonistes calciques.</p>
+<p class=AmmCorpsTexte>LERCAN est utilisé dans le traitement de la pression sanguine trop élevée, aussi appelée hypertension artérielle, chez les adultes de plus de 18 ans (il n’est pas recommandé chez les enfants de moins de 18 ans). </p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bInfoNecessaires"><span id='2._QUELLES_SONT_LES_INFORMATIONS_A_CONNAITRE_AVANT_DE_PRENDRE_LERCAN_10_mg,_comprimé_pelliculé_sécable_?'>2. QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE PRENDRE LERCAN 10 mg, comprimé pelliculé sécable ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bInfoNecessaires"></a>
+        <span id="tooltip-annexe-page-top-Ann3bInfoNecessaires" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexteGras>Ne prenez jamais LERCAN 10 mg, comprimé pelliculé sécable :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>si vous êtes allergique à la substance active ou à l’un des autres composants contenus dans ce médicament, mentionnés dans la rubrique 6.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous souffrez de certaines maladies cardiaques tels que :</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Obstacle à l’éjection du sang hors du cœur, </p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Insuffisance cardiaque non traitée,</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Angine de poitrine au repos ou s'aggravant progressivement à l’effort ou survenant plus souvent (angine de poitrine instable),</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Infarctus dans le mois précédent.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si avez une maladie sévère du foie.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si avez une maladie sévère du rein ou si vous êtes dialysé.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous prenez des médicaments qui inhibent le métabolisme du foie, comme :</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Des médicaments antifongiques (comme le kétoconazole ou l’itraconazole),</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Des antibiotiques de la famille des macrolides (comme l’érythromycine ou la clarithromycine),</p>
+<p class=AmmListePuces2><span style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>   </span></span>Des médicaments antiviraux (comme le ritonavir).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Si vous prenez de la ciclosporine (médicament utilisé après une greffe d’organe pour éviter le rejet)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Avec du pamplemousse ou du jus de pamplemousse.</p>
+<p class=AmmListePuces1> </p>
+<p class=AmmCorpsTexteGras>Avertissements et précautions</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Adressez-vous à votre médecin ou pharmacien avant de prendre LERCAN 10 mg, comprimé pelliculé sécable.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous avez un problème cardiaque</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous avez un problème hépatique ou rénal</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous êtes enceinte ou que vous allaitez, si vous pensez être enceinte ou planifiez une grossesse, informez votre médecin (voir section Grossesse, allaitement et fertilité).</span></p>
+<p class=AmmCorpsTexteGras>Enfants et adolescents</p>
+<p class=AmmCorpsTexte>L’efficacité et la sécurité de LERCAN chez les enfants de moins de 18 ans n'ont pas été établies.</p>
+<p class=AmmCorpsTexteGras>Autres médicaments et LERCAN 10 mg, comprimé pelliculé sécable</p>
+<p class=AmmCorpsTexte>Informez votre médecin ou pharmacien si vous prenez, avez récemment pris ou pourriez prendre tout autre médicament. En cas de prise concomitante, l’effet de ce médicament ou des autres médicaments peut être modifié ou des effets indésirables peuvent apparaître plus fréquemment (voir section 2).</p>
+<p class=AmmCorpsTexte>Informez votre médecin ou pharmacien si vous prenez un des médicaments suivants :</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>De la phénytoïne, du phénobarbital ou de la carbamazépine (médicaments utilisés dans l’épilepsie),</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>De la rifampicine (utilisée dans la tuberculose)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>De l’astémizole ou de la terfénadine (médicaments utilisés dans les allergies)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>De l’amiodarone, de la quinidine ou du sotalol (médicaments utilisés pour ralentir le rythme cardiaque)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Du midazolam (médicament pour dormir)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>De la digoxine (utilisée dans les problèmes cardiaques)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Des bêta-bloquants comme le métoprolol (utilisé pour diminuer la pression artérielle, dans l’insuffisance cardiaque ou des troubles du rythme cardiaque)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>De la cimétidine (dose supérieure à 800 mg par jour, utilisée dans le traitement des ulcères, indigestions ou brûlures d’estomac)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>De la simvastatine (utilisée pour diminuer le taux de cholestérol sanguin)</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>D’autres médicaments antihypertenseurs.</p>
+<p class=AmmListePuces1 style='margin-left:0cm;text-indent:0cm'> </p>
+<p class=AmmCorpsTexteGras>LERCAN 10 mg, comprimé pelliculé sécable avec des aliments, boissons et de l’alcool</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Un repas riche en graisses augmente de façon significative la concentration sanguine de ce médicament (voir section 3).</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>L’alcool peut augmenter l’effet de LERCAN. Ne buvez pas d’alcool pendant le traitement par LERCAN.</p>
+<p class=AmmListePuces1><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>LERCAN ne doit pas être pris avec du pamplemousse ou du jus de pamplemousse (car ils peuvent augmenter l’effet hypotenseur) (voir section 2).</p>
+<p class=AmmListePuces1 style='margin-left:0cm;text-indent:0cm'> </p>
+<p class=AmmCorpsTexteGras>Grossesse, allaitement et fertilité</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous êtes enceinte ou que vous allaitez, si vous pensez être enceinte ou planifiez une grossesse, <u>si vous n'utilisez aucune méthode de contraception</u>, demandez conseil à votre médecin ou pharmacien avant de prendre ce médicament.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>LERCAN n'est pas recommandé si vous êtes enceinte.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Il ne doit pas être utilisé pendant l'allaitement.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Il n’existe pas de données sur l’utilisation de LERCAN chez la femme enceinte ou allaitante.</span></p>
+<p class=AmmCorpsTexteGras>Conduite de véhicules et utilisation de machines</p>
+<p class=AmmCorpsTexte>Si vous avez des sensations vertigineuses, une faiblesse ou une somnolence, ne conduisez pas de véhicules ou n’utilisez pas de machines.</p>
+<p class=AmmCorpsTexteGras>LERCAN 10 mg, comprimé pelliculé sécable contient du lactose</p>
+<p class=AmmCorpsTexte>Si votre médecin vous a dit que vous avez une intolérance à certains sucres, contactez votre médecin avant de prendre ce médicament.</p>
+<p class=AmmCorpsTexte><b>Sodium</b></p>
+<p class=AmmCorpsTexte>Ce médicament contient moins de 1 mmol de sodium (23 mg) par comprimé de 10 mg, c’est-à-dire qu’il est essentiellement « sans sodium ».</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bCommentPrendre"><span id='3._COMMENT_PRENDRE_LERCAN_10_mg,_comprimé_pelliculé_sécable_?'>3. COMMENT PRENDRE LERCAN 10 mg, comprimé pelliculé sécable ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bCommentPrendre"></a>
+        <span id="tooltip-annexe-page-top-Ann3bCommentPrendre" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte>Veillez à toujours prendre ce médicament en suivant exactement les indications de votre médecin. Vérifiez auprès de votre médecin ou pharmacien en cas de doute.</p>
+<p class=AmmCorpsTexte>Adultes : <span lang=FR-BE>La dose recommandée est de 10 mg par jour, en une prise. Dans certains cas, la posologie peut être d'un demi-comprimé par jour et, dans d'autres cas, elle peut être de 2 comprimés par jour (voir section 2).</span></p>
+<p class=AmmCorpsTexteGras>Utilisation chez les enfants et les adolescents</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ce médicament ne doit pas utilisé chez les enfants de moins de 18 ans.</span></p>
+<p class=AmmCorpsTexteGras>Utilisation dans la population âgée</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Il n’est pas nécessaire d’adapter la posologie. Cependant, une prudence particulière doit être mise en place lors de l’initiation du traitement.</span></p>
+<p class=AmmCorpsTexteGras>Patients ayant des problèmes hépatiques ou rénaux</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Une prudence particulière doit être mise en place lors de l’initiation du traitement. L’augmentation de posologie à 20 mg doit être envisagée avec précaution.</span></p>
+<p class=AmmCorpsTexte><b><u><span lang=FR-BE>Mode et voie d'administration</span></u></b></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Voie orale.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Les comprimés doivent être pris chaque jour à la même heure, de préférence le matin, 15 minutes avant le petit déjeuner. Les comprimés sont à avaler avec un peu d’eau. </span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Le comprimé peut être divisé en doses égales.</span></p>
+<p class=AmmCorpsTexteGras>Si vous avez pris plus de LERCAN 10 mg, comprimé pelliculé sécable que vous n’auriez dû</p>
+<p class=AmmCorpsTexte>Ne dépassez pas la dose prescrite. Si vous avez pris plus de comprimés que la dose prescrite, parlez-en à votre médecin ou allez sans attendre à l’hôpital. Prenez la boite avec vous. Si vous prenez une dose trop importante, cela peut causer une baisse trop importante de la pression artérielle et des battements cardiaques irréguliers ou trop rapides.</p>
+<p class=AmmCorpsTexteGras>Si vous oubliez de prendre LERCAN 10 mg, comprimé pelliculé sécable</p>
+<p class=AmmCorpsTexte>Si vous avez oublié de prendre un comprimé, continuez le traitement le jour suivant sans essayer de rattraper cet oubli.</p>
+<p class=AmmCorpsTexte>Ne prenez pas une double dose pour compenser le comprimé que vous avez oublié de prendre.</p>
+<p class=AmmCorpsTexteGras>Si vous arrêtez de prendre LERCAN 10 mg, comprimé pelliculé sécable</p>
+<p class=AmmCorpsTexte>Si vous arrêtez de prendre LERCAN, votre pression artérielle va augmenter, consultez votre médecin avant d’arrêter votre traitement.</p>
+<p class=AmmCorpsTexte style='margin-top:12.0pt'>Si vous avez d’autres questions sur l’utilisation de ce médicament, demandez plus d’informations à votre médecin, à votre pharmacien.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEffetsIndesirables"><span id='4._QUELS_SONT_LES_EFFETS_INDESIRABLES_EVENTUELS_?'>4. QUELS SONT LES EFFETS INDESIRABLES EVENTUELS ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEffetsIndesirables"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEffetsIndesirables" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte>Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais ils ne surviennent pas systématiquement chez tout le monde.</p>
+<p class=AmmCorpsTexte><b><span lang=FR-BE>Les effets indésirables suivants peuvent être graves.</span></b></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Si vous constatez un de ces effets indésirables, contactez immédiatement votre médecin :</span></p>
+<p class=AmmCorpsTexte><u><span lang=FR-BE>Rare</span></u><span lang=FR-BE> (pouvant affecter jusqu'à 1 personne sur 1000) : angine de poitrine (oppression thoracique due à un manque de sang dans votre cœur), réactions allergiques (symptômes incluant démangeaisons, éruptions cutanées, urticaire), évanouissement.</span></p>
+<p class=AmmCorpsTexte><span style='color:#222222'>Les patients souffrant d'angine de poitrine pré-existante peuvent présenter une fréquence, une durée ou une sévérité plus importante de ces crises avec la famille de médicaments de LERCAN. Des cas isolés de crise cardiaque peuvent être observés.</span></p>
+<p class=AmmCorpsTexte><b><span style='color:#222222'>Autres effets secondaires possibles :</span></b></p>
+<p class=AmmCorpsTexte><u><span style='color:#222222'>Fréquents</span></u><span style='color:#222222'> (pouvant affecter jusqu'à 1 personne sur 10) : maux de tête, rythme cardiaque augmenté, battements cardiaques rapides ou irréguliers (palpitations), rougeur soudaine du visage, du cou ou de la poitrine (bouffées de chaleur), gonflement des chevilles.</span></p>
+<p class=AmmCorpsTexte><u><span style='color:#222222'>Peu fréquents</span></u><span style='color:#222222'> (pouvant affecter jusqu'à 1 personne sur 100) : sensations vertigineuse, diminution importante de la pression artérielle, brûlures d'estomac, nausées, douleurs à l'estomac, éruptions cutanées, démangeaisons, douleurs musculaires, augmentation du volume d'urine, sensation de faiblesse ou de fatigue.</span></p>
+<p class=AmmCorpsTexte><u><span style='color:#222222'>Rares</span></u><span style='color:#222222'> (pouvant affecter jusqu'à 1 personne sur 1000) : somnolence, vomissements, diarrhées, urticaire, augmentation du nombre de fois où l'on urine, douleur à la poitrine.</span></p>
+<p class=AmmCorpsTexte><u><span style='color:#222222'>Fréquence inconnue</span></u><span style='color:#222222'> (elle ne peut pas être estimée à partir des données disponibles) : inflammation des gencives, modifications de la fonction hépatique (détectée par des tests sanguins), liquide trouble (lors de dialyses par un tube dans l'abdomen), gonflement du visage, des lèvres, de la langue ou la gorge qui peut causer des difficultés à respirer ou à avaler.</span></p>
+<p class=AmmCorpsTexteGras>Déclaration des effets secondaires</p>
+<p class=AmmCorpsTexte>Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice. Vous pouvez également déclarer les effets indésirables directement via le système national de déclaration : <span lang=fr>Agence nationale de sécurité du médicament et des produits de santé (ANSM) et réseau des Centres Régionaux de Pharmacovigilance - </span>Site internet<span lang=fr>:<span style='color:red'> </span></span><a href="http://www.signalement-sante.gouv.fr">www.signalement-sante.gouv.fr</a></p>
+<p class=AmmCorpsTexte>En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la sécurité du médicament.</p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bConservation"><span id='5._COMMENT_CONSERVER_LERCAN_10_mg,_comprimé_pelliculé_sécable_?'>5. COMMENT CONSERVER LERCAN 10 mg, comprimé pelliculé sécable ?</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bConservation"></a>
+        <span id="tooltip-annexe-page-top-Ann3bConservation" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class=AmmCorpsTexte>Tenir ce médicament hors de la vue et de la portée des enfants.</p>
+<p class=AmmCorpsTexte><span lang=FR-BE>N’utilisez pas ce médicament après la date de péremption indiquée sur la boite ou sur la plaquette blister après EXP. La date de péremption fait référence au dernier jour de ce mois.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Conserver ce médicament dans la boite, à l’abri de la lumière.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ne jetez aucun médicament au tout-à-l’égout <span style='color:black'>ou avec </span>les ordures ménagères. Demandez à votre pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront à protéger l’environnement.</span></p>
+    <p class="AmmAnnexeTitre1">
+        <a name="Ann3bEmballage"><span id='6._CONTENU_DE_L_EMBALLAGE_ET_AUTRES_INFORMATIONS'>6. CONTENU DE L’EMBALLAGE ET AUTRES INFORMATIONS</span></a>
+        <a href="#top" class="fr-link fr-icon-arrow-up-fill fr-link--icon-right lien-retour-hautdepage"
+           aria-label="Redirection vers le haut de page"
+           aria-describedby="tooltip-annexe-page-top-Ann3bEmballage"></a>
+        <span id="tooltip-annexe-page-top-Ann3bEmballage" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Redirection vers le haut de page
+        </span>
+    </p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">Ce que contient LERCAN 10 mg, comprimé pelliculé sécable</a></p>
+<p class=AmmListePuces1 style='margin-top:0cm;margin-right:0cm;margin-bottom: 6.0pt;margin-left:17.85pt;text-indent:-17.85pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>La substance active est :</p>
+<p class=AmmComposition style='margin-top:0cm;margin-right:0cm;margin-bottom: 0cm;margin-left:17.85pt;margin-bottom:.0001pt'>Chlorhydrate de lercanidipine............................................................................................ 10 mg</p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt'>(équivalent à 9,4 mg de lercanidipine)</p>
+<p class=AmmCorpsTexte align=center style='text-align:center'>Pour un comprimé pelliculé sécable.</p>
+<p class=AmmListePuces1><span lang=FR-BE style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>         </span></span>Les autres excipients sont : </p>
+<p class=AmmCorpsTexte style='margin-left:18.0pt'><span lang=FR-BE>Lactose monohydraté, cellulose microcristalline, carboxyméthylamidon sodique, povidone K30, stéarate de magnésium.</span></p>
+<p class=AmmListePuces1 style='text-indent:0cm'><u>Pelliculage </u>: hypromellose, talc, dioxyde de titane (E171), macrogol 6000, oxyde de fer (E172).</p>
+<p class="AmmAnnexeTitre2"><a name="RcpEmballage">Qu’est-ce que LERCAN 10 mg, comprimé pelliculé sécable et contenu de l’emballage extérieur</a></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Ce médicament se présente sous forme de comprimé pelliculé jaune, rond, biconvexe de 6,5 mm et sécable sur un côté.</span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Boîte de 14, 28, 30, 35, 50, 90 ou 100 comprimés sous plaquettes (PVC/Aluminium). </span></p>
+<p class=AmmCorpsTexte><span lang=FR-BE>Toutes les présentations peuvent ne pas être commercialisées.</span></p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bTituAMM">Titulaire de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>BOUCHARA-RECORDATI</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>TOUR HEKLA</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>52 AVENUE DU GENERAL DE GAULLE</p>
+<p class=AmmCorpsTexte>92800 PUTEAUX</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bExploitAMM">Exploitant de l’autorisation de mise sur le marché</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>LABORATOIRES BOUCHARA-RECORDATI</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>TOUR HEKLA</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>52 AVENUE DU GENERAL DE GAULLE</p>
+<p class=AmmCorpsTexte>92800 PUTEAUX</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bFab">Fabricant</a></p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>LABORATOIRES BOUCHARA-RECORDATI</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>PARC MECATRONIC</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>03410 SAINT VICTOR</p>
+<p class=AmmCorpsTexte style='margin-top:6.0pt'>OU</p>
+<p class=AmmCorpsTexteGras style='margin-bottom:0cm;margin-bottom:.0001pt'>RECORDATI INDUSTRIA CHIMICA E FARMACEUTICA S.p.A.</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>VIA MATTEO CIVITALI 1</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>20148 MILAN</p>
+<p class=AmmCorpsTexte style='margin-bottom:0cm;margin-bottom:.0001pt'>ITALIE</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bNomsMediEEE">Noms du médicament dans les Etats membres de l'Espace Economique Européen</a></p>
+<p class=AmmCorpsTexte>Sans objet.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bContenu">La dernière date à laquelle cette notice a été révisée est :</a></p>
+<p class=AmmCorpsTexte><span style='color:#385623'>[à compléter ultérieurement par le titulaire]</span></p>
+<p class=AmmCorpsTexteGras>{mois AAAA}.</p>
+<p class="AmmAnnexeTitre2"><a name="Ann3bAutres">Autres</a></p>
+<p class=AmmCorpsTexte>Des informations détaillées sur ce médicament sont disponibles sur le site Internet de l’ANSM (France).</p>
+<p class=AmmCorpsTexte> </p>
+</BODY>
+</HTML>
+    </div>
+  </div>
+</div>
+                </div>
+                          </div>
+          
+                    <div class="fr-grid-row link-haut-page fr-no-print">
+            <div class="fr-col">
+              <p class="aligncenter">
+                <a class="fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#top">Haut de page</a>
+              </p>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fr-footer" role="contentinfo" id="footer-8605">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+                <a id="footer-operator" href="/"
+           role="link"
+           aria-describedby="tooltip-footer-home"
+           aria-label="Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS"
+        >
+          <p class="fr-logo" aria-label="Logo du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS">
+            MINISTÈRE
+            <br>DU TRAVAIL, DE LA SANTÉ,
+            <br>DES SOLIDARITÉS
+            <br>ET DES FAMILLES
+          </p>
+        </a>
+        <span id="tooltip-footer-home" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+          Retour à la page d'accueil de la plateforme Base de Données Publique des Médicaments du MINISTÈRE DU TRAVAIL, DE LA SANTÉ, DES SOLIDARITÉS
+        </span>
+      </div>
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a target="_blank"
+               role="link"
+               rel="noopener external"
+               aria-describedby="tooltip-footer-legifrance"
+               aria-label="Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8606"
+               class="fr-footer__content-link"
+               href="https://legifrance.gouv.fr"
+            >legifrance.gouv.fr</a>
+            <span id="tooltip-footer-legifrance" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme legifrance.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               aria-describedby="tooltip-footer-gouvernement"
+               aria-label="Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre"
+               id="footer__content-link-8607"
+               class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+            <span id="tooltip-footer-gouvernement" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme gouvernement.fr – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-service-public"
+               aria-label="Lien de redirection vers la plateforme service-public.fr – nouvelle fenêtre"
+               id="footer__content-link-8608"
+               class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+            <span id="tooltip-footer-service-public" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme service-public – nouvelle fenêtre
+            </span>
+          </li>
+          <li class="fr-footer__content-item">
+            <a target="_blank" rel="noopener external"
+               role="link"
+               aria-describedby="tooltip-footer-data-gouv"
+               aria-label="Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre"
+               id="footer__content-link-8609" class="fr-footer__content-link"
+               href="https://data.gouv.fr">data.gouv.fr</a>
+            <span id="tooltip-footer-data-gouv" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+              Lien de redirection vers la plateforme data.gouv.fr – nouvelle fenêtre
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__partners">
+      <p>Nos partenaires</p>
+      <div class="fr-footer__partners-logos">
+        <div class="fr-footer__partners-sub">
+          <ul aria-labelledby="navigation-footer-parteners">
+            <li>
+              <a class="fr-footer__partners-link" href="https://ansm.sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-partener-ansm"
+              >
+                <img src="/build/dsfr/images_site/logo/ANSM_logo.svg"
+                     id="navigation-footer-parteners-logo-ansm"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé (ANSM)"
+                     aria-label="Lien de redirection vers le site internet de l'Agence Nationale de Sécurité du Médicament et des Produits de Santé - ansm.sante.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ansm" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.has-sante.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-has"
+              >
+                <img
+                  src="/build/dsfr/images_site/logo/Haute_Autorite_de_Sante_Logo.svg"
+                  id="navigation-footer-parteners-logo-haute-autorite-de-sante"
+                  class="fr-footer__partners__logo-size"
+                  alt="Logo Haute Autorité de Santé"
+                  aria-label="Lien de redirection vers le site internet d'Haute Autorité de Sante - has-sante.fr"
+                  aria-hidden="true"
+                  style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-has" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de la Haute Autorité de santé (HAS)- nouvelle fenêtre
+              </span>
+            </li>
+            <li>
+              <a class="fr-footer__partners-link" href="https://www.ameli.fr/"
+                 role="link" target="_blank" rel="noopener external"
+                 aria-label="Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre"
+                 aria-describedby="tooltip-footer-ameli"
+              >
+                <img src="/build/dsfr/images_site/logo/assurance-maladie-logo.svg"
+                     id="navigation-footer-parteners-logo-assurance-maladie"
+                     class="fr-footer__partners__logo-size fr-responsive-img"
+                     alt="Logo de l'assurance Maladie"
+                     aria-label="Lien de redirection vers le site internet d'Assurance Maladie - ameli.fr"
+                     role="img" aria-hidden="true"
+                     style="box-shadow: none !important;  width: 160px !important; height: 90px !important;"
+                />
+              </a>
+              <span id="tooltip-footer-ameli" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+                Lien de redirection vers la plateforme de l'Assurance Maladie (AMELI)- nouvelle fenêtre
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list" aria-labelledby="navigation-footer-bottom-link">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-Accessibilite"
+             role="link"
+             aria-label="Lien de redirection vers la page Accessibilité"
+             aria-describedby="tooltip-footer-accessibility-link"
+             href="/accessibilite">Accessibilité : partiellement conforme</a>
+          <span id="tooltip-footer-accessibility-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Accessibilité
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-mentions-legales"
+             href="/mentions-legales"
+             role="link"
+             aria-label="Lien de redirection vers la page des Mentions Légales"
+             aria-describedby="tooltip-footer-mentions-legales-link"
+          >Mentions légales</a>
+          <span id="tooltip-footer-mentions-legales-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Mentions Légales
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-donnee-personnelles"
+             href="/donnees-personnelles"
+             role="link"
+             aria-label="Lien de redirection vers la page des Données personnelles"
+             aria-describedby="tooltip-footer-donnee-personnelles-link"
+          >Données personnelles</a>
+          <span id="tooltip-footer-donnee-personnelles-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page des Données personnelles
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" id="navigation-footer-bottom-link-plan-du-site"
+             href="/plan"
+             role="link"
+             aria-label="Lien de redirection vers la page Plan du site"
+             aria-describedby="tooltip-footer-plan-du-site-link"
+          >Plan du site</a>
+          <span id="tooltip-footer-plan-du-site-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers la page Plan du site
+          </span>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-theme-fill" id="navigation-footer-bottom-link-parametres-affichage" href="#"
+             aria-controls="fr-theme-modal"
+             data-fr-opened="false"
+             style="z-index: 1600"
+             aria-label="Paramètres d'affichage"
+             aria-describedby="tooltip-footer-parametres-affichage-link"
+             id="button-8615">Paramètres d&#039;affichage</a>
+          <span id="tooltip-footer-parametres-affichage-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Paramètres d'affichage
+          </span>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a
+            href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" role="link" target="_blank"
+            rel="noopener external"
+            aria-describedby="tooltip-footer-licence-link"
+            aria-label="Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre"
+          >licence etalab-2.0</a>
+          <span id="tooltip-footer-licence-link" class="fr-tooltip fr-placement" role="tooltip" aria-hidden="true">
+            Lien de redirection vers les mentions de la licence Etalab - nouvelle fenêtre
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">
+              Paramètres d’affichage
+            </h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choisissez un thème pour personnaliser l’apparence du site.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme" tabindex="1">
+                    <label class="fr-label" for="fr-radios-theme-light">
+                      Thème clair
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/sun.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">
+                      Thème sombre
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/environment/moon.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group fr-radio-rich">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      Système
+                      <span
+                        class="fr-hint-text">Utilise les paramètres système</span>
+                    </label>
+                    <div class="fr-radio-rich__pictogram">
+                      <svg aria-hidden="true" class="fr-artwork fr-svg-modal" viewBox="0 0 80 80">
+                        <use class="fr-artwork-decorative"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-decorative"></use>
+                        <use class="fr-artwork-minor"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-minor"></use>
+                        <use class="fr-artwork-major"
+                             href="/build/dsfr/artwork/pictograms/system/system.svg#artwork-major"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+  
+          <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-remboursable" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-remboursable">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Remboursable</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament peut être pris en charge par les organismes d&#039;Assurance Maladie, s&#039;il est prescrit dans le cadre d&#039;une indication remboursable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-ordonnance" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-ordonnance">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Sur ordonnance uniquement</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est délivré uniquement sur ordonnance, et doit donc être prescrit par un professionnel de santé (médecin, sage-femme, dentiste).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-hospitalier" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-hospitalier">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Usage hospitalier</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament est réservé à l&#039;usage hospitalier et n&#039;est donc pas disponible dans les pharmacies de ville.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+        <dialog aria-labelledby="fr-modal-tag--title" id="fr-modal-tag-generique" class="fr-modal">
+    <div class="fr-container fr-container--fluid fr-container-sm">
+      <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-4">
+          <div class="fr-modal__body">
+            <div class="fr-modal__header">
+              <button class="fr-btn--close fr-btn" aria-controls="fr-modal-tag-generique">Fermer</button>
+            </div>
+            <div class="fr-modal__content">
+              <h1 id="fr-modal-tag--title" class="fr-modal__title">Générique</h1>
+              <p id="fr-modal-tag--content">Cela signifie que le médicament fait partie d&#039;un groupe générique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  </body>
+</html>

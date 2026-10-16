@@ -1,7 +1,6 @@
 import Header from '../components/Header'
 import SafetyNotice from '../components/SafetyNotice'
 import LanguageSelector from '../components/LanguageSelector'
-import { API_BASE } from '../lib/api'
 import { voixDisponible } from '../lib/voix'
 import { useConversations } from '../lib/conversationsContexte'
 import { useLanguage } from '../lib/languageContexte'
@@ -57,14 +56,6 @@ export default function Settings() {
           <button className="bouton-doux bouton-danger" onClick={toutEffacer}>
             {t('param_tout_effacer')}
           </button>
-        </div>
-
-        <div className="reglage">
-          <div>
-            <h4>{t('param_api_titre')}</h4>
-            <p>{t('param_api_desc')} {API_BASE}.</p>
-          </div>
-          <span className="marqueur marqueur-bleu">API REST</span>
         </div>
       </div>
 
