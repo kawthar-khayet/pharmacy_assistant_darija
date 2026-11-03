@@ -34,12 +34,13 @@ VECTEUR = [1.0, 0.0, 0.0]
 def pas_de_vrai_llm(monkeypatch):
     """Garde-fou : un test qui oublie de simuler le LLM (fixture `llm`) echoue
     au lieu de consommer le quota d'un fournisseur ; idem pour le modele
-    d'embeddings, long a charger."""
+    d'embeddings et pour EasyOCR, longs a charger."""
     import nlp.llm
     import nlp.moteur
     import nlp.rag.comprendre
     import nlp.rag.index
     import nlp.rag.recherche
+    import nlp.vision.ocr
 
     def refuser(*args, **kwargs):
         raise AssertionError("appel LLM reel pendant un test : utiliser la fixture `llm`")
@@ -47,11 +48,15 @@ def pas_de_vrai_llm(monkeypatch):
     def refuser_modele(*args, **kwargs):
         raise AssertionError("modele d'embeddings charge pendant un test : utiliser la fixture `index`")
 
+    def refuser_ocr(*args, **kwargs):
+        raise AssertionError("modele EasyOCR charge pendant un test : utiliser la fixture `ocr`")
+
     monkeypatch.setattr(nlp.llm, "appeler_llm", refuser)
     monkeypatch.setattr(nlp.moteur, "appeler_llm", refuser)
     monkeypatch.setattr(nlp.rag.comprendre, "appeler_llm", refuser)
     monkeypatch.setattr(nlp.rag.index, "modele", refuser_modele)
     monkeypatch.setattr(nlp.rag.recherche, "vecteur_question", lambda question: VECTEUR)
+    monkeypatch.setattr(nlp.vision.ocr, "_charger", refuser_ocr)
     # ni reponse retenue d'un test a l'autre, ni lecture du site des gardes
     nlp.moteur.cache.vider()
     monkeypatch.setattr(nlp.rag.recherche, "garde_du_jour", lambda ville: None)
@@ -138,6 +143,23 @@ def client(api, monkeypatch):
     # chaque test repart d'une memoire de conversation vide
     monkeypatch.setattr(api, "SESSIONS", OrderedDict())
     return TestClient(api.app)
+
+
+@pytest.fixture
+def ocr(monkeypatch):
+    """Simule l'OCR : ocr(["DOLIPRANE", "1000 MG"], langues=["fr"]) renvoie ces
+    lignes au lieu de charger EasyOCR. Patche les deux noms lies a la fonction
+    (son module d'origine et celui d'api.main, qui l'a importee), comme pour
+    `llm` ci-dessus."""
+    import api.main
+    import nlp.vision.ocr
+
+    def definir(textes, langues=None):
+        faux = lambda image: {"textes": textes, "langues": langues or []}
+        monkeypatch.setattr(nlp.vision.ocr, "extraire_texte", faux)
+        monkeypatch.setattr(api.main, "extraire_texte", faux)
+
+    return definir
 
 
 @pytest.fixture(scope="session")

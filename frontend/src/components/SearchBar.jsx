@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import Icon from './Icon'
 import { useDictee } from '../lib/voix'
 import { useLanguage } from '../lib/languageContexte'
 
@@ -52,8 +53,12 @@ export default function SearchBar({
   avecVoix = true,
   enCours = false,
   autoFocus = false,
+  // photo d'une boite : onPhoto(fichier) ; le bouton n'apparait que s'il est fourni
+  onPhoto,
+  photoEnCours = false,
 }) {
   const champRef = useRef(null)
+  const photoRef = useRef(null)
   const { t, estArabe } = useLanguage()
 
   const { etat, erreur, avertissement, basculer, disponible } = useDictee({
@@ -114,6 +119,32 @@ export default function SearchBar({
         )}
 
         <div className="champ-actions">
+          {onPhoto && (
+            <>
+              <input
+                ref={photoRef}
+                type="file"
+                accept="image/jpeg,image/png,image/webp"
+                capture="environment"
+                hidden
+                onChange={(e) => {
+                  const f = e.target.files?.[0]
+                  e.target.value = ''
+                  if (f) onPhoto(f)
+                }}
+              />
+              <button
+                type="button"
+                className={`rond ${photoEnCours ? 'rond-attente' : ''}`}
+                onClick={() => photoRef.current?.click()}
+                disabled={enCours || photoEnCours}
+                aria-label={photoEnCours ? t('chat_photo_en_cours') : t('chat_photo')}
+                title={photoEnCours ? t('chat_photo_en_cours') : t('chat_photo')}
+              >
+                {photoEnCours ? <span className="mini-roue" aria-hidden="true" /> : <Icon nom="appareil" taille={17} epaisseur={2} />}
+              </button>
+            </>
+          )}
           {avecVoix && disponible && (
             <button
               type="button"

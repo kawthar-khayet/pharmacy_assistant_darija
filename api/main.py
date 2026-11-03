@@ -7,6 +7,7 @@ reponse avec ces fiches seulement (voir nlp/moteur.py).
     POST /chat           une question -> une reponse
     POST /chat/audio     voix -> Whisper (local) -> /chat
     POST /transcription  voix -> texte, pour remplir le champ de saisie
+    POST /reconnaissance photo de boite -> OCR -> memes resultats que /medicaments
     GET  /medicaments    recherche pour la page Medicaments
     GET  /pharmacies     recherche pour la page Pharmacies
     GET  /pharmacies/garde   pharmacies de garde du jour dans une ville
@@ -35,9 +36,11 @@ from nlp.linking.pharmacies import chercher_pharmacie, distance_km, fiche
 from nlp.moteur import IndexAbsent, Session, repondre
 from nlp.outils.garde import garde_du_jour
 from nlp.outils.pharmacies import plus_proches, type_ouverture
-from nlp.outils.resolution import matcher
+from nlp.outils.resolution import matcher, reconnaitre_depuis_lignes
 from nlp.rag.index import collection, vecteur_question
 from nlp.reponse.langues import LANGUE_PAR_DEFAUT
+from nlp.vision.ocr import extraire_texte
+from nlp.vision.pretraitement import ErreurImage, pretraiter
 
 # « Pret » par defaut : sans demarrage d'uvicorn (tests), il n'y a rien a attendre.
 # Au demarrage de l'API, il repasse a « pas pret » le temps de _precharger.
@@ -126,6 +129,14 @@ class ChatResponse(BaseModel):
 
 class ChatAudioResponse(ChatResponse):
     transcription: TranscriptionResponse
+
+
+class ReconnaissanceResponse(BaseModel):
+    reussite: bool                   # False : aucun texte lu sur la photo
+    texte_detecte: list[str] = []
+    langues: list[str] = []
+    resultats: list[dict] = []       # meme forme que GET /medicaments
+    message: str
 
 
 def telephone_txt(tel) -> str | None:
@@ -248,6 +259,18 @@ def _dci_du_match(match: dict) -> str | None:
     return None
 
 
+def _enrichir(resultats: list[dict]) -> list[dict]:
+    """Ajoute a chaque medicament ce que la page Medicaments affiche en plus du
+    matcher : classes ATC, et si une notice officielle existe -- evite a
+    l'interface un appel par resultat : elle ne charge la notice que du
+    medicament qu'on ouvre."""
+    for match in resultats:
+        dci = _dci_du_match(match)
+        match["classes_atc"] = donnees.classes_atc(dci)
+        match["securite_disponible"] = donnees.securite(dci) is not None
+    return resultats
+
+
 @app.get("/medicaments")
 def medicaments(q: str, dosage: str | None = None, limit: int = 12):
     """Recherche de medicaments par nom ou DCI, pour la page dediee : le meme
@@ -259,13 +282,38 @@ def medicaments(q: str, dosage: str | None = None, limit: int = 12):
     # Comme dans le chat : un candidat "non_fiable" ne ressemble pas vraiment a
     # la recherche ("Gran" pour "doliprane") et n'est jamais montre.
     resultats = [m for m in matcher().match(q, dosage=dosage, top_k=limit) if m["confidence"] != "non_fiable"]
-    for match in resultats:
-        dci = _dci_du_match(match)
-        match["classes_atc"] = donnees.classes_atc(dci)
-        # evite a l'interface un appel par resultat : elle ne charge la notice
-        # que du medicament qu'on ouvre
-        match["securite_disponible"] = donnees.securite(dci) is not None
-    return {"query": q, "resultats": resultats}
+    return {"query": q, "resultats": _enrichir(resultats)}
+
+
+@app.post("/reconnaissance", response_model=ReconnaissanceResponse)
+async def reconnaissance(fichier: UploadFile = File(..., description="Photo de la boite (JPEG, PNG ou WEBP)")):
+    """Photo de boite -> OCR (arabe + francais) -> meme matcher que GET
+    /medicaments, pour que la boite scannee et la recherche au clavier
+    donnent les memes resultats (Challenge #2)."""
+    contenu = await fichier.read()
+    try:
+        # l'OCR occupe le CPU plusieurs secondes : hors de la boucle
+        # d'evenements, comme la transcription vocale (_transcrire_upload)
+        image = await run_in_threadpool(pretraiter, contenu)
+        ocr = await run_in_threadpool(extraire_texte, image)
+    except ErreurImage as e:
+        raise HTTPException(status_code=422, detail=str(e))
+
+    if not ocr["textes"]:
+        return ReconnaissanceResponse(
+            reussite=False,
+            message="Aucun texte detecte sur cette photo. Reessaie avec plus de lumiere, de face, sans flou.",
+        )
+
+    resultats = _enrichir(reconnaitre_depuis_lignes(ocr["textes"], top_k=5))
+    message = (
+        f"Medicament reconnu : {resultats[0]['nom_candidat']}" if resultats
+        else "Aucun medicament reconnu dans nos donnees a partir du texte lu sur la photo."
+    )
+    return ReconnaissanceResponse(
+        reussite=True, texte_detecte=ocr["textes"], langues=ocr["langues"],
+        resultats=resultats, message=message,
+    )
 
 
 def _trier(fiches: list[dict], position: tuple[float, float] | None) -> list[dict]:

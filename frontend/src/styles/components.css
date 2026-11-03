@@ -1099,6 +1099,57 @@ a.marqueur:hover { border-color: var(--bleu-trait); color: var(--bleu-vif); }
   color: var(--encre-douce);
 }
 
+/* ---------------------------------------------------------- scanner (photo) */
+
+.scan-zone {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 40px 20px;
+  border: 1.5px dashed var(--trait-fort);
+  border-radius: var(--r-lg);
+  background: var(--carte);
+  color: var(--marine);
+  text-align: center;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.scan-zone strong { margin-top: 8px; font-size: 1rem; }
+
+.scan-zone:hover,
+.scan-zone-survol {
+  border-color: var(--sante);
+  background: var(--sante-voile);
+}
+
+.scan-zone-aide { max-width: 46ch; font-size: .86rem; color: var(--encre-douce); }
+
+.scan-apercu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.scan-apercu img {
+  max-width: min(100%, 320px);
+  max-height: 260px;
+  object-fit: contain;
+  border-radius: var(--r);
+  border: 1px solid var(--trait);
+  background: var(--carte);
+}
+
+.scan-apercu-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.scan-statut { margin: -6px 0 16px; font-size: .88rem; color: var(--encre-douce); }
+
+.scan-texte { margin-top: 28px; font-size: .88rem; color: var(--encre-douce); }
+.scan-texte summary { cursor: pointer; font-weight: 650; }
+.scan-texte .puces { margin-top: 12px; }
+
 /* squelettes de chargement : on montre la forme du contenu a venir plutot
    qu'un spinner, ce qui rend l'attente moins brutale */
 .squelette {

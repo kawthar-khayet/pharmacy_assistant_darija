@@ -64,3 +64,39 @@ Message : « fin kayna chi sidalia dial lil f agdal rabat »
 
 Message : « عندي الحرقة فالمعدة، واش كاينة صيدلية النخيل فمراكش؟ »
 {"question": "J'ai des brûlures d'estomac. Où est la pharmacie Nakhil à Marrakech ?", "medicaments": [], "lieu": "مراكش", "pharmacie": "النخيل", "pharmacies": true, "garde": false, "symptomes": ["brulures_estomac"], "urgence": null}
+
+Conversation :
+patient : « fin kayna pharmacie de garde ? »
+bot : « f ina mdina ? »
+patient : « f maarif casa »
+{"question": "Où trouver une pharmacie de garde à Maarif, Casablanca ?", "medicaments": [], "lieu": "maarif casa", "pharmacie": null, "pharmacies": true, "garde": true, "symptomes": [], "urgence": null}
+
+Conversation :
+patient : « ch7al taman smecta ? »
+bot : « Smecta taman dyalo ... »
+patient : « w wach kayt3awed f cnss ? »
+{"question": "Smecta est-il remboursé par la CNSS ?", "medicaments": ["smecta"], "lieu": null, "pharmacie": null, "pharmacies": false, "garde": false, "symptomes": [], "urgence": null}
+
+Message : « weldi chreb dwa dyal jdo, chi 10 7bat »
+{"question": "Mon fils a avalé une dizaine de comprimés du médicament de son grand-père.", "medicaments": [], "lieu": null, "pharmacie": null, "pharmacies": false, "garde": false, "symptomes": [], "urgence": "intoxication"}
+
+Message : « mama ma bqatch katnfes mzyan w kat9ol sedri kaydrni »
+{"question": "Ma mère respire mal et a mal à la poitrine.", "medicaments": [], "lieu": null, "pharmacie": null, "pharmacies": false, "garde": false, "symptomes": [], "urgence": "detresse"}
+
+Message : « benti 3ndha 3 snin w fiha skhana, chno n3tiha ? »
+{"question": "Ma fille de 3 ans a de la fièvre, que puis-je lui donner ?", "medicaments": [], "lieu": null, "pharmacie": null, "pharmacies": false, "garde": false, "symptomes": ["fievre_legere"], "urgence": null}
+
+Message : « kifach nakhod augmentin 1g ? »
+{"question": "Comment prendre Augmentin 1 g ?", "medicaments": ["augmentin"], "lieu": null, "pharmacie": null, "pharmacies": false, "garde": false, "symptomes": [], "urgence": null}
+
+Message : « 3ndi sokar, chno dwa mzyan ? »
+{"question": "J'ai du diabète, quel médicament est bon ?", "medicaments": [], "lieu": null, "pharmacie": null, "pharmacies": false, "garde": false, "symptomes": [], "urgence": null}
+
+Message : « بغيت نعرف ثمن دوليبرون و واش كيتعاود »
+{"question": "Quel est le prix de Doliprane et est-il remboursé ?", "medicaments": ["دوليبرون"], "lieu": null, "pharmacie": null, "pharmacies": false, "garde": false, "symptomes": [], "urgence": null}
+
+Message : « sidalia ibn sina f tanger fin jat ? »
+{"question": "Où se trouve la pharmacie Ibn Sina à Tanger ?", "medicaments": [], "lieu": "tanger", "pharmacie": "ibn sina", "pharmacies": true, "garde": false, "symptomes": [], "urgence": null}
+
+Message : « salam, chokran bzaf 3la l3awn »
+{"question": "Bonjour, merci beaucoup pour l'aide.", "medicaments": [], "lieu": null, "pharmacie": null, "pharmacies": false, "garde": false, "symptomes": [], "urgence": null}

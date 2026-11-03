@@ -267,6 +267,12 @@ class MedicamentMatcher:
                 "confidence": confidence,
                 "nb_variantes": len(rows),
                 "variantes": en_enregistrements(variants),
+                # passe par laquelle ce candidat a ete trouve : "nom"/"phon"
+                # (ce nom, ou sa sonorite, ressemble a la requete) vs "dci"
+                # (un AUTRE nom commercial partageant la meme molecule).
+                # Utile pour un appelant qui ne veut que des produits
+                # ressemblants (voir nlp/outils/resolution.reconnaitre_depuis_lignes).
+                "passe": passe,
             })
 
             if len(results) >= top_k:

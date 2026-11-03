@@ -5,6 +5,7 @@ import BottomNavigation from './components/BottomNavigation'
 import Home from './pages/Home'
 import Assistant from './pages/Assistant'
 import Medicines from './pages/Medicines'
+import Scan from './pages/Scan'
 import Pharmacies from './pages/Pharmacies'
 import Garde from './pages/Garde'
 import History from './pages/History'
@@ -31,6 +32,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/assistant" element={<Assistant />} />
             <Route path="/medicaments" element={<Medicines />} />
+            <Route path="/scanner" element={<Scan />} />
             <Route path="/pharmacies" element={<Pharmacies />} />
             <Route path="/garde" element={<Garde />} />
             <Route path="/historique" element={<History />} />

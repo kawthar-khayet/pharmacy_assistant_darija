@@ -8,7 +8,7 @@ import { Signe } from '../components/Logo'
 import { Disponible } from '../components/Header'
 import EmergencyBanner from '../components/EmergencyBanner'
 import LanguageSelector from '../components/LanguageSelector'
-import { ApiError, envoyerMessage } from '../lib/api'
+import { ApiError, envoyerMessage, reconnaitreBoite } from '../lib/api'
 import { titrer } from '../lib/conversations'
 import { LANGUE_PAR_DEFAUT, t } from '../lib/langues'
 import { useConversations } from '../lib/conversationsContexte'
@@ -19,6 +19,7 @@ export default function Assistant() {
   const { t: trad, estArabe, langue } = useLanguage()
   const [saisie, setSaisie] = useState('')
   const [enCours, setEnCours] = useState(false)
+  const [photoEnCours, setPhotoEnCours] = useState(false)
 
   const filRef = useRef(null)
   const location = useLocation()
@@ -89,6 +90,29 @@ export default function Assistant() {
     }
   }
 
+  /** Photo d'une boite : le medicament reconnu part comme une question au
+   *  bot, qui repond comme d'habitude (prix, remboursement...). */
+  async function scannerBoite(fichier) {
+    if (enCours || photoEnCours) return
+    const conv = courante
+    const signaler = (texte) =>
+      majConversation(conv.id, { tours: [...conv.tours, { role: 'erreur', text: texte }] })
+
+    setPhotoEnCours(true)
+    let nom = null
+    try {
+      const data = await reconnaitreBoite(fichier)
+      nom = data.resultats?.[0]?.nom_candidat ?? null
+      if (!data.reussite) signaler(trad('scan_sans_texte'))
+      else if (!nom) signaler(trad('scan_aucun'))
+    } catch (err) {
+      signaler(err instanceof ApiError ? err.message : trad('scan_erreur_titre'))
+    } finally {
+      setPhotoEnCours(false)
+    }
+    if (nom) envoyer(trad('chat_photo_question').replace('{nom}', nom), conv)
+  }
+
   const debut = tours.length === 1
 
   return (
@@ -152,6 +176,8 @@ export default function Assistant() {
             onChange={setSaisie}
             onValider={(texte) => envoyer(texte)}
             enCours={enCours}
+            onPhoto={scannerBoite}
+            photoEnCours={photoEnCours}
             placeholder={attendLieu ? t(langueQuestion, 'saisie_lieu') : trad('chat_placeholder_normal')}
             aide={
               attendLieu

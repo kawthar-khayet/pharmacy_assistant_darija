@@ -172,6 +172,15 @@ export function positionActuelle({ timeout = 10000 } = {}) {
   })
 }
 
+/** Photo d'une boite -> OCR + matching (voir nlp/vision/) : les `resultats`
+ *  ont la meme forme que ceux de /medicaments. Pas d'en-tete Content-Type,
+ *  meme raison que `transcrire` ci-dessous. */
+export function reconnaitreBoite(image, { signal } = {}) {
+  const corps = new FormData()
+  corps.append('fichier', image, image.name || 'boite.jpg')
+  return appeler('/reconnaissance', { method: 'POST', body: corps, signal })
+}
+
 /** Envoie un enregistrement a Whisper (cote API) et renvoie le texte entendu.
  *  Pas d'en-tete Content-Type : le navigateur doit le poser lui-meme pour y
  *  inclure la frontiere du multipart. */

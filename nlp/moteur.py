@@ -62,6 +62,7 @@ class IndexAbsent(RuntimeError):
 class Session:
     historique: list[dict] = field(default_factory=list)   # [{"role", "contenu"}] pour le LLM
     ville: str | None = None                                 # derniere ville reconnue
+    langue: str | None = None                                # langue du dernier message, pour les messages neutres
 
 
 @dataclass
@@ -169,7 +170,7 @@ def _question_avec_fiches(message: str, question: str, fiches: list[dict], langu
 def repondre(message: str, session: Session) -> Reponse:
     """Reponse au dernier message du patient. Met la session a jour."""
     message = message.strip()
-    langue = detecter_langue(message)
+    langue = session.langue = detecter_langue(message, precedente=session.langue)
 
     # 1. Filet de securite : une urgence passe avant tout, meme si le LLM est en panne.
     filet = detecter_urgence(message)

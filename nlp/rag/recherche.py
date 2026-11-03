@@ -102,10 +102,21 @@ def _molecule(nom: str) -> str | None:
 def _notices(dci: str, vecteur: list[float]) -> list[dict]:
     """Les morceaux de la notice de la molecule les plus proches de la question.
     Une association ("AMOXICILLINE / ACIDE CLAVULANIQUE") peut manquer alors
-    que ses composants sont documentes : on les cherche aussi."""
-    cles = [dci] + [p.strip() for p in SEPARATEURS.split(dci) if p.strip()]
+    que ses composants sont documentes : on les cherche aussi.
+
+    Le sens seul classe mal « a quoi il sert » : les morceaux d'effets
+    indesirables, longs et nombreux, prennent toutes les places. Le debut des
+    indications (souvent un seul morceau) est donc toujours joint."""
+    # sans doublon : une molecule simple ("PARACETAMOL") est sa propre composante
+    cles = list(dict.fromkeys([dci] + [p.strip() for p in SEPARATEURS.split(dci) if p.strip()]))
     trouvees = _par_sens(vecteur, {"$and": [{"type": "notice"}, {"dci": {"$in": cles}}]},
                          MAX_NOTICES)
+    # l'association avant ses composants : la 1re cle qui a des indications
+    ids = [f"notice:{c}:indications:1" for c in cles]
+    par_id = {f["id"]: f for f in _par_ids(ids)}
+    indications = next((par_id[i] for i in ids if i in par_id), None)
+    if indications and indications["id"] not in {f["id"] for f in trouvees}:
+        trouvees = [indications] + trouvees
     return trouvees or [_note(f"Aucune notice de la molécule {dci} dans nos données.")]
 
 

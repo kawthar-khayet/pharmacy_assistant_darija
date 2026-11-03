@@ -63,6 +63,7 @@ const TEXTES = {
   nav_accueil: { ary_ar: 'الرئيسية', ary_lat: 'L-Accueil', fr: 'Accueil' },
   nav_assistant: { ary_ar: 'المساعد الذكي', ary_lat: 'L-Moussa3id', fr: 'Assistant' },
   nav_medicaments: { ary_ar: 'الأدوية', ary_lat: 'L-Adwiya', fr: 'Médicaments' },
+  nav_scanner: { ary_ar: 'سكاني الدوا', ary_lat: 'Scanner', fr: 'Scanner' },
   nav_pharmacies: { ary_ar: 'الصيدليات', ary_lat: 'Saydaliyat', fr: 'Pharmacies' },
   nav_garde: { ary_ar: 'صيدليات الحراسة', ary_lat: 'De garde', fr: 'De garde' },
   nav_historique: { ary_ar: 'المحادثات السابقة', ary_lat: 'L-Archiv', fr: 'Historique' },
@@ -221,6 +222,58 @@ const TEXTES = {
   },
   med_resultats_nb: { ary_ar: 'نتيجة بحث', ary_lat: 'natija', fr: 'résultat(s)' },
   med_retour: { ary_ar: 'رجوع لنتائج الأدوية', ary_lat: 'Rjou3 l nata2ij', fr: 'Retour aux résultats' },
+
+  // --- Page Scanner (photo de boite) ---
+  scan_titre: { ary_ar: 'سكاني علبة الدوا', ary_lat: 'Scanner l-3olba', fr: 'Scanner une boîte' },
+  scan_surtitre: { ary_ar: 'التعرف بالصورة', ary_lat: 'B tswira', fr: 'Reconnaissance photo' },
+  scan_soustitre: {
+    ary_ar: 'صور العلبة من القدام، ونقولو ليك شمن دوا هو: الثمن، الشكل والتعويض.',
+    ary_lat: 'Sawwer l-3olba mn l-9eddam, w ngoulou lik chmen dwa: taman, forme w remboursement.',
+    fr: 'Photographie la boîte de face : on retrouve le médicament, son prix et son remboursement.',
+  },
+  scan_choisir: { ary_ar: 'صور ولا ختار صورة', ary_lat: 'Sawwer wla khtar tswira', fr: 'Prendre ou choisir une photo' },
+  scan_formats: { ary_ar: 'JPEG، PNG ولا WEBP — حتى 10 ميغا', ary_lat: 'JPEG, PNG wla WEBP — 7ta 10 Mo', fr: 'JPEG, PNG ou WEBP — 10 Mo maximum' },
+  scan_conseil: {
+    ary_ar: 'باش تنجح الصورة: ضو مزيان، العلبة من القدام، وبلا ما تتحرك.',
+    ary_lat: 'Bach tnje7 tswira: daw mzyan, l-3olba mn l-9eddam, bla ma tt7errek.',
+    fr: 'Pour une bonne lecture : bonne lumière, boîte de face, photo nette.',
+  },
+  scan_analyser: { ary_ar: 'تعرف على الدوا', ary_lat: '3ref d-dwa', fr: 'Reconnaître' },
+  scan_changer: { ary_ar: 'بدل الصورة', ary_lat: 'Beddel tswira', fr: 'Changer de photo' },
+  scan_en_cours: {
+    ary_ar: 'كنقراو العلبة… (أول مرة كتاخد شوية دالوقت)',
+    ary_lat: 'Kan9raw l-3olba… (awwel merra katakhod chwiya)',
+    fr: 'Lecture de la boîte… (la première fois prend un peu plus de temps)',
+  },
+  scan_format_invalide: { ary_ar: 'هاد النوع ديال الملف ماشي صورة مقبولة (JPEG، PNG، WEBP).', ary_lat: 'Had l-fichier machi tswira maqboula (JPEG, PNG, WEBP).', fr: 'Format non supporté : utilise une image JPEG, PNG ou WEBP.' },
+  scan_sans_texte_titre: { ary_ar: 'ما قدرناش نقراو والو فالصورة', ary_lat: 'Ma qdernach n9raw walou', fr: 'Aucun texte lu sur la photo' },
+  scan_sans_texte: {
+    ary_ar: 'عاود صور العلبة بضو مزيان، من القدام وبلا ضبابية.',
+    ary_lat: '3awed sawwer l-3olba b daw mzyan, mn l-9eddam w bla flou.',
+    fr: 'Réessaie avec plus de lumière, la boîte de face et sans flou.',
+  },
+  scan_aucun_titre: { ary_ar: 'ما لقيناش هاد الدوا', ary_lat: 'Ma lqinach had d-dwa', fr: 'Médicament non reconnu' },
+  scan_aucun: {
+    ary_ar: 'قرينا الكتابة ولكن ما لقيناش الدوا فالقاعدة ديالنا. جرب تكتب السمية فصفحة الأدوية.',
+    ary_lat: '9rina l-ktaba walakin ma lqinach d-dwa. Jereb tkteb smiya f page l-adwiya.',
+    fr: 'Le texte a été lu, mais aucun médicament de notre base ne correspond. Essaie de taper son nom dans la page Médicaments.',
+  },
+  scan_erreur_titre: { ary_ar: 'التعرف غير متوفر حاليا', ary_lat: 'Scanner ma khddamch daba', fr: 'Reconnaissance indisponible' },
+  scan_reconnus: { ary_ar: 'الدوا لي تعرفنا عليه', ary_lat: 'D-dwa li t3refna 3lih', fr: 'Médicament(s) reconnu(s)' },
+  scan_texte_lu: { ary_ar: 'الكتابة لي قرينا', ary_lat: 'L-ktaba li 9rina', fr: 'Texte lu sur la boîte' },
+  scan_verifier: {
+    ary_ar: 'تأكد ديما بلي السمية والجرعة هما لي مكتوبين على العلبة ديالك.',
+    ary_lat: 'T2akked dima belli smiya w dosage homa li f l-3olba dyalk.',
+    fr: 'Vérifie toujours que le nom et le dosage correspondent à ta boîte.',
+  },
+  // bouton photo du chat : le nom reconnu part comme une question au bot
+  chat_photo: { ary_ar: 'صور علبة الدوا', ary_lat: 'Sawwer l-3olba', fr: 'Photographier une boîte' },
+  chat_photo_en_cours: { ary_ar: 'كنقراو العلبة…', ary_lat: 'Kan9raw l-3olba…', fr: 'Lecture de la boîte…' },
+  chat_photo_question: {
+    ary_ar: 'عطيني المعلومات على {nom}',
+    ary_lat: '3tini l-ma3loumat 3la {nom}',
+    fr: 'Donne-moi les informations sur {nom}',
+  },
 
   // --- Page Pharmacies ---
   pharma_titre: { ary_ar: 'دليل الصيدليات', ary_lat: 'Saydaliyat', fr: 'Pharmacies' },

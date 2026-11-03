@@ -34,6 +34,16 @@ def test_une_langue_contraire_a_la_graphie_est_ignoree():
     assert detecter_langue("bonjour", "klingon") == "fr"
 
 
+def test_un_message_neutre_garde_la_darija_de_la_conversation():
+    assert detecter_langue("f maarif casa", precedente="ary_lat") == "ary_lat"
+    assert detecter_langue("doliprane 1g", precedente="ary_lat") == "ary_lat"
+    assert detecter_langue("f maarif casa") == "fr"
+
+
+def test_un_message_en_francais_change_de_langue():
+    assert detecter_langue("merci, et le prix du smecta ?", precedente="ary_lat") == "fr"
+
+
 # -------------------------------------------------------------- phrases
 
 def test_chaque_phrase_existe_dans_les_quatre_langues():

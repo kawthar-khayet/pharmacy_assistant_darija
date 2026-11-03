@@ -41,6 +41,16 @@ MOTS_DARIJA = {
     "khoya", "khti", "lah", "llah", "inchallah", "mabrouk", "zwin", "7alla", "m7lola",
 }
 
+# Petits mots qui n'existent qu'en francais. Un message latin sans aucun d'eux
+# ni marque de darija ("f maarif casa", "doliprane 1g") ne dit rien de sa
+# langue. Les mots ambigus avec la darija ("ma", "la", "ou") sont absents.
+MOTS_FRANCAIS = {
+    "je", "j", "tu", "il", "elle", "nous", "vous", "le", "les", "de", "du", "des",
+    "une", "est", "et", "pour", "avec", "dans", "sur", "quel", "quelle", "quels",
+    "combien", "où", "prix", "bonjour", "bonsoir", "merci", "svp", "mon", "mes",
+    "pas", "avez", "peux", "puis", "faut",
+}
+
 
 def ressemble_darija_latine(texte: str) -> bool:
     if _CHIFFRE_ARABIZI.search(texte):
@@ -48,12 +58,21 @@ def ressemble_darija_latine(texte: str) -> bool:
     return any(m.lower() in MOTS_DARIJA for m in _MOT.findall(texte))
 
 
-def detecter_langue(texte: str, proposition: str | None = None) -> str:
+def ressemble_francais(texte: str) -> bool:
+    return any(m.lower() in MOTS_FRANCAIS for m in _MOT.findall(texte))
+
+
+def detecter_langue(texte: str, proposition: str | None = None,
+                    precedente: str | None = None) -> str:
     """Langue dans laquelle repondre a `texte`.
 
     `proposition` est la langue annoncee par le NLU ; elle n'est retenue que si
     elle correspond a la graphie du message (un modele qui annonce "ar" pour
-    "wach kayn doliprane" se trompe forcement)."""
+    "wach kayn doliprane" se trompe forcement).
+
+    `precedente` est la langue du message d'avant : un message latin qui ne
+    ressemble a aucune des deux langues ("f maarif casa", en reponse a
+    "f ina mdina ?") la garde au lieu de passer au francais."""
     arabe = len(_LETTRE_ARABE.findall(texte))
     latin = len(_LETTRE_LATINE.findall(texte))
 
@@ -66,4 +85,8 @@ def detecter_langue(texte: str, proposition: str | None = None) -> str:
         return proposition if proposition in LANGUES_ARABES else "ary_ar"
     if proposition in {"fr", "ary_lat"}:
         return proposition
-    return "ary_lat" if ressemble_darija_latine(texte) else "fr"
+    if ressemble_darija_latine(texte):
+        return "ary_lat"
+    if precedente == "ary_lat" and not ressemble_francais(texte):
+        return "ary_lat"
+    return "fr"

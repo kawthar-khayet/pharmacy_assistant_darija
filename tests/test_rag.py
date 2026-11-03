@@ -110,6 +110,13 @@ def test_molecule_donne_ses_marques_les_plus_connues_et_sa_notice(index):
     assert textes(trouve, "notice")
 
 
+def test_a_quoi_sert_donne_toujours_les_indications(index):
+    # vecteurs tous egaux dans l'index de test : sans l'ajout force, les
+    # indications ne seraient qu'un morceau parmi d'autres, rarement retenu
+    trouve = chercher(Requete("À quoi sert Doliprane ?", medicaments=["doliprane"]))
+    assert "notice:PARACETAMOL:indications:1" in [f["id"] for f in trouve.fiches]
+
+
 def test_symptome_reconnu_par_le_llm_donne_sa_fiche(index):
     trouve = chercher(Requete("J'ai mal à la tête, que puis-je prendre ?", symptomes=["mal_de_tete"]))
     assert [f["id"] for f in trouve.fiches] == ["conseil:mal_de_tete"] and trouve.pharmacies == []
